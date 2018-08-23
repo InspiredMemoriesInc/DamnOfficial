@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Experiment:StaticExamplesOnTop/CSS/white-space$samples/See_in_action?revision=1230565 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:52:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            .box {
+  width: 300px;
+  padding: 16px;
+  border-radius: 10px;
+}
+
+#css-code {
+  background-color: rgb(220,220,220);
+  font-size: 16px;
+}
+
+#results {
+  background-color: rgb(230,230,230);
+  overflow-x: scroll;
+  height: 400px;
+  white-space: normal;
+  font-size: 14px;
+}
+        </style>
+        
+        <title>white-space</title>
+    </head>
+    <body>
+        
+                <div id="css-code" class="box">
+     p { white-space: <select>
+       <option>normal</option>
+       <option>nowrap</option>
+       <option>pre</option>
+       <option>pre-wrap</option>
+       <option>pre-line</option>
+     </select> }
+    </div>
+    <div id="results" class="box">
+    <p>    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    
+    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+
+        
+        
+            <script>
+                var select  = document.querySelector("#css-code select");
+var results = document.querySelector("#results p");
+select.addEventListener("change", function(e) {
+  results.setAttribute("style", "white-space: "+e.target.value);
+})
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Experiment:StaticExamplesOnTop/CSS/white-space$samples/See_in_action?revision=1230565 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:52:25 GMT -->
+</html>

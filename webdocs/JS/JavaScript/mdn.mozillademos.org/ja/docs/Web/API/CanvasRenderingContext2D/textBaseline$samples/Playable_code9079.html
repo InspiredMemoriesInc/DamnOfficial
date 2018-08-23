@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/ja/docs/Web/API/CanvasRenderingContext2D/textBaseline$samples/Playable_code?revision=1383537 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 11:40:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <title>CanvasRenderingContext2D.textBaseline</title>
+    </head>
+    <body>
+        
+            <canvas id="canvas" width="550" height="500" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
+var baselines = ['top', 'hanging', 'middle', 'alphabetic', 'ideographic', 'bottom'];
+ctx.font = '36px serif';
+ctx.strokeStyle = 'red';
+baselines.forEach(function (baseline, index) {
+    ctx.textBaseline = baseline;
+    var y = 75 + index * 75;
+    ctx.beginPath(); ctx.moveTo(0, y + 0.5); ctx.lineTo(550, y + 0.5); ctx.stroke();
+    ctx.fillText('Abcdefghijklmnop (' + baseline + ')', 0, y);
+});
+</textarea>
+        
+        
+            <script>
+                var canvas = document.getElementById('canvas');
+var ctx = canvas.getContext('2d');
+var textarea = document.getElementById('code');
+var reset = document.getElementById('reset');
+var edit = document.getElementById('edit');
+var code = textarea.value;
+
+function drawCanvas() {
+  ctx.save();
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  eval(textarea.value);
+  ctx.restore();
+}
+
+reset.addEventListener('click', function() {
+  textarea.value = code;
+  drawCanvas();
+});
+
+edit.addEventListener('click', function() {
+  textarea.focus();
+})
+
+textarea.addEventListener('input', drawCanvas);
+window.addEventListener('load', drawCanvas);
+
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/ja/docs/Web/API/CanvasRenderingContext2D/textBaseline$samples/Playable_code?revision=1383537 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 11:40:02 GMT -->
+</html>

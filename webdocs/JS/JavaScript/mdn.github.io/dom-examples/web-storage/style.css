@@ -1,0 +1,160 @@
+/* General setup */
+
+* {
+	box-sizing: border-box;
+}
+
+html,body {
+	margin: 0;
+}
+
+html {
+	font-size: 10px;
+	font-family: sans-serif;
+}
+
+/* Typography */
+
+h1 {
+	font-size: 6rem;
+}
+
+p,form,li {
+	font-size: 1.6rem;
+	line-height: 1.5;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+/* Layout and styles */
+
+html {
+	background-color: #FF0000;
+	height: 100%;
+}
+
+body {
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+	display: flex;
+    
+    -webkit-box-align: center;
+	-moz-box-align: center;
+	box-align: center;
+	justify-content: center;
+
+    -webkit-box-pack: center;
+	-moz-box-pack: center;
+	box-pack: center;
+    align-items: center;
+
+    height: inherit;
+}
+
+body > .wrapper {
+    width: 90%;
+	max-width: 800px;
+	background-color: rgb(250,250,250);
+	padding: 2rem;
+	position: relative;
+	border: 5px solid black;
+}
+
+body > div > div {
+	width: 300px;
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	position: absolute;
+	left: 2rem;
+	top: -4.6rem;
+	text-transform: uppercase;
+	color: rgb(250,250,250);
+	text-shadow: 0px -1px 1px black,
+	             0px -2px 1px black,
+	             0px -3px 1px black,
+	             0px -4px 1px black,
+	             0px -5px 1px black;
+}
+
+form div label {
+  float: left;
+  width: 45%;
+  text-align: right;
+}
+
+form div input, form div select {
+	float: right;
+}
+
+form div input {
+	width: 49%;
+	line-height: 1.5;
+}
+
+form div select {
+	width: 50%;
+}
+
+form div option {
+		height: 2rem;
+}
+
+form div {
+	clear: both;
+	margin: 0 auto;
+	width: 70%;
+	padding-bottom: 4rem;
+}
+
+footer {
+	clear: both;
+}
+
+img {
+	position: absolute;
+	bottom: 1rem;
+	left: 1rem;
+}
+
+@media (max-width: 800px) {
+	body > div {
+	  width: 100%;
+	}
+}
+
+@media (max-width: 600px) {
+    h1 {
+      font-size: 3rem;
+      top: -2.2rem;
+    }
+
+	form div label {
+      float: none;
+      width: 100%;
+      text-align: left;
+    }
+
+    form div input, form div select {
+	  float: none;
+	  width: 100%;
+    }
+
+    form div {
+	  padding-bottom: 1.5rem;
+    }
+
+    img {
+	  bottom: -4rem;
+    }
+
+}
+ #main-header {display:none !important} #toc.fixed { position: static !important; overflow-y: visible !important; } #redesignNotice {display:none !important} .contributors {display:none !important} .wiki-left-present:not(.wiki-left-closed) #wiki-left {display:none !important} .wiki-left-present:not(.wiki-left-closed) #toc.fixed {width: 100% !important; max-height:none !important} #wiki-content {width:100% !important} #wiki-content {float:left !important} .notification-tray, .section-edit {display:none !important} .communitybox, #wiki-controls {display:none !important} .syntaxbox-help{display:none !important} .article-meta { display:none !important} #wiki-right {padding-bottom: 25px !important; width:100% !important} .column-strip.quick-links {margin-bottom:0px !important} .redesign-beta-notice {display:none !important} #tabzilla-panel {display:none !important} main>.center {padding-top:10px !important} .share {display:none !important} .breadcrumbs {display:none !important} .global-notice, .page-buttons {display:none !important} .crumbs {display:none !important} .languages {display:none !important} #toc {max-height:none !important} .offline-notice {display:none} #redirected-from {display:none} #masthead {display:none}
+#nav-toolbar {display:none} .line-highlight:before, .line-highlight[data-end]:after {display:none !important} #helpful-survey {display:none !important}
+#page-buttons{display:none} .contributor-avatars {display:none !important} .document-head { background-color:white !important; padding: 0px 0 20px !important} .newsletter-box {display:none !important} .center {max-width:none !important} #wiki-column-container {overflow:visible !important} .sample-code-frame {padding:0px !important; border: none !important} #sessionMsg.errormsg{display:none}
+.page-watch {display:none} .document-head h1 {margin-top:10px !important} #wikiArticle {border-bottom:0px !important} #wiki-content,#wiki-left,#wiki-right{margin-right:0;width:auto!important;float:none;padding-bottom:40px}#wiki-right #toc{padding:10px 20px}#wiki-right #toc .toggler{pointer-events:auto;color:#387894}#wiki-right #toc .toggler i{display:inline-block}#wiki-right #toc .toggle-container{display:none}.no-js #wiki-right #toc .toggle-container{display:block}#wiki-column-container,#wiki-content{width:auto!important} #wiki-column-container, #wiki-content {width:100% !important} #kserrors {display:none !important} .banner, .blockIndicator, .geckoVersionNote, .inheritsbox, .note, .notice, .overheadIndicator, .standardNoteBlock, .warning, .text-content p, .text-content dl, .text-content ol, .text-content ul {max-width:none !important} .summary {border:0px !important} body {font-size:16px}
+
+.crumbs {display:block !important} .crumbs {margin-top:10px !important; margin-bottom:0 !important; padding-bottom:0 !important; border:none !important}

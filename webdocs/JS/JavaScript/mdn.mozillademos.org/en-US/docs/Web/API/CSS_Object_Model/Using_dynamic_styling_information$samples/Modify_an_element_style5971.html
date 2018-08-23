@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information$samples/Modify_an_element_style?revision=1251325 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 10:13:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <title>Using dynamic styling information</title>
+    </head>
+    <body>
+        
+            <html>
+<head>
+<title>simple style example</title>
+
+<script type="text/javascript">
+
+function alterStyle(elem) {
+  elem.style.background = 'green';
+}
+
+function resetStyle(elemId) {
+  elem = document.getElementById(elemId);
+  elem.style.background = 'white';
+}
+</script>
+
+<style type="text/css">
+#p1 {
+  border: solid blue 2px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- passes a reference to the element's object as parameter 'this'. -->
+<p id="p1" onclick="alterStyle(this);">
+ Click here to change background color.
+</p>
+
+<!-- passes the 'p1' id of another element's style to modify. -->
+<button onclick="resetStyle('p1');">Reset background color</button>
+
+</body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information$samples/Modify_an_element_style?revision=1251325 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 10:13:14 GMT -->
+</html>
+
+        
+        
+    </body>
+</html>

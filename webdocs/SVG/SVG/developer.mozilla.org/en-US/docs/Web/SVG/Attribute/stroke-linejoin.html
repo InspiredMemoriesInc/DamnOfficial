@@ -1,0 +1,1256 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:40:28 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  <title>stroke-linejoin</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+
+  
+<link rel="preload" href="../../../../../static/fonts/locales/ZillaSlab-Regular.f9de6143fdfa.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="license" href="#license">
+  
+
+  
+    
+    
+
+    <link href="../../../../../static/build/styles/mdn.83865b0f7c30.css" rel="stylesheet" type="text/css">
+
+    
+  
+
+    <link href="../../../../../static/build/styles/wiki.aaf26c13c39b.css" rel="stylesheet" type="text/css">
+
+
+    
+
+  <link href="../../../../../static/build/styles/locale-en-US.ca0bca387b42.css" rel="stylesheet" type="text/css">
+
+  
+    <script>
+      /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
+    </script>
+    
+
+
+
+  
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta property="og:site_name" content="MDN Web Docs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="MDN Web Docs">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../static/img/favicon144.e7e21ca263ca.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../static/img/favicon114.d526f38b09c5.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../static/img/favicon72.cc65d1d762a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../../../static/img/favicon57.de33179910ae.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="../../../../../static/img/favicon32.7f3da72dcea1.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script async="" type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  <link rel="dns-prefetch" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin$json">
+  <link rel="canonical" href="stroke-linejoin.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="stroke-linejoin.html" title="stroke-linejoin">
+  
+    
+      <link rel="alternate" hreflang="ja" href="https://developer.mozilla.org/ja/docs/Web/SVG/Attribute/stroke-linejoin" title="stroke-linejoin">
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/SVG/Attribute/stroke-linejoin" title="stroke-linejoin">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="stroke-linejoin">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin">
+  <meta name="twitter:title" content="stroke-linejoin">
+  
+  <meta property="og:description" content="The stroke-linejoin attribute is a presentation attribute defining the shape to be used at the corners of paths when they are stroked.">
+  <meta name="description" content="The stroke-linejoin attribute is a presentation attribute defining the shape to be used at the corners of paths when they are stroked.">
+  <meta name="twitter:description" content="The stroke-linejoin attribute is a presentation attribute defining the shape to be used at the corners of paths when they are stroked.">
+  
+
+</head>
+<body data-slug="Web/SVG/Attribute/stroke-linejoin" contextmenu="edit-history-menu" data-search-url="" class="document">
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <!--[endif]---->
+
+  
+  <link rel="dns-prefetch" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin$json">
+  <link rel="canonical" href="stroke-linejoin.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="stroke-linejoin.html" title="stroke-linejoin">
+  
+    
+      <link rel="alternate" hreflang="ja" href="https://developer.mozilla.org/ja/docs/Web/SVG/Attribute/stroke-linejoin" title="stroke-linejoin">
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/SVG/Attribute/stroke-linejoin" title="stroke-linejoin">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="stroke-linejoin">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin">
+  <meta name="twitter:title" content="stroke-linejoin">
+  
+  <meta property="og:description" content="The stroke-linejoin attribute is a presentation attribute defining the shape to be used at the corners of paths when they are stroked.">
+  <meta name="description" content="The stroke-linejoin attribute is a presentation attribute defining the shape to be used at the corners of paths when they are stroked.">
+  <meta name="twitter:description" content="The stroke-linejoin attribute is a presentation attribute defining the shape to be used at the corners of paths when they are stroked.">
+  
+
+
+
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/wiki-compat-tables.9978a5ce31c2.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+
+        // interactive editor config
+        win.mdn.interactiveEditor = {
+            siteUrl: "https://developer.mozilla.org",
+            editorUrl: "https://interactive-examples.mdn.mozilla.net"
+        };
+
+    })(this);
+</script>
+    
+    <ul id="nav-access">
+  <li><a href="#content" id="skip-main">Skip to main content</a></li>
+  <li><a id="skip-language" href="#language">Select language</a></li>
+  <li><a href="#q" id="skip-search">Skip to search</a></li>
+</ul>
+
+    <!-- Header -->
+    <header id="main-header" class="header-main">
+      <a href="https://developer.mozilla.org/en-US/" class="logo">MDN Web Docs</a>
+      <div class="nav-toolbox-wrapper">
+        <nav id="main-nav" class="nav-main" role="navigation">
+    <ul>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web">Technologies
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-tech-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API">APIs / DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn">References &amp; Guides
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-learn-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-contact-submenu">
+              <div class="submenu-column">
+                <ul>
+                  <li>
+                      <a href="https://support.mozilla.org/">Get Firefox help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://stackoverflow.com/">Get web development help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                      <a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin">Report a content problem
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</nav>
+        <div id="toolbox" class="toolbox">
+  <ul>
+    
+    <li class="nav-login"><div class="login">
+    
+        
+        <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FSVG%2FAttribute%2Fstroke-linejoin" class="login-link js-login-link" data-service="GitHub" rel="nofollow">
+            Sign in<svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+    <title>Github</title>
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path>
+</svg>
+        </a>
+    
+</div></li>
+  </ul>
+</div>
+      </div>
+      <form id="nav-main-search" action="https://developer.mozilla.org/en-US/search" method="get" role="search" class="nav-main-search">
+  <div class="search-wrap">
+    <label for="main-q" class="offscreen">Search</label>
+    <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" aria-hidden="true">
+    <span class="search-trigger">
+        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true">
+    <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path>
+</svg>
+    </span>
+    <button type="submit" class="offscreen">Search</button>
+    <button type="button" id="close-header-search" class="close-header-search transparent">
+        <span class="offscreen">Close search</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+  </div>
+</form>
+    </header> 
+
+  <!-- Content will go here -->
+  <main id="content">
+      
+  <!-- heading -->
+  <div id="wiki-document-head" class="document-head">
+    <div class="center">
+      <!-- action buttons -->
+      <div class="document-actions">
+        
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons">
+      <li>
+          <button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false">
+              <svg class="icon icon-language" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M10.219 16.844c-.031.109-.797-.25-1-.328-.203-.094-1.125-.609-1.359-.766s-1.125-.891-1.234-.938a28.275 28.275 0 0 1-2.094 2.828c-.281.328-1.125 1.391-1.641 1.719-.078.047-.531.094-.594.063.25-.187.969-1.078 1.281-1.437.391-.453 2.25-3.047 2.562-3.641.328-.594 1.312-2.562 1.359-2.75-.156-.016-1.391.406-1.719.516-.313.094-1.172.297-1.234.344-.063.063-.016.25-.047.313s-.313.203-.484.234a1.647 1.647 0 0 1-.734 0c-.203-.047-.391-.25-.438-.328 0 0-.063-.094-.078-.359.187-.063.5-.078.844-.172s1.188-.344 1.641-.5 1.328-.484 1.594-.547c.281-.047.984-.516 1.359-.641s.641-.281.656-.203 0 .422-.016.516c-.016.078-.766 1.547-.875 1.781-.063.125-.5.953-1.203 2.047.25.109.781.328 1 .438.266.125 2.125.906 2.219.938s.266.75.234.875zM7.016 9.25c.047.266-.031.375-.063.438-.156.297-.547.5-.781.594s-.625.187-.938.187c-.141-.016-.422-.063-.766-.406-.187-.203-.328-.75-.266-.688s.516.125.719.078.688-.187.906-.25c.234-.078.703-.203.859-.219.156 0 .281.063.328.266zm10.906 2.016l.984 3.547-2.172-.656zM.609 23.766l10.844-3.625V4.016L.609 7.657v16.109zM20 18.813l1.594.484-2.828-10.266-1.563-.484-3.375 8.375 1.594.484.703-1.719 3.297 1.016zM12.141 3.781l8.953 2.875V.718zM17 24.453l2.469.203-.844 2.5L18 26.125c-1.266.812-2.828 1.437-4.312 1.687-.453.094-.969.187-1.422.187h-1.313c-1.656 0-4.672-.984-5.984-1.937-.094-.078-.125-.141-.125-.25 0-.172.125-.297.281-.297.141 0 .875.453 1.078.547 1.406.703 3.375 1.344 4.953 1.344 1.953 0 3.281-.25 5.063-1.016.516-.234.969-.531 1.453-.797zm7-16.859v16.859c-12.078-3.844-12.094-3.844-12.094-3.844C11.656 20.718.453 24.5.297 24.5a.3.3 0 0 1-.281-.203c0-.016-.016-.031-.016-.047V7.406c.016-.047.031-.125.063-.156.094-.109.219-.141.313-.172.047-.016 1-.328 2.328-.781v-6l8.719 3.094C11.532 3.36 21.251 0 21.392 0c.172 0 .313.125.313.328v6.531z"></path>
+</svg>
+              <span>Languages</span>
+          </button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                
+                
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ja/docs/Web/SVG/Attribute/stroke-linejoin" data-locale="ja" title="Japanese">日本語 (ja)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-CN/docs/Web/SVG/Attribute/stroke-linejoin" data-locale="zh-CN" title="Chinese (Simplified)">中文 (简体) (zh-CN)</a></bdi></li>
+                
+              
+
+              
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin$locales" rel="nofollow" id="translations-add">Add a translation</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+      
+      <li class="page-buttons-edit">
+          <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin$edit" class="button neutral" id="edit-button" rel="nofollow">
+              <svg class="icon icon-pencil" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M5.672 24l1.422-1.422-3.672-3.672L2 20.328V22h2v2h1.672zm8.172-14.5a.329.329 0 0 0-.344-.344.368.368 0 0 0-.266.109l-8.469 8.469a.366.366 0 0 0-.109.266c0 .203.141.344.344.344a.368.368 0 0 0 .266-.109l8.469-8.469a.366.366 0 0 0 .109-.266zM13 6.5l6.5 6.5-13 13H0v-6.5zM23.672 8c0 .531-.219 1.047-.578 1.406L20.5 12 14 5.5l2.594-2.578c.359-.375.875-.594 1.406-.594s1.047.219 1.422.594l3.672 3.656c.359.375.578.891.578 1.422z"></path>
+</svg>
+              Edit
+          </a>
+      </li>
+      
+
+        
+
+        <li class="page-buttons-advanced">
+            <button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false">
+                <svg class="icon icon-gear" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M16 14c0-2.203-1.797-4-4-4s-4 1.797-4 4 1.797 4 4 4 4-1.797 4-4zm8-1.703v3.469c0 .234-.187.516-.438.562l-2.891.438a8.86 8.86 0 0 1-.609 1.422c.531.766 1.094 1.453 1.672 2.156.094.109.156.25.156.391s-.047.25-.141.359c-.375.5-2.484 2.797-3.016 2.797a.795.795 0 0 1-.406-.141l-2.156-1.687a9.449 9.449 0 0 1-1.422.594c-.109.953-.203 1.969-.453 2.906a.573.573 0 0 1-.562.438h-3.469c-.281 0-.531-.203-.562-.469l-.438-2.875a9.194 9.194 0 0 1-1.406-.578l-2.203 1.672c-.109.094-.25.141-.391.141s-.281-.063-.391-.172c-.828-.75-1.922-1.719-2.578-2.625a.607.607 0 0 1 .016-.718c.531-.719 1.109-1.406 1.641-2.141a8.324 8.324 0 0 1-.641-1.547l-2.859-.422A.57.57 0 0 1 0 15.705v-3.469c0-.234.187-.516.422-.562l2.906-.438c.156-.5.359-.969.609-1.437a37.64 37.64 0 0 0-1.672-2.156c-.094-.109-.156-.234-.156-.375s.063-.25.141-.359c.375-.516 2.484-2.797 3.016-2.797.141 0 .281.063.406.156L7.828 5.94a9.449 9.449 0 0 1 1.422-.594c.109-.953.203-1.969.453-2.906a.573.573 0 0 1 .562-.438h3.469c.281 0 .531.203.562.469l.438 2.875c.484.156.953.344 1.406.578l2.219-1.672c.094-.094.234-.141.375-.141s.281.063.391.156c.828.766 1.922 1.734 2.578 2.656a.534.534 0 0 1 .109.344c0 .141-.047.25-.125.359-.531.719-1.109 1.406-1.641 2.141.266.5.484 1.016.641 1.531l2.859.438a.57.57 0 0 1 .453.562z"></path>
+</svg>
+                <span>Advanced</span>
+            </button>
+            <div class="submenu js-submenu" id="advanced-menu-submenu">
+                <!-- this page -->
+                <div class="submenu-column">
+                    <div class="title">Advanced</div>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin$history" rel="nofollow">History</a></li>
+                        
+                        
+                        
+
+
+                
+
+                <li class="page-print"><a href="#" onclick="return window.print();">Print this article</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+      </div>
+
+      <div class="document-title">
+        <h1>stroke-linejoin</h1>
+      </div>
+    </div>
+  </div>
+  
+  <div id="toc" class="toc">
+    <div class="center">
+      <div class="toc-head">Jump to:</div>
+        <ol class="toc-links">
+          <li><a href="#Usage_context" rel="internal">Usage context</a></li><li><a href="#Browser_Compatibility" rel="internal">Browser compatibility</a></li><li><a href="#Specification" rel="internal">Specification</a>
+        </li></ol>
+    </div>
+  </div>
+  
+
+      <div class="center clear">
+      
+
+    <div class="wiki-main-content" id="document-main"><div class="center">
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-left-present">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-main wiki-column text-content">
+
+              
+
+              
+              
+
+              
+
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <div></div>
+
+<p>The <strong><code>stroke-linejoin</code></strong> attribute is a presentation attribute defining the shape to be used at the corners of paths when they are stroked.</p>
+
+<p class="note"><strong>Note:</strong> As a presentation attribute <code>stroke-linejoin</code> can be used as a CSS property.</p>
+
+<p>As a presentation attribute, it can be applied to any element but it has effect only on the following nine elements: <a href="../Element/altGlyph.html" title="The <altGlyph> SVG element allows sophisticated selection of the glyphs used to render its child character data."><code>&lt;altGlyph&gt;</code></a>, <a href="../Element/path.html" title="The <path> SVG element is the generic element to define a shape. All the basic shapes can be created with a path element."><code>&lt;path&gt;</code></a>, <a href="../Element/polygon.html" title="The <polygon> element defines a closed shape consisting of a set of connected straight line segments. The last point is connected to the first point. For open shapes see the&nbsp;<polyline> element."><code>&lt;polygon&gt;</code></a>, <a href="../Element/polyline.html" title="The <polyline> SVG element is an SVG basic shape that creates straight lines connecting several points. Typically a polyline is used to create open shapes as the last point doesn't have to be connected to the first point. For closed shapes see the <polygon> element."><code>&lt;polyline&gt;</code></a>, <a href="../Element/rect.html" title="The <rect> element is a basic SVG shape that creates rectangles, defined by their corner's position, their width, and their height. The rectangles may have their corners rounded."><code>&lt;rect&gt;</code></a>, <a href="../Element/text.html" title="The SVG <text> element defines a graphics element consisting of text. It's possible to apply a gradient, pattern, clipping path, mask, or filter to <text>, just like any other SVG graphics element."><code>&lt;text&gt;</code></a>, <a href="../Element/textPath.html" title="In addition to text drawn in a straight line, SVG also includes the ability to place text along the shape of a <path> element. To specify that a block of text is to be rendered along the shape of a <path>, include the given text within a <textPath> element which includes an href attribute with a reference to a <path> element."><code>&lt;textPath&gt;</code></a>, <a href="../Element/tref.html" title="The textual content for a <text> SVG element can be either character data directly embedded within the <text> element or the character data content of a referenced element, where the referencing is specified with a <tref> element."><code>&lt;tref&gt;</code></a>, and <a href="../Element/tspan.html" title="Within a <text> element, text and font properties and the current text position can be adjusted with absolute or relative coordinate values by including a <tspan> element."><code>&lt;tspan&gt;</code></a></p>
+
+<div id="topExample">
+<div class="hidden">
+<pre class="brush: css">html,body,svg { height:100% }</pre>
+</div>
+
+<pre class="brush: html">&lt;svg viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg"&gt; &nbsp;
+&nbsp; &lt;!--
+&nbsp; Upper left path:
+&nbsp; Effect of the "miter" value
+&nbsp; --&gt;
+&nbsp; &lt;path d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5" stroke="black" fill="none"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; stroke-linejoin="miter" /&gt;
+&nbsp;
+&nbsp; &lt;!--
+&nbsp; Center path:
+&nbsp; Effect of the "round" value
+&nbsp; --&gt;
+&nbsp; &lt;path d="M7,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5" stroke="black" fill="none"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; stroke-linejoin="round" /&gt;
+&nbsp;
+&nbsp; &lt;!--
+&nbsp; Upper right path:
+&nbsp; Effect of the "bevel" value
+&nbsp; --&gt;
+&nbsp; &lt;path d="M13,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5" stroke="black" fill="none"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; stroke-linejoin="bevel" /&gt;
+&nbsp;
+&nbsp; &lt;!--
+&nbsp; Bottom left path:
+&nbsp; Effect of the "miter-clip" value
+&nbsp; with fallback to "miter" if not supported.
+&nbsp; --&gt;
+&nbsp; &lt;path d="M3,11 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5" stroke="black" fill="none"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; stroke-linejoin="miter-clip" /&gt;
+&nbsp;
+&nbsp; &lt;!--
+&nbsp; Bottom right path:
+&nbsp; Effect of the "arcs" value
+&nbsp; with fallback to "miter" if not supported.
+&nbsp; --&gt;
+&nbsp; &lt;path d="M9,11 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5" stroke="black" fill="none"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; stroke-linejoin="arcs" /&gt;
+&nbsp;
+&nbsp;
+&nbsp; &lt;!--
+&nbsp; the following pink lines highlight the
+&nbsp; position of the path for each stroke
+&nbsp; --&gt;
+&nbsp; &lt;g id="highlight"&gt;
+&nbsp;&nbsp;&nbsp; &lt;path d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; stroke="pink" fill="none" stroke-width="0.025" /&gt;
+&nbsp;&nbsp;&nbsp; &lt;circle cx="1" cy="5"&nbsp;&nbsp; r="0.05" fill="pink" /&gt;
+&nbsp;&nbsp;&nbsp; &lt;circle cx="3" cy="2"&nbsp;&nbsp; r="0.05" fill="pink" /&gt;
+&nbsp;&nbsp;&nbsp; &lt;circle cx="5" cy="5.5" r="0.05" fill="pink" /&gt;
+&nbsp; &lt;/g&gt;
+&nbsp; &lt;use xlink:href="#highlight" x="6" /&gt;
+&nbsp; &lt;use xlink:href="#highlight" x="12" /&gt;
+&nbsp; &lt;use xlink:href="#highlight" x="2" y="6" /&gt;
+&nbsp; &lt;use xlink:href="#highlight" x="8" y="6" /&gt;
+&lt;/svg&gt;
+</pre>
+
+<p><iframe src="../../../../../../mdn.mozillademos.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin%24samples/topExamplef794.html?revision=1389693" class="live-sample-frame sample-code-frame" height="400" width="100%" id="frame_topExample" frameborder="0"></iframe></p>
+</div>
+
+<a class="dashAnchor" name="//apple_ref/Section/Usage%20context"></a><h2 id="Usage_context">Usage context</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Value</th>
+   <td><code>arcs</code> | <code>bevel</code> |<code>miter</code> | <code>miter-clip</code> | <code>round</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Default value</th>
+   <td><code>miter</code></td>
+  </tr>
+  <tr>
+   <th scope="row">Animatable</th>
+   <td>Yes</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="arcs">arcs</h3>
+
+<p class="note"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span> <strong>Note:</strong> the <code>arcs</code> value as been introduced in SVG2 and it isn't widely supported yet, see <a href="#Browser_compatibility">Browser compatibility</a> bellow for details.</p>
+
+<p>The <code>arcs</code> value indicates that an arcs corner is to be used to join path segments. The arcs shape is formed by extending the outer edges of the stroke at the join point with arcs that have the same curvature as the outer edges at the join point.</p>
+
+<h4 id="Example">Example</h4>
+
+<div class="hidden">
+<pre class="brush: css">html,body,svg { height:100% }</pre>
+</div>
+
+<pre class="brush: html">&lt;svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;!-- Effect of the "arcs" value --&gt;
+  &lt;path d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3" stroke="black" fill="none"
+        stroke-linejoin="arcs" /&gt;
+
+  &lt;!--
+  the following pink lines highlight the
+  position of the path for each stroke
+  --&gt;
+  &lt;g id="p"&gt;
+    &lt;path d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3"
+          stroke="pink" fill="none" stroke-width="0.025" /&gt;
+    &lt;circle cx="1" cy="5" r="0.05" fill="pink" /&gt;
+    &lt;circle cx="3" cy="2" r="0.05" fill="pink" /&gt;
+    &lt;circle cx="5" cy="5" r="0.05" fill="pink" /&gt;
+  &lt;/g&gt;
+&lt;/svg&gt;</pre>
+
+<p><iframe src="../../../../../../mdn.mozillademos.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin%24samples/arcsf794.html?revision=1389693" class="live-sample-frame sample-code-frame" height="200" width="100%" id="frame_arcs" frameborder="0"></iframe></p>
+
+<h3 id="bevel">bevel</h3>
+
+<p>The <code>bevel</code> value indicates that a bevelled corner is to be used to join path segments.</p>
+
+<h4 id="Example_2">Example</h4>
+
+<div class="hidden">
+<pre class="brush: css">html,body,svg { height:100% }</pre>
+</div>
+
+<pre class="brush: html">&lt;svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;!-- Effect of the "bevel" value --&gt;
+  &lt;path d="M1,5 l2,-3 l2,3" stroke="black" fill="none"
+        stroke-linejoin="bevel" /&gt;
+
+  &lt;!--
+  the following pink lines highlight the
+  position of the path for each stroke
+  --&gt;
+  &lt;g id="p"&gt;
+    &lt;path d="M1,5 l2,-3 l2,3"
+          stroke="pink" fill="none" stroke-width="0.025" /&gt;
+    &lt;circle cx="1" cy="5" r="0.05" fill="pink" /&gt;
+    &lt;circle cx="3" cy="2" r="0.05" fill="pink" /&gt;
+    &lt;circle cx="5" cy="5" r="0.05" fill="pink" /&gt;
+  &lt;/g&gt;
+&lt;/svg&gt;</pre>
+
+<p><iframe src="../../../../../../mdn.mozillademos.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin%24samples/bevelf794.html?revision=1389693" class="live-sample-frame sample-code-frame" height="200" width="100%" id="frame_bevel" frameborder="0"></iframe></p>
+
+<h3 id="miter">miter</h3>
+
+<p>The <code>miter</code> value indicates that a sharp corner is to be used to join path segments. The corner is formed by extending the outer edges of the stroke at the tangents of the path segments until they intersect.</p>
+
+<p class="note"><strong>Note:</strong> If the <code><a href="stroke-miterlimit.html">stroke-miterlimit</a></code> is exceeded, the line join falls back to <code>bevel</code>.</p>
+
+<h4 id="Example_3">Example</h4>
+
+<div class="hidden">
+<pre class="brush: css">html,body,svg { height:100% }</pre>
+</div>
+
+<pre class="brush: html">&lt;svg viewBox="0 -1 10 7" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;!-- Effect of the "miter" value --&gt;
+  &lt;path d="M1,5 l2,-3 l2,3" stroke="black" fill="none"
+        stroke-linejoin="miter" /&gt;
+
+  &lt;!-- Effect of the "miter" value on a sharp angle
+       where de default miter limit is exceeded --&gt;
+  &lt;path d="M7,5 l0.75,-3 l0.75,3" stroke="black" fill="none"
+        stroke-linejoin="miter" /&gt;
+
+  &lt;!-- the following red dotted line show where
+       the miter value falls back to the bevel value --&gt;
+  &lt;path d="M0,0 h10" stroke="red" stroke-dasharray="0.05"  stroke-width="0.025"/&gt;
+
+  &lt;!-- the following pink lines highlight the position of the path for each stroke --&gt;
+  &lt;g&gt;
+    &lt;path d="M1,5 l2,-3 l2,3" stroke="pink" fill="none" stroke-width="0.025" /&gt;
+    &lt;circle cx="1" cy="5" r="0.05" fill="pink" /&gt;
+    &lt;circle cx="3" cy="2" r="0.05" fill="pink" /&gt;
+    &lt;circle cx="5" cy="5" r="0.05" fill="pink" /&gt;
+    
+    &lt;path d="M7,5 l0.75,-3 l0.75,3" stroke="pink" fill="none" stroke-width="0.025" /&gt;
+    &lt;circle cx="7"    cy="5" r="0.05" fill="pink" /&gt;
+    &lt;circle cx="7.75" cy="2" r="0.05" fill="pink" /&gt;
+    &lt;circle cx="8.5"  cy="5" r="0.05" fill="pink" /&gt;
+  &lt;/g&gt;
+&lt;/svg&gt;</pre>
+
+<p><iframe src="../../../../../../mdn.mozillademos.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin%24samples/miterf794.html?revision=1389693" class="live-sample-frame sample-code-frame" height="200" width="100%" id="frame_miter" frameborder="0"></iframe></p>
+
+<h3 id="miter-clip">miter-clip</h3>
+
+<p class="note"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span> <strong>Note:</strong> the <code>miter-clip</code> value as been introduced in SVG2 and it isn't widely supported yet, see <a href="#Browser_compatibility">Browser compatibility</a> bellow for details.</p>
+
+<p>The <code>miter-clip</code> value indicates that a sharp corner is to be used to join path segments. The corner is formed by extending the outer edges of the stroke at the tangents of the path segments until they intersect.</p>
+
+<p>If the <code><a href="stroke-miterlimit.html">stroke-miterlimit</a></code> is exceeded, the miter is clipped at a distance equal to half the <code><a href="stroke-miterlimit.html">stroke-miterlimit</a></code> value multiplied by the stroke width from the intersection of the path segments. This provides a better rendering than <code>miter</code> on very sharp join or in case of an animation.</p>
+
+<h4 id="Example_4">Example</h4>
+
+<div class="hidden">
+<pre class="brush: css">html,body,svg { height:100% }</pre>
+</div>
+
+<pre class="brush: html">&lt;svg viewBox="0 -1 10 7" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;!-- Effect of the "miter-clip" value --&gt;
+  &lt;path d="M1,5 l2,-3 l2,3" stroke="black" fill="none"
+        stroke-linejoin="miter-clip" /&gt;
+
+  &lt;!-- Effect of the "miter-clip" value on a sharp angle
+       where de default miter limit is exceeded --&gt;
+  &lt;path d="M7,5 l0.75,-3 l0.75,3" stroke="black" fill="none"
+        stroke-linejoin="miter-clip" /&gt;
+
+  &lt;!-- the following red dotted line show where the clip should happen --&gt;
+  &lt;path d="M0,0 h10" stroke="red" stroke-dasharray="0.05"  stroke-width="0.025"/&gt;
+
+  &lt;!-- the following pink lines highlight the position of the path for each stroke --&gt;
+  &lt;g&gt;
+    &lt;path d="M1,5 l2,-3 l2,3" stroke="pink" fill="none" stroke-width="0.025" /&gt;
+    &lt;circle cx="1" cy="5" r="0.05" fill="pink" /&gt;
+    &lt;circle cx="3" cy="2" r="0.05" fill="pink" /&gt;
+    &lt;circle cx="5" cy="5" r="0.05" fill="pink" /&gt;
+    
+    &lt;path d="M7,5 l0.75,-3 l0.75,3" stroke="pink" fill="none" stroke-width="0.025" /&gt;
+    &lt;circle cx="7"    cy="5" r="0.05" fill="pink" /&gt;
+    &lt;circle cx="7.75" cy="2" r="0.05" fill="pink" /&gt;
+    &lt;circle cx="8.5"  cy="5" r="0.05" fill="pink" /&gt;
+  &lt;/g&gt;
+&lt;/svg&gt;</pre>
+
+<p><iframe src="../../../../../../mdn.mozillademos.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin%24samples/miter-clipf794.html?revision=1389693" class="live-sample-frame sample-code-frame" height="200" width="100%" id="frame_miter-clip" frameborder="0"></iframe></p>
+
+<h3 id="round">round</h3>
+
+<p>The <code>round</code> value indicates that a round corner is to be used to join path segments.</p>
+
+<h4 id="Example_5">Example</h4>
+
+<div class="hidden">
+<pre class="brush: css">html,body,svg { height:100% }</pre>
+</div>
+
+<pre class="brush: html">&lt;svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;!-- Effect of the "round" value --&gt;
+  &lt;path d="M1,5 l2,-3 l2,3" stroke="black" fill="none"
+        stroke-linejoin="round" /&gt;
+
+  &lt;!--
+  the following pink lines highlight the
+  position of the path for each stroke
+  --&gt;
+  &lt;g id="p"&gt;
+    &lt;path d="M1,5 l2,-3 l2,3"
+          stroke="pink" fill="none" stroke-width="0.025" /&gt;
+    &lt;circle cx="1" cy="5" r="0.05" fill="pink" /&gt;
+    &lt;circle cx="3" cy="2" r="0.05" fill="pink" /&gt;
+    &lt;circle cx="5" cy="5" r="0.05" fill="pink" /&gt;
+  &lt;/g&gt;
+&lt;/svg&gt;</pre>
+
+<p><iframe src="../../../../../../mdn.mozillademos.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin%24samples/roundf794.html?revision=1389693" class="live-sample-frame sample-code-frame" height="200" width="100%" id="frame_round" frameborder="0"></iframe></p>
+
+<a class="dashAnchor" name="//apple_ref/Section/Browser%20compatibility"></a><h2 id="Browser_Compatibility" name="Browser_Compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data" class="external" rel="noopener">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p></p><div class="bc-old"><div class="htab">
+    <a id="AutoCompatibilityTable" name="AutoCompatibilityTable"></a>
+    <ul>
+    <li class="selected">
+    <a>Desktop</a>
+    </li>
+    <li>
+    <a>Mobile</a>
+    </li>
+    </ul>
+    </div><div id="compat-desktop"><table class="compat-table"><thead><tr><th>Feature</th><th>Chrome</th><th>Edge</th><th>Firefox</th><th>Internet Explorer</th><th>Opera</th><th>Safari</th></tr></thead><tbody><tr><td><a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-linejoin">Basic support</a></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td></tr></tbody></table></div><div id="compat-mobile"><table class="compat-table"><thead><tr><th>Feature</th><th>Android webview</th><th>Chrome for Android</th><th>Edge mobile</th><th>Firefox for Android</th><th>Opera Android</th><th>iOS Safari</th><th>Samsung Internet</th></tr></thead><tbody><tr><td><a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/stroke-linejoin">Basic support</a></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td></tr></tbody></table></div></div><div class="bc-data hidden"><table class="bc-table bc-table-web"><thead><tr class="bc-platforms"><td></td><th colspan="6" class="bc-platform-desktop"><abbr class="only-icon" title="Desktop"><span>Desktop</span><i class="ic-desktop"></i></abbr></th><th colspan="7" class="bc-platform-mobile"><abbr class="only-icon" title="Mobile"><span>Mobile</span><i class="ic-mobile"></i></abbr></th></tr><tr class="bc-browsers"><td></td><th class="bc-browser-chrome"><abbr class="only-icon" title="Chrome"><span>Chrome</span><i class="ic-chrome"></i></abbr></th><th class="bc-browser-edge"><abbr class="only-icon" title="Edge"><span>Edge</span><i class="ic-edge"></i></abbr></th><th class="bc-browser-firefox"><abbr class="only-icon" title="Firefox"><span>Firefox</span><i class="ic-firefox"></i></abbr></th><th class="bc-browser-ie"><abbr class="only-icon" title="Internet Explorer"><span>Internet Explorer</span><i class="ic-ie"></i></abbr></th><th class="bc-browser-opera"><abbr class="only-icon" title="Opera"><span>Opera</span><i class="ic-opera"></i></abbr></th><th class="bc-browser-safari"><abbr class="only-icon" title="Safari"><span>Safari</span><i class="ic-safari"></i></abbr></th><th class="bc-browser-webview_android"><abbr class="only-icon" title="Android webview"><span>Android webview</span><i class="ic-webview_android"></i></abbr></th><th class="bc-browser-chrome_android"><abbr class="only-icon" title="Chrome for Android"><span>Chrome for Android</span><i class="ic-chrome_android"></i></abbr></th><th class="bc-browser-edge_mobile"><abbr class="only-icon" title="Edge Mobile"><span>Edge Mobile</span><i class="ic-edge_mobile"></i></abbr></th><th class="bc-browser-firefox_android"><abbr class="only-icon" title="Firefox for Android"><span>Firefox for Android</span><i class="ic-firefox_android"></i></abbr></th><th class="bc-browser-opera_android"><abbr class="only-icon" title="Opera for Android"><span>Opera for Android</span><i class="ic-opera_android"></i></abbr></th><th class="bc-browser-safari_ios"><abbr class="only-icon" title="iOS Safari"><span>iOS Safari</span><i class="ic-safari_ios"></i></abbr></th><th class="bc-browser-samsunginternet_android"><abbr class="only-icon" title="Samsung Internet"><span>Samsung Internet</span><i class="ic-samsunginternet_android"></i></abbr></th></tr></thead><tbody><tr><th scope="row">Basic support</th><td class="bc-supports-unknown bc-browser-chrome"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-edge"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-firefox"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-ie"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-opera"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-safari"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-webview_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-chrome_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-edge_mobile"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-firefox_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-opera_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-safari_ios"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-samsunginternet_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td></tr></tbody></table><section id="sect1" class="bc-legend"><h3 id="Legend" class="offscreen">Legend</h3><dl><dt><span class="bc-supports-unknown bc-supports">
+                <abbr class="bc-level bc-level-unknown only-icon" title="Compatibility unknown">
+                 <span>Compatibility unknown</span>
+                 &nbsp;
+                </abbr></span></dt><dd>Compatibility unknown</dd></dl></section></div><p></p>
+
+<a class="dashAnchor" name="//apple_ref/Section/Specification"></a><h2 id="Specification">Specification</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><a href="https://svgwg.org/svg2-draft/painting.html#StrokeLinejoinProperty" hreflang="en" lang="en" class="external" rel="noopener">Scalable Vector Graphics (SVG) 2<br><small lang="en-US">The definition of 'stroke-linejoin' in that specification.</small></a></td>
+   <td><span class="spec-CR">Candidate Recommendation</span></td>
+   <td>Definition for shapes and texts</td>
+  </tr>
+  <tr>
+   <td><a href="https://www.w3.org/TR/SVG11/painting.html#StrokeLinejoinProperty" hreflang="en" lang="en" class="external" rel="noopener">Scalable Vector Graphics (SVG) 1.1 (Second Edition)<br><small lang="en-US">The definition of 'stroke-linejoin' in that specification.</small></a></td>
+   <td><span class="spec-REC">Recommendation</span></td>
+   <td>Initial definition for shapes and texts</td>
+  </tr>
+ </tbody>
+</table>
+                  
+                
+              </article>
+
+              <!-- contributors -->
+              <div class="wiki-block contributors">
+                <h2 class="offscreen">Document Tags and Contributors</h2>
+                
+                
+  <div class="tag-attach-list contributors-sub">
+    <svg class="icon icon-tags" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M7 7c0-1.109-.891-2-2-2s-2 .891-2 2 .891 2 2 2 2-.891 2-2zm16.672 9c0 .531-.219 1.047-.578 1.406l-7.672 7.688c-.375.359-.891.578-1.422.578s-1.047-.219-1.406-.578L1.422 13.906C.625 13.125 0 11.609 0 10.5V4c0-1.094.906-2 2-2h6.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422zm6 0c0 .531-.219 1.047-.578 1.406l-7.672 7.688a2.08 2.08 0 0 1-1.422.578c-.812 0-1.219-.375-1.75-.922l7.344-7.344c.359-.359.578-.875.578-1.406s-.219-1.047-.578-1.422L14.422 3.422C13.625 2.625 12.11 2 11 2h3.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422z"></path>
+</svg>
+    <strong>Tags:</strong>&nbsp;
+    <ul class="tags tags-small">
+      
+        <li><a href="../../../tag/SVG.html" rel="nofollow">SVG</a></li>
+      
+        <li><a href="../../../tag/SVG%20Attribute.html" rel="nofollow">SVG Attribute</a></li>
+      
+    </ul>
+  </div>
+
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-group" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M9.266 14a5.532 5.532 0 0 0-4.141 2H3.031C1.468 16 0 15.25 0 13.516 0 12.25-.047 8 1.937 8c.328 0 1.953 1.328 4.062 1.328.719 0 1.406-.125 2.078-.359A7.624 7.624 0 0 0 7.999 10c0 1.422.453 2.828 1.266 4zM26 23.953C26 26.484 24.328 28 21.828 28H8.172C5.672 28 4 26.484 4 23.953 4 20.422 4.828 15 9.406 15c.531 0 2.469 2.172 5.594 2.172S20.063 15 20.594 15C25.172 15 26 20.422 26 23.953zM10 4c0 2.203-1.797 4-4 4S2 6.203 2 4s1.797-4 4-4 4 1.797 4 4zm11 6c0 3.313-2.688 6-6 6s-6-2.688-6-6 2.688-6 6-6 6 2.688 6 6zm9 3.516C30 15.25 28.531 16 26.969 16h-2.094a5.532 5.532 0 0 0-4.141-2A7.066 7.066 0 0 0 22 10a7.6 7.6 0 0 0-.078-1.031A6.258 6.258 0 0 0 24 9.328C26.109 9.328 27.734 8 28.062 8c1.984 0 1.937 4.25 1.937 5.516zM28 4c0 2.203-1.797 4-4 4s-4-1.797-4-4 1.797-4 4-4 4 1.797 4 4z"></path>
+</svg>
+                    <strong>Contributors to this page:</strong>
+                    
+        <a href="https://developer.mozilla.org/en-US/profiles/Jeremie">Jeremie</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/connorshea">connorshea</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/caesarsol">caesarsol</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Mardeg">Mardeg</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/trevorh">trevorh</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Elli_Ryc">Elli_Ryc</a>
+    
+                  </div>
+                
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-clock" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M14 8.5v7c0 .281-.219.5-.5.5h-5a.494.494 0 0 1-.5-.5v-1c0-.281.219-.5.5-.5H12V8.5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zm6.5 5.5c0-4.688-3.813-8.5-8.5-8.5S3.5 9.313 3.5 14s3.813 8.5 8.5 8.5 8.5-3.813 8.5-8.5zm3.5 0c0 6.625-5.375 12-12 12S0 20.625 0 14 5.375 2 12 2s12 5.375 12 12z"></path>
+</svg>
+                    <strong>Last updated by:</strong>
+                    <a href="https://developer.mozilla.org/en-US/profiles/Jeremie">Jeremie</a>,
+                    <time datetime="2018-06-20T11:14:01.061163-07:00">Jun 20, 2018, 11:14:01 AM</time>
+                  </div>
+                
+              </div>
+            </div>
+
+            
+              <!-- quick links and approvals strip -->
+              <div id="wiki-left" class="column-strip wiki-column">
+
+                <!-- crumbs -->
+                
+  
+    <nav class="crumbs" role="navigation">
+      <ol typeof="BreadcrumbList" vocab="https://schema.org/" aria-label="breadcrumbs">
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="https://developer.mozilla.org/en-US/docs/Web" property="item" typeof="WebPage">
+              <span property="name">Web technology for developers</span>
+            </a>
+            <meta property="position" content="1">
+          </li>
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="../../SVG.html" property="item" typeof="WebPage">
+              <span property="name">SVG: Scalable Vector Graphics</span>
+            </a>
+            <meta property="position" content="2">
+          </li>
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="../Attribute.html" property="item" typeof="WebPage">
+              <span property="name">SVG Attribute reference</span>
+            </a>
+            <meta property="position" content="3">
+          </li>
+        
+        <li property="itemListElement" typeof="ListItem" class="crumb">
+          <span property="name">stroke-linejoin</span>
+        </li>
+      </ol>
+    </nav>
+  
+
+                
+                  <!-- quick links -->
+                  
+  <div class="quick-links" id="quick-links">
+    <div class="quick-links-head">Related Topics</div>
+    
+  <ol>
+   
+   <li><a href="../../SVG.html">SVG Elements</a><ol>
+ <li>A
+   <ol>
+     <li><a href="../Element/a.html" title="The <a> SVG element creates a hyperlink to other web pages, files, locations within the same page, email addresses, or any other URL."><code>&lt;a&gt;</code></a></li>
+     <li class="deprecatedElement"><a href="../Element/altGlyph.html" title="The <altGlyph> SVG element allows sophisticated selection of the glyphs used to render its child character data."><code>&lt;altGlyph&gt;</code></a></li>
+     <li class="deprecatedElement"><a href="../Element/altGlyphDef.html" title="The <altGlyphDef> SVG element defines a substitution representation for glyphs."><code>&lt;altGlyphDef&gt;</code></a></li>
+     <li class="deprecatedElement"><a href="../Element/altGlyphItem.html" title="The <altGlyphItem> element provides a set of candidates for glyph substitution by the <altGlyph> element."><code>&lt;altGlyphItem&gt;</code></a></li>
+     <li><a href="../Element/animate.html" title="This element implements the SVGAnimateElement interface."><code>&lt;animate&gt;</code></a></li>
+     <li><a href="../Element/animateColor.html" title="The <animateColor> SVG element specifies a color transformation over time."><code>&lt;animateColor&gt;</code></a></li>
+     <li><a href="../Element/animateMotion.html" title="The <animateMotion> element causes a referenced element to move along a motion path."><code>&lt;animateMotion&gt;</code></a></li>
+     <li><a href="../Element/animateTransform.html" title="The animateTransform element animates a transformation attribute on a target element, thereby allowing animations to control translation, scaling, rotation and/or skewing."><code>&lt;animateTransform&gt;</code></a></li>
+   </ol>
+ </li>
+ <li>B-C
+   <ol>
+     <li><a href="../Element/circle.html" title="The <circle> SVG element is an SVG basic shape, used to create circles based on a center point and a radius."><code>&lt;circle&gt;</code></a></li>
+     <li><a href="../Element/clipPath.html" title="The <clipPath> SVG element defines a clipping path. A clipping path is used/referenced using the clip-path property."><code>&lt;clipPath&gt;</code></a></li>
+     <li class="deprecatedElement"><a href="../Element/color-profile.html" title="The <color-profile> element allows describing the color profile used for the image."><code>&lt;color-profile&gt;</code></a></li>
+     <li><a href="../Element/cursor.html" title="The <cursor> SVG element can be used to define a platform-independent custom cursor. A recommended approach for defining a platform-independent custom cursor is to create a PNG image and define a cursor element that references the PNG image and identifies the exact position within the image which is the pointer position (i.e., the hot spot)."><code>&lt;cursor&gt;</code></a></li>
+   </ol>
+ </li>
+ <li>D
+   <ol>
+     <li><a href="../Element/defs.html" title="SVG allows graphical objects to be defined for later reuse. It is recommended that, wherever possible, referenced elements be defined inside of a <defs> element. Objects created inside a <defs> element are not rendered immediately; instead, think of them as templates or macros created for future use."><code>&lt;defs&gt;</code></a></li>
+     <li><a href="../Element/desc.html" title="Each container element or graphics element in an SVG drawing can supply a description string using the <desc> element where the description is text-only."><code>&lt;desc&gt;</code></a></li>
+   </ol>
+ </li>
+ <li>E
+   <ol>
+     <li><a href="../Element/ellipse.html" title="The <ellipse> element is an SVG basic shape, used to create ellipses based on a center coordinate, and both their x and y radius."><code>&lt;ellipse&gt;</code></a></li>
+   </ol>
+ </li>
+ <li>F
+   <ol>
+     <li><a href="../Element/feBlend.html" title="The <feBlend> SVG filter primitive composes two objects together ruled by a certain blending mode. This is similar to what is known from image editing software when blending two layers. The mode is defined by the mode attribute."><code>&lt;feBlend&gt;</code></a></li>
+     <li><a href="../Element/feColorMatrix.html" title="The <feColorMatrix> SVG filter element changes colors based on a transformation matrix. Every pixel's color value (represented by an [R,G,B,A] vector) is matrix multiplied to create a new color."><code>&lt;feColorMatrix&gt;</code></a></li>
+     <li><a href="../Element/feComponentTransfer.html" title="Th <feComponentTransfer> SVG filter primitive performs color-component-wise remapping of data for each pixel. It allows operations like brightness adjustment, contrast adjustment, color balance or thresholding."><code>&lt;feComponentTransfer&gt;</code></a></li>
+     <li><a href="../Element/feComposite.html" title="This filter primitive performs the combination of two input images pixel-wise in image space using one of the Porter-Duff compositing operations: over, in, atop, out, xor and lighter. Additionally, a component-wise arithmetic operation (with the result clamped between [0..1]) can be applied."><code>&lt;feComposite&gt;</code></a></li>
+     <li><a href="../Element/feConvolveMatrix.html" title="The <feConvolveMatrix> SVG filter primitive applies a matrix convolution filter effect. A convolution combines pixels in the input image with neighboring pixels to produce a resulting image. A wide variety of imaging operations can be achieved through convolutions, including blurring, edge detection, sharpening, embossing and beveling."><code>&lt;feConvolveMatrix&gt;</code></a></li>
+     <li><a href="../Element/feDiffuseLighting.html" title="The <feDiffuseLighting> SVG filter primitive lights an image using the alpha channel as a bump map. The resulting image, which is an RGBA opaque image, depends on the light color, light position and surface geometry of the input bump map."><code>&lt;feDiffuseLighting&gt;</code></a></li>
+     <li><a href="../Element/feDisplacementMap.html" title="The <feDisplacementMap> SVG filter primitive uses the pixel values from the image from in2 to spatially displace the image from in."><code>&lt;feDisplacementMap&gt;</code></a></li>
+     <li><a href="../Element/feDistantLight.html" title="The <feDistantLight> filter primitive defines a distant light source that can be used within a lighting filter primitive: <feDiffuseLighting> or <feSpecularLighting>."><code>&lt;feDistantLight&gt;</code></a></li>
+     <li><a href="../Element/feFlood.html" title="The <feFlood> SVG filter primitive fills the filter subregion with the color and opacity defined by flood-color and flood-opacity."><code>&lt;feFlood&gt;</code></a></li>
+     <li><a href="../Element/feFuncA.html" title="The <feFuncA> SVG filter primitive defines the transfer function for the alpha component of the input graphic of its parent <feComponentTransfer> element."><code>&lt;feFuncA&gt;</code></a></li>
+     <li><a href="../Element/feFuncB.html" title="The <feFuncB> SVG filter primitive defines the transfer function for the blue component of the input graphic of its parent <feComponentTransfer> element."><code>&lt;feFuncB&gt;</code></a></li>
+     <li><a href="../Element/feFuncG.html" title="The <feFuncG> SVG filter primitive defines the transfer function for the green component of the input graphic of its parent <feComponentTransfer> element."><code>&lt;feFuncG&gt;</code></a></li>
+     <li><a href="../Element/feFuncR.html" title="The <feFuncR> SVG filter primitive defines the transfer function for the red component of the input graphic of its parent <feComponentTransfer> element."><code>&lt;feFuncR&gt;</code></a></li>
+     <li><a href="../Element/feGaussianBlur.html" title="The <feGaussianBlur> SVG filter primitive blurs the input image by the amount specified in stdDeviation, which defines the bell-curve."><code>&lt;feGaussianBlur&gt;</code></a></li>
+     <li><a href="../Element/feImage.html" title="The <feImage> SVG filter primitive fetches image data from an external source and provides the pixel data as output (meaning if the external source is an SVG image, it is rasterized.)"><code>&lt;feImage&gt;</code></a></li>
+     <li><a href="../Element/feMerge.html" title="The <feMerge> SVG element allows filter effects to be applied concurrently instead of sequentially. This is achieved by other filters storing their output via the result attribute and then accessing it in a <feMergeNode> child."><code>&lt;feMerge&gt;</code></a></li>
+     <li><a href="../Element/feMergeNode.html" title="The feMergeNode takes the result of another filter to be processed by its parent <feMerge>."><code>&lt;feMergeNode&gt;</code></a></li>
+     <li><a href="../Element/feMorphology.html" title="The <feMorphology> SVG filter primitive is used to erode or dilate the input image. It's usefulness lies especially in fattening or thinning effects."><code>&lt;feMorphology&gt;</code></a></li>
+     <li><a href="../Element/feOffset.html" title="The <feOffset> SVG filter primitive allows to offset the input image. The input image as a whole is offset by the values specified in the dx and dy attributes."><code>&lt;feOffset&gt;</code></a></li>
+     <li><a href="../Element/fePointLight.html" title="The  SVG filter primitive allows to create a point light effect."><code>&lt;fePointLight&gt;</code></a></li>
+     <li><a href="../Element/feSpecularLighting.html" title="The <feSpecularLighting> SVG filter primitive lights a source graphic using the alpha channel as a bump map. The resulting image is an RGBA image based on the light color. The lighting calculation follows the standard specular component of the Phong lighting model. The resulting image depends on the light color, light position and surface geometry of the input bump map. The result of the lighting calculation is added. The filter primitive assumes that the viewer is at infinity in the z direction."><code>&lt;feSpecularLighting&gt;</code></a></li>
+     <li><a href="../Element/feSpotLight.html" title="The <feSpotLight> SVG filter primitive allows to create a spotlight effect."><code>&lt;feSpotLight&gt;</code></a></li>
+     <li><a href="../Element/feTile.html" title="The <feTile> SVG filter primitive allows to fill a target rectangle with a repeated, tiled pattern of an input image. The effect is similar to the one of a <pattern>."><code>&lt;feTile&gt;</code></a></li>
+     <li><a href="../Element/feTurbulence.html" title="The <feTurbulence> SVG filter primitive creates an image using the Perlin turbulence function. It allows the synthesis of artificial textures like clouds or marble. The resulting image will fill the entire filter primitive subregion."><code>&lt;feTurbulence&gt;</code></a></li>
+     <li><a href="../Element/filter.html" title="The <filter> SVG element serves as container for atomic filter operations. It is never rendered directly. A filter is referenced by using the filter attribute on the target SVG element or via the filter CSS property."><code>&lt;filter&gt;</code></a></li>
+     <li><a href="../Element/font.html" title="The <font> SVG element defines a font to be used for text layout."><code>&lt;font&gt;</code></a></li>
+     <li><a href="../Element/font-face.html" title="The <font-face> SVG element corresponds to the CSS @font-face rule. It defines a font's outer properties."><code>&lt;font-face&gt;</code></a></li>
+     <li><a href="../Element/font-face-format.html" title="The <font-face-format> SVG element describes the type of font referenced by its parent <font-face-uri>."><code>&lt;font-face-format&gt;</code></a></li>
+     <li><a href="../Element/font-face-name.html" title="The <font-face-name> element points to a locally installed copy of this font, identified by its name."><code>&lt;font-face-name&gt;</code></a></li>
+     <li><a href="../Element/font-face-src.html" title="The <font-face-src> SVG element corresponds to the src descriptor in CSS @font-face rules. It serves as container for <font-face-name>, pointing to locally installed copies of this font, and <font-face-uri>, utilizing remotely defined fonts."><code>&lt;font-face-src&gt;</code></a></li>
+     <li><a href="../Element/font-face-uri.html" title="The <font-face-uri> SVG element points to a remote definition of the current font."><code>&lt;font-face-uri&gt;</code></a></li>
+     <li><a href="../Element/foreignObject.html" title="The <foreignObject> SVG element allows for inclusion of a foreign XML namespace which has its graphical content drawn by a different user agent. The included foreign graphical content is subject to SVG transformations and compositing."><code>&lt;foreignObject&gt;</code></a></li>
+   </ol>
+ </li>
+ <li>G
+   <ol>
+     <li><a href="../Element/g.html" title="The <g> SVG element is a container used to group other SVG elements."><code>&lt;g&gt;</code></a></li>
+     <li><a href="../Element/glyph.html" title="A <glyph> defines a single glyph in an SVG font."><code>&lt;glyph&gt;</code></a></li>
+     <li class="deprecatedElement"><a href="../Element/glyphRef.html" title="The glyphRef element provides a single possible glyph to the referencing <altGlyph> substitution."><code>&lt;glyphRef&gt;</code></a></li>
+   </ol>
+ </li>
+ <li>H
+   <ol>
+     <li><a href="../Element/hkern.html" title="The <hkern> SVG element allows to fine-tweak the horizontal distance between two glyphs. This process is known as kerning."><code>&lt;hkern&gt;</code></a></li>
+   </ol>
+ </li>
+ <li>I
+   <ol>
+     <li><a href="../Element/image.html" title="The <image> SVG element includes images inside SVG documents. It can display raster image files or other SVG files."><code>&lt;image&gt;</code></a></li>
+   </ol>
+ </li>
+ <li>J-L
+   <ol>
+     <li><a href="../Element/line.html" title="The <line> element is an SVG basic shape used to create a line connecting two points."><code>&lt;line&gt;</code></a></li>
+     <li><a href="../Element/linearGradient.html" title="The <linearGradient> SVG element lets authors define linear gradients to fill or stroke graphical elements."><code>&lt;linearGradient&gt;</code></a></li>
+   </ol>
+ </li>
+ <li>M
+   <ol>
+     <li><a href="../Element/marker.html" title="The <marker> element defines the graphics that is to be used for drawing arrowheads or polymarkers on a given <path>, <line>, <polyline> or <polygon> element."><code>&lt;marker&gt;</code></a></li>
+     <li><a href="../Element/mask.html" title="The <mask> element defines an alpha mask for compositing the current object into the background. A mask is used/referenced using the mask property."><code>&lt;mask&gt;</code></a></li>
+     <li><a href="../Element/metadata.html" title="The <metadata> SVG element allows to add metadata to SVG content. Metadata is structured information about data. The contents of <metadata> elements should be elements from other XML namespaces such as RDF, FOAF, etc."><code>&lt;metadata&gt;</code></a></li>
+     <li><a href="../Element/missing-glyph.html" title="The <missing-glyph> SVG element's content is rendered, if for a given character the font doesn't define an appropriate <glyph>."><code>&lt;missing-glyph&gt;</code></a></li>
+     <li><a href="../Element/mpath.html" title="The <mpath> sub-element for the <animateMotion> element provides the ability to reference an external <path> element as the definition of a motion path."><code>&lt;mpath&gt;</code></a></li>
+   </ol>
+ </li>
+ <li>N-P
+   <ol>
+     <li><a href="../Element/path.html" title="The <path> SVG element is the generic element to define a shape. All the basic shapes can be created with a path element."><code>&lt;path&gt;</code></a></li>
+     <li><a href="../Element/pattern.html" title="The <pattern> element defines a graphics object which can be redrawn at repeated x and y-coordinate intervals (&quot;tiled&quot;) to cover an area."><code>&lt;pattern&gt;</code></a></li>
+     <li><a href="../Element/polygon.html" title="The <polygon> element defines a closed shape consisting of a set of connected straight line segments. The last point is connected to the first point. For open shapes see the&nbsp;<polyline> element."><code>&lt;polygon&gt;</code></a></li>
+     <li><a href="../Element/polyline.html" title="The <polyline> SVG element is an SVG basic shape that creates straight lines connecting several points. Typically a polyline is used to create open shapes as the last point doesn't have to be connected to the first point. For closed shapes see the <polygon> element."><code>&lt;polyline&gt;</code></a></li>
+   </ol>
+ </li>
+ <li>Q-R
+   <ol>
+     <li><a href="../Element/radialGradient.html" title="The <radialGradient> SVG element lets authors define radial gradients to fill or stroke graphical elements."><code>&lt;radialGradient&gt;</code></a></li>
+     <li><a href="../Element/rect.html" title="The <rect> element is a basic SVG shape that creates rectangles, defined by their corner's position, their width, and their height. The rectangles may have their corners rounded."><code>&lt;rect&gt;</code></a></li>
+   </ol>
+ </li>
+ <li>S
+   <ol>
+     <li><a href="../Element/script.html" title="A SVG script element is equivalent to the script element in HTML and thus is the place for scripts (e.g., ECMAScript)."><code>&lt;script&gt;</code></a></li>
+     <li><a href="../Element/set.html" title="The <set> element provides a simple means of just setting the value of an attribute for a specified duration. It supports all attribute types, including those that cannot reasonably be interpolated, such as string and boolean values. The <set> element is non-additive. The additive and accumulate attributes are not allowed, and will be ignored if specified."><code>&lt;set&gt;</code></a></li>
+     <li><a href="../Element/stop.html" title="The <stop> SVG element defines the ramp of colors to use on a gradient, which is a child element to either the <linearGradient> or the <radialGradient> element."><code>&lt;stop&gt;</code></a></li>
+     <li><a href="../Element/style.html" title="The <style> SVG element allows style sheets to be embedded directly within SVG content. SVG's style element has the same attributes as the corresponding element in HTML (see HTML's <style> element)."><code>&lt;style&gt;</code></a></li>
+     <li><a href="../Element/svg.html" title="The svg element is a container that defines a new coordinate system and viewport. It is used as the outermost element of any SVG document but it can also be used to embed a SVG fragment inside any SVG or HTML document."><code>&lt;svg&gt;</code></a></li>
+     <li><a href="../Element/switch.html" title="The <switch> SVG element evaluates the requiredFeatures, requiredExtensions and systemLanguage attributes on its direct child elements in order, and then processes and renders the first child for which these attributes evaluate to true. All others will be bypassed and therefore not rendered. If the child element is a container element such as a <g>, then the entire subtree is either processed/rendered or bypassed/not rendered."><code>&lt;switch&gt;</code></a></li>
+     <li><a href="../Element/symbol.html" title="The <symbol> element is used to define graphical template objects which can be instantiated by a <use> element. The use of symbol elements for graphics that are used multiple times in the same document adds structure and semantics. Documents that are rich in structure may be rendered graphically, as speech, or as Braille, and thus promote accessibility. Note that a symbol element itself is not rendered. Only instances of a symbol element (i.e., a reference to a symbol by a <use> element) are rendered."><code>&lt;symbol&gt;</code></a></li>
+   </ol>
+ </li>
+ <li>T
+   <ol>
+     <li><a href="../Element/text.html" title="The SVG <text> element defines a graphics element consisting of text. It's possible to apply a gradient, pattern, clipping path, mask, or filter to <text>, just like any other SVG graphics element."><code>&lt;text&gt;</code></a></li>
+     <li><a href="../Element/textPath.html" title="In addition to text drawn in a straight line, SVG also includes the ability to place text along the shape of a <path> element. To specify that a block of text is to be rendered along the shape of a <path>, include the given text within a <textPath> element which includes an href attribute with a reference to a <path> element."><code>&lt;textPath&gt;</code></a></li>
+     <li><a href="../Element/title.html" title="Each container element or graphics element in an SVG drawing can supply a <title> element containing a description string where the description is text-only. When the current SVG document fragment is rendered as SVG on visual media, <title> element is not rendered as part of the graphics. However, some user agents may, for example, display the <title> element as a tooltip. Alternate presentations are possible, both visual and aural, which display the <title> element but do not display path elements or other graphics elements. The <title> element generally improves accessibility of SVG documents."><code>&lt;title&gt;</code></a></li>
+     <li class="deprecatedElement"><a href="../Element/tref.html" title="The textual content for a <text> SVG element can be either character data directly embedded within the <text> element or the character data content of a referenced element, where the referencing is specified with a <tref> element."><code>&lt;tref&gt;</code></a></li>
+     <li><a href="../Element/tspan.html" title="Within a <text> element, text and font properties and the current text position can be adjusted with absolute or relative coordinate values by including a <tspan> element."><code>&lt;tspan&gt;</code></a></li>
+   </ol>
+ </li>
+ <li>U
+   <ol>
+     <li><a href="../Element/use.html" title="The <use> element takes nodes from within the SVG document, and duplicates them somewhere else."><code>&lt;use&gt;</code></a></li>
+   </ol>
+ </li>
+ <li>V-Z
+   <ol>
+     <li><a href="../Element/view.html" title="A view is a defined way to view the image, like a zoom level or a detail view."><code>&lt;view&gt;</code></a></li>
+     <li><a href="../Element/vkern.html" title="The <vkern> SVG element allows to fine-tweak the vertical distance between two glyphs in top-to-bottom fonts. This process is known as kerning."><code>&lt;vkern&gt;</code></a></li>
+   </ol>   
+ </li>
+   </ol></li>
+   </ol>
+  
+  </div>
+                
+
+                <!-- approvals -->
+                
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+    
+      <div class="newsletter-box">
+        <div class="newsletter">
+    <form id="newsletterForm" class="newsletter-form nodisable" name="newsletter-form" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <div class="newsletter-head">
+            <h2 class="newsletter-teaser">Learn the best of web development</h2>
+            <p class="newsletter-description">Get the latest and greatest from MDN delivered straight to your inbox.</p>
+            
+        </div>
+
+        <div class="newsletter-fields">
+            <input type="hidden" id="fmt" name="fmt" value="H">
+            <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+            <div id="newsletterErrors" class="newsletter-errors"></div>
+
+            <div id="newsletterEmail" class="form-group newsletter-group-email">
+                <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+                <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+            </div>
+
+            <div id="newsletterPrivacy" class="form-group form-group-agree newsletter-group-privacy hidden">
+                <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+                <label for="newsletterPrivacyInput">
+                I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+                </label>
+            </div>
+            <div id="newsletterSubmit" class="newsletter-group-submit">
+                <button id="newsletter-submit" type="submit" class="button neutral newsletter-submit">
+                    Sign up now<svg class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg" width="23" height="28" viewBox="0 0 23 28" aria-hidden="true">
+    <path d="M23 15a2.01 2.01 0 0 1-.578 1.422L12.25 26.594c-.375.359-.891.578-1.422.578s-1.031-.219-1.406-.578L8.25 25.422c-.375-.375-.594-.891-.594-1.422s.219-1.047.594-1.422L12.828 18h-11C.703 18 0 17.062 0 16v-2c0-1.062.703-2 1.828-2h11L8.25 7.406a1.96 1.96 0 0 1 0-2.812l1.172-1.172c.375-.375.875-.594 1.406-.594s1.047.219 1.422.594l10.172 10.172c.375.359.578.875.578 1.406z"></path>
+</svg>
+                </button>
+            </div>
+        </div>
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden">
+        <span>Hide Newsletter Sign-up</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+</div>
+      </div>
+    
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/en-US/docs/Web/SVG/Attribute/stroke-linejoin$edit" label="Edit page"></menuitem>
+    <menuitem data-action="/en-US/docs/Web/SVG/Attribute/stroke-linejoin$history" label="View page history"></menuitem>
+  </menu>
+
+      </div>
+  </main>
+  <!-- Footer -->
+    <footer id="nav-footer" class="nav-footer"><div class="center"><a href="http://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin">stroke-linejoin</a> by <a href="http://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin$history">Mozilla Contributors</a> is licensed under <a href="http://creativecommons.org/licenses/by-sa/2.5/" class="external external-icon">CC-BY-SA 2.5</a>.</div></footer> 
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script async="" type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script src="../../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../../static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><!--[endif]---->
+
+    
+    <script src="../../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../../static/build/js/wiki.b26a4c181df3.js" charset="utf-8" id="wikiscript"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../static/build/js/newsletter.a85c5c2892e5.js" charset="utf-8"></script>
+  
+
+
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:40:28 GMT -->
+</body></html>

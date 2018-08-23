@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core$samples/A_simple_example?revision=1371212 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 08:45:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <title>Using the W3C DOM Level 1 Core</title>
+    </head>
+    <body>
+        
+            <body>
+<input type="button" value="Change this document." onclick="change()">
+<h2>Header</h2>
+<p>Paragraph</p>
+</body>
+
+        
+        
+            <script>
+                  function change() {
+    // document.getElementsByTagName("H2") returns a NodeList of the <h2>
+    // elements in the document, and the first is number 0:
+    
+    var header = document.getElementsByTagName("H2").item(0);
+    // the firstChild of the header is a Text node:
+    header.firstChild.data = "A dynamic document";
+    // now the header is "A dynamic document".
+    
+    var para = document.getElementsByTagName("P").item(0);
+    para.firstChild.data = "This is the first paragraph.";
+    
+    // create a new Text node for the second paragraph
+    var newText = document.createTextNode("This is the second paragraph.");
+    // create a new Element to be the second paragraph
+    var newElement = document.createElement("P");
+    // put the text in the paragraph
+    newElement.appendChild(newText);
+    // and put the paragraph on the end of the document by appending it to
+    // the BODY (which is the parent of para)
+    para.parentNode.appendChild(newElement);
+  }
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core$samples/A_simple_example?revision=1371212 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 08:45:43 GMT -->
+</html>

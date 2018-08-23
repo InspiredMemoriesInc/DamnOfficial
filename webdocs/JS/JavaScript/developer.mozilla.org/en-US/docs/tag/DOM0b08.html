@@ -1,0 +1,1230 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/tag/DOM?page=9 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 10:53:10 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  <title>Articles tagged: DOM</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+
+  
+<link rel="preload" href="../../../static/fonts/locales/ZillaSlab-Regular.f9de6143fdfa.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="license" href="#license">
+  
+
+  
+    
+
+    <link href="../../../static/build/styles/mdn.83865b0f7c30.css" rel="stylesheet" type="text/css">
+
+    
+  
+
+    <link href="../../../static/build/styles/wiki.aaf26c13c39b.css" rel="stylesheet" type="text/css">
+
+
+  <link href="../../../static/build/styles/locale-en-US.ca0bca387b42.css" rel="stylesheet" type="text/css">
+
+  
+    <script>
+      /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
+    </script>
+    
+
+
+
+  
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta property="og:site_name" content="MDN Web Docs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="MDN Web Docs">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../static/img/favicon144.e7e21ca263ca.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../static/img/favicon114.d526f38b09c5.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../static/img/favicon72.cc65d1d762a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../static/img/favicon57.de33179910ae.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="../../../static/img/favicon32.7f3da72dcea1.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script async="" type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  
+      <link rel="alternate" type="application/atom+xml" title="Articles tagged: DOM" href="../feeds/atom/tag/DOM">
+  
+
+</head>
+<body class="">
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <!--[endif]---->
+
+  
+  
+      <link rel="alternate" type="application/atom+xml" title="Articles tagged: DOM" href="../feeds/atom/tag/DOM">
+  
+
+
+
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/wiki-compat-tables.9978a5ce31c2.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+
+        // interactive editor config
+        win.mdn.interactiveEditor = {
+            siteUrl: "https://developer.mozilla.org",
+            editorUrl: "https://interactive-examples.mdn.mozilla.net"
+        };
+
+    })(this);
+</script>
+    
+    <ul id="nav-access">
+  <li><a href="#content" id="skip-main">Skip to main content</a></li>
+  <li><a id="skip-language" href="#language">Select language</a></li>
+  <li><a href="#q" id="skip-search">Skip to search</a></li>
+</ul>
+
+    <!-- Header -->
+    <header id="main-header" class="header-main">
+      <a href="https://developer.mozilla.org/en-US/" class="logo">MDN Web Docs</a>
+      <div class="nav-toolbox-wrapper">
+        <nav id="main-nav" class="nav-main" role="navigation">
+    <ul>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web">Technologies
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-tech-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+                    <li><a href="../Web/API.html">APIs / DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn">References &amp; Guides
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-learn-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-contact-submenu">
+              <div class="submenu-column">
+                <ul>
+                  <li>
+                      <a href="https://support.mozilla.org/">Get Firefox help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://stackoverflow.com/">Get web development help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                      <a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/tag/DOM%3Fpage%3D9">Report a content problem
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</nav>
+        <div id="toolbox" class="toolbox">
+  <ul>
+    
+    <li class="nav-login"><div class="login">
+    
+        
+        <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FDOM%3Fpage%3D9" class="login-link js-login-link" data-service="GitHub" rel="nofollow">
+            Sign in<svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+    <title>Github</title>
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path>
+</svg>
+        </a>
+    
+</div></li>
+  </ul>
+</div>
+      </div>
+      <form id="nav-main-search" action="https://developer.mozilla.org/en-US/search" method="get" role="search" class="nav-main-search">
+  <div class="search-wrap">
+    <label for="main-q" class="offscreen">Search</label>
+    <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" aria-hidden="true">
+    <span class="search-trigger">
+        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true">
+    <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path>
+</svg>
+    </span>
+    <button type="submit" class="offscreen">Search</button>
+    <button type="button" id="close-header-search" class="close-header-search transparent">
+        <span class="offscreen">Close search</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+  </div>
+</form>
+    </header> 
+
+  <!-- Content will go here -->
+  <main id="content">
+      
+      <div class="center clear">
+      
+
+    <div id="document-list" class="boxed">
+      <h1>Articles tagged: DOM</h1>
+      
+        
+  <ol class="pagination">
+  
+    <li class="prev">
+      <a href="DOMfdfa.html?page=8">
+        Previous
+      </a>
+    </li>
+  
+  
+    <li><a href="DOM2679.html?page=1">1</a></li>
+    
+      <li class="skip">…</li>
+    
+  
+  
+    <li>
+      <a href="DOMfdb0.html?page=4">4</a>
+    </li>
+  
+    <li>
+      <a href="DOMaf4d.html?page=5">5</a>
+    </li>
+  
+    <li>
+      <a href="DOMc575.html?page=6">6</a>
+    </li>
+  
+    <li>
+      <a href="DOM235c.html?page=7">7</a>
+    </li>
+  
+    <li>
+      <a href="DOMfdfa.html?page=8">8</a>
+    </li>
+  
+    <li class="selected">
+      <a href="DOM0b08.html?page=9">9</a>
+    </li>
+  
+    <li>
+      <a href="DOM1448.html?page=10">10</a>
+    </li>
+  
+    <li>
+      <a href="DOM1c8b.html?page=11">11</a>
+    </li>
+  
+  
+  
+    <li class="next">
+      <a href="DOM1448.html?page=10">
+        Next
+      </a>
+    </li>
+  
+  </ol>
+
+
+
+        <p>Found 1027 documents</p>
+        <ul class="document-list">
+          
+            <li>
+              <a href="../Web/API/Range/setEnd.html">Web/API/Range/setEnd</a>
+                
+                  <small>The Range.setEnd() method sets the end position of a Range.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Range/setEndAfter.html">Web/API/Range/setEndAfter</a>
+                
+                  <small>The Range.setEndAfter() method sets the end position of a Range relative to another Node. The...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Range/setEndBefore.html">Web/API/Range/setEndBefore</a>
+                
+                  <small>The Range.setEndBefore() method sets the end position of a Range relative to another Node. The...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Range/setStart.html">Web/API/Range/setStart</a>
+                
+                  <small>The Range.setStart() method sets the start position of a Range.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Range/setStartAfter.html">Web/API/Range/setStartAfter</a>
+                
+                  <small>The Range.setStartAfter() method sets the start position of a Range relative to a Node. The...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Range/setStartBefore.html">Web/API/Range/setStartBefore</a>
+                
+                  <small>The Range.setStartBefore() method sets the start position of a Range relative to another Node....</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Range/startContainer.html">Web/API/Range/startContainer</a>
+                
+                  <small>The Range.startContainer read-only property returns the Node within which the Range starts. To...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Range/startOffset.html">Web/API/Range/startOffset</a>
+                
+                  <small>The Range.startOffset read-only property returns a number representing where in the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Range/surroundContents.html">Web/API/Range/surroundContents</a>
+                
+                  <small>The Range.surroundContents() method moves content of the Range into a new node, placing the new...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Range/toString.html">Web/API/Range/toString</a>
+                
+                  <small>The Range.toString() method is a stringifier returning the text of the Range.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Screen/availLeft.html">Web/API/Screen/availLeft</a>
+                
+                  <small>Returns the first available pixel available from the left side of the screen.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Screen/availTop.html">Web/API/Screen/availTop</a>
+                
+                  <small>Specifies the y-coordinate of the first pixel that is not allocated to permanent or...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Screen/left.html">Web/API/Screen/left</a>
+                
+                  <small>Returns the distance in pixels from the left side of the main screen to the left side of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Screen/mozEnabled.html">Web/API/Screen/mozEnabled</a>
+                
+                  <small>This Boolean attribute controls the device's screen. Setting it to false will turn off the screen.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Screen/top.html">Web/API/Screen/top</a>
+                
+                  <small>Returns the distance in pixels from the top side of the current screen.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Selection/isCollapsed.html">Web/API/Selection/isCollapsed</a>
+                
+                  <small>The Selection.isCollapsed read-only property returns a Boolean which indicates whether or not...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Server-sent_events/Using_server-sent_events.html">Web/API/Server-sent_events/Using_server-sent_events</a>
+                
+                  <small>The server-sent event API is contained in the EventSource interface; to open a connection to the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/SharedWorkerGlobalScope/close.html">Web/API/SharedWorkerGlobalScope/close</a>
+                
+                  <small>The close() method of the SharedWorkerGlobalScope interface discards any tasks queued in the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/StaticRange.html">Web/API/StaticRange</a>
+                
+                  <small>The StaticRange interface provides attributes that track the start and end position of a range,...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/StyleSheet.html">Web/API/StyleSheet</a>
+                
+                  <small>An object implementing the StyleSheet interface represents a single style sheet. CSS style...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/SVGAnimationElement/onbegin.html">Web/API/SVGAnimationElement/onbegin</a>
+                
+                  <small>The SVGAnimationElement.onbegin property refers to the event handler for the beginEvent.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/SVGAnimationElement/onend.html">Web/API/SVGAnimationElement/onend</a>
+                
+                  <small>The SVGAnimationElement.onend property refers to the event handler for the endEvent.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/SVGAnimationElement/onrepeat.html">Web/API/SVGAnimationElement/onrepeat</a>
+                
+                  <small>The SVGAnimationElement.onrepeat property refers to the event handler for the repeatEvent.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/SVGAnimationElement/targetElement.html">Web/API/SVGAnimationElement/targetElement</a>
+                
+                  <small>The SVGAnimationElement.targetElement property refers to the element which is being animated. If...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/SVGGeometryElement.html">Web/API/SVGGeometryElement</a>
+                
+                  <small>The SVGGeometryElement interface represents SVG elements whose rendering is defined by geometry...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/SVGGeometryElement/getPointAtLength.html">Web/API/SVGGeometryElement/getPointAtLength</a>
+                
+                  <small>The SVGGeometryElement.getPointAtLength() method returns the point at a given distance along the path.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/SVGGeometryElement/getTotalLength.html">Web/API/SVGGeometryElement/getTotalLength</a>
+                
+                  <small>The SVGGeometryElement.getTotalLength() method returns the user agent's computed value for the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/SVGGeometryElement/isPointInFill.html">Web/API/SVGGeometryElement/isPointInFill</a>
+                
+                  <small>The SVGGeometryElement.isPointInFill() method determines whether a given point is within the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/SVGGeometryElement/isPointInStroke.html">Web/API/SVGGeometryElement/isPointInStroke</a>
+                
+                  <small>The SVGGeometryElement.isPointInStroke() method determines whether a given point is within the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/SVGGeometryElement/pathLength.html">Web/API/SVGGeometryElement/pathLength</a>
+                
+                  <small>The SVGGeometryElement.pathLength property reflects the pathLength attribute and returns the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/SVGPathElement/getPointAtLength.html">Web/API/SVGPathElement/getPointAtLength</a>
+                
+                  <small>The SVGPathElement.getPointAtLength() method returns the point at a given distance along the path.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/SVGPathElement/getTotalLength.html">Web/API/SVGPathElement/getTotalLength</a>
+                
+                  <small>The SVGPathElement.getTotalLength() method returns the user agent's computed value for the total...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/SVGPathElement/pathLength.html">Web/API/SVGPathElement/pathLength</a>
+                
+                  <small>The SVGPathElement.pathLength property reflects the pathLength attribute and returns the total...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/SyncEvent/registration.html">Web/API/SyncEvent/registration</a>
+                
+                  <small>The registration read-only property of the SyncEvent interface returns a reference to a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Text.html">Web/API/Text</a>
+                
+                  <small>The Text interface represents the textual content of Element or Attr.&nbsp; If an element has no...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Text/isElementContentWhitespace.html">Web/API/Text/isElementContentWhitespace</a>
+                
+                  <small>The Text.isElementContentWhitespace read-only property returns a Boolean flag indicating whether...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Text/replaceWholeText.html">Web/API/Text/replaceWholeText</a>
+                
+                  <small>The Text.replaceWholeText() method replaces the text of the node and all of its logically...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Text/splitText.html">Web/API/Text/splitText</a>
+                
+                  <small>The Text.splitText() method breaks the Text node into two nodes at the specified offset, keeping...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Text/Text.html">Web/API/Text/Text</a>
+                
+                  <small>The Text() constructor returns a newly created Text object with the optional DOMString given in...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Text/wholeText.html">Web/API/Text/wholeText</a>
+                
+                  <small>The Text.wholeText read-only property returns the full text of all Text nodes logically adjacent...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/TextDecoder.html">Web/API/TextDecoder</a>
+                
+                  <small>The TextDecoder interface represents a decoder for a specific method, that is a specific...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Touch/radiusX.html">Web/API/Touch/radiusX</a>
+                
+                  <small>Returns the X radius of the ellipse that most closely circumscribes the area of contact with the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Touch/radiusY.html">Web/API/Touch/radiusY</a>
+                
+                  <small>Returns the Y radius of the ellipse that most closely circumscribes the area of contact with the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Touch/rotationAngle.html">Web/API/Touch/rotationAngle</a>
+                
+                  <small>Returns the rotation angle, in degrees, of the contact area ellipse defined by Touch.radiusX and...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Touch/screenX.html">Web/API/Touch/screenX</a>
+                
+                  <small>Returns the X coordinate of the touch point relative to the screen, not including any scroll offset.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Touch/screenY.html">Web/API/Touch/screenY</a>
+                
+                  <small>Returns the Y coordinate of the touch point relative to the screen, not including any scroll offset.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Touch/target.html">Web/API/Touch/target</a>
+                
+                  <small>Returns the Element (EventTarget) on which the touch contact started when it was first placed on...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/TouchEvent.html">Web/API/TouchEvent</a>
+                
+                  <small>The TouchEvent interface represents an event sent when the state of contacts with a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/TouchEvent/altKey.html">Web/API/TouchEvent/altKey</a>
+                
+                  <small>A Boolean value indicating whether or not the alt (Alternate) key is enabled when the touch...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/TouchEvent/changedTouches.html">Web/API/TouchEvent/changedTouches</a>
+                
+                  <small>A TouchList whose touch points (Touch objects) varies depending on the event type, as follows:</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/TouchEvent/ctrlKey.html">Web/API/TouchEvent/ctrlKey</a>
+                
+                  <small>A Boolean value indicating whether the control (Control) key is enabled when the touch event is...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/TouchEvent/metaKey.html">Web/API/TouchEvent/metaKey</a>
+                
+                  <small>A Boolean value indicating whether or not the Meta key is enabled when the touch event is...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/TouchEvent/shiftKey.html">Web/API/TouchEvent/shiftKey</a>
+                
+                  <small>A Boolean value indicating whether or not the shift key is enabled when the touch event is...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/TouchEvent/targetTouches.html">Web/API/TouchEvent/targetTouches</a>
+                
+                  <small>A TouchList listing all the Touch objects for touch points that are still in contact with the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/TouchEvent/touches.html">Web/API/TouchEvent/touches</a>
+                
+                  <small>A TouchList listing all the Touch objects for touch points that are currently in contact with...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/TouchEvent/TouchEvent.html">Web/API/TouchEvent/TouchEvent</a>
+                
+                  <small>The Touch Event() constructor creates a new TouchEvent.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/TouchList.html">Web/API/TouchList</a>
+                
+                  <small>The TouchList interface represents a list of contact points with a touch surface; for example,...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/TouchList/identifiedTouch.html">Web/API/TouchList/identifiedTouch</a>
+                
+                  <small>The identifiedTouch method returns the first Touch&nbsp;item in the TouchList matching the specified...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/TouchList/item.html">Web/API/TouchList/item</a>
+                
+                  <small>Returns the Touch object at the specified index in the TouchList.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/TouchList/length.html">Web/API/TouchList/length</a>
+                
+                  <small>This read-only property indicates the number of items (touch points) in a TouchList.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Touch_events.html">Web/API/Touch_events</a>
+                
+                  <small>In order to provide quality support for touch-based user interfaces, touch events offer the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/TreeWalker.html">Web/API/TreeWalker</a>
+                
+                  <small>The TreeWalker object represents the nodes of a document subtree and a position within them.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/TreeWalker/currentNode.html">Web/API/TreeWalker/currentNode</a>
+                
+                  <small>The TreeWalker.currentNode property represents the Node on which the TreeWalker is currently pointing at.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/TreeWalker/expandEntityReferences.html">Web/API/TreeWalker/expandEntityReferences</a>
+                
+                  <small>The TreeWalker.expandEntityReferences read-only property returns a Boolean flag indicating...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/TreeWalker/filter.html">Web/API/TreeWalker/filter</a>
+                
+                  <small>The TreeWalker.filter read-only property returns a NodeFilter that is the filtering object...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/TreeWalker/firstChild.html">Web/API/TreeWalker/firstChild</a>
+                
+                  <small>The TreeWalker.firstChild() method moves the current Node to the first visible child of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/TreeWalker/lastChild.html">Web/API/TreeWalker/lastChild</a>
+                
+                  <small>The TreeWalker.lastChild() method moves the current Node to the last visible child of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/TreeWalker/nextNode.html">Web/API/TreeWalker/nextNode</a>
+                
+                  <small>The TreeWalker.nextNode() method moves the current Node to the next visible node in the document...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/TreeWalker/nextSibling.html">Web/API/TreeWalker/nextSibling</a>
+                
+                  <small>The TreeWalker.nextSibling() method moves the current Node to its next sibling, if any, and...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/TreeWalker/parentNode.html">Web/API/TreeWalker/parentNode</a>
+                
+                  <small>The TreeWalker.parentNode() method moves the current Node to the first visible ancestor node in...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/TreeWalker/previousNode.html">Web/API/TreeWalker/previousNode</a>
+                
+                  <small>The TreeWalker.previousNode() method moves the current Node to the previous visible node in the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/TreeWalker/previousSibling.html">Web/API/TreeWalker/previousSibling</a>
+                
+                  <small>The TreeWalker.previousSibling() method moves the current Node to its previous sibling, if any,...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/TreeWalker/root.html">Web/API/TreeWalker/root</a>
+                
+                  <small>The TreeWalker.root read-only property returns the node that is the root of what the TreeWalker...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/TreeWalker/whatToShow.html">Web/API/TreeWalker/whatToShow</a>
+                
+                  <small>The TreeWalker.whatToShow read-only property returns an unsigned long being a bitmask made of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/TypeInfo.html">Web/API/TypeInfo</a>
+                
+                  <small>The obsolete TypeInfo interface was intended to be used to describe a DOM data type by keying...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/UIEvent.html">Web/API/UIEvent</a>
+                
+                  <small>The UIEvent interface represents simple user interface events.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/UIEvent/cancelBubble.html">Web/API/UIEvent/cancelBubble</a>
+                
+                  <small>The UIEvent.cancelBubble property indicates if event bubbling for this event has been canceled...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/UIEvent/detail.html">Web/API/UIEvent/detail</a>
+                
+                  <small>The UIEvent.detail read-only property, when non-zero, provides the current (or next, depending...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/UIEvent/initUIEvent.html">Web/API/UIEvent/initUIEvent</a>
+                
+                  <small>The UIEvent.initUIEvent() method initializes a UI event once it's been created.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/UIEvent/isChar.html">Web/API/UIEvent/isChar</a>
+                
+                  <small>The UIEvent.isChar read-only property returns a Boolean indicating whether the event produced a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/UIEvent/layerX.html">Web/API/UIEvent/layerX</a>
+                
+                  <small>The UIEvent.layerX read-only property returns the horizontal coordinate of the event relative to...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/UIEvent/layerY.html">Web/API/UIEvent/layerY</a>
+                
+                  <small>The UIEvent.layerY read-only property returns the vertical coordinate of the event relative to...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/UIEvent/pageX.html">Web/API/UIEvent/pageX</a>
+                
+                  <small>The non-standard, read-only UIEvent property pageX returns the horizontal coordinate of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/UIEvent/pageY.html">Web/API/UIEvent/pageY</a>
+                
+                  <small>The UIEvent.pageY read-only property returns the vertical coordinate of the event relative to...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/UIEvent/sourceCapabilities.html">Web/API/UIEvent/sourceCapabilities</a>
+                
+                  <small>The UIEvent.sourceCapabilities read-only property returns an instance of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/UIEvent/view.html">Web/API/UIEvent/view</a>
+                
+                  <small>The UIEvent.view read-only property returns the WindowProxy object from which the event was...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/URL/createObjectURL.html">Web/API/URL/createObjectURL</a>
+                
+                  <small>The URL.createObjectURL() static method creates a DOMString containing a&nbsp;URL representing the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/UserDataHandler.html">Web/API/UserDataHandler</a>
+                
+                  <small>When associating user data with a key on a node, Node.setUserData() can also accept, in its...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/USVString.html">Web/API/USVString</a>
+                
+                  <small>USVString corresponds to the set of all possible sequences of unicode scalar values. USVString...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ValidityState/tooLong.html">Web/API/ValidityState/tooLong</a>
+                
+                  <small>The read-only property ValidityState.tooLong indicates if the value of an input or textarea,...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRDisplay.html">Web/API/VRDisplay</a>
+                
+                  <small>The VRDisplay interface of the WebVR API represents any VR device supported by this API. It...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Web_Workers_API/Structured_clone_algorithm.html">Web/API/Web_Workers_API/Structured_clone_algorithm</a>
+                
+                  <small>The structured clone algorithm is an algorithm defined by the HTML5 specification for copying...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/WheelEvent.html">Web/API/WheelEvent</a>
+                
+                  <small>The WheelEvent interface represents events that occur due to the user moving a mouse wheel or...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/WheelEvent/deltaMode.html">Web/API/WheelEvent/deltaMode</a>
+                
+                  <small>The WheelEvent.deltaMode read-only property returns an unsigned long representing the unit of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/WheelEvent/deltaX.html">Web/API/WheelEvent/deltaX</a>
+                
+                  <small>The WheelEvent.deltaX read-only property is a double representing the horizontal scroll amount...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/WheelEvent/deltaY.html">Web/API/WheelEvent/deltaY</a>
+                
+                  <small>The WheelEvent.deltaY read-only property is a double representing the vertical scroll amount in...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/WheelEvent/deltaZ.html">Web/API/WheelEvent/deltaZ</a>
+                
+                  <small>The WheelEvent.deltaZ read-only property is a double representing the scroll amount along the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/WheelEvent/WheelEvent.html">Web/API/WheelEvent/WheelEvent</a>
+                
+                  <small>The WheelEvent() constructor returns a newly created WheelEvent object.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Window.html">Web/API/Window</a>
+                
+                  <small>The window object represents a window containing a DOM document; the document property points to...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Window/alert.html">Web/API/Window/alert</a>
+                
+                  <small>The Window.alert() method displays an alert dialog with the optional specified content and an OK button.</small>
+                
+            </li>
+          
+        </ul>
+        
+  <ol class="pagination">
+  
+    <li class="prev">
+      <a href="DOMfdfa.html?page=8">
+        Previous
+      </a>
+    </li>
+  
+  
+    <li><a href="DOM2679.html?page=1">1</a></li>
+    
+      <li class="skip">…</li>
+    
+  
+  
+    <li>
+      <a href="DOMfdb0.html?page=4">4</a>
+    </li>
+  
+    <li>
+      <a href="DOMaf4d.html?page=5">5</a>
+    </li>
+  
+    <li>
+      <a href="DOMc575.html?page=6">6</a>
+    </li>
+  
+    <li>
+      <a href="DOM235c.html?page=7">7</a>
+    </li>
+  
+    <li>
+      <a href="DOMfdfa.html?page=8">8</a>
+    </li>
+  
+    <li class="selected">
+      <a href="DOM0b08.html?page=9">9</a>
+    </li>
+  
+    <li>
+      <a href="DOM1448.html?page=10">10</a>
+    </li>
+  
+    <li>
+      <a href="DOM1c8b.html?page=11">11</a>
+    </li>
+  
+  
+  
+    <li class="next">
+      <a href="DOM1448.html?page=10">
+        Next
+      </a>
+    </li>
+  
+  </ol>
+
+
+
+      
+    </div>
+
+
+      </div>
+  </main>
+  <!-- Footer -->
+     
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script async="" type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script src="../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><!--[endif]---->
+
+    
+    <script src="../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../static/build/js/wiki.b26a4c181df3.js" charset="utf-8" id="wikiscript"></script>
+
+
+
+  
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/tag/DOM?page=9 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 10:53:10 GMT -->
+</body></html>

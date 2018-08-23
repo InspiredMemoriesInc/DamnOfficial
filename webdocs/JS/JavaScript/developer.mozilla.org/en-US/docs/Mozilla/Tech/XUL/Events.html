@@ -1,0 +1,1225 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Events by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 10:53:13 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  <title>XUL Events</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+
+  
+<link rel="preload" href="../../../../../static/fonts/locales/ZillaSlab-Regular.f9de6143fdfa.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="license" href="#license">
+  
+
+  
+    
+    
+
+    <link href="../../../../../static/build/styles/mdn.83865b0f7c30.css" rel="stylesheet" type="text/css">
+
+    
+  
+
+    <link href="../../../../../static/build/styles/wiki.aaf26c13c39b.css" rel="stylesheet" type="text/css">
+
+
+    
+
+  <link href="../../../../../static/build/styles/locale-en-US.ca0bca387b42.css" rel="stylesheet" type="text/css">
+
+  
+    <script>
+      /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
+    </script>
+    
+
+
+
+  
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta property="og:site_name" content="MDN Web Docs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="MDN Web Docs">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../static/img/favicon144.e7e21ca263ca.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../static/img/favicon114.d526f38b09c5.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../static/img/favicon72.cc65d1d762a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../../../static/img/favicon57.de33179910ae.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="../../../../../static/img/favicon32.7f3da72dcea1.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script async="" type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  <link rel="dns-prefetch" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Events$json">
+  <link rel="canonical" href="Events.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="Events.html" title="XUL Events">
+  
+    
+      <link rel="alternate" hreflang="de" href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Events" title="Ereignisse">
+    
+      <link rel="alternate" hreflang="es" href="https://developer.mozilla.org/es/docs/Mozilla/Tech/XUL/Events" title="Eventos">
+    
+      <link rel="alternate" hreflang="ja" href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Events" title="イベント">
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Events" title="Events">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="XUL Events">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Events">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Events">
+  <meta name="twitter:title" content="XUL Events">
+  
+  <meta property="og:description" content="The following tables describe the event handler that are valid for most XUL elements. The events listeners can be attached using addEventListener and removed using removeEventListener.">
+  <meta name="description" content="The following tables describe the event handler that are valid for most XUL elements. The events listeners can be attached using addEventListener and removed using removeEventListener.">
+  <meta name="twitter:description" content="The following tables describe the event handler that are valid for most XUL elements. The events listeners can be attached using addEventListener and removed using removeEventListener.">
+  
+
+</head>
+<body data-slug="Mozilla/Tech/XUL/Events" contextmenu="edit-history-menu" data-search-url="" class="document">
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <!--[endif]---->
+
+  
+  <link rel="dns-prefetch" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Events$json">
+  <link rel="canonical" href="Events.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="Events.html" title="XUL Events">
+  
+    
+      <link rel="alternate" hreflang="de" href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Events" title="Ereignisse">
+    
+      <link rel="alternate" hreflang="es" href="https://developer.mozilla.org/es/docs/Mozilla/Tech/XUL/Events" title="Eventos">
+    
+      <link rel="alternate" hreflang="ja" href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Events" title="イベント">
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Events" title="Events">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="XUL Events">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Events">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Events">
+  <meta name="twitter:title" content="XUL Events">
+  
+  <meta property="og:description" content="The following tables describe the event handler that are valid for most XUL elements. The events listeners can be attached using addEventListener and removed using removeEventListener.">
+  <meta name="description" content="The following tables describe the event handler that are valid for most XUL elements. The events listeners can be attached using addEventListener and removed using removeEventListener.">
+  <meta name="twitter:description" content="The following tables describe the event handler that are valid for most XUL elements. The events listeners can be attached using addEventListener and removed using removeEventListener.">
+  
+
+
+
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/wiki-compat-tables.9978a5ce31c2.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+
+        // interactive editor config
+        win.mdn.interactiveEditor = {
+            siteUrl: "https://developer.mozilla.org",
+            editorUrl: "https://interactive-examples.mdn.mozilla.net"
+        };
+
+    })(this);
+</script>
+    
+    <ul id="nav-access">
+  <li><a href="#content" id="skip-main">Skip to main content</a></li>
+  <li><a id="skip-language" href="#language">Select language</a></li>
+  <li><a href="#q" id="skip-search">Skip to search</a></li>
+</ul>
+
+    <!-- Header -->
+    <header id="main-header" class="header-main">
+      <a href="https://developer.mozilla.org/en-US/" class="logo">MDN Web Docs</a>
+      <div class="nav-toolbox-wrapper">
+        <nav id="main-nav" class="nav-main" role="navigation">
+    <ul>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web">Technologies
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-tech-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+                    <li><a href="../../../Web/API.html">APIs / DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn">References &amp; Guides
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-learn-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-contact-submenu">
+              <div class="submenu-column">
+                <ul>
+                  <li>
+                      <a href="https://support.mozilla.org/">Get Firefox help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://stackoverflow.com/">Get web development help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                      <a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Events">Report a content problem
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</nav>
+        <div id="toolbox" class="toolbox">
+  <ul>
+    
+    <li class="nav-login"><div class="login">
+    
+        
+        <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FMozilla%2FTech%2FXUL%2FEvents" class="login-link js-login-link" data-service="GitHub" rel="nofollow">
+            Sign in<svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+    <title>Github</title>
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path>
+</svg>
+        </a>
+    
+</div></li>
+  </ul>
+</div>
+      </div>
+      <form id="nav-main-search" action="https://developer.mozilla.org/en-US/search" method="get" role="search" class="nav-main-search">
+  <div class="search-wrap">
+    <label for="main-q" class="offscreen">Search</label>
+    <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" aria-hidden="true">
+    <span class="search-trigger">
+        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true">
+    <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path>
+</svg>
+    </span>
+    <button type="submit" class="offscreen">Search</button>
+    <button type="button" id="close-header-search" class="close-header-search transparent">
+        <span class="offscreen">Close search</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+  </div>
+</form>
+    </header> 
+
+  <!-- Content will go here -->
+  <main id="content">
+      
+  <!-- heading -->
+  <div id="wiki-document-head" class="document-head">
+    <div class="center">
+      <!-- action buttons -->
+      <div class="document-actions">
+        
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons">
+      <li>
+          <button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false">
+              <svg class="icon icon-language" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M10.219 16.844c-.031.109-.797-.25-1-.328-.203-.094-1.125-.609-1.359-.766s-1.125-.891-1.234-.938a28.275 28.275 0 0 1-2.094 2.828c-.281.328-1.125 1.391-1.641 1.719-.078.047-.531.094-.594.063.25-.187.969-1.078 1.281-1.437.391-.453 2.25-3.047 2.562-3.641.328-.594 1.312-2.562 1.359-2.75-.156-.016-1.391.406-1.719.516-.313.094-1.172.297-1.234.344-.063.063-.016.25-.047.313s-.313.203-.484.234a1.647 1.647 0 0 1-.734 0c-.203-.047-.391-.25-.438-.328 0 0-.063-.094-.078-.359.187-.063.5-.078.844-.172s1.188-.344 1.641-.5 1.328-.484 1.594-.547c.281-.047.984-.516 1.359-.641s.641-.281.656-.203 0 .422-.016.516c-.016.078-.766 1.547-.875 1.781-.063.125-.5.953-1.203 2.047.25.109.781.328 1 .438.266.125 2.125.906 2.219.938s.266.75.234.875zM7.016 9.25c.047.266-.031.375-.063.438-.156.297-.547.5-.781.594s-.625.187-.938.187c-.141-.016-.422-.063-.766-.406-.187-.203-.328-.75-.266-.688s.516.125.719.078.688-.187.906-.25c.234-.078.703-.203.859-.219.156 0 .281.063.328.266zm10.906 2.016l.984 3.547-2.172-.656zM.609 23.766l10.844-3.625V4.016L.609 7.657v16.109zM20 18.813l1.594.484-2.828-10.266-1.563-.484-3.375 8.375 1.594.484.703-1.719 3.297 1.016zM12.141 3.781l8.953 2.875V.718zM17 24.453l2.469.203-.844 2.5L18 26.125c-1.266.812-2.828 1.437-4.312 1.687-.453.094-.969.187-1.422.187h-1.313c-1.656 0-4.672-.984-5.984-1.937-.094-.078-.125-.141-.125-.25 0-.172.125-.297.281-.297.141 0 .875.453 1.078.547 1.406.703 3.375 1.344 4.953 1.344 1.953 0 3.281-.25 5.063-1.016.516-.234.969-.531 1.453-.797zm7-16.859v16.859c-12.078-3.844-12.094-3.844-12.094-3.844C11.656 20.718.453 24.5.297 24.5a.3.3 0 0 1-.281-.203c0-.016-.016-.031-.016-.047V7.406c.016-.047.031-.125.063-.156.094-.109.219-.141.313-.172.047-.016 1-.328 2.328-.781v-6l8.719 3.094C11.532 3.36 21.251 0 21.392 0c.172 0 .313.125.313.328v6.531z"></path>
+</svg>
+              <span>Languages</span>
+          </button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                
+                
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/de/docs/Mozilla/Tech/XUL/Events" data-locale="de" title="German">Deutsch (de)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/es/docs/Mozilla/Tech/XUL/Events" data-locale="es" title="Spanish">Español (es)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ja/docs/Mozilla/Tech/XUL/Events" data-locale="ja" title="Japanese">日本語 (ja)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Tech/XUL/Events" data-locale="zh-CN" title="Chinese (Simplified)">中文 (简体) (zh-CN)</a></bdi></li>
+                
+              
+
+              
+                <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Events$locales" rel="nofollow" id="translations-add">Add a translation</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+      
+      <li class="page-buttons-edit">
+          <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Events$edit" class="button neutral" id="edit-button" rel="nofollow">
+              <svg class="icon icon-pencil" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M5.672 24l1.422-1.422-3.672-3.672L2 20.328V22h2v2h1.672zm8.172-14.5a.329.329 0 0 0-.344-.344.368.368 0 0 0-.266.109l-8.469 8.469a.366.366 0 0 0-.109.266c0 .203.141.344.344.344a.368.368 0 0 0 .266-.109l8.469-8.469a.366.366 0 0 0 .109-.266zM13 6.5l6.5 6.5-13 13H0v-6.5zM23.672 8c0 .531-.219 1.047-.578 1.406L20.5 12 14 5.5l2.594-2.578c.359-.375.875-.594 1.406-.594s1.047.219 1.422.594l3.672 3.656c.359.375.578.891.578 1.422z"></path>
+</svg>
+              Edit
+          </a>
+      </li>
+      
+
+        
+
+        <li class="page-buttons-advanced">
+            <button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false">
+                <svg class="icon icon-gear" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M16 14c0-2.203-1.797-4-4-4s-4 1.797-4 4 1.797 4 4 4 4-1.797 4-4zm8-1.703v3.469c0 .234-.187.516-.438.562l-2.891.438a8.86 8.86 0 0 1-.609 1.422c.531.766 1.094 1.453 1.672 2.156.094.109.156.25.156.391s-.047.25-.141.359c-.375.5-2.484 2.797-3.016 2.797a.795.795 0 0 1-.406-.141l-2.156-1.687a9.449 9.449 0 0 1-1.422.594c-.109.953-.203 1.969-.453 2.906a.573.573 0 0 1-.562.438h-3.469c-.281 0-.531-.203-.562-.469l-.438-2.875a9.194 9.194 0 0 1-1.406-.578l-2.203 1.672c-.109.094-.25.141-.391.141s-.281-.063-.391-.172c-.828-.75-1.922-1.719-2.578-2.625a.607.607 0 0 1 .016-.718c.531-.719 1.109-1.406 1.641-2.141a8.324 8.324 0 0 1-.641-1.547l-2.859-.422A.57.57 0 0 1 0 15.705v-3.469c0-.234.187-.516.422-.562l2.906-.438c.156-.5.359-.969.609-1.437a37.64 37.64 0 0 0-1.672-2.156c-.094-.109-.156-.234-.156-.375s.063-.25.141-.359c.375-.516 2.484-2.797 3.016-2.797.141 0 .281.063.406.156L7.828 5.94a9.449 9.449 0 0 1 1.422-.594c.109-.953.203-1.969.453-2.906a.573.573 0 0 1 .562-.438h3.469c.281 0 .531.203.562.469l.438 2.875c.484.156.953.344 1.406.578l2.219-1.672c.094-.094.234-.141.375-.141s.281.063.391.156c.828.766 1.922 1.734 2.578 2.656a.534.534 0 0 1 .109.344c0 .141-.047.25-.125.359-.531.719-1.109 1.406-1.641 2.141.266.5.484 1.016.641 1.531l2.859.438a.57.57 0 0 1 .453.562z"></path>
+</svg>
+                <span>Advanced</span>
+            </button>
+            <div class="submenu js-submenu" id="advanced-menu-submenu">
+                <!-- this page -->
+                <div class="submenu-column">
+                    <div class="title">Advanced</div>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Events$history" rel="nofollow">History</a></li>
+                        
+                        
+                        
+
+
+                
+
+                <li class="page-print"><a href="#" onclick="return window.print();">Print this article</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+      </div>
+
+      <div class="document-title">
+        <h1>XUL Events</h1>
+      </div>
+    </div>
+  </div>
+  
+
+      <div class="center clear">
+      
+
+    <div class="wiki-main-content" id="document-main"><div class="center">
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-left-closed wiki-left-none">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-all wiki-column text-content">
+
+              
+
+              
+              
+
+              
+
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <p><a href="https://developer.mozilla.org/en-US/docs/XUL_Reference" title="« XUL Reference home">« XUL Reference home</a></p>
+
+<p>The following tables describe the event handler that are valid for most XUL elements. The events listeners can be attached using <a href="../../../Web/API/EventTarget/addEventListener.html" title="en-US/docs/Web/API/EventTarget/addEventListener"> addEventListener</a> and removed using <a href="../../../Web/API/EventTarget/removeEventListener.html" title="en-US/docs/Web/API/EventTarget/removeEventListener"> removeEventListener</a>.</p>
+
+<p>Some of the events can be attached using attributes as well. When attaching event listeners using attributes, be aware that only one listener can be attached at a time. Any previously attached listeners are disconnected. The attribute name is the event name with an 'on' prefix.</p>
+
+<h3 id="Inherited_DOM_events" name="Inherited_DOM_events">Inherited DOM events</h3>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>Event</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>
+    <p>blur</p>
+   </td>
+   <td>
+    <p>The opposite of the focus event, the blur event is passed after an element loses the focus.<br>
+     <strong>attribute:</strong> onblur</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>change</p>
+   </td>
+   <td>
+    <p>This event is sent when the value of the textbox is changed. The event is not sent until the focus is moved to another element.<br>
+     <strong>attribute:</strong> onchange</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>click</p>
+   </td>
+   <td>
+    <p>This event is sent when a mouse button is pressed and released. You can determine which mouse button was clicked by retrieving the <code>button</code> property of the event object. This event is also sent when the user double-clicks with the mouse. The <code>detail</code> property specifies how many clicks occurred. You can also check for triple-clicks in a similar manner. You should not use this event in XUL to respond to user actions; the <code>command</code> event should be used instead.<br>
+     <strong>attribute:</strong> onclick</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>dblclick</p>
+   </td>
+   <td>
+    <p>This event is like the click event except it is only sent when the user double clicks with the mouse. This is an alternative to checking the detail property in the click event.<br>
+     <strong>attribute:</strong> ondblclick</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>DOMMouseScroll</p>
+   </td>
+   <td>
+    <p>This event is sent when the mouse wheel is moved, whether it results in content being scrolled or not.<br>
+     The target of this event is the element that was under the mouse pointer when the mouse wheel was scrolled, similar to the <code>click</code> event.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>focus</p>
+   </td>
+   <td>
+    <p>The focus event is sent to an element when it receives the focus. Once an element has the focus, keyboard events are sent to it. The focus can be changed by clicking on another element, by pressing TAB to switch to the next element in the tab order sequence, or by pressing 'back TAB' to switch focus to the previous element in the tab order.<br>
+     <strong>attribute:</strong> onfocus</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>keydown</p>
+   </td>
+   <td>
+    <p>The keydown event is sent to an element that has the focus while a key is pressed but not released.<br>
+     <strong>attribute:</strong> onkeydown</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>keypress</p>
+   </td>
+   <td>
+    <p>The keypress event is sent to an element that has the focus when a key is pressed and released. When the user presses a key, the keydown event is sent first, followed by the keypress event and then the keyup event. In a textbox, a user can normally hold down a key to repeat a character In this case, multiple sets of key events are sent (as if the user pressed the same key repeatedly).<br>
+     <strong>attribute:</strong> onkeypress</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>keyup</p>
+   </td>
+   <td>
+    <p>The keyup event is sent to an element that has the focus when a key is released.<br>
+     <strong>attribute:</strong> onkeyup</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>load</p>
+   </td>
+   <td>
+    <p>This event is sent to the window after it has been fully loaded. You should place this event handler on the window element. This event may also be used on the image element, or an element that accepts an image attribute, and will be fired when the image has finished loading. For images, this event does not bubble up the element tree, so it will not conflict with the window's load event.<br>
+     <strong>attribute:</strong> onload</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>mousedown</p>
+   </td>
+   <td>
+    <p>This event is sent when the mouse is pressed on an element but not released.<br>
+     <strong>attribute:</strong> onmousedown</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>mousemove</p>
+   </td>
+   <td>
+    <p>This event is sent repeatedly as the mouse is moved over an element.<br>
+     <strong>attribute:</strong> onmousemove</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>mouseout</p>
+   </td>
+   <td>
+    <p>This mouseout event is sent to an element when the user moves the mouse outside the element. This event is the reverse of mouseover.<br>
+     <strong>attribute:</strong> onmouseout</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>mouseover</p>
+   </td>
+   <td>
+    <p>This event is sent to an element when the mouse first moves over an element. You can use this event to provide feedback to the user.<br>
+     <strong>attribute:</strong> onmouseover</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>mouseup</p>
+   </td>
+   <td>
+    <p>This event is sent when the mouse is released on an element.<br>
+     <strong>attribute:</strong> onmouseup</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>select</p>
+   </td>
+   <td>
+    <p>This event is sent to a listbox or tree when an item is selected.<br>
+     <strong>attribute:</strong> onselect</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>unload</p>
+   </td>
+   <td>
+    <p>This event is sent to a window when the window has closed. This is done after the close event. You should place this event handler on the window element.<br>
+     <strong>attribute:</strong> onunload</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Mutation_DOM_events" name="Mutation_DOM_events">Mutation DOM events</h3>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>Event</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>
+    <p>DOMAttrModified</p>
+   </td>
+   <td>
+    <p>This event is sent to an element when one of its attributes is modified. In the event handler, you can retrieve the attribute that was modified using the event's <code>attrName</code> property, and you can retrieve the old and new values of the attribute using the event's <code>prevValue</code> and <code>newValue</code> properties.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>DOMNodeInserted</p>
+   </td>
+   <td>
+    <p>This event is sent when a node is added as a child of a element. If you capture this event at the document level, you can be notified of document changes.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>DOMNodeRemoved</p>
+   </td>
+   <td>
+    <p>This event is sent when a node is removed from an element. If you capture this event at the document level, you can be notified of document changes.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p></p><div class="warning warningHeader">
+    <p><strong>Warning:</strong> It should be noted that the addition of any mutation event listeners to a document degrades the performance of subsequent DOM operations in that document, and that removing the listeners later <em>does not mitigate or reverse the effect</em>. See <a href="../../../Web/Guide/Events/Mutation_events.html" title="en-US/docs/DOM/Mutation_events">Mutation events</a> for more details and <a href="../../../Web/API/MutationObserver.html" title="en-US/docs/DOM/DOM_Mutation_Observers">Mutation observers</a> for a more efficient alternative.</p>
+</div><p></p>
+
+<h3 id="Common_XUL_events" name="Common_XUL_events">Common XUL events</h3>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>Event</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>
+    <p>broadcast</p>
+   </td>
+   <td>
+    <p>The event handler should be placed on an observer. The broadcast event is sent when the attributes of the element (such as a broadcaster) being listened to are changed.<br>
+     <strong>attribute:</strong> onbroadcast</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><a href="Events/close_event.html">close</a></p>
+   </td>
+   <td>
+    <p>This event is sent when a request has been made to close the window when the user presses the close button. If you place an event handler on the window element, you can trap the window close. If you call event.preventDefault() within the listener the window will not close. Note that the close event is only fired when the user presses the close button on the titlebar; (i.e. not File -&gt;&nbsp;Quit) use the unload event to capture all attempts to unload the window.<br>
+     <strong>attribute:</strong> onclose</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>command</p>
+   </td>
+   <td>
+    <p>This event handler is called when an element is activated. How it is activated varies for each element and in many cases, there are several ways to activate an element. For example, a button can be activated by clicking on it with the mouse or by pressing ENTER while it has the focus. Menus can be activated by selecting them with the mouse or by pressing a shortcut key. You should always use the command event instead of click because it will be called in all of the needed cases.<br>
+     <strong>attribute:</strong> oncommand</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>commandupdate</p>
+   </td>
+   <td>
+    <p>This event occurs when a command update occurs on a &lt;commandset&gt; element. You would use this to update the disabled status of its commands.<br>
+     <strong>attribute:</strong> oncommandupdate</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>contextmenu</p>
+   </td>
+   <td>
+    <p>This event is sent to an element when the user requests to open the context menu for the element. The action to do this varies by platform, but it will typically be a right click. This handler is usually used to dynamically set the commands on a menu when the user requests to display it, or you can use popupshowing event. Returning false from this event handler prevents the popup from appearing.<br>
+     <strong>attribute:</strong> oncontextmenu</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>drag </p>
+   </td>
+   <td>
+    <p>The drag event is sent to the source node (the node that was dragged) several times a second while the drag is occurring.<br>
+     <strong>attribute:</strong> ondrag</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>dragdrop</p>
+   </td>
+   <td>
+    <p>This event is sent when the user releases the mouse button to drop an object being dragged. The element, if it accepts the drop, should respond in some manner such inserting the dragged object into itself.<br>
+     <strong>attribute:</strong> ondragdrop</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>dragend </p>
+   </td>
+   <td>
+    <p>The dragend event is sent to the source node (the node that was dragged) when the drag is finished.<br>
+     <strong>attribute:</strong> ondragend</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>dragenter</p>
+   </td>
+   <td>
+    <p>The dragenter event is sent when the mouse pointer first moves over an element during a drag. It is similar to the mouseover event but occurs while dragging.<br>
+     <strong>attribute:</strong> ondragenter</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>dragexit</p>
+   </td>
+   <td>
+    <p>This event is sent when the mouse pointer moves away from an element during a drag. It is also called after a drop on an element. It is similar to the mouseout event but occurs during a drag.<br>
+     <strong>attribute:</strong> ondragexit</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>draggesture</p>
+   </td>
+   <td>
+    <p>This event is sent when the user starts dragging the element, usually by holding down the mouse button and moving the mouse.<br>
+     <strong>attribute:</strong> ondraggesture</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>dragover</p>
+   </td>
+   <td>
+    <p>Related to the mousemove event, this event is sent while something is being dragged over an element. The handler should indicate whether the object being dragged can be dropped.<br>
+     <strong>attribute:</strong> ondragover</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>input</p>
+   </td>
+   <td>
+    <p>This event is sent when a user enters text in a textbox. This event is only called when the text displayed would change, thus it is not called when the user presses non-displayable keys.<br>
+     <strong>attribute:</strong> oninput</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>overflow</p>
+   </td>
+   <td>
+    <p>This event is only sent to a box or other layout element with a CSS overflow property set to a value other than 'visible'. When there is not enough space to display the contents of the element at full size, the overflow event will be fired. Depending on the value of the overflow property, scrollbars may have appeared. For example, if a box has a maximum size of 100 pixels, and only enough space for 80 pixels is available, the overflow event will be sent to the box. If the size changes, for example, by the user resizing the window, the underflow event will be fired when enough space becomes available.<br>
+     <strong>attribute:</strong> onoverflow</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>popuphidden</p>
+   </td>
+   <td>
+    <p>This event is sent to a popup after it has been hidden.<br>
+     <strong>attribute:</strong> onpopuphidden</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>popuphiding</p>
+   </td>
+   <td>
+    <p>This event is sent to a popup when it is about to be hidden.<br>
+     <strong>attribute:</strong> onpopuphiding</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>popupshowing</p>
+   </td>
+   <td>
+    <p>This event is sent to a popup just before it is popped open. This handler is usually used to dynamically set the contents when the user requests to display it. Returning false from this event handler prevents the popup from appearing.<br>
+     <strong>attribute:</strong> onpopupshowing</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>popupshown</p>
+   </td>
+   <td>
+    <p>This event is sent to a popup after it has been opened, much like the onload event is sent to a window when it is opened.<br>
+     <strong>attribute:</strong> onpopupshown</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>syncfrompreference</p>
+   </td>
+   <td>
+    <p>This event is sent when the element is being changed because a preference changed, or when an element is initialized from a preference. This event will only be sent to elements connected to a preference and in a <a href="https://developer.mozilla.org/en/XUL/prefwindow" title="en/XUL/prefwindow"> prefwindow</a>. This is not a real event instead it is just a function call and must use the attribute syntax. The script may return a value to set the element to a specific value rather than the value of the preference. This event is usually used to adjust the preference value so that it is more suitable for display in the user interface.<br>
+     <strong>attribute:</strong> onsyncfrompreference</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>synctopreference</p>
+   </td>
+   <td>
+    <p>This event is sent when the element connected to a preference has changed. This event will only be sent to elements connected to a preference and in a <a href="https://developer.mozilla.org/en/XUL/prefwindow" title="en/XUL/prefwindow"> prefwindow</a>. This is not a real event instead it is just a function call and must use the attribute syntax. The script may return a value to set the preference to a specific value rather than the value of the element.<br>
+     <strong>attribute:</strong> onsynctopreference</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>underflow</p>
+   </td>
+   <td>
+    <p>This event is sent to an element when there becomes enough space to display it at full size. This applies to boxes and other layout elements with a CSS overflow property other than 'visible'. The underflow event can be used to indicate that a scrolling mechanism is no longer necessary.<br>
+     <strong>attribute:</strong> onunderflow</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>DOMMenuItemActive</p>
+   </td>
+   <td>
+    <p>This event is sent when a menu or menuitem is hovered over, or highlighted. This event bubbles.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>DOMMenuItemInactive</p>
+   </td>
+   <td>
+    <p>This event is sent when a menu or menuitem is no longer being hovered over, or highlighted. This event bubbles.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Window_events">Window events</h3>
+
+<p>The following events are dispatched to top-level DOM windows and can be listened to using window.addEventListener.</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>Event</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>activate </td>
+   <td>
+    <p>Sent when a window becomes active.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>deactivate </td>
+   <td>
+    <p>Sent when a window becomes inactive.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>sizemodechange </td>
+   <td>Sent when a window is minimized or un-minimized, switched between full screen and windowed mode, or maximized. <strong>Note:</strong> This event may fire several times or while resizing the window (for example, see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=715867" title="FIXED: sizemodechange event fires during resizing on mac, even when sizemode/windowState doesn't change" class="external" rel="noopener">bug&nbsp;715867</a>), so always check if the window state changed by inspecting <a href="../../../Web/API/Window/windowState.html" title="Check for window state:"><code>window.windowState</code></a> in the event.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Accessibility_events" name="Accessibility_events">Accessibility events</h3>
+
+<p>These events are used to notify the accessibility system of changes to an element. You would not normally use these yourself.</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>Event</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>
+    <p>CheckboxStateChange</p>
+   </td>
+   <td>
+    <p>This event is sent when a <a href="https://developer.mozilla.org/en/XUL/checkbox" title="en/XUL/checkbox"> checkbox</a> is checked or unchecked, either by the user or a script. Normally, you would use the command event to listen to checkbox changes, however, the command event is only sent when the user modifies the value, while the CheckboxStateChange event is also sent when a script modifies the checked property of a checkbox. For user changes, the CheckboxStateChange event is sent before the command event. The CheckboxStateChange event does not bubble.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>RadioStateChange</p>
+   </td>
+   <td>
+    <p>This event is sent when a <a href="https://developer.mozilla.org/en/XUL/radio" title="en/XUL/radio"> radio</a> button is selected, either by the user or a script. Normally, you would use the command event to listen to radio button selection changes, however, the command event is only sent when the user changes the selected radio button, while the RadioStateChange event is also sent when a script modifies the selection. For user changes, the RadioStateChange event is sent before the command event. The RadioStateChange event bubbles so you can also attach the event handler to the enclosing <a href="https://developer.mozilla.org/en/XUL/radiogroup" title="en/XUL/radiogroup"> radiogroup</a>.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+                  
+                
+              </article>
+
+              <!-- contributors -->
+              <div class="wiki-block contributors">
+                <h2 class="offscreen">Document Tags and Contributors</h2>
+                
+                
+  <div class="tag-attach-list contributors-sub">
+    <svg class="icon icon-tags" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M7 7c0-1.109-.891-2-2-2s-2 .891-2 2 .891 2 2 2 2-.891 2-2zm16.672 9c0 .531-.219 1.047-.578 1.406l-7.672 7.688c-.375.359-.891.578-1.422.578s-1.047-.219-1.406-.578L1.422 13.906C.625 13.125 0 11.609 0 10.5V4c0-1.094.906-2 2-2h6.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422zm6 0c0 .531-.219 1.047-.578 1.406l-7.672 7.688a2.08 2.08 0 0 1-1.422.578c-.812 0-1.219-.375-1.75-.922l7.344-7.344c.359-.359.578-.875.578-1.406s-.219-1.047-.578-1.422L14.422 3.422C13.625 2.625 12.11 2 11 2h3.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422z"></path>
+</svg>
+    <strong>Tags:</strong>&nbsp;
+    <ul class="tags tags-small">
+      
+        <li><a href="../../../tag/XUL_Events.html" rel="nofollow">XUL_Events</a></li>
+      
+    </ul>
+  </div>
+
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-group" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M9.266 14a5.532 5.532 0 0 0-4.141 2H3.031C1.468 16 0 15.25 0 13.516 0 12.25-.047 8 1.937 8c.328 0 1.953 1.328 4.062 1.328.719 0 1.406-.125 2.078-.359A7.624 7.624 0 0 0 7.999 10c0 1.422.453 2.828 1.266 4zM26 23.953C26 26.484 24.328 28 21.828 28H8.172C5.672 28 4 26.484 4 23.953 4 20.422 4.828 15 9.406 15c.531 0 2.469 2.172 5.594 2.172S20.063 15 20.594 15C25.172 15 26 20.422 26 23.953zM10 4c0 2.203-1.797 4-4 4S2 6.203 2 4s1.797-4 4-4 4 1.797 4 4zm11 6c0 3.313-2.688 6-6 6s-6-2.688-6-6 2.688-6 6-6 6 2.688 6 6zm9 3.516C30 15.25 28.531 16 26.969 16h-2.094a5.532 5.532 0 0 0-4.141-2A7.066 7.066 0 0 0 22 10a7.6 7.6 0 0 0-.078-1.031A6.258 6.258 0 0 0 24 9.328C26.109 9.328 27.734 8 28.062 8c1.984 0 1.937 4.25 1.937 5.516zM28 4c0 2.203-1.797 4-4 4s-4-1.797-4-4 1.797-4 4-4 4 1.797 4 4z"></path>
+</svg>
+                    <strong>Contributors to this page:</strong>
+                    
+        <a href="https://developer.mozilla.org/en-US/profiles/SphinxKnight">SphinxKnight</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/hasys">hasys</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Noitidart">Noitidart</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/chugylo">chugylo</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/gynbiprt">gynbiprt</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Wladimir_Palant">Wladimir_Palant</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Nickolay">Nickolay</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/louisremi">louisremi</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/kmaglione">kmaglione</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/edbian">edbian</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/pippijn">pippijn</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/fscholz">fscholz</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/kiteroa">kiteroa</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/zencd">zencd</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/chukito">chukito</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Shoot">Shoot</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Mossop">Mossop</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Mgjbot">Mgjbot</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Enn">Enn</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Zr7Ni5">Zr7Ni5</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Ptak82">Ptak82</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Waldo">Waldo</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/MarkFinkle">MarkFinkle</a>
+    
+                  </div>
+                
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-clock" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M14 8.5v7c0 .281-.219.5-.5.5h-5a.494.494 0 0 1-.5-.5v-1c0-.281.219-.5.5-.5H12V8.5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zm6.5 5.5c0-4.688-3.813-8.5-8.5-8.5S3.5 9.313 3.5 14s3.813 8.5 8.5 8.5 8.5-3.813 8.5-8.5zm3.5 0c0 6.625-5.375 12-12 12S0 20.625 0 14 5.375 2 12 2s12 5.375 12 12z"></path>
+</svg>
+                    <strong>Last updated by:</strong>
+                    <a href="https://developer.mozilla.org/en-US/profiles/SphinxKnight">SphinxKnight</a>,
+                    <time datetime="2018-02-09T11:27:00.732273-08:00">Feb 9, 2018, 11:27:00 AM</time>
+                  </div>
+                
+              </div>
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+    
+      <div class="newsletter-box">
+        <div class="newsletter">
+    <form id="newsletterForm" class="newsletter-form nodisable" name="newsletter-form" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <div class="newsletter-head">
+            <h2 class="newsletter-teaser">Learn the best of web development</h2>
+            <p class="newsletter-description">Get the latest and greatest from MDN delivered straight to your inbox.</p>
+            
+        </div>
+
+        <div class="newsletter-fields">
+            <input type="hidden" id="fmt" name="fmt" value="H">
+            <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+            <div id="newsletterErrors" class="newsletter-errors"></div>
+
+            <div id="newsletterEmail" class="form-group newsletter-group-email">
+                <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+                <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+            </div>
+
+            <div id="newsletterPrivacy" class="form-group form-group-agree newsletter-group-privacy hidden">
+                <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+                <label for="newsletterPrivacyInput">
+                I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+                </label>
+            </div>
+            <div id="newsletterSubmit" class="newsletter-group-submit">
+                <button id="newsletter-submit" type="submit" class="button neutral newsletter-submit">
+                    Sign up now<svg class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg" width="23" height="28" viewBox="0 0 23 28" aria-hidden="true">
+    <path d="M23 15a2.01 2.01 0 0 1-.578 1.422L12.25 26.594c-.375.359-.891.578-1.422.578s-1.031-.219-1.406-.578L8.25 25.422c-.375-.375-.594-.891-.594-1.422s.219-1.047.594-1.422L12.828 18h-11C.703 18 0 17.062 0 16v-2c0-1.062.703-2 1.828-2h11L8.25 7.406a1.96 1.96 0 0 1 0-2.812l1.172-1.172c.375-.375.875-.594 1.406-.594s1.047.219 1.422.594l10.172 10.172c.375.359.578.875.578 1.406z"></path>
+</svg>
+                </button>
+            </div>
+        </div>
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden">
+        <span>Hide Newsletter Sign-up</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+</div>
+      </div>
+    
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/en-US/docs/Mozilla/Tech/XUL/Events$edit" label="Edit page"></menuitem>
+    <menuitem data-action="/en-US/docs/Mozilla/Tech/XUL/Events$history" label="View page history"></menuitem>
+  </menu>
+
+      </div>
+  </main>
+  <!-- Footer -->
+    <footer id="nav-footer" class="nav-footer"><div class="center"><a href="http://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Events">XUL Events</a> by <a href="http://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Events$history">Mozilla Contributors</a> is licensed under <a href="http://creativecommons.org/licenses/by-sa/2.5/" class="external external-icon">CC-BY-SA 2.5</a>.</div></footer> 
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script async="" type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script src="../../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../../static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><!--[endif]---->
+
+    
+    <script src="../../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../../static/build/js/wiki.b26a4c181df3.js" charset="utf-8" id="wikiscript"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../static/build/js/newsletter.a85c5c2892e5.js" charset="utf-8"></script>
+  
+
+
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Events by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 10:53:13 GMT -->
+</body></html>

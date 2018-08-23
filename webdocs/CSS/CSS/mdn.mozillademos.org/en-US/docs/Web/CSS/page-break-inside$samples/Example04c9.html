@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/page-break-inside$samples/Example?revision=1338306 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:48:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            .page {
+  background-color: #8cffa0;
+  height: 90px;
+  width: 200px;
+  columns: 1;
+  column-width: 100px;
+}
+
+.list, ol, ul, p {
+  break-inside: avoid;
+}
+
+p {
+  background-color: #8ca0ff;
+}
+
+ol, ul, .list {
+  margin: 0.5em 0;
+  display: block;
+  background-color: orange;
+}
+
+p:first-child {
+  margin-top: 0;
+}
+        </style>
+        
+        <title>page-break-inside</title>
+    </head>
+    <body>
+        
+            <div class="page">
+  <p>This is the first paragraph.</p>
+  <section class="list">
+    <span>A list</span>
+    <ol>
+      <li>one</li>
+<!--       <li>two</li> -->
+    </ol>
+  </section>
+  <ul>
+    <li>one</li>
+<!--     <li>two</li> -->
+  </ul>
+  <p>This is the second paragraph.</p>
+  <p>This is the third paragraph, it contains more text.</p>
+  <p>This is the fourth paragraph. It has a little bit more text than the third one.</p>
+</div>
+        
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/page-break-inside$samples/Example?revision=1338306 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:48:50 GMT -->
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/ja/docs/Web/HTML/Element/Input/time$samples/Examples?revision=1401909 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:18:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            div {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+input[type="number"] {
+  width: 100px;
+}
+
+input + span {
+  padding-right: 30px;
+}
+
+input:invalid+span:after {
+  position: absolute;
+  content: '✖';
+  padding-left: 5px;
+}
+
+input:valid+span:after {
+  position: absolute;
+  content: '✓';
+  padding-left: 5px;
+}
+        </style>
+        
+        <title>&lt;input type=&#34;time&#34;&gt;</title>
+    </head>
+    <body>
+        
+            <form>
+  <div class="nativeTimePicker">
+    <label for="appt-time">予約時刻を選んでください (営業時間 12:00～18:00): </label>
+      <input id="appt-time" type="time" name="appt-time"
+             min="12:00" max="18:00" required>
+      <span class="validity"></span>
+    </div>
+  <p class="fallbackLabel">予約時刻を選んでください (営業時間 12:00～18:00):</p>
+  <div class="fallbackTimePicker">
+    <div>
+      <span>
+        <select id="hour" name="hour">
+        <label for="hour">時</label>
+        </select>
+      </span>
+      <span>
+        <select id="minute" name="minute">
+        <label for="minute">分</label>
+        </select>
+      </span>
+    </div>
+  </div>
+</form>
+        
+        
+            <script>
+                // 変数の宣言
+var nativePicker = document.querySelector('.nativeTimePicker');
+var fallbackPicker = document.querySelector('.fallbackTimePicker');
+var fallbackLabel = document.querySelector('.fallbackLabel');
+
+var hourSelect = document.querySelector('#hour');
+var minuteSelect = document.querySelector('#minute');
+
+// 最初はフォールバックを非表示にする
+fallbackPicker.style.display = 'none';
+fallbackLabel.style.display = 'none';
+
+// 新しい日付入力が文字列入力にフォールバックされるかどうか
+var test = document.createElement('input');
+test.type = 'time';
+// もし文字列入力になるならば、 if() {} ブロックの中のコードを実行する
+if(test.type === 'text') {
+  // ネイティブの日付選択を隠してフォールバック版を表示
+  nativePicker.style.display = 'none';
+  fallbackPicker.style.display = 'block';
+  fallbackLabel.style.display = 'block';
+
+  // 時と分を動的に生成する
+  populateHours();
+  populateMinutes();
+}
+
+function populateHours() {
+  // 時刻の <select> に営業時間の6時間分を生成する
+  for(var i = 12; i <= 18; i++) {
+    var option = document.createElement('option');
+    option.textContent = i;
+    hourSelect.appendChild(option);
+  }
+}
+
+function populateMinutes() {
+  // 分の <select> に1時間内の60分を生成する
+  for(var i = 0; i <= 59; i++) {
+    var option = document.createElement('option');
+    option.textContent = (i < 10) ? ("0" + i) : i;
+    minuteSelect.appendChild(option);
+  }
+}
+
+// 時が18になったら、分を00に設定する
+// — 18:00 以降を選択できなくする
+ function setMinutesToZero() {
+   if(hourSelect.value === '18') {
+     minuteSelect.value = '00';
+   }
+ }
+
+ hourSelect.onchange = setMinutesToZero;
+ minuteSelect.onchange = setMinutesToZero;
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/ja/docs/Web/HTML/Element/Input/time$samples/Examples?revision=1401909 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:18:40 GMT -->
+</html>

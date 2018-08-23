@@ -1,0 +1,1397 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 07:37:55 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  <title>Document Object Model (DOM)</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+
+  
+<link rel="preload" href="../../../../static/fonts/locales/ZillaSlab-Regular.f9de6143fdfa.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="license" href="#license">
+  
+
+  
+    
+    
+
+    <link href="../../../../static/build/styles/mdn.83865b0f7c30.css" rel="stylesheet" type="text/css">
+
+    
+  
+
+    <link href="../../../../static/build/styles/wiki.aaf26c13c39b.css" rel="stylesheet" type="text/css">
+
+
+    
+
+  <link href="../../../../static/build/styles/locale-en-US.ca0bca387b42.css" rel="stylesheet" type="text/css">
+
+  
+    <script>
+      /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
+    </script>
+    
+
+
+
+  
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta property="og:site_name" content="MDN Web Docs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="MDN Web Docs">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../static/img/favicon144.e7e21ca263ca.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../static/img/favicon114.d526f38b09c5.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../static/img/favicon72.cc65d1d762a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../../static/img/favicon57.de33179910ae.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="../../../../static/img/favicon32.7f3da72dcea1.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script async="" type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  <link rel="dns-prefetch" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model$json">
+  <link rel="canonical" href="Document_Object_Model.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="Document_Object_Model.html" title="Document Object Model (DOM)">
+  
+    
+      <link rel="alternate" hreflang="bn-BD" href="https://developer.mozilla.org/bn-BD/docs/DOM/DOM_Reference" title="DOM Reference">
+    
+      <link rel="alternate" hreflang="cs" href="https://developer.mozilla.org/cs/docs/Gecko_DOM_Reference" title="Gecko DOM Reference">
+    
+      <link rel="alternate" hreflang="de" href="https://developer.mozilla.org/de/docs/Gecko-DOM-Referenz" title="Gecko DOM Referenz">
+    
+      <link rel="alternate" hreflang="es" href="https://developer.mozilla.org/es/docs/Referencia_DOM_de_Gecko" title="Referencia DOM de Gecko">
+    
+      <link rel="alternate" hreflang="fr" href="https://developer.mozilla.org/fr/docs/Web/API/Document_Object_Model" title="Référence du DOM">
+    
+      <link rel="alternate" hreflang="hu" href="https://developer.mozilla.org/hu/docs/Web/API/Dokumentum_Objektum_Model" title="Dokumentum Objektum Model (DOM)">
+    
+      <link rel="alternate" hreflang="it" href="https://developer.mozilla.org/it/docs/Web/API/Document_Object_Model" title="Document Object Model (DOM)">
+    
+      <link rel="alternate" hreflang="ja" href="https://developer.mozilla.org/ja/docs/DOM/DOM_Reference" title="ドキュメントオブジェクトモデル (DOM)">
+    
+      <link rel="alternate" hreflang="ko" href="https://developer.mozilla.org/ko/docs/Gecko_DOM_Reference" title="문서 객체 모델 (DOM)">
+    
+      <link rel="alternate" hreflang="nl" href="https://developer.mozilla.org/nl/docs/Web/API/Document_Object_Model" title="Document Object Model (DOM)">
+    
+      <link rel="alternate" hreflang="pl" href="https://developer.mozilla.org/pl/docs/Dokumentacja_Gecko_DOM" title="Dokumentacja Gecko DOM">
+    
+      <link rel="alternate" hreflang="pt-BR" href="https://developer.mozilla.org/pt-BR/docs/DOM/Referencia_do_DOM" title="Modelo de Objeto de Documento (DOM)">
+    
+      <link rel="alternate" hreflang="pt-PT" href="https://developer.mozilla.org/pt-PT/docs/DOM/DOM_Reference" title="Modelo de Objeto de Documento (DOM)">
+    
+      <link rel="alternate" hreflang="ru" href="https://developer.mozilla.org/ru/docs/DOM/DOM_Reference" title="Руководство по DOM">
+    
+      <link rel="alternate" hreflang="sr" href="https://developer.mozilla.org/sr/docs/Web/API/Document_Object_Model" title="Document Object Model (DOM)">
+    
+      <link rel="alternate" hreflang="vi" href="https://developer.mozilla.org/vi/docs/Web/API/Document_Object_Model" title="Document Object Model (DOM)">
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document_Object_Model" title="文档对象模型 (DOM)">
+    
+      <link rel="alternate" hreflang="zh-TW" href="https://developer.mozilla.org/zh-TW/docs/Web/API/Document_Object_Model" title="文件物件模型 (DOM)">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="Document Object Model (DOM)">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">
+  <meta name="twitter:title" content="Document Object Model (DOM)">
+  
+  <meta property="og:description" content="The Document Object Model (DOM) connects web pages to scripts or programming languages. Usually that means JavaScript, but modelling HTML, SVG, or XML documents as objects is not part of the JavaScript language. The DOM model represents a document with a logical tree. Each branch of the tree ends in a node, and each node contains objects. DOM methods allow programmatic access to the tree; with them you can change the document's structure, style or content. Nodes can have event handlers attached to them. Once an event is triggered, the event handlers get executed.">
+  <meta name="description" content="The Document Object Model (DOM) connects web pages to scripts or programming languages. Usually that means JavaScript, but modelling HTML, SVG, or XML documents as objects is not part of the JavaScript language. The DOM model represents a document with a logical tree. Each branch of the tree ends in a node, and each node contains objects. DOM methods allow programmatic access to the tree; with them you can change the document's structure, style or content. Nodes can have event handlers attached to them. Once an event is triggered, the event handlers get executed.">
+  <meta name="twitter:description" content="The Document Object Model (DOM) connects web pages to scripts or programming languages. Usually that means JavaScript, but modelling HTML, SVG, or XML documents as objects is not part of the JavaScript language. The DOM model represents a document with a logical tree. Each branch of the tree ends in a node, and each node contains objects. DOM methods allow programmatic access to the tree; with them you can change the document's structure, style or content. Nodes can have event handlers attached to them. Once an event is triggered, the event handlers get executed.">
+  
+
+</head>
+<body data-slug="Web/API/Document_Object_Model" contextmenu="edit-history-menu" data-search-url="" class="document">
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <!--[endif]---->
+
+  
+  <link rel="dns-prefetch" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model$json">
+  <link rel="canonical" href="Document_Object_Model.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="Document_Object_Model.html" title="Document Object Model (DOM)">
+  
+    
+      <link rel="alternate" hreflang="bn-BD" href="https://developer.mozilla.org/bn-BD/docs/DOM/DOM_Reference" title="DOM Reference">
+    
+      <link rel="alternate" hreflang="cs" href="https://developer.mozilla.org/cs/docs/Gecko_DOM_Reference" title="Gecko DOM Reference">
+    
+      <link rel="alternate" hreflang="de" href="https://developer.mozilla.org/de/docs/Gecko-DOM-Referenz" title="Gecko DOM Referenz">
+    
+      <link rel="alternate" hreflang="es" href="https://developer.mozilla.org/es/docs/Referencia_DOM_de_Gecko" title="Referencia DOM de Gecko">
+    
+      <link rel="alternate" hreflang="fr" href="https://developer.mozilla.org/fr/docs/Web/API/Document_Object_Model" title="Référence du DOM">
+    
+      <link rel="alternate" hreflang="hu" href="https://developer.mozilla.org/hu/docs/Web/API/Dokumentum_Objektum_Model" title="Dokumentum Objektum Model (DOM)">
+    
+      <link rel="alternate" hreflang="it" href="https://developer.mozilla.org/it/docs/Web/API/Document_Object_Model" title="Document Object Model (DOM)">
+    
+      <link rel="alternate" hreflang="ja" href="https://developer.mozilla.org/ja/docs/DOM/DOM_Reference" title="ドキュメントオブジェクトモデル (DOM)">
+    
+      <link rel="alternate" hreflang="ko" href="https://developer.mozilla.org/ko/docs/Gecko_DOM_Reference" title="문서 객체 모델 (DOM)">
+    
+      <link rel="alternate" hreflang="nl" href="https://developer.mozilla.org/nl/docs/Web/API/Document_Object_Model" title="Document Object Model (DOM)">
+    
+      <link rel="alternate" hreflang="pl" href="https://developer.mozilla.org/pl/docs/Dokumentacja_Gecko_DOM" title="Dokumentacja Gecko DOM">
+    
+      <link rel="alternate" hreflang="pt-BR" href="https://developer.mozilla.org/pt-BR/docs/DOM/Referencia_do_DOM" title="Modelo de Objeto de Documento (DOM)">
+    
+      <link rel="alternate" hreflang="pt-PT" href="https://developer.mozilla.org/pt-PT/docs/DOM/DOM_Reference" title="Modelo de Objeto de Documento (DOM)">
+    
+      <link rel="alternate" hreflang="ru" href="https://developer.mozilla.org/ru/docs/DOM/DOM_Reference" title="Руководство по DOM">
+    
+      <link rel="alternate" hreflang="sr" href="https://developer.mozilla.org/sr/docs/Web/API/Document_Object_Model" title="Document Object Model (DOM)">
+    
+      <link rel="alternate" hreflang="vi" href="https://developer.mozilla.org/vi/docs/Web/API/Document_Object_Model" title="Document Object Model (DOM)">
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document_Object_Model" title="文档对象模型 (DOM)">
+    
+      <link rel="alternate" hreflang="zh-TW" href="https://developer.mozilla.org/zh-TW/docs/Web/API/Document_Object_Model" title="文件物件模型 (DOM)">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="Document Object Model (DOM)">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">
+  <meta name="twitter:title" content="Document Object Model (DOM)">
+  
+  <meta property="og:description" content="The Document Object Model (DOM) connects web pages to scripts or programming languages. Usually that means JavaScript, but modelling HTML, SVG, or XML documents as objects is not part of the JavaScript language. The DOM model represents a document with a logical tree. Each branch of the tree ends in a node, and each node contains objects. DOM methods allow programmatic access to the tree; with them you can change the document's structure, style or content. Nodes can have event handlers attached to them. Once an event is triggered, the event handlers get executed.">
+  <meta name="description" content="The Document Object Model (DOM) connects web pages to scripts or programming languages. Usually that means JavaScript, but modelling HTML, SVG, or XML documents as objects is not part of the JavaScript language. The DOM model represents a document with a logical tree. Each branch of the tree ends in a node, and each node contains objects. DOM methods allow programmatic access to the tree; with them you can change the document's structure, style or content. Nodes can have event handlers attached to them. Once an event is triggered, the event handlers get executed.">
+  <meta name="twitter:description" content="The Document Object Model (DOM) connects web pages to scripts or programming languages. Usually that means JavaScript, but modelling HTML, SVG, or XML documents as objects is not part of the JavaScript language. The DOM model represents a document with a logical tree. Each branch of the tree ends in a node, and each node contains objects. DOM methods allow programmatic access to the tree; with them you can change the document's structure, style or content. Nodes can have event handlers attached to them. Once an event is triggered, the event handlers get executed.">
+  
+
+
+
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/wiki-compat-tables.9978a5ce31c2.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+
+        // interactive editor config
+        win.mdn.interactiveEditor = {
+            siteUrl: "https://developer.mozilla.org",
+            editorUrl: "https://interactive-examples.mdn.mozilla.net"
+        };
+
+    })(this);
+</script>
+    
+    <ul id="nav-access">
+  <li><a href="#content" id="skip-main">Skip to main content</a></li>
+  <li><a id="skip-language" href="#language">Select language</a></li>
+  <li><a href="#q" id="skip-search">Skip to search</a></li>
+</ul>
+
+    <!-- Header -->
+    <header id="main-header" class="header-main">
+      <a href="https://developer.mozilla.org/en-US/" class="logo">MDN Web Docs</a>
+      <div class="nav-toolbox-wrapper">
+        <nav id="main-nav" class="nav-main" role="navigation">
+    <ul>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web">Technologies
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-tech-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+                    <li><a href="../API.html">APIs / DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn">References &amp; Guides
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-learn-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-contact-submenu">
+              <div class="submenu-column">
+                <ul>
+                  <li>
+                      <a href="https://support.mozilla.org/">Get Firefox help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://stackoverflow.com/">Get web development help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                      <a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">Report a content problem
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</nav>
+        <div id="toolbox" class="toolbox">
+  <ul>
+    
+    <li class="nav-login"><div class="login">
+    
+        
+        <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FDocument_Object_Model" class="login-link js-login-link" data-service="GitHub" rel="nofollow">
+            Sign in<svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+    <title>Github</title>
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path>
+</svg>
+        </a>
+    
+</div></li>
+  </ul>
+</div>
+      </div>
+      <form id="nav-main-search" action="https://developer.mozilla.org/en-US/search" method="get" role="search" class="nav-main-search">
+  <div class="search-wrap">
+    <label for="main-q" class="offscreen">Search</label>
+    <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" aria-hidden="true">
+    <span class="search-trigger">
+        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true">
+    <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path>
+</svg>
+    </span>
+    <button type="submit" class="offscreen">Search</button>
+    <button type="button" id="close-header-search" class="close-header-search transparent">
+        <span class="offscreen">Close search</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+  </div>
+</form>
+    </header> 
+
+  <!-- Content will go here -->
+  <main id="content">
+      
+  <!-- heading -->
+  <div id="wiki-document-head" class="document-head">
+    <div class="center">
+      <!-- action buttons -->
+      <div class="document-actions">
+        
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons">
+      <li>
+          <button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false">
+              <svg class="icon icon-language" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M10.219 16.844c-.031.109-.797-.25-1-.328-.203-.094-1.125-.609-1.359-.766s-1.125-.891-1.234-.938a28.275 28.275 0 0 1-2.094 2.828c-.281.328-1.125 1.391-1.641 1.719-.078.047-.531.094-.594.063.25-.187.969-1.078 1.281-1.437.391-.453 2.25-3.047 2.562-3.641.328-.594 1.312-2.562 1.359-2.75-.156-.016-1.391.406-1.719.516-.313.094-1.172.297-1.234.344-.063.063-.016.25-.047.313s-.313.203-.484.234a1.647 1.647 0 0 1-.734 0c-.203-.047-.391-.25-.438-.328 0 0-.063-.094-.078-.359.187-.063.5-.078.844-.172s1.188-.344 1.641-.5 1.328-.484 1.594-.547c.281-.047.984-.516 1.359-.641s.641-.281.656-.203 0 .422-.016.516c-.016.078-.766 1.547-.875 1.781-.063.125-.5.953-1.203 2.047.25.109.781.328 1 .438.266.125 2.125.906 2.219.938s.266.75.234.875zM7.016 9.25c.047.266-.031.375-.063.438-.156.297-.547.5-.781.594s-.625.187-.938.187c-.141-.016-.422-.063-.766-.406-.187-.203-.328-.75-.266-.688s.516.125.719.078.688-.187.906-.25c.234-.078.703-.203.859-.219.156 0 .281.063.328.266zm10.906 2.016l.984 3.547-2.172-.656zM.609 23.766l10.844-3.625V4.016L.609 7.657v16.109zM20 18.813l1.594.484-2.828-10.266-1.563-.484-3.375 8.375 1.594.484.703-1.719 3.297 1.016zM12.141 3.781l8.953 2.875V.718zM17 24.453l2.469.203-.844 2.5L18 26.125c-1.266.812-2.828 1.437-4.312 1.687-.453.094-.969.187-1.422.187h-1.313c-1.656 0-4.672-.984-5.984-1.937-.094-.078-.125-.141-.125-.25 0-.172.125-.297.281-.297.141 0 .875.453 1.078.547 1.406.703 3.375 1.344 4.953 1.344 1.953 0 3.281-.25 5.063-1.016.516-.234.969-.531 1.453-.797zm7-16.859v16.859c-12.078-3.844-12.094-3.844-12.094-3.844C11.656 20.718.453 24.5.297 24.5a.3.3 0 0 1-.281-.203c0-.016-.016-.031-.016-.047V7.406c.016-.047.031-.125.063-.156.094-.109.219-.141.313-.172.047-.016 1-.328 2.328-.781v-6l8.719 3.094C11.532 3.36 21.251 0 21.392 0c.172 0 .313.125.313.328v6.531z"></path>
+</svg>
+              <span>Languages</span>
+          </button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                
+                
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/bn-BD/docs/DOM/DOM_Reference" data-locale="bn-BD" title="Bengali (Bangladesh)">বাংলা (বাংলাদেশ) (bn-BD)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/cs/docs/Gecko_DOM_Reference" data-locale="cs" title="Czech">Čeština (cs)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/de/docs/Gecko-DOM-Referenz" data-locale="de" title="German">Deutsch (de)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/es/docs/Referencia_DOM_de_Gecko" data-locale="es" title="Spanish">Español (es)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/fr/docs/Web/API/Document_Object_Model" data-locale="fr" title="French">Français (fr)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/hu/docs/Web/API/Dokumentum_Objektum_Model" data-locale="hu" title="Hungarian">magyar (hu)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/it/docs/Web/API/Document_Object_Model" data-locale="it" title="Italian">Italiano (it)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ja/docs/DOM/DOM_Reference" data-locale="ja" title="Japanese">日本語 (ja)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ko/docs/Gecko_DOM_Reference" data-locale="ko" title="Korean">한국어 (ko)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/nl/docs/Web/API/Document_Object_Model" data-locale="nl" title="Dutch">Nederlands (nl)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/pl/docs/Dokumentacja_Gecko_DOM" data-locale="pl" title="Polish">Polski (pl)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/pt-BR/docs/DOM/Referencia_do_DOM" data-locale="pt-BR" title="Portuguese (Brazilian)">Português (do&nbsp;Brasil) (pt-BR)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/pt-PT/docs/DOM/DOM_Reference" data-locale="pt-PT" title="Portuguese (Portugal)">Português (Europeu) (pt-PT)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ru/docs/DOM/DOM_Reference" data-locale="ru" title="Russian">Русский (ru)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/sr/docs/Web/API/Document_Object_Model" data-locale="sr" title="Serbian">Српски (sr)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/vi/docs/Web/API/Document_Object_Model" data-locale="vi" title="Vietnamese">Tiếng Việt (vi)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document_Object_Model" data-locale="zh-CN" title="Chinese (Simplified)">中文 (简体) (zh-CN)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-TW/docs/Web/API/Document_Object_Model" data-locale="zh-TW" title="Chinese (Traditional)">正體中文 (繁體) (zh-TW)</a></bdi></li>
+                
+              
+
+              
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model$locales" rel="nofollow" id="translations-add">Add a translation</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+      
+      <li class="page-buttons-edit">
+          <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model$edit" class="button neutral" id="edit-button" rel="nofollow">
+              <svg class="icon icon-pencil" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M5.672 24l1.422-1.422-3.672-3.672L2 20.328V22h2v2h1.672zm8.172-14.5a.329.329 0 0 0-.344-.344.368.368 0 0 0-.266.109l-8.469 8.469a.366.366 0 0 0-.109.266c0 .203.141.344.344.344a.368.368 0 0 0 .266-.109l8.469-8.469a.366.366 0 0 0 .109-.266zM13 6.5l6.5 6.5-13 13H0v-6.5zM23.672 8c0 .531-.219 1.047-.578 1.406L20.5 12 14 5.5l2.594-2.578c.359-.375.875-.594 1.406-.594s1.047.219 1.422.594l3.672 3.656c.359.375.578.891.578 1.422z"></path>
+</svg>
+              Edit
+          </a>
+      </li>
+      
+
+        
+
+        <li class="page-buttons-advanced">
+            <button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false">
+                <svg class="icon icon-gear" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M16 14c0-2.203-1.797-4-4-4s-4 1.797-4 4 1.797 4 4 4 4-1.797 4-4zm8-1.703v3.469c0 .234-.187.516-.438.562l-2.891.438a8.86 8.86 0 0 1-.609 1.422c.531.766 1.094 1.453 1.672 2.156.094.109.156.25.156.391s-.047.25-.141.359c-.375.5-2.484 2.797-3.016 2.797a.795.795 0 0 1-.406-.141l-2.156-1.687a9.449 9.449 0 0 1-1.422.594c-.109.953-.203 1.969-.453 2.906a.573.573 0 0 1-.562.438h-3.469c-.281 0-.531-.203-.562-.469l-.438-2.875a9.194 9.194 0 0 1-1.406-.578l-2.203 1.672c-.109.094-.25.141-.391.141s-.281-.063-.391-.172c-.828-.75-1.922-1.719-2.578-2.625a.607.607 0 0 1 .016-.718c.531-.719 1.109-1.406 1.641-2.141a8.324 8.324 0 0 1-.641-1.547l-2.859-.422A.57.57 0 0 1 0 15.705v-3.469c0-.234.187-.516.422-.562l2.906-.438c.156-.5.359-.969.609-1.437a37.64 37.64 0 0 0-1.672-2.156c-.094-.109-.156-.234-.156-.375s.063-.25.141-.359c.375-.516 2.484-2.797 3.016-2.797.141 0 .281.063.406.156L7.828 5.94a9.449 9.449 0 0 1 1.422-.594c.109-.953.203-1.969.453-2.906a.573.573 0 0 1 .562-.438h3.469c.281 0 .531.203.562.469l.438 2.875c.484.156.953.344 1.406.578l2.219-1.672c.094-.094.234-.141.375-.141s.281.063.391.156c.828.766 1.922 1.734 2.578 2.656a.534.534 0 0 1 .109.344c0 .141-.047.25-.125.359-.531.719-1.109 1.406-1.641 2.141.266.5.484 1.016.641 1.531l2.859.438a.57.57 0 0 1 .453.562z"></path>
+</svg>
+                <span>Advanced</span>
+            </button>
+            <div class="submenu js-submenu" id="advanced-menu-submenu">
+                <!-- this page -->
+                <div class="submenu-column">
+                    <div class="title">Advanced</div>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model$history" rel="nofollow">History</a></li>
+                        
+                        
+                        
+
+
+                
+
+                <li class="page-print"><a href="#" onclick="return window.print();">Print this article</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+      </div>
+
+      <div class="document-title">
+        <h1>Document Object Model (DOM)</h1>
+      </div>
+    <nav class="crumbs" role="navigation">
+      <ol typeof="BreadcrumbList" vocab="https://schema.org/" aria-label="breadcrumbs">
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="https://developer.mozilla.org/en-US/docs/Web" property="item" typeof="WebPage">
+              <span property="name">Web technology for developers</span>
+            </a>
+            <meta property="position" content="1">
+          </li>
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="../API.html" property="item" typeof="WebPage">
+              <span property="name">Web APIs</span>
+            </a>
+            <meta property="position" content="2">
+          </li>
+        
+        <li property="itemListElement" typeof="ListItem" class="crumb">
+          <span property="name">Document Object Model (DOM)</span>
+        </li>
+      </ol>
+    </nav></div>
+  </div>
+  
+  <div id="toc" class="toc">
+    <div class="center">
+      <div class="toc-head">Jump to:</div>
+        <ol class="toc-links">
+          <li><a rel="internal" href="#DOM_interfaces">DOM interfaces</a></li><li><a rel="internal" href="#Obsolete_DOM_interfaces">Obsolete DOM interfaces  </a></li><li><a rel="internal" href="#HTML_interfaces">HTML interfaces</a></li><li><a rel="internal" href="#SVG_interfaces">SVG interfaces</a></li><li><a rel="internal" href="#See_also">See also</a>
+        </li></ol>
+    </div>
+  </div>
+  
+
+      <div class="center clear">
+      
+
+    <div class="wiki-main-content" id="document-main"><div class="center">
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-left-present">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-main wiki-column text-content">
+
+              
+
+              
+              
+
+              
+
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <div></div>
+
+<p>The <strong>Document Object Model (<em>DOM</em>)</strong> connects web pages to scripts or programming languages. Usually that means JavaScript, but modelling HTML, SVG, or XML documents as objects is not part of the JavaScript language. The DOM model represents a document with a logical tree. Each branch of the tree ends in a node, and each node contains objects. DOM methods allow programmatic access to the tree; with them you can change the document's structure, style or content. Nodes can have event handlers attached to them. Once an event is triggered, the event handlers get executed.</p>
+
+<p>An <a href="Document_Object_Model/Introduction.html">introduction</a> to the DOM is available.</p>
+
+<a class="dashAnchor" name="//apple_ref/Section/DOM%20interfaces"></a><h2 id="DOM_interfaces">DOM interfaces</h2>
+
+<div class="index">
+<ul>
+	<li><a href="Attr.html" title="This type represents a DOM element's attribute as an object. In most DOM methods, you will probably directly retrieve the attribute as a string (e.g., Element.getAttribute(), but certain functions (e.g., Element.getAttributeNode()) or means of iterating give Attr types."><code>Attr</code></a></li>
+	<li><a href="CharacterData.html" title="The CharacterData abstract interface represents a Node object that contains characters. This is an abstract interface, meaning there aren't any object of type CharacterData: it is implemented by other interfaces, like Text, '. In XML, the character sequence '--' cannot be used within a comment.&quot;>Comment, or ProcessingInstruction which aren't abstract."><code>CharacterData</code></a></li>
+	<li><a href="ChildNode.html" title="The ChildNode interface contains methods that are particular to Node objects that can have a parent."><code>ChildNode</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></li>
+	<li><a href="Comment.html" title="The Comment interface represents textual notations within markup; although it is generally not visually shown, such comments are available to be read in the source view. Comments are represented in HTML and XML as content between '<!--' and '-->'. In XML, the character sequence '--' cannot be used within a comment."><code>Comment</code></a></li>
+	<li><a href="CustomEvent.html" title="This interface inherits properties from its parent, Event:"><code>CustomEvent</code></a></li>
+	<li><a href="Document.html" title="The Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree.HTMLElement"><code>Document</code></a></li>
+	<li><a href="DocumentFragment.html" title="The DocumentFragment interface represents a minimal document object that has no parent. It is used as a lightweight version of Document that stores a segment of a document structure comprised of nodes just like a standard document. The key difference is that because the document fragment isn't part of the active document tree structure, changes made to the fragment don't affect the document, cause reflow, or incur any performance impact that can occur when changes are made."><code>DocumentFragment</code></a></li>
+	<li><a href="DocumentType.html" title="The DocumentType interface represents a Node containing a doctype."><code>DocumentType</code></a></li>
+	<li><a href="DOMError.html" title="The DOMError interface describes an error object that contains an error name."><code>DOMError</code></a>&nbsp;<span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a href="DOMException.html" title="The DOMException interface represents an abnormal event (called an exception) which occurs as a result of calling a method or accessing a property of a web API."><code>DOMException</code></a></li>
+	<li><a href="DOMImplementation.html" title="The DOMImplementation interface represent an object providing methods which are not dependent on any particular document. Such an object is returned by the Document.implementation property."><code>DOMImplementation</code></a></li>
+	<li><a href="DOMString.html" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a></li>
+	<li><a href="DOMTimeStamp.html" title="The DOMTimeStamp type represents an absolute or relative number of milliseconds, depending on the specification in which it appears."><code>DOMTimeStamp</code></a></li>
+	<li><a rel="nofollow" href="DOMSettableTokenList.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>DOMSettableTokenList</code></a></li>
+	<li><a href="DOMStringList.html" title="A type returned by some APIs which contains a list of DOMString (strings)."><code>DOMStringList</code></a></li>
+	<li><a href="DOMTokenList.html" title="The DOMTokenList interface represents a set of space-separated tokens. Such a set is returned by Element.classList, HTMLLinkElement.relList, HTMLAnchorElement.relList, HTMLAreaElement.relList, HTMLIframeElement.sandbox, or HTMLOutputElement.htmlFor. It is indexed beginning with 0 as with JavaScript Array objects. DOMTokenList is always case-sensitive."><code>DOMTokenList</code></a></li>
+	<li><a href="Element.html" title="Element is the most general base class from which all objects in a Document inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from Element."><code>Element</code></a></li>
+	<li><a href="Event.html" title="The Event interface represents any event which takes place in the DOM; some are user-generated (such as mouse or keyboard events), while others are generated by APIs (such as events that indicate an animation has finished running, a video has been paused, and so forth). There are many types of events, some of which use&nbsp;other interfaces based on the main Event interface. Event itself contains the properties and methods which are common to all events."><code>Event</code></a></li>
+	<li><a href="EventTarget.html" title="EventTarget is an interface implemented by objects that can receive events and may have listeners for them."><code>EventTarget</code></a></li>
+	<li><a href="HTMLCollection.html" title="The HTMLCollection interface represents a generic collection (array-like object similar to arguments) of elements (in document order) and offers methods and properties for selecting from the list."><code>HTMLCollection</code></a></li>
+	<li><a href="MutationObserver.html" title="The MutationObserver interface provides the ability to watch for changes being made to the DOM tree. It is designed as a replacement for the older Mutation Events feature which was part of the DOM3 Events specification."><code>MutationObserver</code></a></li>
+	<li><a href="MutationRecord.html" title="A MutationRecord represents an individual DOM mutation. It is the object that is passed to MutationObserver's callback."><code>MutationRecord</code></a></li>
+	<li><a href="NamedNodeMap.html" title="The NamedNodeMap interface represents a collection of Attr objects. Objects inside a NamedNodeMap are not in any particular order, unlike NodeList, although they may be accessed by an index as in an array."><code>NamedNodeMap</code></a></li>
+	<li><a href="Node.html" title="Node is an interface from which a number of DOM API object types inherit. It allows those types to be treated similarly; for example, inheriting the same set of methods, or being tested in the same way."><code>Node</code></a></li>
+	<li><a href="NodeFilter.html" title="A NodeFilter interface represents an object used to filter the nodes in a NodeIterator or TreeWalker. They don't know anything about the DOM or how to traverse nodes; they just know how to evaluate a single node against the provided filter."><code>NodeFilter</code></a></li>
+	<li><a href="NodeIterator.html" title="The NodeIterator interface represents an iterator over the members of a list of the nodes in a subtree of the DOM. The nodes will be returned in document order."><code>NodeIterator</code></a></li>
+	<li><a href="NodeList.html" title="NodeList objects are collections of nodes such as those returned by properties such as Node.childNodes and the document.querySelectorAll() method."><code>NodeList</code></a></li>
+	<li><a href="NonDocumentTypeChildNode.html" title="The NonDocumentTypeChildNode interface contains methods that are particular to Node objects that can have a parent, but not suitable for DocumentType."><code>NonDocumentTypeChildNode</code></a></li>
+	<li><a href="ParentNode.html" title="The ParentNode mixin contains methods and properties that are common to all types of Node objects that can have children."><code>ParentNode</code></a></li>
+	<li><a href="ProcessingInstruction.html" title="A processing instruction embeds application-specific instructions in XML which can be ignored by other applications that don't recognize them."><code>ProcessingInstruction</code></a></li>
+	<li><a href="Selection.html" title="A Selection object&nbsp;represents the range of text selected by the user or the current position of the caret. To obtain a Selection object for examination or&nbsp;modification, call window.getSelection()."><code>Selection</code></a><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></li>
+	<li><a href="Range.html" title="The Range interface represents a fragment of a document that can contain nodes and parts of text nodes."><code>Range</code></a></li>
+	<li><a href="Text.html" title="The Text interface represents the textual content of Element or Attr.&nbsp; If an element has no markup within its content, it has a single child implementing Text that contains the element's text.&nbsp; However, if the element contains markup, it is parsed into information items and Text nodes that form its children."><code>Text</code></a></li>
+	<li><a href="TextDecoder.html" title="The TextDecoder interface represents a decoder for a specific method, that is a specific character encoding, like utf-8, iso-8859-2, koi8, cp1261, gbk, etc.&nbsp;A decoder takes a stream of bytes as input and emits a stream of code points. For a more scalable, non-native library, see StringView – a C-like representation of strings based on typed arrays."><code>TextDecoder</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></li>
+	<li><a href="TextEncoder.html" title="TextEncoder takes a stream of code points as input and emits a stream of bytes. For a more scalable, non-native library, see StringView – a C-like representation of strings based on typed arrays."><code>TextEncoder</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></li>
+	<li><a href="TimeRanges.html" title="The TimeRanges interface is used to represent a set of time ranges, primarily for the purpose of tracking which portions of media have been buffered when loading it for use by the <audio> and <video>&nbsp;elements."><code>TimeRanges</code></a></li>
+	<li><a href="TreeWalker.html" title="The TreeWalker object represents the nodes of a document subtree and a position within them."><code>TreeWalker</code></a></li>
+	<li><a href="URL.html" title="The URL&nbsp;interface represents an object providing static methods used for creating object URLs."><code>URL</code></a></li>
+	<li><a href="Window.html" title="The window object represents a window containing a DOM document; the document property points to the DOM document loaded in that window."><code>Window</code></a></li>
+	<li><a href="Worker.html" title="The Worker interface of the Web Workers API represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the Worker()&nbsp;constructor and specifying a script to be run in the worker thread."><code>Worker</code></a></li>
+	<li><a href="XMLDocument.html" title="The XMLDocument interface represent an XML document. It inherits from the generic Document and does not add any specific methods or properties to it: nevertheless, several algorithms behave differently with the two types of documents."><code>XMLDocument</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></li>
+</ul>
+</div>
+
+<a class="dashAnchor" name="//apple_ref/Section/Obsolete%20DOM%20interfaces"></a><h2 id="Obsolete_DOM_interfaces">Obsolete DOM interfaces <span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></h2>
+
+<p>The Document Object Model has been&nbsp;highly&nbsp;simplified. To achieve this, the following interfaces present in the different DOM level 3 or earlier specification have been removed. It is still not very&nbsp;clear whether&nbsp;some may be reintroduced or not, but for the time being&nbsp;they have to be considered as obsolete and should be avoided:</p>
+
+<div class="index">
+<ul>
+	<li><a href="CDATASection.html" title="The CDATASection interface represents a CDATA section that can be used within XML to include extended portions of unescaped text. The symbols < and &amp; don’t need escaping as they normally do when inside a CDATA section."><code>CDATASection</code></a></li>
+	<li><a href="DocumentTouch.html" title="The DocumentTouch interface used to provide convenience methods for creating Touch and TouchList objects, but DocumentTouch been removed from the standards. These two methods now live on the Document interface."><code>DocumentTouch</code></a></li>
+	<li><a href="DOMConfiguration.html" title="Pre-defined parameters:&nbsp;&quot;canonical-form&quot;, &quot;cdata-sections&quot;, &quot;check-character-normalization&quot;, &quot;comments&quot;, &quot;datatype-normalization&quot;, &quot;element-content-whitespace&quot;, &quot;entities&quot;, &quot;error-handler&quot;, &quot;infoset&quot;, &quot;namespaces&quot;, &quot;namespace-declarations&quot;, &quot;normalize-characters&quot;,&quot;schema-location&quot;, &quot;schema-type&quot;, &quot;split-cdata-sections&quot;, &quot;validate&quot;, &quot;validate-if-schema&quot;, &quot;well-formed&quot;"><code>DOMConfiguration</code></a></li>
+	<li><a rel="nofollow" href="DOMErrorHandler.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>DOMErrorHandler</code></a></li>
+	<li><a href="DOMImplementationList.html" title="Returned by DOMImplementationSource.getDOMImplementationList() and DOMImplementationRegistry.getDOMImplementationList() . Can be iterated with 0-based index."><code>DOMImplementationList</code></a></li>
+	<li><a href="DOMImplementationRegistry.html" title="This is a global variable used to get a single DOMImplementation or DOMImplementationList depending on the registered objects with the specified features."><code>DOMImplementationRegistry</code></a></li>
+	<li><a href="DOMImplementationSource.html" title="Can request a particular implementation based on needed features and versions (which can then be used to create a document, etc.). Called during DOMImplementationRegistry.getDOMImplementation() and DOMImplementationRegistry.getDOMImplementationList()."><code>DOMImplementationSource</code></a></li>
+	<li><a href="DOMLocator.html" title="Indicates a location such as where an error occurred. Returned by DOMError.location."><code>DOMLocator</code></a></li>
+	<li><a href="DOMObject.html" title="The obsolete DOMObject interface was used in earlier versions of the DOM specification as the base class for any object data type. "><code>DOMObject</code></a></li>
+	<li><a href="DOMUserData.html" title="DOMUserData refers to application data. In JavaScript, it maps directly to Object. It is returned or used as an argument by Node.setUserData(), Node.getUserData(), used as the third argument to handle() on UserDataHandler, and is used or returned by various DOMConfiguration methods."><code>DOMUserData</code></a></li>
+	<li><a href="ElementTraversal.html" title="The ElementTraversal interface was defining methods allowing to access from one Node to another one in the document tree."><code>ElementTraversal</code></a></li>
+	<li><a href="Entity.html" title="Read-only reference to a DTD entity. Also inherits the methods and properties of Node."><code>Entity</code></a></li>
+	<li><a href="EntityReference.html" title="Read-only reference to an entity reference in the DOM tree. Has no properties or methods of its own but inherits from Node."><code>EntityReference</code></a></li>
+	<li><a href="NameList.html" title="Provides an abstraction for an ordered collection of name and namespace value pairs. Items can be accessed by a 0-based index. The DOM&nbsp;spec does not specify how the collection is to be implemented."><code>NameList</code></a></li>
+	<li><a href="Notation.html" title="Represents a DTD notation (read-only). May declare format of an unparsed entity or formally declare the document's processing instruction targets. Inherits methods and properties from Node. Its nodeName is the notation name. Has no parent."><code>Notation</code></a></li>
+	<li><a href="TypeInfo.html" title="The obsolete TypeInfo interface was intended to be used to describe a DOM data type by keying its name to a namespace within the document's schema."><code>TypeInfo</code></a></li>
+	<li><a href="UserDataHandler.html" title="When associating user data with a key on a node, Node.setUserData() can also accept, in its third argument, a handler which will be called when the object is cloned, imported, deleted, renamed, or adopted. Per the specification, exceptions should not be thrown in a UserDataHandler. In both document.importNode() and Node.cloneNode(), although user data is not copied over, the handler will be called."><code>UserDataHandler</code></a></li>
+</ul>
+</div>
+
+<a class="dashAnchor" name="//apple_ref/Section/HTML%20interfaces"></a><h2 id="HTML_interfaces">HTML interfaces</h2>
+
+<p>A document containing HTML is described using the <a href="HTMLDocument.html" title="HTMLDocument is an abstract interface of the DOM which provides access to special properties and methods not present by default on a regular (XML) document. It adds functionality which relates specifically to HTML documents and elements."><code>HTMLDocument</code></a> interface. Note that the HTML specification also extends the <a href="Document.html" title="The Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree.HTMLElement"><code>Document</code></a> interface.</p>
+
+<p>An <code>HTMLDocument</code> object also gives access to various features of browsers like the tab&nbsp;or the window, in which a page is drawn using the <a href="Window.html" title="The window object represents a window containing a DOM document; the document property points to the DOM document loaded in that window."><code>Window</code></a> interface, the <a rel="nofollow" href="Window/style.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>Style</code></a> associated to it (usually CSS), the history of the browser relative to the context, <a href="Window/history.html" title="The Window.history read-only property returns a reference to the History object, which provides an interface for manipulating the browser session history (pages visited in the tab or frame that the current page is loaded in)."><code>History</code></a>. Eventually, <a href="Selection.html" title="A Selection object&nbsp;represents the range of text selected by the user or the current position of the caret. To obtain a Selection object for examination or&nbsp;modification, call window.getSelection()."><code>Selection</code></a> is done on the document.</p>
+
+<h3 id="HTML_element_interfaces">HTML element interfaces</h3>
+
+<div class="index">
+<ul>
+	<li><a href="HTMLAnchorElement.html" title="The HTMLAnchorElement interface represents hyperlink elements and provides special properties and methods (beyond those of the regular HTMLElement object interface that they inherit from) for manipulating the layout and presentation of such elements."><code>HTMLAnchorElement</code></a></li>
+	<li><a rel="nofollow" href="HTMLAppletElement.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>HTMLAppletElement</code></a></li>
+	<li><a href="HTMLAreaElement.html" title="The HTMLAreaElement interface provides special properties and methods (beyond those of the regular object HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of area elements."><code>HTMLAreaElement</code></a></li>
+	<li><a href="HTMLAudioElement.html" title="The HTMLAudioElement interface provides access to the properties of <audio> elements, as well as methods to manipulate them. It derives from the HTMLMediaElement interface."><code>HTMLAudioElement</code></a></li>
+	<li><a href="HTMLBaseElement.html" title="The HTMLBaseElement interface contains the base URI&nbsp;for a document. This object inherits all of the properties and methods as described in the HTMLElement interface."><code>HTMLBaseElement</code></a></li>
+	<li><a href="HTMLBodyElement.html" title="The HTMLBodyElement interface provides special properties (beyond those of the regular HTMLElement interface they also inherit) for manipulating body elements."><code>HTMLBodyElement</code></a></li>
+	<li><a href="HTMLBRElement.html" title="The HTMLBRElement interface represents a HTML line break element (<br>). It inherits from HTMLElement."><code>HTMLBRElement</code></a></li>
+	<li><a href="HTMLButtonElement.html" title="The HTMLButtonElement interface provides properties and methods (beyond the <button> object interface it also has available to them by inheritance) for manipulating the layout and presentation of button elements."><code>HTMLButtonElement</code></a></li>
+	<li><a href="HTMLCanvasElement.html" title="The HTMLCanvasElement interface provides properties and methods for manipulating the layout and presentation of canvas elements. The HTMLCanvasElement interface also inherits the properties and methods of the HTMLElement interface."><code>HTMLCanvasElement</code></a></li>
+	<li><a href="HTMLDataElement.html" title="The HTMLDataElement interface provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating <data> elements."><code>HTMLDataElement</code></a></li>
+	<li><a href="HTMLDataListElement.html" title="The HTMLDataListElement interface provides special properties (beyond the HTMLElement object interface it also has available to it by inheritance) to manipulate <datalist> elements and their content."><code>HTMLDataListElement</code></a></li>
+	<li><a href="HTMLDialogElement.html" title="The HTMLDialogElement interface provides methods to manipulate <dialog> elements. It inherits properties and methods from the HTMLElement interface."><code>HTMLDialogElement</code></a></li>
+	<li><a rel="nofollow" href="HTMLDirectoryElement.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>HTMLDirectoryElement</code></a></li>
+	<li><a href="HTMLDivElement.html" title="The HTMLDivElement interface provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating div elements."><code>HTMLDivElement</code></a></li>
+	<li><a href="HTMLDListElement.html" title="The HTMLDListElement interface provides special properties (beyond those of the regular HTMLElement interface it also has available to it by inheritance) for manipulating definition list elements."><code>HTMLDListElement</code></a></li>
+	<li><a href="HTMLElement.html" title="The HTMLElement interface represents any HTML element. Some elements directly implement this interface, others implement it via an interface that inherits it."><code>HTMLElement</code></a></li>
+	<li><a href="HTMLEmbedElement.html" title="The HTMLEmbedElement interface, which provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating <embed> elements."><code>HTMLEmbedElement</code></a></li>
+	<li><a href="HTMLFieldSetElement.html" title="The HTMLFieldSetElement interface has special properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of field-set elements."><code>HTMLFieldSetElement</code></a></li>
+	<li><a href="HTMLFontElement.html" title="Implements the document object model (DOM) representation of the font element. The HTML Font Element <font> defines the font size, font face and color of text."><code>HTMLFontElement</code></a></li>
+	<li><a href="HTMLFormElement.html" title="The HTMLFormElement interface represents a <form> element in the DOM; it allows access to and in some cases modification of aspects of the form, as well as access to its component elements."><code>HTMLFormElement</code></a></li>
+	<li><a rel="nofollow" href="HTMLFrameElement.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>HTMLFrameElement</code></a></li>
+	<li><a href="HTMLFrameSetElement.html" title="The HTMLFrameSetElement interface provides special properties (beyond those of the regular HTMLElement interface they also inherit) for manipulating <frameset> elements."><code>HTMLFrameSetElement</code></a></li>
+	<li><a href="HTMLHeadElement.html" title="The HTMLHeadElement interface contains the descriptive information, or metadata, for a document. This object inherits all of the properties and methods described in the HTMLElement interface."><code>HTMLHeadElement</code></a></li>
+	<li><a href="HTMLHeadingElement.html" title="The HTMLHeadingElement interface represents the different heading elements. It inherits methods and properties from the HTMLElement interface."><code>HTMLHeadingElement</code></a></li>
+	<li><a href="HTMLHtmlElement.html" title="The HTMLHtmlElement interface serves as the root node for a given HTML&nbsp;document.&nbsp; This object inherits the properties and methods described in the HTMLElement interface."><code>HTMLHtmlElement</code></a></li>
+	<li><a href="HTMLHRElement.html" title="The HTMLHRElement interface provides special properties (beyond those of the HTMLElement interface it also has available to it by inheritance) for manipulating <hr> elements."><code>HTMLHRElement</code></a></li>
+	<li><a href="HTMLIFrameElement.html" title="The HTMLIFrameElement interface provides special properties and methods (beyond those of the HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of inline frame elements."><code>HTMLIFrameElement</code></a></li>
+	<li><a href="HTMLImageElement.html" title="The HTMLImageElement interface provides special properties and methods &nbsp;for manipulating the layout and presentation of <img> elements."><code>HTMLImageElement</code></a></li>
+	<li><a href="HTMLInputElement.html" title="The HTMLInputElement interface provides special properties and methods for manipulating the layout and presentation of input elements."><code>HTMLInputElement</code></a></li>
+	<li><a href="HTMLKeygenElement.html" title="The <keygen> elements expose the HTMLKeygenElement interface, which provides special properties and methods (beyond the regular element object interface they also have available to them by inheritance) for manipulating the layout and presentation of keygen elements."><code>HTMLKeygenElement</code></a></li>
+	<li><a href="HTMLLabelElement.html" title="The HTMLLabelElement interface gives access to properties specific to <label> elements. It inherits methods and properties from the base HTMLElement interface."><code>HTMLLabelElement</code></a></li>
+	<li><a href="HTMLLegendElement.html" title="The HTMLLegendElement is an interface allowing to access properties of the <legend> elements. It inherits properties and methods from the HTMLElement interface."><code>HTMLLegendElement</code></a></li>
+	<li><a href="HTMLLIElement.html" title="The HTMLLIElement interface exposes specific properties and methods (beyond those defined by regular HTMLElement interface it also has available to it by inheritance) for manipulating list elements."><code>HTMLLIElement</code></a></li>
+	<li><a href="HTMLLinkElement.html" title="The HTMLLinkElement interface represents reference information for external resources and the relationship of those resources to a document and vice-versa. This object inherits all of the properties and methods of the HTMLElement interface."><code>HTMLLinkElement</code></a></li>
+	<li><a href="HTMLMapElement.html" title="The HTMLMapElement interface provides special properties and methods (beyond those of the regular object HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of map elements."><code>HTMLMapElement</code></a></li>
+	<li><a href="HTMLMediaElement.html" title="The HTMLMediaElement interface adds to HTMLElement the properties and methods needed to support basic media-related capabilities&nbsp;that are&nbsp;common to audio and video."><code>HTMLMediaElement</code></a></li>
+	<li><a rel="nofollow" href="HTMLMenuElement.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>HTMLMenuElement</code></a></li>
+	<li><a href="HTMLMetaElement.html" title="The HTMLMetaElement interface contains descriptive metadata about a document. It&nbsp;inherits all of the properties and methods described in the HTMLElement interface."><code>HTMLMetaElement</code></a></li>
+	<li><a href="HTMLMeterElement.html" title="The HTML <meter> elements expose the HTMLMeterElement interface, which provides special properties and methods (beyond the HTMLElement object interface they also have available to them by inheritance) for manipulating the layout and presentation of <meter> elements."><code>HTMLMeterElement</code></a></li>
+	<li><a href="HTMLModElement.html" title="The HTMLModElement interface provides special properties (beyond the regular methods and properties available through the HTMLElement interface they also have available to them by inheritance) for manipulating modification elements, that is <del> and <ins>."><code>HTMLModElement</code></a></li>
+	<li><a href="HTMLObjectElement.html" title="The HTMLObjectElement interface provides special properties and methods (beyond those on the HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of <object> element, representing external resources."><code>HTMLObjectElement</code></a></li>
+	<li><a href="HTMLOListElement.html" title="The HTMLOListElement interface provides special properties (beyond those defined on the regular HTMLElement interface it also has available to it by inheritance) for manipulating ordered list elements."><code>HTMLOListElement</code></a></li>
+	<li><a href="HTMLOptGroupElement.html" title="The HTMLOptGroupElement interface provides special properties and methods (beyond the regular HTMLElement object interface they also have available to them by inheritance) for manipulating the layout and presentation of <optgroup> elements."><code>HTMLOptGroupElement</code></a></li>
+	<li><a href="HTMLOptionElement.html" title="The HTMLOptionElement interface represents <option> elements and inherits all classes and methods of the HTMLElement interface."><code>HTMLOptionElement</code></a></li>
+	<li><a href="HTMLOutputElement.html" title="The HTMLOutputElement interface provides properties and methods (beyond those inherited from HTMLElement) for manipulating the layout and presentation of <output> elements."><code>HTMLOutputElement</code></a></li>
+	<li><a href="HTMLParagraphElement.html" title="The HTMLParagraphElement interface provides special properties (beyond those of the regular HTMLElement object interface it inherits) for manipulating <p> elements."><code>HTMLParagraphElement</code></a></li>
+	<li><a href="HTMLParamElement.html" title="The HTMLParamElement interface provides special properties (beyond those of the regular HTMLElement object interface it inherits) for manipulating <param> elements, representing a pair of a key and a value that acts as a parameter for an <object> element."><code>HTMLParamElement</code></a></li>
+	<li><a href="HTMLPreElement.html" title="The HTMLPreElement interface expose specific properties and methods (beyond those defined by regular HTMLElement interface it also has available to it by inheritance) for manipulating block of preformatted text."><code>HTMLPreElement</code></a></li>
+	<li><a href="HTMLProgressElement.html" title="The HTMLProgressElement interface provides special properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of <progress> elements."><code>HTMLProgressElement</code></a></li>
+	<li><a href="HTMLQuoteElement.html" title="The HTMLQuoteElement interface provides special properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating quoting elements, like <blockquote> and <q>, but not the <cite> element."><code>HTMLQuoteElement</code></a></li>
+	<li><a href="HTMLScriptElement.html" title="HTML <script> elements expose the HTMLScriptElement interface, which provides special properties and methods for manipulating the behavior and execution of <script> elements (beyond the inherited HTMLElement interface)."><code>HTMLScriptElement</code></a></li>
+	<li><a href="HTMLSelectElement.html" title="The HTMLSelectElement interface represents a <select> HTML Element. These elements also share all of the properties and methods of other HTML elements via the HTMLElement interface."><code>HTMLSelectElement</code></a></li>
+	<li><a href="HTMLSourceElement.html" title="The HTMLSourceElement interface provides special properties (beyond the regular HTMLElement object interface it also has available to it by inheritance) for manipulating <source> elements."><code>HTMLSourceElement</code></a></li>
+	<li><a href="HTMLSpanElement.html" title="The HTMLSpanElement interface represents a <span> element and derives from the HTMLElement interface, but without implementing any additional properties or methods."><code>HTMLSpanElement</code></a></li>
+	<li><a href="HTMLStyleElement.html" title="The HTMLStyleElement interface represents a <style> element. It inherits properties and methods from its parent, HTMLElement, and from LinkStyle."><code>HTMLStyleElement</code></a></li>
+	<li><a href="HTMLTableElement.html" title="The HTMLTableElement interface provides special properties and methods (beyond the regular HTMLElement object interface it also has available to it by inheritance) for manipulating the layout and presentation of tables in an HTML document."><code>HTMLTableElement</code></a></li>
+	<li><a href="HTMLTableCaptionElement.html" title="The HTMLTableCaptionElement interface special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating table caption elements."><code>HTMLTableCaptionElement</code></a></li>
+	<li><a href="HTMLTableCellElement.html" title="The HTMLTableCellElement interface provides special properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of table cells, either header or data cells, in an HTML document."><code>HTMLTableCellElement</code></a></li>
+	<li><a href="HTMLTableDataCellElement.html" title="The HTMLTableDataCellElement interface provides special properties and methods (beyond the regular HTMLTableCellElement and HTMLElement interfaces it also has available to it by inheritance) for manipulating the layout and presentation of table data cells in an HTML document."><code>HTMLTableDataCellElement</code></a></li>
+	<li><a href="HTMLTableHeaderCellElement.html" title="The HTMLTableHeaderCellElement interface provides special properties and methods (beyond the regular HTMLTableCellElement and HTMLElement interfaces it also has available to it by inheritance) for manipulating the layout and presentation of table header cells in an HTML document."><code>HTMLTableHeaderCellElement</code></a></li>
+	<li><a href="HTMLTableColElement.html" title="The HTMLTableColElement interface provides special properties (beyond the HTMLElement interface it also has available to it inheritance) for manipulating single or grouped table column elements."><code>HTMLTableColElement</code></a></li>
+	<li><a href="HTMLTableRowElement.html" title="The HTMLTableRowElement interface provides special properties and methods (beyond the HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of rows in an HTML table."><code>HTMLTableRowElement</code></a></li>
+	<li><a href="HTMLTableSectionElement.html" title="The HTMLTableSectionElement interface provides special properties and methods (beyond the HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of sections, that is headers, footers and bodies, in an HTML table."><code>HTMLTableSectionElement</code></a></li>
+	<li><a href="HTMLTextAreaElement.html" title="The HTMLTextAreaElement interface provides special properties and methods for manipulating the layout and presentation of <textarea> elements."><code>HTMLTextAreaElement</code></a></li>
+	<li><a href="HTMLTimeElement.html" title="The HTMLTimeElement interface provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating <time> elements."><code>HTMLTimeElement</code></a></li>
+	<li><a href="HTMLTitleElement.html" title="The HTMLTitleElement interface contains the title for a document. This element inherits all of the properties and methods of the HTMLElement interface."><code>HTMLTitleElement</code></a></li>
+	<li><a href="HTMLTrackElement.html" title="The HTMLTrackElement"><code>HTMLTrackElement</code></a></li>
+	<li><a href="HTMLUListElement.html" title="The HTMLUListElement interface provides special properties (beyond those defined on the regular HTMLElement interface it also has available to it by inheritance) for manipulating unordered list elements."><code>HTMLUListElement</code></a></li>
+	<li><a href="HTMLUnknownElement.html" title="The HTMLUnknownElement interface represents an invalid HTML element and derives from the HTMLElement interface, but without implementing any additional properties or methods."><code>HTMLUnknownElement</code></a></li>
+	<li><a href="HTMLVideoElement.html" title="The HTMLVideoElement interface provides special properties and methods for manipulating video objects. It also inherits properties and methods of HTMLMediaElement and HTMLElement."><code>HTMLVideoElement</code></a></li>
+</ul>
+</div>
+
+<h3 id="Other_interfaces">Other interfaces</h3>
+
+<div class="index">
+<ul>
+	<li><a href="CanvasRenderingContext2D.html" title="To get an object of this interface, call getContext() on a <canvas>&nbsp;element, supplying &quot;2d&quot; as the argument:"><code>CanvasRenderingContext2D</code></a></li>
+	<li><a href="CanvasGradient.html" title="The CanvasGradient interface represents an opaque object describing a gradient. It is returned by the methods CanvasRenderingContext2D.createLinearGradient() or CanvasRenderingContext2D.createRadialGradient()."><code>CanvasGradient</code></a></li>
+	<li><a href="CanvasPattern.html" title="The CanvasPattern interface represents an opaque object describing a pattern, based on an image, a canvas, or a video, created by the CanvasRenderingContext2D.createPattern() method."><code>CanvasPattern</code></a></li>
+	<li><a href="TextMetrics.html" title="The TextMetrics interface represents the dimension of a text in the canvas, as created by the CanvasRenderingContext2D.measureText() method."><code>TextMetrics</code></a></li>
+	<li><a href="ImageData.html" title="The ImageData interface represents the underlying pixel data of an area of a <canvas> element. It is created using the ImageData() constructor or creator methods on the CanvasRenderingContext2D object associated with a canvas: createImageData() and getImageData(). It can also be used to set a part of the canvas by using putImageData()."><code>ImageData</code></a></li>
+	<li><a href="../JavaScript/Reference/Global_Objects/Uint8ClampedArray.html" title="The Uint8ClampedArray typed array represents an array of 8-bit unsigned integers clamped to 0-255. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation)."><code>CanvasPixelArray</code></a></li>
+	<li><a href="NotifyAudioAvailableEvent.html" title="The non-standard, obsolete, NotifyAudioAvailableEvent interface defines the event sent to audio elements&nbsp; when the audio buffer is full."><code>NotifyAudioAvailableEvent</code></a></li>
+	<li><a rel="nofollow" href="HTMLAllCollection.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>HTMLAllCollection</code></a></li>
+	<li><a href="HTMLFormControlsCollection.html" title="The HTMLFormControlsCollection interface represents a collection of HTML form control elements. "><code>HTMLFormControlsCollection</code></a></li>
+	<li><a href="HTMLOptionsCollection.html" title="HTMLOptionsCollection is an interface representing a collection of HTML option elements (in document order) and offers methods and properties for traversing the list as well as optionally altering its items. This type is returned solely by the &quot;options&quot; property of select."><code>HTMLOptionsCollection</code></a></li>
+	<li><a rel="nofollow" href="HTMLPropertiesCollection.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>HTMLPropertiesCollection</code></a></li>
+	<li><a href="DOMStringMap.html" title="Used by the dataset&nbsp;HTML&nbsp;attribute to represent data for custom attributes added to elements."><code>DOMStringMap</code></a></li>
+	<li><a href="RadioNodeList.html" title="The RadioNodeList interface represents a collection of elements in a <form> or a <fieldset> element."><code>RadioNodeList</code></a></li>
+	<li><a href="MediaError.html" title="The MediaError interface represents an error which occurred while handling media in an HTML media element based on HTMLMediaElement, such as <audio> or <video>."><code>MediaError</code></a></li>
+</ul>
+</div>
+
+<h3 id="Obsolete_HTML_interfaces">Obsolete HTML interfaces <span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></h3>
+
+<div class="index">
+<ul>
+	<li><a href="HTMLBaseFontElement.html" title="The HTMLBaseFontElement interface provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating <basefont> elements."><code>HTMLBaseFontElement</code></a></li>
+	<li><a href="HTMLIsIndexElement.html" title="The HTMLIsIndexElement interface provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating <isindex> elements."><code>HTMLIsIndexElement</code></a></li>
+</ul>
+</div>
+
+<a class="dashAnchor" name="//apple_ref/Section/SVG%20interfaces"></a><h2 id="SVG_interfaces">SVG interfaces</h2>
+
+<h3 id="SVG_element_interfaces">SVG element interfaces</h3>
+
+<div class="index">
+<ul>
+	<li><a href="SVGAElement.html" title="The SVGAElement interface provides access to the properties of <a> element, as well as methods to manipulate them."><code>SVGAElement</code></a></li>
+	<li><a href="SVGAltGlyphElement.html" title="The SVGAltGlyphElement interface represents an <altglyph> element. This interface makes it possible to implement more sophisticated and particular glyph characters. For some textal representations as: ligatures (e.g. æ, ß, etc ), special-purpose fonts (e.g. musical symbols) or even alternate glyphs such as Asian text strings it is required that a different set of glyphs be used than the normal given character data."><code>SVGAltGlyphElement</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a href="SVGAltGlyphDefElement.html" title="The SVGAltGlyphDefElement interface corresponds to the <altGlyphDef> element."><code>SVGAltGlyphDefElement</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a href="SVGAltGlyphItemElement.html" title="The SVGAltGlyphItemElement interface corresponds to the <altGlyphItem> element."><code>SVGAltGlyphItemElement</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a href="SVGAnimationElement.html" title="The SVGAnimationElement interface is the base interface for all of the animation element interfaces: SVGAnimateElement, SVGSetElement, SVGAnimateColorElement, SVGAnimateMotionElement and SVGAnimateTransformElement."><code>SVGAnimationElement</code></a></li>
+	<li><a href="SVGAnimateElement.html" title="The SVGAnimateElement interface corresponds to the <animate> element."><code>SVGAnimateElement</code></a></li>
+	<li><a href="SVGAnimateColorElement.html" title="The SVGAnimateColorElement interface corresponds to the <animateColor> element."><code>SVGAnimateColorElement</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a href="SVGAnimateMotionElement.html" title="The SVGAnimateMotionElement interface corresponds to the <animateMotion> element."><code>SVGAnimateMotionElement</code></a></li>
+	<li><a href="SVGAnimateTransformElement.html" title="The SVGAnimateTransformElement interface corresponds to the <animateTransform> element."><code>SVGAnimateTransformElement</code></a></li>
+	<li><a href="SVGCircleElement.html" title="The SVGCircleElement interface is an interface for the <circle> element. The circle element is defined by the cx and cy attributes that denote the coordinates of the centre of the circle."><code>SVGCircleElement</code></a></li>
+	<li><a href="SVGClipPathElement.html" title="The SVGClipPathElement interface provides access to the properties of <clipPath> elements, as well as methods to manipulate them."><code>SVGClipPathElement</code></a></li>
+	<li><a href="SVGColorProfileElement.html" title="The SVGColorProfileElement interface corresponds to the <color-profile> element."><code>SVGColorProfileElement</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a href="SVGComponentTransferFunctionElement.html" title="The SVGComponentTransferFunctionElement interface defines a base interface used by the component transfer function interfaces."><code>SVGComponentTransferFunctionElement</code></a></li>
+	<li><a href="SVGCursorElement.html" title="The SVGCursorElement interface provides access to the properties of <cursor> elements, as well as methods to manipulate them."><code>SVGCursorElement</code></a></li>
+	<li><a href="SVGDefsElement.html" title="The SVGDefsElement interface corresponds to the <defs> element."><code>SVGDefsElement</code></a></li>
+	<li><a href="SVGDescElement.html" title="The SVGDescElement interface corresponds to the <desc> element."><code>SVGDescElement</code></a></li>
+	<li><a href="SVGElement.html" title="All of the SVG DOM interfaces that correspond directly to elements in the SVG language derive from the SVGElement interface."><code>SVGElement</code></a></li>
+	<li><a href="SVGEllipseElement.html" title="The SVGEllipseElement interface provides access to the properties of <ellipse> elements."><code>SVGEllipseElement</code></a></li>
+	<li><a href="SVGFEBlendElement.html" title="The SVGFEBlendElement interface corresponds to the <feBlend> element."><code>SVGFEBlendElement</code></a></li>
+	<li><a href="SVGFEColorMatrixElement.html" title="The SVGFEColorMatrixElement interface corresponds to the <feColorMatrix> element."><code>SVGFEColorMatrixElement</code></a></li>
+	<li><a href="SVGFEComponentTransferElement.html" title="The SVGFEComponentTransferElement interface corresponds to the <feComponentTransfer> element."><code>SVGFEComponentTransferElement</code></a></li>
+	<li><a href="SVGFECompositeElement.html" title="The SVGFECompositeElement interface corresponds to the <feComposite> element."><code>SVGFECompositeElement</code></a></li>
+	<li><a href="SVGFEConvolveMatrixElement.html" title="The SVGFEConvolveMatrixElement interface corresponds to the <feConvolveMatrix> element."><code>SVGFEConvolveMatrixElement</code></a></li>
+	<li><a href="SVGFEDiffuseLightingElement.html" title="The SVGFEDiffuseLightingElement interface corresponds to the <feDiffuseLighting> element."><code>SVGFEDiffuseLightingElement</code></a></li>
+	<li><a href="SVGFEDisplacementMapElement.html" title="The SVGFEDisplacementMapElement interface corresponds to the <feDisplacementMap> element."><code>SVGFEDisplacementMapElement</code></a></li>
+	<li><a href="SVGFEDistantLightElement.html" title="The SVGFEDistantLightElement interface corresponds to the <feDistantLight> element."><code>SVGFEDistantLightElement</code></a></li>
+	<li><a href="SVGFEDropShadowElement.html" title="The SVGFEDropShadowElement interface corresponds to the <feDropShadow> element."><code>SVGFEDropShadowElement</code></a></li>
+	<li><a href="SVGFEFloodElement.html" title="The SVGFEFloodElement interface corresponds to the <feFlood> element."><code>SVGFEFloodElement</code></a></li>
+	<li><a href="SVGFEFuncAElement.html" title="The SVGFEFuncAElement interface corresponds to the <feFuncA> element."><code>SVGFEFuncAElement</code></a></li>
+	<li><a href="SVGFEFuncBElement.html" title="The SVGFEFuncBElement interface corresponds to the <feFuncB> element."><code>SVGFEFuncBElement</code></a></li>
+	<li><a href="SVGFEFuncGElement.html" title="The SVGFEFuncGElement interface corresponds to the <feFuncG> element."><code>SVGFEFuncGElement</code></a></li>
+	<li><a href="SVGFEFuncRElement.html" title="The SVGFEFuncRElement interface corresponds to the <feFuncR> element."><code>SVGFEFuncRElement</code></a></li>
+	<li><a href="SVGFEGaussianBlurElement.html" title="The SVGFEGaussianBlurElement interface corresponds to the <feGaussianBlur> element."><code>SVGFEGaussianBlurElement</code></a></li>
+	<li><a href="SVGFEImageElement.html" title="The SVGFEImageElement interface corresponds to the <feImage> element."><code>SVGFEImageElement</code></a></li>
+	<li><a href="SVGFEMergeElement.html" title="The SVGFEMergeElement interface corresponds to the <feMerge> element."><code>SVGFEMergeElement</code></a></li>
+	<li><a href="SVGFEMergeNodeElement.html" title="The SVGFEMergeNodeElement interface corresponds to the <feMergeNode> element."><code>SVGFEMergeNodeElement</code></a></li>
+	<li><a href="SVGFEMorphologyElement.html" title="The SVGFEMorphologyElement interface corresponds to the <feMorphology> element."><code>SVGFEMorphologyElement</code></a></li>
+	<li><a href="SVGFEOffsetElement.html" title="The SVGFEOffsetElement interface corresponds to the <feOffset> element."><code>SVGFEOffsetElement</code></a></li>
+	<li><a href="SVGFEPointLightElement.html" title="The SVGFEPointLightElement interface corresponds to the <fePointLight> element."><code>SVGFEPointLightElement</code></a></li>
+	<li><a href="SVGFESpecularLightingElement.html" title="The SVGFESpecularLightingElement interface corresponds to the <feSpecularLighting> element."><code>SVGFESpecularLightingElement</code></a></li>
+	<li><a href="SVGFESpotLightElement.html" title="The SVGFESpotLightElement interface corresponds to the <feSpotLight> element."><code>SVGFESpotLightElement</code></a></li>
+	<li><a href="SVGFETileElement.html" title="The SVGFETileElement interface corresponds to the <feTile> element."><code>SVGFETileElement</code></a></li>
+	<li><a href="SVGFETurbulenceElement.html" title="The SVGFETurbulenceElement interface corresponds to the <feTurbulence> element."><code>SVGFETurbulenceElement</code></a></li>
+	<li><a href="SVGFilterElement.html" title="The SVGFilterElement interface provides access to the properties of <filter> elements, as well as methods to manipulate them."><code>SVGFilterElement</code></a></li>
+	<li><a href="SVGFilterPrimitiveStandardAttributes.html" title="The SVGFilterPrimitiveStandardAttributes interface defines the set of DOM attributes that are common across the filter primitive interfaces."><code>SVGFilterPrimitiveStandardAttributes</code></a></li>
+	<li><a href="SVGFontElement.html" title="The SVGFontElement interface corresponds to the <font> elements."><code>SVGFontElement</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a href="SVGFontFaceElement.html" title="The SVGFontFaceElement interface corresponds to the <font-face> elements."><code>SVGFontFaceElement</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a href="SVGFontFaceFormatElement.html" title="The SVGFontFaceFormatElement interface corresponds to the <font-face-format> elements."><code>SVGFontFaceFormatElement</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a href="SVGFontFaceNameElement.html" title="The SVGFontFaceNameElement interface corresponds to the <font-face-name> elements."><code>SVGFontFaceNameElement</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a href="SVGFontFaceSrcElement.html" title="The SVGFontFaceSrcElement interface corresponds to the <font-face-src> elements."><code>SVGFontFaceSrcElement</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a href="SVGFontFaceUriElement.html" title="The SVGFontFaceUriElement interface corresponds to the <font-face-uri> elements."><code>SVGFontFaceUriElement</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a href="SVGForeignObjectElement.html" title="The SVGForeignObjectElement interface provides access to the properties of <foreignObject> elements, as well as methods to manipulate them."><code>SVGForeignObjectElement</code></a></li>
+	<li><a href="SVGGElement.html" title="The SVGGElement interface corresponds to the <g> element."><code>SVGGElement</code></a></li>
+	<li><a href="SVGGeometryElement.html" title="The SVGGeometryElement interface represents SVG elements whose rendering is defined by geometry with an equivalent path, and which can be filled and stroked. This includes paths and the basic shapes."><code>SVGGeometryElement</code></a></li>
+	<li><a href="SVGGlyphElement.html" title="The SVGGlyphElement interface corresponds to the <glyph> element."><code>SVGGlyphElement</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a href="SVGGlyphRefElement.html" title="The SVGGlyphRefElement interface corresponds to the <glyphRef> elements."><code>SVGGlyphRefElement</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a href="SVGGradientElement.html" title="The SVGGradient interface is a base interface used by SVGLinearGradientElement and SVGRadialGradientElement."><code>SVGGradientElement</code></a></li>
+	<li><a href="SVGGraphicsElement.html" title="The SVGGraphicsElement interface represents SVG elements whose primary purpose is to directly render graphics into a group."><code>SVGGraphicsElement</code></a></li>
+	<li><a rel="nofollow" href="SVGHatchElement.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGHatchElement</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></li>
+	<li><a rel="nofollow" href="SVGHatchpathElement.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGHatchpathElement</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></li>
+	<li><a href="SVGHKernElement.html" title="The SVGHKernElement interface corresponds to the <hkern> elements."><code>SVGHKernElement</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a href="SVGImageElement.html" title="The SVGImageElement interface corresponds to the <image> element."><code>SVGImageElement</code></a></li>
+	<li><a href="SVGLinearGradientElement.html" title="The SVGLinearGradientElement interface corresponds to the <linearGradient> element."><code>SVGLinearGradientElement</code></a></li>
+	<li><a href="SVGLineElement.html" title="The SVGLineElement interface provides access to the properties of <line> elements, as well as methods to manipulate them."><code>SVGLineElement</code></a></li>
+	<li><a rel="nofollow" href="SVGMarkerElement.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGMarkerElement</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></li>
+	<li><a href="SVGMaskElement.html" title="The SVGMaskElement interface provides access to the properties of <mask> elements, as well as methods to manipulate them."><code>SVGMaskElement</code></a></li>
+	<li><a href="SVGMeshElement.html" title="The SVGMeshElement interface provides access to the properties of <mesh> elements."><code>SVGMeshElement</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></li>
+	<li><a rel="nofollow" href="SVGMeshGradientElement.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGMeshGradientElement</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></li>
+	<li><a rel="nofollow" href="SVGMeshpatchElement.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGMeshpatchElement</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></li>
+	<li><a rel="nofollow" href="SVGMeshrowElement.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGMeshrowElement</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></li>
+	<li><a href="SVGMetadataElement.html" title="The SVGMetadataElement interface corresponds to the <metadata> element."><code>SVGMetadataElement</code></a></li>
+	<li><a href="SVGMissingGlyphElement.html" title="The SVGMissingGlyphElement interface corresponds to the <missing-glyph> elements."><code>SVGMissingGlyphElement</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a href="SVGMPathElement.html" title="The SVGMPathElement interface corresponds to the <mpath> element."><code>SVGMPathElement</code></a></li>
+	<li><a href="SVGPathElement.html" title="The SVGPathElement interface corresponds to the <path> element."><code>SVGPathElement</code></a></li>
+	<li><a href="SVGPatternElement.html" title="The SVGPatternElement interface corresponds to the <pattern> element."><code>SVGPatternElement</code></a></li>
+	<li><a href="SVGPolylineElement.html" title="The SVGPolylineElement interface provides access to the properties of <polyline> elements, as well as methods to manipulate them."><code>SVGPolylineElement</code></a></li>
+	<li><a href="SVGPolygonElement.html" title="The SVGPolygonElement interface provides access to the properties of <polygon> elements, as well as methods to manipulate them."><code>SVGPolygonElement</code></a></li>
+	<li><a href="SVGRadialGradientElement.html" title="The SVGRadialGradientElement interface corresponds to the <RadialGradient> element."><code>SVGRadialGradientElement</code></a></li>
+	<li><a href="SVGRectElement.html" title="The SVGRectElement interface provides access to the properties of <rect> elements, as well as methods to manipulate them."><code>SVGRectElement</code></a></li>
+	<li><a href="SVGScriptElement.html" title="The SVGScriptElement interface corresponds to the SVG <script> element."><code>SVGScriptElement</code></a></li>
+	<li><a href="SVGSetElement.html" title="The SVGSetElement interface corresponds to the <set> element."><code>SVGSetElement</code></a></li>
+	<li><a href="SVGSolidcolorElement.html" title="The SVGSolidcolorElement interface corresponds to the <solidcolor> element."><code>SVGSolidcolorElement</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></li>
+	<li><a href="SVGStopElement.html" title="The SVGStopElement interface corresponds to the <stop> element."><code>SVGStopElement</code></a></li>
+	<li><a href="SVGStyleElement.html" title="The SVGStyleElement interface corresponds to the SVG <style> element."><code>SVGStyleElement</code></a></li>
+	<li><a href="SVGSVGElement.html" title="The SVGSVGElement interface provides access to the properties of <svg> elements, as well as methods to manipulate them. This interface contains also various miscellaneous commonly-used utility methods, such as matrix operations and the ability to control the time of redraw on visual rendering devices."><code>SVGSVGElement</code></a></li>
+	<li><a href="SVGSwitchElement.html" title="The SVGSwitchElement interface corresponds to the <switch> element."><code>SVGSwitchElement</code></a></li>
+	<li><a href="SVGSymbolElement.html" title="The SVGSymbolElement interface corresponds to the <symbol> element."><code>SVGSymbolElement</code></a></li>
+	<li><a href="SVGTextContentElement.html" title="The SVGTextContentElement interface is implemented by elements that support rendering child text content. It is inherited by various text-related interfaces, such as SVGTextElement, SVGTSpanElement, SVGTRefElement, SVGAltGlyphElement and SVGTextPathElement."><code>SVGTextContentElement</code></a></li>
+	<li><a href="SVGTextElement.html" title="The SVGTextElement interface corresponds to the <text> elements."><code>SVGTextElement</code></a></li>
+	<li><a href="SVGTextPathElement.html" title="The SVGTextPathElement interface corresponds to the <textPath> element."><code>SVGTextPathElement</code></a></li>
+	<li><a href="SVGTextPositioningElement.html" title="The SVGTextPositioningElement interface is implemented by elements that support attributes that position individual text glyphs. It is inherited by SVGTextElement, SVGTSpanElement, SVGTRefElement and SVGAltGlyphElement."><code>SVGTextPositioningElement</code></a></li>
+	<li><a href="SVGTitleElement.html" title="The SVGTitleElement interface corresponds to the <title> element."><code>SVGTitleElement</code></a></li>
+	<li><a href="SVGTRefElement.html" title="The SVGTRefElement interface corresponds to the <tref> elements."><code>SVGTRefElement</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a href="SVGTSpanElement.html" title="The SVGTSpanElement interface represents a <tspan> element."><code>SVGTSpanElement</code></a></li>
+	<li><a href="SVGUseElement.html" title="The SVGUseElement interface corresponds to the <use> element."><code>SVGUseElement</code></a></li>
+	<li><a rel="nofollow" href="SVGUnknownElement.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGUnknownElement</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></li>
+	<li><a href="SVGViewElement.html" title="The SVGViewElement interface provides access to the properties of <view> elements, as well as methods to manipulate them."><code>SVGViewElement</code></a></li>
+	<li><a href="SVGVKernElement.html" title="The SVGVKernElement interface corresponds to the <vkern> elements."><code>SVGVKernElement</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+</ul>
+</div>
+
+<h3 id="SVG_data_type_interfaces">SVG data type interfaces</h3>
+
+<p>Here are the DOM API for data types used in the definitions of SVG properties and attributes.</p>
+
+<div class="note">
+<p><strong>Note:</strong> Starting in <span title="(Firefox 5.0 / Thunderbird 5.0 / SeaMonkey 2.2)">Gecko&nbsp;5.0</span>, the following SVG-related DOM interfaces representing lists of objects are now indexable and can be accessed ; in addition, they have a length property indicating the number of items in the lists: <a href="SVGLengthList.html" title="The SVGLengthList defines a list of SVGLength objects."><code>SVGLengthList</code></a>, <a href="SVGNumberList.html" title="The SVGNumberList defines a list of SVGNumber objects."><code>SVGNumberList</code></a>, <a rel="nofollow" href="SVGPathSegList.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGPathSegList</code></a>, and <a rel="nofollow" href="SVGPointList.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGPointList</code></a>.</p>
+</div>
+
+<h4 id="Static_type">Static type</h4>
+
+<div class="index">
+<ul>
+	<li><a href="SVGAngle.html" title="The SVGAngle interface is used to represent a value that can be an <angle> or <number> value. An SVGAngle reflected through the animVal attribute is always read only."><code>SVGAngle</code></a></li>
+	<li><a rel="nofollow" href="SVGColor.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGColor</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a rel="nofollow" href="SVGICCColor.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGICCColor</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a rel="nofollow" href="SVGElementInstance.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGElementInstance</code></a></li>
+	<li><a rel="nofollow" href="SVGElementInstanceList.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGElementInstanceList</code></a></li>
+	<li><a href="SVGLength.html" title="The SVGLength interface correspond to the <length> basic data type."><code>SVGLength</code></a></li>
+	<li><a href="SVGLengthList.html" title="The SVGLengthList defines a list of SVGLength objects."><code>SVGLengthList</code></a></li>
+	<li><a href="SVGMatrix.html" title="Many of SVG's graphics operations utilize 2x3 matrices of the form:"><code>SVGMatrix</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a rel="nofollow" href="SVGNameList.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGNameList</code></a></li>
+	<li><a href="SVGNumber.html" title="The SVGNumber interface corresponds to the <number> basic data type."><code>SVGNumber</code></a></li>
+	<li><a href="SVGNumberList.html" title="The SVGNumberList defines a list of SVGNumber objects."><code>SVGNumberList</code></a></li>
+	<li><a rel="nofollow" href="SVGPaint.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGPaint</code></a></li>
+	<li><a rel="nofollow" href="SVGPathSeg.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGPathSeg</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a rel="nofollow" href="SVGPathSegClosePath.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGPathSegClosePath</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a rel="nofollow" href="SVGPathSegMovetoAbs.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGPathSegMovetoAbs</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a rel="nofollow" href="SVGPathSegMovetoRel.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGPathSegMovetoRel</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a rel="nofollow" href="SVGPathSegLinetoAbs.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGPathSegLinetoAbs</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a rel="nofollow" href="SVGPathSegLinetoRel.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGPathSegLinetoRel</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a rel="nofollow" href="SVGPathSegCurvetoCubicAbs.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGPathSegCurvetoCubicAbs</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a rel="nofollow" href="SVGPathSegCurvetoCubicRel.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGPathSegCurvetoCubicRel</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a rel="nofollow" href="SVGPathSegCurvetoQuadraticAbs.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGPathSegCurvetoQuadraticAbs</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a rel="nofollow" href="SVGPathSegCurvetoQuadraticRel.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGPathSegCurvetoQuadraticRel</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a rel="nofollow" href="SVGPathSegArcAbs.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGPathSegArcAbs</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a rel="nofollow" href="SVGPathSegArcRel.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGPathSegArcRel</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a rel="nofollow" href="SVGPathSegLinetoHorizontalAbs.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGPathSegLinetoHorizontalAbs</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a rel="nofollow" href="SVGPathSegLinetoHorizontalRel.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGPathSegLinetoHorizontalRel</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a rel="nofollow" href="SVGPathSegLinetoVerticalAbs.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGPathSegLinetoVerticalAbs</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a rel="nofollow" href="SVGPathSegLinetoVerticalRel.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGPathSegLinetoVerticalRel</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a rel="nofollow" href="SVGPathSegCurvetoCubicSmoothAbs.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGPathSegCurvetoCubicSmoothAbs</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a rel="nofollow" href="SVGPathSegCurvetoCubicSmoothRel.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGPathSegCurvetoCubicSmoothRel</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a rel="nofollow" href="SVGPathSegCurvetoQuadraticSmoothAbs.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGPathSegCurvetoQuadraticSmoothAbs</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a rel="nofollow" href="SVGPathSegCurvetoQuadraticSmoothRel.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGPathSegCurvetoQuadraticSmoothRel</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a rel="nofollow" href="SVGPathSegList.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGPathSegList</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a href="SVGPoint.html" title="An SVGPoint represents a 2D or 3D point in the SVG coordinate system."><code>SVGPoint</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a rel="nofollow" href="SVGPointList.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGPointList</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a href="SVGPreserveAspectRatio.html" title="The SVGPreserveAspectRatio interface corresponds to the preserveAspectRatio attribute, which is available for some of SVG's elements."><code>SVGPreserveAspectRatio</code></a></li>
+	<li><a href="SVGRect.html" title="The SVGRect represents a rectangle. Rectangles consist&nbsp;of an x and y coordinate pair identifying a minimum x value, a minimum y value, and a width and height, which are constrained to be non-negative."><code>SVGRect</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a href="SVGStringList.html" title="The SVGStringList defines a list of DOMString objects."><code>SVGStringList</code></a></li>
+	<li><a href="SVGTransform.html" title="SVGTransform is the interface for one of the component transformations within an SVGTransformList; thus, an SVGTransform object corresponds to a single component (e.g., scale(…) or matrix(…)) within a transform attribute."><code>SVGTransform</code></a></li>
+	<li><a href="SVGTransformList.html" title="The SVGTransformList defines a list of SVGTransform objects."><code>SVGTransformList</code></a></li>
+</ul>
+</div>
+
+<h4 id="Animated_type">Animated type</h4>
+
+<div class="index">
+<ul>
+	<li><a href="SVGAnimatedAngle.html" title="The SVGAnimatedAngle interface is used for attributes of basic type <angle> which can be animated."><code>SVGAnimatedAngle</code></a></li>
+	<li><a href="SVGAnimatedBoolean.html" title="The SVGAnimatedBoolean interface is used for attributes of type boolean which can be animated."><code>SVGAnimatedBoolean</code></a></li>
+	<li><a href="SVGAnimatedEnumeration.html" title="The SVGAnimatedEnumeration interface is used for attributes whose value must be a constant from a particular enumeration and which can be animated."><code>SVGAnimatedEnumeration</code></a></li>
+	<li><a href="SVGAnimatedInteger.html" title="The SVGAnimatedInteger interface is used for attributes of basic type <integer> which can be animated."><code>SVGAnimatedInteger</code></a></li>
+	<li><a href="SVGAnimatedLength.html" title="The SVGAnimatedLength interface is used for attributes of basic type <length> which can be animated."><code>SVGAnimatedLength</code></a></li>
+	<li><a href="SVGAnimatedLengthList.html" title="The SVGAnimatedLengthList interface is used for attributes of type SVGLengthList which can be animated."><code>SVGAnimatedLengthList</code></a></li>
+	<li><a href="SVGAnimatedNumber.html" title="The SVGAnimatedNumber interface is used for attributes of basic type <Number> which can be animated."><code>SVGAnimatedNumber</code></a></li>
+	<li><a href="SVGAnimatedNumberList.html" title="The SVGAnimatedNumber interface is used for attributes which take a list of numbers and which can be animated."><code>SVGAnimatedNumberList</code></a></li>
+	<li><a rel="nofollow" href="SVGAnimatedPathData.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGAnimatedPathData</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a href="SVGAnimatedPoints.html" title="The SVGAnimatedPoints interface supports elements which have a points attribute which holds a list of coordinate values and which support the ability to animate that attribute."><code>SVGAnimatedPoints</code></a></li>
+	<li><a href="SVGAnimatedPreserveAspectRatio.html" title="The SVGAnimatedPreserveAspectRatio interface is used for attributes of type SVGPreserveAspectRatio which can be animated."><code>SVGAnimatedPreserveAspectRatio</code></a></li>
+	<li><a href="SVGAnimatedRect.html" title="The SVGAnimatedRect interface is used for attributes of basic SVGRect which can be animated."><code>SVGAnimatedRect</code></a></li>
+	<li><a href="SVGAnimatedString.html" title="The SVGAnimatedString&nbsp;interface represents string attributes which can be animated from each SVG declaration. You need to create SVG attribute before doing anything else, everything should be declared&nbsp;inside this."><code>SVGAnimatedString</code></a></li>
+	<li><a href="SVGAnimatedTransformList.html" title="The SVGAnimatedTransformList interface is used for attributes which take a list of numbers and which can be animated."><code>SVGAnimatedTransformList</code></a></li>
+</ul>
+</div>
+
+<h3 id="SMIL_related_interfaces">SMIL related interfaces</h3>
+
+<div class="index">
+<ul>
+	<li><a rel="nofollow" href="ElementTimeControl.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>ElementTimeControl</code></a></li>
+	<li><a href="TimeEvent.html" title="Extends Event."><code>TimeEvent</code></a></li>
+</ul>
+</div>
+
+<h3 id="Other_SVG_interfaces">Other SVG interfaces</h3>
+
+<div class="index">
+<ul>
+	<li><a rel="nofollow" href="GetSVGDocument.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>GetSVGDocument</code></a></li>
+	<li><a rel="nofollow" href="ShadowAnimation.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>ShadowAnimation</code></a></li>
+	<li><a rel="nofollow" href="SVGColorProfileRule.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGColorProfileRule</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a rel="nofollow" href="SVGCSSRule.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGCSSRule</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a rel="nofollow" href="SVGDocument.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGDocument</code></a></li>
+	<li><a rel="nofollow" href="SVGException.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGException</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a href="SVGExternalResourcesRequired.html" title="The SVGExternalResourcesRequired interface defines an interface which applies to all elements where this element or one of its descendants can reference an external resource."><code>SVGExternalResourcesRequired</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a rel="nofollow" href="SVGFitToViewBox.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGFitToViewBox</code></a></li>
+	<li><a rel="nofollow" href="SVGLangSpace.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGLangSpace</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a rel="nofollow" href="SVGLocatable.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGLocatable</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a href="SVGRenderingIntent.html" title="The SVGRenderingIntent interface defines the enumerated list of possible values for rendering-intent attributes or descriptors."><code>SVGRenderingIntent</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a href="SVGStylable.html" title="The SVGStylable interface is implemented on all objects corresponding to SVG elements that can have style, class and presentation attributes specified on them."><code>SVGStylable</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a href="SVGTests.html" title="The SVGTests interface is used to reflect conditional processing attributes and is mixed into other interfaces for elements that support these attributes."><code>SVGTests</code></a></li>
+	<li><a href="SVGTransformable.html" title="Interface SVGTransformable contains properties and methods that apply to all elements which have attribute transform."><code>SVGTransformable</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a href="SVGUnitTypes.html" title="The SVGUnitTypes interface defines a commonly used set of constants used for reflecting gradientUnits, patternContentUnits and other similar attributes."><code>SVGUnitTypes</code></a></li>
+	<li><a rel="nofollow" href="SVGUseElementShadowRoot.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGUseElementShadowRoot</code></a></li>
+	<li><a href="SVGURIReference.html" title="The SVGURIReference interface is used to reflect the href attribute and the deprecated xlink:href attribute."><code>SVGURIReference</code></a></li>
+	<li><a rel="nofollow" href="SVGViewSpec.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGViewSpec</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+	<li><a href="SVGZoomAndPan.html" title="The SVGZoomAndPan interfaceis used to reflect the zoomAndPan attribute, and is mixed in to other interfaces for elements that support this attribute."><code>SVGZoomAndPan</code></a></li>
+	<li><a rel="nofollow" href="SVGZoomEvent.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>SVGZoomEvent</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></li>
+</ul>
+</div>
+
+<a class="dashAnchor" name="//apple_ref/Section/See%20also"></a><h2 id="See_also">See also</h2>
+
+<ul>
+	<li><a href="Document_Object_Model/Examples.html">DOM Examples</a></li>
+</ul>
+                  
+                
+              </article>
+
+              <!-- contributors -->
+              <div class="wiki-block contributors">
+                <h2 class="offscreen">Document Tags and Contributors</h2>
+                
+                
+  <div class="tag-attach-list contributors-sub">
+    <svg class="icon icon-tags" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M7 7c0-1.109-.891-2-2-2s-2 .891-2 2 .891 2 2 2 2-.891 2-2zm16.672 9c0 .531-.219 1.047-.578 1.406l-7.672 7.688c-.375.359-.891.578-1.422.578s-1.047-.219-1.406-.578L1.422 13.906C.625 13.125 0 11.609 0 10.5V4c0-1.094.906-2 2-2h6.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422zm6 0c0 .531-.219 1.047-.578 1.406l-7.672 7.688a2.08 2.08 0 0 1-1.422.578c-.812 0-1.219-.375-1.75-.922l7.344-7.344c.359-.359.578-.875.578-1.406s-.219-1.047-.578-1.422L14.422 3.422C13.625 2.625 12.11 2 11 2h3.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422z"></path>
+</svg>
+    <strong>Tags:</strong>&nbsp;
+    <ul class="tags tags-small">
+      
+        <li><a href="../../tag/API.html" rel="nofollow">API</a></li>
+      
+        <li><a href="../../tag/DOM.html" rel="nofollow">DOM</a></li>
+      
+        <li><a href="../../tag/DOM%20Reference.html" rel="nofollow">DOM Reference</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Intermediate" rel="nofollow">Intermediate</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Reference" rel="nofollow">Reference</a></li>
+      
+    </ul>
+  </div>
+
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-group" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M9.266 14a5.532 5.532 0 0 0-4.141 2H3.031C1.468 16 0 15.25 0 13.516 0 12.25-.047 8 1.937 8c.328 0 1.953 1.328 4.062 1.328.719 0 1.406-.125 2.078-.359A7.624 7.624 0 0 0 7.999 10c0 1.422.453 2.828 1.266 4zM26 23.953C26 26.484 24.328 28 21.828 28H8.172C5.672 28 4 26.484 4 23.953 4 20.422 4.828 15 9.406 15c.531 0 2.469 2.172 5.594 2.172S20.063 15 20.594 15C25.172 15 26 20.422 26 23.953zM10 4c0 2.203-1.797 4-4 4S2 6.203 2 4s1.797-4 4-4 4 1.797 4 4zm11 6c0 3.313-2.688 6-6 6s-6-2.688-6-6 2.688-6 6-6 6 2.688 6 6zm9 3.516C30 15.25 28.531 16 26.969 16h-2.094a5.532 5.532 0 0 0-4.141-2A7.066 7.066 0 0 0 22 10a7.6 7.6 0 0 0-.078-1.031A6.258 6.258 0 0 0 24 9.328C26.109 9.328 27.734 8 28.062 8c1.984 0 1.937 4.25 1.937 5.516zM28 4c0 2.203-1.797 4-4 4s-4-1.797-4-4 1.797-4 4-4 4 1.797 4 4z"></path>
+</svg>
+                    <strong>Contributors to this page:</strong>
+                    
+        <a href="https://developer.mozilla.org/en-US/profiles/angel-luis">angel-luis</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/ExE-Boss">ExE-Boss</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/tocretpa">tocretpa</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills">chrisdavidmills</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/DrOhjho">DrOhjho</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/isomorphismes">isomorphismes</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Orinami">Orinami</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/stevenwdv">stevenwdv</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Sebastianz">Sebastianz</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/ritabradley">ritabradley</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/arai">arai</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/DaniloDev">DaniloDev</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/cpplearner">cpplearner</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/stevemao">stevemao</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/hinell">hinell</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/chrisfillmore">chrisfillmore</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/enguerran">enguerran</a>, 
+    
+        <a href="../../../profiles/PushpitaPikuDey.html">PushpitaPikuDey</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/jwithington">jwithington</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/jpmedley">jpmedley</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Andrew_Pfeiffer">Andrew_Pfeiffer</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/kscarfone">kscarfone</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/shmeano66">shmeano66</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/magiccoder">magiccoder</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/chalkers">chalkers</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/moa3">moa3</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/mayconrem">mayconrem</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/ssl">ssl</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/FromTheRough">FromTheRough</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Brettz9">Brettz9</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/jryans">jryans</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Jeremie">Jeremie</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/ethertank">ethertank</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/hectorsan68">hectorsan68</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Wladimir_Palant">Wladimir_Palant</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/auco">auco</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Gsroka">Gsroka</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/fscholz">fscholz</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/MatrixFrog">MatrixFrog</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/IgorKitsa">IgorKitsa</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/jswisher">jswisher</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Markus Prokott">Markus Prokott</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Crash">Crash</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Zearin">Zearin</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/DozerDC">DozerDC</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Jürgen Jeka">Jürgen Jeka</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Dionyziz">Dionyziz</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/mykzhy">mykzhy</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Jay I.">Jay I.</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/MarcDiethelm">MarcDiethelm</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/RobG">RobG</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/BenoitL">BenoitL</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Yangky">Yangky</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Mgjbot">Mgjbot</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Nathymig">Nathymig</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Federico">Federico</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Nickolay">Nickolay</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Lewis">Lewis</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Pmsyyz">Pmsyyz</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/CN">CN</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/mwgamera">mwgamera</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Dewang">Dewang</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Qphilip">Qphilip</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Ptak82">Ptak82</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Tupsan">Tupsan</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Andreas Wuest">Andreas Wuest</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/JesseW">JesseW</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Dria">Dria</a>
+    
+                  </div>
+                
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-clock" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M14 8.5v7c0 .281-.219.5-.5.5h-5a.494.494 0 0 1-.5-.5v-1c0-.281.219-.5.5-.5H12V8.5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zm6.5 5.5c0-4.688-3.813-8.5-8.5-8.5S3.5 9.313 3.5 14s3.813 8.5 8.5 8.5 8.5-3.813 8.5-8.5zm3.5 0c0 6.625-5.375 12-12 12S0 20.625 0 14 5.375 2 12 2s12 5.375 12 12z"></path>
+</svg>
+                    <strong>Last updated by:</strong>
+                    <a href="https://developer.mozilla.org/en-US/profiles/angel-luis">angel-luis</a>,
+                    <time datetime="2018-04-03T11:39:52.455099-07:00">Apr 3, 2018, 11:39:52 AM</time>
+                  </div>
+                
+              </div>
+            </div>
+
+            
+              <!-- quick links and approvals strip -->
+              <div id="wiki-left" class="column-strip wiki-column">
+
+                <!-- crumbs -->
+                
+  
+    
+  
+
+                
+                  <!-- quick links -->
+                  
+  <div class="quick-links" id="quick-links">
+    <div class="quick-links-head">Related Topics</div>
+    <ol><li><strong><a href="Document_Object_Model.html">Document Object Model</a></strong></li><li data-default-state="open"><a href="#"><strong>Guides</strong></a><ol><li><a href="Document_Object_Model/Events.html" title="This chapter describes the DOM Event Model. The Event interface itself is described,&nbsp;as well as the interfaces for event registration on nodes in the DOM, and event listeners, and several longer examples that show how the various event interfaces relate to one another.">Events and the DOM</a></li><li><a href="Document_Object_Model/Examples.html" title="This chapter provides some longer examples of web and XML development using the DOM. Wherever possible, the examples use common APIs, tricks, and patterns in JavaScript for manipulating the document object.">Examples of web and XML development using the DOM</a></li><li><a href="Document_object_model/How_to_create_a_DOM_tree.html" title="This page describes how to use the DOM Core API in JavaScript to create and modify DOM objects. It applies to all Gecko-based applications (such as Firefox) both in privileged (extensions) and unprivileged (web pages) code.">How to create a DOM tree</a></li><li><a href="Document_Object_Model/Introduction.html" title="This section provides a brief conceptual introduction to the DOM: what it is, how it provides structure for HTML and XML documents, how you can access it, and how this API presents the reference information and examples.">Introduction to the DOM</a></li><li><a href="Document_object_model/Locating_DOM_elements_using_selectors.html" title="The Selectors API provides methods that make it quick and easy to retrieve Element nodes from the DOM by matching against a set of selectors. This is much faster than past techniques, wherein it was necessary to, for example, use a loop in JavaScript code to locate the specific items you needed to find.">Locating DOM elements using selectors</a></li><li><a href="Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces.html" title="This article is an overview of some powerful, fundamental DOM level 1 methods and how to use them from JavaScript. You will learn how to create, access and control, and remove HTML elements dynamically. The DOM methods presented here are not specific to HTML; they also apply to XML. The demonstrations provided here will work fine in any modern browser, including all versions of Firefox and IE 5+.">Traversing an HTML table with JavaScript and DOM Interfaces</a></li><li><a href="Document_object_model/Using_the_W3C_DOM_Level_1_Core.html" title="The W3C's DOM Level 1 Core is a powerful object model for changing the content tree of documents. It is supported in all major browsers including Mozilla Firefox and Microsoft Internet Explorer. It is a powerful base for scripting on the web.">Using the W3C DOM Level 1 Core</a></li><li><a href="Document_Object_Model/Whitespace_in_the_DOM.html" title="The presence of whitespace in the DOM can make manipulation of the content tree difficult in unforeseen ways. In Mozilla, all whitespace in the text content of the original document is represented in the DOM (this does not include whitespace within tags). (This is needed internally so that the editor can preserve formatting of documents and so that white-space: pre in CSS will work.) This means that:">Whitespace in the DOM</a></li></ol></li><li data-default-state="open"><a href="#"><strong>Interfaces</strong></a><ol><li><a href="AbortController.html"><code>AbortController</code></a></li><li><a href="AbortSignal.html"><code>AbortSignal</code></a></li><li><a href="Attr.html"><code>Attr</code></a></li><li><a href="ByteString.html"><code>ByteString</code></a></li><li><a href="CDATASection.html"><code>CDATASection</code></a></li><li><a href="CharacterData.html"><code>CharacterData</code></a></li><li><a href="ChildNode.html"><code>ChildNode</code></a></li><li><a href="CSSPrimitiveValue.html"><code>CSSPrimitiveValue</code></a></li><li><a href="CSSValue.html"><code>CSSValue</code></a></li><li><a href="CSSValueList.html"><code>CSSValueList</code></a></li><li><a href="Comment.html"><code>Comment</code></a></li><li><a href="CustomEvent.html"><code>CustomEvent</code></a></li><li><a href="Document.html"><code>Document</code></a></li><li><a href="DocumentFragment.html"><code>DocumentFragment</code></a></li><li><a href="DocumentType.html"><code>DocumentType</code></a></li><li><a href="DOMConfiguration.html"><code>DOMConfiguration</code></a></li><li><a href="DOMError.html"><code>DOMError</code></a></li><li><a rel="nofollow" href="DOMErrorHandler.html" class="new"><code>DOMErrorHandler</code></a></li><li><a href="DOMException.html"><code>DOMException</code></a></li><li><a href="DOMImplementation.html"><code>DOMImplementation</code></a></li><li><a href="DOMImplementationList.html"><code>DOMImplementationList</code></a></li><li><a href="DOMImplementationRegistry.html"><code>DOMImplementationRegistry</code></a></li><li><a href="DOMImplementationSource.html"><code>DOMImplementationSource</code></a></li><li><a href="DOMLocator.html"><code>DOMLocator</code></a></li><li><a href="DOMObject.html"><code>DOMObject</code></a></li><li><a href="DOMParser.html"><code>DOMParser</code></a></li><li><a href="DOMPoint.html"><code>DOMPoint</code></a></li><li><a href="DOMRect.html"><code>DOMRect</code></a></li><li><a href="DOMString.html"><code>DOMString</code></a></li><li><a href="DOMTimeStamp.html"><code>DOMTimeStamp</code></a></li><li><a href="DOMTokenList.html"><code>DOMTokenList</code></a></li><li><a href="DOMUserData.html"><code>DOMUserData</code></a></li><li><a href="Element.html"><code>Element</code></a></li><li><a href="ElementTraversal.html"><code>ElementTraversal</code></a></li><li><a href="Entity.html"><code>Entity</code></a></li><li><a href="EntityReference.html"><code>EntityReference</code></a></li><li><a href="Event.html"><code>Event</code></a></li><li><a href="EventTarget.html"><code>EventTarget</code></a></li><li><a href="HTMLCollection.html"><code>HTMLCollection</code></a></li><li><a href="MutationObserver.html"><code>MutationObserver</code></a></li><li><a href="Node.html"><code>Node</code></a></li><li><a href="NodeFilter.html"><code>NodeFilter</code></a></li><li><a href="NodeIterator.html"><code>NodeIterator</code></a></li><li><a href="NodeList.html"><code>NodeList</code></a></li><li><a href="NonDocumentTypeChildNode.html"><code>NonDocumentTypeChildNode</code></a></li><li><a href="ProcessingInstruction.html"><code>ProcessingInstruction</code></a></li><li><a href="PromiseResolver.html"><code>PromiseResolver</code></a></li><li><a href="Range.html"><code>Range</code></a></li><li><a href="Text.html"><code>Text</code></a></li><li><a href="TextDecoder.html"><code>TextDecoder</code></a></li><li><a href="TextEncoder.html"><code>TextEncoder</code></a></li><li><a href="TimeRanges.html"><code>TimeRanges</code></a></li><li><a href="TreeWalker.html"><code>TreeWalker</code></a></li><li><a href="TypeInfo.html"><code>TypeInfo</code></a></li><li><a href="UserDataHandler.html"><code>UserDataHandler</code></a></li><li><a href="USVString.html"><code>USVString</code></a></li><li><a href="XMLDocument.html"><code>XMLDocument</code></a></li></ol></li></ol>
+  </div>
+                
+
+                <!-- approvals -->
+                
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+    
+      <div class="newsletter-box">
+        <div class="newsletter">
+    <form id="newsletterForm" class="newsletter-form nodisable" name="newsletter-form" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <div class="newsletter-head">
+            <h2 class="newsletter-teaser">Learn the best of web development</h2>
+            <p class="newsletter-description">Get the latest and greatest from MDN delivered straight to your inbox.</p>
+            
+        </div>
+
+        <div class="newsletter-fields">
+            <input type="hidden" id="fmt" name="fmt" value="H">
+            <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+            <div id="newsletterErrors" class="newsletter-errors"></div>
+
+            <div id="newsletterEmail" class="form-group newsletter-group-email">
+                <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+                <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+            </div>
+
+            <div id="newsletterPrivacy" class="form-group form-group-agree newsletter-group-privacy hidden">
+                <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+                <label for="newsletterPrivacyInput">
+                I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+                </label>
+            </div>
+            <div id="newsletterSubmit" class="newsletter-group-submit">
+                <button id="newsletter-submit" type="submit" class="button neutral newsletter-submit">
+                    Sign up now<svg class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg" width="23" height="28" viewBox="0 0 23 28" aria-hidden="true">
+    <path d="M23 15a2.01 2.01 0 0 1-.578 1.422L12.25 26.594c-.375.359-.891.578-1.422.578s-1.031-.219-1.406-.578L8.25 25.422c-.375-.375-.594-.891-.594-1.422s.219-1.047.594-1.422L12.828 18h-11C.703 18 0 17.062 0 16v-2c0-1.062.703-2 1.828-2h11L8.25 7.406a1.96 1.96 0 0 1 0-2.812l1.172-1.172c.375-.375.875-.594 1.406-.594s1.047.219 1.422.594l10.172 10.172c.375.359.578.875.578 1.406z"></path>
+</svg>
+                </button>
+            </div>
+        </div>
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden">
+        <span>Hide Newsletter Sign-up</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+</div>
+      </div>
+    
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/en-US/docs/Web/API/Document_Object_Model$edit" label="Edit page"></menuitem>
+    <menuitem data-action="/en-US/docs/Web/API/Document_Object_Model$history" label="View page history"></menuitem>
+  </menu>
+
+      </div>
+  </main>
+  <!-- Footer -->
+    <footer id="nav-footer" class="nav-footer"><div class="center"><a href="http://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">Document Object Model (DOM)</a> by <a href="http://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model$history">Mozilla Contributors</a> is licensed under <a href="http://creativecommons.org/licenses/by-sa/2.5/" class="external external-icon">CC-BY-SA 2.5</a>.</div></footer> 
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script async="" type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script src="../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><!--[endif]---->
+
+    
+    <script src="../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../static/build/js/wiki.b26a4c181df3.js" charset="utf-8" id="wikiscript"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../static/build/js/newsletter.a85c5c2892e5.js" charset="utf-8"></script>
+  
+
+
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 07:38:30 GMT -->
+</body></html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/SVG/Attribute/fill$samples/topExample?revision=1393750 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:46:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            html,body,svg { height:100% }
+        </style>
+        
+        <title>fill</title>
+    </head>
+    <body>
+        
+            <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Simple color fill -->
+  <circle cx="50" cy="50" r="40" fill="pink" />
+
+
+  <!-- Fill circle with a gradient -->
+  <defs>
+    <radialGradient id="myGradient">
+      <stop offset="0%"   stop-color="pink" />
+      <stop offset="100%" stop-color="black" />
+    </radialGradient>
+  </defs>
+
+  <circle cx="150" cy="50" r="40" fill="url(#myGradient)" />
+
+
+  <!--
+  Keeping the final state of an animated circle
+  which is a circle with a radius of 40.
+  -->
+  <circle cx="250" cy="50" r="20">
+    <animate attributeType="XML"
+             attributeName="r"
+             from="0" to="40" dur="5s"
+             fill="freeze" />
+  </circle>
+</svg>
+
+        
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/SVG/Attribute/fill$samples/topExample?revision=1393750 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:46:35 GMT -->
+</html>

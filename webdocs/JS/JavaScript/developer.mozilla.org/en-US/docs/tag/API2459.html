@@ -1,0 +1,1232 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=27 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:10:31 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  <title>Articles tagged: API</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+
+  
+<link rel="preload" href="../../../static/fonts/locales/ZillaSlab-Regular.f9de6143fdfa.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="license" href="#license">
+  
+
+  
+    
+
+    <link href="../../../static/build/styles/mdn.83865b0f7c30.css" rel="stylesheet" type="text/css">
+
+    
+  
+
+    <link href="../../../static/build/styles/wiki.aaf26c13c39b.css" rel="stylesheet" type="text/css">
+
+
+  <link href="../../../static/build/styles/locale-en-US.ca0bca387b42.css" rel="stylesheet" type="text/css">
+
+  
+    <script>
+      /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
+    </script>
+    
+
+
+
+  
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta property="og:site_name" content="MDN Web Docs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="MDN Web Docs">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../static/img/favicon144.e7e21ca263ca.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../static/img/favicon114.d526f38b09c5.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../static/img/favicon72.cc65d1d762a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../static/img/favicon57.de33179910ae.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="../../../static/img/favicon32.7f3da72dcea1.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script async="" type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  
+      <link rel="alternate" type="application/atom+xml" title="Articles tagged: API" href="../feeds/atom/tag/API">
+  
+
+</head>
+<body class="">
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <!--[endif]---->
+
+  
+  
+      <link rel="alternate" type="application/atom+xml" title="Articles tagged: API" href="../feeds/atom/tag/API">
+  
+
+
+
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/wiki-compat-tables.9978a5ce31c2.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+
+        // interactive editor config
+        win.mdn.interactiveEditor = {
+            siteUrl: "https://developer.mozilla.org",
+            editorUrl: "https://interactive-examples.mdn.mozilla.net"
+        };
+
+    })(this);
+</script>
+    
+    <ul id="nav-access">
+  <li><a href="#content" id="skip-main">Skip to main content</a></li>
+  <li><a id="skip-language" href="#language">Select language</a></li>
+  <li><a href="#q" id="skip-search">Skip to search</a></li>
+</ul>
+
+    <!-- Header -->
+    <header id="main-header" class="header-main">
+      <a href="https://developer.mozilla.org/en-US/" class="logo">MDN Web Docs</a>
+      <div class="nav-toolbox-wrapper">
+        <nav id="main-nav" class="nav-main" role="navigation">
+    <ul>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web">Technologies
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-tech-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+                    <li><a href="../Web/API.html">APIs / DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn">References &amp; Guides
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-learn-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-contact-submenu">
+              <div class="submenu-column">
+                <ul>
+                  <li>
+                      <a href="https://support.mozilla.org/">Get Firefox help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://stackoverflow.com/">Get web development help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                      <a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/tag/API%3Fpage%3D27">Report a content problem
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</nav>
+        <div id="toolbox" class="toolbox">
+  <ul>
+    
+    <li class="nav-login"><div class="login">
+    
+        
+        <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FAPI%3Fpage%3D27" class="login-link js-login-link" data-service="GitHub" rel="nofollow">
+            Sign in<svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+    <title>Github</title>
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path>
+</svg>
+        </a>
+    
+</div></li>
+  </ul>
+</div>
+      </div>
+      <form id="nav-main-search" action="https://developer.mozilla.org/en-US/search" method="get" role="search" class="nav-main-search">
+  <div class="search-wrap">
+    <label for="main-q" class="offscreen">Search</label>
+    <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" aria-hidden="true">
+    <span class="search-trigger">
+        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true">
+    <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path>
+</svg>
+    </span>
+    <button type="submit" class="offscreen">Search</button>
+    <button type="button" id="close-header-search" class="close-header-search transparent">
+        <span class="offscreen">Close search</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+  </div>
+</form>
+    </header> 
+
+  <!-- Content will go here -->
+  <main id="content">
+      
+      <div class="center clear">
+      
+
+    <div id="document-list" class="boxed">
+      <h1>Articles tagged: API</h1>
+      
+        
+  <ol class="pagination">
+  
+    <li class="prev">
+      <a href="API19d2.html?page=26">
+        Previous
+      </a>
+    </li>
+  
+  
+    <li><a href="API2679.html?page=1">1</a></li>
+    
+      <li class="skip">…</li>
+    
+  
+  
+    <li>
+      <a href="API1d82.html?page=24">24</a>
+    </li>
+  
+    <li>
+      <a href="API8c06.html?page=25">25</a>
+    </li>
+  
+    <li>
+      <a href="API19d2.html?page=26">26</a>
+    </li>
+  
+    <li class="selected">
+      <a href="API2459.html?page=27">27</a>
+    </li>
+  
+    <li>
+      <a href="APIe459.html?page=28">28</a>
+    </li>
+  
+    <li>
+      <a href="API219f.html?page=29">29</a>
+    </li>
+  
+    <li>
+      <a href="APIb385.html?page=30">30</a>
+    </li>
+  
+  
+    
+      <li class="skip">…</li>
+    
+    <li><a href="API4618.html?page=53">53</a></li>
+  
+  
+    <li class="next">
+      <a href="APIe459.html?page=28">
+        Next
+      </a>
+    </li>
+  
+  </ol>
+
+
+
+        <p>Found 5269 documents</p>
+        <ul class="document-list">
+          
+            <li>
+              <a href="../Web/API/HTMLIFrameElement/getContentDimensions.html">Web/API/HTMLIFrameElement/getContentDimensions</a>
+                
+                  <small>The getContentDimensions() method of the HTMLIFrameElement interface retrieves the X and Y...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLIFrameElement/getManifest.html">Web/API/HTMLIFrameElement/getManifest</a>
+                
+                  <small>The getManifest() method of the HTMLIFrameElement interface retrieves the manifest of an app...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLIFrameElement/getMuted.html">Web/API/HTMLIFrameElement/getMuted</a>
+                
+                  <small>The getMuted() method of the HTMLIFrameElement indicates whether the browser iframe is currently muted.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLIFrameElement/getScreenshot.html">Web/API/HTMLIFrameElement/getScreenshot</a>
+                
+                  <small>The getScreenshot() method of the HTMLIFrameElement lets you request a screenshot of an content...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLIFrameElement/getStructuredData.html">Web/API/HTMLIFrameElement/getStructuredData</a>
+                
+                  <small>The getStructuredData() method of the HTMLIFrameElement interface retrieves any structured...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLIFrameElement/getVisible.html">Web/API/HTMLIFrameElement/getVisible</a>
+                
+                  <small>The getVisible() method of the HTMLIFrameElement is used to request the current visible state of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLIFrameElement/getVolume.html">Web/API/HTMLIFrameElement/getVolume</a>
+                
+                  <small>The getVolume() method of the HTMLIFrameElement gets the current volume of the browser iframe.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLIFrameElement/goBack.html">Web/API/HTMLIFrameElement/goBack</a>
+                
+                  <small>The goBack() method of the HTMLIFrameElement interface is used to navigate backwards in the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLIFrameElement/goForward.html">Web/API/HTMLIFrameElement/goForward</a>
+                
+                  <small>The goForward() method of the HTMLIFrameElement is used to navigate forward in the browser...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLIFrameElement/mute.html">Web/API/HTMLIFrameElement/mute</a>
+                
+                  <small>The mute() method of the HTMLIFrameElement mute any audio playing in the browser iframe.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLIFrameElement/purgeHistory.html">Web/API/HTMLIFrameElement/purgeHistory</a>
+                
+                  <small>The purgeHistory() method of the HTMLIFrameElement interface is used to clear the browsing...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLIFrameElement/referrerPolicy.html">Web/API/HTMLIFrameElement/referrerPolicy</a>
+                
+                  <small>The HTMLIFrameElement.referrerPolicy property reflects the HTML referrerpolicy attribute of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLIFrameElement/reload.html">Web/API/HTMLIFrameElement/reload</a>
+                
+                  <small>The reload() method of the HTMLIFrameElement interface is used to reload the content of the iframe.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLIframeElement/removeNextPaintListener-2.html">Web/API/HTMLIframeElement/removeNextPaintListener</a>
+                
+                  <small>The removeNextPaintListener() method of the HTMLIFrameElement interface is used to remove a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLIFrameElement/sendMouseEvent.html">Web/API/HTMLIFrameElement/sendMouseEvent</a>
+                
+                  <small>The sendMouseEvent() method of the HTMLIFrameElement interface allows you to fake a mouse event...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLIFrameElement/sendTouchEvent.html">Web/API/HTMLIFrameElement/sendTouchEvent</a>
+                
+                  <small>The sendTouchEvent() method of the HTMLIFrameElement allows you to fake a touch event and send...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLIFrameElement/setActive.html">Web/API/HTMLIFrameElement/setActive</a>
+                
+                  <small>The setActive() method of the HTMLIFrameElement sets the current iframe as the active frame,...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLIFrameElement/setNfcFocus.html">Web/API/HTMLIFrameElement/setNfcFocus</a>
+                
+                  <small>The setNfcFocus() method of the HTMLIFrameElement interface sets whether an iframe can receive...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLIFrameElement/setVisible.html">Web/API/HTMLIFrameElement/setVisible</a>
+                
+                  <small>The setVisible() method of the HTMLIFrameElement is used to change the visibility state of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLIFrameElement/setVolume.html">Web/API/HTMLIFrameElement/setVolume</a>
+                
+                  <small>The setVolume() method of the HTMLIFrameElement sets the current volume of the browser iframe.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLIFrameElement/stop.html">Web/API/HTMLIFrameElement/stop</a>
+                
+                  <small>The stop() method of the HTMLIFrameElement interface is used to stop loading the content of the iframe.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLIFrameElement/unmute.html">Web/API/HTMLIFrameElement/unmute</a>
+                
+                  <small>The unmute() method of the HTMLIFrameElement unmutes any audio playing in the browser iframe.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLIFrameElement/zoom.html">Web/API/HTMLIFrameElement/zoom</a>
+                
+                  <small>The zoom() method of the HTMLIFrameElement interface changes the zoom factor of the browser...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLImageElement.html">Web/API/HTMLImageElement</a>
+                
+                  <small>The HTMLImageElement interface provides special properties and methods &nbsp;for manipulating the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLImageElement/Image.html">Web/API/HTMLImageElement/Image</a>
+                
+                  <small>The Image() constructor creates a new HTMLImageElement instance.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLImageElement/referrerPolicy.html">Web/API/HTMLImageElement/referrerPolicy</a>
+                
+                  <small>The HTMLImageElement.referrerPolicy property reflect the HTML referrerpolicy attribute of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLInputElement.html">Web/API/HTMLInputElement</a>
+                
+                  <small>The HTMLInputElement interface provides special properties and methods for manipulating the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLInputElement/labels.html">Web/API/HTMLInputElement/labels</a>
+                
+                  <small>The HTMLInputElement.labels read-only property returns a NodeList of the label elements...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLInputElement/mozGetFileNameArray.html">Web/API/HTMLInputElement/mozGetFileNameArray</a>
+                
+                  <small>The HTMLInputElement.mozGetFileNameArray() method returns an array of the names of the files...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLInputElement/mozSetFileNameArray.html">Web/API/HTMLInputElement/mozSetFileNameArray</a>
+                
+                  <small>The HTMLInputElement.mozSetFileNameArray() sets the names of the files that selected on an HTML...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLInputElement/multiple.html">Web/API/HTMLInputElement/multiple</a>
+                
+                  <small>The HTMLInputElement.multiple property indicates if an input can have more than one value....</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLInputElement/select.html">Web/API/HTMLInputElement/select</a>
+                
+                  <small>The HTMLInputElement.select() method selects all the text in a textarea element or an input...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLInputElement/setSelectionRange.html">Web/API/HTMLInputElement/setSelectionRange</a>
+                
+                  <small>The HTMLInputElement.setSelectionRange() method sets the start and end positions of the current...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLInputElement/webkitdirectory.html">Web/API/HTMLInputElement/webkitdirectory</a>
+                
+                  <small>The HTMLInputElement.webkitdirectory is a property that reflects the webkitdirectory HTML...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLInputElement/webkitEntries.html">Web/API/HTMLInputElement/webkitEntries</a>
+                
+                  <small>The read-only webkitEntries property of the HTMLInputElement interface contains an array of file...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLIsIndexElement.html">Web/API/HTMLIsIndexElement</a>
+                
+                  <small>The HTMLIsIndexElement interface provides special properties (beyond the regular HTMLElement...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLKeygenElement.html">Web/API/HTMLKeygenElement</a>
+                
+                  <small>The keygen elements expose the HTMLKeygenElement interface, which provides special properties...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLLabelElement.html">Web/API/HTMLLabelElement</a>
+                
+                  <small>The HTMLLabelElement interface gives access to properties specific to label elements. It...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLLegendElement.html">Web/API/HTMLLegendElement</a>
+                
+                  <small>The HTMLLegendElement is an interface allowing to access properties of the legend elements. It...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLLIElement.html">Web/API/HTMLLIElement</a>
+                
+                  <small>The HTMLLIElement interface exposes specific properties and methods (beyond those defined by...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLLinkElement.html">Web/API/HTMLLinkElement</a>
+                
+                  <small>The HTMLLinkElement interface represents reference information for external resources and the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLLinkElement/as.html">Web/API/HTMLLinkElement/as</a>
+                
+                  <small>The as property of the HTMLLinkElement interface returns a DOMString representing the type of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLLinkElement/referrerPolicy.html">Web/API/HTMLLinkElement/referrerPolicy</a>
+                
+                  <small>The HTMLLinkElement.referrerPolicy property reflect the HTML referrerpolicy attribute of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLLinkElement/rel.html">Web/API/HTMLLinkElement/rel</a>
+                
+                  <small>The HTMLLinkElement.rel property reflects the rel attribute. It is a DOMString containing a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLLinkElement/relList.html">Web/API/HTMLLinkElement/relList</a>
+                
+                  <small>The HTMLLinkElement.relList read-only property reflects the rel attribute. It is a live...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMapElement.html">Web/API/HTMLMapElement</a>
+                
+                  <small>The HTMLMapElement interface provides special properties and methods (beyond those of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement.html">Web/API/HTMLMediaElement</a>
+                
+                  <small>The HTMLMediaElement interface adds to HTMLElement the properties and methods needed to support...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/audioTracks.html">Web/API/HTMLMediaElement/audioTracks</a>
+                
+                  <small>The read-only audioTracks property on HTMLMediaElement objects returns an&nbsp;AudioTrackList object...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/autoplay.html">Web/API/HTMLMediaElement/autoplay</a>
+                
+                  <small>The HTMLMediaElement.autoplay property reflects the autoplay HTML attribute, indicating whether...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/buffered.html">Web/API/HTMLMediaElement/buffered</a>
+                
+                  <small>The HTMLMediaElement.buffered read-only property returns a new TimeRanges object...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/canPlayType.html">Web/API/HTMLMediaElement/canPlayType</a>
+                
+                  <small>The HTMLMediaElement.canPlayType() method determines whether the specified media type can be played back.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/captureStream.html">Web/API/HTMLMediaElement/captureStream</a>
+                
+                  <small>The captureStream() property of the HTMLMediaElement interface returns a MediaStream object...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/controller.html">Web/API/HTMLMediaElement/controller</a>
+                
+                  <small>The HTMLMediaElement.controller property represents the media controller assigned to the element.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/controls.html">Web/API/HTMLMediaElement/controls</a>
+                
+                  <small>The HTMLMediaElement.controls property reflects the controls HTML attribute, which controls...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/controlsList.html">Web/API/HTMLMediaElement/controlsList</a>
+                
+                  <small>The controlsList&nbsp;property of the HTMLMediaElement interface returns a DOMTokenList that helps...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/crossOrigin.html">Web/API/HTMLMediaElement/crossOrigin</a>
+                
+                  <small>The HTMLMediaElement.crossOrigin property is the CORS setting for this image element. See CORS...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/currentSrc.html">Web/API/HTMLMediaElement/currentSrc</a>
+                
+                  <small>The HTMLMediaElement.currentSrc property contains the absolute URL of the chosen media...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/currentTime.html">Web/API/HTMLMediaElement/currentTime</a>
+                
+                  <small>The HTMLMediaElement.currentTime&nbsp;property gives the current playback time in seconds. Setting...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/defaultMuted.html">Web/API/HTMLMediaElement/defaultMuted</a>
+                
+                  <small>The HTMLMediaElement.defaultMuted property reflects the muted HTML attribute, which indicates...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/defaultPlaybackRate.html">Web/API/HTMLMediaElement/defaultPlaybackRate</a>
+                
+                  <small>The HTMLMediaElement.defaultPlaybackRate property indicates the default playback rate for the media.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/duration.html">Web/API/HTMLMediaElement/duration</a>
+                
+                  <small>The HTMLMediaElement.duration property gives the length of the media in seconds, or zero if no...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/ended.html">Web/API/HTMLMediaElement/ended</a>
+                
+                  <small>The HTMLMediaElement.ended indicates whether the media element has ended playback.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/error.html">Web/API/HTMLMediaElement/error</a>
+                
+                  <small>The HTMLMediaElement.error is the MediaError object for the most recent error, or null if there...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/fastSeek.html">Web/API/HTMLMediaElement/fastSeek</a>
+                
+                  <small>The HTMLMediaElement.fastSeek() method quickly seeks the media to the new time with precision tradeoff.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/initialTime.html">Web/API/HTMLMediaElement/initialTime</a>
+                
+                  <small>The HTMLMediaElement.initialTime&nbsp;is&nbsp;the initial playback position in seconds. This property is...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/loop.html">Web/API/HTMLMediaElement/loop</a>
+                
+                  <small>The HTMLMediaElement.loop property reflects the loop HTML attribute, which controls whether the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/mediaGroup.html">Web/API/HTMLMediaElement/mediaGroup</a>
+                
+                  <small>The HTMLMediaElement.mediaGroup property reflects the mediagroup HTML attribute, which indicates...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/muted.html">Web/API/HTMLMediaElement/muted</a>
+                
+                  <small>The HTMLMediaElement.muted indicates whether the media element muted.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/networkState.html">Web/API/HTMLMediaElement/networkState</a>
+                
+                  <small>The HTMLMediaElement.networkState property indicates the current state of the fetching of media...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/onerror.html">Web/API/HTMLMediaElement/onerror</a>
+                
+                  <small>The onerror property of the HTMLMediaElement interface specifies an event listener function...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/pause.html">Web/API/HTMLMediaElement/pause</a>
+                
+                  <small>The HTMLMediaElement.pause() method will pause playback of the media, if the media is already in...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/paused.html">Web/API/HTMLMediaElement/paused</a>
+                
+                  <small>The read-only&nbsp;HTMLMediaElement.paused&nbsp;property tells&nbsp;whether the media element is paused.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/play.html">Web/API/HTMLMediaElement/play</a>
+                
+                  <small>The HTMLMediaElement.play() method attempts to begin playback of the media and returns a Promise...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/playbackRate.html">Web/API/HTMLMediaElement/playbackRate</a>
+                
+                  <small>The HTMLMediaElement.playbackRate property sets&nbsp;the&nbsp;rate at which the media is being played...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/readyState.html">Web/API/HTMLMediaElement/readyState</a>
+                
+                  <small>The HTMLMediaElement.readyState property indicates the readiness state of the media.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/seekable.html">Web/API/HTMLMediaElement/seekable</a>
+                
+                  <small>The seekable read-only property of the HTMLMediaElement returns a TimeRanges object that...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/seekToNextFrame.html">Web/API/HTMLMediaElement/seekToNextFrame</a>
+                
+                  <small>The HTMLMediaElement.seekToNextFrame() method asynchronously advances the the current play...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/setMediaKeys.html">Web/API/HTMLMediaElement/setMediaKeys</a>
+                
+                  <small>The setMediaKeys() property of the HTMLMediaElement interface returns a Promise that resolves to...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/setSinkId.html">Web/API/HTMLMediaElement/setSinkId</a>
+                
+                  <small>The HTMLMediaElement.setSinkId() method sets&nbsp;the ID of the audio device to use for output and...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/sinkId.html">Web/API/HTMLMediaElement/sinkId</a>
+                
+                  <small>The HTMLMediaElement.sinkId read-only property returns a DOMString that is the unique ID of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/src.html">Web/API/HTMLMediaElement/src</a>
+                
+                  <small>The HTMLMediaElement.src property reflects the value of the HTML media element's src attribute,...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/srcObject.html">Web/API/HTMLMediaElement/srcObject</a>
+                
+                  <small>The srcObject&nbsp;property of the HTMLMediaElement interface sets or returns the object which serves...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/volume.html">Web/API/HTMLMediaElement/volume</a>
+                
+                  <small>The HTMLMediaElement.volume property sets&nbsp;the&nbsp;volume at which the media will be&nbsp;played.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMetaElement.html">Web/API/HTMLMetaElement</a>
+                
+                  <small>The HTMLMetaElement interface contains descriptive metadata about a document. It&nbsp;inherits all of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMeterElement.html">Web/API/HTMLMeterElement</a>
+                
+                  <small>The HTML meter elements expose the HTMLMeterElement interface, which provides special properties...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMeterElement/labels.html">Web/API/HTMLMeterElement/labels</a>
+                
+                  <small>The HTMLMeterElement.labels read-only property returns a NodeList of the label elements...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLModElement.html">Web/API/HTMLModElement</a>
+                
+                  <small>The HTMLModElement interface provides special properties (beyond the regular methods and...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLObjectElement.html">Web/API/HTMLObjectElement</a>
+                
+                  <small>The HTMLObjectElement interface provides special properties and methods (beyond those on the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLObjectElement/typeMustMatch.html">Web/API/HTMLObjectElement/typeMustMatch</a>
+                
+                  <small>The HTMLObjectElement.typeMustMatch property is a Boolean reflects the typemustmatch attribute...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLOListElement.html">Web/API/HTMLOListElement</a>
+                
+                  <small>The HTMLOListElement interface provides special properties (beyond those defined on the regular...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLOptGroupElement.html">Web/API/HTMLOptGroupElement</a>
+                
+                  <small>The HTMLOptGroupElement interface provides special properties and methods (beyond the regular...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLOptionElement.html">Web/API/HTMLOptionElement</a>
+                
+                  <small>The HTMLOptionElement interface represents option elements and inherits all classes and methods...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLOptionElement/Option.html">Web/API/HTMLOptionElement/Option</a>
+                
+                  <small>Constructor&nbsp;for creating an HTMLOptionElement.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLOptionsCollection.html">Web/API/HTMLOptionsCollection</a>
+                
+                  <small>HTMLOptionsCollection is an interface representing a collection of HTML option elements (in...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLOutputElement.html">Web/API/HTMLOutputElement</a>
+                
+                  <small>The HTMLOutputElement interface provides properties and methods (beyond those inherited from...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLOutputElement/labels.html">Web/API/HTMLOutputElement/labels</a>
+                
+                  <small>The HTMLOutputElement.labels read-only property returns a NodeList of the label elements...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLParagraphElement.html">Web/API/HTMLParagraphElement</a>
+                
+                  <small>The HTMLParagraphElement interface provides special properties (beyond those of the regular...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLParamElement.html">Web/API/HTMLParamElement</a>
+                
+                  <small>The HTMLParamElement interface provides special properties (beyond those of the regular...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLPictureElement.html">Web/API/HTMLPictureElement</a>
+                
+                  <small>The HTMLPictureElement interface represents a picture HTML element. It doesn't implement...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLPreElement.html">Web/API/HTMLPreElement</a>
+                
+                  <small>The HTMLPreElement interface expose specific properties and methods (beyond those defined by...</small>
+                
+            </li>
+          
+        </ul>
+        
+  <ol class="pagination">
+  
+    <li class="prev">
+      <a href="API19d2.html?page=26">
+        Previous
+      </a>
+    </li>
+  
+  
+    <li><a href="API2679.html?page=1">1</a></li>
+    
+      <li class="skip">…</li>
+    
+  
+  
+    <li>
+      <a href="API1d82.html?page=24">24</a>
+    </li>
+  
+    <li>
+      <a href="API8c06.html?page=25">25</a>
+    </li>
+  
+    <li>
+      <a href="API19d2.html?page=26">26</a>
+    </li>
+  
+    <li class="selected">
+      <a href="API2459.html?page=27">27</a>
+    </li>
+  
+    <li>
+      <a href="APIe459.html?page=28">28</a>
+    </li>
+  
+    <li>
+      <a href="API219f.html?page=29">29</a>
+    </li>
+  
+    <li>
+      <a href="APIb385.html?page=30">30</a>
+    </li>
+  
+  
+    
+      <li class="skip">…</li>
+    
+    <li><a href="API4618.html?page=53">53</a></li>
+  
+  
+    <li class="next">
+      <a href="APIe459.html?page=28">
+        Next
+      </a>
+    </li>
+  
+  </ol>
+
+
+
+      
+    </div>
+
+
+      </div>
+  </main>
+  <!-- Footer -->
+     
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script async="" type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script src="../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><!--[endif]---->
+
+    
+    <script src="../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../static/build/js/wiki.b26a4c181df3.js" charset="utf-8" id="wikiscript"></script>
+
+
+
+  
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=27 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:10:31 GMT -->
+</body></html>

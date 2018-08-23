@@ -1,0 +1,1232 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=29 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:10:31 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  <title>Articles tagged: API</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+
+  
+<link rel="preload" href="../../../static/fonts/locales/ZillaSlab-Regular.f9de6143fdfa.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="license" href="#license">
+  
+
+  
+    
+
+    <link href="../../../static/build/styles/mdn.83865b0f7c30.css" rel="stylesheet" type="text/css">
+
+    
+  
+
+    <link href="../../../static/build/styles/wiki.aaf26c13c39b.css" rel="stylesheet" type="text/css">
+
+
+  <link href="../../../static/build/styles/locale-en-US.ca0bca387b42.css" rel="stylesheet" type="text/css">
+
+  
+    <script>
+      /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
+    </script>
+    
+
+
+
+  
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta property="og:site_name" content="MDN Web Docs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="MDN Web Docs">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../static/img/favicon144.e7e21ca263ca.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../static/img/favicon114.d526f38b09c5.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../static/img/favicon72.cc65d1d762a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../static/img/favicon57.de33179910ae.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="../../../static/img/favicon32.7f3da72dcea1.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script async="" type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  
+      <link rel="alternate" type="application/atom+xml" title="Articles tagged: API" href="../feeds/atom/tag/API">
+  
+
+</head>
+<body class="">
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <!--[endif]---->
+
+  
+  
+      <link rel="alternate" type="application/atom+xml" title="Articles tagged: API" href="../feeds/atom/tag/API">
+  
+
+
+
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/wiki-compat-tables.9978a5ce31c2.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+
+        // interactive editor config
+        win.mdn.interactiveEditor = {
+            siteUrl: "https://developer.mozilla.org",
+            editorUrl: "https://interactive-examples.mdn.mozilla.net"
+        };
+
+    })(this);
+</script>
+    
+    <ul id="nav-access">
+  <li><a href="#content" id="skip-main">Skip to main content</a></li>
+  <li><a id="skip-language" href="#language">Select language</a></li>
+  <li><a href="#q" id="skip-search">Skip to search</a></li>
+</ul>
+
+    <!-- Header -->
+    <header id="main-header" class="header-main">
+      <a href="https://developer.mozilla.org/en-US/" class="logo">MDN Web Docs</a>
+      <div class="nav-toolbox-wrapper">
+        <nav id="main-nav" class="nav-main" role="navigation">
+    <ul>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web">Technologies
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-tech-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+                    <li><a href="../Web/API.html">APIs / DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn">References &amp; Guides
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-learn-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-contact-submenu">
+              <div class="submenu-column">
+                <ul>
+                  <li>
+                      <a href="https://support.mozilla.org/">Get Firefox help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://stackoverflow.com/">Get web development help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                      <a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/tag/API%3Fpage%3D29">Report a content problem
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</nav>
+        <div id="toolbox" class="toolbox">
+  <ul>
+    
+    <li class="nav-login"><div class="login">
+    
+        
+        <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FAPI%3Fpage%3D29" class="login-link js-login-link" data-service="GitHub" rel="nofollow">
+            Sign in<svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+    <title>Github</title>
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path>
+</svg>
+        </a>
+    
+</div></li>
+  </ul>
+</div>
+      </div>
+      <form id="nav-main-search" action="https://developer.mozilla.org/en-US/search" method="get" role="search" class="nav-main-search">
+  <div class="search-wrap">
+    <label for="main-q" class="offscreen">Search</label>
+    <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" aria-hidden="true">
+    <span class="search-trigger">
+        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true">
+    <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path>
+</svg>
+    </span>
+    <button type="submit" class="offscreen">Search</button>
+    <button type="button" id="close-header-search" class="close-header-search transparent">
+        <span class="offscreen">Close search</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+  </div>
+</form>
+    </header> 
+
+  <!-- Content will go here -->
+  <main id="content">
+      
+      <div class="center clear">
+      
+
+    <div id="document-list" class="boxed">
+      <h1>Articles tagged: API</h1>
+      
+        
+  <ol class="pagination">
+  
+    <li class="prev">
+      <a href="APIe459.html?page=28">
+        Previous
+      </a>
+    </li>
+  
+  
+    <li><a href="API2679.html?page=1">1</a></li>
+    
+      <li class="skip">…</li>
+    
+  
+  
+    <li>
+      <a href="API19d2.html?page=26">26</a>
+    </li>
+  
+    <li>
+      <a href="API2459.html?page=27">27</a>
+    </li>
+  
+    <li>
+      <a href="APIe459.html?page=28">28</a>
+    </li>
+  
+    <li class="selected">
+      <a href="API219f.html?page=29">29</a>
+    </li>
+  
+    <li>
+      <a href="APIb385.html?page=30">30</a>
+    </li>
+  
+    <li>
+      <a href="APIdcf3.html?page=31">31</a>
+    </li>
+  
+    <li>
+      <a href="APIfa9c.html?page=32">32</a>
+    </li>
+  
+  
+    
+      <li class="skip">…</li>
+    
+    <li><a href="API4618.html?page=53">53</a></li>
+  
+  
+    <li class="next">
+      <a href="APIb385.html?page=30">
+        Next
+      </a>
+    </li>
+  
+  </ol>
+
+
+
+        <p>Found 5269 documents</p>
+        <ul class="document-list">
+          
+            <li>
+              <a href="../Web/API/IDBEnvironment.html">Web/API/IDBEnvironment</a>
+                
+                  <small>The IDBEnvironment helper of the IndexedDB API contains the indexedDB property, which provides...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBEnvironmentSync.html">Web/API/IDBEnvironmentSync</a>
+                
+                  <small>The Unimplemented IDBEnvironmentSync interface of the IndexedDB API will be implemented by...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBFactory.html">Web/API/IDBFactory</a>
+                
+                  <small>In the following code snippet, we make a request to open a database, and include handlers for...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBFactory/cmp.html">Web/API/IDBFactory/cmp</a>
+                
+                  <small>An integer that indicates the result of the comparison; the table below lists the possible...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBFactory/deleteDatabase.html">Web/API/IDBFactory/deleteDatabase</a>
+                
+                  <small>If the database is successfully deleted, then a success event is fired on the request object...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBFactory/open.html">Web/API/IDBFactory/open</a>
+                
+                  <small>If an error occurs while the database connection is being opened, then an error event is fired...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBFactory/open-obsolete.html">Web/API/IDBFactory/open-obsolete</a>
+                
+                  <small>If an error occurs while the database connection is being opened, then an error event is fired...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBFactorySync.html">Web/API/IDBFactorySync</a>
+                
+                  <small>The IDBFactorySync interface of the IndexedDB&nbsp;API provide a synchronous means of accessing the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBIndex.html">Web/API/IDBIndex</a>
+                
+                  <small>IDBIndex interface of the IndexedDB API provides asynchronous access to an index in a database....</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBIndex/count.html">Web/API/IDBIndex/count</a>
+                
+                  <small>A IDBRequest object on which subsequent events related to this operation are fired.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBIndex/get.html">Web/API/IDBIndex/get</a>
+                
+                  <small>If a value is found, then a structured clone of it is created and set as the result of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBIndex/getAll.html">Web/API/IDBIndex/getAll</a>
+                
+                  <small>There is a performance cost associated with looking at the value property of a cursor, because...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBIndex/getAllKeys.html">Web/API/IDBIndex/getAllKeys</a>
+                
+                  <small>An IDBRequest object on which subsequent events related to this operation are fired.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBIndex/getKey.html">Web/API/IDBIndex/getKey</a>
+                
+                  <small>If a key is found it is set as the result of the request object: this returns the primary key of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBIndex/isAutoLocale.html">Web/API/IDBIndex/isAutoLocale</a>
+                
+                  <small>The isAutoLocale read-only property of the IDBIndex interface returns a Boolean indicating...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBIndex/keyPath.html">Web/API/IDBIndex/keyPath</a>
+                
+                  <small>Any data type that can be used as a key path.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBIndex/locale.html">Web/API/IDBIndex/locale</a>
+                
+                  <small>The locale read-only property of the IDBIndex interface returns the locale of the index (for...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBIndex/multiEntry.html">Web/API/IDBIndex/multiEntry</a>
+                
+                  <small>A Boolean:</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBIndex/name.html">Web/API/IDBIndex/name</a>
+                
+                  <small>A DOMString specifying a name for the index.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBIndex/objectStore.html">Web/API/IDBIndex/objectStore</a>
+                
+                  <small>An IDBObjectStore.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBIndex/openCursor.html">Web/API/IDBIndex/openCursor</a>
+                
+                  <small>The method sets the position of the cursor to the appropriate record, based on the specified direction.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBIndex/openKeyCursor.html">Web/API/IDBIndex/openKeyCursor</a>
+                
+                  <small>The method sets the position of the cursor to the appropriate key, based on the specified direction.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBIndex/unique.html">Web/API/IDBIndex/unique</a>
+                
+                  <small>A Boolean:</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBIndexSync.html">Web/API/IDBIndexSync</a>
+                
+                  <small>The IDBIndexSync interface of the IndexedDB API provides synchronous access to an index in a database.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBKeyRange.html">Web/API/IDBKeyRange</a>
+                
+                  <small>A key range can be a single value or a range with upper and lower bounds or endpoints. If the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBKeyRange/bound.html">Web/API/IDBKeyRange/bound</a>
+                
+                  <small>IDBKeyRange: The newly created key range.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBKeyRange/includes.html">Web/API/IDBKeyRange/includes</a>
+                
+                  <small>key&nbsp;The key you want to check for in your key range. This can be any type.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBKeyRange/lower.html">Web/API/IDBKeyRange/lower</a>
+                
+                  <small>The lower bound of the key range (can be any type.)</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBKeyRange/lowerBound.html">Web/API/IDBKeyRange/lowerBound</a>
+                
+                  <small>IDBKeyRange: The newly created key range.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBKeyRange/lowerOpen.html">Web/API/IDBKeyRange/lowerOpen</a>
+                
+                  <small>A boolean:</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBKeyRange/only.html">Web/API/IDBKeyRange/only</a>
+                
+                  <small>value&nbsp;is the value for the new key range.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBKeyRange/upper.html">Web/API/IDBKeyRange/upper</a>
+                
+                  <small>The upper bound of the key range (can be any type.)</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBKeyRange/upperBound.html">Web/API/IDBKeyRange/upperBound</a>
+                
+                  <small>IDBKeyRange: The newly created key range.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBKeyRange/upperOpen.html">Web/API/IDBKeyRange/upperOpen</a>
+                
+                  <small>A boolean:</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBLocaleAwareKeyRange.html">Web/API/IDBLocaleAwareKeyRange</a>
+                
+                  <small>The IDBLocaleAwareKeyRange interface of the IndexedDB API is a Firefox-specific version of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBMutableFile.html">Web/API/IDBMutableFile</a>
+                
+                  <small>The IDBMutableFile interface provides access in read or write mode to a file, dealing with all...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBMutableFile/getFile.html">Web/API/IDBMutableFile/getFile</a>
+                
+                  <small>The getFile method allows to retrieve a read-only snapshot of the handled file in the form of a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBMutableFile/name.html">Web/API/IDBMutableFile/name</a>
+                
+                  <small>Provides the name of the file.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBMutableFile/onabort.html">Web/API/IDBMutableFile/onabort</a>
+                
+                  <small>Specifies an event listener to receive abort events. These events occur when the associated...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBMutableFile/onerror.html">Web/API/IDBMutableFile/onerror</a>
+                
+                  <small>Specifies an event listener to receive error events. These events occur when something goes wrong.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBMutableFile/open.html">Web/API/IDBMutableFile/open</a>
+                
+                  <small>The open method returns a LockedFile object that allows to safely write in the file.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBMutableFile/type.html">Web/API/IDBMutableFile/type</a>
+                
+                  <small>Provides the mime type of the file.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBObjectStore.html">Web/API/IDBObjectStore</a>
+                
+                  <small>This example shows a variety of different uses of object stores, from updating the data...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBObjectStore/add.html">Web/API/IDBObjectStore/add</a>
+                
+                  <small>To determine if the add operation has completed successfully, listen for the transaction’s...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBObjectStore/autoIncrement.html">Web/API/IDBObjectStore/autoIncrement</a>
+                
+                  <small>A Boolean:</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBObjectStore/clear.html">Web/API/IDBObjectStore/clear</a>
+                
+                  <small>Clearing an object store consists of removing all records from the object store and removing all...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBObjectStore/count.html">Web/API/IDBObjectStore/count</a>
+                
+                  <small>An IDBRequest object on which subsequent events related to this operation are fired.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBObjectStore/createIndex.html">Web/API/IDBObjectStore/createIndex</a>
+                
+                  <small>Note that this method must be called only from a VersionChange&nbsp;transaction mode callback.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBObjectStore/delete.html">Web/API/IDBObjectStore/delete</a>
+                
+                  <small>An&nbsp;IDBRequest&nbsp;object on which subsequent events related to this operation are fired. The...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBObjectStore/deleteIndex.html">Web/API/IDBObjectStore/deleteIndex</a>
+                
+                  <small>Note that this method must be called only from a VersionChange&nbsp;transaction mode callback. Note...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBObjectStore/get.html">Web/API/IDBObjectStore/get</a>
+                
+                  <small>If a value is successfully found, then a structured clone of it is created and set as the result...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBObjectStore/getAll.html">Web/API/IDBObjectStore/getAll</a>
+                
+                  <small>If a value is successfully found, then a structured clone of it is created and set as the result...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBObjectStore/getAllKeys.html">Web/API/IDBObjectStore/getAllKeys</a>
+                
+                  <small>If a value is successfully found, then a structured clone of it is created and set as the result...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBObjectStore/index.html">Web/API/IDBObjectStore/index</a>
+                
+                  <small>An IDBIndex&nbsp;object for accessing the index.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBObjectStore/indexNames.html">Web/API/IDBObjectStore/indexNames</a>
+                
+                  <small>A DOMStringList.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBObjectStore/keyPath.html">Web/API/IDBObjectStore/keyPath</a>
+                
+                  <small>If this property is null, the application must provide a key for each modification operation.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBObjectStore/name.html">Web/API/IDBObjectStore/name</a>
+                
+                  <small>A DOMString containing the object store's name.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBObjectStore/openCursor.html">Web/API/IDBObjectStore/openCursor</a>
+                
+                  <small>To determine if the add operation has completed successfully, listen for the results’s success event.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBObjectStore/openKeyCursor.html">Web/API/IDBObjectStore/openKeyCursor</a>
+                
+                  <small>To determine if the add operation has completed successfully, listen for the results’s&nbsp;success&nbsp;event.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBObjectStore/put.html">Web/API/IDBObjectStore/put</a>
+                
+                  <small>The put method is an update or insert method. See the IDBObjectStore.add method for an insert...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBObjectStore/transaction.html">Web/API/IDBObjectStore/transaction</a>
+                
+                  <small>An IDBTransaction object.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBObjectStoreSync.html">Web/API/IDBObjectStoreSync</a>
+                
+                  <small>The IDBObjectStoreSync interface of the IndexedDB API provides synchronous access to an object...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBOpenDBRequest.html">Web/API/IDBOpenDBRequest</a>
+                
+                  <small>Also inherits methods from its parents IDBRequest and EventTarget.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBOpenDBRequest/onblocked.html">Web/API/IDBOpenDBRequest/onblocked</a>
+                
+                  <small>The onblocked event handler of the IDBOpenDBRequest interface is the event handler for the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBOpenDBRequest/onupgradeneeded.html">Web/API/IDBOpenDBRequest/onupgradeneeded</a>
+                
+                  <small>In the following example you can see the onupgradeneeded handler being used to update the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBRequest.html">Web/API/IDBRequest</a>
+                
+                  <small>The request object does not initially contain any information about the result of the operation,...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBRequest/error.html">Web/API/IDBRequest/error</a>
+                
+                  <small>A DOMError containing the relevant error. In Chrome 48+/Firefox 58+ this property returns a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBRequest/onerror.html">Web/API/IDBRequest/onerror</a>
+                
+                  <small>The following example requests a given record title,&nbsp;onsuccess&nbsp;gets the associated record from...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBRequest/onsuccess.html">Web/API/IDBRequest/onsuccess</a>
+                
+                  <small>The following example requests a given record title,&nbsp;onsuccess&nbsp;gets the associated record from...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBRequest/readyState.html">Web/API/IDBRequest/readyState</a>
+                
+                  <small>The IDBRequestReadyState of the request, which takes one of the following two values:</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBRequest/result.html">Web/API/IDBRequest/result</a>
+                
+                  <small>any</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBRequest/source.html">Web/API/IDBRequest/source</a>
+                
+                  <small>An object representing the source of the request, such as an IDBIndex, IDBObjectStore or IDBCursor.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBRequest/transaction.html">Web/API/IDBRequest/transaction</a>
+                
+                  <small>An IDBTransaction.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBTransaction.html">Web/API/IDBTransaction</a>
+                
+                  <small>Note that as of Firefox 40, IndexedDB transactions have relaxed durability guarantees to...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBTransaction/abort.html">Web/API/IDBTransaction/abort</a>
+                
+                  <small>All pending IDBRequest objects created during this transaction have their IDBRequest.error...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBTransaction/db.html">Web/API/IDBTransaction/db</a>
+                
+                  <small>An IDBDatabase object.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBTransaction/error.html">Web/API/IDBTransaction/error</a>
+                
+                  <small>A DOMError containing the relevant error. In Chrome 48+/Firefox 58+ this property returns a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBTransaction/mode.html">Web/API/IDBTransaction/mode</a>
+                
+                  <small>An IDBTransactionMode object defining the mode for isolating access to data in the current object stores:</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBTransaction/objectStore.html">Web/API/IDBTransaction/objectStore</a>
+                
+                  <small>Every call to this method on the same transaction object, with the same name, returns the same...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBTransaction/ObjectStoreNames-2.html">Web/API/IDBTransaction/ObjectStoreNames</a>
+                
+                  <small>The objectStoreNames&nbsp;read-only property of the IDBTransaction interface returns a DOMStringList...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBTransaction/onabort.html">Web/API/IDBTransaction/onabort</a>
+                
+                  <small>In the following code snippet, we open a read/write transaction on our database and add some...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBTransaction/oncomplete.html">Web/API/IDBTransaction/oncomplete</a>
+                
+                  <small>The oncomplete event handler of the IDBTransaction interface handles the complete event,...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBTransaction/onerror.html">Web/API/IDBTransaction/onerror</a>
+                
+                  <small>The onerror event handler of the IDBTransaction interface handles the error event, fired when a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBTransactionSync.html">Web/API/IDBTransactionSync</a>
+                
+                  <small>The IDBTransactionSync interface of the IndexedDB&nbsp;API provides a synchronous transaction on a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBVersionChangeEvent.html">Web/API/IDBVersionChangeEvent</a>
+                
+                  <small>The IDBVersionChangeEvent interface of the IndexedDB API indicates that the version of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBVersionChangeEvent/newVersion.html">Web/API/IDBVersionChangeEvent/newVersion</a>
+                
+                  <small>A 64-bit integer.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBVersionChangeEvent/oldVersion.html">Web/API/IDBVersionChangeEvent/oldVersion</a>
+                
+                  <small>The oldVersion&nbsp;read-only property of the IDBVersionChangeEvent interface returns the old version...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBVersionChangeEvent/version.html">Web/API/IDBVersionChangeEvent/version</a>
+                
+                  <small>The version property of the IDBVersionChangeEvent interface returns The new version of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBVersionChangeRequest.html">Web/API/IDBVersionChangeRequest</a>
+                
+                  <small>The IDBVersionChangeRequest interface the IndexedDB API represents a request to change the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IDBVersionChangeRequest/setVersion.html">Web/API/IDBVersionChangeRequest/setVersion</a>
+                
+                  <small>For older WebKit browsers, call this method before creating or deleting an object store.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IdleDeadline.html">Web/API/IdleDeadline</a>
+                
+                  <small>See our complete example in the article Cooperative Scheduling of Background Tasks API.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IdleDeadline/didTimeout.html">Web/API/IdleDeadline/didTimeout</a>
+                
+                  <small>The read-only didTimeout property on the IdleDeadline interface is a Boolean value which...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IdleDeadline/timeRemaining.html">Web/API/IdleDeadline/timeRemaining</a>
+                
+                  <small>The timeRemaining() method on the IdleDeadline interface returns the estimated number of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IIRFilterNode.html">Web/API/IIRFilterNode</a>
+                
+                  <small>The&nbsp;IIRFilterNode&nbsp;interface of the&nbsp;Web Audio API&nbsp;is a AudioNode processor which implements a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IIRFilterNode/getFrequencyResponse.html">Web/API/IIRFilterNode/getFrequencyResponse</a>
+                
+                  <small>undefined</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/IIRFilterNode/IIRFilterNode.html">Web/API/IIRFilterNode/IIRFilterNode</a>
+                
+                  <small>The IIRFilterNode() constructor of the Web Audio API creates a new IIRFilterNode object which an...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ImageBitmap.html">Web/API/ImageBitmap</a>
+                
+                  <small>The ImageBitmap interface represents a bitmap image which can be drawn to a canvas without undue...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ImageBitmap/close.html">Web/API/ImageBitmap/close</a>
+                
+                  <small>The ImageBitmap.close() method disposes of all graphical resources associated with an ImageBitmap.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ImageBitmap/height.html">Web/API/ImageBitmap/height</a>
+                
+                  <small>The read-only ImageBitmap.height property returns the ImageBitmap object's height in CSS pixels.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ImageBitmap/width.html">Web/API/ImageBitmap/width</a>
+                
+                  <small>The read-only ImageBitmap.width property returns the ImageBitmap object's width in CSS pixels.</small>
+                
+            </li>
+          
+        </ul>
+        
+  <ol class="pagination">
+  
+    <li class="prev">
+      <a href="APIe459.html?page=28">
+        Previous
+      </a>
+    </li>
+  
+  
+    <li><a href="API2679.html?page=1">1</a></li>
+    
+      <li class="skip">…</li>
+    
+  
+  
+    <li>
+      <a href="API19d2.html?page=26">26</a>
+    </li>
+  
+    <li>
+      <a href="API2459.html?page=27">27</a>
+    </li>
+  
+    <li>
+      <a href="APIe459.html?page=28">28</a>
+    </li>
+  
+    <li class="selected">
+      <a href="API219f.html?page=29">29</a>
+    </li>
+  
+    <li>
+      <a href="APIb385.html?page=30">30</a>
+    </li>
+  
+    <li>
+      <a href="APIdcf3.html?page=31">31</a>
+    </li>
+  
+    <li>
+      <a href="APIfa9c.html?page=32">32</a>
+    </li>
+  
+  
+    
+      <li class="skip">…</li>
+    
+    <li><a href="API4618.html?page=53">53</a></li>
+  
+  
+    <li class="next">
+      <a href="APIb385.html?page=30">
+        Next
+      </a>
+    </li>
+  
+  </ol>
+
+
+
+      
+    </div>
+
+
+      </div>
+  </main>
+  <!-- Footer -->
+     
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script async="" type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script src="../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><!--[endif]---->
+
+    
+    <script src="../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../static/build/js/wiki.b26a4c181df3.js" charset="utf-8" id="wikiscript"></script>
+
+
+
+  
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=29 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:10:31 GMT -->
+</body></html>

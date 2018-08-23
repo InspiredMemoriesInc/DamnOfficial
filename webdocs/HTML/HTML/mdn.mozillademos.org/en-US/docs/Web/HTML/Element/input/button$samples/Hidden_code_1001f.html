@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/HTML/Element/input/button$samples/Hidden_code_1?revision=1394917 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:14:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <title>&lt;input type=&#34;button&#34;&gt;</title>
+    </head>
+    <body>
+        
+            <input type="button" value="Enabled">
+        
+        
+            <script>
+                var btn = document.querySelector('input');
+
+btn.addEventListener('click', disableBtn);
+
+function disableBtn() {
+  btn.disabled = true;
+  btn.value = 'Disabled';
+  window.setTimeout(function() {
+    btn.disabled = false;
+    btn.value = 'Enabled';
+  }, 2000);
+}
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/HTML/Element/input/button$samples/Hidden_code_1?revision=1394917 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:14:57 GMT -->
+</html>

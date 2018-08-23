@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/ko/docs/Web/HTML/Element/menu$samples/Example_2?revision=998133 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:18:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <title>&lt;menu&gt;</title>
+    </head>
+    <body>
+        
+            <!-- A context menu for a simple editor, containing two menu buttons. -->
+<menu>
+  <li>
+    <button type="menu" value="File" menu="file-menu">
+    <menu type="context" id="file-menu">
+      <menuitem label="New..." onclick="newFile()">
+      <menuitem label="Save..." onclick="saveFile()">
+    </menu>
+  </li>
+  <li>
+    <button type="menu" value="Edit" menu="edit-menu">
+    <menu type="context" id="edit-menu">
+      <menuitem label="Cut..." onclick="cutEdit()">
+      <menuitem label="Copy..." onclick="copyEdit()">
+      <menuitem label="Paste..." onclick="pasteEdit()">
+    </menu>
+  </li>
+</menu>
+
+        
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/ko/docs/Web/HTML/Element/menu$samples/Example_2?revision=998133 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:18:22 GMT -->
+</html>

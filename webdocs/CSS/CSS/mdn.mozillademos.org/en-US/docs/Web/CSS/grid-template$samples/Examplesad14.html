@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/grid-template$samples/Examples?revision=1360980 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:48:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            #page {
+  display: grid;
+  width: 100%;
+  height: 200px;
+  grid-template: [header-left] "head head" 30px [header-right]
+                 [main-left]   "nav  main" 1fr  [main-right]
+                 [footer-left] "nav  foot" 30px [footer-right]
+                 / 120px 1fr;
+}
+
+header {
+  background-color: lime;
+  grid-area: head;
+}
+
+nav {
+  background-color: lightblue;
+  grid-area: nav;
+}
+
+main {
+  background-color: yellow;
+  grid-area: main;
+}
+
+footer {
+  background-color: red;
+  grid-column: foot;
+}
+        </style>
+        
+        <title>grid-template</title>
+    </head>
+    <body>
+        
+            <section id="page">
+  <header>Header</header>
+  <nav>Navigation</nav>
+  <main>Main area</main>
+  <footer>Footer</footer>
+</section>
+        
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/grid-template$samples/Examples?revision=1360980 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:48:20 GMT -->
+</html>

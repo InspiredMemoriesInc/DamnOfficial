@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+}
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2 {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: normal;
+  padding: 0.5rem 0 0 0;
+}
+
+.main-controls {
+  padding: 0.5rem 0;
+}
+
+canvas {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+#buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#buttons button {
+  font-size: 1rem;
+  padding: 1rem;
+  width: calc(50% - 0.25rem);
+}
+
+button {
+  font-size: 1rem;
+  background: #0088cc;
+  text-align: center;
+  color: white;
+  border: none;
+  transition: all 0.2s;
+  padding: 0.5rem;
+}
+
+button:hover, button:focus {
+  box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 1);
+  background: #0ae;
+}
+
+button:active {
+  box-shadow: inset 0px 0px 20px rgba(0,0,0,0.5);
+  transform: translateY(2px);
+}
+
+
+/* Make the clips use as much space as possible, and
+ * also show a scrollbar when there are too many clips to show
+ * in the available space */
+.sound-clips {
+  flex: 1;
+  overflow: auto;
+}
+
+section, article {
+  display: block;
+}
+
+.clip {
+  padding-bottom: 1rem;
+}
+
+audio {
+  width: 100%;
+  display: block;
+  margin: 1rem auto 0.5rem;
+}
+
+.clip p {
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.clip button {
+  font-size: 1rem;
+  float: right;
+}
+
+button.delete {
+  background: #f00;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+}
+
+/* Checkbox hack to control information box display */
+
+label {
+  font-size: 3rem;
+  position: absolute;
+  top: 2px;
+  right: 3px;
+  z-index: 5;
+  cursor: pointer;
+}
+
+input[type=checkbox] {
+   position: absolute;
+   top: -100px;
+}
+
+aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(100%);
+  transition: 0.3s all ease-out;
+  background-color: #efefef;
+  padding: 1rem;
+}
+
+aside p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+aside a {
+  color: #666;
+}
+
+/* Toggled State of information box */
+input[type=checkbox]:checked ~ aside {
+  transform: translateX(0);
+}
+
+/* Cursor when clip name is clicked over */
+
+.clip p {
+  cursor: pointer;
+}
+
+/* Adjustments for wider screens */
+@media all and (min-width: 800px) {
+  /* Don't take all the space as readability is lost when line length
+     goes past a certain size */
+  .wrapper {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+ #main-header {display:none !important} #toc.fixed { position: static !important; overflow-y: visible !important; } #redesignNotice {display:none !important} .contributors {display:none !important} .wiki-left-present:not(.wiki-left-closed) #wiki-left {display:none !important} .wiki-left-present:not(.wiki-left-closed) #toc.fixed {width: 100% !important; max-height:none !important} #wiki-content {width:100% !important} #wiki-content {float:left !important} .notification-tray, .section-edit {display:none !important} .communitybox, #wiki-controls {display:none !important} .syntaxbox-help{display:none !important} .article-meta { display:none !important} #wiki-right {padding-bottom: 25px !important; width:100% !important} .column-strip.quick-links {margin-bottom:0px !important} .redesign-beta-notice {display:none !important} #tabzilla-panel {display:none !important} main>.center {padding-top:10px !important} .share {display:none !important} .breadcrumbs {display:none !important} .global-notice, .page-buttons {display:none !important} .crumbs {display:none !important} .languages {display:none !important} #toc {max-height:none !important} .offline-notice {display:none} #redirected-from {display:none} #masthead {display:none}
+#nav-toolbar {display:none} .line-highlight:before, .line-highlight[data-end]:after {display:none !important} #helpful-survey {display:none !important}
+#page-buttons{display:none} .contributor-avatars {display:none !important} .document-head { background-color:white !important; padding: 0px 0 20px !important} .newsletter-box {display:none !important} .center {max-width:none !important} #wiki-column-container {overflow:visible !important} .sample-code-frame {padding:0px !important; border: none !important} #sessionMsg.errormsg{display:none}
+.page-watch {display:none} .document-head h1 {margin-top:10px !important} #wikiArticle {border-bottom:0px !important} #wiki-content,#wiki-left,#wiki-right{margin-right:0;width:auto!important;float:none;padding-bottom:40px}#wiki-right #toc{padding:10px 20px}#wiki-right #toc .toggler{pointer-events:auto;color:#387894}#wiki-right #toc .toggler i{display:inline-block}#wiki-right #toc .toggle-container{display:none}.no-js #wiki-right #toc .toggle-container{display:block}#wiki-column-container,#wiki-content{width:auto!important} #wiki-column-container, #wiki-content {width:100% !important} #kserrors {display:none !important} .banner, .blockIndicator, .geckoVersionNote, .inheritsbox, .note, .notice, .overheadIndicator, .standardNoteBlock, .warning, .text-content p, .text-content dl, .text-content ol, .text-content ul {max-width:none !important} .summary {border:0px !important} body {font-size:16px}
+
+.crumbs {display:block !important} .crumbs {margin-top:10px !important; margin-bottom:0 !important; padding-bottom:0 !important; border:none !important}

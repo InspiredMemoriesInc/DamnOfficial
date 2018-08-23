@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from interactive-examples.mdn.mozilla.net/pages/tabbed/input-color.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:15:01 GMT -->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>HTML Demo: &lt;input type="color"></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../../css/codemirror-tabbed-5-31-0.css" rel="stylesheet" />
+    <link href="../../css/tabbed-editor.css" rel="stylesheet" />
+    <script>"use strict";function postToKuma(e){window.parent.postMessage(e,"https://developer.mozilla.org/")}postToKuma({markName:"interactive-editor-loading"}),document.addEventListener("readystatechange",function(e){switch(e.target.readyState){case"interactive":postToKuma({markName:"interactive-editor-interactive",measureName:"ie-time-to-interactive",startMark:"interactive-editor-loading",endMark:"interactive-editor-interactive"});break;case"complete":postToKuma({markName:"interactive-editor-complete",measureName:"ie-time-to-complete",startMark:"interactive-editor-loading",endMark:"interactive-editor-complete"})}});</script>
+  </head>
+  <body>
+      <header class="output-header hidden">
+        <h4>HTML Demo: &lt;input type="color"></h4>
+        <button id="reset" class="reset" type="button">Reset</button>
+      </header>
+      <div id="editor-container" class="editor-container tabbed-standard">
+          <section id="tab-container" class="tabs">
+              <div id="tablist" role="tablist">
+                  <button role="tab" aria-selected="true" aria-controls="html-panel" id="html">
+                      HTML
+                  </button>
+                  <button role="tab" aria-selected="false" aria-controls="css-panel" id="css" tabindex="-1">
+                      CSS
+                  </button>
+              </div>
+              <section id="html-panel" tabindex="0" role="tabpanel" aria-labelledby="html">
+<div id="html-editor"><pre><code>&lt;fieldset>
+    &lt;legend>Choose some monster colors&lt;/legend>
+
+    &lt;div>
+        &lt;input type="color" id="head" name="color"
+               value="#e66465" />
+        &lt;label for="head">Head&lt;/label>
+    &lt;/div>
+
+    &lt;div>
+        &lt;input type="color" id="body" name="color"
+               value="#f6b73c" />
+        &lt;label for="body">Body&lt;/label>
+    &lt;/div>
+
+    &lt;div>
+        &lt;input type="color" id="feet" name="color"
+               value="#3f87a6" />
+        &lt;label for="feet">Feet&lt;/label>
+    &lt;/div>
+
+&lt;/fieldset>
+</pre></code></div>
+              </section>
+              <section id="css-panel" tabindex="0" role="tabpanel" aria-labelledby="css" class="hidden">
+<div id="css-editor"><pre><code>legend {
+    background-color: #000;
+    color: #fff;
+    padding: 3px 6px;
+}
+
+.output {
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input {
+    margin: .4rem;
+}
+</pre></code></div>
+              </section>
+          </section>
+          <h4 class="output-label">Output</h4>
+          <div id="output" class="shadow-container">
+              <shadow-output></shadow-output>
+          </div>
+      </div>
+
+    
+
+    <script src="../../js/codemirror-tabbed-5-31-0.js"></script>
+    <script src="../../js/tabbed-editor.js"></script>
+  </body>
+
+<!-- Mirrored from interactive-examples.mdn.mozilla.net/pages/tabbed/input-color.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:15:01 GMT -->
+</html>

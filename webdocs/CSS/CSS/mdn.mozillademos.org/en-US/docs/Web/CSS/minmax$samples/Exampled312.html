@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/minmax$samples/Example?revision=1331928 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:48:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            #container {
+  display: grid;
+  grid-template-columns: minmax(max-content, 300px) minmax(200px, 1fr) 150px;
+  grid-gap: 5px;
+  box-sizing: border-box;
+  height: 200px;
+  width: 100%;
+  background-color: #8cffa0;
+  padding: 10px;
+}
+
+#container > div {
+  background-color: #8ca0ff;
+  padding: 5px;
+}
+
+        </style>
+        
+        <title>minmax()</title>
+    </head>
+    <body>
+        
+            <div id="container">
+  <div>
+    Item as wide as the content,<br/>
+    but at most 300 pixels.
+  </div>
+  <div>
+    Item with flexible width but a minimum of 200 pixels.
+  </div>
+  <div>
+    Inflexible item of 150 pixels width.
+  </div>
+</div>
+        
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/minmax$samples/Example?revision=1331928 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:48:39 GMT -->
+</html>

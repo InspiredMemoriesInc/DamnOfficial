@@ -1,0 +1,1232 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=31 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:10:30 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  <title>Articles tagged: API</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+
+  
+<link rel="preload" href="../../../static/fonts/locales/ZillaSlab-Regular.f9de6143fdfa.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="license" href="#license">
+  
+
+  
+    
+
+    <link href="../../../static/build/styles/mdn.83865b0f7c30.css" rel="stylesheet" type="text/css">
+
+    
+  
+
+    <link href="../../../static/build/styles/wiki.aaf26c13c39b.css" rel="stylesheet" type="text/css">
+
+
+  <link href="../../../static/build/styles/locale-en-US.ca0bca387b42.css" rel="stylesheet" type="text/css">
+
+  
+    <script>
+      /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
+    </script>
+    
+
+
+
+  
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta property="og:site_name" content="MDN Web Docs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="MDN Web Docs">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../static/img/favicon144.e7e21ca263ca.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../static/img/favicon114.d526f38b09c5.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../static/img/favicon72.cc65d1d762a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../static/img/favicon57.de33179910ae.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="../../../static/img/favicon32.7f3da72dcea1.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script async="" type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  
+      <link rel="alternate" type="application/atom+xml" title="Articles tagged: API" href="../feeds/atom/tag/API">
+  
+
+</head>
+<body class="">
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <!--[endif]---->
+
+  
+  
+      <link rel="alternate" type="application/atom+xml" title="Articles tagged: API" href="../feeds/atom/tag/API">
+  
+
+
+
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/wiki-compat-tables.9978a5ce31c2.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+
+        // interactive editor config
+        win.mdn.interactiveEditor = {
+            siteUrl: "https://developer.mozilla.org",
+            editorUrl: "https://interactive-examples.mdn.mozilla.net"
+        };
+
+    })(this);
+</script>
+    
+    <ul id="nav-access">
+  <li><a href="#content" id="skip-main">Skip to main content</a></li>
+  <li><a id="skip-language" href="#language">Select language</a></li>
+  <li><a href="#q" id="skip-search">Skip to search</a></li>
+</ul>
+
+    <!-- Header -->
+    <header id="main-header" class="header-main">
+      <a href="https://developer.mozilla.org/en-US/" class="logo">MDN Web Docs</a>
+      <div class="nav-toolbox-wrapper">
+        <nav id="main-nav" class="nav-main" role="navigation">
+    <ul>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web">Technologies
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-tech-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+                    <li><a href="../Web/API.html">APIs / DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn">References &amp; Guides
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-learn-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-contact-submenu">
+              <div class="submenu-column">
+                <ul>
+                  <li>
+                      <a href="https://support.mozilla.org/">Get Firefox help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://stackoverflow.com/">Get web development help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                      <a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/tag/API%3Fpage%3D31">Report a content problem
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</nav>
+        <div id="toolbox" class="toolbox">
+  <ul>
+    
+    <li class="nav-login"><div class="login">
+    
+        
+        <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FAPI%3Fpage%3D31" class="login-link js-login-link" data-service="GitHub" rel="nofollow">
+            Sign in<svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+    <title>Github</title>
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path>
+</svg>
+        </a>
+    
+</div></li>
+  </ul>
+</div>
+      </div>
+      <form id="nav-main-search" action="https://developer.mozilla.org/en-US/search" method="get" role="search" class="nav-main-search">
+  <div class="search-wrap">
+    <label for="main-q" class="offscreen">Search</label>
+    <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" aria-hidden="true">
+    <span class="search-trigger">
+        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true">
+    <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path>
+</svg>
+    </span>
+    <button type="submit" class="offscreen">Search</button>
+    <button type="button" id="close-header-search" class="close-header-search transparent">
+        <span class="offscreen">Close search</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+  </div>
+</form>
+    </header> 
+
+  <!-- Content will go here -->
+  <main id="content">
+      
+      <div class="center clear">
+      
+
+    <div id="document-list" class="boxed">
+      <h1>Articles tagged: API</h1>
+      
+        
+  <ol class="pagination">
+  
+    <li class="prev">
+      <a href="APIb385.html?page=30">
+        Previous
+      </a>
+    </li>
+  
+  
+    <li><a href="API2679.html?page=1">1</a></li>
+    
+      <li class="skip">…</li>
+    
+  
+  
+    <li>
+      <a href="APIe459.html?page=28">28</a>
+    </li>
+  
+    <li>
+      <a href="API219f.html?page=29">29</a>
+    </li>
+  
+    <li>
+      <a href="APIb385.html?page=30">30</a>
+    </li>
+  
+    <li class="selected">
+      <a href="APIdcf3.html?page=31">31</a>
+    </li>
+  
+    <li>
+      <a href="APIfa9c.html?page=32">32</a>
+    </li>
+  
+    <li>
+      <a href="APIbd1b.html?page=33">33</a>
+    </li>
+  
+    <li>
+      <a href="APIe51f.html?page=34">34</a>
+    </li>
+  
+  
+    
+      <li class="skip">…</li>
+    
+    <li><a href="API4618.html?page=53">53</a></li>
+  
+  
+    <li class="next">
+      <a href="APIfa9c.html?page=32">
+        Next
+      </a>
+    </li>
+  
+  </ol>
+
+
+
+        <p>Found 5269 documents</p>
+        <ul class="document-list">
+          
+            <li>
+              <a href="../Web/API/LockedFile/onerror.html">Web/API/LockedFile/onerror</a>
+                
+                  <small>Specifies an event listener to receive error events. These events occur when something goes wrong.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/LockedFile/readAsArrayBuffer.html">Web/API/LockedFile/readAsArrayBuffer</a>
+                
+                  <small>The readAsArrayBuffer method is used to read the content of the LockedFile object and provide...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/LockedFile/readAsText.html">Web/API/LockedFile/readAsText</a>
+                
+                  <small>The readAsText method is used to read the content of the LockedFile object and provide the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/LockedFile/truncate.html">Web/API/LockedFile/truncate</a>
+                
+                  <small>The truncate method is used to remove some data within the file.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/LockedFile/write.html">Web/API/LockedFile/write</a>
+                
+                  <small>The write method is used to write some data within the file.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/LongRange.html">Web/API/LongRange</a>
+                
+                  <small>The LongRange dictionary is used to define a range of permitted integer values for a property,...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Long_Tasks_API.html">Web/API/Long_Tasks_API</a>
+                
+                  <small>TBD</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaDeviceInfo.html">Web/API/MediaDeviceInfo</a>
+                
+                  <small>The MediaDevicesInfo interface contains information that describes a single media input or output device.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaDeviceInfo/deviceId.html">Web/API/MediaDeviceInfo/deviceId</a>
+                
+                  <small>The deviceId readonly&nbsp;property of the MediaDeviceInfo interface returns a DOMString that is an...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaDeviceInfo/groupId.html">Web/API/MediaDeviceInfo/groupId</a>
+                
+                  <small>The groupId readonly&nbsp;property of the MediaDeviceInfo interface returns a DOMString that is a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaDeviceInfo/kind.html">Web/API/MediaDeviceInfo/kind</a>
+                
+                  <small>The kind readonly&nbsp;property of the MediaDeviceInfo interface returns an enumerated value, that is...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaDeviceInfo/label.html">Web/API/MediaDeviceInfo/label</a>
+                
+                  <small>The label readonlyinline property of the MediaDeviceInfo interface returns a DOMString, that is...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaDevices.html">Web/API/MediaDevices</a>
+                
+                  <small>The MediaDevices interface provides access to connected media input devices like cameras and...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaDevices/enumerateDevices.html">Web/API/MediaDevices/enumerateDevices</a>
+                
+                  <small>The MediaDevices method enumerateDevices() requests a list of the available media input and...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaDevices/getSupportedConstraints.html">Web/API/MediaDevices/getSupportedConstraints</a>
+                
+                  <small>The getSupportedConstraints() method of the MediaDevices interface returns an object based on...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaDevices/getUserMedia.html">Web/API/MediaDevices/getUserMedia</a>
+                
+                  <small>The MediaDevices getUserMedia() method prompts the user for permission to use a media input...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaDevices/ondevicechange.html">Web/API/MediaDevices/ondevicechange</a>
+                
+                  <small>The MediaDevices.ondevicechange property is an EventHandler which specifies a function to be...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaElementAudioSourceNode.html">Web/API/MediaElementAudioSourceNode</a>
+                
+                  <small>A MediaElementSourceNode has no inputs and exactly one output, and is created using the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaElementAudioSourceNode/MediaElementAudioSourceNode.html">Web/API/MediaElementAudioSourceNode/MediaElementAudioSourceNode</a>
+                
+                  <small>The MediaElementAudioSourceNode() constructor creates a new MediaElementAudioSourceNode object instance.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaError.html">Web/API/MediaError</a>
+                
+                  <small>The MediaError interface represents an error which occurred while handling media in an HTML...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaError/code.html">Web/API/MediaError/code</a>
+                
+                  <small>The read-only property MediaError.code returns a numeric value which represents the kind of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaError/message.html">Web/API/MediaError/message</a>
+                
+                  <small>The read-only property MediaError.message returns a DOMString which contains a human-readable...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaKeyMessageEvent.html">Web/API/MediaKeyMessageEvent</a>
+                
+                  <small>The MediaKeyMessageEvent interface of the EncryptedMediaExtensions API contains the content and...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaKeyMessageEvent/MediaKeyMessageEvent.html">Web/API/MediaKeyMessageEvent/MediaKeyMessageEvent</a>
+                
+                  <small>The MediaKeyMessageEvent constructor creates a new MediaKeyMessageEvent object which creates a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaKeyMessageEvent/message.html">Web/API/MediaKeyMessageEvent/message</a>
+                
+                  <small>The MediaKeyMessageEvent.message read-only property returns an ArrayBuffer with a message from...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaKeyMessageEvent/messageType.html">Web/API/MediaKeyMessageEvent/messageType</a>
+                
+                  <small>The MediaKeyMessageEvent.messageType read-only property indicates the type of message. It may be...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaKeys.html">Web/API/MediaKeys</a>
+                
+                  <small>The MediaKeys interface of EncryptedMediaExtensions API the represents a set of keys that an...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaKeys/createSession.html">Web/API/MediaKeys/createSession</a>
+                
+                  <small>The MediaKeys.createSession() method returns a new MediaKeySession object, which represents a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaKeys/setServerCertificate.html">Web/API/MediaKeys/setServerCertificate</a>
+                
+                  <small>The MediaKeys.setServerCertificate() method a Promise to a server certificate to be used to...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaKeySession.html">Web/API/MediaKeySession</a>
+                
+                  <small>The MediaKeySession interface of the EncryptedMediaExtensions API represents a&nbsp;context for...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaKeySession/close.html">Web/API/MediaKeySession/close</a>
+                
+                  <small>The MediaKeySession.close() method&nbsp;notifies that the current media session is no longer needed,...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaKeySession/closed.html">Web/API/MediaKeySession/closed</a>
+                
+                  <small>The MediaKeySession.closed read-only property returns a Promise signaling when a MediaKeySession...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaKeySession/expiration.html">Web/API/MediaKeySession/expiration</a>
+                
+                  <small>The MediaKeySession.expiration read-only property returns the time after which the keys in the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaKeySession/generateRequest.html">Web/API/MediaKeySession/generateRequest</a>
+                
+                  <small>The MediaKeySession.generateRequest() method returns a Promise after generating a media request...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaKeySession/keyStatuses.html">Web/API/MediaKeySession/keyStatuses</a>
+                
+                  <small>The MediaKeySession.keyStatuses read-only property returns&nbsp;a reference to a read-only...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaKeySession/load.html">Web/API/MediaKeySession/load</a>
+                
+                  <small>The MediaKeySession.load() method returns a Promise that resolves to a boolean value after...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaKeySession/remove.html">Web/API/MediaKeySession/remove</a>
+                
+                  <small>The MediaKeySession.remove() method returns a Promise after removing any session data associated...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaKeySession/sessionId.html">Web/API/MediaKeySession/sessionId</a>
+                
+                  <small>The MediaKeySession.sessionId read-only property contains a unique string generated by the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaKeySession/update.html">Web/API/MediaKeySession/update</a>
+                
+                  <small>The MediaKeySession.update() method loads messages and licenses to the CDM, and then returns a Promise.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaKeyStatusMap.html">Web/API/MediaKeyStatusMap</a>
+                
+                  <small>The MediaKeyStatusMap interface of the EncryptedMediaExtensions API is a read-only map of media...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaKeyStatusMap/entries.html">Web/API/MediaKeyStatusMap/entries</a>
+                
+                  <small>The entries()&nbsp;read-only property of the MediaKeyStatusMap interface returns a new Iterator...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaKeyStatusMap/forEach.html">Web/API/MediaKeyStatusMap/forEach</a>
+                
+                  <small>The forEach property of the MediaKeyStatusMap interface calls callback once for each key-value...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaKeyStatusMap/get.html">Web/API/MediaKeyStatusMap/get</a>
+                
+                  <small>The get property of the MediaKeyStatusMap interface returns the value associated with the given...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaKeyStatusMap/has.html">Web/API/MediaKeyStatusMap/has</a>
+                
+                  <small>The has property of the MediaKeyStatusMap interface returns a Boolean, asserting whether a value...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaKeyStatusMap/keys.html">Web/API/MediaKeyStatusMap/keys</a>
+                
+                  <small>The keys property of the MediaKeyStatusMap interface returns a new Iterator object, containing...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaKeyStatusMap/size.html">Web/API/MediaKeyStatusMap/size</a>
+                
+                  <small>The size&nbsp;read-only property of the MediaKeyStatusMap interface returns the number of key/value...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaKeyStatusMap/values.html">Web/API/MediaKeyStatusMap/values</a>
+                
+                  <small>The values property of the MediaKeyStatusMap interface returns a new Iterator object, containing...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaKeySystemAccess.html">Web/API/MediaKeySystemAccess</a>
+                
+                  <small>The MediaKeySystemAccess interface of the EncryptedMediaExtensions API provides access to a Key...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaKeySystemAccess/createMediaKeys.html">Web/API/MediaKeySystemAccess/createMediaKeys</a>
+                
+                  <small>The MediaKeySystemAccess.createMediaKeys() method returns a Promise that resolves to a new...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaKeySystemAccess/getConfiguration.html">Web/API/MediaKeySystemAccess/getConfiguration</a>
+                
+                  <small>The MediaKeySystemAccess.getConfiguration() method returns a MediaKeySystemConfiguration object...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaKeySystemAccess/keySystem.html">Web/API/MediaKeySystemAccess/keySystem</a>
+                
+                  <small>The MediaKeySystemAccess.keySystem read-only property returns a DOMString identifying the key...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaKeySystemConfiguration.html">Web/API/MediaKeySystemConfiguration</a>
+                
+                  <small>The MediaKeySystemConfiguration interface Encrypted Media Extensions API provides configuration...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaKeySystemConfiguration/audioCapabilities.html">Web/API/MediaKeySystemConfiguration/audioCapabilities</a>
+                
+                  <small>The MediaKeySystemConfiguration.audioCapabilities read-only property returns an array of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaKeySystemConfiguration/distinctiveIdentifier.html">Web/API/MediaKeySystemConfiguration/distinctiveIdentifier</a>
+                
+                  <small>The MediaKeySystemConfiguration.distinctiveIdentifier read-only property indicates whether a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaKeySystemConfiguration/initDataTypes.html">Web/API/MediaKeySystemConfiguration/initDataTypes</a>
+                
+                  <small>The MediaKeySystemConfiguration.initDataTypes read-only property returns a list of supported...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaKeySystemConfiguration/persistentState.html">Web/API/MediaKeySystemConfiguration/persistentState</a>
+                
+                  <small>The MediaKeySystemConfiguration.persistentState read-only property indicates whether the ability...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaKeySystemConfiguration/videoCapabilities.html">Web/API/MediaKeySystemConfiguration/videoCapabilities</a>
+                
+                  <small>The MediaKeySystemConfiguration.videoCapabilities read-only property returns an array of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaMetadata/album.html">Web/API/MediaMetadata/album</a>
+                
+                  <small>The album property of the MediaMetaData interface returns or sets the name of the album or...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaMetadata/title.html">Web/API/MediaMetadata/title</a>
+                
+                  <small>The title property of the MediaMetaData interface returns or sets the title of the media to be played.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaQueryList.html">Web/API/MediaQueryList</a>
+                
+                  <small>A MediaQueryList object stores information on a media query applied to a document, and handles...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaQueryList/addListener.html">Web/API/MediaQueryList/addListener</a>
+                
+                  <small>The addListener() method of the MediaQueryList interface adds a listener to the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaQueryList/matches.html">Web/API/MediaQueryList/matches</a>
+                
+                  <small>The matches read-only property of the MediaQueryList interface is a Boolean that returns true if...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaQueryList/media.html">Web/API/MediaQueryList/media</a>
+                
+                  <small>The media read-only property of the MediaQueryList interface is a DOMString representing a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaQueryList/onchange.html">Web/API/MediaQueryList/onchange</a>
+                
+                  <small>The onchange property of the MediaQueryList interface is an event handler property representing...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaQueryList/removeListener.html">Web/API/MediaQueryList/removeListener</a>
+                
+                  <small>The removeListener() method of the MediaQueryList interface removes a listener from the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaQueryListEvent.html">Web/API/MediaQueryListEvent</a>
+                
+                  <small>The MediaQueryListEvent object stores information on the changes that have happened to a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaQueryListEvent/matches.html">Web/API/MediaQueryListEvent/matches</a>
+                
+                  <small>The matches read-only property of the MediaQueryListEvent interface is a Boolean that returns...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaQueryListEvent/media.html">Web/API/MediaQueryListEvent/media</a>
+                
+                  <small>The media read-only property of the MediaQueryListEvent interface is a DOMString representing a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaQueryListEvent/MediaQueryListEvent.html">Web/API/MediaQueryListEvent/MediaQueryListEvent</a>
+                
+                  <small>The MediaQueryListEvent constructor creates a new MediaQueryListEvent instance.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaQueryListListener.html">Web/API/MediaQueryListListener</a>
+                
+                  <small>A MediaQueryList object maintains a list of media queries on a document, and handles sending...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaRecorder.html">Web/API/MediaRecorder</a>
+                
+                  <small>The MediaRecorder interface of the MediaStream Recording API provides functionality to easily...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaRecorder/audioBitsPerSecond.html">Web/API/MediaRecorder/audioBitsPerSecond</a>
+                
+                  <small>The audioBitsPerSecond read-only property of the MediaRecorder interface returns the audio...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaRecorder/ignoreMutedMedia.html">Web/API/MediaRecorder/ignoreMutedMedia</a>
+                
+                  <small>The ignoreMutedMedia property of the MediaRecorder interface indicates whether the MediaRecorder...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaRecorder/isTypeSupported.html">Web/API/MediaRecorder/isTypeSupported</a>
+                
+                  <small>The MediaRecorder.isTypeSupported() method returns a Boolean which is true if the MIME type...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaRecorder/MediaRecorder.html">Web/API/MediaRecorder/MediaRecorder</a>
+                
+                  <small>The MediaRecorder() constructor creates a new MediaRecorder object that will record a specified...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaRecorder/mimeType.html">Web/API/MediaRecorder/mimeType</a>
+                
+                  <small>The MediaRecorder.mimeType read-only property&nbsp;returns the MIME type that is being used as the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaRecorder/ondataavailable.html">Web/API/MediaRecorder/ondataavailable</a>
+                
+                  <small>The MediaRecorder.ondataavailable event handler (part of the MediaStream Recording API) handles...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaRecorder/onerror.html">Web/API/MediaRecorder/onerror</a>
+                
+                  <small>The MediaRecorder interface's onerror event handler is called by the MediaStream Recording API...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaRecorder/onpause.html">Web/API/MediaRecorder/onpause</a>
+                
+                  <small>The MediaRecorder.onpause event handler (part of the MediaRecorder API) handles the pause event,...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaRecorder/onresume.html">Web/API/MediaRecorder/onresume</a>
+                
+                  <small>The MediaRecorder.onresume event handler (part of the MediaRecorder API) handles the resume...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaRecorder/onstart.html">Web/API/MediaRecorder/onstart</a>
+                
+                  <small>The MediaRecorder.onstartevent handler (part of the MediaRecorder API) handles the start event,...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaRecorder/onstop.html">Web/API/MediaRecorder/onstop</a>
+                
+                  <small>The MediaRecorder.onstop event handler (part of the MediaRecorder API) handles the stop event,...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaRecorder/onwarning.html">Web/API/MediaRecorder/onwarning</a>
+                
+                  <small>The MediaRecorder.onwarning event handler (part of the MediaRecorder API) handles the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaRecorder/pause.html">Web/API/MediaRecorder/pause</a>
+                
+                  <small>The Media.pause() method (part of the MediaRecorder API) is used to pause recording of media streams.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaRecorder/requestData.html">Web/API/MediaRecorder/requestData</a>
+                
+                  <small>The MediaRecorder.requestData() method (part of the MediaRecorder API) is used to raise a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaRecorder/resume.html">Web/API/MediaRecorder/resume</a>
+                
+                  <small>The MediaRecorder.resume() method (part of the MediaRecorder API) is used to resume media...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaRecorder/start.html">Web/API/MediaRecorder/start</a>
+                
+                  <small>The MediaRecorder method start(), which is part of the MediaStream Recording API, begins...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaRecorder/state.html">Web/API/MediaRecorder/state</a>
+                
+                  <small>The MediaRecorder.state&nbsp;read-only property returns the current state of the current MediaRecorder object.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaRecorder/stop.html">Web/API/MediaRecorder/stop</a>
+                
+                  <small>The MediaRecorder.stop() method (part of the MediaRecorder API) is used to stop media capture.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaRecorder/stream.html">Web/API/MediaRecorder/stream</a>
+                
+                  <small>The MediaRecorder.stream&nbsp;read-only property returns the stream that was passed into the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaRecorderErrorEvent/error.html">Web/API/MediaRecorderErrorEvent/error</a>
+                
+                  <small>The read-only error property in the MediaRecordingErrorEvent interface is a DOMException object...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaRecorderErrorEvent/MediaRecorderErrorEvent.html">Web/API/MediaRecorderErrorEvent/MediaRecorderErrorEvent</a>
+                
+                  <small>The MediaRecorderErrorEvent() constructor creates a new MediaRecorderErrorEvent object that...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaSettingsRange.html">Web/API/MediaSettingsRange</a>
+                
+                  <small>The MediaSettingsRange interface of the the MediaStream Image Capture API provides the possible...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaSettingsRange/max.html">Web/API/MediaSettingsRange/max</a>
+                
+                  <small>The max read-only property of the MediaSettingsRange interface returns the maximum value of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaSettingsRange/min.html">Web/API/MediaSettingsRange/min</a>
+                
+                  <small>The min read-only property of the MediaSettingsRange interface returns the minimum value of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaSettingsRange/step.html">Web/API/MediaSettingsRange/step</a>
+                
+                  <small>The step read-only property of the MediaSettingsRange interface returns the minimum difference...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaSource.html">Web/API/MediaSource</a>
+                
+                  <small>The MediaSource interface of the Media Source Extensions API represents a source of media data...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaSource/activeSourceBuffers.html">Web/API/MediaSource/activeSourceBuffers</a>
+                
+                  <small>The activeSourceBuffers read-only property of the MediaSource interface returns a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaSource/addSourceBuffer.html">Web/API/MediaSource/addSourceBuffer</a>
+                
+                  <small>The addSourceBuffer() method of the MediaSource interface creates a new SourceBuffer of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/MediaSource/clearLiveSeekableRange.html">Web/API/MediaSource/clearLiveSeekableRange</a>
+                
+                  <small>The clearLiveSeekableRange() method of the MediaSource interface clears a seekable range...</small>
+                
+            </li>
+          
+        </ul>
+        
+  <ol class="pagination">
+  
+    <li class="prev">
+      <a href="APIb385.html?page=30">
+        Previous
+      </a>
+    </li>
+  
+  
+    <li><a href="API2679.html?page=1">1</a></li>
+    
+      <li class="skip">…</li>
+    
+  
+  
+    <li>
+      <a href="APIe459.html?page=28">28</a>
+    </li>
+  
+    <li>
+      <a href="API219f.html?page=29">29</a>
+    </li>
+  
+    <li>
+      <a href="APIb385.html?page=30">30</a>
+    </li>
+  
+    <li class="selected">
+      <a href="APIdcf3.html?page=31">31</a>
+    </li>
+  
+    <li>
+      <a href="APIfa9c.html?page=32">32</a>
+    </li>
+  
+    <li>
+      <a href="APIbd1b.html?page=33">33</a>
+    </li>
+  
+    <li>
+      <a href="APIe51f.html?page=34">34</a>
+    </li>
+  
+  
+    
+      <li class="skip">…</li>
+    
+    <li><a href="API4618.html?page=53">53</a></li>
+  
+  
+    <li class="next">
+      <a href="APIfa9c.html?page=32">
+        Next
+      </a>
+    </li>
+  
+  </ol>
+
+
+
+      
+    </div>
+
+
+      </div>
+  </main>
+  <!-- Footer -->
+     
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script async="" type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script src="../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><!--[endif]---->
+
+    
+    <script src="../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../static/build/js/wiki.b26a4c181df3.js" charset="utf-8" id="wikiscript"></script>
+
+
+
+  
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=31 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:10:30 GMT -->
+</body></html>

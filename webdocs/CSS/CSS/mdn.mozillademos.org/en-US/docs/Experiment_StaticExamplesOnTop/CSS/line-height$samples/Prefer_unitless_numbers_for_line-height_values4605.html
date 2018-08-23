@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Experiment:StaticExamplesOnTop/CSS/line-height$samples/Prefer_unitless_numbers_for_line-height_values?revision=1230527 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:52:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            .green {
+  line-height: 1.1;
+  border: solid limegreen;
+}
+.red {
+  line-height: 1.1em;
+  border: solid red;
+}
+h1 {
+  font-size: 30px;
+}
+.box {
+  width: 18em;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 15px;
+}
+
+        </style>
+        
+        <title>line-height</title>
+    </head>
+    <body>
+        
+            <div class="box green">
+ <h1>Avoid unexpected results by using unitless line-height</h1>
+  length and percentage line-heights have poor inheritance behavior ...
+</div>
+
+<div class="box red">
+ <h1>Avoid unexpected results by using unitless line-height</h1>
+  length and percentage line-heights have poor inheritance behavior ...
+</div>
+
+<!-- The first <h1> line-height is calculated from its own font-size   (30px × 1.1) = 33px  --> 
+<!-- The second <h1> line-height results from the red div's font-size  (15px × 1.1) = 16.5px,  probably not what you want -->
+
+        
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Experiment:StaticExamplesOnTop/CSS/line-height$samples/Prefer_unitless_numbers_for_line-height_values?revision=1230527 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:52:25 GMT -->
+</html>

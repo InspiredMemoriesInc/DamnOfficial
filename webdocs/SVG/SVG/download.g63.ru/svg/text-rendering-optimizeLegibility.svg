@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+   version="1.1" width="660" height="40"
+   text-rendering="optimizeLegibility">
+  <link xmlns="http://www.w3.org/1999/xhtml" href='../../fonts.googleapis.com/cssc852.css?family=Sofadi+One' rel='stylesheet' type='text/css' />
+  <style>
+      text {font: 30px 'Sofadi One', cursive;}
+  </style>
+  <g>
+    <text y="30">The quick brown fox jumps over the lazy dog.</text>
+  </g>
+</svg>

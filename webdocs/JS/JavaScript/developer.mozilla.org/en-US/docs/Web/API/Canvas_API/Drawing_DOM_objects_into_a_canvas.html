@@ -1,0 +1,1212 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Drawing_DOM_objects_into_a_canvas by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 10:06:24 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  <title>Drawing DOM objects into a canvas</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+
+  
+<link rel="preload" href="../../../../../static/fonts/locales/ZillaSlab-Regular.f9de6143fdfa.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="license" href="#license">
+  
+
+  
+    
+    
+
+    <link href="../../../../../static/build/styles/mdn.83865b0f7c30.css" rel="stylesheet" type="text/css">
+
+    
+  
+
+    <link href="../../../../../static/build/styles/wiki.aaf26c13c39b.css" rel="stylesheet" type="text/css">
+
+
+    
+
+  <link href="../../../../../static/build/styles/locale-en-US.ca0bca387b42.css" rel="stylesheet" type="text/css">
+
+  
+    <script>
+      /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
+    </script>
+    
+
+
+
+  
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta property="og:site_name" content="MDN Web Docs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="MDN Web Docs">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../static/img/favicon144.e7e21ca263ca.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../static/img/favicon114.d526f38b09c5.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../static/img/favicon72.cc65d1d762a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../../../static/img/favicon57.de33179910ae.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="../../../../../static/img/favicon32.7f3da72dcea1.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script async="" type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  <link rel="dns-prefetch" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Drawing_DOM_objects_into_a_canvas$json">
+  <link rel="canonical" href="Drawing_DOM_objects_into_a_canvas.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="Drawing_DOM_objects_into_a_canvas.html" title="Drawing DOM objects into a canvas">
+  
+    
+      <link rel="alternate" hreflang="de" href="https://developer.mozilla.org/de/docs/Web/HTML/Canvas/Drawing_DOM_objects_into_a_canvas" title="Drawing DOM objects into a canvas">
+    
+      <link rel="alternate" hreflang="es" href="https://developer.mozilla.org/es/docs/Web/HTML/Canvas/Drawing_DOM_objects_into_a_canvas" title="Drawing DOM objects into a canvas">
+    
+      <link rel="alternate" hreflang="fr" href="https://developer.mozilla.org/fr/docs/Web/HTML/Canvas/Dessiner_des_objets_DOM_dans_un_element_canvas" title="Dessiner des objets DOM dans un élément canvas">
+    
+      <link rel="alternate" hreflang="ja" href="https://developer.mozilla.org/ja/docs/Web/HTML/Canvas/Drawing_DOM_objects_into_a_canvas" title="DOM オブジェクトを Canvas に描画する">
+    
+      <link rel="alternate" hreflang="ru" href="https://developer.mozilla.org/ru/docs/Web/API/Canvas_API/Drawing_DOM_objects_into_a_canvas" title="Рисование DOM объектов в canvas">
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Drawing_DOM_objects_into_a_canvas" title="将 DOM 对象绘制到 canvas 中">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="Drawing DOM objects into a canvas">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Drawing_DOM_objects_into_a_canvas">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Drawing_DOM_objects_into_a_canvas">
+  <meta name="twitter:title" content="Drawing DOM objects into a canvas">
+  
+  <meta property="og:description" content="Although it's not trivial (for security reasons), it's possible to draw DOM content—such as HTML—into a canvas. This article, derived from this blog post by Robert O'Callahan, covers how you can do it securely, safely, and in accordance with the specification.">
+  <meta name="description" content="Although it's not trivial (for security reasons), it's possible to draw DOM content—such as HTML—into a canvas. This article, derived from this blog post by Robert O'Callahan, covers how you can do it securely, safely, and in accordance with the specification.">
+  <meta name="twitter:description" content="Although it's not trivial (for security reasons), it's possible to draw DOM content—such as HTML—into a canvas. This article, derived from this blog post by Robert O'Callahan, covers how you can do it securely, safely, and in accordance with the specification.">
+  
+
+</head>
+<body data-slug="Web/API/Canvas_API/Drawing_DOM_objects_into_a_canvas" contextmenu="edit-history-menu" data-search-url="" class="document">
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <!--[endif]---->
+
+  
+  <link rel="dns-prefetch" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Drawing_DOM_objects_into_a_canvas$json">
+  <link rel="canonical" href="Drawing_DOM_objects_into_a_canvas.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="Drawing_DOM_objects_into_a_canvas.html" title="Drawing DOM objects into a canvas">
+  
+    
+      <link rel="alternate" hreflang="de" href="https://developer.mozilla.org/de/docs/Web/HTML/Canvas/Drawing_DOM_objects_into_a_canvas" title="Drawing DOM objects into a canvas">
+    
+      <link rel="alternate" hreflang="es" href="https://developer.mozilla.org/es/docs/Web/HTML/Canvas/Drawing_DOM_objects_into_a_canvas" title="Drawing DOM objects into a canvas">
+    
+      <link rel="alternate" hreflang="fr" href="https://developer.mozilla.org/fr/docs/Web/HTML/Canvas/Dessiner_des_objets_DOM_dans_un_element_canvas" title="Dessiner des objets DOM dans un élément canvas">
+    
+      <link rel="alternate" hreflang="ja" href="https://developer.mozilla.org/ja/docs/Web/HTML/Canvas/Drawing_DOM_objects_into_a_canvas" title="DOM オブジェクトを Canvas に描画する">
+    
+      <link rel="alternate" hreflang="ru" href="https://developer.mozilla.org/ru/docs/Web/API/Canvas_API/Drawing_DOM_objects_into_a_canvas" title="Рисование DOM объектов в canvas">
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Drawing_DOM_objects_into_a_canvas" title="将 DOM 对象绘制到 canvas 中">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="Drawing DOM objects into a canvas">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Drawing_DOM_objects_into_a_canvas">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Drawing_DOM_objects_into_a_canvas">
+  <meta name="twitter:title" content="Drawing DOM objects into a canvas">
+  
+  <meta property="og:description" content="Although it's not trivial (for security reasons), it's possible to draw DOM content—such as HTML—into a canvas. This article, derived from this blog post by Robert O'Callahan, covers how you can do it securely, safely, and in accordance with the specification.">
+  <meta name="description" content="Although it's not trivial (for security reasons), it's possible to draw DOM content—such as HTML—into a canvas. This article, derived from this blog post by Robert O'Callahan, covers how you can do it securely, safely, and in accordance with the specification.">
+  <meta name="twitter:description" content="Although it's not trivial (for security reasons), it's possible to draw DOM content—such as HTML—into a canvas. This article, derived from this blog post by Robert O'Callahan, covers how you can do it securely, safely, and in accordance with the specification.">
+  
+
+
+
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/wiki-compat-tables.9978a5ce31c2.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+
+        // interactive editor config
+        win.mdn.interactiveEditor = {
+            siteUrl: "https://developer.mozilla.org",
+            editorUrl: "https://interactive-examples.mdn.mozilla.net"
+        };
+
+    })(this);
+</script>
+    
+    <ul id="nav-access">
+  <li><a href="#content" id="skip-main">Skip to main content</a></li>
+  <li><a id="skip-language" href="#language">Select language</a></li>
+  <li><a href="#q" id="skip-search">Skip to search</a></li>
+</ul>
+
+    <!-- Header -->
+    <header id="main-header" class="header-main">
+      <a href="https://developer.mozilla.org/en-US/" class="logo">MDN Web Docs</a>
+      <div class="nav-toolbox-wrapper">
+        <nav id="main-nav" class="nav-main" role="navigation">
+    <ul>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web">Technologies
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-tech-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+                    <li><a href="../../API.html">APIs / DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn">References &amp; Guides
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-learn-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-contact-submenu">
+              <div class="submenu-column">
+                <ul>
+                  <li>
+                      <a href="https://support.mozilla.org/">Get Firefox help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://stackoverflow.com/">Get web development help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                      <a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Drawing_DOM_objects_into_a_canvas">Report a content problem
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</nav>
+        <div id="toolbox" class="toolbox">
+  <ul>
+    
+    <li class="nav-login"><div class="login">
+    
+        
+        <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FCanvas_API%2FDrawing_DOM_objects_into_a_canvas" class="login-link js-login-link" data-service="GitHub" rel="nofollow">
+            Sign in<svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+    <title>Github</title>
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path>
+</svg>
+        </a>
+    
+</div></li>
+  </ul>
+</div>
+      </div>
+      <form id="nav-main-search" action="https://developer.mozilla.org/en-US/search" method="get" role="search" class="nav-main-search">
+  <div class="search-wrap">
+    <label for="main-q" class="offscreen">Search</label>
+    <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" aria-hidden="true">
+    <span class="search-trigger">
+        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true">
+    <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path>
+</svg>
+    </span>
+    <button type="submit" class="offscreen">Search</button>
+    <button type="button" id="close-header-search" class="close-header-search transparent">
+        <span class="offscreen">Close search</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+  </div>
+</form>
+    </header> 
+
+  <!-- Content will go here -->
+  <main id="content">
+      
+  <!-- heading -->
+  <div id="wiki-document-head" class="document-head">
+    <div class="center">
+      <!-- action buttons -->
+      <div class="document-actions">
+        
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons">
+      <li>
+          <button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false">
+              <svg class="icon icon-language" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M10.219 16.844c-.031.109-.797-.25-1-.328-.203-.094-1.125-.609-1.359-.766s-1.125-.891-1.234-.938a28.275 28.275 0 0 1-2.094 2.828c-.281.328-1.125 1.391-1.641 1.719-.078.047-.531.094-.594.063.25-.187.969-1.078 1.281-1.437.391-.453 2.25-3.047 2.562-3.641.328-.594 1.312-2.562 1.359-2.75-.156-.016-1.391.406-1.719.516-.313.094-1.172.297-1.234.344-.063.063-.016.25-.047.313s-.313.203-.484.234a1.647 1.647 0 0 1-.734 0c-.203-.047-.391-.25-.438-.328 0 0-.063-.094-.078-.359.187-.063.5-.078.844-.172s1.188-.344 1.641-.5 1.328-.484 1.594-.547c.281-.047.984-.516 1.359-.641s.641-.281.656-.203 0 .422-.016.516c-.016.078-.766 1.547-.875 1.781-.063.125-.5.953-1.203 2.047.25.109.781.328 1 .438.266.125 2.125.906 2.219.938s.266.75.234.875zM7.016 9.25c.047.266-.031.375-.063.438-.156.297-.547.5-.781.594s-.625.187-.938.187c-.141-.016-.422-.063-.766-.406-.187-.203-.328-.75-.266-.688s.516.125.719.078.688-.187.906-.25c.234-.078.703-.203.859-.219.156 0 .281.063.328.266zm10.906 2.016l.984 3.547-2.172-.656zM.609 23.766l10.844-3.625V4.016L.609 7.657v16.109zM20 18.813l1.594.484-2.828-10.266-1.563-.484-3.375 8.375 1.594.484.703-1.719 3.297 1.016zM12.141 3.781l8.953 2.875V.718zM17 24.453l2.469.203-.844 2.5L18 26.125c-1.266.812-2.828 1.437-4.312 1.687-.453.094-.969.187-1.422.187h-1.313c-1.656 0-4.672-.984-5.984-1.937-.094-.078-.125-.141-.125-.25 0-.172.125-.297.281-.297.141 0 .875.453 1.078.547 1.406.703 3.375 1.344 4.953 1.344 1.953 0 3.281-.25 5.063-1.016.516-.234.969-.531 1.453-.797zm7-16.859v16.859c-12.078-3.844-12.094-3.844-12.094-3.844C11.656 20.718.453 24.5.297 24.5a.3.3 0 0 1-.281-.203c0-.016-.016-.031-.016-.047V7.406c.016-.047.031-.125.063-.156.094-.109.219-.141.313-.172.047-.016 1-.328 2.328-.781v-6l8.719 3.094C11.532 3.36 21.251 0 21.392 0c.172 0 .313.125.313.328v6.531z"></path>
+</svg>
+              <span>Languages</span>
+          </button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                
+                
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/de/docs/Web/HTML/Canvas/Drawing_DOM_objects_into_a_canvas" data-locale="de" title="German">Deutsch (de)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/es/docs/Web/HTML/Canvas/Drawing_DOM_objects_into_a_canvas" data-locale="es" title="Spanish">Español (es)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/fr/docs/Web/HTML/Canvas/Dessiner_des_objets_DOM_dans_un_element_canvas" data-locale="fr" title="French">Français (fr)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ja/docs/Web/HTML/Canvas/Drawing_DOM_objects_into_a_canvas" data-locale="ja" title="Japanese">日本語 (ja)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ru/docs/Web/API/Canvas_API/Drawing_DOM_objects_into_a_canvas" data-locale="ru" title="Russian">Русский (ru)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Drawing_DOM_objects_into_a_canvas" data-locale="zh-CN" title="Chinese (Simplified)">中文 (简体) (zh-CN)</a></bdi></li>
+                
+              
+
+              
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Drawing_DOM_objects_into_a_canvas$locales" rel="nofollow" id="translations-add">Add a translation</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+      
+      <li class="page-buttons-edit">
+          <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Drawing_DOM_objects_into_a_canvas$edit" class="button neutral" id="edit-button" rel="nofollow">
+              <svg class="icon icon-pencil" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M5.672 24l1.422-1.422-3.672-3.672L2 20.328V22h2v2h1.672zm8.172-14.5a.329.329 0 0 0-.344-.344.368.368 0 0 0-.266.109l-8.469 8.469a.366.366 0 0 0-.109.266c0 .203.141.344.344.344a.368.368 0 0 0 .266-.109l8.469-8.469a.366.366 0 0 0 .109-.266zM13 6.5l6.5 6.5-13 13H0v-6.5zM23.672 8c0 .531-.219 1.047-.578 1.406L20.5 12 14 5.5l2.594-2.578c.359-.375.875-.594 1.406-.594s1.047.219 1.422.594l3.672 3.656c.359.375.578.891.578 1.422z"></path>
+</svg>
+              Edit
+          </a>
+      </li>
+      
+
+        
+
+        <li class="page-buttons-advanced">
+            <button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false">
+                <svg class="icon icon-gear" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M16 14c0-2.203-1.797-4-4-4s-4 1.797-4 4 1.797 4 4 4 4-1.797 4-4zm8-1.703v3.469c0 .234-.187.516-.438.562l-2.891.438a8.86 8.86 0 0 1-.609 1.422c.531.766 1.094 1.453 1.672 2.156.094.109.156.25.156.391s-.047.25-.141.359c-.375.5-2.484 2.797-3.016 2.797a.795.795 0 0 1-.406-.141l-2.156-1.687a9.449 9.449 0 0 1-1.422.594c-.109.953-.203 1.969-.453 2.906a.573.573 0 0 1-.562.438h-3.469c-.281 0-.531-.203-.562-.469l-.438-2.875a9.194 9.194 0 0 1-1.406-.578l-2.203 1.672c-.109.094-.25.141-.391.141s-.281-.063-.391-.172c-.828-.75-1.922-1.719-2.578-2.625a.607.607 0 0 1 .016-.718c.531-.719 1.109-1.406 1.641-2.141a8.324 8.324 0 0 1-.641-1.547l-2.859-.422A.57.57 0 0 1 0 15.705v-3.469c0-.234.187-.516.422-.562l2.906-.438c.156-.5.359-.969.609-1.437a37.64 37.64 0 0 0-1.672-2.156c-.094-.109-.156-.234-.156-.375s.063-.25.141-.359c.375-.516 2.484-2.797 3.016-2.797.141 0 .281.063.406.156L7.828 5.94a9.449 9.449 0 0 1 1.422-.594c.109-.953.203-1.969.453-2.906a.573.573 0 0 1 .562-.438h3.469c.281 0 .531.203.562.469l.438 2.875c.484.156.953.344 1.406.578l2.219-1.672c.094-.094.234-.141.375-.141s.281.063.391.156c.828.766 1.922 1.734 2.578 2.656a.534.534 0 0 1 .109.344c0 .141-.047.25-.125.359-.531.719-1.109 1.406-1.641 2.141.266.5.484 1.016.641 1.531l2.859.438a.57.57 0 0 1 .453.562z"></path>
+</svg>
+                <span>Advanced</span>
+            </button>
+            <div class="submenu js-submenu" id="advanced-menu-submenu">
+                <!-- this page -->
+                <div class="submenu-column">
+                    <div class="title">Advanced</div>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Drawing_DOM_objects_into_a_canvas$history" rel="nofollow">History</a></li>
+                        
+                        
+                        
+
+
+                
+
+                <li class="page-print"><a href="#" onclick="return window.print();">Print this article</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+      </div>
+
+      <div class="document-title">
+        <h1>Drawing DOM objects into a canvas</h1>
+      </div>
+    <nav class="crumbs" role="navigation">
+      <ol typeof="BreadcrumbList" vocab="https://schema.org/" aria-label="breadcrumbs">
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="https://developer.mozilla.org/en-US/docs/Web" property="item" typeof="WebPage">
+              <span property="name">Web technology for developers</span>
+            </a>
+            <meta property="position" content="1">
+          </li>
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="../../API.html" property="item" typeof="WebPage">
+              <span property="name">Web APIs</span>
+            </a>
+            <meta property="position" content="2">
+          </li>
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="../Canvas_API.html" property="item" typeof="WebPage">
+              <span property="name">Canvas API</span>
+            </a>
+            <meta property="position" content="3">
+          </li>
+        
+        <li property="itemListElement" typeof="ListItem" class="crumb">
+          <span property="name">Drawing DOM objects into a canvas</span>
+        </li>
+      </ol>
+    </nav></div>
+  </div>
+  
+  <div id="toc" class="toc">
+    <div class="center">
+      <div class="toc-head">Jump to:</div>
+        <ol class="toc-links">
+          <li><a rel="internal" href="#An_overview">An overview</a></li><li><a rel="internal" href="#Step-by-step">Step-by-step</a></li><li><a rel="internal" href="#Example">Example</a></li><li><a rel="internal" href="#Security">Security</a></li><li><a rel="internal" href="#Embedding_Svg_in_Canvas">Embedding Svg in Canvas</a></li><li><a rel="internal" href="#Adding_svg_animations_to_a_canvas">Adding svg animations to a canvas</a></li><li><a rel="internal" href="#Drawing_HTML">Drawing HTML</a></li><li><a rel="internal" href="#See_also">See also</a>
+        </li></ol>
+    </div>
+  </div>
+  
+
+      <div class="center clear">
+      
+
+    <div class="wiki-main-content" id="document-main"><div class="center">
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-left-present">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-main wiki-column text-content">
+
+              
+
+              
+              
+
+              
+
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <div></div>
+
+<div class="warning">This is still a work in progress feel free to make changes you think would improve it.</div>
+
+<div class="note">
+<p><strong>Before you start</strong></p>
+
+<p>To understand this article, it is recommended to be comfortable with <a href="https://developer.mozilla.org/en-US/docs/Glossary/JavaScript" class="glossaryLink" title="JavaScript: JavaScript (JS) is a programming language mostly used to dynamically script webpages on the client side, but it is also often&nbsp;utilized on the server-side, using packages such as Node.js.">JavaScript</a>, the <a href="https://developer.mozilla.org/en-US/docs/Glossary/Canvas" class="glossaryLink" title="The definition of that term (Canvas) has not been written yet; please consider contributing it!">Canvas</a> <a href="../../../Glossary/API.html" class="glossaryLink" title="API: An API (Application Programming Interface) is a set of features and rules that exist inside a software program (the application) enabling interaction with it through software - as opposed to a human user interface. The API can be seen as a simple contract (the interface) between the application offering it and other items, such as third party software or hardware.">API</a> and the <a href="../../../Glossary/DOM.html" class="glossaryLink" title="DOM: The DOM (Document Object Model) is an API that represents and interacts with any HTML or XML document. The DOM is a document model loaded in the browser and representing the document as a node tree, where each node represents part of the document (e.g. an element, text string, or comment).">DOM</a> <a href="../../../Glossary/API.html" class="glossaryLink" title="API: An API (Application Programming Interface) is a set of features and rules that exist inside a software program (the application) enabling interaction with it through software - as opposed to a human user interface. The API can be seen as a simple contract (the interface) between the application offering it and other items, such as third party software or hardware.">API</a></p>
+
+<p>It's even better if you are also familiar with <a href="https://developer.mozilla.org/en-US/docs/Glossary/SVG" class="glossaryLink" title="SVG: Scalable Vector Graphics (SVG) is a 2D vector image format based on an XML syntax.">SVG</a>.</p>
+</div>
+
+<p>Although it's not trivial (for security reasons), it's possible to draw <a href="../../../Glossary/DOM.html" class="glossaryLink" title="DOM: The DOM (Document Object Model) is an API that represents and interacts with any HTML or XML document. The DOM is a document model loaded in the browser and representing the document as a node tree, where each node represents part of the document (e.g. an element, text string, or comment).">DOM</a> content—such as <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML" class="glossaryLink" title="HTML: HTML (HyperText Markup Language) is a descriptive language that specifies webpage structure.">HTML</a>—into a <a href="https://developer.mozilla.org/en-US/docs/Glossary/canvas" class="glossaryLink" title="The definition of that term (canvas) has not been written yet; please consider contributing it!">canvas</a>. This article, derived from <a rel="noopener" href="http://robert.ocallahan.org/2011/11/drawing-dom-content-to-canvas.html" class="external" title="http://robert.ocallahan.org/2011/11/drawing-dom-content-to-canvas.html">this blog post</a> by Robert O'Callahan, covers how you can do it securely, safely, and in accordance with the specification.</p>
+
+<a class="dashAnchor" name="//apple_ref/Section/An%20overview"></a><h2 id="An_overview">An overview</h2>
+
+<p>You can't just draw HTML into a canvas. Instead, you need to use an <a href="https://developer.mozilla.org/en-US/docs/Glossary/SVG" class="glossaryLink" title="SVG: Scalable Vector Graphics (SVG) is a 2D vector image format based on an XML syntax.">SVG</a> image containing the content you want to render. To draw HTML content, you'd use a <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/foreignObject" title="The <foreignObject> SVG element allows for inclusion of a foreign XML namespace which has its graphical content drawn by a different user agent. The included foreign graphical content is subject to SVG transformations and compositing."><code>&lt;foreignObject&gt;</code></a> element containing the HTML, then draw that SVG image into your canvas.</p>
+
+<a class="dashAnchor" name="//apple_ref/Section/Step%2Dby%2Dstep"></a><h2 id="Step-by-step">Step-by-step</h2>
+
+<p>The only really tricky thing here—and that's probably an overstatement—is creating the SVG for your image. All you need to do is create a string containing the <a href="https://developer.mozilla.org/en-US/docs/Glossary/XML" class="glossaryLink" title="XML: eXtensible Markup Language (XML) is a generic markup language specified by the W3C. The information technology (IT) industry uses many languages based on XML as data-description languages.">XML</a> for the SVG and construct a <a href="../Blob.html" title="A Blob object represents a file-like object of immutable, raw data. Blobs represent data that isn't necessarily in a JavaScript-native format. The File interface is based on Blob, inheriting blob functionality and expanding it to support files on the user's system."><code>Blob</code></a> with the following parts.</p>
+
+<ol>
+ <li>The MIME media type of the blob should be "image/svg+xml".</li>
+ <li>The <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg" title="The svg element is a container that defines a new coordinate system and viewport. It is used as the outermost element of any SVG document but it can also be used to embed a SVG fragment inside any SVG or HTML document."><code>&lt;svg&gt;</code></a> element.</li>
+ <li>Inside that, the <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/foreignObject" title="The <foreignObject> SVG element allows for inclusion of a foreign XML namespace which has its graphical content drawn by a different user agent. The included foreign graphical content is subject to SVG transformations and compositing."><code>&lt;foreignObject&gt;</code></a> element.</li>
+ <li>The (well-formed) XHTML itself, nested inside the <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/foreignObject" title="The <foreignObject> SVG element allows for inclusion of a foreign XML namespace which has its graphical content drawn by a different user agent. The included foreign graphical content is subject to SVG transformations and compositing."><code>&lt;foreignObject&gt;</code></a>.</li>
+</ol>
+
+<p>By using an object <a href="https://developer.mozilla.org/en-US/docs/Glossary/URL" class="glossaryLink" title="URL: Uniform Resource Locator (URL) is a text string specifying where a resource can be found on the Internet.">URL</a> as described above, we can inline our HTML instead of having to load it from an external source. You can, of course, use an external source if you prefer, as long as the origin is the same as the originating document.</p>
+
+<a class="dashAnchor" name="//apple_ref/Section/Example"></a><h2 id="Example">Example</h2>
+
+<h3 id="HTML">HTML</h3>
+
+<pre class="brush:html">&lt;canvas id="canvas" style="border:2px solid black;" width="200" height="200"&gt;
+&lt;/canvas&gt;
+</pre>
+
+<h3 id="JavaScript">JavaScript</h3>
+
+<pre class="brush: js">//Edge Blob polyfill https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob
+if (!HTMLCanvasElement.prototype.toBlob) {
+   Object.defineProperty(HTMLCanvasElement.prototype, 'toBlob', {
+     value: function (callback, type, quality) {
+       var canvas = this;
+       setTimeout(function() {
+         var binStr = atob( canvas.toDataURL(type, quality).split(',')[1] ),
+         len = binStr.length,
+         arr = new Uint8Array(len);
+
+         for (var i = 0; i &lt; len; i++ ) {
+            arr[i] = binStr.charCodeAt(i);
+         }
+
+         callback( new Blob( [arr], {type: type || 'image/png'} ) );
+       });
+     }
+  });
+}
+
+var canvas = document.getElementById('canvas');
+var ctx = canvas.getContext('2d');
+
+var data = '&lt;svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"&gt;' +
+           '&lt;foreignObject width="100%" height="100%"&gt;' +
+           '&lt;div xmlns="http://www.w3.org/1999/xhtml" style="font-size:40px"&gt;' +
+             '&lt;em&gt;I&lt;/em&gt; like ' +
+             '&lt;span style="color:white; text-shadow:0 0 2px blue;"&gt;' +
+             'cheese&lt;/span&gt;' +
+           '&lt;/div&gt;' +
+           '&lt;/foreignObject&gt;' +
+           '&lt;/svg&gt;';
+    
+ data = encodeURIComponent(data);
+
+ 
+var img = new Image();
+
+img.onload = function() {
+  ctx.drawImage(img, 0, 0);
+  console.log(canvas.toDataURL());
+ 
+  canvas.toBlob(function(blob) {
+     var newImg = document.createElement('img'),
+     url = URL.createObjectURL(blob);
+
+     newImg.onload = function() {
+     // no longer need to read the blob so it's revoked
+     URL.revokeObjectURL(url);
+   };
+
+   newImg.src = url;
+   document.body.appendChild(newImg);
+ });
+}
+
+img.src = "data:image/svg+xml," + data</pre>
+
+<p>The example above will produce the following</p>
+
+<p></p><table class="sample-code-table"><thead><tr><th scope="col" style="text-align: center;">Screenshot</th><th scope="col" style="text-align: center;">Live sample</th></tr></thead><tbody><tr><td><img src="../../../../../../mdn.mozillademos.org/files/3616/example.png" alt="" class="internal"></td><td><iframe src="../../../../../../mdn.mozillademos.org/en-US/docs/Web/API/Canvas_API/Drawing_DOM_objects_into_a_canvas%24samples/Example48bf.html?revision=1389440" class="live-sample-frame sample-code-frame" height="210" width="210" id="frame_Example" frameborder="0"></iframe></td></tr></tbody></table><p></p>
+
+<p>The <code>data</code> variable is set up with the content of the <a href="https://developer.mozilla.org/en-US/docs/Glossary/SVG" class="glossaryLink" title="SVG: Scalable Vector Graphics (SVG) is a 2D vector image format based on an XML syntax.">SVG</a> image (which in turn includes the <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML" class="glossaryLink" title="HTML: HTML (HyperText Markup Language) is a descriptive language that specifies webpage structure.">HTML</a>) we want to draw into our <a href="https://developer.mozilla.org/en-US/docs/Glossary/canvas" class="glossaryLink" title="The definition of that term (canvas) has not been written yet; please consider contributing it!">canvas</a>.</p>
+
+<p>Then we create a new HTML <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img" title="The HTML <img> element embeds an image into the document."><code>&lt;img&gt;</code></a> element by calling <code>new Image()</code>, append <code>data</code>, allocate an object URL, and draw the image into the context by calling <code>drawImage()</code> on load.</p>
+
+<a class="dashAnchor" name="//apple_ref/Section/Security"></a><h2 id="Security">Security</h2>
+
+<p>You might wonder how this can be secure, in light of concerns about the possibility of reading sensitive data out of the canvas. The answer is this: this solution relies on the fact that the implementation of SVG images is <a href="https://developer.mozilla.org/en-US/docs/SVG/SVG_as_an_Image#Restrictions" title="SVG/SVG_as_an_Image#Restrictions">very restrictive</a>. SVG images aren't allowed to load any external resources, for example, even ones that appear to be from the same domain. Resources such as raster images (such as JPEG images) or <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe" title="The HTML Inline Frame element (<iframe>) represents a nested browsing context, effectively embedding another HTML page into the current page."><code>&lt;iframe&gt;</code></a>s have to be inlined as <code>data:</code> URIs.</p>
+
+<p>In addition, you can't include script in an SVG image, so there's no risk of access to the <a href="../../../Glossary/DOM.html" class="glossaryLink" title="DOM: The DOM (Document Object Model) is an API that represents and interacts with any HTML or XML document. The DOM is a document model loaded in the browser and representing the document as a node tree, where each node represents part of the document (e.g. an element, text string, or comment).">DOM</a> from other scripts, and DOM <a href="https://developer.mozilla.org/en-US/docs/Glossary/Element" class="glossaryLink" title="elements: An element is a part of a webpage. In XML and HTML, an element may contain a data item or a chunk of text or an image, or perhaps nothing. A typical element includes an opening tag with some attributes, enclosed text content, and a closing tag.
+ ">elements</a> in SVG images can't receive input events, so there's no way to load privileged information into a form control (such as a full path into a file <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input" title="The HTML <input> element is used to create interactive controls for web-based forms in order to accept data from the user."><code>&lt;input&gt;</code></a> element) and render it, then pull that information out by reading the pixels.</p>
+
+<p>Visited-link styles aren't applied to links rendered in SVG images, so history information can't be retrieved, and native themes aren't rendered in SVG images, which makes it harder to determine the user's platform.</p>
+
+<p>The resulting canvas should be origin clean on most browsers except internet explorer and mobile (android and ios) browsers meaning you can call <code>toBlob(function(blob){…})</code> to return a blob for the canvas, or <code>toDataURL()</code> to return a Base64-encoded <code>data:</code> URI.</p>
+
+<a class="dashAnchor" name="//apple_ref/Section/Embedding%20Svg%20in%20Canvas"></a><h2 id="Embedding_Svg_in_Canvas">Embedding Svg in Canvas</h2>
+
+<div>It is possible to embed svg elements within a canvas tag which will not be rendered by the browser but will still be attached to the dom and accessible to javascript. This method is currently working without cross-origin errors. It gives developers an additional method of embedding a spritesheet that wouldn't look great if left as a png image.</div>
+
+<h3 id="HTML_2">HTML</h3>
+
+<pre class="brush: html">&lt;canvas id="canvas" style="border:2px solid black;" width="500" height="500"&gt;
+  &lt;rect id="test" x="50" y="20" width="100" height="100" style="fill:red;stroke-width:3;stroke:rgb(0,0,0)" &gt;&lt;/rect&gt;
+  &lt;rect id="test2" x="150" y="170" width="100" height="100" style="fill:pink;stroke-width:3;" &gt;&lt;/rect&gt;
+  &lt;text id="text" fill="red" font-size="45" font-family="Verdana" x="50" y="286"&gt;SVG&lt;/text&gt;
+  &lt;script&gt;
+    document.documentElement.addEventListener('keydown',function(evt){
+     var KEY = { w:87, a:65, s:83, d:68 };
+     var moveSpeed = 10;
+     var ele =  document.getElementById('test');
+     var y = parseInt(ele.getAttribute('y'),10);
+     var x = parseInt(ele.getAttribute('x'),10);
+     var width = parseInt(ele.getAttribute('width'),10);
+     var height = parseInt(ele.getAttribute('height'),10);
+     
+     
+     Update = false;
+     switch (evt.keyCode){
+      case KEY.w:
+       ctx.clearRect(x-2,y-2,width+4,height+4);
+       y -= moveSpeed;
+       ele.setAttribute('y',y);
+       svgDrawRect(ele);
+      break;
+      case KEY.s:
+       ctx.clearRect(x-2,y-2,width+4,height+4);
+       y += moveSpeed;
+       ele.setAttribute('y',y);
+       svgDrawRect(ele);
+      break;
+      case KEY.a:
+        ctx.clearRect(x-2,y-2,width+4,height+4);
+        x = x - moveSpeed;
+        ele.setAttribute('x',x);
+       svgDrawRect(ele);
+      break;
+      case KEY.d:
+        ctx.clearRect(x-2,y-2,width+4,height+4);
+        x = x + moveSpeed;
+        ele.setAttribute('x',x);
+        svgDrawRect(ele);
+      break;
+     }
+    },false);
+    
+    document.documentElement.addEventListener('keyup',function(evt){
+      Update = true;
+    }, false)
+  &lt;/script&gt;
+ &lt;/canvas&gt;
+&lt;button onclick="console.log(canvas.toDataURL());"&gt;To data url&lt;/button&gt;</pre>
+
+<div>This method requires writing a custom svg parser to load as much of the svg as possible as canvas shapes. The mutation observer watches the svg content of the canvas tag and redraws the canvas when an svg element is changed which is basically how svg works normally.</div>
+
+<h3 id="Javascript">Javascript</h3>
+
+<div>
+<pre class="brush: js">var canvas = document.getElementById("canvas");
+ var ctx = canvas.getContext("2d");
+ var Update = true;
+  window.MutationObserver = window.MutationObserver
+ || window.WebKitMutationObserver
+ || window.MozMutationObserver;
+
+ var id,
+ // create an observer instance
+ observer = new MutationObserver(function(mutations) {
+  var canvas = document.getElementById("canvas");
+  var ctx = canvas.getContext("2d");
+  if(Update){
+   ctx.beginPath();
+   ctx.clearRect(0,0,canvas.width,canvas.height);
+
+   draw();
+  }
+  
+ }), config = { attributes: true, subtree: true };
+
+ // pass in the element you wanna watch as well as the options
+ observer.observe(canvas, config);
+ // later, you can stop observing
+ // observer.disconnect();
+
+ function svgDrawRect(element){
+  var y = 0, cx = 0, stroke = false;
+  if(element.getAttribute('x')){cx = element.getAttribute('x')}
+  if(element.getAttribute('y')){y = element.getAttribute('y')}
+  if(element.getAttribute('style')){
+   var test = element.getAttribute('style').split(";");
+   for(var p = 0; p &lt; test.length; p++){
+    switch(test[p].split(":")[0].toLowerCase()){
+     case "fill":
+      ctx.fillStyle = test[p].split(":")[1];
+      break;
+     case "stroke":
+      ctx.strokeStyle=test[p].split(":")[1];
+      stroke = true;
+    }
+   }
+  }
+  ctx.fillRect(cx,y,element.getAttribute('width'),element.getAttribute('height'));
+  if(stroke){
+   ctx.strokeRect(cx,y,element.getAttribute('width'),element.getAttribute('height'));
+  }
+  ctx.stroke();
+ }
+
+ function svgDrawText(element){
+  ctx.font = element.getAttribute("font-size")+"px "+element.getAttribute("font-family");
+  ctx.strokeText(element.textContent,element.getAttribute("x"),element.getAttribute("y"));
+ }
+
+ function draw(){
+  var xmlDoc = new DOMParser().parseFromString(canvas.outerHTML, "image/svg+xml");
+  var x = xmlDoc.documentElement.childNodes;
+  for (i = 0; i &lt; x.length ;i++) {
+   //html add textnodes before and after elements ignore them.
+   if(x[i].nodeName == "#text" || x[i].nodeName == "script" || x[i].nodeName == "style"){
+    continue;
+   }
+   
+   switch(x[i].nodeName){
+    case "rect":
+     svgDrawRect(x[i]);
+     break;
+    case "text":
+     svgDrawText(x[i]);
+     break;
+   }
+  }
+ }
+
+
+draw();</pre>
+
+<p>&nbsp;</p>
+
+<a class="dashAnchor" name="//apple_ref/Section/Adding%20svg%20animations%20to%20a%20canvas"></a><h2 id="Adding_svg_animations_to_a_canvas">Adding svg animations to a canvas</h2>
+
+<div>You shouldn't include the svg tag around the svg elements if you dont need it as the browser will attach all the associated svg properties to the svg which could make the browser slow especially if the svg to be drawn is very large. It might be desirable to include the svg properties one reason could be to use svg animation events. Svg animation events work well for tower defense games to make monsters follow a specific path then canvas can be used to draw the towers firing. The temptation would be to put the svg outside the canvas and display false but that is more work for the browser.</div>
+
+<div>The following svg animation event updates the rect "x" value every few seconds. The watcher event will not notice the changes to the "x" value since the dom is only updated when the browser needs that perticular value. One solution is to instead use setInterval called every few milliseconds. It is also necessary to update the draw function from before.</div>
+
+<h3 id="Html">Html</h3>
+
+<pre class="brush: html">&lt;canvas id="canvas"  width="500" height="500"&gt;
+    &lt;svg id="animatedSvg" width="500" height="500" viewPort="0 0 500 500" version="1.1"
+     xmlns="http://www.w3.org/2000/svg"&gt;
+      &lt;rect id="rect" x="10" y="10" width="100" height="100"&gt;
+        &lt;animate attributeType="XML" attributeName="x" from="-100" to="120"
+            dur="10s" repeatCount="indefinite"/&gt;
+      &lt;/rect&gt;
+    &lt;/svg&gt;
+&lt;/canvas&gt;</pre>
+
+<h3 id="Javascript_2">Javascript</h3>
+
+<pre class="brush: js">setInterval(function(){
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+
+    if(Update){
+
+        ctx.beginPath();
+
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+        draw(canvas);
+    }
+   
+},10);
+
+function draw(ele){
+    var xmlDoc = new DOMParser().parseFromString(ele.outerHTML, "image/svg+xml");
+    var x = xmlDoc.documentElement.childNodes;
+    for (i = 0; i &lt; x.length ;i++) {
+        //html add textnodes before and after elements ignore them.
+        if(x[i].nodeName == "#text" || x[i].nodeName == "script" || x[i].nodeName == "style"){ continue; }
+        switch(x[i].nodeName)
+        {
+            case "rect":
+                svgDrawRect(x[i]);
+                break;
+            case "text": svgDrawText(x[i]);
+                break;
+            case "svg": draw(x[i]);
+            break;
+        }
+    }
+}</pre>
+
+<a class="dashAnchor" name="//apple_ref/Section/Drawing%20HTML"></a><h2 class="brush: js" id="Drawing_HTML">Drawing HTML</h2>
+</div>
+
+<p>Since <a href="https://developer.mozilla.org/en-US/docs/Glossary/SVG" class="glossaryLink" title="SVG: Scalable Vector Graphics (SVG) is a 2D vector image format based on an XML syntax.">SVG</a> must be valid <a href="https://developer.mozilla.org/en-US/docs/Glossary/XML" class="glossaryLink" title="XML: eXtensible Markup Language (XML) is a generic markup language specified by the W3C. The information technology (IT) industry uses many languages based on XML as data-description languages.">XML</a>, as opposed to HTML5's <code>html</code> serialization, you need to parse <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML" class="glossaryLink" title="HTML: HTML (HyperText Markup Language) is a descriptive language that specifies webpage structure.">HTML</a> to get the well-formed output of the HTML parser. The following code is the easiest way to parse HTML.</p>
+
+<pre class="brush:js">var doc = document.implementation.createHTMLDocument('');
+doc.write(html);
+
+// You must manually set the xmlns if you intend to immediately serialize 
+// the HTML document to a string as opposed to appending it to a 
+// &lt;foreignObject&gt; in the DOM
+doc.documentElement.setAttribute('xmlns', doc.documentElement.namespaceURI);
+
+// Get well-formed markup
+html = (new XMLSerializer()).serializeToString(doc);</pre>
+
+<a class="dashAnchor" name="//apple_ref/Section/See%20also"></a><h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="../Canvas_API.html" title="HTML/Canvas">Canvas</a></li>
+ <li><a href="Tutorial.html" title="Canvas tutorial">Canvas tutorial</a></li>
+ <li><a rel="noopener" href="http://robert.ocallahan.org/2011/11/drawing-dom-content-to-canvas.html" class="external" title="http://robert.ocallahan.org/2011/11/drawing-dom-content-to-canvas.html">Drawing DOM content to canvas</a> (blog post)</li>
+ <li><a rel="noopener" href="http://cburgmer.github.com/rasterizeHTML.js/" class="external" title="http://cburgmer.github.com/rasterizeHTML.js/">rasterizeHTML.js</a>, an implementation following this post</li>
+ <li><a rel="noopener" href="http://fred-wang.github.io/TeXZilla/examples/toImageWebGL.html" class="external">Drawing math equations into a canvas</a>, using TeXZilla. The watcher event handler will not notice the changes to the "x" value since the dom value is only upated in the browser when the browser needs that perticular value. The solution is to to instead use the <code>setInterval</code> event called every few milliseconds. It is also necessary to update the draw function from before.</li>
+</ul>
+                  
+                
+              </article>
+
+              <!-- contributors -->
+              <div class="wiki-block contributors">
+                <h2 class="offscreen">Document Tags and Contributors</h2>
+                
+                
+  <div class="tag-attach-list contributors-sub">
+    <svg class="icon icon-tags" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M7 7c0-1.109-.891-2-2-2s-2 .891-2 2 .891 2 2 2 2-.891 2-2zm16.672 9c0 .531-.219 1.047-.578 1.406l-7.672 7.688c-.375.359-.891.578-1.422.578s-1.047-.219-1.406-.578L1.422 13.906C.625 13.125 0 11.609 0 10.5V4c0-1.094.906-2 2-2h6.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422zm6 0c0 .531-.219 1.047-.578 1.406l-7.672 7.688a2.08 2.08 0 0 1-1.422.578c-.812 0-1.219-.375-1.75-.922l7.344-7.344c.359-.359.578-.875.578-1.406s-.219-1.047-.578-1.422L14.422 3.422C13.625 2.625 12.11 2 11 2h3.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422z"></path>
+</svg>
+    <strong>Tags:</strong>&nbsp;
+    <ul class="tags tags-small">
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Canvas" rel="nofollow">Canvas</a></li>
+      
+        <li><a href="../../../tag/DOM.html" rel="nofollow">DOM</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Guide" rel="nofollow">Guide</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/HTML" rel="nofollow">HTML</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Intermediate" rel="nofollow">Intermediate</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/SVG" rel="nofollow">SVG</a></li>
+      
+    </ul>
+  </div>
+
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-group" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M9.266 14a5.532 5.532 0 0 0-4.141 2H3.031C1.468 16 0 15.25 0 13.516 0 12.25-.047 8 1.937 8c.328 0 1.953 1.328 4.062 1.328.719 0 1.406-.125 2.078-.359A7.624 7.624 0 0 0 7.999 10c0 1.422.453 2.828 1.266 4zM26 23.953C26 26.484 24.328 28 21.828 28H8.172C5.672 28 4 26.484 4 23.953 4 20.422 4.828 15 9.406 15c.531 0 2.469 2.172 5.594 2.172S20.063 15 20.594 15C25.172 15 26 20.422 26 23.953zM10 4c0 2.203-1.797 4-4 4S2 6.203 2 4s1.797-4 4-4 4 1.797 4 4zm11 6c0 3.313-2.688 6-6 6s-6-2.688-6-6 2.688-6 6-6 6 2.688 6 6zm9 3.516C30 15.25 28.531 16 26.969 16h-2.094a5.532 5.532 0 0 0-4.141-2A7.066 7.066 0 0 0 22 10a7.6 7.6 0 0 0-.078-1.031A6.258 6.258 0 0 0 24 9.328C26.109 9.328 27.734 8 28.062 8c1.984 0 1.937 4.25 1.937 5.516zM28 4c0 2.203-1.797 4-4 4s-4-1.797-4-4 1.797-4 4-4 4 1.797 4 4z"></path>
+</svg>
+                    <strong>Contributors to this page:</strong>
+                    
+        <a href="https://developer.mozilla.org/en-US/profiles/mfluehr">mfluehr</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/rolandgnm">rolandgnm</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/davidmather">davidmather</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/gdad-s-river">gdad-s-river</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/pinobatch">pinobatch</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/nmve">nmve</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/bernardc">bernardc</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/fred.wang">fred.wang</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/dvicklund">dvicklund</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/DavidWalsh">DavidWalsh</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/fscholz">fscholz</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Jeremie">Jeremie</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/kscarfone">kscarfone</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/ethertank">ethertank</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/SphinxKnight">SphinxKnight</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/wdfelippe">wdfelippe</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/cburgmer">cburgmer</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/myakura">myakura</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/syssgx">syssgx</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Sephr">Sephr</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Dholbert">Dholbert</a>
+    
+                  </div>
+                
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-clock" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M14 8.5v7c0 .281-.219.5-.5.5h-5a.494.494 0 0 1-.5-.5v-1c0-.281.219-.5.5-.5H12V8.5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zm6.5 5.5c0-4.688-3.813-8.5-8.5-8.5S3.5 9.313 3.5 14s3.813 8.5 8.5 8.5 8.5-3.813 8.5-8.5zm3.5 0c0 6.625-5.375 12-12 12S0 20.625 0 14 5.375 2 12 2s12 5.375 12 12z"></path>
+</svg>
+                    <strong>Last updated by:</strong>
+                    <a href="https://developer.mozilla.org/en-US/profiles/mfluehr">mfluehr</a>,
+                    <time datetime="2018-06-20T07:15:57.012341-07:00">Jun 20, 2018, 7:15:57 AM</time>
+                  </div>
+                
+              </div>
+            </div>
+
+            
+              <!-- quick links and approvals strip -->
+              <div id="wiki-left" class="column-strip wiki-column">
+
+                <!-- crumbs -->
+                
+  
+    
+  
+
+                
+                  <!-- quick links -->
+                  
+  <div class="quick-links" id="quick-links">
+    <div class="quick-links-head">Related Topics</div>
+    
+ <ol>
+  <li><a href="../Canvas_API.html"><strong>Canvas API</strong></a></li>
+  <li data-default-state="open"><a href="Tutorial.html"><strong>Canvas tutorial</strong></a>
+   <ol>
+    <li><a href="Tutorial/Basic_usage.html">Basic usage</a></li>
+    <li><a href="Tutorial/Drawing_shapes.html">Drawing shapes</a></li>
+    <li><a href="Tutorial/Applying_styles_and_colors.html">Applying styles and colors</a></li>
+    <li><a href="Tutorial/Drawing_text.html">Drawing text</a></li>
+    <li><a href="Tutorial/Using_images.html">Using images</a></li>
+    <li><a href="Tutorial/Transformations.html">Transformations</a></li>
+    <li><a href="Tutorial/Compositing.html">Compositing and clipping</a></li>
+    <li><a href="Tutorial/Basic_animations.html">Basic animations</a></li>
+    <li><a href="Tutorial/Advanced_animations.html">Advanced animations</a></li>
+    <li><a href="Tutorial/Pixel_manipulation_with_canvas.html">Pixel manipulation</a></li>
+    <li><a href="Tutorial/Hit_regions_and_accessibility.html">Hit regions and accessibility</a></li>
+    <li><a href="Tutorial/Optimizing_canvas.html">Optimizing the canvas</a></li>
+    <li><a href="Tutorial/Finale.html">Finale</a></li>
+   </ol>
+  </li>
+  <li data-default-state="open"><a href="#"><strong>Examples</strong></a>
+   <ol>
+    <li><a href="A_basic_ray-caster.html">A basic raycaster</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/Add-ons/Code_snippets/Canvas">Canvas code snippets</a></li>
+    <li><a href="Drawing_DOM_objects_into_a_canvas.html">Drawing DOM objects into a canvas</a></li>
+    <li><a href="Manipulating_video_using_canvas.html">Manipulating video using canvas</a></li>
+   </ol>
+  </li>
+  <li data-default-state="open"><a href="#"><strong>Interfaces</strong></a>
+   <ol>
+    <li><a href="../HTMLCanvasElement.html" title="The HTMLCanvasElement interface provides properties and methods for manipulating the layout and presentation of canvas elements. The HTMLCanvasElement interface also inherits the properties and methods of the HTMLElement interface."><code>HTMLCanvasElement</code></a></li>
+    <li><a href="../CanvasRenderingContext2D.html" title="To get an object of this interface, call getContext() on a <canvas>&nbsp;element, supplying &quot;2d&quot; as the argument:"><code>CanvasRenderingContext2D</code></a></li>
+    <li><a href="../CanvasGradient.html" title="The CanvasGradient interface represents an opaque object describing a gradient. It is returned by the methods CanvasRenderingContext2D.createLinearGradient() or CanvasRenderingContext2D.createRadialGradient()."><code>CanvasGradient</code></a></li>
+    <li><a href="../CanvasPattern.html" title="The CanvasPattern interface represents an opaque object describing a pattern, based on an image, a canvas, or a video, created by the CanvasRenderingContext2D.createPattern() method."><code>CanvasPattern</code></a></li>
+    <li><a href="../ImageBitmap.html" title="The ImageBitmap interface represents a bitmap image which can be drawn to a <canvas> without undue latency. It can be created from a variety of source objects using the createImageBitmap() factory method. ImageBitmap provides an asynchronous and resource efficient pathway to prepare textures for rendering in WebGL."><code>ImageBitmap</code></a></li>
+    <li><a href="../ImageData.html" title="The ImageData interface represents the underlying pixel data of an area of a <canvas> element. It is created using the ImageData() constructor or creator methods on the CanvasRenderingContext2D object associated with a canvas: createImageData() and getImageData(). It can also be used to set a part of the canvas by using putImageData()."><code>ImageData</code></a></li>
+    <li><a href="../TextMetrics.html" title="The TextMetrics interface represents the dimension of a text in the canvas, as created by the CanvasRenderingContext2D.measureText() method."><code>TextMetrics</code></a></li>
+    <li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span> <a href="../Path2D.html" title="The Path2D interface of the Canvas 2D API is used to declare paths that are then later used on CanvasRenderingContext2D objects. The path methods of the CanvasRenderingContext2D interface are present on this interface as well and are allowing you to create paths that you can retain and replay as required on a canvas."><code>Path2D</code></a></li>
+   </ol>
+  </li>
+  <li><strong><a href="https://developer.mozilla.org/en-US/docs/MDN">Documentation:</a></strong></li>
+  <li data-default-state="closed"><a href="#">Useful lists</a>
+   <ol>
+    <li><a href="https://developer.mozilla.org/en-US/docs/tag/Canvas">Pages tagged "Canvas"</a></li>
+   </ol>
+  </li>
+  <li data-default-state="closed"><a href="#">Contribute</a>
+   <ol>
+    <li><a href="../../../MDN/Doc_status/API/Canvas.html">Canvas doc status</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/MDN">The MDN project</a></li>
+   </ol>
+  </li>
+ </ol>
+
+  </div>
+                
+
+                <!-- approvals -->
+                
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+    
+      <div class="newsletter-box">
+        <div class="newsletter">
+    <form id="newsletterForm" class="newsletter-form nodisable" name="newsletter-form" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <div class="newsletter-head">
+            <h2 class="newsletter-teaser">Learn the best of web development</h2>
+            <p class="newsletter-description">Get the latest and greatest from MDN delivered straight to your inbox.</p>
+            
+        </div>
+
+        <div class="newsletter-fields">
+            <input type="hidden" id="fmt" name="fmt" value="H">
+            <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+            <div id="newsletterErrors" class="newsletter-errors"></div>
+
+            <div id="newsletterEmail" class="form-group newsletter-group-email">
+                <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+                <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+            </div>
+
+            <div id="newsletterPrivacy" class="form-group form-group-agree newsletter-group-privacy hidden">
+                <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+                <label for="newsletterPrivacyInput">
+                I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+                </label>
+            </div>
+            <div id="newsletterSubmit" class="newsletter-group-submit">
+                <button id="newsletter-submit" type="submit" class="button neutral newsletter-submit">
+                    Sign up now<svg class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg" width="23" height="28" viewBox="0 0 23 28" aria-hidden="true">
+    <path d="M23 15a2.01 2.01 0 0 1-.578 1.422L12.25 26.594c-.375.359-.891.578-1.422.578s-1.031-.219-1.406-.578L8.25 25.422c-.375-.375-.594-.891-.594-1.422s.219-1.047.594-1.422L12.828 18h-11C.703 18 0 17.062 0 16v-2c0-1.062.703-2 1.828-2h11L8.25 7.406a1.96 1.96 0 0 1 0-2.812l1.172-1.172c.375-.375.875-.594 1.406-.594s1.047.219 1.422.594l10.172 10.172c.375.359.578.875.578 1.406z"></path>
+</svg>
+                </button>
+            </div>
+        </div>
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden">
+        <span>Hide Newsletter Sign-up</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+</div>
+      </div>
+    
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/en-US/docs/Web/API/Canvas_API/Drawing_DOM_objects_into_a_canvas$edit" label="Edit page"></menuitem>
+    <menuitem data-action="/en-US/docs/Web/API/Canvas_API/Drawing_DOM_objects_into_a_canvas$history" label="View page history"></menuitem>
+  </menu>
+
+      </div>
+  </main>
+  <!-- Footer -->
+    <footer id="nav-footer" class="nav-footer"><div class="center"><a href="http://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Drawing_DOM_objects_into_a_canvas">Drawing DOM objects into a canvas</a> by <a href="http://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Drawing_DOM_objects_into_a_canvas$history">Mozilla Contributors</a> is licensed under <a href="http://creativecommons.org/licenses/by-sa/2.5/" class="external external-icon">CC-BY-SA 2.5</a>.</div></footer> 
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script async="" type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script src="../../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../../static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><!--[endif]---->
+
+    
+    <script src="../../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../../static/build/js/wiki.b26a4c181df3.js" charset="utf-8" id="wikiscript"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../static/build/js/newsletter.a85c5c2892e5.js" charset="utf-8"></script>
+  
+
+
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Drawing_DOM_objects_into_a_canvas by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 10:06:24 GMT -->
+</body></html>

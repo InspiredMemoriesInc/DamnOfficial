@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/fr/docs/Web/API/HTMLElement/focus$samples/Focus_prevent_scroll?revision=1381641 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 11:38:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <title>HTMLElement.focus()</title>
+    </head>
+    <body>
+        
+            <button type="button" onclick="focusScrollMethod()">Cliquez-moi pour donner le focus au bouton!</button>
+<button type="button" onclick="focusNoScrollMethod()">Cliquez-moi pour donner le focus au bouton sans défilement!</button>
+
+<div id="container" style="height: 1000px; width: 1000px;"> 
+<button type="button" id="myButton" style="margin-top: 500px;">Cliquez!</button>
+</div>
+        
+        
+            <script>
+                focusScrollMethod = function getFocus() {          
+  document.getElementById("myButton").focus({preventScroll:false});
+}
+focusNoScrollMethod = function getFocusWithoutScrolling() {          
+  document.getElementById("myButton").focus({preventScroll:true});
+}
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/fr/docs/Web/API/HTMLElement/focus$samples/Focus_prevent_scroll?revision=1381641 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 11:38:29 GMT -->
+</html>

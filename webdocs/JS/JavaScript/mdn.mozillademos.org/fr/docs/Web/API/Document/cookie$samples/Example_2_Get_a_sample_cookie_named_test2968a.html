@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/fr/docs/Web/API/Document/cookie$samples/Example_2_Get_a_sample_cookie_named_test2?revision=1091259 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 11:34:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <title>Document.cookie</title>
+    </head>
+    <body>
+        
+            <button onclick="alertCookieValue()">Show cookie value</button>
+        
+        
+            <script>
+                document.cookie = "test1=Hello";
+document.cookie = "test2=World";
+
+var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)test2\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+
+function alertCookieValue() {
+  alert(cookieValue);
+}
+
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/fr/docs/Web/API/Document/cookie$samples/Example_2_Get_a_sample_cookie_named_test2?revision=1091259 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 11:34:08 GMT -->
+</html>

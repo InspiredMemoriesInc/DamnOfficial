@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/SVG/Element/animateMotion$samples/Example?revision=1375706 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:43:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <title>&lt;animateMotion&gt;</title>
+    </head>
+    <body>
+        
+            <?xml version="1.0"?>
+<svg width="120" height="120" viewBox="0 0 120 120"
+    xmlns="http://www.w3.org/2000/svg" version="1.1"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <!-- Draw the outline of the motion path in grey, along
+       with 2 small circles at key points -->
+  <path d="M10,110 A120,120 -45 0,1 110 10 A120,120 -45 0,1 10,110"
+      stroke="lightgrey" stroke-width="2" 
+      fill="none" id="theMotionPath"/>
+  <circle cx="10" cy="110" r="3" fill="lightgrey"  />
+  <circle cx="110" cy="10" r="3" fill="lightgrey"  />
+
+  <!-- Red circle which will be moved along the motion path. -->
+  <circle cx="" cy="" r="5" fill="red">
+
+    <!-- Define the motion path animation -->
+    <animateMotion dur="6s" repeatCount="indefinite">
+      <mpath xlink:href="#theMotionPath"/>
+    </animateMotion>
+  </circle>
+</svg>
+        
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/SVG/Element/animateMotion$samples/Example?revision=1375706 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:43:05 GMT -->
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/zh-CN/docs/Web/API/Element/getClientRects$samples/Element_getClientRects_sample?revision=1302173 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 11:37:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            strong {
+  text-align: center;
+}
+div {
+  display: inline-block;
+  width: 150px;
+}
+div p, ol, table {
+  border: 1px solid blue;
+}
+span, li, th, td {
+  border: 1px solid green;
+}
+        </style>
+        
+        <title>Element.getClientRects()</title>
+    </head>
+    <body>
+        
+            <h3>A paragraph with a span inside</h3>
+<p>Both the span and the paragraph have a border set. The client rects are in red. Note that the p has only one border box, while the span has multiple border boxes.</p>
+
+<div>
+ <strong>Original</strong>
+ <p>
+  <span>Paragraph that spans multiple lines</span>
+ </p>
+</div>
+ 
+<div>
+ <strong>p's rect</strong>
+ <p class="withClientRectsOverlay">
+  <span>Paragraph that spans multiple lines</span>
+ </p>
+</div>
+
+<div>
+ <strong>span's rect</strong>
+ <p>
+  <span class="withClientRectsOverlay">Paragraph that spans multiple lines</span>
+ </p>
+</div> <h3>A list</h3>
+<p>Note that the border box doesn't include the number, so neither do the client rects.</p>
+
+<div>
+ <strong>Original</strong>
+ <ol>
+  <li>Item 1</li>
+  <li>Item 2</li>
+ </ol>
+</diV>
+
+<div>
+ <strong>ol's rect</strong>
+ <ol class="withClientRectsOverlay">
+  <li>Item 1</li>
+  <li>Item 2</li>
+ </ol>
+</div>
+
+<div>
+ <strong>each li's rect</strong>
+ <ol>
+  <li class="withClientRectsOverlay">Item 1</li>
+  <li class="withClientRectsOverlay">Item 2</li>
+ </ol>
+</div> <h3>A table with a caption</h3>
+<p>Although the table's border box doesn't include the caption, the client rects do include the caption.</p>
+
+<div>
+ <strong>Original</strong>
+ <table>
+  <caption>caption</caption>
+  <thead>
+    <tr><th>thead</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>tbody</td></tr>
+  </tbody>
+ </table>
+</div>
+ 
+<div>
+ <strong>table's rect</strong>
+ <table class="withClientRectsOverlay">
+  <caption>caption</caption>
+  <thead>
+    <tr><th>thead</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>tbody</td></tr>
+  </tbody>
+ </table>
+</div>
+        
+        
+            <script>
+                function addClientRectsOverlay(elt) {
+    // 为了使边框宽度与矩形宽度一致，这里给每个客户矩形上方绝对定位一个 div。
+    // 注意:如果用户改变大小或者缩放，绘图将会重绘。
+
+    var rects = elt.getClientRects();
+    for (var i = 0; i != rects.length; i++) {
+        var rect = rects[i];
+        var tableRectDiv = document.createElement('div');
+        tableRectDiv.style.position = 'absolute';
+        tableRectDiv.style.border = '1px solid red';
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        var scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft;
+        tableRectDiv.style.margin = tableRectDiv.style.padding = '0';
+        tableRectDiv.style.top = (rect.top + scrollTop) + 'px';
+        tableRectDiv.style.left = (rect.left + scrollLeft) + 'px';
+        // 我们希望 rect.width 作为边框宽度，所以内容宽度减少2px
+
+        tableRectDiv.style.width = (rect.width - 2) + 'px';
+        tableRectDiv.style.height = (rect.height - 2) + 'px';
+        document.body.appendChild(tableRectDiv);
+    }
+}
+
+(function() {
+  /* 给所有具有"widthClientRectsOverlay"样式的元素调用函数addClientRectsOverlay(elt) */
+  var elt = document.getElementsByClassName('withClientRectsOverlay');
+  for (var i = 0; i < elt.length; i++) {
+    addClientRectsOverlay(elt[i]);
+  }
+})();
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/zh-CN/docs/Web/API/Element/getClientRects$samples/Element_getClientRects_sample?revision=1302173 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 11:37:23 GMT -->
+</html>

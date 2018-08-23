@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/zh-TW/docs/Web/API/Event/type$samples/Example?revision=1243079 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 11:33:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <title>Event.type</title>
+    </head>
+    <body>
+        
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Event.type Example</title>
+
+    <script>
+        var currEvent = null;
+        function getEvtType(evt) {
+            console.log("//Start------------getEvtType(evt)------------ ");
+
+            currEvent = evt.type;
+            console.log(currEvent);
+
+            //document.getElementById("Etype").firstChild.nodeValue = currEvent;
+            document.getElementById("Etype").innerHTML = currEvent;
+
+            console.log("//End--------------getEvtType(evt)------------ ");
+        }
+
+        //Keyboard events
+        document.addEventListener("keypress", getEvtType, false); //[second]  
+
+        document.addEventListener("keydown", getEvtType, false); //first
+        document.addEventListener("keyup", getEvtType, false); //third
+
+        //Mouse events
+        document.addEventListener("click", getEvtType, false); // third
+
+        document.addEventListener("mousedown", getEvtType, false); //first
+        document.addEventListener("mouseup", getEvtType, false); //second
+
+    </script>
+</head>
+
+<body>
+
+<p>Press any key or click the mouse to get the event type.</p>
+<p>Event type: <span id="Etype" style="color:red">-</span></p>
+
+</body>
+
+<!-- Mirrored from mdn.mozillademos.org/zh-TW/docs/Web/API/Event/type$samples/Example?revision=1243079 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 11:33:33 GMT -->
+</html>
+
+        
+        
+    </body>
+</html>

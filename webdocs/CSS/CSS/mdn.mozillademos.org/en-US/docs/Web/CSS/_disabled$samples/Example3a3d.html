@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/:disabled$samples/Example?revision=1396436 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:47:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            input[type="text"]:disabled {
+  background: #ccc;
+}
+
+        </style>
+        
+        <title>:disabled</title>
+    </head>
+    <body>
+        
+            <form action="#">
+  <fieldset id="shipping">
+    <legend>Shipping address</legend>
+    <input type="text" placeholder="Name">
+    <input type="text" placeholder="Address">
+    <input type="text" placeholder="Zip Code">
+  </fieldset>
+  <br>
+  <fieldset id="billing">
+    <legend>Billing address</legend>
+    <label for="billing-checkbox">Same as shipping address:</label>
+    <input type="checkbox" id="billing-checkbox" checked>
+    <br>
+    <input type="text" placeholder="Name" disabled>
+    <input type="text" placeholder="Address" disabled>
+    <input type="text" placeholder="Zip Code" disabled>
+  </fieldset>
+</form>
+
+        
+        
+            <script>
+                // Wait for the page to finish loading
+document.addEventListener('DOMContentLoaded', function () {
+  // Attach `change` event listener to checkbox
+  document.getElementById('billing-checkbox').onchange = toggleBilling;
+}, false);
+
+function toggleBilling() {
+  // Select the billing text fields
+  var billingItems = document.querySelectorAll('#billing input[type="text"]');
+
+  // Toggle the billing text fields
+  for (var i = 0; i < billingItems.length; i++) {
+    billingItems[i].disabled = !billingItems[i].disabled;
+  }
+}
+
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/:disabled$samples/Example?revision=1396436 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:47:48 GMT -->
+</html>

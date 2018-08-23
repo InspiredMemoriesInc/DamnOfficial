@@ -1,0 +1,2652 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/CSS/-moz-appearance by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:47:16 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  <title>-moz-appearance (-webkit-appearance, appearance)</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+
+  
+<link rel="preload" href="../../../../static/fonts/locales/ZillaSlab-Regular.f9de6143fdfa.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="license" href="#license">
+  
+
+  
+    
+    
+
+    <link href="../../../../static/build/styles/mdn.83865b0f7c30.css" rel="stylesheet" type="text/css">
+
+    
+  
+
+    <link href="../../../../static/build/styles/wiki.aaf26c13c39b.css" rel="stylesheet" type="text/css">
+
+
+    
+
+  <link href="../../../../static/build/styles/locale-en-US.ca0bca387b42.css" rel="stylesheet" type="text/css">
+
+  
+    <script>
+      /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
+    </script>
+    
+
+
+
+  
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta property="og:site_name" content="MDN Web Docs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="MDN Web Docs">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../static/img/favicon144.e7e21ca263ca.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../static/img/favicon114.d526f38b09c5.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../static/img/favicon72.cc65d1d762a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../../static/img/favicon57.de33179910ae.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="../../../../static/img/favicon32.7f3da72dcea1.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script async="" type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  <link rel="dns-prefetch" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/CSS/-moz-appearance$json">
+  <link rel="canonical" href="-moz-appearance.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="-moz-appearance.html" title="-moz-appearance (-webkit-appearance, appearance)">
+  
+    
+      <link rel="alternate" hreflang="de" href="https://developer.mozilla.org/de/docs/Web/CSS/-moz-appearance" title="-moz-appearance (-webkit-appearance)">
+    
+      <link rel="alternate" hreflang="es" href="https://developer.mozilla.org/es/docs/Web/CSS/-moz-appearance" title="-moz-appearance (-webkit-appearance)">
+    
+      <link rel="alternate" hreflang="fr" href="https://developer.mozilla.org/fr/docs/Web/CSS/-moz-appearance" title="-moz-appearance (-webkit-appearance, appearance)">
+    
+      <link rel="alternate" hreflang="ja" href="https://developer.mozilla.org/ja/docs/Web/CSS/-moz-appearance" title="-moz-appearance (-webkit-appearance, appearance)">
+    
+      <link rel="alternate" hreflang="pl" href="https://developer.mozilla.org/pl/docs/Web/CSS/-moz-appearance" title="-moz-appearance">
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/-moz-appearance" title="-moz-appearance (-webkit-appearance)">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="-moz-appearance (-webkit-appearance, appearance)">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/CSS/-moz-appearance">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/CSS/-moz-appearance">
+  <meta name="twitter:title" content="-moz-appearance (-webkit-appearance, appearance)">
+  
+  <meta property="og:description" content="The -moz-appearance CSS property is used in Gecko (Firefox) to display an element using platform-native styling based on the operating system's theme.">
+  <meta name="description" content="The -moz-appearance CSS property is used in Gecko (Firefox) to display an element using platform-native styling based on the operating system's theme.">
+  <meta name="twitter:description" content="The -moz-appearance CSS property is used in Gecko (Firefox) to display an element using platform-native styling based on the operating system's theme.">
+  
+
+</head>
+<body data-slug="Web/CSS/-moz-appearance" contextmenu="edit-history-menu" data-search-url="" class="document">
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <!--[endif]---->
+
+  
+  <link rel="dns-prefetch" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/CSS/-moz-appearance$json">
+  <link rel="canonical" href="-moz-appearance.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="-moz-appearance.html" title="-moz-appearance (-webkit-appearance, appearance)">
+  
+    
+      <link rel="alternate" hreflang="de" href="https://developer.mozilla.org/de/docs/Web/CSS/-moz-appearance" title="-moz-appearance (-webkit-appearance)">
+    
+      <link rel="alternate" hreflang="es" href="https://developer.mozilla.org/es/docs/Web/CSS/-moz-appearance" title="-moz-appearance (-webkit-appearance)">
+    
+      <link rel="alternate" hreflang="fr" href="https://developer.mozilla.org/fr/docs/Web/CSS/-moz-appearance" title="-moz-appearance (-webkit-appearance, appearance)">
+    
+      <link rel="alternate" hreflang="ja" href="https://developer.mozilla.org/ja/docs/Web/CSS/-moz-appearance" title="-moz-appearance (-webkit-appearance, appearance)">
+    
+      <link rel="alternate" hreflang="pl" href="https://developer.mozilla.org/pl/docs/Web/CSS/-moz-appearance" title="-moz-appearance">
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/-moz-appearance" title="-moz-appearance (-webkit-appearance)">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="-moz-appearance (-webkit-appearance, appearance)">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/CSS/-moz-appearance">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/CSS/-moz-appearance">
+  <meta name="twitter:title" content="-moz-appearance (-webkit-appearance, appearance)">
+  
+  <meta property="og:description" content="The -moz-appearance CSS property is used in Gecko (Firefox) to display an element using platform-native styling based on the operating system's theme.">
+  <meta name="description" content="The -moz-appearance CSS property is used in Gecko (Firefox) to display an element using platform-native styling based on the operating system's theme.">
+  <meta name="twitter:description" content="The -moz-appearance CSS property is used in Gecko (Firefox) to display an element using platform-native styling based on the operating system's theme.">
+  
+
+
+
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/wiki-compat-tables.9978a5ce31c2.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+
+        // interactive editor config
+        win.mdn.interactiveEditor = {
+            siteUrl: "https://developer.mozilla.org",
+            editorUrl: "https://interactive-examples.mdn.mozilla.net"
+        };
+
+    })(this);
+</script>
+    
+    <ul id="nav-access">
+  <li><a href="#content" id="skip-main">Skip to main content</a></li>
+  <li><a id="skip-language" href="#language">Select language</a></li>
+  <li><a href="#q" id="skip-search">Skip to search</a></li>
+</ul>
+
+    <!-- Header -->
+    <header id="main-header" class="header-main">
+      <a href="https://developer.mozilla.org/en-US/" class="logo">MDN Web Docs</a>
+      <div class="nav-toolbox-wrapper">
+        <nav id="main-nav" class="nav-main" role="navigation">
+    <ul>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web">Technologies
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-tech-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+                    <li><a href="../CSS.html">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API">APIs / DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn">References &amp; Guides
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-learn-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-contact-submenu">
+              <div class="submenu-column">
+                <ul>
+                  <li>
+                      <a href="https://support.mozilla.org/">Get Firefox help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://stackoverflow.com/">Get web development help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                      <a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/CSS/-moz-appearance">Report a content problem
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</nav>
+        <div id="toolbox" class="toolbox">
+  <ul>
+    
+    <li class="nav-login"><div class="login">
+    
+        
+        <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FCSS%2F-moz-appearance" class="login-link js-login-link" data-service="GitHub" rel="nofollow">
+            Sign in<svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+    <title>Github</title>
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path>
+</svg>
+        </a>
+    
+</div></li>
+  </ul>
+</div>
+      </div>
+      <form id="nav-main-search" action="https://developer.mozilla.org/en-US/search" method="get" role="search" class="nav-main-search">
+  <div class="search-wrap">
+    <label for="main-q" class="offscreen">Search</label>
+    <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" aria-hidden="true">
+    <span class="search-trigger">
+        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true">
+    <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path>
+</svg>
+    </span>
+    <button type="submit" class="offscreen">Search</button>
+    <button type="button" id="close-header-search" class="close-header-search transparent">
+        <span class="offscreen">Close search</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+  </div>
+</form>
+    </header> 
+
+  <!-- Content will go here -->
+  <main id="content">
+      
+  <!-- heading -->
+  <div id="wiki-document-head" class="document-head">
+    <div class="center">
+      <!-- action buttons -->
+      <div class="document-actions">
+        
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons">
+      <li>
+          <button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false">
+              <svg class="icon icon-language" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M10.219 16.844c-.031.109-.797-.25-1-.328-.203-.094-1.125-.609-1.359-.766s-1.125-.891-1.234-.938a28.275 28.275 0 0 1-2.094 2.828c-.281.328-1.125 1.391-1.641 1.719-.078.047-.531.094-.594.063.25-.187.969-1.078 1.281-1.437.391-.453 2.25-3.047 2.562-3.641.328-.594 1.312-2.562 1.359-2.75-.156-.016-1.391.406-1.719.516-.313.094-1.172.297-1.234.344-.063.063-.016.25-.047.313s-.313.203-.484.234a1.647 1.647 0 0 1-.734 0c-.203-.047-.391-.25-.438-.328 0 0-.063-.094-.078-.359.187-.063.5-.078.844-.172s1.188-.344 1.641-.5 1.328-.484 1.594-.547c.281-.047.984-.516 1.359-.641s.641-.281.656-.203 0 .422-.016.516c-.016.078-.766 1.547-.875 1.781-.063.125-.5.953-1.203 2.047.25.109.781.328 1 .438.266.125 2.125.906 2.219.938s.266.75.234.875zM7.016 9.25c.047.266-.031.375-.063.438-.156.297-.547.5-.781.594s-.625.187-.938.187c-.141-.016-.422-.063-.766-.406-.187-.203-.328-.75-.266-.688s.516.125.719.078.688-.187.906-.25c.234-.078.703-.203.859-.219.156 0 .281.063.328.266zm10.906 2.016l.984 3.547-2.172-.656zM.609 23.766l10.844-3.625V4.016L.609 7.657v16.109zM20 18.813l1.594.484-2.828-10.266-1.563-.484-3.375 8.375 1.594.484.703-1.719 3.297 1.016zM12.141 3.781l8.953 2.875V.718zM17 24.453l2.469.203-.844 2.5L18 26.125c-1.266.812-2.828 1.437-4.312 1.687-.453.094-.969.187-1.422.187h-1.313c-1.656 0-4.672-.984-5.984-1.937-.094-.078-.125-.141-.125-.25 0-.172.125-.297.281-.297.141 0 .875.453 1.078.547 1.406.703 3.375 1.344 4.953 1.344 1.953 0 3.281-.25 5.063-1.016.516-.234.969-.531 1.453-.797zm7-16.859v16.859c-12.078-3.844-12.094-3.844-12.094-3.844C11.656 20.718.453 24.5.297 24.5a.3.3 0 0 1-.281-.203c0-.016-.016-.031-.016-.047V7.406c.016-.047.031-.125.063-.156.094-.109.219-.141.313-.172.047-.016 1-.328 2.328-.781v-6l8.719 3.094C11.532 3.36 21.251 0 21.392 0c.172 0 .313.125.313.328v6.531z"></path>
+</svg>
+              <span>Languages</span>
+          </button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                
+                
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/de/docs/Web/CSS/-moz-appearance" data-locale="de" title="German">Deutsch (de)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/es/docs/Web/CSS/-moz-appearance" data-locale="es" title="Spanish">Español (es)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/fr/docs/Web/CSS/-moz-appearance" data-locale="fr" title="French">Français (fr)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ja/docs/Web/CSS/-moz-appearance" data-locale="ja" title="Japanese">日本語 (ja)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/pl/docs/Web/CSS/-moz-appearance" data-locale="pl" title="Polish">Polski (pl)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/-moz-appearance" data-locale="zh-CN" title="Chinese (Simplified)">中文 (简体) (zh-CN)</a></bdi></li>
+                
+              
+
+              
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/-moz-appearance$locales" rel="nofollow" id="translations-add">Add a translation</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+      
+      <li class="page-buttons-edit">
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/-moz-appearance$edit" class="button neutral" id="edit-button" rel="nofollow">
+              <svg class="icon icon-pencil" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M5.672 24l1.422-1.422-3.672-3.672L2 20.328V22h2v2h1.672zm8.172-14.5a.329.329 0 0 0-.344-.344.368.368 0 0 0-.266.109l-8.469 8.469a.366.366 0 0 0-.109.266c0 .203.141.344.344.344a.368.368 0 0 0 .266-.109l8.469-8.469a.366.366 0 0 0 .109-.266zM13 6.5l6.5 6.5-13 13H0v-6.5zM23.672 8c0 .531-.219 1.047-.578 1.406L20.5 12 14 5.5l2.594-2.578c.359-.375.875-.594 1.406-.594s1.047.219 1.422.594l3.672 3.656c.359.375.578.891.578 1.422z"></path>
+</svg>
+              Edit
+          </a>
+      </li>
+      
+
+        
+
+        <li class="page-buttons-advanced">
+            <button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false">
+                <svg class="icon icon-gear" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M16 14c0-2.203-1.797-4-4-4s-4 1.797-4 4 1.797 4 4 4 4-1.797 4-4zm8-1.703v3.469c0 .234-.187.516-.438.562l-2.891.438a8.86 8.86 0 0 1-.609 1.422c.531.766 1.094 1.453 1.672 2.156.094.109.156.25.156.391s-.047.25-.141.359c-.375.5-2.484 2.797-3.016 2.797a.795.795 0 0 1-.406-.141l-2.156-1.687a9.449 9.449 0 0 1-1.422.594c-.109.953-.203 1.969-.453 2.906a.573.573 0 0 1-.562.438h-3.469c-.281 0-.531-.203-.562-.469l-.438-2.875a9.194 9.194 0 0 1-1.406-.578l-2.203 1.672c-.109.094-.25.141-.391.141s-.281-.063-.391-.172c-.828-.75-1.922-1.719-2.578-2.625a.607.607 0 0 1 .016-.718c.531-.719 1.109-1.406 1.641-2.141a8.324 8.324 0 0 1-.641-1.547l-2.859-.422A.57.57 0 0 1 0 15.705v-3.469c0-.234.187-.516.422-.562l2.906-.438c.156-.5.359-.969.609-1.437a37.64 37.64 0 0 0-1.672-2.156c-.094-.109-.156-.234-.156-.375s.063-.25.141-.359c.375-.516 2.484-2.797 3.016-2.797.141 0 .281.063.406.156L7.828 5.94a9.449 9.449 0 0 1 1.422-.594c.109-.953.203-1.969.453-2.906a.573.573 0 0 1 .562-.438h3.469c.281 0 .531.203.562.469l.438 2.875c.484.156.953.344 1.406.578l2.219-1.672c.094-.094.234-.141.375-.141s.281.063.391.156c.828.766 1.922 1.734 2.578 2.656a.534.534 0 0 1 .109.344c0 .141-.047.25-.125.359-.531.719-1.109 1.406-1.641 2.141.266.5.484 1.016.641 1.531l2.859.438a.57.57 0 0 1 .453.562z"></path>
+</svg>
+                <span>Advanced</span>
+            </button>
+            <div class="submenu js-submenu" id="advanced-menu-submenu">
+                <!-- this page -->
+                <div class="submenu-column">
+                    <div class="title">Advanced</div>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/-moz-appearance$history" rel="nofollow">History</a></li>
+                        
+                        
+                        
+
+
+                
+
+                <li class="page-print"><a href="#" onclick="return window.print();">Print this article</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+      </div>
+
+      <div class="document-title">
+        <h1>-moz-appearance (-webkit-appearance, appearance)</h1>
+      </div>
+    </div>
+  </div>
+  
+  <div id="toc" class="toc">
+    <div class="center">
+      <div class="toc-head">Jump to:</div>
+        <ol class="toc-links">
+          <li><a rel="internal" href="#Syntax">Syntax</a></li><li><a rel="internal" href="#Examples">Examples</a></li><li><a rel="internal" href="#Specifications">Specifications</a></li><li><a rel="internal" href="#Browser_compatibility">Browser compatibility</a></li><li><a rel="internal" href="#See_also">See also</a>
+        </li></ol>
+    </div>
+  </div>
+  
+
+      <div class="center clear">
+      
+
+    <div class="wiki-main-content" id="document-main"><div class="center">
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-left-present">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-main wiki-column text-content">
+
+              
+
+              
+              
+
+              
+
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <div> <div class="notice experimental">
+    <p><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span> <strong>This is an <a href="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental">experimental technology</a></strong><br>Check the <a href="#Browser_compatibility">Browser compatibility table</a> carefully before using this in production.</p>
+</div></div>
+
+<p>The <strong><code>-moz-appearance</code></strong> CSS property is used in Gecko (Firefox) to display an element using platform-native styling based on the operating system's theme.</p>
+
+<p>The <strong><code>-webkit-appearance</code></strong> property is used by WebKit-based (e.g., Safari) and Blink-based (e.g., Chrome, Opera) browsers to achieve the same thing. Note that Edge also supports <code>-webkit-appearance</code> (instead of <code>-ms-appearance</code>) for compatibility reasons.</p>
+
+
+<div><iframe src="../../../../../interactive-examples.mdn.mozilla.net/pages/css/appearance.html" height="250" class="interactive  " frameborder="0" width="100%"></iframe></div>
+
+<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a rel="noopener" href="https://github.com/mdn/interactive-examples" class="external">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
+
+
+<p>This property is frequently used in <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Tutorial">XUL</a> stylesheets to design custom widgets with platform-appropriate styling. It is also used in the <a href="https://developer.mozilla.org/en-US/docs/XBL">XBL</a> implementations of the widgets that ship with the Mozilla platform.</p>
+
+<div class="note">
+<p><strong>Compatibility note</strong>: If you wish to use this property on websites, you should test it very carefully. Although it is supported in most modern browsers, its implementation varies widely. In older browsers, even the keyword <code>none</code> does not have the same effect on all form elements across different browsers, and some do not support it at all. The differences are smaller in the newest browsers.</p>
+</div>
+
+
+
+<a class="dashAnchor" name="//apple_ref/Section/Syntax"></a><h2 id="Syntax">Syntax</h2>
+
+
+
+<pre class="brush: css">/* Partial list of available values in Gecko */
+-moz-appearance: none;
+-moz-appearance: button;
+-moz-appearance: checkbox;
+-moz-appearance: scrollbarbutton-up;
+
+/* Partial list of available values in WebKit/Blink */
+-webkit-appearance: none;
+-webkit-appearance: button;
+-webkit-appearance: checkbox;
+-webkit-appearance: scrollbarbutton-up;
+</pre>
+
+<p>The <code>-moz-appearance</code> property may be specified as a single value chosen from the list below.</p>
+
+<h3 id="Values">Values</h3>
+
+<p><code>&lt;appearance&gt;</code> is one of the following keywords:</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Value</th>
+   <th>Demo</th>
+   <th>Browser</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td><code>none</code></td>
+   <td>
+    <div style="display: none;" id="sampleNone">
+    <pre class="brush:css"> div {-moz-appearance: none; -webkit-appearance: none; color: black;}</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;
+</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleNone419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleNone" frameborder="0"></iframe></td>
+   <td>All</td>
+   <td>No special styling is applied. This is the default.</td>
+  </tr>
+  <tr>
+   <td><code>button</code></td>
+   <td>
+    <div style="display: none;" id="sampleButton">
+    <pre class="brush:css"> div {-moz-appearance: button; -webkit-appearance: button; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleButton419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleButton" frameborder="0"></iframe></td>
+   <td>Firefox Chrome</td>
+   <td>The element is drawn like a button.</td>
+  </tr>
+  <tr>
+   <td><code>button-arrow-down</code></td>
+   <td>
+    <div style="display: none;" id="sampleButtonArrowDown">
+    <pre class="brush:css"> div {-moz-appearance: button-arrow-down; -webkit-appearance: button-arrow-down; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleButtonArrowDown419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleButtonArrowDown" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>button-arrow-next</code></td>
+   <td>
+    <div style="display: none;" id="sampleButtonArrowNext">
+    <pre class="brush:css"> div {-moz-appearance: button-arrow-next; -webkit-appearance: button-arrow-next; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleButtonArrowNext419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleButtonArrowNext" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>button-arrow-previous</code></td>
+   <td>
+    <div style="display: none;" id="sampleButtonArrowPrevious">
+    <pre class="brush:css"> div {-moz-appearance: button-arrow-previous; -webkit-appearance: button-arrow-previous; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleButtonArrowPrevious419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleButtonArrowPrevious" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>button-arrow-up</code></td>
+   <td>
+    <div style="display: none;" id="sampleButtonArrowUp">
+    <pre class="brush:css"> div {-moz-appearance: button-arrow-up; -webkit-appearance: button-arrow-up; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleButtonArrowUp419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleButtonArrowUp" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>button-bevel</code></td>
+   <td>
+    <div style="display: none;" id="sampleButtonBevel">
+    <pre class="brush:css"> div {-moz-appearance: button-bevel; -webkit-appearance: button-bevel; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleButtonBevel419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleButtonBevel" frameborder="0"></iframe></td>
+   <td>Firefox Chrome</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>button-focus</code></td>
+   <td>
+    <div style="display: none;" id="sampleButtonFocus">
+    <pre class="brush:css"> div {-moz-appearance: button-focus; -webkit-appearance: button-focus; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleButtonFocus419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleButtonFocus" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>caret</code></td>
+   <td>
+    <div style="display: none;" id="sampleCaret">
+    <pre class="brush:css"> div {-moz-appearance: caret; -webkit-appearance: caret; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleCaret419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleCaret" frameborder="0"></iframe></td>
+   <td>Firefox Chrome</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>checkbox</code></td>
+   <td>
+    <div style="display: none;" id="sampleCheckbox">
+    <pre class="brush:css"> div {-moz-appearance: checkbox; -webkit-appearance: checkbox; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleCheckbox419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleCheckbox" frameborder="0"></iframe></td>
+   <td>Firefox Chrome</td>
+   <td>The element is drawn like a checkbox, including only the actual "checkbox" portion.</td>
+  </tr>
+  <tr>
+   <td><code>checkbox-container</code></td>
+   <td>
+    <div style="display: none;" id="sampleCheckboxContainer">
+    <pre class="brush:css"> div {-moz-appearance: checkbox-container; -webkit-appearance: checkbox-container; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleCheckboxContainer419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleCheckboxContainer" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>The element is drawn like a container for a checkbox, which may include a prelighting background effect under certain platforms. Normally it would contain a label and a checkbox.</td>
+  </tr>
+  <tr>
+   <td><code>checkbox-label</code></td>
+   <td>
+    <div style="display: none;" id="sampleCheckboxLabel">
+    <pre class="brush:css"> div {-moz-appearance: checkbox-label; -webkit-appearance: checkbox-label; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleCheckboxLabel419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleCheckboxLabel" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>checkmenuitem</code></td>
+   <td>
+    <div style="display: none;" id="sampleCheckmenuitem">
+    <pre class="brush:css"> div {-moz-appearance: checkmenuitem; -webkit-appearance: checkmenuitem; height: 20px; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleCheckmenuitem419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleCheckmenuitem" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>dualbutton</code></td>
+   <td>
+    <div style="display: none;" id="sampleDualButton">
+    <pre class="brush:css"> div {-moz-appearance: dualbutton; -webkit-appearance: dualbutton; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleDualButton419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleDualButton" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>groupbox</code></td>
+   <td>
+    <div style="display: none;" id="sampleGroupbox">
+    <pre class="brush:css"> div {-moz-appearance: groupbox; -webkit-appearance: groupbox; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleGroupbox419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleGroupbox" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>inner-spin-button</code></td>
+   <td>&nbsp;</td>
+   <td>Chrome</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>listbox</code></td>
+   <td>
+    <div style="display: none;" id="sampleListBox">
+    <pre class="brush:css"> div {-moz-appearance: listbox; -webkit-appearance: listbox; height:20px; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleListBox419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleListBox" frameborder="0"></iframe></td>
+   <td>Firefox Chrome</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>listitem</code></td>
+   <td>
+    <div style="display: none;" id="sampleListItem">
+    <pre class="brush:css"> div {-moz-appearance: listitem; -webkit-appearance: listitem; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleListItem419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleListItem" frameborder="0"></iframe></td>
+   <td>Firefox Chrome</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>media-enter-fullscreen-button</code></td>
+   <td>&nbsp;</td>
+   <td>Chrome</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>media-exit-fullscreen-button</code></td>
+   <td>&nbsp;</td>
+   <td>Chrome</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>media-mute-button</code></td>
+   <td>&nbsp;</td>
+   <td>Chrome</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>media-play-button</code></td>
+   <td>&nbsp;</td>
+   <td>Chrome</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>media-overlay-play-button</code></td>
+   <td>&nbsp;</td>
+   <td>Chrome</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>media-toggle-closed-captions-button</code></td>
+   <td>&nbsp;</td>
+   <td>Chrome</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>media-slider</code></td>
+   <td>&nbsp;</td>
+   <td>Chrome</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>media-sliderthumb</code></td>
+   <td>&nbsp;</td>
+   <td>Chrome</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>media-volume-slider-container</code></td>
+   <td>&nbsp;</td>
+   <td>Chrome</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>media-volume-slider</code></td>
+   <td>&nbsp;</td>
+   <td>Chrome</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>media-volume-sliderthumb</code></td>
+   <td>&nbsp;</td>
+   <td>Chrome</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>media-controls-background</code></td>
+   <td>&nbsp;</td>
+   <td>Chrome</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>media-controls-fullscreen-background</code></td>
+   <td>&nbsp;</td>
+   <td>Chrome</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>media-current-time-display</code></td>
+   <td>&nbsp;</td>
+   <td>Chrome</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>media-time-remaining-display</code></td>
+   <td>&nbsp;</td>
+   <td>Chrome</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>menuarrow</code></td>
+   <td>
+    <div style="display: none;" id="sampleMenuArrow">
+    <pre class="brush:css"> div {-moz-appearance: menuarrow; -webkit-appearance: menuarrow; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleMenuArrow419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleMenuArrow" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>menubar</code></td>
+   <td>
+    <div style="display: none;" id="sampleMenubar">
+    <pre class="brush:css"> div {-moz-appearance: menubar; -webkit-appearance: menubar; color: balck; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleMenubar419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleMenubar" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>menucheckbox</code></td>
+   <td>
+    <div style="display: none;" id="sampleMenuCheckbox">
+    <pre class="brush:css"> div {-moz-appearance: menucheckbox; -webkit-appearance: menucheckbox; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleMenuCheckbox419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleMenuCheckbox" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>menuimage</code></td>
+   <td>
+    <div style="display: none;" id="sampleMenuImage">
+    <pre class="brush:css"> div {-moz-appearance: menuimage; -webkit-appearance: menuimage; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleMenuImage419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleMenuImage" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>menuitem</code></td>
+   <td>
+    <div style="display: none;" id="sampleMenuItem">
+    <pre class="brush:css"> div {-moz-appearance: menuitem; -webkit-appearance: menuitem; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleMenuItem419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleMenuItem" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>The element is styled as menu item, item is highlighted when hovered.</td>
+  </tr>
+  <tr>
+   <td><code>menuitemtext</code></td>
+   <td>
+    <div style="display: none;" id="sampleMenuItemText">
+    <pre class="brush:css"> div {-moz-appearance: menuitemtext; -webkit-appearance: menuitemtext; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleMenuItemText419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleMenuItemText" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>menulist</code></td>
+   <td>
+    <div style="display: none;" id="sampleMenuList">
+    <pre class="brush:css"> div {-moz-appearance: menulist; -webkit-appearance: menulist; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleMenuList419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleMenuList" frameborder="0"></iframe></td>
+   <td>Firefox Chrome</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>menulist-button</code></td>
+   <td>
+    <div style="display: none;" id="sampleMenuListButton">
+    <pre class="brush:css"> div {-moz-appearance: menulist-button; -webkit-appearance: menulist-button; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleMenuListButton419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleMenuListButton" frameborder="0"></iframe></td>
+   <td>Firefox Chrome</td>
+   <td>The element is styled as a button that would indicate a menulist can be opened.</td>
+  </tr>
+  <tr>
+   <td><code>menulist-text</code></td>
+   <td>
+    <div style="display: none;" id="sampleMenuListText">
+    <pre class="brush:css"> div {-moz-appearance: menulist-text; -webkit-appearance: menulist-text; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleMenuListText419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleMenuListText" frameborder="0"></iframe></td>
+   <td>Firefox Chrome</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>menulist-textfield</code></td>
+   <td>
+    <div style="display: none;" id="sampleMenuListTextfield">
+    <pre class="brush:css"> div {-moz-appearance: menulist-textfield; -webkit-appearance: menulist-textfield; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleMenuListTextfield419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleMenuListTextfield" frameborder="0"></iframe></td>
+   <td>Firefox Chrome</td>
+   <td>The element is styled as the text field for a menulist. (Not implemented for the Windows platform)</td>
+  </tr>
+  <tr>
+   <td><code>menupopup</code></td>
+   <td>
+    <div style="display: none;" id="sampleMenuPopup">
+    <pre class="brush:css"> div {-moz-appearance: menupopup; -webkit-appearance: menupopup; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleMenuPopup419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleMenuPopup" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>menuradio</code></td>
+   <td>
+    <div style="display: none;" id="sampleMenuRadio">
+    <pre class="brush:css"> div {-moz-appearance: menuradio; -webkit-appearance: menuradio; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleMenuRadio419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleMenuRadio" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>menuseparator</code></td>
+   <td>
+    <div style="display: none;" id="sampleMenuSeparator">
+    <pre class="brush:css"> div {-moz-appearance: menuseparator; -webkit-appearance: menuseparator; color: transparent; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleMenuSeparator419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleMenuSeparator" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>meter</code></td>
+   <td>&nbsp;</td>
+   <td>Chrome</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>meterbar</code></td>
+   <td>
+    <div style="display: none;" id="sampleMeterbar">
+    <pre class="brush:css"> div {-moz-appearance: meterbar; -webkit-appearance: meterbar; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleMeterbar419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleMeterbar" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>New in Fx 16.</td>
+  </tr>
+  <tr>
+   <td><code>meterchunk</code></td>
+   <td>
+    <div style="display: none;" id="sampleMeterchunk">
+    <pre class="brush:css"> div {-moz-appearance: meterchunk; -webkit-appearance: meterchunk; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleMeterchunk419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleMeterchunk" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>New in Fx 16</td>
+  </tr>
+  <tr>
+   <td><code>progress-bar</code></td>
+   <td>&nbsp;</td>
+   <td>Chrome</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>progress-bar-value</code></td>
+   <td>&nbsp;</td>
+   <td>Chrome</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>progressbar</code></td>
+   <td>
+    <div style="display: none;" id="sampleProgressBar">
+    <pre class="brush:css"> div {-moz-appearance: progressbar; -webkit-appearance: progressbar; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleProgressBar419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleProgressBar" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>The element is styled like a progress bar.</td>
+  </tr>
+  <tr>
+   <td><code>progressbar-vertical</code></td>
+   <td>
+    <div style="display: none;" id="sampleProgressBarVertical">
+    <pre class="brush:css"> div {-moz-appearance: progressbar-vertical; -webkit-appearance: preogressbar-vertical; color: transparent; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleProgressBarVertical419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleProgressBarVertical" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>progresschunk</code></td>
+   <td>
+    <div style="display: none;" id="sampleProgressChunk">
+    <pre class="brush:css"> div {-moz-appearance: progresschunk; -webkit-appearance: progresschunk; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleProgressChunk419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleProgressChunk" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>progresschunk-vertical</code></td>
+   <td>
+    <div style="display: none;" id="sampleProgressChunkVertical">
+    <pre class="brush:css"> div {-moz-appearance: progresschunk-vertical; -webkit-appearance: progresschunk-vertical; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleProgressChunkVertical419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleProgressChunkVertical" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>push-button</code></td>
+   <td>&nbsp;</td>
+   <td>Chrome</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>radio</code></td>
+   <td>
+    <div style="display: none;" id="sampleRadio">
+    <pre class="brush:css"> div {-moz-appearance: radio; -webkit-appearance: radio; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleRadio419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleRadio" frameborder="0"></iframe></td>
+   <td>Firefox Chrome</td>
+   <td>The element is drawn like a radio button, including only the actual "radio button" portion.</td>
+  </tr>
+  <tr>
+   <td><code>radio-container</code></td>
+   <td>
+    <div style="display: none;" id="sampleRadioContainer">
+    <pre class="brush:css"> div {-moz-appearance: radio-container; -webkit-appearance: radio-container; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleRadioContainer419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleRadioContainer" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>The element is drawn like a container for a radio button, which may include a prelighting background effect under certain platforms. Normally it would contain a label and a radio button.</td>
+  </tr>
+  <tr>
+   <td><code>radio-label</code></td>
+   <td>
+    <div style="display: none;" id="sampleRadioLabel">
+    <pre class="brush:css"> div {-moz-appearance: radio-label; -webkit-appearance: radio-label; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleRadioLabel419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleRadioLabel" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>radiomenuitem</code></td>
+   <td>
+    <div style="display: none;" id="sampleRadioMenuItem">
+    <pre class="brush:css"> div {-moz-appearance: radiomenuitem; -webkit-appearance: radiomenuitem; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleRadioMenuItem419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleRadioMenuItem" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td>range</td>
+   <td>
+    <div style="display: none;" id="sampleRange">
+    <pre class="brush:css"> div {-moz-appearance: range; -webkit-appearance: radiomenuitem; color: black; }</pre>
+    range
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleRange419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleRange" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td>range-thumb</td>
+   <td>
+    <div style="display: none;" id="sampleRangeThumb">
+    <pre class="brush:css"> div {-moz-appearance: range-thumb; -webkit-appearance: range-thumb; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleRangeThumb419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleRangeThumb" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>resizer</code></td>
+   <td>
+    <div style="display: none;" id="sampleResizer">
+    <pre class="brush:css"> div {-moz-appearance: resizer; -webkit-appearance: resizer; color: transparent; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleResizer419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleResizer" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>resizerpanel</code></td>
+   <td>
+    <div style="display: none;" id="sampleResizerPanel">
+    <pre class="brush:css"> div {-moz-appearance: resizerpanel; -webkit-appearance: resizerpanel; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleResizerPanel419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleResizerPanel" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>scale-horizontal</code></td>
+   <td>
+    <div style="display: none;" id="sampleScaleHorizontal">
+    <pre class="brush:css"> div {-moz-appearance: scale-horizontal; -webkit-appearance: scale-horizontal; color: transparent; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleScaleHorizontal419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleScaleHorizontal" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>scalethumbend</code></td>
+   <td>
+    <div style="display: none;" id="sampleThumbEnd">
+    <pre class="brush:css"> div {-moz-appearance: scalethumbend; -webkit-appearance: scalethumbend; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleThumbEnd419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleThumbEnd" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>scalethumb-horizontal</code></td>
+   <td>
+    <div style="display: none;" id="sampleScaleThumbHorizontal">
+    <pre class="brush:css"> div {-moz-appearance: scalethumb-horizontal; -webkit-appearance: scalethumb-horizontal; color: transparent; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleScaleThumbHorizontal419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleScaleThumbHorizontal" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>scalethumbstart</code></td>
+   <td>
+    <div style="display: none;" id="sampleScaleThumbStart">
+    <pre class="brush:css"> div {-moz-appearance: scalethumbstart; -webkit-appearance: scalethumbstart; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleScaleThumbStart419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleScaleThumbStart" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>scalethumbtick</code></td>
+   <td>
+    <div style="display: none;" id="sampleScaleThumbTick">
+    <pre class="brush:css"> div {-moz-appearance: scalethumbtick; -webkit-appearance: scalethumbtick; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleScaleThumbTick419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleScaleThumbTick" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>scalethumb-vertical</code></td>
+   <td>
+    <div style="display: none;" id="sampleScaleThumbVertical">
+    <pre class="brush:css"> div {-moz-appearance: scalethumb-vertical; -webkit-appearance: scalethumb-vertical; color: black; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleScaleThumbVertical419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleScaleThumbVertical" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>scale-vertical</code></td>
+   <td>
+    <div style="display: none;" id="sampleScaleVertical">
+    <pre class="brush:css"> div {-moz-appearance: scale-vertical; -webkit-appearance: scale-vertical; color: transparent; }</pre>
+
+    <pre class="brush:html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleScaleVertical419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleScaleVertical" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>scrollbarbutton-down</code></td>
+   <td>
+    <div style="display: none;" id="sampleScrollbarButtonDown">
+    <pre class="brush:css"> div {-moz-appearance: scrollbarbutton-down; -webkit-appearance: scrollbarbutton-down; color: black; }</pre>
+
+    <pre class="bruh: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleScrollbarButtonDown419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleScrollbarButtonDown" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>scrollbarbutton-left</code></td>
+   <td>
+    <div style="display: none;" id="sampleScrollbarButtonLeft">
+    <pre class="brush:css"> div {-moz-appearance: scrollbarbutton-left; -webkit-appearance: scrollbarbutton-left; color: black; }</pre>
+
+    <pre class="bruh: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleScrollbarButtonLeft419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleScrollbarButtonLeft" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>scrollbarbutton-right</code></td>
+   <td>
+    <div style="display: none;" id="sampleScrollbarButtonRight">
+    <pre class="brush:css"> div {-moz-appearance: scrollbarbutton-right; -webkit-appearance: scrollbarbutton-right; color: black; }</pre>
+
+    <pre class="bruh: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleScrollbarButtonRight419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleScrollbarButtonRight" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>scrollbarbutton-up</code></td>
+   <td>
+    <div style="display: none;" id="sampleScrollbarButtonUp">
+    <pre class="brush:css"> div {-moz-appearance: scrollbarbutton-up; -webkit-appearance: scrollbarbutton-up; color: black; }</pre>
+
+    <pre class="bruh: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleScrollbarButtonUp419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleScrollbarButtonUp" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>scrollbarthumb-horizontal</code></td>
+   <td>
+    <div style="display: none;" id="sampleScrollbarThumbHorizontal">
+    <pre class="brush:css"> div {-moz-appearance: scrollbarthumb-horizontal; -webkit-appearance: scrollbarthumb-horizontal; color: black; }</pre>
+
+    <pre class="bruh: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleScrollbarThumbHorizontal419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleScrollbarThumbHorizontal" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>scrollbarthumb-vertical</code></td>
+   <td>
+    <div style="display: none;" id="sampleScrollbarThumbVertical">
+    <pre class="brush:css"> div {-moz-appearance: scrollbarthumb-vertical; -webkit-appearance: scrollbarthumb-vertical; color: black; }</pre>
+
+    <pre class="bruh: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleScrollbarThumbVertical419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleScrollbarThumbVertical" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>scrollbartrack-horizontal</code></td>
+   <td>
+    <div style="display: none;" id="sampleScrollbarTrackHorizontal">
+    <pre class="brush:css"> div {-moz-appearance: scrollbartrack-horizontal; -webkit-appearance: scrollbartrack-horizontal; color: black; }</pre>
+
+    <pre class="bruh: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleScrollbarTrackHorizontal419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleScrollbarTrackHorizontal" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>scrollbartrack-vertical</code></td>
+   <td>
+    <div style="display: none;" id="sampleScrollbarTrackVertical">
+    <pre class="brush:css"> div {-moz-appearance: scrollbartrack-vertical; -webkit-appearance: scrollbarbartrack-vertical; color: black; }</pre>
+
+    <pre class="bruh: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleScrollbarTrackVertical419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleScrollbarTrackVertical" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>searchfield</code></td>
+   <td>
+    <div style="display: none;" id="sampleSearchField">
+    <pre class="brush:css"> div {-moz-appearance: searchfield; -webkit-appearance: searchfield; color: black; }</pre>
+
+    <pre class="bruh: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleSearchField419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleSearchField" frameborder="0"></iframe></td>
+   <td>Firefox Chrome</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>searchfield-cancel-button</code></td>
+   <td>&nbsp;</td>
+   <td>Chrome</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>separator</code></td>
+   <td>
+    <div style="display: none;" id="sampleSeparator">
+    <pre class="brush:css"> div {-moz-appearance: separator; -webkit-appearance: separator; color: transparent; }</pre>
+
+    <pre class="bruh: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleSeparator419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleSeparator" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>sheet</code></td>
+   <td>
+    <div style="display: none;" id="sampleSheet">
+    <pre class="brush:css"> div {-moz-appearance: sheet; -webkit-appearance: sheet; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleSheet419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleSheet" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>slider-horizontal</code></td>
+   <td>&nbsp;</td>
+   <td>Chrome</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>slider-vertical</code></td>
+   <td>&nbsp;</td>
+   <td>Chrome</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>sliderthumb-horizontal</code></td>
+   <td>&nbsp;</td>
+   <td>Chrome</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>sliderthumb-vertical</code></td>
+   <td>&nbsp;</td>
+   <td>Chrome</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>spinner</code></td>
+   <td>
+    <div style="display: none;" id="sampleSpinner">
+    <pre class="brush:css"> div {-moz-appearance: spinner; -webkit-appearance: spinner; color: transparent; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleSpinner419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleSpinner" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>spinner-downbutton</code></td>
+   <td>
+    <div style="display: none;" id="sampleSpinnerDownbutton">
+    <pre class="brush:css"> div {-moz-appearance: spinner-downbutton; -webkit-appearance: spinner-downbutton; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleSpinnerDownbutton419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleSpinnerDownbutton" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>spinner-textfield</code></td>
+   <td>
+    <div style="display: none;" id="sampleSpinnerTextfield">
+    <pre class="brush:css"> div {-moz-appearance: spinner-textfield; -webkit-appearance: spinner-textfield; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleSpinnerTextfield419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleSpinnerTextfield" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>spinner-upbutton</code></td>
+   <td>
+    <div style="display: none;" id="sampleSpinnerUpbutton">
+    <pre class="brush:css"> div {-moz-appearance: spinner-upbutton; -webkit-appearance: spinner-upbutton; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleSpinnerUpbutton419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleSpinnerUpbutton" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>splitter</code></td>
+   <td>
+    <div style="display: none;" id="sampleSplitter">
+    <pre class="brush:css"> div {-moz-appearance: splitter; -webkit-appearance: splitter; color: transparent; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleSplitter419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleSplitter" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>square-button</code></td>
+   <td>&nbsp;</td>
+   <td>Chrome</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>statusbar</code></td>
+   <td>
+    <div style="display: none;" id="sampleStatusBar">
+    <pre class="brush:css"> div {-moz-appearance: statusbar; -webkit-appearance: statusbar; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleStatusBar419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleStatusBar" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>statusbarpanel</code></td>
+   <td>
+    <div style="display: none;" id="sampleStatusBarPanel">
+    <pre class="brush:css"> div {-moz-appearance: statusbarpanel; -webkit-appearance: statusbarpanel; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleStatusBarPanel419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleStatusBarPanel" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>tab</code></td>
+   <td>
+    <div style="display: none;" id="sampleTab">
+    <pre class="brush:css"> div {-moz-appearance: tab; -webkit-appearance: tab; height: 20px; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleTab419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleTab" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>tabpanel</code></td>
+   <td>
+    <div style="display: none;" id="sampleTabPanel">
+    <pre class="brush:css"> div {-moz-appearance: tabpanel; -webkit-appearance: tabpanel; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleTabPanel419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleTabPanel" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>tabpanels</code></td>
+   <td>
+    <div style="display: none;" id="sampleTabPanels">
+    <pre class="brush:css"> div {-moz-appearance: tabpanels; -webkit-appearance: tabpanels; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleTabPanels419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleTabPanels" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>tab-scroll-arrow-back</code></td>
+   <td>
+    <div style="display: none;" id="sampleTabScrollArrowBack">
+    <pre class="brush:css"> div {-moz-appearance: tab-scroll-arrow-back; -webkit-appearance: tab-scroll-arrow-back; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleTabScrollArrowBack419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleTabScrollArrowBack" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>tab-scroll-arrow-forward</code></td>
+   <td>
+    <div style="display: none;" id="sampleTabScrollArrowForward">
+    <pre class="brush:css"> div {-moz-appearance: tab-scroll-arrow-forward; -webkit-appearance: tab-scroll-arrow-forward; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleTabScrollArrowForward419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleTabScrollArrowForward" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>textarea</code></td>
+   <td>&nbsp;</td>
+   <td>Chrome</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>textfield</code></td>
+   <td>
+    <div style="display: none;" id="sampleTextField">
+    <pre class="brush:css"> div {-moz-appearance: textfield; -webkit-appearance: textfield; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleTextField419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleTextField" frameborder="0"></iframe></td>
+   <td>Firefox Chrome</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>textfield-multiline</code></td>
+   <td>
+    <div style="display: none;" id="sampleTextfieldMultiline">
+    <pre class="brush:css"> div {-moz-appearance: textfield-multiline; -webkit-appearance: textfield-multiline; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleTextfieldMultiline419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleTextfieldMultiline" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>toolbar</code></td>
+   <td>
+    <div style="display: none;" id="sampleToolbar">
+    <pre class="brush:css"> div {-moz-appearance: toolbar; -webkit-appearance: toolbar; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleToolbar419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleToolbar" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>toolbarbutton</code></td>
+   <td>
+    <div style="display: none;" id="sampleToolbarButton">
+    <pre class="brush:css"> div {-moz-appearance: toolbarbutton; -webkit-appearance: toolbarbutton; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleToolbarButton419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleToolbarButton" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>toolbarbutton-dropdown</code></td>
+   <td>
+    <div style="display: none;" id="sampleToolbarButtonDropdown">
+    <pre class="brush:css"> div {-moz-appearance: toolbarbutton-dropdown; -webkit-appearance: toolbarbutton-dropdown; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleToolbarButtonDropdown419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleToolbarButtonDropdown" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>toolbargripper</code></td>
+   <td>
+    <div style="display: none;" id="sampleToolbarGripper">
+    <pre class="brush:css"> div {-moz-appearance: toolbargripper; -webkit-appearance: toolbargripper; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleToolbarGripper419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleToolbarGripper" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>toolbox</code></td>
+   <td>
+    <div style="display: none;" id="sampleToolbox">
+    <pre class="brush:css"> div {-moz-appearance: toolbox; -webkit-appearance: toolbox; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleToolbox419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleToolbox" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>tooltip</code></td>
+   <td>
+    <div style="display: none;" id="sampleTooltip">
+    <pre class="brush:css"> div {-moz-appearance: tooltip; -webkit-appearance: tooltip; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleTooltip419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleTooltip" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>treeheader</code></td>
+   <td>
+    <div style="display: none;" id="sampleTreeHeader">
+    <pre class="brush:css"> div {-moz-appearance: treeheader; -webkit-appearance: treeheader; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleTreeHeader419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleTreeHeader" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>treeheadercell</code></td>
+   <td>
+    <div style="display: none;" id="sampleTreeHeaderCell">
+    <pre class="brush:css"> div {-moz-appearance: treeheadercell; -webkit-appearance: treeheadercell; height:20px; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleTreeHeaderCell419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleTreeHeaderCell" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>treeheadersortarrow</code></td>
+   <td>
+    <div style="display: none;" id="sampleTreeHeaderSortArrow">
+    <pre class="brush:css"> div {-moz-appearance: treeheadersortarrow; -webkit-appearance: treeheadersortarrow; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleTreeHeaderSortArrow419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleTreeHeaderSortArrow" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>treeitem</code></td>
+   <td>
+    <div style="display: none;" id="sampleTreeItem">
+    <pre class="brush:css"> div {-moz-appearance: treeitem; -webkit-appearance: treeitem; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleTreeItem419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleTreeItem" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>treeline</code></td>
+   <td>
+    <div style="display: none;" id="sampleTreeLine">
+    <pre class="brush:css"> div {-moz-appearance: treeline; -webkit-appearance: treeline; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleTreeLine419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleTreeLine" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>treetwisty</code></td>
+   <td>
+    <div style="display: none;" id="sampleTreeTwisty">
+    <pre class="brush:css"> div {-moz-appearance: treetwisty; -webkit-appearance: treetwisty; color: transparent; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleTreeTwisty419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleTreeTwisty" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>treetwistyopen</code></td>
+   <td>
+    <div style="display: none;" id="sampleTreeTwistyOpen">
+    <pre class="brush:css"> div {-moz-appearance: treetwistyopen; -webkit-appearance: treetwistyopen; color: transparent; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleTreeTwistyOpen419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleTreeTwistyOpen" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>treeview</code></td>
+   <td>
+    <div style="display: none;" id="sampleTreeView">
+    <pre class="brush:css"> div {-moz-appearance: treeview; -webkit-appearance: treeview; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleTreeView419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleTreeView" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td> <code>-moz-win-borderless-glass</code></td>
+   <td>
+    <div style="display: none;" id="sampleWinBorderlessGlass">
+    <pre class="brush:css"> div {-moz-appearance: -moz-win-borderless-glass; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleWinBorderlessGlass419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleWinBorderlessGlass" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td><strong>Windows Vista and later only</strong>. This style applies the Aero Glass effect -- but without a border -- to the element.</td>
+  </tr>
+  <tr>
+   <td><code>-moz-win-browsertabbar-toolbox</code></td>
+   <td>
+    <div style="display: none;" id="sampleWinBrowsertabbarToolbox">
+    <pre class="brush:css"> div {-moz-appearance: -moz-win-browsertabbar-toolbox; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleWinBrowsertabbarToolbox419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleWinBrowsertabbarToolbox" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td><strong>Windows Vista and later only</strong>. This toolbox style is meant to be used for the tab bar in a browser.</td>
+  </tr>
+  <tr>
+   <td><code>-moz-win-communicationstext</code></td>
+   <td>
+    <div style="display: none;" id="sampleWinCommunicationstext">
+    <pre class="brush:css"> div {-moz-appearance: -moz-win-communicationstext; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleWinCommunicationstext419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleWinCommunicationstext" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>-moz-win-communications-toolbox</code></td>
+   <td>
+    <div style="display: none;" id="sampleWinCommunicationsToolbox">
+    <pre class="brush:css"> div {-moz-appearance: -moz-win-communications-toolbox; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleWinCommunicationsToolbox419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleWinCommunicationsToolbox" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td><strong>Windows Vista and later only</strong>. This toolbox style is meant to be used in communications and productivity applications. Corresponding foreground color is <code>-moz-win-communicationstext</code>.</td>
+  </tr>
+  <tr>
+   <td> <code>-moz-win-exclude-glass</code></td>
+   <td>
+    <div style="display: none;" id="sampleWinExcludeGlass">
+    <pre class="brush:css"> div {-moz-appearance: -moz-win-exclude-glass; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleWinExcludeGlass419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleWinExcludeGlass" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td><strong>Windows Vista and later only. </strong>This styles is used to exclude the Aero Glass effect on the element.</td>
+  </tr>
+  <tr>
+   <td><code>-moz-win-glass</code></td>
+   <td>
+    <div style="display: none;" id="sampleWinGlass">
+    <pre class="brush:css"> div {-moz-appearance: -moz-win-glass; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleWinGlass419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleWinGlass" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td><strong>Windows Vista and later only</strong>. This style applies the Aero Glass effect to the element.</td>
+  </tr>
+  <tr>
+   <td><code>-moz-win-mediatext</code></td>
+   <td>
+    <div style="display: none;" id="sampleWinMediaText">
+    <pre class="brush:css"> div {-moz-appearance: -moz-win-mediatext; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleWinMediaText419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleWinMediaText" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>-moz-win-media-toolbox</code></td>
+   <td>
+    <div style="display: none;" id="sampleWinMediaToolbox">
+    <pre class="brush:css"> div {-moz-appearance: -moz-win-media-toolbox; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleWinMediaToolbox419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleWinMediaToolbox" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td><strong>Windows Vista and later only</strong>. This toolbox style is meant to be used in applications that manage media objects. Corresponding foreground color is <code>-moz-win-mediatext</code>.</td>
+  </tr>
+  <tr>
+   <td><code>-moz-window-button-box</code></td>
+   <td>
+    <div style="display: none;" id="sampleWindowButtonBox">
+    <pre class="brush:css"> div {-moz-appearance: -moz-window-button-box; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleWindowButtonBox419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleWindowButtonBox" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>-moz-window-button-box-maximized</code></td>
+   <td>
+    <div style="display: none;" id="sampleWindowButtonBoxMaximized">
+    <pre class="brush:css"> div {-moz-appearance: -moz-window-button-box-maximized; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleWindowButtonBoxMaximized419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleWindowButtonBoxMaximized" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>-moz-window-button-close</code></td>
+   <td>
+    <div style="display: none;" id="sampleWindowButtonClose">
+    <pre class="brush:css"> div {-moz-appearance: -moz-window-button-close; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleWindowButtonClose419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleWindowButtonClose" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>-moz-window-button-maximize</code></td>
+   <td>
+    <div style="display: none;" id="sampleWindowButtonMaximize">
+    <pre class="brush:css"> div {-moz-appearance: -moz-window-button-maximize; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleWindowButtonMaximize419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleWindowButtonMaximize" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>-moz-window-button-minimize</code></td>
+   <td>
+    <div style="display: none;" id="sampleWindowButtonMinimize">
+    <pre class="brush:css"> div {-moz-appearance: -moz-window-button-minimize; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleWindowButtonMinimize419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleWindowButtonMinimize" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>-moz-window-button-restore</code></td>
+   <td>
+    <div style="display: none;" id="sampleWindowButtonRestore">
+    <pre class="brush:css"> div {-moz-appearance: -moz-window-button-restore; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleWindowButtonRestore419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleWindowButtonRestore" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>-moz-window-frame-bottom</code></td>
+   <td>
+    <div style="display: none;" id="sampleWindowFrameBottom">
+    <pre class="brush:css"> div {-moz-appearance: -moz-window-frame-bottom; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleWindowFrameBottom419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleWindowFrameBottom" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>-moz-window-frame-left</code></td>
+   <td>
+    <div style="display: none;" id="sampleWindowFrameLeft">
+    <pre class="brush:css"> div {-moz-appearance: -moz-window-frame-left; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleWindowFrameLeft419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleWindowFrameLeft" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>-moz-window-frame-right</code></td>
+   <td>
+    <div style="display: none;" id="sampleWindowFrameRight">
+    <pre class="brush:css"> div {-moz-appearance: -moz-window-frame-right; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleWindowFrameRight419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleWindowFrameRight" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>-moz-window-titlebar</code></td>
+   <td>
+    <div style="display: none;" id="sampleWindowTitlebar">
+    <pre class="brush:css"> div {-moz-appearance: -moz-window-titlebar; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleWindowTitlebar419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleWindowTitlebar" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>-moz-window-titlebar-maximized</code></td>
+   <td>
+    <div style="display: none;" id="sampleWindowTitlebarMaximized">
+    <pre class="brush:css"> div {-moz-appearance: -moz-window-titlebar-maximized; color: black; }</pre>
+
+    <pre class="brush: html">          &lt;div&gt;Lorem&lt;/div&gt;</pre>
+    </div>
+    <iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/-moz-appearance%24samples/sampleWindowTitlebarMaximized419c.html?revision=1400811" class="live-sample-frame nobutton" height="50" width="100" id="frame_sampleWindowTitlebarMaximized" frameborder="0"></iframe></td>
+   <td>Firefox</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>-apple-pay-button</code></td>
+   <td>&nbsp;</td>
+   <td>&nbsp;</td>
+   <td><strong>iOS and macOS only</strong>. Available on the web starting in iOS 10.1 and macOS 10.12.1</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Formal_syntax">Formal syntax</h3>
+
+<pre class="syntaxbox">none <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> button <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> button-arrow-down <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> button-arrow-next <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> button-arrow-previous <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> button-arrow-up <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> button-bevel <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> button-focus <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> caret <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> checkbox <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> checkbox-container <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> checkbox-label <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> checkmenuitem <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> dualbutton <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> groupbox <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> listbox <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> listitem <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> menuarrow <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> menubar <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> menucheckbox <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> menuimage <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> menuitem <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> menuitemtext <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> menulist <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> menulist-button <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> menulist-text <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> menulist-textfield <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> menupopup <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> menuradio <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> menuseparator <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> meterbar <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> meterchunk <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> progressbar <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> progressbar-vertical <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> progresschunk <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> progresschunk-vertical <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> radio <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> radio-container <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> radio-label <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> radiomenuitem <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> range <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> range-thumb <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> resizer <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> resizerpanel <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> scale-horizontal <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> scalethumbend <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> scalethumb-horizontal <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> scalethumbstart <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> scalethumbtick <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> scalethumb-vertical <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> scale-vertical <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> scrollbarbutton-down <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> scrollbarbutton-left <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> scrollbarbutton-right <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> scrollbarbutton-up <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> scrollbarthumb-horizontal <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> scrollbarthumb-vertical <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> scrollbartrack-horizontal <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> scrollbartrack-vertical <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> searchfield <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> separator <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> sheet <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> spinner <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> spinner-downbutton <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> spinner-textfield <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> spinner-upbutton <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> splitter <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> statusbar <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> statusbarpanel <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> tab <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> tabpanel <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> tabpanels <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> tab-scroll-arrow-back <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> tab-scroll-arrow-forward <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> textfield <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> textfield-multiline <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> toolbar <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> toolbarbutton <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> toolbarbutton-dropdown <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> toolbargripper <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> toolbox <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> tooltip <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> treeheader <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> treeheadercell <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> treeheadersortarrow <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> treeitem <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> treeline <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> treetwisty <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> treetwistyopen <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> treeview <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> -moz-mac-unified-toolbar <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> -moz-win-borderless-glass <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> -moz-win-browsertabbar-toolbox <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> -moz-win-communicationstext <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> -moz-win-communications-toolbox <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> -moz-win-exclude-glass <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> -moz-win-glass <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> -moz-win-mediatext <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> -moz-win-media-toolbox <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> -moz-window-button-box <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> -moz-window-button-box-maximized <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> -moz-window-button-close <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> -moz-window-button-maximize <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> -moz-window-button-minimize <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> -moz-window-button-restore <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> -moz-window-frame-bottom <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> -moz-window-frame-left <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> -moz-window-frame-right <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> -moz-window-titlebar <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> -moz-window-titlebar-maximized</pre>
+
+<a class="dashAnchor" name="//apple_ref/Section/Examples"></a><h2 id="Examples">Examples</h2>
+
+<p>The following would make an element look like a toolbar button in Firefox:</p>
+
+<pre class="brush: css">.exampleone {
+  -moz-appearance: toolbarbutton;
+}
+</pre>
+
+<p>See also <a rel="noopener" href="http://jsfiddle.net/go392m5s/" class="external">this JSFiddle</a> for an example showing how you might use <code>appearance: none</code> to apply custom styling to radio buttons and checkboxes.</p>
+
+<a class="dashAnchor" name="//apple_ref/Section/Specifications"></a><h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><a rel="noopener" href="https://drafts.csswg.org/css-ui-4/#appearance-switching" lang="en" class="external" hreflang="en">CSS Basic User Interface Module Level&nbsp;4<br><small lang="en-US">The definition of 'appearance' in that specification.</small></a></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<p></p><table class="properties"><tbody><tr><th scope="row"><a href="initial_value.html">Initial value</a></th><td><code>none</code> (but this value is overridden in the user agent CSS)</td></tr><tr><th scope="row">Applies to</th><td>all elements</td></tr><tr><th scope="row"><a href="inheritance.html">Inherited</a></th><td>no</td></tr><tr><th scope="row">Media</th><td>visual</td></tr><tr><th scope="row"><a href="computed_value.html">Computed value</a></th><td>as specified</td></tr><tr><th scope="row">Animation type</th><td>discrete</td></tr><tr><th scope="row">Canonical order</th><td>the unique non-ambiguous order defined by the formal grammar</td></tr></tbody></table><p></p>
+
+<a class="dashAnchor" name="//apple_ref/Section/Browser%20compatibility"></a><h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a rel="noopener" href="https://github.com/mdn/browser-compat-data" class="external">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p></p><div class="bc-old"><div class="htab">
+    <a id="AutoCompatibilityTable" name="AutoCompatibilityTable"></a>
+    <ul>
+    <li class="selected">
+    <a>Desktop</a>
+    </li>
+    <li>
+    <a>Mobile</a>
+    </li>
+    </ul>
+    </div><div id="compat-desktop"><table class="compat-table"><thead><tr><th>Feature</th><th>Chrome</th><th>Edge</th><th>Firefox</th><th>Internet Explorer</th><th>Opera</th><th>Safari</th></tr></thead><tbody><tr><td><a rel="nofollow" href="https://developer.mozilla.org/docs/Web/CSS/appearance" class="new">Basic support</a></td><td class="full-support">1<span class="inlineIndicator prefixBox prefixBoxInline" title="prefix">
+      <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with '-webkit-' as this
+      browser considers it experimental">-webkit-
+      </a></span></td><td class="full-support">12<span class="inlineIndicator prefixBox prefixBoxInline" title="prefix">
+      <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with '-webkit-' as this
+      browser considers it experimental">-webkit-
+      </a></span></td><td class="full-support">1<span class="inlineIndicator prefixBox prefixBoxInline" title="prefix">
+      <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with '-moz-' as this
+      browser considers it experimental">-moz-
+      </a></span></td><td class="no-support"><span title="No support">
+      No</span></td><td class="full-support">15<span class="inlineIndicator prefixBox prefixBoxInline" title="prefix">
+      <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with '-webkit-' as this
+      browser considers it experimental">-webkit-
+      </a></span></td><td class="full-support">3<span class="inlineIndicator prefixBox prefixBoxInline" title="prefix">
+      <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with '-webkit-' as this
+      browser considers it experimental">-webkit-
+      </a></span></td></tr><tr><td><code>none</code></td><td class="full-support">1</td><td class="full-support">12</td><td class="full-support"><p>54</p><p>1<sup><a href="#compatNote_1">1</a></sup></p></td><td class="no-support"><span title="No support">
+      No</span></td><td class="full-support">15</td><td class="full-support">3</td></tr><tr><td><code>auto</code></td><td class="no-support"><span title="No support">
+      No</span></td><td class="no-support"><span title="No support">
+      No</span></td><td class="no-support"><span title="No support">
+      No</span></td><td class="no-support"><span title="No support">
+      No</span></td><td class="no-support"><span title="No support">
+      No</span></td><td class="no-support"><span title="No support">
+      No</span></td></tr></tbody></table></div><div id="compat-mobile"><table class="compat-table"><thead><tr><th>Feature</th><th>Android webview</th><th>Chrome for Android</th><th>Edge mobile</th><th>Firefox for Android</th><th>Opera Android</th><th>iOS Safari</th><th>Samsung Internet</th></tr></thead><tbody><tr><td><a rel="nofollow" href="https://developer.mozilla.org/docs/Web/CSS/appearance" class="new">Basic support</a></td><td class="full-support">1<span class="inlineIndicator prefixBox prefixBoxInline" title="prefix">
+      <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with '-webkit-' as this
+      browser considers it experimental">-webkit-
+      </a></span></td><td class="full-support">1<span class="inlineIndicator prefixBox prefixBoxInline" title="prefix">
+      <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with '-webkit-' as this
+      browser considers it experimental">-webkit-
+      </a></span></td><td class="full-support">12<span class="inlineIndicator prefixBox prefixBoxInline" title="prefix">
+      <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with '-webkit-' as this
+      browser considers it experimental">-webkit-
+      </a></span></td><td class="full-support">4<span class="inlineIndicator prefixBox prefixBoxInline" title="prefix">
+      <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with '-moz-' as this
+      browser considers it experimental">-moz-
+      </a></span></td><td class="full-support">14<span class="inlineIndicator prefixBox prefixBoxInline" title="prefix">
+      <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with '-webkit-' as this
+      browser considers it experimental">-webkit-
+      </a></span></td><td class="full-support">3<span class="inlineIndicator prefixBox prefixBoxInline" title="prefix">
+      <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with '-webkit-' as this
+      browser considers it experimental">-webkit-
+      </a></span></td><td class="full-support">4.0<span class="inlineIndicator prefixBox prefixBoxInline" title="prefix">
+      <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with '-webkit-' as this
+      browser considers it experimental">-webkit-
+      </a></span></td></tr><tr><td><code>none</code></td><td class="full-support">1</td><td class="full-support">1</td><td class="full-support">12</td><td class="full-support">4<sup><a href="#compatNote_1">1</a></sup></td><td class="full-support">14</td><td class="full-support">3</td><td class="full-support">4.0</td></tr><tr><td><code>auto</code></td><td class="no-support"><span title="No support">
+      No</span></td><td class="no-support"><span title="No support">
+      No</span></td><td class="no-support"><span title="No support">
+      No</span></td><td class="no-support"><span title="No support">
+      No</span></td><td class="no-support"><span title="No support">
+      No</span></td><td class="no-support"><span title="No support">
+      No</span></td><td class="no-support"><span title="No support">
+      No</span></td></tr></tbody></table></div><p id="compatNote_1">1. Doesn’t work with &lt;input type="checkbox"&gt; and &lt;input type="radio"&gt;</p></div><div class="bc-data hidden"><table class="bc-table bc-table-web"><thead><tr class="bc-platforms"><td></td><th colspan="6" class="bc-platform-desktop"><abbr class="only-icon" title="Desktop"><span>Desktop</span><i class="ic-desktop"></i></abbr></th><th colspan="7" class="bc-platform-mobile"><abbr class="only-icon" title="Mobile"><span>Mobile</span><i class="ic-mobile"></i></abbr></th></tr><tr class="bc-browsers"><td></td><th class="bc-browser-chrome"><abbr class="only-icon" title="Chrome"><span>Chrome</span><i class="ic-chrome"></i></abbr></th><th class="bc-browser-edge"><abbr class="only-icon" title="Edge"><span>Edge</span><i class="ic-edge"></i></abbr></th><th class="bc-browser-firefox"><abbr class="only-icon" title="Firefox"><span>Firefox</span><i class="ic-firefox"></i></abbr></th><th class="bc-browser-ie"><abbr class="only-icon" title="Internet Explorer"><span>Internet Explorer</span><i class="ic-ie"></i></abbr></th><th class="bc-browser-opera"><abbr class="only-icon" title="Opera"><span>Opera</span><i class="ic-opera"></i></abbr></th><th class="bc-browser-safari"><abbr class="only-icon" title="Safari"><span>Safari</span><i class="ic-safari"></i></abbr></th><th class="bc-browser-webview_android"><abbr class="only-icon" title="Android webview"><span>Android webview</span><i class="ic-webview_android"></i></abbr></th><th class="bc-browser-chrome_android"><abbr class="only-icon" title="Chrome for Android"><span>Chrome for Android</span><i class="ic-chrome_android"></i></abbr></th><th class="bc-browser-edge_mobile"><abbr class="only-icon" title="Edge Mobile"><span>Edge Mobile</span><i class="ic-edge_mobile"></i></abbr></th><th class="bc-browser-firefox_android"><abbr class="only-icon" title="Firefox for Android"><span>Firefox for Android</span><i class="ic-firefox_android"></i></abbr></th><th class="bc-browser-opera_android"><abbr class="only-icon" title="Opera for Android"><span>Opera for Android</span><i class="ic-opera_android"></i></abbr></th><th class="bc-browser-safari_ios"><abbr class="only-icon" title="iOS Safari"><span>iOS Safari</span><i class="ic-safari_ios"></i></abbr></th><th class="bc-browser-samsunginternet_android"><abbr class="only-icon" title="Samsung Internet"><span>Samsung Internet</span><i class="ic-samsunginternet_android"></i></abbr></th></tr></thead><tbody><tr><th scope="row"><a rel="nofollow" href="https://developer.mozilla.org/docs/Web/CSS/appearance" class="new">Basic support</a> <div class="bc-icons"><abbr class="only-icon" title="Experimental. Expect behavior to change in the future."><span>Experimental</span><i class="ic-experimental"></i></abbr></div></th><td class="bc-supports-partial bc-browser-chrome bc-has-history"><abbr class="bc-level-partial only-icon" title="Partial support">
+              <span>Partial support</span>
+            </abbr>1<div class="bc-icons"><abbr class="only-icon" title="Requires the vendor prefix: -webkit-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> </div><section id="sect1" class="bc-history"><dl><dt class="bc-supports-partial bc-supports"><abbr class="bc-level-partial only-icon" title="Partial support">
+              <span>Partial support</span>
+            </abbr>1<div class="bc-icons"><abbr class="only-icon" title="Requires the vendor prefix: -webkit-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> </div></dt><dd><abbr class="only-icon" title="Requires the vendor prefix: -webkit-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> Requires the vendor prefix: -webkit-</dd></dl></section></td><td class="bc-supports-partial bc-browser-edge bc-has-history"><abbr class="bc-level-partial only-icon" title="Partial support">
+              <span>Partial support</span>
+            </abbr>12<div class="bc-icons"><abbr class="only-icon" title="Requires the vendor prefix: -webkit-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> </div><section id="sect2" class="bc-history"><dl><dt class="bc-supports-partial bc-supports"><abbr class="bc-level-partial only-icon" title="Partial support">
+              <span>Partial support</span>
+            </abbr>12<div class="bc-icons"><abbr class="only-icon" title="Requires the vendor prefix: -webkit-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> </div></dt><dd><abbr class="only-icon" title="Requires the vendor prefix: -webkit-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> Requires the vendor prefix: -webkit-</dd></dl></section></td><td class="bc-supports-partial bc-browser-firefox bc-has-history"><abbr class="bc-level-partial only-icon" title="Partial support">
+              <span>Partial support</span>
+            </abbr>1<div class="bc-icons"><abbr class="only-icon" title="Requires the vendor prefix: -moz-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> </div><section id="sect3" class="bc-history"><dl><dt class="bc-supports-partial bc-supports"><abbr class="bc-level-partial only-icon" title="Partial support">
+              <span>Partial support</span>
+            </abbr>1<div class="bc-icons"><abbr class="only-icon" title="Requires the vendor prefix: -moz-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> </div></dt><dd><abbr class="only-icon" title="Requires the vendor prefix: -moz-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> Requires the vendor prefix: -moz-</dd></dl></section></td><td class="bc-supports-no bc-browser-ie"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td><td class="bc-supports-partial bc-browser-opera bc-has-history"><abbr class="bc-level-partial only-icon" title="Partial support">
+              <span>Partial support</span>
+            </abbr>15<div class="bc-icons"><abbr class="only-icon" title="Requires the vendor prefix: -webkit-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> </div><section id="sect4" class="bc-history"><dl><dt class="bc-supports-partial bc-supports"><abbr class="bc-level-partial only-icon" title="Partial support">
+              <span>Partial support</span>
+            </abbr>15<div class="bc-icons"><abbr class="only-icon" title="Requires the vendor prefix: -webkit-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> </div></dt><dd><abbr class="only-icon" title="Requires the vendor prefix: -webkit-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> Requires the vendor prefix: -webkit-</dd></dl></section></td><td class="bc-supports-partial bc-browser-safari bc-has-history"><abbr class="bc-level-partial only-icon" title="Partial support">
+              <span>Partial support</span>
+            </abbr>3<div class="bc-icons"><abbr class="only-icon" title="Requires the vendor prefix: -webkit-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> </div><section id="sect5" class="bc-history"><dl><dt class="bc-supports-partial bc-supports"><abbr class="bc-level-partial only-icon" title="Partial support">
+              <span>Partial support</span>
+            </abbr>3<div class="bc-icons"><abbr class="only-icon" title="Requires the vendor prefix: -webkit-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> </div></dt><dd><abbr class="only-icon" title="Requires the vendor prefix: -webkit-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> Requires the vendor prefix: -webkit-</dd></dl></section></td><td class="bc-supports-partial bc-browser-webview_android bc-has-history"><abbr class="bc-level-partial only-icon" title="Partial support">
+              <span>Partial support</span>
+            </abbr>1<div class="bc-icons"><abbr class="only-icon" title="Requires the vendor prefix: -webkit-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> </div><section id="sect6" class="bc-history"><dl><dt class="bc-supports-partial bc-supports"><abbr class="bc-level-partial only-icon" title="Partial support">
+              <span>Partial support</span>
+            </abbr>1<div class="bc-icons"><abbr class="only-icon" title="Requires the vendor prefix: -webkit-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> </div></dt><dd><abbr class="only-icon" title="Requires the vendor prefix: -webkit-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> Requires the vendor prefix: -webkit-</dd></dl></section></td><td class="bc-supports-partial bc-browser-chrome_android bc-has-history"><abbr class="bc-level-partial only-icon" title="Partial support">
+              <span>Partial support</span>
+            </abbr>1<div class="bc-icons"><abbr class="only-icon" title="Requires the vendor prefix: -webkit-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> </div><section id="sect7" class="bc-history"><dl><dt class="bc-supports-partial bc-supports"><abbr class="bc-level-partial only-icon" title="Partial support">
+              <span>Partial support</span>
+            </abbr>1<div class="bc-icons"><abbr class="only-icon" title="Requires the vendor prefix: -webkit-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> </div></dt><dd><abbr class="only-icon" title="Requires the vendor prefix: -webkit-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> Requires the vendor prefix: -webkit-</dd></dl></section></td><td class="bc-supports-partial bc-browser-edge_mobile bc-has-history"><abbr class="bc-level-partial only-icon" title="Partial support">
+              <span>Partial support</span>
+            </abbr>12<div class="bc-icons"><abbr class="only-icon" title="Requires the vendor prefix: -webkit-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> </div><section id="sect8" class="bc-history"><dl><dt class="bc-supports-partial bc-supports"><abbr class="bc-level-partial only-icon" title="Partial support">
+              <span>Partial support</span>
+            </abbr>12<div class="bc-icons"><abbr class="only-icon" title="Requires the vendor prefix: -webkit-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> </div></dt><dd><abbr class="only-icon" title="Requires the vendor prefix: -webkit-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> Requires the vendor prefix: -webkit-</dd></dl></section></td><td class="bc-supports-partial bc-browser-firefox_android bc-has-history"><abbr class="bc-level-partial only-icon" title="Partial support">
+              <span>Partial support</span>
+            </abbr>4<div class="bc-icons"><abbr class="only-icon" title="Requires the vendor prefix: -moz-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> </div><section id="sect9" class="bc-history"><dl><dt class="bc-supports-partial bc-supports"><abbr class="bc-level-partial only-icon" title="Partial support">
+              <span>Partial support</span>
+            </abbr>4<div class="bc-icons"><abbr class="only-icon" title="Requires the vendor prefix: -moz-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> </div></dt><dd><abbr class="only-icon" title="Requires the vendor prefix: -moz-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> Requires the vendor prefix: -moz-</dd></dl></section></td><td class="bc-supports-partial bc-browser-opera_android bc-has-history"><abbr class="bc-level-partial only-icon" title="Partial support">
+              <span>Partial support</span>
+            </abbr>14<div class="bc-icons"><abbr class="only-icon" title="Requires the vendor prefix: -webkit-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> </div><section id="sect10" class="bc-history"><dl><dt class="bc-supports-partial bc-supports"><abbr class="bc-level-partial only-icon" title="Partial support">
+              <span>Partial support</span>
+            </abbr>14<div class="bc-icons"><abbr class="only-icon" title="Requires the vendor prefix: -webkit-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> </div></dt><dd><abbr class="only-icon" title="Requires the vendor prefix: -webkit-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> Requires the vendor prefix: -webkit-</dd></dl></section></td><td class="bc-supports-partial bc-browser-safari_ios bc-has-history"><abbr class="bc-level-partial only-icon" title="Partial support">
+              <span>Partial support</span>
+            </abbr>3<div class="bc-icons"><abbr class="only-icon" title="Requires the vendor prefix: -webkit-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> </div><section id="sect11" class="bc-history"><dl><dt class="bc-supports-partial bc-supports"><abbr class="bc-level-partial only-icon" title="Partial support">
+              <span>Partial support</span>
+            </abbr>3<div class="bc-icons"><abbr class="only-icon" title="Requires the vendor prefix: -webkit-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> </div></dt><dd><abbr class="only-icon" title="Requires the vendor prefix: -webkit-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> Requires the vendor prefix: -webkit-</dd></dl></section></td><td class="bc-supports-partial bc-browser-samsunginternet_android bc-has-history"><abbr class="bc-level-partial only-icon" title="Partial support">
+              <span>Partial support</span>
+            </abbr>4.0<div class="bc-icons"><abbr class="only-icon" title="Requires the vendor prefix: -webkit-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> </div><section id="sect12" class="bc-history"><dl><dt class="bc-supports-partial bc-supports"><abbr class="bc-level-partial only-icon" title="Partial support">
+              <span>Partial support</span>
+            </abbr>4.0<div class="bc-icons"><abbr class="only-icon" title="Requires the vendor prefix: -webkit-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> </div></dt><dd><abbr class="only-icon" title="Requires the vendor prefix: -webkit-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> Requires the vendor prefix: -webkit-</dd></dl></section></td></tr><tr><th scope="row"><code>none</code> <div class="bc-icons"><abbr class="only-icon" title="Experimental. Expect behavior to change in the future."><span>Experimental</span><i class="ic-experimental"></i></abbr></div></th><td class="bc-supports-yes bc-browser-chrome"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              1</td><td class="bc-supports-yes bc-browser-edge"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              12</td><td class="bc-supports-yes bc-browser-firefox bc-has-history"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              54<div class="bc-icons"></div><section id="sect13" class="bc-history"><dl><dt class="bc-supports-yes bc-supports"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              54<div class="bc-icons"></div></dt><dd></dd><dt class="bc-supports-partial bc-supports"><abbr class="bc-level-partial only-icon" title="Partial support">
+              <span>Partial support</span>
+            </abbr>1<div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> </div></dt><dd><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> Doesn’t work with &lt;input type="checkbox"&gt; and &lt;input type="radio"&gt;</dd></dl></section></td><td class="bc-supports-no bc-browser-ie"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td><td class="bc-supports-yes bc-browser-opera"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              15</td><td class="bc-supports-yes bc-browser-safari"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              3</td><td class="bc-supports-yes bc-browser-webview_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              1</td><td class="bc-supports-yes bc-browser-chrome_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              1</td><td class="bc-supports-yes bc-browser-edge_mobile"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              12</td><td class="bc-supports-partial bc-browser-firefox_android bc-has-history"><abbr class="bc-level-partial only-icon" title="Partial support">
+              <span>Partial support</span>
+            </abbr>4<div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> </div><section id="sect14" class="bc-history"><dl><dt class="bc-supports-partial bc-supports"><abbr class="bc-level-partial only-icon" title="Partial support">
+              <span>Partial support</span>
+            </abbr>4<div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> </div></dt><dd><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> Doesn’t work with &lt;input type="checkbox"&gt; and &lt;input type="radio"&gt;</dd></dl></section></td><td class="bc-supports-yes bc-browser-opera_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              14</td><td class="bc-supports-yes bc-browser-safari_ios"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              3</td><td class="bc-supports-yes bc-browser-samsunginternet_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              4.0</td></tr><tr><th scope="row"><code>auto</code> <div class="bc-icons"><abbr class="only-icon" title="Experimental. Expect behavior to change in the future."><span>Experimental</span><i class="ic-experimental"></i></abbr></div></th><td class="bc-supports-no bc-browser-chrome"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td><td class="bc-supports-no bc-browser-edge"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td><td class="bc-supports-no bc-browser-firefox"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td><td class="bc-supports-no bc-browser-ie"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td><td class="bc-supports-no bc-browser-opera"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td><td class="bc-supports-no bc-browser-safari"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td><td class="bc-supports-no bc-browser-webview_android"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td><td class="bc-supports-no bc-browser-chrome_android"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td><td class="bc-supports-no bc-browser-edge_mobile"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td><td class="bc-supports-no bc-browser-firefox_android"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td><td class="bc-supports-no bc-browser-opera_android"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td><td class="bc-supports-no bc-browser-safari_ios"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td><td class="bc-supports-no bc-browser-samsunginternet_android"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td></tr></tbody></table><section id="sect15" class="bc-legend"><h3 id="Legend" class="offscreen">Legend</h3><dl><dt><span class="bc-supports-yes bc-supports">
+                <abbr class="bc-level bc-level-yes only-icon" title="Full support">
+                 <span>Full support</span>
+                 &nbsp;
+                </abbr></span></dt><dd>Full support</dd><dt><span class="bc-supports-partial bc-supports">
+                <abbr class="bc-level bc-level-partial only-icon" title="Partial support">
+                 <span>Partial support</span>
+                 &nbsp;
+                </abbr></span></dt><dd>Partial support</dd><dt><span class="bc-supports-no bc-supports">
+                <abbr class="bc-level bc-level-no only-icon" title="No support">
+                 <span>No support</span>
+                 &nbsp;
+                </abbr></span></dt><dd>No support</dd><dt><abbr class="only-icon" title="Experimental. Expect behavior to change in the future."><span>Experimental. Expect behavior to change in the future.</span><i class="ic-experimental"></i></abbr></dt><dd>Experimental. Expect behavior to change in the future.</dd><dt><abbr class="only-icon" title="See implementation notes."><span>See implementation notes.</span><i class="ic-footnote"></i></abbr></dt><dd>See implementation notes.</dd><dt><abbr class="only-icon" title="Requires a vendor prefix or different name for use."><span>Requires a vendor prefix or different name for use.</span><i class="ic-prefix"></i></abbr></dt><dd>Requires a vendor prefix or different name for use.</dd></dl></section></div><p></p>
+
+<a class="dashAnchor" name="//apple_ref/Section/See%20also"></a><h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a rel="noopener" href="http://www.w3.org/TR/2004/CR-css3-ui-20040511/#appearance" class="external">Definition of <code>appearance</code> in CSS 3 Basic User Interface</a> (Candidate Recommendation from 2004-05-11).</li>
+ <li><a rel="noopener" href="http://wiki.csswg.org/spec/css4-ui#dropped-css3-features" class="external">Dropped CSS3 features from the UI spec.4</a></li>
+</ul>
+                  
+                
+              </article>
+
+              <!-- contributors -->
+              <div class="wiki-block contributors">
+                <h2 class="offscreen">Document Tags and Contributors</h2>
+                
+                
+  <div class="tag-attach-list contributors-sub">
+    <svg class="icon icon-tags" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M7 7c0-1.109-.891-2-2-2s-2 .891-2 2 .891 2 2 2 2-.891 2-2zm16.672 9c0 .531-.219 1.047-.578 1.406l-7.672 7.688c-.375.359-.891.578-1.422.578s-1.047-.219-1.406-.578L1.422 13.906C.625 13.125 0 11.609 0 10.5V4c0-1.094.906-2 2-2h6.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422zm6 0c0 .531-.219 1.047-.578 1.406l-7.672 7.688a2.08 2.08 0 0 1-1.422.578c-.812 0-1.219-.375-1.75-.922l7.344-7.344c.359-.359.578-.875.578-1.406s-.219-1.047-.578-1.422L14.422 3.422C13.625 2.625 12.11 2 11 2h3.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422z"></path>
+</svg>
+    <strong>Tags:</strong>&nbsp;
+    <ul class="tags tags-small">
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/-moz-appearance" rel="nofollow">-moz-appearance</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/-webkit-appearance" rel="nofollow">-webkit-appearance</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/appearance" rel="nofollow">appearance</a></li>
+      
+        <li><a href="../../tag/CSS.html" rel="nofollow">CSS</a></li>
+      
+        <li><a href="../../tag/CSS%20Property.html" rel="nofollow">CSS Property</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Non-standard" rel="nofollow">Non-standard</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Reference" rel="nofollow">Reference</a></li>
+      
+    </ul>
+  </div>
+
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-group" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M9.266 14a5.532 5.532 0 0 0-4.141 2H3.031C1.468 16 0 15.25 0 13.516 0 12.25-.047 8 1.937 8c.328 0 1.953 1.328 4.062 1.328.719 0 1.406-.125 2.078-.359A7.624 7.624 0 0 0 7.999 10c0 1.422.453 2.828 1.266 4zM26 23.953C26 26.484 24.328 28 21.828 28H8.172C5.672 28 4 26.484 4 23.953 4 20.422 4.828 15 9.406 15c.531 0 2.469 2.172 5.594 2.172S20.063 15 20.594 15C25.172 15 26 20.422 26 23.953zM10 4c0 2.203-1.797 4-4 4S2 6.203 2 4s1.797-4 4-4 4 1.797 4 4zm11 6c0 3.313-2.688 6-6 6s-6-2.688-6-6 2.688-6 6-6 6 2.688 6 6zm9 3.516C30 15.25 28.531 16 26.969 16h-2.094a5.532 5.532 0 0 0-4.141-2A7.066 7.066 0 0 0 22 10a7.6 7.6 0 0 0-.078-1.031A6.258 6.258 0 0 0 24 9.328C26.109 9.328 27.734 8 28.062 8c1.984 0 1.937 4.25 1.937 5.516zM28 4c0 2.203-1.797 4-4 4s-4-1.797-4-4 1.797-4 4-4 4 1.797 4 4z"></path>
+</svg>
+                    <strong>Contributors to this page:</strong>
+                    
+        <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/ExE-Boss">ExE-Boss</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Jonathan_Watt">Jonathan_Watt</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/valdeirpsr">valdeirpsr</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Siilwyn">Siilwyn</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/fscholz">fscholz</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/claudepache">claudepache</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/sideshowbarker">sideshowbarker</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/wxdude225">wxdude225</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/momdo">momdo</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/mfluehr">mfluehr</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/VadimOvchinnikov">VadimOvchinnikov</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills">chrisdavidmills</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Sebastianz">Sebastianz</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/toddhainsworth">toddhainsworth</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/laukstein">laukstein</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/erikadoyle">erikadoyle</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/aleth">aleth</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/cvrebert">cvrebert</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/iJunkie22">iJunkie22</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/amitabha197">amitabha197</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/mikeiz404">mikeiz404</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/unfortunately">unfortunately</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/HugoDaniel">HugoDaniel</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/pdslv">pdslv</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Sephr">Sephr</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Kliu0x52">Kliu0x52</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Jürgen Jeka">Jürgen Jeka</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Piro">Piro</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Dao">Dao</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Bielawski">Bielawski</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Marsf">Marsf</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/BijuGC">BijuGC</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Ptak82">Ptak82</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Mgjbot">Mgjbot</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/LouCypher">LouCypher</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Cheba">Cheba</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Readams">Readams</a>
+    
+                  </div>
+                
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-clock" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M14 8.5v7c0 .281-.219.5-.5.5h-5a.494.494 0 0 1-.5-.5v-1c0-.281.219-.5.5-.5H12V8.5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zm6.5 5.5c0-4.688-3.813-8.5-8.5-8.5S3.5 9.313 3.5 14s3.813 8.5 8.5 8.5 8.5-3.813 8.5-8.5zm3.5 0c0 6.625-5.375 12-12 12S0 20.625 0 14 5.375 2 12 2s12 5.375 12 12z"></path>
+</svg>
+                    <strong>Last updated by:</strong>
+                    <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>,
+                    <time datetime="2018-07-23T16:46:11.703690-07:00">Jul 23, 2018, 4:46:11 PM</time>
+                  </div>
+                
+              </div>
+            </div>
+
+            
+              <!-- quick links and approvals strip -->
+              <div id="wiki-left" class="column-strip wiki-column">
+
+                <!-- crumbs -->
+                
+  
+    <nav class="crumbs" role="navigation">
+      <ol typeof="BreadcrumbList" vocab="https://schema.org/" aria-label="breadcrumbs">
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="https://developer.mozilla.org/en-US/docs/Web" property="item" typeof="WebPage">
+              <span property="name">Web technology for developers</span>
+            </a>
+            <meta property="position" content="1">
+          </li>
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="../CSS.html" property="item" typeof="WebPage">
+              <span property="name">CSS: Cascading Style Sheets</span>
+            </a>
+            <meta property="position" content="2">
+          </li>
+        
+        <li property="itemListElement" typeof="ListItem" class="crumb">
+          <span property="name">-moz-appearance (-webkit-appearance, appearance)</span>
+        </li>
+      </ol>
+    </nav>
+  
+
+                
+                  <!-- quick links -->
+                  
+  <div class="quick-links" id="quick-links">
+    <div class="quick-links-head">Related Topics</div>
+    <ol><li><strong><a href="../CSS.html">CSS</a></strong></li><li><strong><a href="Reference.html">CSS Reference</a></strong></li><li><strong><a href="Mozilla_Extensions.html">Mozilla Extensions</a></strong></li><li><strong><a href="WebKit_Extensions-2.html">WebKit Extensions</a></strong></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><em><code>-moz-appearance (-webkit-appearance, appearance)</code></em></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="-moz-binding.html" title="The -moz-binding CSS property is used by Mozilla-based applications to attach an XBL binding to a DOM element."><code>-moz-binding</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="-moz-border-bottom-colors.html" title="In Mozilla applications like Firefox, the -moz-border-bottom-colors CSS property sets a list of colors for the bottom border."><code>-moz-border-bottom-colors</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="-moz-border-left-colors.html" title="In Mozilla applications like Firefox, the -moz-border-left-colors CSS property sets a list of colors for the left border."><code>-moz-border-left-colors</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="-moz-border-right-colors.html" title="In Mozilla applications like Firefox, the -moz-border-right-colors CSS property sets a list of colors for the right border."><code>-moz-border-right-colors</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="-moz-border-top-colors.html" title="In Mozilla applications like Firefox, the -moz-border-top-colors CSS property sets a list of colors for the top border."><code>-moz-border-top-colors</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="-moz-context-properties.html" title="If you reference an SVG image in a webpage (such as with the <img> element or as a background image), the SVG image can coordinate with the embedding element (its context) to have the image adopt property values set on the embedding element. To do this the embedding element needs to list the properties that are to be made available to the image by listing them as values of the -moz-context-properties property, and the image needs to opt in to using those properties by using values such as the context-fill value."><code>-moz-context-properties</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="-moz-float-edge.html" title="The non-standard -moz-float-edge CSS property specifies whether the height and width properties of the element include the margin, border, or padding thickness."><code>-moz-float-edge</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="-moz-force-broken-image-icon.html" title="The -moz-force-broken-image-icon extended CSS property can be used to force the broken image icon to be shown even when a broken image has an alt attribute."><code>-moz-force-broken-image-icon</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="-moz-image-region.html" title="For certain XUL elements and pseudo-elements that use an image from the list-style-image property, this property specifies a region of the image that is used in place of the whole image. This allows elements to use different pieces of the same image to improve performance."><code>-moz-image-region</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="-moz-orient.html" title="The -moz-orient CSS property specifies the orientation of the element to which it's applied."><code>-moz-orient</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="-moz-outline-radius.html" title="In Mozilla applications like Firefox, the -moz-outline-radius CSS property can be used to give an element's outline rounded corners."><code>-moz-outline-radius</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="-moz-outline-radius-bottomleft.html" title="In Mozilla applications, the -moz-outline-radius-bottomleft CSS property can be used to round the bottom-left corner of an element's outline."><code>-moz-outline-radius-bottomleft</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="-moz-outline-radius-bottomright.html" title="In Mozilla applications, the -moz-outline-radius-bottomright CSS property can be used to round the bottom-right corner of an element's outline."><code>-moz-outline-radius-bottomright</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="-moz-outline-radius-topleft.html" title="In Mozilla applications, the -moz-outline-radius-topleft CSS property can be used to round the top-left corner of an element's outline."><code>-moz-outline-radius-topleft</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="-moz-outline-radius-topright.html" title="In Mozilla applications, the -moz-outline-radius-topright CSS property can be used to round the top-right corner of an element's outline."><code>-moz-outline-radius-topright</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="-moz-stack-sizing.html" title="-moz-stack-sizing is an extended CSS property. Normally, a stack will change its size so that all of its child elements are completely visible. For example, moving a child of the stack far to the right will widen the stack so the child remains visible."><code>-moz-stack-sizing</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="-moz-text-blink.html" title="The -moz-text-blink non-standard Mozilla CSS extension specifies the blink mode."><code>-moz-text-blink</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="-moz-user-focus.html" title="The -moz-user-focus CSS property is used to indicate whether an element can have the focus."><code>-moz-user-focus</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="-moz-user-input.html" title="In Mozilla applications, -moz-user-input determines if an element will accept user input."><code>-moz-user-input</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="-moz-user-modify.html" title="The -moz-user-modify property has no effect. It was originally planned to determine whether or not the content of an element can be edited by a user."><code>-moz-user-modify</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="-moz-window-dragging.html" title="The -moz-window-dragging CSS property specifies whether a window is draggable or not. It only works in Chrome code, and only on Mac OS X."><code>-moz-window-dragging</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="-moz-window-shadow.html" title="The -moz-window-shadow CSS property specifies whether a window will have a shadow. It only works on Mac OS X."><code>-moz-window-shadow</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="-webkit-border-before.html" title="The -webkit-border-before CSS property is a shorthand property for setting the individual logical block start border property values in a single place in the style sheet."><code>-webkit-border-before</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="-webkit-box-reflect.html" title="The -webkit-box-reflect CSS property lets you reflect the content of an element in one specific direction."><code>-webkit-box-reflect</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="-webkit-mask-attachment.html" title="If a -webkit-mask-image is specified, -webkit-mask-attachment determines whether the mask image's position is fixed within the viewport, or scrolls along with its containing block."><code>-webkit-mask-attachment</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="-webkit-mask-composite.html" title="The -webkit-mask-composite property specifies the manner in which multiple mask images applied to the same element are composited with one another."><code>-webkit-mask-composite</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="-webkit-mask-position-x.html" title="The -webkit-mask-position-x CSS property sets the initial horizontal position of a mask image."><code>-webkit-mask-position-x</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="-webkit-mask-position-y.html" title="The -webkit-mask-position-y CSS property sets the initial vertical position of a mask image."><code>-webkit-mask-position-y</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="-webkit-mask-repeat-x.html" title="The -webkit-mask-repeat-x property specifies whether and how a mask image is repeated (tiled) horizontally."><code>-webkit-mask-repeat-x</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="-webkit-mask-repeat-y.html" title="The -webkit-mask-repeat-y property specifies whether and how a mask image is repeated (tiled) vertically."><code>-webkit-mask-repeat-y</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="-webkit-overflow-scrolling.html" title="The -webkit-overflow-scrolling CSS property controls whether or not touch devices use momentum-based scrolling for a given element."><code>-webkit-overflow-scrolling</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="-webkit-tap-highlight-color.html" title="-webkit-tap-highlight-color is a non-standard CSS property that sets the color of the highlight that appears over a link while it's being tapped. The highlighting indicates to the user&nbsp;that their tap is being successfully recognized, and indicates which element they're tapping on."><code>-webkit-tap-highlight-color</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="-webkit-text-fill-color.html" title="The -webkit-text-fill-color CSS property specifies the fill color of characters of text. If this property is not set, the value of the color property is used."><code>-webkit-text-fill-color</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="-webkit-text-stroke.html" title="The -webkit-text-stroke CSS property specifies the width and color of strokes for text characters. This is a shorthand property for the longhand properties -webkit-text-stroke-width and -webkit-text-stroke-color."><code>-webkit-text-stroke</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="-webkit-text-stroke-color.html" title="The -webkit-text-stroke-color CSS property specifies the stroke color of characters of text. If this property is not set, the value of the color property is used."><code>-webkit-text-stroke-color</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="-webkit-text-stroke-width.html" title="The -webkit-text-stroke-width CSS property specifies the width of the stroke for text."><code>-webkit-text-stroke-width</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="-webkit-touch-callout.html" title="The -webkit-touch-callout CSS property controls the display of the default callout shown when you touch and hold a touch target."><code>-webkit-touch-callout</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="box-align.html" title="The box-align CSS property specifies how an element aligns its contents across its layout in a perpendicular direction. The effect of the property is only visible if there is extra space in the box."><code>box-align</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="box-direction.html" title="The box-direction CSS property specifies whether a box lays out its contents normally (from the top or left edge), or in reverse (from the bottom or right edge)."><code>box-direction</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="box-flex.html" title="This is a property for controlling parts of the XUL box model. It does not match either the old CSS Flexible Box Layout Module drafts for 'box-flex' (which were based on this property) or the behavior of '-webkit-box-flex' (which is based on those drafts). See flexbox for information about the current standard."><code>box-flex</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="box-flex-group.html" title="This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard. See flexbox for information about the current standard."><code>box-flex-group</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="box-lines.html" title="This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard. See flexbox for information about the current standard."><code>box-lines</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="box-ordinal-group.html" title="This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard. See flexbox for information about the current standard."><code>box-ordinal-group</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="box-orient.html" title="This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard. See flexbox for information about the current standard."><code>box-orient</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="box-pack.html" title="This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard. See flexbox for information about the current standard."><code>box-pack</code></a></li></ol></li></ol>
+  </div>
+                
+
+                <!-- approvals -->
+                
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+    
+      <div class="newsletter-box">
+        <div class="newsletter">
+    <form id="newsletterForm" class="newsletter-form nodisable" name="newsletter-form" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <div class="newsletter-head">
+            <h2 class="newsletter-teaser">Learn the best of web development</h2>
+            <p class="newsletter-description">Get the latest and greatest from MDN delivered straight to your inbox.</p>
+            
+        </div>
+
+        <div class="newsletter-fields">
+            <input type="hidden" id="fmt" name="fmt" value="H">
+            <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+            <div id="newsletterErrors" class="newsletter-errors"></div>
+
+            <div id="newsletterEmail" class="form-group newsletter-group-email">
+                <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+                <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+            </div>
+
+            <div id="newsletterPrivacy" class="form-group form-group-agree newsletter-group-privacy hidden">
+                <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+                <label for="newsletterPrivacyInput">
+                I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+                </label>
+            </div>
+            <div id="newsletterSubmit" class="newsletter-group-submit">
+                <button id="newsletter-submit" type="submit" class="button neutral newsletter-submit">
+                    Sign up now<svg class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg" width="23" height="28" viewBox="0 0 23 28" aria-hidden="true">
+    <path d="M23 15a2.01 2.01 0 0 1-.578 1.422L12.25 26.594c-.375.359-.891.578-1.422.578s-1.031-.219-1.406-.578L8.25 25.422c-.375-.375-.594-.891-.594-1.422s.219-1.047.594-1.422L12.828 18h-11C.703 18 0 17.062 0 16v-2c0-1.062.703-2 1.828-2h11L8.25 7.406a1.96 1.96 0 0 1 0-2.812l1.172-1.172c.375-.375.875-.594 1.406-.594s1.047.219 1.422.594l10.172 10.172c.375.359.578.875.578 1.406z"></path>
+</svg>
+                </button>
+            </div>
+        </div>
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden">
+        <span>Hide Newsletter Sign-up</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+</div>
+      </div>
+    
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/en-US/docs/Web/CSS/-moz-appearance$edit" label="Edit page"></menuitem>
+    <menuitem data-action="/en-US/docs/Web/CSS/-moz-appearance$history" label="View page history"></menuitem>
+  </menu>
+
+      </div>
+  </main>
+  <!-- Footer -->
+    <footer id="nav-footer" class="nav-footer"><div class="center"><a href="http://developer.mozilla.org/en-US/docs/Web/CSS/-moz-appearance">-moz-appearance (-webkit-appearance, appearance)</a> by <a href="http://developer.mozilla.org/en-US/docs/Web/CSS/-moz-appearance$history">Mozilla Contributors</a> is licensed under <a href="http://creativecommons.org/licenses/by-sa/2.5/" class="external external-icon">CC-BY-SA 2.5</a>.</div></footer> 
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script async="" type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script src="../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><!--[endif]---->
+
+    
+    <script src="../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../static/build/js/wiki.b26a4c181df3.js" charset="utf-8" id="wikiscript"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../static/build/js/newsletter.a85c5c2892e5.js" charset="utf-8"></script>
+  
+
+
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/CSS/-moz-appearance by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:47:24 GMT -->
+</body></html>

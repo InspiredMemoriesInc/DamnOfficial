@@ -1,0 +1,1230 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/tag/DOM?page=8 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 08:42:28 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  <title>Articles tagged: DOM</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+
+  
+<link rel="preload" href="../../../static/fonts/locales/ZillaSlab-Regular.f9de6143fdfa.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="license" href="#license">
+  
+
+  
+    
+
+    <link href="../../../static/build/styles/mdn.83865b0f7c30.css" rel="stylesheet" type="text/css">
+
+    
+  
+
+    <link href="../../../static/build/styles/wiki.aaf26c13c39b.css" rel="stylesheet" type="text/css">
+
+
+  <link href="../../../static/build/styles/locale-en-US.ca0bca387b42.css" rel="stylesheet" type="text/css">
+
+  
+    <script>
+      /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
+    </script>
+    
+
+
+
+  
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta property="og:site_name" content="MDN Web Docs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="MDN Web Docs">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../static/img/favicon144.e7e21ca263ca.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../static/img/favicon114.d526f38b09c5.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../static/img/favicon72.cc65d1d762a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../static/img/favicon57.de33179910ae.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="../../../static/img/favicon32.7f3da72dcea1.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script async="" type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  
+      <link rel="alternate" type="application/atom+xml" title="Articles tagged: DOM" href="../feeds/atom/tag/DOM">
+  
+
+</head>
+<body class="">
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <!--[endif]---->
+
+  
+  
+      <link rel="alternate" type="application/atom+xml" title="Articles tagged: DOM" href="../feeds/atom/tag/DOM">
+  
+
+
+
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/wiki-compat-tables.9978a5ce31c2.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+
+        // interactive editor config
+        win.mdn.interactiveEditor = {
+            siteUrl: "https://developer.mozilla.org",
+            editorUrl: "https://interactive-examples.mdn.mozilla.net"
+        };
+
+    })(this);
+</script>
+    
+    <ul id="nav-access">
+  <li><a href="#content" id="skip-main">Skip to main content</a></li>
+  <li><a id="skip-language" href="#language">Select language</a></li>
+  <li><a href="#q" id="skip-search">Skip to search</a></li>
+</ul>
+
+    <!-- Header -->
+    <header id="main-header" class="header-main">
+      <a href="https://developer.mozilla.org/en-US/" class="logo">MDN Web Docs</a>
+      <div class="nav-toolbox-wrapper">
+        <nav id="main-nav" class="nav-main" role="navigation">
+    <ul>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web">Technologies
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-tech-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+                    <li><a href="../Web/API.html">APIs / DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn">References &amp; Guides
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-learn-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-contact-submenu">
+              <div class="submenu-column">
+                <ul>
+                  <li>
+                      <a href="https://support.mozilla.org/">Get Firefox help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://stackoverflow.com/">Get web development help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                      <a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/tag/DOM%3Fpage%3D8">Report a content problem
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</nav>
+        <div id="toolbox" class="toolbox">
+  <ul>
+    
+    <li class="nav-login"><div class="login">
+    
+        
+        <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FDOM%3Fpage%3D8" class="login-link js-login-link" data-service="GitHub" rel="nofollow">
+            Sign in<svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+    <title>Github</title>
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path>
+</svg>
+        </a>
+    
+</div></li>
+  </ul>
+</div>
+      </div>
+      <form id="nav-main-search" action="https://developer.mozilla.org/en-US/search" method="get" role="search" class="nav-main-search">
+  <div class="search-wrap">
+    <label for="main-q" class="offscreen">Search</label>
+    <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" aria-hidden="true">
+    <span class="search-trigger">
+        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true">
+    <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path>
+</svg>
+    </span>
+    <button type="submit" class="offscreen">Search</button>
+    <button type="button" id="close-header-search" class="close-header-search transparent">
+        <span class="offscreen">Close search</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+  </div>
+</form>
+    </header> 
+
+  <!-- Content will go here -->
+  <main id="content">
+      
+      <div class="center clear">
+      
+
+    <div id="document-list" class="boxed">
+      <h1>Articles tagged: DOM</h1>
+      
+        
+  <ol class="pagination">
+  
+    <li class="prev">
+      <a href="DOM235c.html?page=7">
+        Previous
+      </a>
+    </li>
+  
+  
+    <li><a href="DOM2679.html?page=1">1</a></li>
+    
+      <li class="skip">…</li>
+    
+  
+  
+    <li>
+      <a href="DOMfdb0.html?page=4">4</a>
+    </li>
+  
+    <li>
+      <a href="DOMaf4d.html?page=5">5</a>
+    </li>
+  
+    <li>
+      <a href="DOMc575.html?page=6">6</a>
+    </li>
+  
+    <li>
+      <a href="DOM235c.html?page=7">7</a>
+    </li>
+  
+    <li class="selected">
+      <a href="DOMfdfa.html?page=8">8</a>
+    </li>
+  
+    <li>
+      <a href="DOM0b08.html?page=9">9</a>
+    </li>
+  
+    <li>
+      <a href="DOM1448.html?page=10">10</a>
+    </li>
+  
+    <li>
+      <a href="DOM1c8b.html?page=11">11</a>
+    </li>
+  
+  
+  
+    <li class="next">
+      <a href="DOM0b08.html?page=9">
+        Next
+      </a>
+    </li>
+  
+  </ol>
+
+
+
+        <p>Found 1027 documents</p>
+        <ul class="document-list">
+          
+            <li>
+              <a href="../Web/API/Node/nodePrincipal.html">Web/API/Node/nodePrincipal</a>
+                
+                  <small>The Node.nodePrincipal read-only property returns the nsIPrincipal object representing current...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Node/nodeType.html">Web/API/Node/nodeType</a>
+                
+                  <small>The read-only Node.nodeType property that represents the type of the node.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Node/nodeValue.html">Web/API/Node/nodeValue</a>
+                
+                  <small>The Node.nodeValue property returns or sets the value of the current node.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Node/normalize.html">Web/API/Node/normalize</a>
+                
+                  <small>The Node.normalize() method puts the specified node and all of its sub-tree into a "normalized"...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Node/outerText.html">Web/API/Node/outerText</a>
+                
+                  <small>See HTMLElement.outerText</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Node/ownerDocument.html">Web/API/Node/ownerDocument</a>
+                
+                  <small>The Node.ownerDocument read-only property returns the top-level document object for this node.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Node/parentElement.html">Web/API/Node/parentElement</a>
+                
+                  <small>The Node.parentElement read-only property returns the DOM node's parent Element, or null if the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Node/parentNode.html">Web/API/Node/parentNode</a>
+                
+                  <small>The Node.parentNode read-only property returns the parent of the specified node in the DOM tree.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Node/prefix.html">Web/API/Node/prefix</a>
+                
+                  <small>The Node.prefix read-only property returns the namespace prefix of the specified node, or null...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Node/previousSibling.html">Web/API/Node/previousSibling</a>
+                
+                  <small>The Node.previousSibling read-only property returns the node immediately preceding the specified...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Node/removeChild.html">Web/API/Node/removeChild</a>
+                
+                  <small>The Node.removeChild() method removes a child node from the DOM. Returns removed node.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Node/replaceChild.html">Web/API/Node/replaceChild</a>
+                
+                  <small>The Node.replaceChild() method replaces one child node of the specified node&nbsp;with another.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Node/rootNode.html">Web/API/Node/rootNode</a>
+                
+                  <small>The Node.rootNode read-only property returns a Node object representing the topmost node in the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Node/setUserData.html">Web/API/Node/setUserData</a>
+                
+                  <small>The Node.setUserData() method allows a user to attach (or remove) data to an element, without...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Node/textContent.html">Web/API/Node/textContent</a>
+                
+                  <small>The Node.textContent property represents the text content of a node and its descendants....</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/NodeFilter.html">Web/API/NodeFilter</a>
+                
+                  <small>A NodeFilter interface represents an object used to filter the nodes in a NodeIterator or...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/NodeFilter/acceptNode.html">Web/API/NodeFilter/acceptNode</a>
+                
+                  <small>The NodeFilter.acceptNode() method returns an unsigned short that will be used to tell if a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/NodeIterator.html">Web/API/NodeIterator</a>
+                
+                  <small>The NodeIterator interface represents an iterator over the members of a list of the nodes in a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/NodeIterator/detach.html">Web/API/NodeIterator/detach</a>
+                
+                  <small>The NodeIterator.detach() method is a no-op, kept for backward compatibility only.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/NodeIterator/expandEntityReferences.html">Web/API/NodeIterator/expandEntityReferences</a>
+                
+                  <small>The NodeIterator.expandEntityReferences read-only property returns a Boolean flag indicating...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/NodeIterator/filter.html">Web/API/NodeIterator/filter</a>
+                
+                  <small>The NodeIterator.filter read-only method returns a NodeFilter object, that is an object...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/NodeIterator/nextNode.html">Web/API/NodeIterator/nextNode</a>
+                
+                  <small>The NodeIterator.nextNode() method returns the next node in the set represented by the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/NodeIterator/pointerBeforeReferenceNode.html">Web/API/NodeIterator/pointerBeforeReferenceNode</a>
+                
+                  <small>The NodeIterator.pointerBeforeReferenceNode read-only property returns a Boolean flag that...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/NodeIterator/previousNode.html">Web/API/NodeIterator/previousNode</a>
+                
+                  <small>The NodeIterator.previousNode() method returns the previous node in the set represented by the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/NodeIterator/referenceNode.html">Web/API/NodeIterator/referenceNode</a>
+                
+                  <small>The NodeIterator.referenceNode read-only returns the Node to which the iterator is anchored; as...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/NodeIterator/root.html">Web/API/NodeIterator/root</a>
+                
+                  <small>The NodeIterator.root read-only property represents the Node that is the root of what the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/NodeIterator/whatToShow.html">Web/API/NodeIterator/whatToShow</a>
+                
+                  <small>The NodeIterator.whatToShow read-only property represents an unsigned integer representing a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/NodeList.html">Web/API/NodeList</a>
+                
+                  <small>NodeList objects are collections of nodes such as those returned by properties such as...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/NodeList/entries.html">Web/API/NodeList/entries</a>
+                
+                  <small>The NodeList.entries() method returns an iterator allowing to go through all key/value pairs...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/NodeList/forEach.html">Web/API/NodeList/forEach</a>
+                
+                  <small>The forEach() method of the NodeList interface calls the callback given in parameter once for...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/NodeList/item.html">Web/API/NodeList/item</a>
+                
+                  <small>Returns a node from a NodeList by index. This method doesn't throw exceptions as long as you...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/NodeList/keys.html">Web/API/NodeList/keys</a>
+                
+                  <small>The NodeList.keys() method returns an iterator allowing to go through all keys contained in this...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/NodeList/length.html">Web/API/NodeList/length</a>
+                
+                  <small>length returns the number of items in a NodeList.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/NodeList/values.html">Web/API/NodeList/values</a>
+                
+                  <small>The NodeList.values() method returns an iterator allowing to go through all values contained in...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/NonDocumentTypeChildNode.html">Web/API/NonDocumentTypeChildNode</a>
+                
+                  <small>The NonDocumentTypeChildNode interface contains methods that are particular to Node objects that...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/NonDocumentTypeChildNode/nextElementSibling.html">Web/API/NonDocumentTypeChildNode/nextElementSibling</a>
+                
+                  <small>The NonDocumentTypeChildNode.nextElementSibling read-only property returns the element...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/NonDocumentTypeChildNode/previousElementSibling.html">Web/API/NonDocumentTypeChildNode/previousElementSibling</a>
+                
+                  <small>The NonDocumentTypeChildNode.previousElementSibling read-only property returns the Element...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/notification/actions-2.html">Web/API/notification/actions</a>
+                
+                  <small>The actions read-only property of the Notification interface returns the list of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Notification/body.html">Web/API/Notification/body</a>
+                
+                  <small>The body read-only property of the Notification interface indicates the body string of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Notification/close.html">Web/API/Notification/close</a>
+                
+                  <small>The close() method of the Notification interface is used to close a previously displayed notification.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Notification/dir.html">Web/API/Notification/dir</a>
+                
+                  <small>The dir read-only property of the Notification interface indicates the text direction of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Notification/icon.html">Web/API/Notification/icon</a>
+                
+                  <small>The icon read-only property of the Notification interface contains the URL of an icon to be...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/notification/image-2.html">Web/API/notification/image</a>
+                
+                  <small>The image read-only property of the Notification interface contains the URL of an image to be...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Notification/lang.html">Web/API/Notification/lang</a>
+                
+                  <small>The lang read-only property of the Notification interface indicates the text direction of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Notification/onclick.html">Web/API/Notification/onclick</a>
+                
+                  <small>The onclick property of the Notification interface specifies an event listener to receive click...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Notification/onclose.html">Web/API/Notification/onclose</a>
+                
+                  <small>The onclose property of the Notification interface specifies an event listener to receive close...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Notification/onerror.html">Web/API/Notification/onerror</a>
+                
+                  <small>The onerror property of the Notification interface specifies an event listener to receive error...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Notification/onshow.html">Web/API/Notification/onshow</a>
+                
+                  <small>The onshow property of the Notification interface specifies an event listener to receive show...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Notification/permission.html">Web/API/Notification/permission</a>
+                
+                  <small>The permission read-only property of the Notification interface indicates the current permission...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Notification/requestPermission.html">Web/API/Notification/requestPermission</a>
+                
+                  <small>The requestPermission()&nbsp;method of the Notification interface requests permission from the user...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/notification/requireInteraction-2.html">Web/API/notification/requireInteraction</a>
+                
+                  <small>The requireInteraction read-only property of the Notification interface returns a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Notification/tag.html">Web/API/Notification/tag</a>
+                
+                  <small>The tag read-only property of the Notification interface signifies an identifying tag for the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Notifications_API/Using_the_Notifications_API.html">Web/API/Notifications_API/Using_the_Notifications_API</a>
+                
+                  <small>The Notifications API lets a web page or app send notifications that are displayed outside the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Page_Visibility_API.html">Web/API/Page_Visibility_API</a>
+                
+                  <small>The Page Visibility API provides events you can watch for to know when a document becomes...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ParentNode.html">Web/API/ParentNode</a>
+                
+                  <small>The ParentNode mixin contains methods and properties that are common to all types of Node...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ParentNode/append.html">Web/API/ParentNode/append</a>
+                
+                  <small>The ParentNode.append method inserts a set of Node objects or DOMString objects after the last...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ParentNode/childElementCount.html">Web/API/ParentNode/childElementCount</a>
+                
+                  <small>The ParentNode.childElementCount read-only property returns an unsigned long representing the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ParentNode/children.html">Web/API/ParentNode/children</a>
+                
+                  <small>The ParentNode property children is a read-only property that returns a live HTMLCollection...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ParentNode/firstElementChild.html">Web/API/ParentNode/firstElementChild</a>
+                
+                  <small>The ParentNode.firstElementChild read-only property returns the object's first child Element, or...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ParentNode/lastElementChild.html">Web/API/ParentNode/lastElementChild</a>
+                
+                  <small>The ParentNode.lastElementChild read-only property returns the object's last child Element or...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ParentNode/prepend.html">Web/API/ParentNode/prepend</a>
+                
+                  <small>The ParentNode.prepend method inserts a set of Node objects or DOMString objects before the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ParentNode/querySelectorAll.html">Web/API/ParentNode/querySelectorAll</a>
+                
+                  <small>The ParentNode mixin defines the querySelectorAll() method as returning a NodeList representing...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/PerformanceResourceTiming.html">Web/API/PerformanceResourceTiming</a>
+                
+                  <small>The PerformanceResourceTiming interface enables retrieval and analysis of detailed network...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Plugin.html">Web/API/Plugin</a>
+                
+                  <small>The Plugin interface provides information about a browser plugin.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/PluginArray.html">Web/API/PluginArray</a>
+                
+                  <small>The PluginArray interface is used to store a list of Plugin objects describing the available...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/PointerEvent.html">Web/API/PointerEvent</a>
+                
+                  <small>The PointerEvent interface represents the state of a DOM event produced by a pointer such as the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/PointerEvent/getCoalescedEvents.html">Web/API/PointerEvent/getCoalescedEvents</a>
+                
+                  <small>The getCoalescedEvents() property of the PointerEvent interface returns a sequence of all...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/PointerEvent/height.html">Web/API/PointerEvent/height</a>
+                
+                  <small>The height read-only property of the PointerEvent interface represents the height of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/PointerEvent/isPrimary.html">Web/API/PointerEvent/isPrimary</a>
+                
+                  <small>The PointerEvent.isPrimary read-only property indicates whether or not the pointer device that...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/PointerEvent/pointerId.html">Web/API/PointerEvent/pointerId</a>
+                
+                  <small>An identifier assigned to a pointer event that is unique from the identifiers of all active...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/PointerEvent/pointerType.html">Web/API/PointerEvent/pointerType</a>
+                
+                  <small>The pointerType read-only property of the PointerEvent interface indicates the device type that...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/PointerEvent/pressure.html">Web/API/PointerEvent/pressure</a>
+                
+                  <small>The normalized pressure of the pointer input in the range of 0 to 1, where 0 and 1 represent the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/PointerEvent/tangentialPressure.html">Web/API/PointerEvent/tangentialPressure</a>
+                
+                  <small>The tangentialPressure read-only property of the PointerEvent interface represents the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/PointerEvent/tiltX.html">Web/API/PointerEvent/tiltX</a>
+                
+                  <small>This property is the angle (in degrees) between the Y-Z plane of the pointer and the screen....</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/PointerEvent/tiltY.html">Web/API/PointerEvent/tiltY</a>
+                
+                  <small>This property is the angle (in degrees) between the X-Z plane of the pointer and the screen....</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/PointerEvent/twist.html">Web/API/PointerEvent/twist</a>
+                
+                  <small>The twist read-only property of the PointerEvent interface represents the clockwise rotation of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/PointerEvent/width.html">Web/API/PointerEvent/width</a>
+                
+                  <small>The width read-only property of the PointerEvent interface represents the width of the pointer's...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ProcessingInstruction.html">Web/API/ProcessingInstruction</a>
+                
+                  <small>A processing instruction embeds application-specific instructions in XML which can be ignored by...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/PromiseResolver.html">Web/API/PromiseResolver</a>
+                
+                  <small>The PromiseResolver interface represents an object controlling the state and the result value of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Range.html">Web/API/Range</a>
+                
+                  <small>The Range interface represents a fragment of a document that can contain nodes and parts of text nodes.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Range/cloneContents.html">Web/API/Range/cloneContents</a>
+                
+                  <small>The Range.cloneContents() returns a DocumentFragment copying the objects of type Node included...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Range/cloneRange.html">Web/API/Range/cloneRange</a>
+                
+                  <small>The Range.cloneRange() method returns a Range object with boundary points identical to the cloned Range.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Range/collapse.html">Web/API/Range/collapse</a>
+                
+                  <small>The Range.collapse() method collapses the Range to one of its boundary points.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Range/collapsed.html">Web/API/Range/collapsed</a>
+                
+                  <small>The Range.collapsed read-only property returns a Boolean flag indicating whether the start and...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Range/commonAncestorContainer.html">Web/API/Range/commonAncestorContainer</a>
+                
+                  <small>The Range.commonAncestorContainer read-only property returns the deepest — or furthest down the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Range/compareBoundaryPoints.html">Web/API/Range/compareBoundaryPoints</a>
+                
+                  <small>The Range.compareBoundaryPoints() method compares the boundary points of the Range with another one.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Range/compareNode.html">Web/API/Range/compareNode</a>
+                
+                  <small>The Range.compareNode() returns a constant indicating the position of the Node.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Range/comparePoint.html">Web/API/Range/comparePoint</a>
+                
+                  <small>The Range.comparePoint() method returns -1, 0, or 1 depending on whether the referenceNode is...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Range/createContextualFragment.html">Web/API/Range/createContextualFragment</a>
+                
+                  <small>The Range.createContextualFragment() method returns a DocumentFragment by invoking the HTML...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Range/deleteContents.html">Web/API/Range/deleteContents</a>
+                
+                  <small>The Range.deleteContents() removes the contents of the Range&nbsp;from the Document.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Range/detach.html">Web/API/Range/detach</a>
+                
+                  <small>The Range.detach() method does nothing. It used to disable the&nbsp;Range object and enable the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Range/endContainer.html">Web/API/Range/endContainer</a>
+                
+                  <small>The Range.endContainer read-only property returns the Node within which the Range ends. To...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Range/endOffset.html">Web/API/Range/endOffset</a>
+                
+                  <small>The Range.endOffset read-only property returns a number representing where in the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Range/extractContents.html">Web/API/Range/extractContents</a>
+                
+                  <small>The Range.extractContents() method moves contents of the Range&nbsp;from the document tree into a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Range/insertNode.html">Web/API/Range/insertNode</a>
+                
+                  <small>The Range.insertNode() method inserts a node at the start of the Range.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Range/intersectsNode.html">Web/API/Range/intersectsNode</a>
+                
+                  <small>The Range.intersectsNode() method returns a boolean indicating whether the given Node intersects...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Range/isPointInRange.html">Web/API/Range/isPointInRange</a>
+                
+                  <small>The Range.isPointInRange() method returns a boolean indicating whether the given point is in the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Range/Range.html">Web/API/Range/Range</a>
+                
+                  <small>The Range() constructor returns a newly created Range object whose start and end is the global...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Range/selectNode.html">Web/API/Range/selectNode</a>
+                
+                  <small>The Range.selectNode() method sets the Range to contain the Node and its contents. The parent...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Range/selectNodeContents.html">Web/API/Range/selectNodeContents</a>
+                
+                  <small>The Range.selectNodeContents() sets the&nbsp;Range&nbsp;to contain the contents of a&nbsp;Node.</small>
+                
+            </li>
+          
+        </ul>
+        
+  <ol class="pagination">
+  
+    <li class="prev">
+      <a href="DOM235c.html?page=7">
+        Previous
+      </a>
+    </li>
+  
+  
+    <li><a href="DOM2679.html?page=1">1</a></li>
+    
+      <li class="skip">…</li>
+    
+  
+  
+    <li>
+      <a href="DOMfdb0.html?page=4">4</a>
+    </li>
+  
+    <li>
+      <a href="DOMaf4d.html?page=5">5</a>
+    </li>
+  
+    <li>
+      <a href="DOMc575.html?page=6">6</a>
+    </li>
+  
+    <li>
+      <a href="DOM235c.html?page=7">7</a>
+    </li>
+  
+    <li class="selected">
+      <a href="DOMfdfa.html?page=8">8</a>
+    </li>
+  
+    <li>
+      <a href="DOM0b08.html?page=9">9</a>
+    </li>
+  
+    <li>
+      <a href="DOM1448.html?page=10">10</a>
+    </li>
+  
+    <li>
+      <a href="DOM1c8b.html?page=11">11</a>
+    </li>
+  
+  
+  
+    <li class="next">
+      <a href="DOM0b08.html?page=9">
+        Next
+      </a>
+    </li>
+  
+  </ol>
+
+
+
+      
+    </div>
+
+
+      </div>
+  </main>
+  <!-- Footer -->
+     
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script async="" type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script src="../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><!--[endif]---->
+
+    
+    <script src="../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../static/build/js/wiki.b26a4c181df3.js" charset="utf-8" id="wikiscript"></script>
+
+
+
+  
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/tag/DOM?page=8 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 08:42:28 GMT -->
+</body></html>

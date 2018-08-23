@@ -1,0 +1,1766 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/SVG/SVG_2_support_in_Mozilla by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:47:27 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  <title>SVG 2 support in Mozilla</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+
+  
+<link rel="preload" href="../../../../static/fonts/locales/ZillaSlab-Regular.f9de6143fdfa.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="license" href="#license">
+  
+
+  
+    
+    
+
+    <link href="../../../../static/build/styles/mdn.83865b0f7c30.css" rel="stylesheet" type="text/css">
+
+    
+  
+
+    <link href="../../../../static/build/styles/wiki.aaf26c13c39b.css" rel="stylesheet" type="text/css">
+
+
+    
+
+  <link href="../../../../static/build/styles/locale-en-US.ca0bca387b42.css" rel="stylesheet" type="text/css">
+
+  
+    <script>
+      /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
+    </script>
+    
+
+
+
+  
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta property="og:site_name" content="MDN Web Docs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="MDN Web Docs">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../static/img/favicon144.e7e21ca263ca.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../static/img/favicon114.d526f38b09c5.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../static/img/favicon72.cc65d1d762a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../../static/img/favicon57.de33179910ae.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="../../../../static/img/favicon32.7f3da72dcea1.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script async="" type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  <link rel="dns-prefetch" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/SVG/SVG_2_support_in_Mozilla$json">
+  <link rel="canonical" href="SVG_2_support_in_Mozilla.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="SVG_2_support_in_Mozilla.html" title="SVG 2 support in Mozilla">
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="SVG 2 support in Mozilla">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/SVG/SVG_2_support_in_Mozilla">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/SVG/SVG_2_support_in_Mozilla">
+  <meta name="twitter:title" content="SVG 2 support in Mozilla">
+  
+  <meta property="og:description" content="SVG 2 is the next major version of the SVG standard, which is a complete rework of the SVG 1.2 draft.">
+  <meta name="description" content="SVG 2 is the next major version of the SVG standard, which is a complete rework of the SVG 1.2 draft.">
+  <meta name="twitter:description" content="SVG 2 is the next major version of the SVG standard, which is a complete rework of the SVG 1.2 draft.">
+  
+
+</head>
+<body data-slug="Web/SVG/SVG_2_support_in_Mozilla" contextmenu="edit-history-menu" data-search-url="" class="document">
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <!--[endif]---->
+
+  
+  <link rel="dns-prefetch" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/SVG/SVG_2_support_in_Mozilla$json">
+  <link rel="canonical" href="SVG_2_support_in_Mozilla.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="SVG_2_support_in_Mozilla.html" title="SVG 2 support in Mozilla">
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="SVG 2 support in Mozilla">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/SVG/SVG_2_support_in_Mozilla">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/SVG/SVG_2_support_in_Mozilla">
+  <meta name="twitter:title" content="SVG 2 support in Mozilla">
+  
+  <meta property="og:description" content="SVG 2 is the next major version of the SVG standard, which is a complete rework of the SVG 1.2 draft.">
+  <meta name="description" content="SVG 2 is the next major version of the SVG standard, which is a complete rework of the SVG 1.2 draft.">
+  <meta name="twitter:description" content="SVG 2 is the next major version of the SVG standard, which is a complete rework of the SVG 1.2 draft.">
+  
+
+
+
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/wiki-compat-tables.9978a5ce31c2.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+
+        // interactive editor config
+        win.mdn.interactiveEditor = {
+            siteUrl: "https://developer.mozilla.org",
+            editorUrl: "https://interactive-examples.mdn.mozilla.net"
+        };
+
+    })(this);
+</script>
+    
+    <ul id="nav-access">
+  <li><a href="#content" id="skip-main">Skip to main content</a></li>
+  <li><a id="skip-language" href="#language">Select language</a></li>
+  <li><a href="#q" id="skip-search">Skip to search</a></li>
+</ul>
+
+    <!-- Header -->
+    <header id="main-header" class="header-main">
+      <a href="https://developer.mozilla.org/en-US/" class="logo">MDN Web Docs</a>
+      <div class="nav-toolbox-wrapper">
+        <nav id="main-nav" class="nav-main" role="navigation">
+    <ul>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web">Technologies
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-tech-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API">APIs / DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn">References &amp; Guides
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-learn-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-contact-submenu">
+              <div class="submenu-column">
+                <ul>
+                  <li>
+                      <a href="https://support.mozilla.org/">Get Firefox help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://stackoverflow.com/">Get web development help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                      <a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/SVG/SVG_2_support_in_Mozilla">Report a content problem
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</nav>
+        <div id="toolbox" class="toolbox">
+  <ul>
+    
+    <li class="nav-login"><div class="login">
+    
+        
+        <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FSVG%2FSVG_2_support_in_Mozilla" class="login-link js-login-link" data-service="GitHub" rel="nofollow">
+            Sign in<svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+    <title>Github</title>
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path>
+</svg>
+        </a>
+    
+</div></li>
+  </ul>
+</div>
+      </div>
+      <form id="nav-main-search" action="https://developer.mozilla.org/en-US/search" method="get" role="search" class="nav-main-search">
+  <div class="search-wrap">
+    <label for="main-q" class="offscreen">Search</label>
+    <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" aria-hidden="true">
+    <span class="search-trigger">
+        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true">
+    <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path>
+</svg>
+    </span>
+    <button type="submit" class="offscreen">Search</button>
+    <button type="button" id="close-header-search" class="close-header-search transparent">
+        <span class="offscreen">Close search</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+  </div>
+</form>
+    </header> 
+
+  <!-- Content will go here -->
+  <main id="content">
+      
+  <!-- heading -->
+  <div id="wiki-document-head" class="document-head">
+    <div class="center">
+      <!-- action buttons -->
+      <div class="document-actions">
+        
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons">
+      <li>
+          <button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false">
+              <svg class="icon icon-language" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M10.219 16.844c-.031.109-.797-.25-1-.328-.203-.094-1.125-.609-1.359-.766s-1.125-.891-1.234-.938a28.275 28.275 0 0 1-2.094 2.828c-.281.328-1.125 1.391-1.641 1.719-.078.047-.531.094-.594.063.25-.187.969-1.078 1.281-1.437.391-.453 2.25-3.047 2.562-3.641.328-.594 1.312-2.562 1.359-2.75-.156-.016-1.391.406-1.719.516-.313.094-1.172.297-1.234.344-.063.063-.016.25-.047.313s-.313.203-.484.234a1.647 1.647 0 0 1-.734 0c-.203-.047-.391-.25-.438-.328 0 0-.063-.094-.078-.359.187-.063.5-.078.844-.172s1.188-.344 1.641-.5 1.328-.484 1.594-.547c.281-.047.984-.516 1.359-.641s.641-.281.656-.203 0 .422-.016.516c-.016.078-.766 1.547-.875 1.781-.063.125-.5.953-1.203 2.047.25.109.781.328 1 .438.266.125 2.125.906 2.219.938s.266.75.234.875zM7.016 9.25c.047.266-.031.375-.063.438-.156.297-.547.5-.781.594s-.625.187-.938.187c-.141-.016-.422-.063-.766-.406-.187-.203-.328-.75-.266-.688s.516.125.719.078.688-.187.906-.25c.234-.078.703-.203.859-.219.156 0 .281.063.328.266zm10.906 2.016l.984 3.547-2.172-.656zM.609 23.766l10.844-3.625V4.016L.609 7.657v16.109zM20 18.813l1.594.484-2.828-10.266-1.563-.484-3.375 8.375 1.594.484.703-1.719 3.297 1.016zM12.141 3.781l8.953 2.875V.718zM17 24.453l2.469.203-.844 2.5L18 26.125c-1.266.812-2.828 1.437-4.312 1.687-.453.094-.969.187-1.422.187h-1.313c-1.656 0-4.672-.984-5.984-1.937-.094-.078-.125-.141-.125-.25 0-.172.125-.297.281-.297.141 0 .875.453 1.078.547 1.406.703 3.375 1.344 4.953 1.344 1.953 0 3.281-.25 5.063-1.016.516-.234.969-.531 1.453-.797zm7-16.859v16.859c-12.078-3.844-12.094-3.844-12.094-3.844C11.656 20.718.453 24.5.297 24.5a.3.3 0 0 1-.281-.203c0-.016-.016-.031-.016-.047V7.406c.016-.047.031-.125.063-.156.094-.109.219-.141.313-.172.047-.016 1-.328 2.328-.781v-6l8.719 3.094C11.532 3.36 21.251 0 21.392 0c.172 0 .313.125.313.328v6.531z"></path>
+</svg>
+              <span>Languages</span>
+          </button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                <li class="smaller">No translations exist for this article.</li>
+              
+
+              
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/SVG_2_support_in_Mozilla$locales" rel="nofollow" id="translations-add">Add a translation</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+      
+      <li class="page-buttons-edit">
+          <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/SVG_2_support_in_Mozilla$edit" class="button neutral" id="edit-button" rel="nofollow">
+              <svg class="icon icon-pencil" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M5.672 24l1.422-1.422-3.672-3.672L2 20.328V22h2v2h1.672zm8.172-14.5a.329.329 0 0 0-.344-.344.368.368 0 0 0-.266.109l-8.469 8.469a.366.366 0 0 0-.109.266c0 .203.141.344.344.344a.368.368 0 0 0 .266-.109l8.469-8.469a.366.366 0 0 0 .109-.266zM13 6.5l6.5 6.5-13 13H0v-6.5zM23.672 8c0 .531-.219 1.047-.578 1.406L20.5 12 14 5.5l2.594-2.578c.359-.375.875-.594 1.406-.594s1.047.219 1.422.594l3.672 3.656c.359.375.578.891.578 1.422z"></path>
+</svg>
+              Edit
+          </a>
+      </li>
+      
+
+        
+
+        <li class="page-buttons-advanced">
+            <button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false">
+                <svg class="icon icon-gear" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M16 14c0-2.203-1.797-4-4-4s-4 1.797-4 4 1.797 4 4 4 4-1.797 4-4zm8-1.703v3.469c0 .234-.187.516-.438.562l-2.891.438a8.86 8.86 0 0 1-.609 1.422c.531.766 1.094 1.453 1.672 2.156.094.109.156.25.156.391s-.047.25-.141.359c-.375.5-2.484 2.797-3.016 2.797a.795.795 0 0 1-.406-.141l-2.156-1.687a9.449 9.449 0 0 1-1.422.594c-.109.953-.203 1.969-.453 2.906a.573.573 0 0 1-.562.438h-3.469c-.281 0-.531-.203-.562-.469l-.438-2.875a9.194 9.194 0 0 1-1.406-.578l-2.203 1.672c-.109.094-.25.141-.391.141s-.281-.063-.391-.172c-.828-.75-1.922-1.719-2.578-2.625a.607.607 0 0 1 .016-.718c.531-.719 1.109-1.406 1.641-2.141a8.324 8.324 0 0 1-.641-1.547l-2.859-.422A.57.57 0 0 1 0 15.705v-3.469c0-.234.187-.516.422-.562l2.906-.438c.156-.5.359-.969.609-1.437a37.64 37.64 0 0 0-1.672-2.156c-.094-.109-.156-.234-.156-.375s.063-.25.141-.359c.375-.516 2.484-2.797 3.016-2.797.141 0 .281.063.406.156L7.828 5.94a9.449 9.449 0 0 1 1.422-.594c.109-.953.203-1.969.453-2.906a.573.573 0 0 1 .562-.438h3.469c.281 0 .531.203.562.469l.438 2.875c.484.156.953.344 1.406.578l2.219-1.672c.094-.094.234-.141.375-.141s.281.063.391.156c.828.766 1.922 1.734 2.578 2.656a.534.534 0 0 1 .109.344c0 .141-.047.25-.125.359-.531.719-1.109 1.406-1.641 2.141.266.5.484 1.016.641 1.531l2.859.438a.57.57 0 0 1 .453.562z"></path>
+</svg>
+                <span>Advanced</span>
+            </button>
+            <div class="submenu js-submenu" id="advanced-menu-submenu">
+                <!-- this page -->
+                <div class="submenu-column">
+                    <div class="title">Advanced</div>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/SVG_2_support_in_Mozilla$history" rel="nofollow">History</a></li>
+                        
+                        
+                        
+
+
+                
+
+                <li class="page-print"><a href="#" onclick="return window.print();">Print this article</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+      </div>
+
+      <div class="document-title">
+        <h1>SVG 2 support in Mozilla</h1>
+      </div>
+    </div>
+  </div>
+  
+  <div id="toc" class="toc">
+    <div class="center">
+      <div class="toc-head">Jump to:</div>
+        <ol class="toc-links">
+          <li><a href="#General" rel="internal">General</a></li><li><a href="#Rendering_Model" rel="internal">Rendering Model</a></li><li><a href="#Basic_Data_Types_and_Interfaces" rel="internal">Basic Data Types and Interfaces</a></li><li><a href="#Document_Structure" rel="internal">Document Structure</a></li><li><a href="#Styling" rel="internal">Styling</a></li><li><a href="#Geometry" rel="internal">Geometry</a></li><li><a href="#Coordinate_Systems_Transformations_and_Units" rel="internal">Coordinate Systems, Transformations and Units</a></li><li><a href="#Paths" rel="internal">Paths</a></li><li><a href="#Basic_Shapes" rel="internal">Basic Shapes</a></li><li><a href="#Text" rel="internal">Text</a></li><li><a href="#Embedded_Content" rel="internal">Embedded Content</a></li><li><a href="#Painting" rel="internal">Painting</a></li><li><a href="#Color" rel="internal">Color</a></li><li><a href="#Paint_Servers" rel="internal">Paint Servers</a></li><li><a href="#Clipping_Masking_and_Compositing" rel="internal">Clipping, Masking and Compositing</a></li><li><a href="#Interactivity" rel="internal">Interactivity</a></li><li><a href="#Linking" rel="internal">Linking</a></li><li><a href="#Scripting" rel="internal">Scripting</a></li><li><a href="#Fonts" rel="internal">Fonts</a></li><li><a href="#Extensibility_chapter" rel="internal">Extensibility chapter</a>
+        </li></ol>
+    </div>
+  </div>
+  
+
+      <div class="center clear">
+      
+
+    <div class="wiki-main-content" id="document-main"><div class="center">
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-left-present">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-main wiki-column text-content">
+
+              
+
+              
+              
+
+              
+
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <div><div class="overheadIndicator draft">
+    <p><strong>Draft</strong><br>
+    This page is not complete.</p>
+    
+</div></div>
+
+<p><a href="https://svgwg.org/svg2-draft/" class="external" rel="noopener">SVG 2</a> is the next major version of the SVG standard, which is a complete rework of the SVG 1.2 draft.</p>
+
+<p>Version 2 contains a lot of changes regarding the last stable version <a href="https://www.w3.org/TR/SVG11/" class="external" rel="noopener">SVG 1.1</a>. Those changes are listed below including their support status within Mozilla applications.</p>
+
+<a class="dashAnchor" name="//apple_ref/Section/General"></a><h2 id="General">General</h2>
+
+<table style="border-collapse: separate;" class="standard-table">
+ <tbody>
+  <tr>
+   <th>Change</th>
+   <th>Notes</th>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>length</code> attribute and indexed property for list interfaces</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><a href="Element/script.html" title="A SVG script element is equivalent to the script element in HTML and thus is the place for scripts (e.g., ECMAScript)."><code>&lt;script&gt;</code></a> element in content model of all elements</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>initialize()</code>, <code>appendItem()</code>, <code>replaceItem()</code> and <code>insertItemBefore()</code> on list objects making a copy of any list item being inserted that is already in another list</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><code>crossorigin</code> attribute for <a href="Element/image.html" title="The <image> SVG element includes images inside SVG documents. It can display raster image files or other SVG files."><code>&lt;image&gt;</code></a> and <a href="Element/script.html" title="A SVG script element is equivalent to the script element in HTML and thus is the place for scripts (e.g., ECMAScript)."><code>&lt;script&gt;</code></a> elements</td>
+   <td>Not implemented yet (at least for <code>&lt;image&gt;</code>; <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1240357" title="Support crossOrigin attribute on image and feImage elements" class="external" rel="noopener">bug&nbsp;1240357</a>)</td>
+  </tr>
+ </tbody>
+</table>
+
+<a class="dashAnchor" name="//apple_ref/Section/Rendering%20Model"></a><h2 id="Rendering_Model">Rendering Model</h2>
+
+<table style="border-collapse: separate;" class="standard-table">
+ <tbody>
+  <tr>
+   <th>Change</th>
+   <th>Notes</th>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>SVG root and <a href="Element/foreignObject.html" title="The <foreignObject> SVG element allows for inclusion of a foreign XML namespace which has its graphical content drawn by a different user agent. The included foreign graphical content is subject to SVG transformations and compositing."><code>&lt;foreignObject&gt;</code></a> not <code>overflow:hidden</code> in UA style sheet</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Allow <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow" title="The overflow CSS property specifies what to do when an element's content is too large to fit in its block formatting context. It is a shorthand for the overflow-x and overflow-y properties."><code>overflow</code></a>: auto;</code> to clip and show scroll bars</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Allow <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow" title="The overflow CSS property specifies what to do when an element's content is too large to fit in its block formatting context. It is a shorthand for the overflow-x and overflow-y properties."><code>overflow</code></a>: scroll;</code> to show scroll bars on <a href="Element/svg.html" title="The svg element can be used to embed an SVG fragment inside the current document (for example, an HTML document). This SVG fragment has its own viewport and coordinate system."><code>&lt;svg&gt;</code></a> elements</td>
+   <td>Implementation status unknown</td>
+  </tr>
+ </tbody>
+</table>
+
+<a class="dashAnchor" name="//apple_ref/Section/Basic%20Data%20Types%20and%20Interfaces"></a><h2 id="Basic_Data_Types_and_Interfaces">Basic Data Types and Interfaces</h2>
+
+<table style="border-collapse: separate;" class="standard-table">
+ <tbody>
+  <tr>
+   <th>Change</th>
+   <th>Notes</th>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix" title="The DOMMatrix interface represents 4x4 matrices, suitable for 2D and 3D operations."><code>DOMMatrix</code></a> or <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly" title="The DOMMatrixReadOnly interface represents 4x4 matrices, suitable for 2D and 3D operations. If this interface defines only read-only matrices, the DOMMatrix interface which inherits from it, add all the properties and the methods to allow to have modifiable matrices."><code>DOMMatrixReadOnly</code></a> instead of&nbsp;<a href="../API/SVGMatrix.html" title="Many of SVG's graphics operations utilize 2x3 matrices of the form:"><code>SVGMatrix</code></a></td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRect" title="A DOMRect represents a rectangle."><code>DOMRect</code></a> or <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly" title="The DOMRectReadOnly interface specifies the standard properties used by DOMRect to define a rectangle."><code>DOMRectReadOnly</code></a> instead of <a href="../API/SVGRect.html" title="The SVGRect represents a rectangle. Rectangles consist&nbsp;of an x and y coordinate pair identifying a minimum x value, a minimum y value, and a width and height, which are constrained to be non-negative."><code>SVGRect</code></a></td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPoint" title="A DOMPoint represents a 2D or 3D point in a coordinate system."><code>DOMPoint</code></a> or <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly" title="The DOMPointReadOnly interface specifies the standard properties used by DOMPoint to define a 2D or 3D point in a coordinate system."><code>DOMPointReadOnly</code></a> instead of <a href="../API/SVGPoint.html" title="An SVGPoint represents a 2D or 3D point in the SVG coordinate system."><code>SVGPoint</code></a></td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Members of <a href="../API/SVGStylable.html" title="The SVGStylable interface is implemented on all objects corresponding to SVG elements that can have style, class and presentation attributes specified on them."><code>SVGStylable</code></a> and <code>SVGLangSpace</code> available in <a href="../API/SVGElement.html" title="All of the SVG DOM interfaces that correspond directly to elements in the SVG language derive from the SVGElement interface."><code>SVGElement</code></a></td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><a href="../API/SVGGraphicsElement.html" title="The SVGGraphicsElement interface represents SVG elements whose primary purpose is to directly render graphics into a group."><code>SVGGraphicsElement</code></a> instead of <a href="../API/SVGLocatable.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>SVGLocatable</code></a> and <a href="../API/SVGTransformable.html" title="Interface SVGTransformable contains properties and methods that apply to all elements which have attribute transform."><code>SVGTransformable</code></a></td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: khaki;">
+   <td><a href="../API/SVGGeometryElement.html" title="The SVGGeometryElement interface represents SVG elements whose rendering is defined by geometry with an equivalent path, and which can be filled and stroked. This includes paths and the basic shapes."><code>SVGGeometryElement</code></a> with <a href="../API/SVGGeometryElement/isPointInFill.html" title="The SVGGeometryElement.isPointInFill() method determines whether a given point is within the fill shape of an element. Normal hit testing rules apply; the value of the pointer-events property on the element determines whether a point is considered to be within the fill. The point argument is interpreted as a point in the local coordiante system of the element."><code>SVGGeometryElement.isPointInFill()</code></a> and <a href="../API/SVGGeometryElement/isPointInStroke.html" title="The SVGGeometryElement.isPointInStroke() method determines whether a given point is within the stroke shape of an element. Normal hit testing rules apply; the value of the pointer-events property on the element determines whether a point is considered to be within the stroke. The point argument is interpreted as a point in the local coordiante system of the element."><code>SVGGeometryElement.isPointInStroke()</code></a> methods</td>
+   <td>Partially implemented (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1239100" title="FIXED: Implement SVGGeometryElement interface" class="external" rel="noopener">bug&nbsp;1239100</a>). The methods<br>
+    <code>isPointInFill()</code> and <code>isPointInStroke()</code> are not implemented yet (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1325319" title="Implement isPointInFill() and isPointInStroke() methods of SVGGeometryElement" class="external" rel="noopener">bug&nbsp;1325319</a>).</td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="../API/SVGExternalResourcesRequired.html" title="The SVGExternalResourcesRequired interface defines an interface which applies to all elements where this element or one of its descendants can reference an external resource."><code>SVGExternalResourcesRequired</code></a> removed</td>
+   <td>Never implemented</td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><code>SVGElement.viewportElement</code> and <code>SVGElement.ownerSVGElement</code> nullable</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><code>SVGElement.getPresentationAttribute()</code> removed</td>
+   <td>Never implemented (prototype removed in <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=921456" title="FIXED: Remove unused nsSVGElement::GetPresentationAttribute prototype." class="external" rel="noopener">bug&nbsp;921456</a>)</td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="../API/SVGColor.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>SVGColor</code></a> and <a href="../API/SVGICCColor.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>SVGICCColor</code></a> removed</td>
+   <td>Never implemented</td>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><code>SVGElement.focus()</code>, <code>SVGElement.blur()</code></td>
+   <td>Not implemented (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=778654" title="FIXED: Implement 'tabIndex' attribute for SVG elements" class="external" rel="noopener">bug&nbsp;778654</a>)</td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><code>SVGElement.tabIndex</code></td>
+   <td>Implemented (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=778654" title="FIXED: Implement 'tabIndex' attribute for SVG elements" class="external" rel="noopener">bug&nbsp;778654</a>)</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>Document.activeElement</code></td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers" title="The GlobalEventHandlers mixin describes the event handlers common to several interfaces like HTMLElement, Document, or Window. Each of these interfaces can, of course, add more event handlers in addition to the ones listed below."><code>GlobalEventHandlers</code></a> on <a href="../API/SVGElement.html" title="All of the SVG DOM interfaces that correspond directly to elements in the SVG language derive from the SVGElement interface."><code>SVGElement</code></a></td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: khaki;">
+   <td><code>options</code> dictionary attribute for <code>SVGGraphicsElement.getBBox()</code></td>
+   <td>Implemented behind the preference <code>svg.new-getBBox.enabled</code> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=999964" title="FIXED: Implementation Proposal for 'clipped' option of SVG 2 getBBox method." class="external" rel="noopener">bug&nbsp;999964</a>, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1019326" title="getBBox now returns an empty bbox when there is no fill" class="external" rel="noopener">bug&nbsp;1019326</a>)</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Allow leading and trailing whitespace in <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/length" title="The <length> CSS data type represents a distance value. Lengths can be used in numerous CSS properties, such as width, height, margin, padding, border-width, font-size, and text-shadow."><code>&lt;length&gt;</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/angle" title="The <angle> CSS data type represents an angle value expressed in degrees, gradians, radians, or turns. It is used, for example, in <gradient>s and in some transform functions."><code>&lt;angle&gt;</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/number" title="The <number> CSS data type represents a number, being either an integer or a number with a fractional component."><code>&lt;number&gt;</code></a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/integer" title="The <integer> CSS data type is a special type of <number> that represents a whole number, whether positive or negative. Integers can be used in numerous CSS properties, such as column-count, counter-increment, grid-column, grid-row, and z-index."><code>&lt;integer&gt;</code></a></td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Form feed (U+000C) in whitespace</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>SVGElement.xmlbase</code>, <code>SVGElement.xmllang</code> and <code>SVGElement.xmlspace</code> removed</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>SVGViewSpec</code> removed</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>SVGElement.style</code> removed</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><code>SVGGraphicsElement.getTransformToElement()</code> removed</td>
+   <td>Not removed yet</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>SVGGraphicsElement.getCTM()</code> on the outermost element</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>animVal</code> attribute alias of <code>baseVal</code></td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>dataset</code> attribute for <a href="../API/SVGElement.html" title="All of the SVG DOM interfaces that correspond directly to elements in the SVG language derive from the SVGElement interface."><code>SVGElement</code></a></td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td>Moved <a href="../API/SVGGeometryElement/pathLength.html" title="The SVGGeometryElement.pathLength property reflects the pathLength attribute and returns the total length of the path, in user units."><code>pathLength</code></a> attribute and <a href="../API/SVGGeometryElement/getTotalLength.html" title="The SVGGeometryElement.getTotalLength() method returns the user agent's computed value for the total length of the path in user units."><code>getTotalLength()</code></a> and <a href="../API/SVGGeometryElement/getPointAtLength.html" title="The SVGGeometryElement.getPointAtLength() method returns the point at a given distance along the path."><code>getPointAtLength()</code></a> methods from <a href="../API/SVGPathElement.html" title="The SVGPathElement interface corresponds to the <path> element."><code>SVGPathElement</code></a> to <a href="../API/SVGGeometryElement.html" title="The SVGGeometryElement interface represents SVG elements whose rendering is defined by geometry with an equivalent path, and which can be filled and stroked. This includes paths and the basic shapes."><code>SVGGeometryElement</code></a></td>
+   <td>Implemented (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1239100" title="FIXED: Implement SVGGeometryElement interface" class="external" rel="noopener">bug&nbsp;1239100</a>)</td>
+  </tr>
+ </tbody>
+</table>
+
+<a class="dashAnchor" name="//apple_ref/Section/Document%20Structure"></a><h2 id="Document_Structure">Document Structure</h2>
+
+<table style="border-collapse: separate;" class="standard-table">
+ <tbody>
+  <tr>
+   <th>Change</th>
+   <th>Notes</th>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><code>SVGSVGElement.suspendRedraw()</code>, <code>SVGSVGElement.unsuspendRedraw()</code> and <code>SVGSVGElement.unsuspendRedrawAll()</code> deprecated</td>
+   <td>Turned into no-ops (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=734079" title="FIXED: Update SVG frame bounds asynchronously, and get rid of the suspendRedraw code" class="external" rel="noopener">bug&nbsp;734079</a>)</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>externalResourcesRequired</code> attribute removed</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>auto</code> value for <code>width</code> and <code>height</code> in <a href="Element/image.html" title="The <image> SVG element includes images inside SVG documents. It can display raster image files or other SVG files."><code>&lt;image&gt;</code></a></td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>referencing entire document with <a href="Element/use.html" title="The <use> element takes nodes from within the SVG document, and duplicates them somewhere else. The effect is the same as if the nodes were deeply cloned into a non-exposed DOM, and then pasted where the use element is, much like cloned&nbsp;template elements&nbsp;in HTML5. Since the cloned nodes are not exposed, care must be taken when using CSS to style a use element and its hidden descendants. CSS attributes are not guaranteed to be inherited by the hidden, cloned DOM unless you explicitly request it using CSS inheritance."><code>&lt;use&gt;</code></a></td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><code>lang</code> attribute on <a href="Element/desc.html" title="Each container element or graphics element in an SVG drawing can supply a description string using the <desc> element where the description is text-only."><code>&lt;desc&gt;</code></a> and <a href="Element/title.html" title="Each container element or graphics element in an SVG drawing can supply a <title> element containing a description string where the description is text-only. When the current SVG document fragment is rendered as SVG on visual media, <title> element is not rendered as part of the graphics. However, some user agents may, for example, display the <title> element as a tooltip. Alternate presentations are possible, both visual and aural, which display the <title> element but do not display path elements or other graphics elements. The <title> element generally improves accessibility of SVG documents."><code>&lt;title&gt;</code></a></td>
+   <td>Implemented (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=721920" title="FIXED: Honor the 'lang' attribute on SVG as we do in HTML" class="external" rel="noopener">bug&nbsp;721920</a>)</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>CSS transforms on outermost <a href="Element/svg.html" title="The svg element can be used to embed an SVG fragment inside the current document (for example, an HTML document). This SVG fragment has its own viewport and coordinate system."><code>&lt;svg&gt;</code></a> not affecting <code>SVGSVGElement.currentScale</code> or <code>SVGSVGElement.currentTranslate</code></td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>rootElement</code> attribute deprecated</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><a href="../API/SVGElementInstance.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>SVGElementInstance</code></a> and <a href="../API/SVGElementInstanceList.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>SVGElementInstanceList</code></a> and corresponding attributes on <a href="../API/SVGUseElement.html" title="The SVGUseElement interface corresponds to the <use> element."><code>SVGUseElement</code></a> removed</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><a href="Element/use.html" title="The <use> element takes nodes from within the SVG document, and duplicates them somewhere else. The effect is the same as if the nodes were deeply cloned into a non-exposed DOM, and then pasted where the use element is, much like cloned&nbsp;template elements&nbsp;in HTML5. Since the cloned nodes are not exposed, care must be taken when using CSS to style a use element and its hidden descendants. CSS attributes are not guaranteed to be inherited by the hidden, cloned DOM unless you explicitly request it using CSS inheritance."><code>&lt;use&gt;</code></a> event flow following Shadow DOM spec.</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>auto</code> as initial value for <code>width</code> and <code>height</code> attributes of <a href="Element/svg.html" title="The svg element can be used to embed an SVG fragment inside the current document (for example, an HTML document). This SVG fragment has its own viewport and coordinate system."><code>&lt;svg&gt;</code></a></td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>baseProfile</code> and <code>version</code> attributes removed from <a href="Element/svg.html" title="The svg element can be used to embed an SVG fragment inside the current document (for example, an HTML document). This SVG fragment has its own viewport and coordinate system."><code>&lt;svg&gt;</code></a></td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><code>SVGSVGElement.forceRedraw()</code> deprecated</td>
+   <td>Turned into a no-op (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=733764" title="FIXED: Make forceRedraw() a no-op" class="external" rel="noopener">bug&nbsp;733764</a>)</td>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><code>SVGSVGElement.deselectAll()</code> deprecated</td>
+   <td>Not yet deprecated (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1302705" title="Add console warning about SVGSVGElement.deselectAll() being deprecated" class="external" rel="noopener">bug&nbsp;1302705</a>)</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><a href="Element/switch.html" title="The <switch> SVG element evaluates the requiredFeatures, requiredExtensions and systemLanguage attributes on its direct child elements in order, and then processes and renders the first child for which these attributes evaluate to true. All others will be bypassed and therefore not rendered. If the child element is a container element such as a <g>, then the entire subtree is either processed/rendered or bypassed/not rendered."><code>&lt;switch&gt;</code></a> not affecting <a href="Element/style.html" title="The <style> SVG element allows style sheets to be embedded directly within SVG content. SVG's style element has the same attributes as the corresponding element in HTML (see HTML's <style> element)."><code>&lt;style&gt;</code></a></td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>requiredFeatures</code> attribute removed</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: khaki;">
+   <td><code>SVGSVGElement.currentView</code> and <code>SVGSVGElement.useCurrentView</code> removed</td>
+   <td><code>SVGSVGElement.currentView</code> was never implemented, <code>SVGSVGElement.useCurrentView</code> not removed yet (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1174097" title="remove SVGSVGElement.useCurrentView" class="external" rel="noopener">bug&nbsp;1174097</a>)</td>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><a href="../API/SVGUnknownElement.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>SVGUnknownElement</code></a></td>
+   <td>Not implemented (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1239218" title="Implement SVGUnknownElement interface" class="external" rel="noopener">bug&nbsp;1239218</a>)</td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><code>lang</code> attribute without namespace</td>
+   <td>Implemented (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=721920" title="FIXED: Honor the 'lang' attribute on SVG as we do in HTML" class="external" rel="noopener">bug&nbsp;721920</a>)</td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><code>SVGSVGElement.viewport</code> removed</td>
+   <td>Never implemented</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>xml:base</code> attribute removed</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Reorder descendent elements of <a href="Element/switch.html" title="The <switch> SVG element evaluates the requiredFeatures, requiredExtensions and systemLanguage attributes on its direct child elements in order, and then processes and renders the first child for which these attributes evaluate to true. All others will be bypassed and therefore not rendered. If the child element is a container element such as a <g>, then the entire subtree is either processed/rendered or bypassed/not rendered."><code>&lt;switch&gt;</code></a> having <code>systemLanguage</code> attribute according to <code>allowReorder</code> SMIL attribute</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Made <a href="Element/tspan.html" title="Within a <text> element, text and font properties and the current text position can be adjusted with absolute or relative coordinate values by including a <tspan> element."><code>&lt;tspan&gt;</code></a> and <a href="Element/textPath.html" title="In addition to text drawn in a straight line, SVG also includes the ability to place text along the shape of a <path> element. To specify that a block of text is to be rendered along the shape of a <path>, include the given text within a <textPath> element which includes an href attribute with a reference to a <path> element."><code>&lt;textPath&gt;</code></a> graphics elements</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Allow <code>x</code>, <code>y</code>, <code>width</code> and <code>height</code> on <a href="Element/symbol.html" title="The <symbol> element is used to define graphical template objects which can be instantiated by a <use> element. The use of symbol elements for graphics that are used multiple times in the same document adds structure and semantics. Documents that are rich in structure may be rendered graphically, as speech, or as Braille, and thus promote accessibility. Note that a symbol element itself is not rendered. Only instances of a symbol element (i.e., a reference to a symbol by a <use> element) are rendered."><code>&lt;symbol&gt;</code></a></td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Made <a href="Element/use.html" title="The <use> element takes nodes from within the SVG document, and duplicates them somewhere else. The effect is the same as if the nodes were deeply cloned into a non-exposed DOM, and then pasted where the use element is, much like cloned&nbsp;template elements&nbsp;in HTML5. Since the cloned nodes are not exposed, care must be taken when using CSS to style a use element and its hidden descendants. CSS attributes are not guaranteed to be inherited by the hidden, cloned DOM unless you explicitly request it using CSS inheritance."><code>&lt;use&gt;</code></a> element shadow trees consistent with Shadow DOM spec.</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Role mapping of <a href="Element/a.html" title="The <a> SVG element defines a hyperlink."><code>&lt;a&gt;</code></a> element depending on whether it is a valid link</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>ARIA state and property attributes animatable</td>
+   <td>Implementation status unknown</td>
+  </tr>
+ </tbody>
+</table>
+
+<a class="dashAnchor" name="//apple_ref/Section/Styling"></a><h2 id="Styling">Styling</h2>
+
+<table style="border-collapse: separate;" class="standard-table">
+ <tbody>
+  <tr>
+   <th>Change</th>
+   <th>Notes</th>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>contentStyleType</code> attribute removed</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/LinkStyle" title="The LinkStyle interface allows to access the associated CSS style sheet of a node."><code>LinkStyle</code></a> on <a href="../API/SVGStyleElement.html" title="The SVGStyleElement interface corresponds to the SVG <style> element."><code>SVGStyleElement</code></a></td>
+   <td>Implemented (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1239128" title="FIXED: Implement LinkStyle for SVGStyleElement interface" class="external" rel="noopener">bug&nbsp;1239128</a> (Firefox 46.0 / Thunderbird 46.0 / SeaMonkey 2.43))</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Inner <a href="Element/svg.html" title="The svg element can be used to embed an SVG fragment inside the current document (for example, an HTML document). This SVG fragment has its own viewport and coordinate system."><code>&lt;svg&gt;</code></a>s and <a href="Element/foreignObjects.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>&lt;foreignObjects&gt;</code></a>s not <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow" title="The overflow CSS property specifies what to do when an element's content is too large to fit in its block formatting context. It is a shorthand for the overflow-x and overflow-y properties."><code>overflow</code></a>: hidden;</code> in UA style sheet</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow" title="The overflow CSS property specifies what to do when an element's content is too large to fit in its block formatting context. It is a shorthand for the overflow-x and overflow-y properties."><code>overflow</code></a>: hidden;</code> on <a href="Element/hatch.html" title="The <hatch> SVG element is used to fill or stroke an object using one or more pre-defined paths that are repeated at fixed intervals in a specified direction to cover the areas to be painted."><code>&lt;hatch&gt;</code></a> in UA style sheet</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>0 0</code> as default value of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin" title="The transform-origin CSS property sets the origin for an element's transformations."><code>transform-origin</code></a> except root <a href="Element/svg.html" title="The svg element can be used to embed an SVG fragment inside the current document (for example, an HTML document). This SVG fragment has its own viewport and coordinate system."><code>&lt;svg&gt;</code></a> and <code>&lt;svg&gt;</code> children of <a href="Element/foreign.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>&lt;foreign&gt;</code></a></td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Use of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/white-space" title="The white-space CSS property determines how whitespace inside an element is handled."><code>white-space</code></a> instead of deprecated <code>xml:space</code> attribute in UA style sheet</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face" title="The @font-face CSS at-rule specifies a custom font with which to display text; the font can be loaded from either a remote server or the user's own computer."><code>@font-face</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::first-letter" title="The ::first-letter CSS pseudo-element applies styles to the first letter of the first line of a block-level element, but only when not preceded by other content (such as images or inline tables)."><code>::first-letter</code></a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::first-line" title="The ::first-line CSS pseudo-element applies styles to the first line of a block-level element."><code>::first-line</code></a> on <a href="Element/text.html" title="The SVG <text> element defines a graphics element consisting of text. It's possible to apply a gradient, pattern, clipping path, mask, or filter to <text>, just like any other SVG graphics element."><code>&lt;text&gt;</code></a></td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>SVG and HTML style sheets in HTML document with inline SVG applying to whole document content</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Presentation attributes on any SVG namespaced element</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Display behavior of <a href="Element/style.html" title="The <style> SVG element allows style sheets to be embedded directly within SVG content. SVG's style element has the same attributes as the corresponding element in HTML (see HTML's <style> element)."><code>&lt;style&gt;</code></a> defined via UA style sheet</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>!important</code> user agent style rules controlling never-rendered elements</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>:focus</code> and <code>::selection</code> styles</td>
+   <td>Implementation status unknown</td>
+  </tr>
+ </tbody>
+</table>
+
+<a class="dashAnchor" name="//apple_ref/Section/Geometry"></a><h2 id="Geometry">Geometry</h2>
+
+<table style="border-collapse: separate;" class="standard-table">
+ <tbody>
+  <tr>
+   <th>Change</th>
+   <th>Notes</th>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>x</code> and <code>y</code> attributes removed from <a href="Element/pattern.html" title="The <pattern> element defines a graphics object which can be redrawn at repeated x and y-coordinate intervals (&quot;tiled&quot;) to cover an area."><code>&lt;pattern&gt;</code></a> and <a href="Element/filter.html" title="The <filter> SVG element serves as container for atomic filter operations. It is never rendered directly. A filter is referenced by using the filter attribute on the target SVG element or via the filter CSS property."><code>&lt;filter&gt;</code></a></td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><code>auto</code> value of <code>width</code> and <code>height</code> computes to <code>0</code> but <code>100%</code> on <a href="Element/svg.html" title="The svg element can be used to embed an SVG fragment inside the current document (for example, an HTML document). This SVG fragment has its own viewport and coordinate system."><code>&lt;svg&gt;</code></a></td>
+   <td>Not implemented</td>
+  </tr>
+ </tbody>
+</table>
+
+<a class="dashAnchor" name="//apple_ref/Section/Coordinate%20Systems%2C%20Transformations%20and%20Units"></a><h2 id="Coordinate_Systems_Transformations_and_Units">Coordinate Systems, Transformations and Units</h2>
+
+<table style="border-collapse: separate;" class="standard-table">
+ <tbody>
+  <tr>
+   <th>Change</th>
+   <th>Notes</th>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Exception for bad values on <code>SVGMatrix.skewX()</code> and <code>SVGMatrix.skewY()</code></td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Bounding box for element with no position at (0, 0)</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><code>defer</code> keyword removed from <code>preserveAspectRatio</code> attribute</td>
+   <td>Removed (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1280425" title="FIXED: Drop support for SVG <image preserveAspectRatio=&quot;defer ...&quot;>" class="external" rel="noopener">bug&nbsp;1280425</a>)</td>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td>Added <code>non-scaling-size</code>, <code>non-rotation</code> and <code>fixed-position</code> keywords for <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/vector-effect" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>vector-effect</code></a> property</td>
+   <td>Not implemented yet (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1265666" title="Implement missing SVG 2 values of vector-effect property" class="external" rel="noopener">bug&nbsp;1265666</a>)</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/vector-effect" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>vector-effect</code></a> has no effect within 3D rendering context</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Consider <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/clip" title="The clip CSS property defines what portion of an element is visible. The clip property applies only to absolutely positioned elements, that is elements with position:absolute or position:fixed."><code>clip</code></a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow" title="The overflow CSS property specifies what to do when an element's content is too large to fit in its block formatting context. It is a shorthand for the overflow-x and overflow-y properties."><code>overflow</code></a> on SVG document referenced by <a href="Element/image.html" title="The <image> SVG element includes images inside SVG documents. It can display raster image files or other SVG files."><code>&lt;image&gt;</code></a></td>
+   <td>Implementation status unknown</td>
+  </tr>
+ </tbody>
+</table>
+
+<a class="dashAnchor" name="//apple_ref/Section/Paths"></a><h2 id="Paths">Paths</h2>
+
+<table style="border-collapse: separate;" class="standard-table">
+ <tbody>
+  <tr>
+   <th>Change</th>
+   <th>Notes</th>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>B</code> and <code>b</code> path commands</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>Z</code> and <code>z</code> path commands to add path coordinate data to previous command</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Not render <a href="Element/path.html" title="The <path> SVG element is the generic element to define a shape. All the basic shapes can be created with a path element."><code>&lt;path&gt;</code></a>, <a href="Element/polygon.html" title="The <polygon> element defines a closed shape consisting of a set of connected straight line segments. The last point is connected to the first point. For open shapes see the&nbsp;<polyline> element."><code>&lt;polygon&gt;</code></a> and <a href="Element/polyline.html" title="The <polyline> SVG element is an SVG basic shape that creates straight lines connecting several points. Typically a polyline is used to create open shapes as the last point doesn't have to be connected to the first point. For closed shapes see the <polygon> element."><code>&lt;polyline&gt;</code></a> with no data</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>SVGPathSeg*</code>, <a href="../API/SVGAnimatedPathData.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>SVGAnimatedPathData</code></a> and related methods removed from <a href="../API/SVGPathElement.html" title="The SVGPathElement interface corresponds to the <path> element."><code>SVGPathElement</code></a></td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code><a href="Attribute/d.html">d</a></code> attribute as CSS property</td>
+   <td>Implementation status unknown</td>
+  </tr>
+ </tbody>
+</table>
+
+<a class="dashAnchor" name="//apple_ref/Section/Basic%20Shapes"></a><h2 id="Basic_Shapes">Basic Shapes</h2>
+
+<table style="border-collapse: separate;" class="standard-table">
+ <tbody>
+  <tr>
+   <th>Change</th>
+   <th>Notes</th>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code><a href="Attribute/pathLength.html">pathLength</a></code> attribute for all basic shapes</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>SVGAnimatedPoints.animatedPoints</code> as alias of <code>SVGAnimatedPoints.points</code></td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Auto behavior for <code>rx</code> and <code>ry</code> in <a href="Element/ellipse.html" title="The <ellipse> element is an SVG basic shape, used to create ellipses based on a center coordinate, and both their x and y radius."><code>&lt;ellipse&gt;</code></a></td>
+   <td>Implementation status unknown</td>
+  </tr>
+ </tbody>
+</table>
+
+<a class="dashAnchor" name="//apple_ref/Section/Text"></a><h2 id="Text">Text</h2>
+
+<table style="border-collapse: separate;" class="standard-table">
+ <tbody>
+  <tr>
+   <th>Change</th>
+   <th>Notes</th>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-fill" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>text-decoration-fill</code></a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-stroke" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>text-decoration-stroke</code></a> properties</td>
+   <td>Not implemented yet (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1303569" title="Implement text-decoration-fill and text-decoration-stroke from SVG 2" class="external" rel="noopener">bug&nbsp;1303569</a>)</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>inline-size</code> attribute for <a href="Element/text.html" title="The SVG <text> element defines a graphics element consisting of text. It's possible to apply a gradient, pattern, clipping path, mask, or filter to <text>, just like any other SVG graphics element."><code>&lt;text&gt;</code></a></td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/shape-inside" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>shape-inside</code></a> property</td>
+   <td>Inplementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/shape-subtract" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>shape-subtract</code></a> property</td>
+   <td>Inplementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/white-space" title="The white-space CSS property determines how whitespace inside an element is handled."><code>white-space</code></a></td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Deprecated <code>xml:space</code> attribute</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/kerning" title="The font-kerning CSS property controls the usage of the kerning information; that is, it controls how letters are spaced. The kerning information is stored in the font, and if the font is well-kerned, this feature allows spacing between characters to be very similar, whatever the characters are."><code>kerning</code></a> property removed</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><code>path</code> attribute for <a href="Element/textPath.html" title="In addition to text drawn in a straight line, SVG also includes the ability to place text along the shape of a <path> element. To specify that a block of text is to be rendered along the shape of a <path>, include the given text within a <textPath> element which includes an href attribute with a reference to a <path> element."><code>&lt;textPath&gt;</code></a></td>
+   <td>Implemented (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1446617" title="FIXED: Support SVG 2 path attribute for textPath" class="external" rel="noopener">bug&nbsp;1446617</a>)</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Reference basic shapes to <a href="Element/textPath.html" title="In addition to text drawn in a straight line, SVG also includes the ability to place text along the shape of a <path> element. To specify that a block of text is to be rendered along the shape of a <path>, include the given text within a <textPath> element which includes an href attribute with a reference to a <path> element."><code>&lt;textPath&gt;</code></a></td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><code>side</code> attribute for <a href="Element/textPath.html" title="In addition to text drawn in a straight line, SVG also includes the ability to place text along the shape of a <path> element. To specify that a block of text is to be rendered along the shape of a <path>, include the given text within a <textPath> element which includes an href attribute with a reference to a <path> element."><code>&lt;textPath&gt;</code></a></td>
+   <td>Implemented (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1446650" title="FIXED: Support SVG 2 side attribute for textPath" class="external" rel="noopener">bug&nbsp;1446650</a>)</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Render characters for one loop of a single closed path, effected by the <code><a href="Attribute/startOffset.html" class="new" rel="nofollow">startOffset</a></code> attribute and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-anchor" title="The text-anchor attribute is used to align (start-, middle- or end-alignment) a string of text relative to a given point."><code>text-anchor</code></a> property</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><a href="Element/tref.html" title="The textual content for a <text> SVG element can be either character data directly embedded within the <text> element or the character data content of a referenced element, where the referencing is specified with a <tref> element."><code>&lt;tref&gt;</code></a> removed</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="Element/altGlyph.html" title="The <altGlyph> SVG element allows sophisticated selection of the glyphs used to render its child character data."><code>&lt;altGlyph&gt;</code></a>, <a href="Element/altGlyphDef.html" title="The <altGlyphDef> SVG element defines a substitution representation for glyphs."><code>&lt;altGlyphDef&gt;</code></a>, <a href="Element/altGlyphItem.html" title="The <altGlyphItem> element provides a set of candidates for glyph substitution by the <altGlyph> element."><code>&lt;altGlyphItem&gt;</code></a> and <a href="Element/glyphRef.html" title="The glyphRef element provides a single possible glyph to the referencing <altGlyph> substitution."><code>&lt;glyphRef&gt;</code></a> removed</td>
+   <td><code>&lt;altGlyph&gt;</code>, <code>&lt;altGlyphDef&gt;</code> and <code>&lt;altGlyphItem&gt;</code> removed (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1260032" title="FIXED: drop support for altGlyph" class="external" rel="noopener">bug&nbsp;1260032</a>), <code>&lt;glyphRef&gt;</code> never really implemented (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1302693" title="Remove vestigial remnants of <glyphRef>" class="external" rel="noopener">bug&nbsp;1302693</a>)</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>SVGTextContentElement.selectSubString()</code> deprecated</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>getComputedTextLength()</code> not including <code>dx</code> and <code>dy</code> values</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Text in non-rendered elements not included in addressable characters</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Unknown elements in text render as unpositioned spans</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Offset distances of text positioned along a transformed path measured in text elements coordinate system</td>
+   <td>Implementation status unknown</td>
+  </tr>
+ </tbody>
+</table>
+
+<a class="dashAnchor" name="//apple_ref/Section/Embedded%20Content"></a><h2 id="Embedded_Content">Embedded Content</h2>
+
+<table style="border-collapse: separate;" class="standard-table">
+ <tbody>
+  <tr>
+   <th>Change</th>
+   <th>Notes</th>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><a href="Element/video.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>&lt;video&gt;</code></a></td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><a href="Element/audio.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>&lt;audio&gt;</code></a></td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><a href="Element/iframe.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>&lt;iframe&gt;</code></a></td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><a href="Element/canvas.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>&lt;canvas&gt;</code></a></td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><a href="Element/source.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>&lt;source&gt;</code></a></td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><a href="Element/track.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>&lt;track&gt;</code></a></td>
+   <td>Implementation status unknown</td>
+  </tr>
+ </tbody>
+</table>
+
+<a class="dashAnchor" name="//apple_ref/Section/Painting"></a><h2 id="Painting">Painting</h2>
+
+<table style="border-collapse: separate;" class="standard-table">
+ <tbody>
+  <tr>
+   <th>Change</th>
+   <th>Notes</th>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/paint-order" title="The paint-order CSS property lets you control the order in which the fill and stroke (and painting markers) of text content and shapes are drawn."><code>paint-order</code></a></td>
+   <td>Implemented (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=828805" title="FIXED: implement paint-order property from SVG 2" class="external" rel="noopener">bug&nbsp;828805</a>)</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/will-change" title="The will-change CSS property provides a way for authors to hint browsers about the kind of changes to be expected on an element, so that the browser can set up appropriate optimizations ahead of time before the element is actually changed."><code>will-change</code></a> instead of <code>buffered-rendering</code></td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><code>context-fill</code> and <code>context-stroke</code> paint values</td>
+   <td>Implemented (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=719286" title="FIXED: Implement embedded SVG glyphs in OpenType fonts" class="external" rel="noopener">bug&nbsp;719286</a> (Firefox 18.0 / Thunderbird 18.0 / SeaMonkey 2.15) and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=798843" title="FIXED: change value names for -moz-objectFill to context-fill etc., and put them behind opentype SVG pref" class="external" rel="noopener">bug&nbsp;798843</a> (Firefox 26.0 / Thunderbird 26.0 / SeaMonkey 2.23))</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>child</code> keyword for <code>&lt;paint&gt;</code> values and marker properties</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: khaki;">
+   <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/vector-effect" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>vector-effect</code></a> property</td>
+   <td>Only <code>none</code> and <code>non-scaling-stroke</code> values are supported (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=528332" title="FIXED: Feature Request: Implement non-scaling-stroke" class="external" rel="noopener">bug&nbsp;528332</a> (Firefox 15 / Thunderbird 15 / SeaMonkey 2.12), <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1265666" title="Implement missing SVG 2 values of vector-effect property" class="external" rel="noopener">bug&nbsp;1265666</a>)</td>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><code>arcs</code> value for <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/stroke-linejoin" title="REDIRECT en/SVG/Attribute/stroke-linejoin"><code>stroke-linejoin</code></a></td>
+   <td>Not implemented (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1239142" title="Implement 'arcs' value for 'stroke-linejoin' property" class="external" rel="noopener">bug&nbsp;1239142</a>)</td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><code>auto-start-reverse</code> value for <a href="Element/marker.html" title="The <marker> element defines the graphics that is to be used for drawing arrowheads or polymarkers on a given <path>, <line>, <polyline> or <polygon> element."><code>&lt;marker&gt;</code></a>'s orient attribute</td>
+   <td>Implemented (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=879659" title="FIXED: implement <marker orient=&quot;auto-start-reverse&quot;> from SVG 2" class="external" rel="noopener">bug&nbsp;879659</a>)</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><a href="../API/SVGPaint.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>SVGPaint</code></a> removed</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/fill" title="The documentation about this has not yet been written; please consider contributing!"><code>fill</code></a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/stroke" title="The documentation about this has not yet been written; please consider contributing!"><code>stroke</code></a> taking multiple paints</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/z-index" title="The z-index CSS property specifies the z-order of a positioned element and its descendants. When elements overlap, z-order determines which one covers the other. An element with a larger z-index generally covers an element with a lower one."><code>z-index</code></a></td>
+   <td>Not implemented (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=360148" title="Support the 'z-index' property on SVG elements" class="external" rel="noopener">bug&nbsp;360148</a></td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>child(<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/integer" title="The <integer> CSS data type is a special type of <number> that represents a whole number, whether positive or negative. Integers can be used in numerous CSS properties, such as column-count, counter-increment, grid-column, grid-row, and z-index."><code>&lt;integer&gt;</code></a>)</code> paint value</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Display of zero-length subpaths depends on <code><a href="Attribute/stroke-linecap.html">stroke-linecap</a></code> attribute</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Markers on all shapes</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><a href="Element/marker.html" title="The <marker> element defines the graphics that is to be used for drawing arrowheads or polymarkers on a given <path>, <line>, <polyline> or <polygon> element."><code>&lt;marker&gt;</code></a> element display defined in UA style sheet</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Only single paints for fills and strokes</td>
+   <td>Implementation status unknown</td>
+  </tr>
+ </tbody>
+</table>
+
+<a class="dashAnchor" name="//apple_ref/Section/Color"></a><h2 id="Color">Color</h2>
+
+<table style="border-collapse: separate;" class="standard-table">
+ <tbody>
+  <tr>
+   <th>Change</th>
+   <th>Notes</th>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Color managed images</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>RGBA, HSL, LAB, ICC named colors and device colors</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color-profile" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>color-profile</code></a> removed</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><a href="Element/color-profile.html" title="The <color-profile> element allows describing the color profile used for the image."><code>&lt;color-profile&gt;</code></a> removed</td>
+   <td>Implementation status unknown</td>
+  </tr>
+ </tbody>
+</table>
+
+<a class="dashAnchor" name="//apple_ref/Section/Paint%20Servers"></a><h2 id="Paint_Servers">Paint Servers</h2>
+
+<table style="border-collapse: separate;" class="standard-table">
+ <tbody>
+  <tr>
+   <th>Change</th>
+   <th>Notes</th>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><a href="Element/solidcolor.html" title="The <solidcolor> SVG element lets authors define a single color for use in multiple places in an SVG document. It is also useful as away of animating a palette colors."><code>&lt;solidcolor&gt;</code></a> (renamed <code>solidColor</code>)</td>
+   <td>Not implemented (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1177032" title="Implement SVG 1.2 Tiny/SVG 2 solidColor paint server" class="external" rel="noopener">bug&nbsp;1177032</a>)</td>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><code>fr</code> attribute for <a href="Element/radialGradient.html" title="The <radialGradient> SVG element lets authors define radial gradients to fill or stroke graphical elements."><code>&lt;radialGradient&gt;</code></a></td>
+   <td>Not implemented (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1240275" title="FIXED: Support radialGradient fr attribute" class="external" rel="noopener">bug&nbsp;1240275</a>)</td>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><a href="Element/mesh.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>&lt;mesh&gt;</code></a> (renamed <code>meshGradient</code>)</td>
+   <td>Not implemented (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1238882" title="Add support for mesh gradients" class="external" rel="noopener">bug&nbsp;1238882</a>)</td>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><a href="Element/meshrow.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>&lt;meshrow&gt;</code></a> (renamed <code>meshRow</code>)</td>
+   <td>Not implemented (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1238882" title="Add support for mesh gradients" class="external" rel="noopener">bug&nbsp;1238882</a>)</td>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><a href="Element/meshpatch.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>&lt;meshpatch&gt;</code></a> (renamed <code>meshPatch</code>)</td>
+   <td>Not implemented (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1238882" title="Add support for mesh gradients" class="external" rel="noopener">bug&nbsp;1238882</a>)</td>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><a href="Element/hatch.html" title="The <hatch> SVG element is used to fill or stroke an object using one or more pre-defined paths that are repeated at fixed intervals in a specified direction to cover the areas to be painted."><code>&lt;hatch&gt;</code></a></td>
+   <td>Not implemented (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1239147" title="Add support for hatches" class="external" rel="noopener">bug&nbsp;1239147</a>)</td>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><a href="Element/hatchpath.html" title="The <hatchpath> SVG element defines a hatch path used by the <hatch> element."><code>&lt;hatchpath&gt;</code></a> (renamed <code>hatchPath</code>)</td>
+   <td>Not implemented (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1239147" title="Add support for hatches" class="external" rel="noopener">bug&nbsp;1239147</a>)</td>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td>Display behavior of paint server elements defined by UA style sheet</td>
+   <td>Not implemented</td>
+  </tr>
+ </tbody>
+</table>
+
+<a class="dashAnchor" name="//apple_ref/Section/Clipping%2C%20Masking%20and%20Compositing"></a><h2 id="Clipping_Masking_and_Compositing">Clipping, Masking and Compositing</h2>
+
+<table style="border-collapse: separate;" class="standard-table">
+ <tbody>
+  <tr>
+   <th>Change</th>
+   <th>Notes</th>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow" title="The overflow CSS property specifies what to do when an element's content is too large to fit in its block formatting context. It is a shorthand for the overflow-x and overflow-y properties."><code>overflow</code></a> respected on outermost <a href="Element/svg.html" title="The svg element can be used to embed an SVG fragment inside the current document (for example, an HTML document). This SVG fragment has its own viewport and coordinate system."><code>&lt;svg&gt;</code></a> elements inline in HTML</td>
+   <td>Implementation status unknown</td>
+  </tr>
+ </tbody>
+</table>
+
+<a class="dashAnchor" name="//apple_ref/Section/Interactivity"></a><h2 id="Interactivity">Interactivity</h2>
+
+<table style="border-collapse: separate;" class="standard-table">
+ <tbody>
+  <tr>
+   <th>Change</th>
+   <th>Notes</th>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><code><a href="Attribute/tabindex.html">tabindex</a></code> attribute</td>
+   <td>Implemented (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=778654" title="FIXED: Implement 'tabIndex' attribute for SVG elements" class="external" rel="noopener">bug&nbsp;778654</a>)</td>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><code>bounding-box</code> on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events" title="The  pointer-events CSS property specifies under what circumstances (if any) a particular graphic element can become the target of mouse events."><code>pointer-events</code></a></td>
+   <td>Not implemented (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=945187" title="Add support for &quot;pointer-events: bounding-box&quot;" class="external" rel="noopener">bug&nbsp;945187</a>)</td>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><code>load</code>, <code>abort</code>, <code>error</code> and <code>unload</code> instead of <code>SVGLoad</code>, <code>SVGAbort</code>, <code>SVGError</code> and <code>SVGUnload</code></td>
+   <td>Not implemented (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=620002" title="Support SVG 2 event model (dispatch load rather than SVGLoad etc)" class="external" rel="noopener">bug&nbsp;620002</a>)</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Only structurally external elements and outermost <a href="Element/svg.html" title="The svg element can be used to embed an SVG fragment inside the current document (for example, an HTML document). This SVG fragment has its own viewport and coordinate system."><code>&lt;svg&gt;</code></a> element fire <code>load</code> events</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>resize</code> and <code>scroll</code> instead of <code>SVGResize</code> and <code>SVGScroll</code></td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>DOMActivate</code> removed</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>focusin</code> and <code>focusout</code> instead of <code>DOMFocusIn</code> and <code>DOMFocusOut</code></td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Keyboard events</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Mutation events removed</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>SVGZoomEvent removed</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><a href="Element/cursor.html" title="The <cursor> SVG element can be used to define a platform-independent custom cursor. A recommended approach for defining a platform-independent custom cursor is to create a PNG image and define a cursor element that references the PNG image and identifies the exact position within the image which is the pointer position (i.e., the hot spot)."><code>&lt;cursor&gt;</code></a> element deprecated</td>
+   <td>Implementation status unknown</td>
+  </tr>
+ </tbody>
+</table>
+
+<a class="dashAnchor" name="//apple_ref/Section/Linking"></a><h2 id="Linking">Linking</h2>
+
+<table style="border-collapse: separate;" class="standard-table">
+ <tbody>
+  <tr>
+   <th>Change</th>
+   <th>Notes</th>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Link SVG resources with fragment identifiers</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>xlink:type</code>, <code>xlink:role</code>, <code>xlink:arcrole</code>, <code>xlink:show</code> and <code>xlink:actuate</code> attributes removed</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><code>xlink:href</code> attribute deprecated in favor of <code>href</code></td>
+   <td>Implemented (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1245751" title="FIXED: Allow href attribute without xlink on SVG elements" class="external" rel="noopener">bug&nbsp;1245751</a>)</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>xlink:title</code> attribute deprecated in favor of child <a href="Element/title.html" title="Each container element or graphics element in an SVG drawing can supply a <title> element containing a description string where the description is text-only. When the current SVG document fragment is rendered as SVG on visual media, <title> element is not rendered as part of the graphics. However, some user agents may, for example, display the <title> element as a tooltip. Alternate presentations are possible, both visual and aural, which display the <title> element but do not display path elements or other graphics elements. The <title> element generally improves accessibility of SVG documents."><code>&lt;title&gt;</code></a></td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Spaces in SVG view fragments</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>pixel:</code> and <code>percent:</code> spatial media fragments</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Linking to <a href="Element/view.html" title="A view is a defined way to view the image, like a zoom level or a detail view."><code>&lt;view&gt;</code></a> elements does not cause implicit box transformation to show nearest ancestor <a href="Element/svg.html" title="The svg element can be used to embed an SVG fragment inside the current document (for example, an HTML document). This SVG fragment has its own viewport and coordinate system."><code>&lt;svg&gt;</code></a> element</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Unspecified SVG view fragment parameters don't cause corresponding attributes to be reset to initial values</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code>viewTarget</code> attribute of <a href="Element/view.html" title="A view is a defined way to view the image, like a zoom level or a detail view."><code>&lt;view&gt;</code></a> and corresponding SVG view fragment parameter removed</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Fragment-only URLs are always same-document</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td>Additional attributes on <a href="Element/a.html" title="The <a> SVG element defines a hyperlink."><code>&lt;a&gt;</code></a></td>
+   <td>Implemented (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1451823" title="FIXED: Support ping, rel, referrerPolicy, relList, hreflang, type and text properties on SVG <a> elements" class="external" rel="noopener">bug&nbsp;1451823</a>)</td>
+  </tr>
+ </tbody>
+</table>
+
+<a class="dashAnchor" name="//apple_ref/Section/Scripting"></a><h2 id="Scripting">Scripting</h2>
+
+<table style="border-collapse: separate;" class="standard-table">
+ <tbody>
+  <tr>
+   <th>Change</th>
+   <th>Notes</th>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><code><a href="Attribute/contentScriptType.html">contentScriptType</a></code> removed</td>
+   <td>Implementation status unknown</td>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/AnimationEvents/onload" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>AnimationEvents.onload</code></a> removed</td>
+   <td>Implementation status unknown</td>
+  </tr>
+ </tbody>
+</table>
+
+<a class="dashAnchor" name="//apple_ref/Section/Fonts"></a><h2 id="Fonts">Fonts</h2>
+
+<table style="border-collapse: separate;" class="standard-table">
+ <tbody>
+  <tr>
+   <th>Change</th>
+   <th>Notes</th>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td><a href="Element/font.html" title="The <font> SVG element defines a font to be used for text layout."><code>&lt;font&gt;</code></a>, <a href="Element/glyph.html" title="A <glyph> defines a single glyph in an SVG font."><code>&lt;glyph&gt;</code></a>, <a href="Element/missing-glyph.html" title="The <missing-glyph> SVG element's content is rendered, if for a given character the font doesn't define an appropriate <glyph>."><code>&lt;missing-glyph&gt;</code></a>, <a href="Element/hkern.html" title="The <hkern> SVG element allows to fine-tweak the horizontal distance between two glyphs. This process is known as kerning."><code>&lt;hkern&gt;</code></a>, <a href="Element/vkern.html" title="The <vkern> SVG element allows to fine-tweak the vertical distance between two glyphs in top-to-bottom fonts. This process is known as kerning."><code>&lt;vkern&gt;</code></a>, <a href="Element/font-face.html" title="The <font-face> SVG element corresponds to the CSS @font-face rule. It defines a font's outer properties."><code>&lt;font-face&gt;</code></a>, <a href="Element/font-face-src.html" title="The <font-face-src> SVG element corresponds to the src descriptor in CSS @font-face rules. It serves as container for <font-face-name>, pointing to locally installed copies of this font, and <font-face-uri>, utilizing remotely defined fonts."><code>&lt;font-face-src&gt;</code></a>, <a href="Element/font-face-uri.html" title="The <font-face-uri> SVG element points to a remote definition of the current font."><code>&lt;font-face-uri&gt;</code></a>, <a href="Element/font-face-format.html" title="The <font-face-format> SVG element describes the type of font referenced by its parent <font-face-uri>."><code>&lt;font-face-format&gt;</code></a> and <a href="Element/font-face-name.html" title="The <font-face-name> element points to a locally installed copy of this font, identified by its name."><code>&lt;font-face-name&gt;</code></a> and corresponding IDL interfaces removed</td>
+   <td>Implementation status unknown</td>
+  </tr>
+ </tbody>
+</table>
+
+<a class="dashAnchor" name="//apple_ref/Section/Extensibility%20chapter"></a><h2 id="Extensibility_chapter">Extensibility chapter</h2>
+
+<table style="border-collapse: separate;" class="standard-table">
+ <tbody>
+  <tr>
+   <th>Change</th>
+   <th>Notes</th>
+  </tr>
+  <tr style="color: black; background-color: #cccccc;">
+   <td>Made <a href="Element/foreignObject.html" title="The <foreignObject> SVG element allows for inclusion of a foreign XML namespace which has its graphical content drawn by a different user agent. The included foreign graphical content is subject to SVG transformations and compositing."><code>&lt;foreignObject&gt;</code></a> graphics element</td>
+   <td>Implementation status unknown</td>
+  </tr>
+ </tbody>
+</table>
+                  
+                
+              </article>
+
+              <!-- contributors -->
+              <div class="wiki-block contributors">
+                <h2 class="offscreen">Document Tags and Contributors</h2>
+                
+                
+  <div class="tag-attach-list contributors-sub">
+    <svg class="icon icon-tags" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M7 7c0-1.109-.891-2-2-2s-2 .891-2 2 .891 2 2 2 2-.891 2-2zm16.672 9c0 .531-.219 1.047-.578 1.406l-7.672 7.688c-.375.359-.891.578-1.422.578s-1.047-.219-1.406-.578L1.422 13.906C.625 13.125 0 11.609 0 10.5V4c0-1.094.906-2 2-2h6.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422zm6 0c0 .531-.219 1.047-.578 1.406l-7.672 7.688a2.08 2.08 0 0 1-1.422.578c-.812 0-1.219-.375-1.75-.922l7.344-7.344c.359-.359.578-.875.578-1.406s-.219-1.047-.578-1.422L14.422 3.422C13.625 2.625 12.11 2 11 2h3.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422z"></path>
+</svg>
+    <strong>Tags:</strong>&nbsp;
+    <ul class="tags tags-small">
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Firefox" rel="nofollow">Firefox</a></li>
+      
+        <li><a href="../../tag/SVG.html" rel="nofollow">SVG</a></li>
+      
+    </ul>
+  </div>
+
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-group" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M9.266 14a5.532 5.532 0 0 0-4.141 2H3.031C1.468 16 0 15.25 0 13.516 0 12.25-.047 8 1.937 8c.328 0 1.953 1.328 4.062 1.328.719 0 1.406-.125 2.078-.359A7.624 7.624 0 0 0 7.999 10c0 1.422.453 2.828 1.266 4zM26 23.953C26 26.484 24.328 28 21.828 28H8.172C5.672 28 4 26.484 4 23.953 4 20.422 4.828 15 9.406 15c.531 0 2.469 2.172 5.594 2.172S20.063 15 20.594 15C25.172 15 26 20.422 26 23.953zM10 4c0 2.203-1.797 4-4 4S2 6.203 2 4s1.797-4 4-4 4 1.797 4 4zm11 6c0 3.313-2.688 6-6 6s-6-2.688-6-6 2.688-6 6-6 6 2.688 6 6zm9 3.516C30 15.25 28.531 16 26.969 16h-2.094a5.532 5.532 0 0 0-4.141-2A7.066 7.066 0 0 0 22 10a7.6 7.6 0 0 0-.078-1.031A6.258 6.258 0 0 0 24 9.328C26.109 9.328 27.734 8 28.062 8c1.984 0 1.937 4.25 1.937 5.516zM28 4c0 2.203-1.797 4-4 4s-4-1.797-4-4 1.797-4 4-4 4 1.797 4 4z"></path>
+</svg>
+                    <strong>Contributors to this page:</strong>
+                    
+        <a href="https://developer.mozilla.org/en-US/profiles/fscholz">fscholz</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/webinista">webinista</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Sebastianz">Sebastianz</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/rener_bz">rener_bz</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/cabanier">cabanier</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/rolfedh">rolfedh</a>
+    
+                  </div>
+                
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-clock" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M14 8.5v7c0 .281-.219.5-.5.5h-5a.494.494 0 0 1-.5-.5v-1c0-.281.219-.5.5-.5H12V8.5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zm6.5 5.5c0-4.688-3.813-8.5-8.5-8.5S3.5 9.313 3.5 14s3.813 8.5 8.5 8.5 8.5-3.813 8.5-8.5zm3.5 0c0 6.625-5.375 12-12 12S0 20.625 0 14 5.375 2 12 2s12 5.375 12 12z"></path>
+</svg>
+                    <strong>Last updated by:</strong>
+                    <a href="https://developer.mozilla.org/en-US/profiles/fscholz">fscholz</a>,
+                    <time datetime="2018-05-15T03:53:25.651926-07:00">May 15, 2018, 3:53:25 AM</time>
+                  </div>
+                
+              </div>
+            </div>
+
+            
+              <!-- quick links and approvals strip -->
+              <div id="wiki-left" class="column-strip wiki-column">
+
+                <!-- crumbs -->
+                
+  
+    <nav class="crumbs" role="navigation">
+      <ol typeof="BreadcrumbList" vocab="https://schema.org/" aria-label="breadcrumbs">
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="https://developer.mozilla.org/en-US/docs/Web" property="item" typeof="WebPage">
+              <span property="name">Web technology for developers</span>
+            </a>
+            <meta property="position" content="1">
+          </li>
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="../SVG.html" property="item" typeof="WebPage">
+              <span property="name">SVG: Scalable Vector Graphics</span>
+            </a>
+            <meta property="position" content="2">
+          </li>
+        
+        <li property="itemListElement" typeof="ListItem" class="crumb">
+          <span property="name">SVG 2 support in Mozilla</span>
+        </li>
+      </ol>
+    </nav>
+  
+
+                
+                  <!-- quick links -->
+                  
+  <div class="quick-links" id="quick-links">
+    <div class="quick-links-head">Related Topics</div>
+    
+  <ol>
+   
+   <li><a href="../SVG.html">SVG Elements</a><ol>
+ <li>A
+   <ol>
+     <li><a href="Element/a.html" title="The <a> SVG element defines a hyperlink."><code>&lt;a&gt;</code></a></li>
+     <li class="deprecatedElement"><a href="Element/altGlyph.html" title="The <altGlyph> SVG element allows sophisticated selection of the glyphs used to render its child character data."><code>&lt;altGlyph&gt;</code></a></li>
+     <li class="deprecatedElement"><a href="Element/altGlyphDef.html" title="The <altGlyphDef> SVG element defines a substitution representation for glyphs."><code>&lt;altGlyphDef&gt;</code></a></li>
+     <li class="deprecatedElement"><a href="Element/altGlyphItem.html" title="The <altGlyphItem> element provides a set of candidates for glyph substitution by the <altGlyph> element."><code>&lt;altGlyphItem&gt;</code></a></li>
+     <li><a href="Element/animate.html" title="This element implements the SVGAnimateElement interface."><code>&lt;animate&gt;</code></a></li>
+     <li><a href="Element/animateColor.html" title="The <animateColor> SVG element specifies a color transformation over time."><code>&lt;animateColor&gt;</code></a></li>
+     <li><a href="Element/animateMotion.html" title="The <animateMotion> element causes a referenced element to move along a motion path."><code>&lt;animateMotion&gt;</code></a></li>
+     <li><a href="Element/animateTransform.html" title="The animateTransform element animates a transformation attribute on a target element, thereby allowing animations to control translation, scaling, rotation and/or skewing."><code>&lt;animateTransform&gt;</code></a></li>
+   </ol>
+ </li>
+ <li>B-C
+   <ol>
+     <li><a href="Element/circle.html" title="The <circle> SVG element is an SVG basic shape, used to create circles based on a center point and a radius."><code>&lt;circle&gt;</code></a></li>
+     <li><a href="Element/clipPath.html" title="The <clipPath> SVG element defines a clipping path. A clipping path is used/referenced using the clip-path property."><code>&lt;clipPath&gt;</code></a></li>
+     <li class="deprecatedElement"><a href="Element/color-profile.html" title="The <color-profile> element allows describing the color profile used for the image."><code>&lt;color-profile&gt;</code></a></li>
+     <li><a href="Element/cursor.html" title="The <cursor> SVG element can be used to define a platform-independent custom cursor. A recommended approach for defining a platform-independent custom cursor is to create a PNG image and define a cursor element that references the PNG image and identifies the exact position within the image which is the pointer position (i.e., the hot spot)."><code>&lt;cursor&gt;</code></a></li>
+   </ol>
+ </li>
+ <li>D
+   <ol>
+     <li><a href="Element/defs.html" title="SVG allows graphical objects to be defined for later reuse. It is recommended that, wherever possible, referenced elements be defined inside of a <defs> element. Objects created inside a <defs> element are not rendered immediately; instead, think of them as templates or macros created for future use."><code>&lt;defs&gt;</code></a></li>
+     <li><a href="Element/desc.html" title="Each container element or graphics element in an SVG drawing can supply a description string using the <desc> element where the description is text-only."><code>&lt;desc&gt;</code></a></li>
+   </ol>
+ </li>
+ <li>E
+   <ol>
+     <li><a href="Element/ellipse.html" title="The <ellipse> element is an SVG basic shape, used to create ellipses based on a center coordinate, and both their x and y radius."><code>&lt;ellipse&gt;</code></a></li>
+   </ol>
+ </li>
+ <li>F
+   <ol>
+     <li><a href="Element/feBlend.html" title="The <feBlend> SVG filter primitive composes two objects together ruled by a certain blending mode. This is similar to what is known from image editing software when blending two layers. The mode is defined by the mode attribute."><code>&lt;feBlend&gt;</code></a></li>
+     <li><a href="Element/feColorMatrix.html" title="The <feColorMatrix> SVG filter element changes colors based on a transformation matrix. Every pixel's color value (represented by an [R,G,B,A] vector) is matrix multiplied to create a new color."><code>&lt;feColorMatrix&gt;</code></a></li>
+     <li><a href="Element/feComponentTransfer.html" title="Th <feComponentTransfer> SVG filter primitive performs color-component-wise remapping of data for each pixel. It allows operations like brightness adjustment, contrast adjustment, color balance or thresholding."><code>&lt;feComponentTransfer&gt;</code></a></li>
+     <li><a href="Element/feComposite.html" title="This filter primitive performs the combination of two input images pixel-wise in image space using one of the Porter-Duff compositing operations: over, in, atop, out, xor and lighter. Additionally, a component-wise arithmetic operation (with the result clamped between [0..1]) can be applied."><code>&lt;feComposite&gt;</code></a></li>
+     <li><a href="Element/feConvolveMatrix.html" title="The <feConvolveMatrix> SVG filter primitive applies a matrix convolution filter effect. A convolution combines pixels in the input image with neighboring pixels to produce a resulting image. A wide variety of imaging operations can be achieved through convolutions, including blurring, edge detection, sharpening, embossing and beveling."><code>&lt;feConvolveMatrix&gt;</code></a></li>
+     <li><a href="Element/feDiffuseLighting.html" title="The <feDiffuseLighting> SVG filter primitive lights an image using the alpha channel as a bump map. The resulting image, which is an RGBA opaque image, depends on the light color, light position and surface geometry of the input bump map."><code>&lt;feDiffuseLighting&gt;</code></a></li>
+     <li><a href="Element/feDisplacementMap.html" title="The <feDisplacementMap> SVG filter primitive uses the pixel values from the image from in2 to spatially displace the image from in."><code>&lt;feDisplacementMap&gt;</code></a></li>
+     <li><a href="Element/feDistantLight.html" title="The <feDistantLight> filter primitive defines a distant light source that can be used within a lighting filter primitive: <feDiffuseLighting> or <feSpecularLighting>."><code>&lt;feDistantLight&gt;</code></a></li>
+     <li><a href="Element/feFlood.html" title="The <feFlood> SVG filter primitive fills the filter subregion with the color and opacity defined by flood-color and flood-opacity."><code>&lt;feFlood&gt;</code></a></li>
+     <li><a href="Element/feFuncA.html" title="The <feFuncA> SVG filter primitive defines the transfer function for the alpha component of the input graphic of its parent <feComponentTransfer> element."><code>&lt;feFuncA&gt;</code></a></li>
+     <li><a href="Element/feFuncB.html" title="The <feFuncB> SVG filter primitive defines the transfer function for the blue component of the input graphic of its parent <feComponentTransfer> element."><code>&lt;feFuncB&gt;</code></a></li>
+     <li><a href="Element/feFuncG.html" title="The <feFuncG> SVG filter primitive defines the transfer function for the green component of the input graphic of its parent <feComponentTransfer> element."><code>&lt;feFuncG&gt;</code></a></li>
+     <li><a href="Element/feFuncR.html" title="The <feFuncR> SVG filter primitive defines the transfer function for the red component of the input graphic of its parent <feComponentTransfer> element."><code>&lt;feFuncR&gt;</code></a></li>
+     <li><a href="Element/feGaussianBlur.html" title="The <feGaussianBlur> SVG filter primitive blurs the input image by the amount specified in stdDeviation, which defines the bell-curve."><code>&lt;feGaussianBlur&gt;</code></a></li>
+     <li><a href="Element/feImage.html" title="The <feImage> SVG filter primitive fetches image data from an external source and provides the pixel data as output (meaning if the external source is an SVG image, it is rasterized.)"><code>&lt;feImage&gt;</code></a></li>
+     <li><a href="Element/feMerge.html" title="The <feMerge> SVG element allows filter effects to be applied concurrently instead of sequentially. This is achieved by other filters storing their output via the result attribute and then accessing it in a <feMergeNode> child."><code>&lt;feMerge&gt;</code></a></li>
+     <li><a href="Element/feMergeNode.html" title="The feMergeNode takes the result of another filter to be processed by its parent <feMerge>."><code>&lt;feMergeNode&gt;</code></a></li>
+     <li><a href="Element/feMorphology.html" title="The <feMorphology> SVG filter primitive is used to erode or dilate the input image. It's usefulness lies especially in fattening or thinning effects."><code>&lt;feMorphology&gt;</code></a></li>
+     <li><a href="Element/feOffset.html" title="The <feOffset> SVG filter primitive allows to offset the input image. The input image as a whole is offset by the values specified in the dx and dy attributes."><code>&lt;feOffset&gt;</code></a></li>
+     <li><a href="Element/fePointLight.html" title="The  SVG filter primitive allows to create a point light effect."><code>&lt;fePointLight&gt;</code></a></li>
+     <li><a href="Element/feSpecularLighting.html" title="The <feSpecularLighting> SVG filter primitive lights a source graphic using the alpha channel as a bump map. The resulting image is an RGBA image based on the light color. The lighting calculation follows the standard specular component of the Phong lighting model. The resulting image depends on the light color, light position and surface geometry of the input bump map. The result of the lighting calculation is added. The filter primitive assumes that the viewer is at infinity in the z direction."><code>&lt;feSpecularLighting&gt;</code></a></li>
+     <li><a href="Element/feSpotLight.html" title="The <feSpotLight> SVG filter primitive allows to create a spotlight effect."><code>&lt;feSpotLight&gt;</code></a></li>
+     <li><a href="Element/feTile.html" title="The <feTile> SVG filter primitive allows to fill a target rectangle with a repeated, tiled pattern of an input image. The effect is similar to the one of a <pattern>."><code>&lt;feTile&gt;</code></a></li>
+     <li><a href="Element/feTurbulence.html" title="The <feTurbulence> SVG filter primitive creates an image using the Perlin turbulence function. It allows the synthesis of artificial textures like clouds or marble. The resulting image will fill the entire filter primitive subregion."><code>&lt;feTurbulence&gt;</code></a></li>
+     <li><a href="Element/filter.html" title="The <filter> SVG element serves as container for atomic filter operations. It is never rendered directly. A filter is referenced by using the filter attribute on the target SVG element or via the filter CSS property."><code>&lt;filter&gt;</code></a></li>
+     <li><a href="Element/font.html" title="The <font> SVG element defines a font to be used for text layout."><code>&lt;font&gt;</code></a></li>
+     <li><a href="Element/font-face.html" title="The <font-face> SVG element corresponds to the CSS @font-face rule. It defines a font's outer properties."><code>&lt;font-face&gt;</code></a></li>
+     <li><a href="Element/font-face-format.html" title="The <font-face-format> SVG element describes the type of font referenced by its parent <font-face-uri>."><code>&lt;font-face-format&gt;</code></a></li>
+     <li><a href="Element/font-face-name.html" title="The <font-face-name> element points to a locally installed copy of this font, identified by its name."><code>&lt;font-face-name&gt;</code></a></li>
+     <li><a href="Element/font-face-src.html" title="The <font-face-src> SVG element corresponds to the src descriptor in CSS @font-face rules. It serves as container for <font-face-name>, pointing to locally installed copies of this font, and <font-face-uri>, utilizing remotely defined fonts."><code>&lt;font-face-src&gt;</code></a></li>
+     <li><a href="Element/font-face-uri.html" title="The <font-face-uri> SVG element points to a remote definition of the current font."><code>&lt;font-face-uri&gt;</code></a></li>
+     <li><a href="Element/foreignObject.html" title="The <foreignObject> SVG element allows for inclusion of a foreign XML namespace which has its graphical content drawn by a different user agent. The included foreign graphical content is subject to SVG transformations and compositing."><code>&lt;foreignObject&gt;</code></a></li>
+   </ol>
+ </li>
+ <li>G
+   <ol>
+     <li><a href="Element/g.html" title="The <g> SVG element is a container used to group other SVG elements."><code>&lt;g&gt;</code></a></li>
+     <li><a href="Element/glyph.html" title="A <glyph> defines a single glyph in an SVG font."><code>&lt;glyph&gt;</code></a></li>
+     <li class="deprecatedElement"><a href="Element/glyphRef.html" title="The glyphRef element provides a single possible glyph to the referencing <altGlyph> substitution."><code>&lt;glyphRef&gt;</code></a></li>
+   </ol>
+ </li>
+ <li>H
+   <ol>
+     <li><a href="Element/hkern.html" title="The <hkern> SVG element allows to fine-tweak the horizontal distance between two glyphs. This process is known as kerning."><code>&lt;hkern&gt;</code></a></li>
+   </ol>
+ </li>
+ <li>I
+   <ol>
+     <li><a href="Element/image.html" title="The <image> SVG element includes images inside SVG documents. It can display raster image files or other SVG files."><code>&lt;image&gt;</code></a></li>
+   </ol>
+ </li>
+ <li>J-L
+   <ol>
+     <li><a href="Element/line.html" title="The <line> element is an SVG basic shape used to create a line connecting two points."><code>&lt;line&gt;</code></a></li>
+     <li><a href="Element/linearGradient.html" title="The <linearGradient> SVG element lets authors define linear gradients to fill or stroke graphical elements."><code>&lt;linearGradient&gt;</code></a></li>
+   </ol>
+ </li>
+ <li>M
+   <ol>
+     <li><a href="Element/marker.html" title="The <marker> element defines the graphics that is to be used for drawing arrowheads or polymarkers on a given <path>, <line>, <polyline> or <polygon> element."><code>&lt;marker&gt;</code></a></li>
+     <li><a href="Element/mask.html" title="In SVG, you can specify that any other graphics object or <g> element can be used as an alpha mask for compositing the current object into the background. A mask is defined with the <mask> element. A mask is used/referenced using the mask property."><code>&lt;mask&gt;</code></a></li>
+     <li><a href="Element/metadata.html" title="The <metadata> SVG element allows to add metadata to SVG content. Metadata is structured information about data. The contents of <metadata> elements should be elements from other XML namespaces such as RDF, FOAF, etc."><code>&lt;metadata&gt;</code></a></li>
+     <li><a href="Element/missing-glyph.html" title="The <missing-glyph> SVG element's content is rendered, if for a given character the font doesn't define an appropriate <glyph>."><code>&lt;missing-glyph&gt;</code></a></li>
+     <li><a href="Element/mpath.html" title="The <mpath> sub-element for the <animateMotion> element provides the ability to reference an external <path> element as the definition of a motion path."><code>&lt;mpath&gt;</code></a></li>
+   </ol>
+ </li>
+ <li>N-P
+   <ol>
+     <li><a href="Element/path.html" title="The <path> SVG element is the generic element to define a shape. All the basic shapes can be created with a path element."><code>&lt;path&gt;</code></a></li>
+     <li><a href="Element/pattern.html" title="The <pattern> element defines a graphics object which can be redrawn at repeated x and y-coordinate intervals (&quot;tiled&quot;) to cover an area."><code>&lt;pattern&gt;</code></a></li>
+     <li><a href="Element/polygon.html" title="The <polygon> element defines a closed shape consisting of a set of connected straight line segments. The last point is connected to the first point. For open shapes see the&nbsp;<polyline> element."><code>&lt;polygon&gt;</code></a></li>
+     <li><a href="Element/polyline.html" title="The <polyline> SVG element is an SVG basic shape that creates straight lines connecting several points. Typically a polyline is used to create open shapes as the last point doesn't have to be connected to the first point. For closed shapes see the <polygon> element."><code>&lt;polyline&gt;</code></a></li>
+   </ol>
+ </li>
+ <li>Q-R
+   <ol>
+     <li><a href="Element/radialGradient.html" title="The <radialGradient> SVG element lets authors define radial gradients to fill or stroke graphical elements."><code>&lt;radialGradient&gt;</code></a></li>
+     <li><a href="Element/rect.html" title="The <rect> element is a basic SVG shape that creates rectangles, defined by their corner's position, their width, and their height. The rectangles may have their corners rounded."><code>&lt;rect&gt;</code></a></li>
+   </ol>
+ </li>
+ <li>S
+   <ol>
+     <li><a href="Element/script.html" title="A SVG script element is equivalent to the script element in HTML and thus is the place for scripts (e.g., ECMAScript)."><code>&lt;script&gt;</code></a></li>
+     <li><a href="Element/set.html" title="The <set> element provides a simple means of just setting the value of an attribute for a specified duration. It supports all attribute types, including those that cannot reasonably be interpolated, such as string and boolean values. The <set> element is non-additive. The additive and accumulate attributes are not allowed, and will be ignored if specified."><code>&lt;set&gt;</code></a></li>
+     <li><a href="Element/stop.html" title="The <stop> SVG element defines the ramp of colors to use on a gradient, which is a child element to either the <linearGradient> or the <radialGradient> element."><code>&lt;stop&gt;</code></a></li>
+     <li><a href="Element/style.html" title="The <style> SVG element allows style sheets to be embedded directly within SVG content. SVG's style element has the same attributes as the corresponding element in HTML (see HTML's <style> element)."><code>&lt;style&gt;</code></a></li>
+     <li><a href="Element/svg.html" title="The svg element can be used to embed an SVG fragment inside the current document (for example, an HTML document). This SVG fragment has its own viewport and coordinate system."><code>&lt;svg&gt;</code></a></li>
+     <li><a href="Element/switch.html" title="The <switch> SVG element evaluates the requiredFeatures, requiredExtensions and systemLanguage attributes on its direct child elements in order, and then processes and renders the first child for which these attributes evaluate to true. All others will be bypassed and therefore not rendered. If the child element is a container element such as a <g>, then the entire subtree is either processed/rendered or bypassed/not rendered."><code>&lt;switch&gt;</code></a></li>
+     <li><a href="Element/symbol.html" title="The <symbol> element is used to define graphical template objects which can be instantiated by a <use> element. The use of symbol elements for graphics that are used multiple times in the same document adds structure and semantics. Documents that are rich in structure may be rendered graphically, as speech, or as Braille, and thus promote accessibility. Note that a symbol element itself is not rendered. Only instances of a symbol element (i.e., a reference to a symbol by a <use> element) are rendered."><code>&lt;symbol&gt;</code></a></li>
+   </ol>
+ </li>
+ <li>T
+   <ol>
+     <li><a href="Element/text.html" title="The SVG <text> element defines a graphics element consisting of text. It's possible to apply a gradient, pattern, clipping path, mask, or filter to <text>, just like any other SVG graphics element."><code>&lt;text&gt;</code></a></li>
+     <li><a href="Element/textPath.html" title="In addition to text drawn in a straight line, SVG also includes the ability to place text along the shape of a <path> element. To specify that a block of text is to be rendered along the shape of a <path>, include the given text within a <textPath> element which includes an href attribute with a reference to a <path> element."><code>&lt;textPath&gt;</code></a></li>
+     <li><a href="Element/title.html" title="Each container element or graphics element in an SVG drawing can supply a <title> element containing a description string where the description is text-only. When the current SVG document fragment is rendered as SVG on visual media, <title> element is not rendered as part of the graphics. However, some user agents may, for example, display the <title> element as a tooltip. Alternate presentations are possible, both visual and aural, which display the <title> element but do not display path elements or other graphics elements. The <title> element generally improves accessibility of SVG documents."><code>&lt;title&gt;</code></a></li>
+     <li class="deprecatedElement"><a href="Element/tref.html" title="The textual content for a <text> SVG element can be either character data directly embedded within the <text> element or the character data content of a referenced element, where the referencing is specified with a <tref> element."><code>&lt;tref&gt;</code></a></li>
+     <li><a href="Element/tspan.html" title="Within a <text> element, text and font properties and the current text position can be adjusted with absolute or relative coordinate values by including a <tspan> element."><code>&lt;tspan&gt;</code></a></li>
+   </ol>
+ </li>
+ <li>U
+   <ol>
+     <li><a href="Element/use.html" title="The <use> element takes nodes from within the SVG document, and duplicates them somewhere else. The effect is the same as if the nodes were deeply cloned into a non-exposed DOM, and then pasted where the use element is, much like cloned&nbsp;template elements&nbsp;in HTML5. Since the cloned nodes are not exposed, care must be taken when using CSS to style a use element and its hidden descendants. CSS attributes are not guaranteed to be inherited by the hidden, cloned DOM unless you explicitly request it using CSS inheritance."><code>&lt;use&gt;</code></a></li>
+   </ol>
+ </li>
+ <li>V-Z
+   <ol>
+     <li><a href="Element/view.html" title="A view is a defined way to view the image, like a zoom level or a detail view."><code>&lt;view&gt;</code></a></li>
+     <li><a href="Element/vkern.html" title="The <vkern> SVG element allows to fine-tweak the vertical distance between two glyphs in top-to-bottom fonts. This process is known as kerning."><code>&lt;vkern&gt;</code></a></li>
+   </ol>   
+ </li>
+   </ol></li>
+   </ol>
+  
+  </div>
+                
+
+                <!-- approvals -->
+                
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+    
+      <div class="newsletter-box">
+        <div class="newsletter">
+    <form id="newsletterForm" class="newsletter-form nodisable" name="newsletter-form" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <div class="newsletter-head">
+            <h2 class="newsletter-teaser">Learn the best of web development</h2>
+            <p class="newsletter-description">Get the latest and greatest from MDN delivered straight to your inbox.</p>
+            
+        </div>
+
+        <div class="newsletter-fields">
+            <input type="hidden" id="fmt" name="fmt" value="H">
+            <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+            <div id="newsletterErrors" class="newsletter-errors"></div>
+
+            <div id="newsletterEmail" class="form-group newsletter-group-email">
+                <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+                <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+            </div>
+
+            <div id="newsletterPrivacy" class="form-group form-group-agree newsletter-group-privacy hidden">
+                <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+                <label for="newsletterPrivacyInput">
+                I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+                </label>
+            </div>
+            <div id="newsletterSubmit" class="newsletter-group-submit">
+                <button id="newsletter-submit" type="submit" class="button neutral newsletter-submit">
+                    Sign up now<svg class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg" width="23" height="28" viewBox="0 0 23 28" aria-hidden="true">
+    <path d="M23 15a2.01 2.01 0 0 1-.578 1.422L12.25 26.594c-.375.359-.891.578-1.422.578s-1.031-.219-1.406-.578L8.25 25.422c-.375-.375-.594-.891-.594-1.422s.219-1.047.594-1.422L12.828 18h-11C.703 18 0 17.062 0 16v-2c0-1.062.703-2 1.828-2h11L8.25 7.406a1.96 1.96 0 0 1 0-2.812l1.172-1.172c.375-.375.875-.594 1.406-.594s1.047.219 1.422.594l10.172 10.172c.375.359.578.875.578 1.406z"></path>
+</svg>
+                </button>
+            </div>
+        </div>
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden">
+        <span>Hide Newsletter Sign-up</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+</div>
+      </div>
+    
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/en-US/docs/Web/SVG/SVG_2_support_in_Mozilla$edit" label="Edit page"></menuitem>
+    <menuitem data-action="/en-US/docs/Web/SVG/SVG_2_support_in_Mozilla$history" label="View page history"></menuitem>
+  </menu>
+
+      </div>
+  </main>
+  <!-- Footer -->
+    <footer id="nav-footer" class="nav-footer"><div class="center"><a href="http://developer.mozilla.org/en-US/docs/Web/SVG/SVG_2_support_in_Mozilla">SVG 2 support in Mozilla</a> by <a href="http://developer.mozilla.org/en-US/docs/Web/SVG/SVG_2_support_in_Mozilla$history">Mozilla Contributors</a> is licensed under <a href="http://creativecommons.org/licenses/by-sa/2.5/" class="external external-icon">CC-BY-SA 2.5</a>.</div></footer> 
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script async="" type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script src="../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><!--[endif]---->
+
+    
+    <script src="../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../static/build/js/wiki.b26a4c181df3.js" charset="utf-8" id="wikiscript"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../static/build/js/newsletter.a85c5c2892e5.js" charset="utf-8"></script>
+  
+
+
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/SVG/SVG_2_support_in_Mozilla by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:47:30 GMT -->
+</body></html>

@@ -1,0 +1,1365 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:47:54 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  <title>Auto-placement in CSS Grid Layout</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+
+  
+<link rel="preload" href="../../../../../static/fonts/locales/ZillaSlab-Regular.f9de6143fdfa.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="license" href="#license">
+  
+
+  
+    
+    
+
+    <link href="../../../../../static/build/styles/mdn.83865b0f7c30.css" rel="stylesheet" type="text/css">
+
+    
+  
+
+    <link href="../../../../../static/build/styles/wiki.aaf26c13c39b.css" rel="stylesheet" type="text/css">
+
+
+    
+
+  <link href="../../../../../static/build/styles/locale-en-US.ca0bca387b42.css" rel="stylesheet" type="text/css">
+
+  
+    <script>
+      /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
+    </script>
+    
+
+
+
+  
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta property="og:site_name" content="MDN Web Docs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="MDN Web Docs">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../static/img/favicon144.e7e21ca263ca.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../static/img/favicon114.d526f38b09c5.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../static/img/favicon72.cc65d1d762a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../../../static/img/favicon57.de33179910ae.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="../../../../../static/img/favicon32.7f3da72dcea1.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script async="" type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  <link rel="dns-prefetch" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout$json">
+  <link rel="canonical" href="Auto-placement_in_CSS_Grid_Layout.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="Auto-placement_in_CSS_Grid_Layout.html" title="Auto-placement in CSS Grid Layout">
+  
+    
+      <link rel="alternate" hreflang="fr" href="https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS" title="Le placement automatique sur une grille CSS">
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout" title="CSS 网格布局中的自动定位">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="Auto-placement in CSS Grid Layout">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">
+  <meta name="twitter:title" content="Auto-placement in CSS Grid Layout">
+  
+  <meta property="og:description" content="In addition to the ability to place items accurately onto a created grid, the CSS Grid Layout specification contains rules that control what happens when you create a grid and do not place some or all of the child items. You can see auto-placement in action in the simplest of ways by creating a grid on a set of items. If you give the items no placement information they will position themselves on the grid, one in each grid cell.">
+  <meta name="description" content="In addition to the ability to place items accurately onto a created grid, the CSS Grid Layout specification contains rules that control what happens when you create a grid and do not place some or all of the child items. You can see auto-placement in action in the simplest of ways by creating a grid on a set of items. If you give the items no placement information they will position themselves on the grid, one in each grid cell.">
+  <meta name="twitter:description" content="In addition to the ability to place items accurately onto a created grid, the CSS Grid Layout specification contains rules that control what happens when you create a grid and do not place some or all of the child items. You can see auto-placement in action in the simplest of ways by creating a grid on a set of items. If you give the items no placement information they will position themselves on the grid, one in each grid cell.">
+  
+
+</head>
+<body data-slug="Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout" contextmenu="edit-history-menu" data-search-url="" class="document">
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <!--[endif]---->
+
+  
+  <link rel="dns-prefetch" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout$json">
+  <link rel="canonical" href="Auto-placement_in_CSS_Grid_Layout.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="Auto-placement_in_CSS_Grid_Layout.html" title="Auto-placement in CSS Grid Layout">
+  
+    
+      <link rel="alternate" hreflang="fr" href="https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS" title="Le placement automatique sur une grille CSS">
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout" title="CSS 网格布局中的自动定位">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="Auto-placement in CSS Grid Layout">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">
+  <meta name="twitter:title" content="Auto-placement in CSS Grid Layout">
+  
+  <meta property="og:description" content="In addition to the ability to place items accurately onto a created grid, the CSS Grid Layout specification contains rules that control what happens when you create a grid and do not place some or all of the child items. You can see auto-placement in action in the simplest of ways by creating a grid on a set of items. If you give the items no placement information they will position themselves on the grid, one in each grid cell.">
+  <meta name="description" content="In addition to the ability to place items accurately onto a created grid, the CSS Grid Layout specification contains rules that control what happens when you create a grid and do not place some or all of the child items. You can see auto-placement in action in the simplest of ways by creating a grid on a set of items. If you give the items no placement information they will position themselves on the grid, one in each grid cell.">
+  <meta name="twitter:description" content="In addition to the ability to place items accurately onto a created grid, the CSS Grid Layout specification contains rules that control what happens when you create a grid and do not place some or all of the child items. You can see auto-placement in action in the simplest of ways by creating a grid on a set of items. If you give the items no placement information they will position themselves on the grid, one in each grid cell.">
+  
+
+
+
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/wiki-compat-tables.9978a5ce31c2.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+
+        // interactive editor config
+        win.mdn.interactiveEditor = {
+            siteUrl: "https://developer.mozilla.org",
+            editorUrl: "https://interactive-examples.mdn.mozilla.net"
+        };
+
+    })(this);
+</script>
+    
+    <ul id="nav-access">
+  <li><a href="#content" id="skip-main">Skip to main content</a></li>
+  <li><a id="skip-language" href="#language">Select language</a></li>
+  <li><a href="#q" id="skip-search">Skip to search</a></li>
+</ul>
+
+    <!-- Header -->
+    <header id="main-header" class="header-main">
+      <a href="https://developer.mozilla.org/en-US/" class="logo">MDN Web Docs</a>
+      <div class="nav-toolbox-wrapper">
+        <nav id="main-nav" class="nav-main" role="navigation">
+    <ul>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web">Technologies
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-tech-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+                    <li><a href="../../CSS.html">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API">APIs / DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn">References &amp; Guides
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-learn-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-contact-submenu">
+              <div class="submenu-column">
+                <ul>
+                  <li>
+                      <a href="https://support.mozilla.org/">Get Firefox help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://stackoverflow.com/">Get web development help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                      <a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Report a content problem
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</nav>
+        <div id="toolbox" class="toolbox">
+  <ul>
+    
+    <li class="nav-login"><div class="login">
+    
+        
+        <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FCSS%2FCSS_Grid_Layout%2FAuto-placement_in_CSS_Grid_Layout" class="login-link js-login-link" data-service="GitHub" rel="nofollow">
+            Sign in<svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+    <title>Github</title>
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path>
+</svg>
+        </a>
+    
+</div></li>
+  </ul>
+</div>
+      </div>
+      <form id="nav-main-search" action="https://developer.mozilla.org/en-US/search" method="get" role="search" class="nav-main-search">
+  <div class="search-wrap">
+    <label for="main-q" class="offscreen">Search</label>
+    <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" aria-hidden="true">
+    <span class="search-trigger">
+        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true">
+    <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path>
+</svg>
+    </span>
+    <button type="submit" class="offscreen">Search</button>
+    <button type="button" id="close-header-search" class="close-header-search transparent">
+        <span class="offscreen">Close search</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+  </div>
+</form>
+    </header> 
+
+  <!-- Content will go here -->
+  <main id="content">
+      
+  <!-- heading -->
+  <div id="wiki-document-head" class="document-head">
+    <div class="center">
+      <!-- action buttons -->
+      <div class="document-actions">
+        
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons">
+      <li>
+          <button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false">
+              <svg class="icon icon-language" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M10.219 16.844c-.031.109-.797-.25-1-.328-.203-.094-1.125-.609-1.359-.766s-1.125-.891-1.234-.938a28.275 28.275 0 0 1-2.094 2.828c-.281.328-1.125 1.391-1.641 1.719-.078.047-.531.094-.594.063.25-.187.969-1.078 1.281-1.437.391-.453 2.25-3.047 2.562-3.641.328-.594 1.312-2.562 1.359-2.75-.156-.016-1.391.406-1.719.516-.313.094-1.172.297-1.234.344-.063.063-.016.25-.047.313s-.313.203-.484.234a1.647 1.647 0 0 1-.734 0c-.203-.047-.391-.25-.438-.328 0 0-.063-.094-.078-.359.187-.063.5-.078.844-.172s1.188-.344 1.641-.5 1.328-.484 1.594-.547c.281-.047.984-.516 1.359-.641s.641-.281.656-.203 0 .422-.016.516c-.016.078-.766 1.547-.875 1.781-.063.125-.5.953-1.203 2.047.25.109.781.328 1 .438.266.125 2.125.906 2.219.938s.266.75.234.875zM7.016 9.25c.047.266-.031.375-.063.438-.156.297-.547.5-.781.594s-.625.187-.938.187c-.141-.016-.422-.063-.766-.406-.187-.203-.328-.75-.266-.688s.516.125.719.078.688-.187.906-.25c.234-.078.703-.203.859-.219.156 0 .281.063.328.266zm10.906 2.016l.984 3.547-2.172-.656zM.609 23.766l10.844-3.625V4.016L.609 7.657v16.109zM20 18.813l1.594.484-2.828-10.266-1.563-.484-3.375 8.375 1.594.484.703-1.719 3.297 1.016zM12.141 3.781l8.953 2.875V.718zM17 24.453l2.469.203-.844 2.5L18 26.125c-1.266.812-2.828 1.437-4.312 1.687-.453.094-.969.187-1.422.187h-1.313c-1.656 0-4.672-.984-5.984-1.937-.094-.078-.125-.141-.125-.25 0-.172.125-.297.281-.297.141 0 .875.453 1.078.547 1.406.703 3.375 1.344 4.953 1.344 1.953 0 3.281-.25 5.063-1.016.516-.234.969-.531 1.453-.797zm7-16.859v16.859c-12.078-3.844-12.094-3.844-12.094-3.844C11.656 20.718.453 24.5.297 24.5a.3.3 0 0 1-.281-.203c0-.016-.016-.031-.016-.047V7.406c.016-.047.031-.125.063-.156.094-.109.219-.141.313-.172.047-.016 1-.328 2.328-.781v-6l8.719 3.094C11.532 3.36 21.251 0 21.392 0c.172 0 .313.125.313.328v6.531z"></path>
+</svg>
+              <span>Languages</span>
+          </button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                
+                
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS" data-locale="fr" title="French">Français (fr)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout" data-locale="zh-CN" title="Chinese (Simplified)">中文 (简体) (zh-CN)</a></bdi></li>
+                
+              
+
+              
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout$locales" rel="nofollow" id="translations-add">Add a translation</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+      
+      <li class="page-buttons-edit">
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout$edit" class="button neutral" id="edit-button" rel="nofollow">
+              <svg class="icon icon-pencil" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M5.672 24l1.422-1.422-3.672-3.672L2 20.328V22h2v2h1.672zm8.172-14.5a.329.329 0 0 0-.344-.344.368.368 0 0 0-.266.109l-8.469 8.469a.366.366 0 0 0-.109.266c0 .203.141.344.344.344a.368.368 0 0 0 .266-.109l8.469-8.469a.366.366 0 0 0 .109-.266zM13 6.5l6.5 6.5-13 13H0v-6.5zM23.672 8c0 .531-.219 1.047-.578 1.406L20.5 12 14 5.5l2.594-2.578c.359-.375.875-.594 1.406-.594s1.047.219 1.422.594l3.672 3.656c.359.375.578.891.578 1.422z"></path>
+</svg>
+              Edit
+          </a>
+      </li>
+      
+
+        
+
+        <li class="page-buttons-advanced">
+            <button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false">
+                <svg class="icon icon-gear" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M16 14c0-2.203-1.797-4-4-4s-4 1.797-4 4 1.797 4 4 4 4-1.797 4-4zm8-1.703v3.469c0 .234-.187.516-.438.562l-2.891.438a8.86 8.86 0 0 1-.609 1.422c.531.766 1.094 1.453 1.672 2.156.094.109.156.25.156.391s-.047.25-.141.359c-.375.5-2.484 2.797-3.016 2.797a.795.795 0 0 1-.406-.141l-2.156-1.687a9.449 9.449 0 0 1-1.422.594c-.109.953-.203 1.969-.453 2.906a.573.573 0 0 1-.562.438h-3.469c-.281 0-.531-.203-.562-.469l-.438-2.875a9.194 9.194 0 0 1-1.406-.578l-2.203 1.672c-.109.094-.25.141-.391.141s-.281-.063-.391-.172c-.828-.75-1.922-1.719-2.578-2.625a.607.607 0 0 1 .016-.718c.531-.719 1.109-1.406 1.641-2.141a8.324 8.324 0 0 1-.641-1.547l-2.859-.422A.57.57 0 0 1 0 15.705v-3.469c0-.234.187-.516.422-.562l2.906-.438c.156-.5.359-.969.609-1.437a37.64 37.64 0 0 0-1.672-2.156c-.094-.109-.156-.234-.156-.375s.063-.25.141-.359c.375-.516 2.484-2.797 3.016-2.797.141 0 .281.063.406.156L7.828 5.94a9.449 9.449 0 0 1 1.422-.594c.109-.953.203-1.969.453-2.906a.573.573 0 0 1 .562-.438h3.469c.281 0 .531.203.562.469l.438 2.875c.484.156.953.344 1.406.578l2.219-1.672c.094-.094.234-.141.375-.141s.281.063.391.156c.828.766 1.922 1.734 2.578 2.656a.534.534 0 0 1 .109.344c0 .141-.047.25-.125.359-.531.719-1.109 1.406-1.641 2.141.266.5.484 1.016.641 1.531l2.859.438a.57.57 0 0 1 .453.562z"></path>
+</svg>
+                <span>Advanced</span>
+            </button>
+            <div class="submenu js-submenu" id="advanced-menu-submenu">
+                <!-- this page -->
+                <div class="submenu-column">
+                    <div class="title">Advanced</div>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout$history" rel="nofollow">History</a></li>
+                        
+                        
+                        
+
+
+                
+
+                <li class="page-print"><a href="#" onclick="return window.print();">Print this article</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+      </div>
+
+      <div class="document-title">
+        <h1>Auto-placement in CSS Grid Layout</h1>
+      </div>
+    </div>
+  </div>
+  
+  <div id="toc" class="toc">
+    <div class="center">
+      <div class="toc-head">Jump to:</div>
+        <ol class="toc-links">
+          <li><a rel="internal" href="#Default_rules_for_auto-placement">Default rules for auto-placement</a></li><li><a rel="internal" href="#The_order_of_auto_placed_items">The order of auto placed items</a></li><li><a rel="internal" href="#What_can’t_we_do_with_auto-placement_(yet)">What can’t we do with auto-placement (yet)?</a>
+        </li></ol>
+    </div>
+  </div>
+  
+
+      <div class="center clear">
+      
+
+    <div class="wiki-main-content" id="document-main"><div class="center">
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-left-present">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-main wiki-column text-content">
+
+              
+
+              
+              
+
+              
+
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <p>In addition to the ability to place items accurately onto a created grid, the CSS Grid Layout specification contains rules that control what happens when you create a grid and do not place some or all of the child items. You can see auto-placement in action in the simplest of ways by creating a grid on a set of items. If you give the items no placement information they will position themselves on the grid, one in each grid cell.</p>
+
+<div id="placement_1">
+<div class="hidden">
+<pre class="brush: css">* {box-sizing: border-box;}
+
+.wrapper {
+    border: 2px solid #f76707;
+    border-radius: 5px;
+    background-color: #fff4e6;
+}
+
+.wrapper &gt; div {
+    border: 2px solid #ffa94d;
+    border-radius: 5px;
+    background-color: #ffd8a8;
+    padding: 1em;
+    color: #d9480f;
+}
+</pre>
+</div>
+
+<pre class="brush: css">.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+</pre>
+
+<pre class="brush: html">&lt;div class="wrapper"&gt;
+  &lt;div&gt;One&lt;/div&gt;
+  &lt;div&gt;Two&lt;/div&gt;
+  &lt;div&gt;Three&lt;/div&gt;
+  &lt;div&gt;Four&lt;/div&gt;
+  &lt;div&gt;Five&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<p><iframe src="../../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout%24samples/placement_1c37a.html?revision=1400674" class="live-sample-frame sample-code-frame" height="230" width="500" id="frame_placement_1" frameborder="0"></iframe></p>
+</div>
+
+<a class="dashAnchor" name="//apple_ref/Section/Default%20rules%20for%20auto%2Dplacement"></a><h2 id="Default_rules_for_auto-placement">Default rules for auto-placement</h2>
+
+<p>As you can see with the above example, if you create a grid all child items will lay themselves out one into each grid cell. The default flow is to arrange items by row. Grid will lay an item out into each cell of row 1. If you have created additional rows using the <code>grid-template-rows</code> property then grid will continue placing items in these rows. If the grid does not have enough rows in the explicit grid to place all of the items new <em>implicit</em> rows will be created.</p>
+
+<h3 id="Sizing_rows_in_the_implicit_grid">Sizing rows in the implicit grid</h3>
+
+<p>The default for automatically created rows in the implicit grid is for them to be auto-sized. This means that they will contain the content added to them without causing an overflow.</p>
+
+<p>You can however control the size of these rows with the property <code>grid-auto-rows</code>. To cause all created rows to be 100 pixels tall for example you would use:</p>
+
+<div id="placement_2">
+<div class="hidden">
+<pre class="brush: css">* {box-sizing: border-box;}
+
+.wrapper {
+    border: 2px solid #f76707;
+    border-radius: 5px;
+    background-color: #fff4e6;
+}
+
+.wrapper &gt; div {
+    border: 2px solid #ffa94d;
+    border-radius: 5px;
+    background-color: #ffd8a8;
+    padding: 1em;
+    color: #d9480f;
+}
+</pre>
+</div>
+
+<pre class="brush: html">&lt;div class="wrapper"&gt;
+    &lt;div&gt;One&lt;/div&gt;
+    &lt;div&gt;Two&lt;/div&gt;
+    &lt;div&gt;Three&lt;/div&gt;
+    &lt;div&gt;Four&lt;/div&gt;
+    &lt;div&gt;Five&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="brush: css">.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: 100px;
+}
+</pre>
+
+<p><iframe src="../../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout%24samples/placement_2c37a.html?revision=1400674" class="live-sample-frame sample-code-frame" height="330" width="500" id="frame_placement_2" frameborder="0"></iframe></p>
+</div>
+
+<p>You can use <a href="../minmax.html" title="The documentation about this has not yet been written; please consider contributing!"><code>minmax()</code></a> in your value for <a href="../grid-auto-rows.html" title="The grid-auto-rows CSS property specifies the size of an implicitly-created grid row track."><code>grid-auto-rows</code></a> enabling the creation of rows that are a minimum size but then grow to fit content if it is taller.</p>
+
+<div id="placement_3">
+<div class="hidden">
+<pre class="brush: css">* {box-sizing: border-box;}
+
+.wrapper {
+    border: 2px solid #f76707;
+    border-radius: 5px;
+    background-color: #fff4e6;
+}
+
+.wrapper &gt; div {
+    border: 2px solid #ffa94d;
+    border-radius: 5px;
+    background-color: #ffd8a8;
+    padding: 1em;
+    color: #d9480f;
+}
+</pre>
+</div>
+
+<pre class="brush: html">&lt;div class="wrapper"&gt;
+     &lt;div&gt;One&lt;/div&gt;
+     &lt;div&gt;Two&lt;/div&gt;
+     &lt;div&gt;Three&lt;/div&gt;
+     &lt;div&gt;Four
+&nbsp;    &lt;br&gt;This cell &nbsp; 
+&nbsp;    &lt;br&gt;Has extra &nbsp; 
+&nbsp;    &lt;br&gt;content. &nbsp; 
+&nbsp;    &lt;br&gt;Max is auto 
+&nbsp;    &lt;br&gt; so the row expands.
+&nbsp;    &lt;/div&gt;
+     &lt;div&gt;Five&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="brush: css">.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+</pre>
+
+<p><iframe src="../../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout%24samples/placement_3c37a.html?revision=1400674" class="live-sample-frame sample-code-frame" height="330" width="500" id="frame_placement_3" frameborder="0"></iframe></p>
+</div>
+
+<p>You can also pass in a track listing, this will repeat. The following track listing will create an initial implicit row track as 100 pixels and a second as <code>200px</code>. This will continue for as long as content is added to the implicit grid.</p>
+
+<div id="placement_4">
+<div class="hidden">
+<pre class="brush: css">* {box-sizing: border-box;}
+
+.wrapper {
+    border: 2px solid #f76707;
+    border-radius: 5px;
+    background-color: #fff4e6;
+}
+
+.wrapper &gt; div {
+    border: 2px solid #ffa94d;
+    border-radius: 5px;
+    background-color: #ffd8a8;
+    padding: 1em;
+    color: #d9480f;
+}
+</pre>
+</div>
+
+<pre class="brush: html">&lt;div class="wrapper"&gt;
+   &lt;div&gt;One&lt;/div&gt;
+   &lt;div&gt;Two&lt;/div&gt;
+   &lt;div&gt;Three&lt;/div&gt;
+   &lt;div&gt;Four&lt;/div&gt;
+   &lt;div&gt;Five&lt;/div&gt;
+   &lt;div&gt;Six&lt;/div&gt;
+   &lt;div&gt;Seven&lt;/div&gt;
+   &lt;div&gt;Eight&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="brush: css">.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: 100px 200px;
+}
+</pre>
+
+<p><iframe src="../../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout%24samples/placement_4c37a.html?revision=1400674" class="live-sample-frame sample-code-frame" height="330" width="500" id="frame_placement_4" frameborder="0"></iframe></p>
+</div>
+
+<h3 id="Auto-placement_by_column">Auto-placement by column</h3>
+
+<p>You can also ask grid to auto-place items by column. Using the property <a href="../grid-auto-flow.html" title="The grid-auto-flow CSS property controls how the auto-placement algorithm works, specifying exactly how auto-placed items get flowed into the grid."><code>grid-auto-flow</code></a> with a value of <code>column</code>. In this case grid will add items in rows that you have defined using <a href="../grid-template-rows.html" title="The grid-template-rows CSS property defines the line names and track sizing functions of the grid rows."><code>grid-template-rows</code></a>. When it fills up a column it will move onto the next explicit column, or create a new column track in the implicit grid. As with implicit row tracks, these column tracks will be auto sized. You can control the size of implicit column tracks with <a href="../grid-auto-columns.html" title="The grid-auto-columns CSS property specifies the size of an implicitly-created grid column track."><code>grid-auto-columns</code></a>, this works in the same way as <a href="../grid-auto-rows.html" title="The grid-auto-rows CSS property specifies the size of an implicitly-created grid row track."><code>grid-auto-rows</code></a>.</p>
+
+<p>In this next example I have created a grid with three row tracks of 200 pixels height. I am auto-placing by column and the columns created will be a column width of 300 pixels, then a column width of 100 pixels until there are enough column tracks to hold all of the items.</p>
+
+<div id="placement_5">
+<pre class="brush: css">.wrapper {
+    display: grid;
+    grid-template-rows: repeat(3, 200px);
+    grid-gap: 10px;
+    grid-auto-flow: column;
+    grid-auto-columns: 300px 100px;
+}
+</pre>
+
+<div class="hidden">
+<pre class="brush: css">* {box-sizing: border-box;}
+
+.wrapper {
+    border: 2px solid #f76707;
+    border-radius: 5px;
+    background-color: #fff4e6;
+}
+
+.wrapper &gt; div {
+    border: 2px solid #ffa94d;
+    border-radius: 5px;
+    background-color: #ffd8a8;
+    padding: 1em;
+    color: #d9480f;
+}
+</pre>
+</div>
+
+<pre class="brush: html">&lt;div class="wrapper"&gt;
+   &lt;div&gt;One&lt;/div&gt;
+   &lt;div&gt;Two&lt;/div&gt;
+   &lt;div&gt;Three&lt;/div&gt;
+   &lt;div&gt;Four&lt;/div&gt;
+   &lt;div&gt;Five&lt;/div&gt;
+   &lt;div&gt;Six&lt;/div&gt;
+   &lt;div&gt;Seven&lt;/div&gt;
+   &lt;div&gt;Eight&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<p><iframe src="../../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout%24samples/placement_5c37a.html?revision=1400674" class="live-sample-frame sample-code-frame" height="640" width="500" id="frame_placement_5" frameborder="0"></iframe></p>
+</div>
+
+<a class="dashAnchor" name="//apple_ref/Section/The%20order%20of%20auto%20placed%20items"></a><h2 id="The_order_of_auto_placed_items">The order of auto placed items</h2>
+
+<p>A grid can contain a mixture of items. Some of the items may have a position on the grid, but others may be auto-placed. This can be helpful, if you have a document order that reflects the order in which items sit on the grid you may not need to write CSS rules to place absolutely everything. The specification contains a long section detailing the <a rel="noopener" href="https://drafts.csswg.org/css-grid/#auto-placement-algo" class="external">Grid item placement algorithm</a>, however for most of us we just need to remember a few simple rules for our items.</p>
+
+<h3 id="Order_modified_document_order">Order modified document order</h3>
+
+<p>Grid places items that have not been given a grid position in what is described in the specification as “order modified document order”. This means that if you have used the <code>order</code> property at all, the items will be placed by that order, not their DOM order. Otherwise they will stay by default in the order that they are entered in the document source.</p>
+
+<h3 id="Items_with_placement_properties">Items with placement properties</h3>
+
+<p>The first thing grid will do is place any items that have a position. In the example below I have 12 grid items. Item 2 and item 5 have been placed using line based placement on the grid. You can see how those items are placed and the other items then auto-place in the spaces. The auto-placed items will place themselves before the placed items in DOM order, they don’t start after the position of a placed item that comes before them.</p>
+
+<div id="placement_6">
+<div class="hidden">
+<pre class="brush: css">* {box-sizing: border-box;}
+
+.wrapper {
+    border: 2px solid #f76707;
+    border-radius: 5px;
+    background-color: #fff4e6;
+}
+
+.wrapper &gt; div {
+    border: 2px solid #ffa94d;
+    border-radius: 5px;
+    background-color: #ffd8a8;
+    padding: 1em;
+    color: #d9480f;
+}
+</pre>
+</div>
+
+<pre class="brush: html">&lt;div class="wrapper"&gt;
+   &lt;div&gt;One&lt;/div&gt;
+   &lt;div&gt;Two&lt;/div&gt;
+   &lt;div&gt;Three&lt;/div&gt;
+   &lt;div&gt;Four&lt;/div&gt;
+   &lt;div&gt;Five&lt;/div&gt;
+   &lt;div&gt;Six&lt;/div&gt;
+   &lt;div&gt;Seven&lt;/div&gt;
+   &lt;div&gt;Eight&lt;/div&gt;
+   &lt;div&gt;Nine&lt;/div&gt;
+   &lt;div&gt;Ten&lt;/div&gt;
+   &lt;div&gt;Eleven&lt;/div&gt;
+   &lt;div&gt;Twelve&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="brush: css">.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 100px;
+  grid-gap: 10px;
+}
+ .wrapper div:nth-child(2) {
+   grid-column: 3;
+   grid-row: 2 / 4;
+ }
+ .wrapper div:nth-child(5) {
+   grid-column: 1 / 3;
+   grid-row: 1 / 3;
+}
+</pre>
+
+<p><iframe src="../../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout%24samples/placement_6c37a.html?revision=1400674" class="live-sample-frame sample-code-frame" height="450" width="500" id="frame_placement_6" frameborder="0"></iframe></p>
+</div>
+
+<h3 id="Deal_with_items_that_span_tracks">Deal with items that span tracks</h3>
+
+<p>You can use placement properties while still taking advantage of auto-placement. In this next example I have added to the layout by setting odd items to span two tracks both for rows and columns. I do this with the <a href="../grid-column-end.html" title="The grid-column-end CSS property specifies a grid item’s end position within the grid column by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the block-end edge of its grid area."><code>grid-column-end</code></a> and <a href="../grid-row-end.html" title="The grid-row-end CSS property specifies a grid item’s end position within the grid row by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-end edge of its grid area."><code>grid-row-end</code></a> properties and setting the value of this to <code>span 2</code>. What this means is that the start line of the item will be set by auto-placement, and the end line will span two tracks.</p>
+
+<p>You can see how this then leaves gaps in the grid, as for the auto-placed items if grid comes across an item that doesn’t fit into a track, it will move to the next row until it finds a space the item can fit in.</p>
+
+<div id="placement_7">
+<div class="hidden">
+<pre class="brush: css">* {box-sizing: border-box;}
+.wrapper {
+    border: 2px solid #f76707;
+    border-radius: 5px;
+    background-color: #fff4e6;
+}
+
+.wrapper &gt; div {
+    border: 2px solid #ffa94d;
+    border-radius: 5px;
+    background-color: #ffd8a8;
+    padding: 1em;
+    color: #d9480f;
+}
+</pre>
+</div>
+
+<pre class="brush: html">&lt;div class="wrapper"&gt;
+   &lt;div&gt;One&lt;/div&gt;
+   &lt;div&gt;Two&lt;/div&gt;
+   &lt;div&gt;Three&lt;/div&gt;
+   &lt;div&gt;Four&lt;/div&gt;
+   &lt;div&gt;Five&lt;/div&gt;
+   &lt;div&gt;Six&lt;/div&gt;
+   &lt;div&gt;Seven&lt;/div&gt;
+   &lt;div&gt;Eight&lt;/div&gt;
+   &lt;div&gt;Nine&lt;/div&gt;
+   &lt;div&gt;Ten&lt;/div&gt;
+   &lt;div&gt;Eleven&lt;/div&gt;
+   &lt;div&gt;Twelve&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="brush: css">.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 100px;
+  grid-gap: 10px;
+}
+.wrapper div:nth-child(4n+1) {
+  grid-column-end: span 2;
+  grid-row-end: span 2;
+  background-color: #ffa94d;
+}
+ .wrapper div:nth-child(2) {
+   grid-column: 3;
+   grid-row: 2 / 4;
+ }
+ .wrapper div:nth-child(5) {
+   grid-column: 1 / 3;
+   grid-row: 1 / 3;
+}
+</pre>
+
+<p><iframe src="../../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout%24samples/placement_7c37a.html?revision=1400674" class="live-sample-frame sample-code-frame" height="770" width="500" id="frame_placement_7" frameborder="0"></iframe></p>
+</div>
+
+<h3 id="Filling_in_the_gaps">Filling in the gaps</h3>
+
+<p>So far, other than items we have specifically placed, grid is always progressing forward and keeping items in DOM order. This is generally what you want, if you are laying out a form for example you wouldn’t want the labels and fields to become jumbled up in order to fill in some gap. However sometimes, we are laying things out that don’t have a logical order and we would like to create a layout that doesn’t have gaps in it.</p>
+
+<p>To do this, add the property <a href="../grid-auto-flow.html" title="The grid-auto-flow CSS property controls how the auto-placement algorithm works, specifying exactly how auto-placed items get flowed into the grid."><code>grid-auto-flow</code></a> with a value of <code>dense</code> to the container. This is the same property you use to change the flow order to <code>column</code>, so if you were working in columns you would add both values <code>grid-auto-flow: column dense</code>.</p>
+
+<p>Having done this, grid will now backfill the gaps, as it moves through the grid it leaves gaps as before, but then if it finds an item that will fit in a previous gap it will pick it up and take it out of DOM order to place it in the gap. As with any other reordering in grid this does not change the logical order. Tab order for example, will still follow the document order. We will take a look at the potential accessibility issues of Grid Layout in a later guide, but you should take care when creating this disconnect between the visual order and display order.</p>
+
+<div id="placement_8">
+<div class="hidden">
+<pre class="brush: css">* {box-sizing: border-box;}
+.wrapper {
+    border: 2px solid #f76707;
+    border-radius: 5px;
+    background-color: #fff4e6;
+}
+
+.wrapper &gt; div {
+    border: 2px solid #ffa94d;
+    border-radius: 5px;
+    background-color: #ffd8a8;
+    padding: 1em;
+    color: #d9480f;
+}
+</pre>
+</div>
+
+<pre class="brush: html">&lt;div class="wrapper"&gt;
+   &lt;div&gt;One&lt;/div&gt;
+   &lt;div&gt;Two&lt;/div&gt;
+   &lt;div&gt;Three&lt;/div&gt;
+   &lt;div&gt;Four&lt;/div&gt;
+   &lt;div&gt;Five&lt;/div&gt;
+   &lt;div&gt;Six&lt;/div&gt;
+   &lt;div&gt;Seven&lt;/div&gt;
+   &lt;div&gt;Eight&lt;/div&gt;
+   &lt;div&gt;Nine&lt;/div&gt;
+   &lt;div&gt;Ten&lt;/div&gt;
+   &lt;div&gt;Eleven&lt;/div&gt;
+   &lt;div&gt;Twelve&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="brush: css">.wrapper div:nth-child(4n+1) {
+  grid-column-end: span 2;
+  grid-row-end: span 2;
+  background-color: #ffa94d;
+}
+ .wrapper div:nth-child(2) {
+   grid-column: 3;
+   grid-row: 2 / 4;
+ }
+ .wrapper div:nth-child(5) {
+   grid-column: 1 / 3;
+   grid-row: 1 / 3;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 100px;
+  grid-gap: 10px;
+  grid-auto-flow: dense;
+}
+</pre>
+
+<p><iframe src="../../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout%24samples/placement_8c37a.html?revision=1400674" class="live-sample-frame sample-code-frame" height="730" width="500" id="frame_placement_8" frameborder="0"></iframe></p>
+</div>
+
+<h3 id="Anonymous_grid_items">Anonymous grid items</h3>
+
+<p>There is a mention in the specification of anonymous grid items. These are created if you have a string of text inside your grid container, that is not wrapped in any other element. In the example below we have three grid items, assuming you had set the parent with a class of <code>grid</code> to <code>display: grid</code>. The first is an anonymous item as it has no enclosing markup, this item will always be dealt with via the auto-placement rules. The other two are grid items enclosed in a div, they might be auto-placed or you could place these with a positioning method onto your grid.</p>
+
+<pre class="brush: css">&lt;div class="grid"&gt;
+  I am a string and will become an anonymous item
+  &lt;div&gt;A grid item&lt;/div&gt;
+  &lt;div&gt;A grid item&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<p>Anonymous items are always auto-placed because there is no way to target them. Therefore if you have some unwrapped text for some reason in your grid, be aware that it might show up somewhere unexpected as it will be auto-placed according to the auto-placement rules.</p>
+
+<h3 id="Use_cases_for_auto-placement">Use cases for auto-placement</h3>
+
+<p>Auto-placement is useful whenever you have a collection of items. That could be items that do not have a logical order such as a gallery of photos, or product listing. In that case you might choose to use the dense packing mode to fill in any holes in your grid. In my image gallery example I have some landscape and some portrait images. I have set landscape images – with a class of <code>landscape</code> to span two column tracks. I then use <code>grid-auto-flow: dense</code> to create a densely packed grid.</p>
+
+<div id="placement_9">
+<pre class="brush: css">.wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-gap: 10px;
+    grid-auto-flow: dense;
+    list-style: none;
+    margin: 1em auto;
+    padding: 0;
+    max-width: 800px;
+}
+.wrapper li {
+    border: 1px solid #ccc;
+}
+.wrapper li.landscape {
+    grid-column-end: span 2;
+}
+.wrapper li img {
+   display: block;
+   object-fit: cover;
+   width: 100%;
+   height: 100%;
+}
+</pre>
+
+<pre class="brush: html">&lt;ul class="wrapper"&gt;
+   &lt;li&gt;&lt;img src="http://placehold.it/200x300" alt="placeholder"&gt;&lt;/li&gt;
+   &lt;li class="landscape"&gt;&lt;img src="http://placehold.it/350x200" alt="placeholder"&gt;&lt;/li&gt;
+   &lt;li class="landscape"&gt;&lt;img src="http://placehold.it/350x200" alt="placeholder"&gt;&lt;/li&gt;
+   &lt;li class="landscape"&gt;&lt;img src="http://placehold.it/350x200" alt="placeholder"&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;img src="http://placehold.it/200x300" alt="placeholder"&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;img src="http://placehold.it/200x300" alt="placeholder"&gt;&lt;/li&gt;
+   &lt;li class="landscape"&gt;&lt;img src="http://placehold.it/350x200" alt="placeholder"&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;img src="http://placehold.it/200x300" alt="placeholder"&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;img src="http://placehold.it/200x300" alt="placeholder"&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;img src="http://placehold.it/200x300" alt="placeholder"&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+<p><iframe src="../../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout%24samples/placement_9c37a.html?revision=1400674" class="live-sample-frame sample-code-frame" height="1300" width="500" id="frame_placement_9" frameborder="0"></iframe></p>
+</div>
+
+<p>Auto-placement can also help you lay out interface items which do have logical order. An example is the definition list in this next example. Definition lists are an interesting challenge to style as they are flat, there is nothing wrapping the groups of <code>dt</code> and <code>dd</code> items. In my example I am allowing auto-placement to place the items, however I have classes that start a <code>dt</code> in column 1, and <code>dd</code> in column 2, this ensure that terms go on one side and definitions on the other - no matter how many of each we have.</p>
+
+<div id="placement_10">
+<div class="hidden">
+<pre class="brush: css">* {box-sizing: border-box;}
+
+.wrapper {
+    border: 2px solid #f76707;
+    border-radius: 5px;
+    background-color: #fff4e6;
+}
+</pre>
+</div>
+
+<pre class="brush: html">&lt;div class="wrapper"&gt;
+   &lt;dl&gt;
+       &lt;dt&gt;Mammals&lt;/dt&gt;
+       &lt;dd&gt;Cat&lt;/dd&gt;
+       &lt;dd&gt;Dog&lt;/dd&gt;
+       &lt;dd&gt;Mouse&lt;/dd&gt;
+       &lt;dt&gt;Fish&lt;/dt&gt;
+       &lt;dd&gt;Guppy&lt;/dd&gt;
+       &lt;dt&gt;Birds&lt;/dt&gt;
+       &lt;dd&gt;Pied Wagtail&lt;/dd&gt;
+       &lt;dd&gt;Owl&lt;/dd&gt;
+   &lt;/dl&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="brush: css">dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  max-width: 300px;
+  margin: 1em;
+  line-height: 1.4;
+}
+dt {
+  grid-column: 1;
+  font-weight: bold;
+}
+dd {
+   grid-column: 2;
+ }
+</pre>
+
+<p><iframe src="../../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout%24samples/placement_10c37a.html?revision=1400674" class="live-sample-frame sample-code-frame" height="230" width="500" id="frame_placement_10" frameborder="0"></iframe></p>
+</div>
+
+<a class="dashAnchor" name="//apple_ref/Section/What%20can%E2%80%99t%20we%20do%20with%20auto%2Dplacement%20%28yet%29%3F"></a><h2 id="What_can’t_we_do_with_auto-placement_(yet)">What can’t we do with auto-placement (yet)?</h2>
+
+<p>There are a couple of things that often come up as questions. Currently we can’t do things like target every other cell of the grid with our items. A related issue may have already come to mind if you followed the last guide about named lines on the grid. It would be to define a rule that said “auto-place items against the next line named “n”, and grid would then skip other lines.There is <a rel="noopener" href="https://github.com/w3c/csswg-drafts/issues/796" class="external">an issue raised about this</a> on the CSSWG GitHub repository, and you would be welcome to add your own use cases to this.</p>
+
+<p>It may be that you come up with your own use cases for auto-placement or any other part of grid layout. If you do, raise them as issues or add to an existing issue that could solve your use case. This will help to make future versions of the specification better.</p>
+
+
+                  
+                
+              </article>
+
+              <!-- contributors -->
+              <div class="wiki-block contributors">
+                <h2 class="offscreen">Document Tags and Contributors</h2>
+                
+                
+  <div class="tag-attach-list contributors-sub">
+    <svg class="icon icon-tags" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M7 7c0-1.109-.891-2-2-2s-2 .891-2 2 .891 2 2 2 2-.891 2-2zm16.672 9c0 .531-.219 1.047-.578 1.406l-7.672 7.688c-.375.359-.891.578-1.422.578s-1.047-.219-1.406-.578L1.422 13.906C.625 13.125 0 11.609 0 10.5V4c0-1.094.906-2 2-2h6.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422zm6 0c0 .531-.219 1.047-.578 1.406l-7.672 7.688a2.08 2.08 0 0 1-1.422.578c-.812 0-1.219-.375-1.75-.922l7.344-7.344c.359-.359.578-.875.578-1.406s-.219-1.047-.578-1.422L14.422 3.422C13.625 2.625 12.11 2 11 2h3.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422z"></path>
+</svg>
+    <strong>Tags:</strong>&nbsp;
+    <ul class="tags tags-small">
+      
+        <li><a href="../../../tag/CSS.html" rel="nofollow">CSS</a></li>
+      
+        <li><a href="../../../tag/CSS%20Grids.html" rel="nofollow">CSS Grids</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Guide" rel="nofollow">Guide</a></li>
+      
+    </ul>
+  </div>
+
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-group" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M9.266 14a5.532 5.532 0 0 0-4.141 2H3.031C1.468 16 0 15.25 0 13.516 0 12.25-.047 8 1.937 8c.328 0 1.953 1.328 4.062 1.328.719 0 1.406-.125 2.078-.359A7.624 7.624 0 0 0 7.999 10c0 1.422.453 2.828 1.266 4zM26 23.953C26 26.484 24.328 28 21.828 28H8.172C5.672 28 4 26.484 4 23.953 4 20.422 4.828 15 9.406 15c.531 0 2.469 2.172 5.594 2.172S20.063 15 20.594 15C25.172 15 26 20.422 26 23.953zM10 4c0 2.203-1.797 4-4 4S2 6.203 2 4s1.797-4 4-4 4 1.797 4 4zm11 6c0 3.313-2.688 6-6 6s-6-2.688-6-6 2.688-6 6-6 6 2.688 6 6zm9 3.516C30 15.25 28.531 16 26.969 16h-2.094a5.532 5.532 0 0 0-4.141-2A7.066 7.066 0 0 0 22 10a7.6 7.6 0 0 0-.078-1.031A6.258 6.258 0 0 0 24 9.328C26.109 9.328 27.734 8 28.062 8c1.984 0 1.937 4.25 1.937 5.516zM28 4c0 2.203-1.797 4-4 4s-4-1.797-4-4 1.797-4 4-4 4 1.797 4 4z"></path>
+</svg>
+                    <strong>Contributors to this page:</strong>
+                    
+        <a href="https://developer.mozilla.org/en-US/profiles/rachelandrew">rachelandrew</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/denimX">denimX</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/gh3it8">gh3it8</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/weslord">weslord</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/mfluehr">mfluehr</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/tshinnic">tshinnic</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/aermolaev">aermolaev</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>
+    
+                  </div>
+                
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-clock" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M14 8.5v7c0 .281-.219.5-.5.5h-5a.494.494 0 0 1-.5-.5v-1c0-.281.219-.5.5-.5H12V8.5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zm6.5 5.5c0-4.688-3.813-8.5-8.5-8.5S3.5 9.313 3.5 14s3.813 8.5 8.5 8.5 8.5-3.813 8.5-8.5zm3.5 0c0 6.625-5.375 12-12 12S0 20.625 0 14 5.375 2 12 2s12 5.375 12 12z"></path>
+</svg>
+                    <strong>Last updated by:</strong>
+                    <a href="https://developer.mozilla.org/en-US/profiles/rachelandrew">rachelandrew</a>,
+                    <time datetime="2018-07-23T02:34:48.024288-07:00">Jul 23, 2018, 2:34:48 AM</time>
+                  </div>
+                
+              </div>
+            </div>
+
+            
+              <!-- quick links and approvals strip -->
+              <div id="wiki-left" class="column-strip wiki-column">
+
+                <!-- crumbs -->
+                
+  
+    <nav class="crumbs" role="navigation">
+      <ol typeof="BreadcrumbList" vocab="https://schema.org/" aria-label="breadcrumbs">
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="https://developer.mozilla.org/en-US/docs/Web" property="item" typeof="WebPage">
+              <span property="name">Web technology for developers</span>
+            </a>
+            <meta property="position" content="1">
+          </li>
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="../../CSS.html" property="item" typeof="WebPage">
+              <span property="name">CSS: Cascading Style Sheets</span>
+            </a>
+            <meta property="position" content="2">
+          </li>
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="../CSS_Grid_Layout.html" property="item" typeof="WebPage">
+              <span property="name">CSS Grid Layout</span>
+            </a>
+            <meta property="position" content="3">
+          </li>
+        
+        <li property="itemListElement" typeof="ListItem" class="crumb">
+          <span property="name">Auto-placement in CSS Grid Layout</span>
+        </li>
+      </ol>
+    </nav>
+  
+
+                
+                  <!-- quick links -->
+                  
+  <div class="quick-links" id="quick-links">
+    <div class="quick-links-head">Related Topics</div>
+    
+<ol>
+	<li><a href="../../CSS.html"><strong>CSS</strong></a></li>
+	<li><a href="../Reference.html"><strong>CSS Reference</strong></a></li>
+	<li><a href="../CSS_Grid_Layout.html">CSS Grid Layout</a></li>
+	<li data-default-state="open"><a href="#"><strong>Guides</strong></a>
+	<ol>
+		<li><a href="Basic_Concepts_of_Grid_Layout.html">Basics concepts of grid layout</a></li>
+		<li><a href="Relationship_of_Grid_Layout.html">Relationship to other layout methods</a></li>
+		<li><a href="Line-based_Placement_with_CSS_Grid.html">Line-based placement</a></li>
+		<li><a href="Grid_Template_Areas.html">Grid template areas</a></li>
+		<li><a href="Layout_using_Named_Grid_Lines.html">Layout using named grid lines</a></li>
+		<li><a href="Auto-placement_in_CSS_Grid_Layout.html">Auto-placement in grid layout</a></li>
+		<li><a href="Box_Alignment_in_CSS_Grid_Layout.html">Box alignment in grid layout</a></li>
+		<li><a href="CSS_Grid%2c_Logical_Values_and_Writing_Modes.html">Grids, logical values and writing modes</a></li>
+		<li><a href="CSS_Grid_Layout_and_Accessibility.html">CSS Grid Layout and Accessibility</a></li>
+		<li><a href="CSS_Grid_and_Progressive_Enhancement.html">CSS Grid Layout and Progressive Enhancement</a></li>
+		<li><a href="Realizing_common_layouts_using_CSS_Grid_Layout.html">Realizing common layouts using grids</a></li>
+	</ol>
+	</li>
+	<li data-default-state="open"><a href="#"><strong>Properties</strong></a>
+	<ol>
+		<li><a href="../grid.html">grid</a></li>
+		<li><a href="../grid-area.html">grid-area</a></li>
+		<li><a href="../grid-auto-columns.html">grid-auto-columns</a></li>
+		<li><a href="../grid-auto-flow.html">grid-auto-flow</a></li>
+		<li><a href="../grid-auto-rows.html">grid-auto-rows</a></li>
+		<li><a href="../grid-column.html">grid-column</a></li>
+		<li><a href="../grid-column-end.html">grid-column-end</a></li>
+		<li><a href="../column-gap.html">grid-column-gap</a></li>
+		<li><a href="../grid-column-start.html">grid-column-start</a></li>
+		<li><a href="../gap.html">grid-gap</a></li>
+		<li><a href="../grid-row.html">grid-row</a></li>
+		<li><a href="../grid-row-end.html">grid-row-end</a></li>
+		<li><a href="../row-gap.html">grid-row-gap</a></li>
+		<li><a href="../grid-row-start.html">grid-row-start</a></li>
+		<li><a href="../grid-template.html">grid-template</a></li>
+		<li><a href="../grid-template-areas.html">grid-template-areas</a></li>
+		<li><a href="../grid-template-columns.html">grid-template-columns</a></li>
+		<li><a href="../grid-template-rows.html">grid-template-rows</a></li>
+	</ol>
+	</li>
+	<li data-default-state="open"><a href="#"><strong>Glossary</strong></a>
+	<ol>
+		<li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Grid">Grid</a></li>
+		<li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Grid_lines">Grid lines</a></li>
+		<li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Grid_tracks">Grid tracks</a></li>
+		<li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Grid_cell">Grid cell</a></li>
+		<li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Grid_areas">Grid areas</a></li>
+		<li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Gutters">Gutters</a></li>
+		<li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Grid_Axis">Grid Axis</a></li>
+		<li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Grid_rows">Grid row</a></li>
+		<li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Grid_column">Grid column</a></li>
+	</ol>
+	</li>
+</ol>
+
+  </div>
+                
+
+                <!-- approvals -->
+                
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+    
+      <div class="newsletter-box">
+        <div class="newsletter">
+    <form id="newsletterForm" class="newsletter-form nodisable" name="newsletter-form" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <div class="newsletter-head">
+            <h2 class="newsletter-teaser">Learn the best of web development</h2>
+            <p class="newsletter-description">Get the latest and greatest from MDN delivered straight to your inbox.</p>
+            
+        </div>
+
+        <div class="newsletter-fields">
+            <input type="hidden" id="fmt" name="fmt" value="H">
+            <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+            <div id="newsletterErrors" class="newsletter-errors"></div>
+
+            <div id="newsletterEmail" class="form-group newsletter-group-email">
+                <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+                <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+            </div>
+
+            <div id="newsletterPrivacy" class="form-group form-group-agree newsletter-group-privacy hidden">
+                <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+                <label for="newsletterPrivacyInput">
+                I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+                </label>
+            </div>
+            <div id="newsletterSubmit" class="newsletter-group-submit">
+                <button id="newsletter-submit" type="submit" class="button neutral newsletter-submit">
+                    Sign up now<svg class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg" width="23" height="28" viewBox="0 0 23 28" aria-hidden="true">
+    <path d="M23 15a2.01 2.01 0 0 1-.578 1.422L12.25 26.594c-.375.359-.891.578-1.422.578s-1.031-.219-1.406-.578L8.25 25.422c-.375-.375-.594-.891-.594-1.422s.219-1.047.594-1.422L12.828 18h-11C.703 18 0 17.062 0 16v-2c0-1.062.703-2 1.828-2h11L8.25 7.406a1.96 1.96 0 0 1 0-2.812l1.172-1.172c.375-.375.875-.594 1.406-.594s1.047.219 1.422.594l10.172 10.172c.375.359.578.875.578 1.406z"></path>
+</svg>
+                </button>
+            </div>
+        </div>
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden">
+        <span>Hide Newsletter Sign-up</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+</div>
+      </div>
+    
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout$edit" label="Edit page"></menuitem>
+    <menuitem data-action="/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout$history" label="View page history"></menuitem>
+  </menu>
+
+      </div>
+  </main>
+  <!-- Footer -->
+    <footer id="nav-footer" class="nav-footer"><div class="center"><a href="http://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Auto-placement in CSS Grid Layout</a> by <a href="http://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout$history">Mozilla Contributors</a> is licensed under <a href="http://creativecommons.org/licenses/by-sa/2.5/" class="external external-icon">CC-BY-SA 2.5</a>.</div></footer> 
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script async="" type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script src="../../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../../static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><!--[endif]---->
+
+    
+    <script src="../../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../../static/build/js/wiki.b26a4c181df3.js" charset="utf-8" id="wikiscript"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../static/build/js/newsletter.a85c5c2892e5.js" charset="utf-8"></script>
+  
+
+
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:47:54 GMT -->
+</body></html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model$samples/Playable_code?revision=1389725 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:50:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <title>The box model</title>
+    </head>
+    <body>
+        
+            <div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
+  <h2>HTML Input</h2>
+  <textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"><div id="wrapper">
+  <header>Header</header>
+  <main>Main content</main>
+  <footer>Footer</footer>
+</div></textarea>
+
+  <h2>CSS Input</h2>
+  <textarea id="code" class="css-input" style="width: 90%;height: 12em;padding: 10px;border: 1px solid #0095dd;">/* General styles */
+body {
+  margin: 0;
+}
+
+#wrapper * {
+  padding: 20px;
+  font-size: 20px;
+  border: 20px solid rgba(0,0,0,0.5);
+}
+
+/* specific boxes */
+
+#wrapper header, #wrapper footer {
+  background-color: blue;
+  color: white;
+}
+
+#wrapper main {
+  background-color: yellow;
+}
+
+#wrapper header {
+
+}
+
+#wrapper footer {
+
+}</textarea>
+
+  <h2>Output</h2>
+  <div class="output" style="width: 90%;height: 20em;padding: 10px;border: 1px solid #0095dd;overflow: auto;"></div>
+  <div class="controls">
+    <input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;">
+    <input id="solution" type="button" value="Show solution" style="margin: 10px 0 0 10px;">
+  </div>
+</div>
+
+        
+        
+            <script>
+                var htmlInput = document.querySelector(".html-input");
+var cssInput = document.querySelector(".css-input");
+var reset = document.getElementById("reset");
+var htmlCode = htmlInput.value;
+var cssCode = cssInput.value;
+var output = document.querySelector(".output");
+var solution = document.getElementById("solution");
+
+var styleElem = document.createElement('style');
+var headElem = document.querySelector('head');
+headElem.appendChild(styleElem);
+
+function drawOutput() {
+  output.innerHTML = htmlInput.value;
+  styleElem.textContent = cssInput.value;
+}
+
+reset.addEventListener("click", function() {
+  htmlInput.value = htmlCode;
+  cssInput.value = cssCode;
+  drawOutput();
+});
+
+solution.addEventListener("click", function() {
+  htmlInput.value = htmlCode;
+  cssInput.value = '/* General styles */\n\nbody {\n  margin: 0;\n}\n\n#wrapper > * {\n  padding: 20px;\n  font-size: 20px;\n  border: 20px solid rgba(0,0,0,0.5);\n}\n\n/* specific boxes */\n\n#wrapper header, #wrapper footer {\n  background-color: blue;\n  color: white;\n}\n\n#wrapper main {\n  background-color: yellow;\n  margin: 2%;\n  padding: 2%;\n  border: 60px solid rgba(0,0,0,0.5);\n  width: 60%;\n}\n\n#wrapper header {\n\n}\n\n#wrapper footer {\n  margin-top: 20px;\n}';
+  drawOutput();
+});
+
+htmlInput.addEventListener("input", drawOutput);
+cssInput.addEventListener("input", drawOutput);
+window.addEventListener("load", drawOutput);
+
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model$samples/Playable_code?revision=1389725 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:50:48 GMT -->
+</html>

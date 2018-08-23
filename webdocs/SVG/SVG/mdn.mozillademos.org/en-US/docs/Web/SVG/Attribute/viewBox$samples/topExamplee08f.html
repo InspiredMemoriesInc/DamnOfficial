@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/SVG/Attribute/viewBox$samples/topExample?revision=1391071 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:46:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            html,body,svg { height:100% }
+svg:not(:root) { display: inline-block; }
+        </style>
+        
+        <title>viewBox</title>
+    </head>
+    <body>
+        
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!--
+  with relative unit such as percentage, the visual size
+  of the square looks unchange regardless of the viewBox
+  -->
+  <rect x="0" y="0" width="100%" height="100%" />
+
+  <!--
+  with a large viewBox the circle looks small
+  as it is using user units for the r attribute:
+  4 resolved against 100 as set in the viewBox
+  -->
+  <circle cx="50%" cy="50%" r="4" fill="white" />
+</svg>
+
+<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+  <!--
+  with relative unit such as percentage, the visual size
+  of the square looks unchange regardless of the viewBox`
+  -->
+  <rect x="0" y="0" width="100%" height="100%" />
+
+  <!--
+  with a small viewBox the circle looks large
+  as it is using user units for the r attribute:
+  4 resolved against 10 as set in the viewBox
+  -->
+  <circle cx="50%" cy="50%" r="4" fill="white" />
+</svg>
+
+<svg viewBox="-5 -5 10 10" xmlns="http://www.w3.org/2000/svg">
+  <!--
+  The point of coordinate 0,0 is now in the center of the viewport,
+  and 100% is still resolve to a width or height of 10 user units so
+  the rectangle looks shifted to the bottom/right corner of the viewport
+  -->
+  <rect x="0" y="0" width="100%" height="100%" />
+
+  <!--
+  With the point of coordinate 0,0 in the center of the viewport the
+  value 50% is resolve to 5 which means the center of the circle is
+  in the bottom/right corner of the viewport.
+  -->
+  <circle cx="50%" cy="50%" r="4" fill="white" />
+</svg>
+        
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/SVG/Attribute/viewBox$samples/topExample?revision=1391071 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:46:35 GMT -->
+</html>

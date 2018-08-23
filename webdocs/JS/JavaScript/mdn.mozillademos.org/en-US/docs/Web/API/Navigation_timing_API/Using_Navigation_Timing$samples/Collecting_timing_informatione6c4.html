@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing$samples/Collecting_timing_information?revision=1288397 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 10:03:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            .output {
+  border: 1px solid #bbb;
+  font: 16px "Open Sans", "Helvetica", "Arial", sans-serif;
+}
+        </style>
+        
+        <title>Using Navigation Timing</title>
+    </head>
+    <body>
+        
+            <div class="output">
+</div>
+        
+        
+            <script>
+                window.addEventListener("load", function() {
+  let now = new Date().getTime();
+  let loadingTime = now - performance.timing.navigationStart;
+ 
+  document.querySelector(".output").innerText =
+        loadingTime + " ms";
+}, false);
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing$samples/Collecting_timing_information?revision=1288397 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 10:03:18 GMT -->
+</html>

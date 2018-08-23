@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines$samples/multiple_lines_same_name?revision=1273793 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:51:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            * {box-sizing: border-box;}
+
+.wrapper {
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+}
+
+.wrapper > div {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
+}
+ .wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+} .item1 {
+  grid-column: col-start / col-start 5
+}
+ .item2 {
+  grid-column: col-start 7 / span 3;
+}
+
+        </style>
+        
+        <title>Layout using named grid lines</title>
+    </head>
+    <body>
+        
+              <div class="wrapper">
+  <div class="item1">I am placed from col-start line 1 to col-start 5</div>
+  <div class="item2">I am placed from col-start line 7 spanning 3 lines</div>
+</div>
+        
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines$samples/multiple_lines_same_name?revision=1273793 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:51:51 GMT -->
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/fr/docs/Web/API/CanvasRenderingContext2D/lineCap$samples/Playable_code?revision=1355060 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 11:40:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <title>CanvasRenderingContext2D.lineCap</title>
+    </head>
+    <body>
+        
+            <canvas id="canevas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="modifier" type="button" value="Modifier" />
+  <input id="effacer" type="button" value="Effacer" />
+</div>
+<textarea id="code" class="playable-code">
+ctx.beginPath();
+ctx.moveTo(0, 0);
+ctx.lineWidth = 15;
+ctx.lineCap = 'round';
+ctx.lineTo(100, 100);
+ctx.stroke();</textarea>
+
+        
+        
+            <script>
+                var canevas = document.getElementById('canevas');
+var ctx = canevas.getContext('2d');
+var zoneTexte = document.getElementById('code');
+var effacer = document.getElementById('effacer');
+var modifier = document.getElementById('modifier');
+var code = zoneTexte.value;
+
+function dessinerCanevas() {
+  ctx.clearRect(0, 0, canevas.width, canevas.height);
+  eval(zoneTexte.value);
+}
+
+effacer.addEventListener('click', function() {
+  zoneTexte.value = code;
+  dessinerCanevas();
+});
+
+modifier.addEventListener('click', function() {
+  zoneTexte.focus();
+})
+
+zoneTexte.addEventListener('input', dessinerCanevas);
+window.addEventListener('load', dessinerCanevas);
+
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/fr/docs/Web/API/CanvasRenderingContext2D/lineCap$samples/Playable_code?revision=1355060 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 11:40:02 GMT -->
+</html>

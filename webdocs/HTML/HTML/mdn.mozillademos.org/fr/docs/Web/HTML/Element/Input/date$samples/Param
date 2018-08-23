@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/fr/docs/Web/HTML/Element/Input/date$samples/Paramétrer_une_date_maximale_et_une_date_minimale?revision=1393760 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:18:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <title>&lt;input type=&#34;date&#34;&gt;</title>
+    </head>
+    <body>
+        
+            <form>
+  <div>
+    <label for="party">Veuillez choisir la meilleure date pour la soirée :</label>
+    <input type="date" id="party" name="party" min="2017-04-01" max="2017-04-30">
+  </div>
+</form>
+        
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/fr/docs/Web/HTML/Element/Input/date$samples/Paramétrer_une_date_maximale_et_une_date_minimale?revision=1393760 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:18:39 GMT -->
+</html>

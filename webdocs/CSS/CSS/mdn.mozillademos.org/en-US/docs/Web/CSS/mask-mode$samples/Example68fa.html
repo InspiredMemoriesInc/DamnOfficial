@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/mask-mode$samples/Example?revision=1369900 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:48:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            #masked {
+  width: 227px;
+  height: 200px;
+  background: blue linear-gradient(red, blue);
+  mask-image: url(../../../../../files/12668/MDN.svg);
+  mask-mode: alpha; /* Can be changed in the live sample */
+}
+
+        </style>
+        
+        <title>mask-mode</title>
+    </head>
+    <body>
+        
+            <div id="masked">
+</div>
+<select id="maskMode">
+  <option value="alpha">alpha</option>
+  <option value="luminance">luminance</option>
+  <option value="match-source">match-source</option>
+</select>
+
+        
+        
+            <script>
+                var maskMode = document.getElementById("maskMode");
+maskMode.addEventListener("change", function (evt) {
+  document.getElementById("masked").style.maskMode = evt.target.value;
+});
+
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/mask-mode$samples/Example?revision=1369900 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:48:38 GMT -->
+</html>

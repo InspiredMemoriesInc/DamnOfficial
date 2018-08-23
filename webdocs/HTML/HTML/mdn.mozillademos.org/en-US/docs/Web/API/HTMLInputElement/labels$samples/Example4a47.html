@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/HTMLInputElement/labels$samples/Example?revision=1311003 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:19:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <title>HTMLInputElement.labels</title>
+    </head>
+    <body>
+        
+            <label id="label1" for="test">Label 1</label>
+<input id="test"/>
+<label id="label2" for="test">Label 2</label>
+
+        
+        
+            <script>
+                window.addEventListener("DOMContentLoaded", function() {
+  const input = document.getElementById("test");
+  for(var i = 0; i < input.labels.length; i++) {
+    console.log(input.labels[i].textContent); // "Label 1" and "Label 2"
+  }
+});
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/HTMLInputElement/labels$samples/Example?revision=1311003 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:19:00 GMT -->
+</html>

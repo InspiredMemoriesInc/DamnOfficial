@@ -1,0 +1,1007 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Archive/B2G_OS/API/WiFi_Information_API by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 10:46:58 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  <title>WiFi Information API</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+
+  
+<link rel="preload" href="../../../../../static/fonts/locales/ZillaSlab-Regular.f9de6143fdfa.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="license" href="#license">
+  
+
+  
+    
+    
+
+    <link href="../../../../../static/build/styles/mdn.83865b0f7c30.css" rel="stylesheet" type="text/css">
+
+    
+  
+
+    <link href="../../../../../static/build/styles/wiki.aaf26c13c39b.css" rel="stylesheet" type="text/css">
+
+
+    
+      <link href="../../../../../static/build/styles/archive.12780a1e04e5.css" rel="stylesheet" type="text/css">
+    
+
+  <link href="../../../../../static/build/styles/locale-en-US.ca0bca387b42.css" rel="stylesheet" type="text/css">
+
+  
+    <script>
+      /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
+    </script>
+    
+
+
+
+  
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta property="og:site_name" content="MDN Web Docs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="MDN Web Docs">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../static/img/favicon144.e7e21ca263ca.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../static/img/favicon114.d526f38b09c5.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../static/img/favicon72.cc65d1d762a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../../../static/img/favicon57.de33179910ae.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="../../../../../static/img/favicon32.7f3da72dcea1.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script async="" type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  <link rel="dns-prefetch" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Archive/B2G_OS/API/WiFi_Information_API$json">
+  <link rel="canonical" href="WiFi_Information_API.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="WiFi_Information_API.html" title="WiFi Information API">
+  
+    
+      <link rel="alternate" hreflang="de" href="https://developer.mozilla.org/de/docs/Web/API/WiFi_Information_API" title="WiFi Information API">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="WiFi Information API">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Archive/B2G_OS/API/WiFi_Information_API">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Archive/B2G_OS/API/WiFi_Information_API">
+  <meta name="twitter:title" content="WiFi Information API">
+  
+  <meta property="og:description" content="The WiFi Information API is specifically made to handle WiFi connections on a Firefox OS device. It provides an interface to find available WiFi networks and handle connecting and disconnecting the device from those networks.">
+  <meta name="description" content="The WiFi Information API is specifically made to handle WiFi connections on a Firefox OS device. It provides an interface to find available WiFi networks and handle connecting and disconnecting the device from those networks.">
+  <meta name="twitter:description" content="The WiFi Information API is specifically made to handle WiFi connections on a Firefox OS device. It provides an interface to find available WiFi networks and handle connecting and disconnecting the device from those networks.">
+  
+
+</head>
+<body data-slug="Archive/B2G_OS/API/WiFi_Information_API" contextmenu="edit-history-menu" data-search-url="" class="document">
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <!--[endif]---->
+
+  
+  <link rel="dns-prefetch" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Archive/B2G_OS/API/WiFi_Information_API$json">
+  <link rel="canonical" href="WiFi_Information_API.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="WiFi_Information_API.html" title="WiFi Information API">
+  
+    
+      <link rel="alternate" hreflang="de" href="https://developer.mozilla.org/de/docs/Web/API/WiFi_Information_API" title="WiFi Information API">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="WiFi Information API">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Archive/B2G_OS/API/WiFi_Information_API">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Archive/B2G_OS/API/WiFi_Information_API">
+  <meta name="twitter:title" content="WiFi Information API">
+  
+  <meta property="og:description" content="The WiFi Information API is specifically made to handle WiFi connections on a Firefox OS device. It provides an interface to find available WiFi networks and handle connecting and disconnecting the device from those networks.">
+  <meta name="description" content="The WiFi Information API is specifically made to handle WiFi connections on a Firefox OS device. It provides an interface to find available WiFi networks and handle connecting and disconnecting the device from those networks.">
+  <meta name="twitter:description" content="The WiFi Information API is specifically made to handle WiFi connections on a Firefox OS device. It provides an interface to find available WiFi networks and handle connecting and disconnecting the device from those networks.">
+  
+
+
+
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/wiki-compat-tables.9978a5ce31c2.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+
+        // interactive editor config
+        win.mdn.interactiveEditor = {
+            siteUrl: "https://developer.mozilla.org",
+            editorUrl: "https://interactive-examples.mdn.mozilla.net"
+        };
+
+    })(this);
+</script>
+    
+    <ul id="nav-access">
+  <li><a href="#content" id="skip-main">Skip to main content</a></li>
+  <li><a id="skip-language" href="#language">Select language</a></li>
+  <li><a href="#q" id="skip-search">Skip to search</a></li>
+</ul>
+
+    <!-- Header -->
+    <header id="main-header" class="header-main">
+      <a href="https://developer.mozilla.org/en-US/" class="logo">MDN Web Docs</a>
+      <div class="nav-toolbox-wrapper">
+        <nav id="main-nav" class="nav-main" role="navigation">
+    <ul>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web">Technologies
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-tech-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+                    <li><a href="../../../Web/API.html">APIs / DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn">References &amp; Guides
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-learn-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-contact-submenu">
+              <div class="submenu-column">
+                <ul>
+                  <li>
+                      <a href="https://support.mozilla.org/">Get Firefox help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://stackoverflow.com/">Get web development help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                      <a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Archive/B2G_OS/API/WiFi_Information_API">Report a content problem
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</nav>
+        <div id="toolbox" class="toolbox">
+  <ul>
+    
+    <li class="nav-login"><div class="login">
+    
+        
+        <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FArchive%2FB2G_OS%2FAPI%2FWiFi_Information_API" class="login-link js-login-link" data-service="GitHub" rel="nofollow">
+            Sign in<svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+    <title>Github</title>
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path>
+</svg>
+        </a>
+    
+</div></li>
+  </ul>
+</div>
+      </div>
+      <form id="nav-main-search" action="https://developer.mozilla.org/en-US/search" method="get" role="search" class="nav-main-search">
+  <div class="search-wrap">
+    <label for="main-q" class="offscreen">Search</label>
+    <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" aria-hidden="true">
+    <span class="search-trigger">
+        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true">
+    <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path>
+</svg>
+    </span>
+    <button type="submit" class="offscreen">Search</button>
+    <button type="button" id="close-header-search" class="close-header-search transparent">
+        <span class="offscreen">Close search</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+  </div>
+</form>
+    </header> 
+
+  <!-- Content will go here -->
+  <main id="content">
+      
+  <!-- heading -->
+  <div id="wiki-document-head" class="document-head">
+    <div class="center">
+      <!-- action buttons -->
+      <div class="document-actions">
+        
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons">
+      <li>
+          <button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false">
+              <svg class="icon icon-language" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M10.219 16.844c-.031.109-.797-.25-1-.328-.203-.094-1.125-.609-1.359-.766s-1.125-.891-1.234-.938a28.275 28.275 0 0 1-2.094 2.828c-.281.328-1.125 1.391-1.641 1.719-.078.047-.531.094-.594.063.25-.187.969-1.078 1.281-1.437.391-.453 2.25-3.047 2.562-3.641.328-.594 1.312-2.562 1.359-2.75-.156-.016-1.391.406-1.719.516-.313.094-1.172.297-1.234.344-.063.063-.016.25-.047.313s-.313.203-.484.234a1.647 1.647 0 0 1-.734 0c-.203-.047-.391-.25-.438-.328 0 0-.063-.094-.078-.359.187-.063.5-.078.844-.172s1.188-.344 1.641-.5 1.328-.484 1.594-.547c.281-.047.984-.516 1.359-.641s.641-.281.656-.203 0 .422-.016.516c-.016.078-.766 1.547-.875 1.781-.063.125-.5.953-1.203 2.047.25.109.781.328 1 .438.266.125 2.125.906 2.219.938s.266.75.234.875zM7.016 9.25c.047.266-.031.375-.063.438-.156.297-.547.5-.781.594s-.625.187-.938.187c-.141-.016-.422-.063-.766-.406-.187-.203-.328-.75-.266-.688s.516.125.719.078.688-.187.906-.25c.234-.078.703-.203.859-.219.156 0 .281.063.328.266zm10.906 2.016l.984 3.547-2.172-.656zM.609 23.766l10.844-3.625V4.016L.609 7.657v16.109zM20 18.813l1.594.484-2.828-10.266-1.563-.484-3.375 8.375 1.594.484.703-1.719 3.297 1.016zM12.141 3.781l8.953 2.875V.718zM17 24.453l2.469.203-.844 2.5L18 26.125c-1.266.812-2.828 1.437-4.312 1.687-.453.094-.969.187-1.422.187h-1.313c-1.656 0-4.672-.984-5.984-1.937-.094-.078-.125-.141-.125-.25 0-.172.125-.297.281-.297.141 0 .875.453 1.078.547 1.406.703 3.375 1.344 4.953 1.344 1.953 0 3.281-.25 5.063-1.016.516-.234.969-.531 1.453-.797zm7-16.859v16.859c-12.078-3.844-12.094-3.844-12.094-3.844C11.656 20.718.453 24.5.297 24.5a.3.3 0 0 1-.281-.203c0-.016-.016-.031-.016-.047V7.406c.016-.047.031-.125.063-.156.094-.109.219-.141.313-.172.047-.016 1-.328 2.328-.781v-6l8.719 3.094C11.532 3.36 21.251 0 21.392 0c.172 0 .313.125.313.328v6.531z"></path>
+</svg>
+              <span>Languages</span>
+          </button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                
+                
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/de/docs/Web/API/WiFi_Information_API" data-locale="de" title="German">Deutsch (de)</a></bdi></li>
+                
+              
+
+              
+                <li><a href="https://developer.mozilla.org/en-US/docs/Archive/B2G_OS/API/WiFi_Information_API$locales" rel="nofollow" id="translations-add">Add a translation</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+      
+      <li class="page-buttons-edit">
+          <a href="https://developer.mozilla.org/en-US/docs/Archive/B2G_OS/API/WiFi_Information_API$edit" class="button neutral" id="edit-button" rel="nofollow">
+              <svg class="icon icon-pencil" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M5.672 24l1.422-1.422-3.672-3.672L2 20.328V22h2v2h1.672zm8.172-14.5a.329.329 0 0 0-.344-.344.368.368 0 0 0-.266.109l-8.469 8.469a.366.366 0 0 0-.109.266c0 .203.141.344.344.344a.368.368 0 0 0 .266-.109l8.469-8.469a.366.366 0 0 0 .109-.266zM13 6.5l6.5 6.5-13 13H0v-6.5zM23.672 8c0 .531-.219 1.047-.578 1.406L20.5 12 14 5.5l2.594-2.578c.359-.375.875-.594 1.406-.594s1.047.219 1.422.594l3.672 3.656c.359.375.578.891.578 1.422z"></path>
+</svg>
+              Edit
+          </a>
+      </li>
+      
+
+        
+
+        <li class="page-buttons-advanced">
+            <button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false">
+                <svg class="icon icon-gear" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M16 14c0-2.203-1.797-4-4-4s-4 1.797-4 4 1.797 4 4 4 4-1.797 4-4zm8-1.703v3.469c0 .234-.187.516-.438.562l-2.891.438a8.86 8.86 0 0 1-.609 1.422c.531.766 1.094 1.453 1.672 2.156.094.109.156.25.156.391s-.047.25-.141.359c-.375.5-2.484 2.797-3.016 2.797a.795.795 0 0 1-.406-.141l-2.156-1.687a9.449 9.449 0 0 1-1.422.594c-.109.953-.203 1.969-.453 2.906a.573.573 0 0 1-.562.438h-3.469c-.281 0-.531-.203-.562-.469l-.438-2.875a9.194 9.194 0 0 1-1.406-.578l-2.203 1.672c-.109.094-.25.141-.391.141s-.281-.063-.391-.172c-.828-.75-1.922-1.719-2.578-2.625a.607.607 0 0 1 .016-.718c.531-.719 1.109-1.406 1.641-2.141a8.324 8.324 0 0 1-.641-1.547l-2.859-.422A.57.57 0 0 1 0 15.705v-3.469c0-.234.187-.516.422-.562l2.906-.438c.156-.5.359-.969.609-1.437a37.64 37.64 0 0 0-1.672-2.156c-.094-.109-.156-.234-.156-.375s.063-.25.141-.359c.375-.516 2.484-2.797 3.016-2.797.141 0 .281.063.406.156L7.828 5.94a9.449 9.449 0 0 1 1.422-.594c.109-.953.203-1.969.453-2.906a.573.573 0 0 1 .562-.438h3.469c.281 0 .531.203.562.469l.438 2.875c.484.156.953.344 1.406.578l2.219-1.672c.094-.094.234-.141.375-.141s.281.063.391.156c.828.766 1.922 1.734 2.578 2.656a.534.534 0 0 1 .109.344c0 .141-.047.25-.125.359-.531.719-1.109 1.406-1.641 2.141.266.5.484 1.016.641 1.531l2.859.438a.57.57 0 0 1 .453.562z"></path>
+</svg>
+                <span>Advanced</span>
+            </button>
+            <div class="submenu js-submenu" id="advanced-menu-submenu">
+                <!-- this page -->
+                <div class="submenu-column">
+                    <div class="title">Advanced</div>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Archive/B2G_OS/API/WiFi_Information_API$history" rel="nofollow">History</a></li>
+                        
+                        
+                        
+
+
+                
+
+                <li class="page-print"><a href="#" onclick="return window.print();">Print this article</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+      </div>
+
+      <div class="document-title">
+        <h1>WiFi Information API</h1>
+      </div>
+    </div>
+  </div>
+  
+  <div id="toc" class="toc">
+    <div class="center">
+      <div class="toc-head">Jump to:</div>
+        <ol class="toc-links">
+          <li><a href="#Summary" rel="internal">Summary</a></li><li><a href="#Global_information" rel="internal">Global information</a></li><li><a href="#Find_and_retrieve_networks" rel="internal">Find and retrieve networks</a></li><li><a href="#Handling_connections" rel="internal">Handling connections</a></li><li><a href="#Events" rel="internal">Events</a></li><li><a href="#See_also" rel="internal">See also</a>
+        </li></ol>
+    </div>
+  </div>
+  
+
+      <div class="center clear">
+      
+
+    <div class="wiki-main-content" id="document-main"><div class="center">
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-left-closed wiki-left-none">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-all wiki-column text-content">
+
+              
+
+              
+              
+
+              
+
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <a class="dashAnchor" name="//apple_ref/Section/Summary"></a><h2 id="Summary">Summary</h2>
+
+<p>The WiFi Information API is specifically made to handle WiFi connections on a Firefox OS device. It provides an interface to find available WiFi networks and handle connecting and disconnecting the device from those networks.</p>
+
+<a class="dashAnchor" name="//apple_ref/Section/Global%20information"></a><h2 id="Global_information">Global information</h2>
+
+<p>The <a href="WifiManager.html" title="The documentation about this has not yet been written; please consider contributing!"><code>WifiManager</code></a> interface provides global information about the status of the WiFi capabilities of the device.</p>
+
+<p>The <a href="WifiManager/enabled.html" title="The documentation about this has not yet been written; please consider contributing!"><code>WifiManager.enabled</code></a> property simply states if the WiFi adapter is turned on or off.</p>
+
+<div class="note">
+<p><strong>Note:</strong> Enabling or disabling WiFi can only been done by using the <a href="Settings_API.html" title="/en-US/docs/WebAPI/Settings">Settings API</a> to change the <code>wifi.enabled</code> setting. Each time this setting changes, the <a href="WifiManager.html" title="The documentation about this has not yet been written; please consider contributing!"><code>WifiManager</code></a> object will send an <code><a href="../../../Web/Events/enabled.html" title="/en-US/docs/Web/Events/enabled">enabled</a></code> or <code><a href="../../../Web/Events/disabled.html" title="/en-US/docs/Web/Events/disabled">disabled</a></code> event. Those events can be handled by using the <a href="WifiManager/onenabled.html" title="The documentation about this has not yet been written; please consider contributing!"><code>WifiManager.onenabled</code></a> and <a href="WifiManager/ondisabled.html" title="The documentation about this has not yet been written; please consider contributing!"><code>WifiManager.ondisabled</code></a> event handlers.</p>
+</div>
+
+<p>The <a href="WifiManager/macAddress.html" title="The documentation about this has not yet been written; please consider contributing!"><code>WifiManager.macAddress</code></a> property provides the <a href="http://en.wikipedia.org/wiki/MAC_address" title="http://en.wikipedia.org/wiki/MAC_address" class="external" rel="noopener">MAC address</a> of the WiFi adapter.</p>
+
+<p>The <a href="WifiManager/connection.html" title="The documentation about this has not yet been written; please consider contributing!"><code>WifiManager.connection</code></a> property provides information about the current connection. It's an object with two properties:</p>
+
+<ul>
+ <li><code>status</code> : A string, one of <code>"disconnected"</code>, <code>"connecting"</code>, <code>"associated"</code>, or <code>"connected"</code>.</li>
+ <li><code>network</code> : If connected or associated, a network object with all the information about that network (see below).</li>
+</ul>
+
+<p>The <a href="WifiManager/connectionInformation.html" title="The documentation about this has not yet been written; please consider contributing!"><code>WifiManager.connectionInformation</code></a> property provides some extra information if the device is connected to the WiFi (otherwise, it's <code>null</code>). It's an object with the following properties:</p>
+
+<ul>
+ <li><code>signalStrength</code> : A number indicating the absolute strength of the signal in <a href="http://en.wikipedia.org/wiki/DBm" class="external" rel="noopener">dBm</a>.</li>
+ <li><code>relSignalStrength</code> : A number in the range [0,100] indicating the relative strength of the signal.</li>
+ <li><code>linkSpeed</code> : A number representing link speed in <code>Mb/s.</code></li>
+ <li><code>ipAddress</code> : A string representing the IP address of the device in the dotted quad format.</li>
+</ul>
+
+<a class="dashAnchor" name="//apple_ref/Section/Find%20and%20retrieve%20networks"></a><h2 id="Find_and_retrieve_networks">Find and retrieve networks</h2>
+
+<p>In order to connect a device to a WiFi network, the first thing to do is get information about the network to connect.</p>
+
+<p>This can be done with the <a href="WifiManager/getNetworks.html" title="The documentation about this has not yet been written; please consider contributing!"><code>WifiManager.getNetworks()</code></a> method which scans the area to find all the current available networks. It's also possible to use the <a href="WifiManager/getKnownNetworks.html" title="The documentation about this has not yet been written; please consider contributing!"><code>WifiManager.getKnownNetworks()</code></a> method which will provide the list of all the networks the device already knows, regardless if they are available or not.</p>
+
+<p>Both methods return a <a href="DOMRequest.html" title="The documentation about this has not yet been written; please consider contributing!"><code>DOMRequest</code></a> object to handle the success or error of the operation. In case of success the request's <code>result</code> is an <code><a href="../../../Web/JavaScript/Reference/Global_Objects/Array.html" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code> of <code>network</code> objects. Each of those objects are regular JavaScript objects with properties about a given network:</p>
+
+<ul>
+ <li><code>ssid</code> : A string representing the ssid of the network.</li>
+ <li><code>bssid</code> : A string representing the <a href="http://en.wikipedia.org/wiki/Service_set_(802.11_network)" title="http://en.wikipedia.org/wiki/Service_set_%28802.11_network%29" class="external" rel="noopener">bssid</a> of the network.</li>
+ <li><code>capabilities</code> : An array of strings representing the special abilities of the network (currently, only <code><a href="http://en.wikipedia.org/wiki/Wi-Fi_Protected_Setup" title="http://en.wikipedia.org/wiki/Wi-Fi_Protected_Setup" class="external" rel="noopener">WPS</a></code> is supported).</li>
+ <li><code>security</code> : An array of strings representing the security model of the network (currently supports <a href="http://en.wikipedia.org/wiki/Wired_Equivalent_Privacy" title="http://en.wikipedia.org/wiki/Wired_Equivalent_Privacy" class="external" rel="noopener"><code>WEP</code></a>, <a href="http://en.wikipedia.org/wiki/Wi-Fi_Protected_Access" title="http://en.wikipedia.org/wiki/Wi-Fi_Protected_Access" class="external" rel="noopener"><code>WPA-PSK</code></a>, and <a href="http://en.wikipedia.org/wiki/Extensible_Authentication_Protocol" title="http://en.wikipedia.org/wiki/Extensible_Authentication_Protocol" class="external" rel="noopener"><code>WPA-EAP</code></a>).</li>
+ <li><code>signalStrength</code> : A number indicating the absolute strength of the signal in <a href="http://en.wikipedia.org/wiki/DBm" class="external" rel="noopener">dBm</a>.</li>
+ <li><code>relSignalStrength</code> : A number in the range [0,100] indicating the relative strength of the signal.</li>
+ <li><code>connected</code> : A boolean indicating if the device is connected to that network.</li>
+ <li><code>known</code> : A boolean indicating if the network is already known by the device (it has been used already).</li>
+</ul>
+
+<pre class="brush: js">var wifi = navigator.mozWifiManager;
+
+function sortNetworksByStrength(a, b) {
+  return a.signalStrength &gt; b.signalStrength ? -1 : 1;
+}
+
+var request = wifi.getNetworks();
+
+request.onsuccess = function () {
+  console.log('The following networks are available:');
+
+  var networks = this.result;
+  networks.sort(sortNetworksByStrength);
+  networks.forEach(function (network) {
+    console.log(network.ssid, ' (', network.relSignalStrength.toFixed(0), ')');
+  })
+}
+
+request.onerror = function (err) {
+  console.log('Something goes wrong: ' + err);
+}
+</pre>
+
+<a class="dashAnchor" name="//apple_ref/Section/Handling%20connections"></a><h2 id="Handling_connections">Handling connections</h2>
+
+<p>Handling a connection is pretty simple. If the device found a network it already knows, it connects to it automatically. A known network is any network the device has been previously connected to. Although this is often convenient for the user, it can be annoying sometimes. So, if necessary, it's possible to make the device forget a given network by using the <a href="WifiManager/forget.html" title="The documentation about this has not yet been written; please consider contributing!"><code>WifiManager.forget()</code></a> method.</p>
+
+<pre class="brush: js">var wifi = navigator.mozWifiManager
+
+// Let's make the device forget about all the networks it knows
+request = wifi.getKnownNetworks();
+
+request.onsuccess = function () {
+  var networks = this.result;
+
+  networks.forEach(function (network) {
+    wifi.forget(network);
+  });
+}
+</pre>
+
+<h3 id="Manual_connection">Manual connection</h3>
+
+<p>The connection workflow is quite simple. To try to connect the device to a WiFi network, it just requires to pick a network and associate the device with that network. Such an association is done with the <a href="WifiManager/associate.html" title="The documentation about this has not yet been written; please consider contributing!"><code>WifiManager.associate()</code></a> method. Once that method is called the device tries to connect itself to that network, entering the connection workflow. Each step of the connection workflow can be tracked thanks to the connection events (see below).</p>
+
+<pre class="brush: js">var wifi = navigator.mozWifiManager;
+
+function sortNetworksByStrength(a, b) {
+  return a.signalStrength &gt; b.signalStrength ? -1 : 1;
+}
+
+var request = wifi.getNetworks();
+
+request.onsuccess = function () {
+  console.log('The following networks are available:');
+
+  var networks = this.result;
+  networks.sort(sortNetworksByStrength);
+  
+  // Let's try to connect the device to the strongest network
+  wifi.associate(networks[0]);
+}
+</pre>
+
+<p>Once a connection is established, the last thing remaining is setting an IP address for the device. If the network is configured with DHCP, no problem, a dynamic IP will be assigned to the device. However, if it's not the case or if the user wants to set the IP address manually, this can be done with the <a href="WifiManager/setStaticIpMode.html" title="The documentation about this has not yet been written; please consider contributing!"><code>WifiManager.setStaticIpMode()</code></a> method. This method expects two parameter, a <code>network</code> object and a configuration object. The configuration object must have the following properties:</p>
+
+<ul>
+ <li><code>enabled</code> : A boolean requesting if the static IP mode must be turned on (<code>true</code>) or off (<code>false</code>).</li>
+ <li><code>ipaddr</code> : A string representing the IP address of the device in the dotted quad format.</li>
+ <li><code>proxy</code> :&nbsp; A string representing the proxy server address (if any, otherwise an empty string).</li>
+ <li><code>maskLength</code> : A number representing the length of the network mask.</li>
+ <li><code>gateway</code> : A string representing a gateway address (if any, otherwise an empty string).</li>
+ <li><code>dns1</code> : A string representing the first DNS server address.</li>
+ <li><code>dns2</code> : A string representing the second DNS server address.</li>
+</ul>
+
+<h3 id="Secured_connection">Secured connection</h3>
+
+<p>Connecting to a secure WiFi network is not really harder but it necessitates taking care of a few things.</p>
+
+<h4 id="WEPWPA">WEP/WPA</h4>
+
+<p>When retrieving a network, its <code>security</code> property will provide the kind of encryption used by that network. security is an Array of strings, each string representing an encryption method usable with that network. Currently, Firefox OS supports <code>WEP</code>, <code>WPA-PSK</code>, and <code>WPA-EAP</code>.</p>
+
+<p>Associating a secured network with the device is done the same way as for an open network with the <a href="WifiManager/associate.html" title="The documentation about this has not yet been written; please consider contributing!"><code>WifiManager.associate()</code></a> method. However, this time it's necessary to set some extra properties to the <code>network</code> object passed to the method, which depend on the encryption method:</p>
+
+<ul>
+ <li>For network with WEP encryption method:
+  <ul>
+   <li><code>wep</code> : This property must be set with the proper password to access the network.</li>
+  </ul>
+ </li>
+ <li>For network with WPA-PSK encryption method:
+  <ul>
+   <li><code>psk</code> : This property must be set with the proper password to access the network.</li>
+  </ul>
+ </li>
+ <li>For network with WPA-EAP encryption method:
+  <ul>
+   <li><code>eap</code> : A string representing the <a href="http://en.wikipedia.org/wiki/Extensible_Authentication_Protocol#Methods" title="http://en.wikipedia.org/wiki/Extensible_Authentication_Protocol#Methods" class="external" rel="noopener">EAP method</a> to use.</li>
+   <li><code>password</code> : A string representing the password to access the network.</li>
+   <li><code>identity</code> : A string representing the identity to access the network.</li>
+   <li><code>pin</code> : A string representing the pin code required to access the network.</li>
+  </ul>
+ </li>
+</ul>
+
+<pre class="brush: js">var wifi = navigator.mozWifiManager;
+
+var request = wifi.getNetworks();
+
+request.onsuccess = function () {
+  // Let's get the first network
+  var network  = this.result[0];
+  var security = network.security[0];
+
+  if (security === 'WEP') {
+    network.wep = prompt('This network requires a WEP password:');
+  }
+
+  else if (security === 'WPA-PSK') {
+    network.psk = prompt('This network requires a WPA Key:');
+  }
+
+  else if (security === 'WPA-EAP') {
+    network.eap      = prompt('Which EAP method should be used:');
+    network.identity = prompt('Which identity should be used:');
+    network.password = prompt('This network requires a password:');
+    network.pin      = prompt('Thanks to finally provide your own PIN:');
+  }
+  
+  // Let's try to connect the device to the network
+  wifi.associate(network);
+}</pre>
+
+<h4 id="WPS">WPS</h4>
+
+<p><a href="http://en.wikipedia.org/wiki/Wi-Fi_Protected_Setup" title="http://en.wikipedia.org/wiki/Wi-Fi_Protected_Setup" class="external" rel="noopener">WPS connection</a> is a simpler way to connect a device to a network. It requires less knowledge from the user and makes things easier for him. Basically, when a user has a WPS enable WiFi router, he can choose that method to connect the device to the network instead of typing a password. It can be useful for WPA-PSK secured networks because their keys can be very long and hard to type.</p>
+
+<p>To know if a network is WPS enabled, just check the <code>network.capabilities</code> array. If the network allows it, it's possible to follow the WPS process to associate the device with the network. Each step of the process is handled through the <a href="WifiManager/wps.html" title="The documentation about this has not yet been written; please consider contributing!"><code>WifiManager.wps()</code></a> method, which returns a <a href="DOMRequest.html" title="The documentation about this has not yet been written; please consider contributing!"><code>DOMRequest</code></a> object to handle the success or error of the process.</p>
+
+<p>There are two ways of initiating a WPS connection up to the user:</p>
+
+<ul>
+ <li>The easiest one is by pressing a dedicated button on the WiFi router. In that case, the parameter object passed to the <a href="WifiManager/wps.html" title="The documentation about this has not yet been written; please consider contributing!"><code>wps()</code></a> method must have a property named <code>method</code> with the value <code>pbc</code>.</li>
+ <li>An alternative is by entering a PIN provided by the WiFi router. There are two use cases here:
+  <ol>
+   <li>The WiFi router will send a PIN to the device and the user has to type it on the WiFi router interface. In such a case, the parameter object passed to the <a href="WifiManager/wps.html" title="The documentation about this has not yet been written; please consider contributing!"><code>wps()</code></a> method must have a property named <code>method</code> with the value <code>pin</code> and a property named <code>bssid</code> with the bssid of the network.</li>
+   <li>The WiFi router expects the user to type a PIN on his device (usually, such a PIN is displayed on the WiFi router itself). In such case, the parameter object passed to the <a href="WifiManager/wps.html" title="The documentation about this has not yet been written; please consider contributing!"><code>wps()</code></a> method must have a property named <code>method</code> with the value <code>pin</code>, a property named <code>pin</code> with the PIN provided by the user, and a property named <code>bssid</code> with the bssid of the network.</li>
+  </ol>
+ </li>
+</ul>
+
+<pre class="brush: js">var wifi = navigator.mozWifiManager;
+
+var request = wifi.getNetworks();
+
+request.onsuccess = function () {
+  // Let's get the first network
+  var network = this.result[0];
+  var isWPSEnabled = network.capabilities.indexOf('WPS') &gt; -1;
+  var wpsRequest;
+
+  if (isWPSEnabled) {
+    if (comfirm('Do you want to use the push button to connect your device?')) {
+      wpsRequest = wifi.wps({
+        method : 'pbs'
+      });
+    }
+
+    else if (confirm('Do you want to type a PIN on your WiFI router interface?')){
+      wpsRequest = wifi.wps({
+        method : 'pin',
+        bssid  : network.bssid
+      })
+
+      wpsRequest.onsucces = function () {
+        alert('Please, type that number on your WiFi router interface: ' + this.result)
+      }
+    }
+
+    else {
+      wpsRequest = wifi.wps({
+        method : 'pin',
+        bssid  : network.bssid
+        pin    : prompt('Please, provide the PIN for your WiFi router.')
+      })
+    }
+  }
+}
+</pre>
+
+<p>Once a connection has been initialized successfully, the completion of the connection process can be tracked through the connection events (see below). As long as the connection process is not complete, it's possible to cancel a WPS connection by calling the <a href="WifiManager/wps.html" title="The documentation about this has not yet been written; please consider contributing!"><code>wps()</code></a> method with a parameter object which has a property named <code>method</code> with the value <code>cancel</code>.</p>
+
+<a class="dashAnchor" name="//apple_ref/Section/Events"></a><h2 id="Events">Events</h2>
+
+<h3 id="Connection_events">Connection events</h3>
+
+<p>When a device tries to connect itself to a WiFi network (or is disconnected from such a network), it sends several <code><a href="../../../Web/Events/statuschange.html" title="/en-US/docs/Web/Events/statuschange">statuschange</a></code> events. Possible statuses are the following:</p>
+
+<ul>
+ <li><code>connecting</code> : the device entered the connection workflow.</li>
+ <li><code>associated</code> : the device is connected to an access point but does not have an IP address yet.</li>
+ <li><code>connected</code> : the device is fully connected via wifi and ready.</li>
+ <li><code>connectingfailed</code> : the device was unable to connect itself to a network.</li>
+ <li><code>disconnected</code> : the device was connected to a network but has disconnected for any reason.</li>
+ <li><code>wps-timedout</code> : the WPS connection has timed out.</li>
+ <li><code>wps-failed</code> : the WPS connection failed.</li>
+ <li><code>wps-overlapped</code> : a WPS connection overlaps (this happens when two networks in the same area allow a <code>pbs</code> connection at the same time).</li>
+</ul>
+
+<p>To listen to those events it's mandatory to use the <a href="WifiManager/onstatuschange.html" title="The documentation about this has not yet been written; please consider contributing!"><code>WifiManager.onstatuschange</code></a> event handler. Any callback function associated to that handler receives a <a href="MozWifiStatusChangeEvent.html" title="The documentation about this has not yet been written; please consider contributing!"><code>MozWifiStatusChangeEvent</code></a> as its first parameter.</p>
+
+<pre class="brush: js">var wifi = navigator.mozWifiManager;
+
+wifi.onstatuschange = function (event) {
+  console.log('The connection status is: ' + event.status);
+}
+</pre>
+
+<h3 id="Ongoing_connection">Ongoing connection</h3>
+
+<p>Once the device is connected to a network, the <a href="WifiManager/connectionInformation.html" title="The documentation about this has not yet been written; please consider contributing!"><code>WifiManager.connectionInformation</code></a> property provides extra information about the connection (see above). However, each time that information changes, the WiFiManager is notified with a <code><a href="../../../Web/Events/connectioninfoupdate.html" title="/en-US/docs/Web/Events/connectioninfoupdate">connectioninfoupdate</a></code> event. Such an event can be listened for with the <a href="WifiManager/onconnectioninfoupdate.html" title="The documentation about this has not yet been written; please consider contributing!"><code>WifiManager.onconnectioninfoupdate</code></a> event handler. Any callback function associated to that handler receives a <a href="MozWifiConnectionInfoEvent.html" title="The documentation about this has not yet been written; please consider contributing!"><code>MozWifiConnectionInfoEvent</code></a> as its first parameter. Such an object provides the same information as the <a href="WifiManager/connectionInformation.html" title="The documentation about this has not yet been written; please consider contributing!"><code>WifiManager.connectionInformation</code></a> property and also provides the corresponding <code>network</code> object.</p>
+
+<pre class="brush: js">var wifi = navigator.mozWifiManager;
+
+wifi.onconnectioninfoupdate = function (event) {
+  console.log('Update information for: ' + event.network.ssid);
+  console.log('IP: ' + event.ipAddress);
+  console.log('Speed: ' + event.linkSpeed.toFixed(2) + 'Mb/s');
+  console.log('Signal strength: ' + event.signalStrength.toFixed(2) + 'dBm (' + event.relSignalStrength.toFixed(0) + '%)');
+}</pre>
+
+<a class="dashAnchor" name="//apple_ref/Section/See%20also"></a><h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="../../../Web/API/Window/navigator/mozWifiManager.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>navigator.mozWifiManager</code></a></li>
+ <li><a href="WifiManager.html" title="The documentation about this has not yet been written; please consider contributing!"><code>WifiManager</code></a></li>
+ <li><a href="MozWifiConnectionInfoEvent.html" title="The documentation about this has not yet been written; please consider contributing!"><code>MozWifiConnectionInfoEvent</code></a></li>
+ <li><a href="MozWifiStatusChangeEvent.html" title="The documentation about this has not yet been written; please consider contributing!"><code>MozWifiStatusChangeEvent</code></a></li>
+ <li>Pages with the tag <a href="https://developer.mozilla.org/en-US/docs/tag/WiFi" hreflang="en-US" rel="tag">WiFi</a></li>
+</ul>
+                  
+                
+              </article>
+
+              <!-- contributors -->
+              <div class="wiki-block contributors">
+                <h2 class="offscreen">Document Tags and Contributors</h2>
+                
+                
+  <div class="tag-attach-list contributors-sub">
+    <svg class="icon icon-tags" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M7 7c0-1.109-.891-2-2-2s-2 .891-2 2 .891 2 2 2 2-.891 2-2zm16.672 9c0 .531-.219 1.047-.578 1.406l-7.672 7.688c-.375.359-.891.578-1.422.578s-1.047-.219-1.406-.578L1.422 13.906C.625 13.125 0 11.609 0 10.5V4c0-1.094.906-2 2-2h6.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422zm6 0c0 .531-.219 1.047-.578 1.406l-7.672 7.688a2.08 2.08 0 0 1-1.422.578c-.812 0-1.219-.375-1.75-.922l7.344-7.344c.359-.359.578-.875.578-1.406s-.219-1.047-.578-1.422L14.422 3.422C13.625 2.625 12.11 2 11 2h3.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422z"></path>
+</svg>
+    <strong>Tags:</strong>&nbsp;
+    <ul class="tags tags-small">
+      
+        <li><a href="../../../tag/API.html" rel="nofollow">API</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/B2G" rel="nofollow">B2G</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Firefox OS" rel="nofollow">Firefox OS</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Non Standard" rel="nofollow">Non Standard</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Reference" rel="nofollow">Reference</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Référence(2)" rel="nofollow">Référence(2)</a></li>
+      
+        <li><a href="../../../tag/WebAPI.html" rel="nofollow">WebAPI</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/WiFi" rel="nofollow">WiFi</a></li>
+      
+    </ul>
+  </div>
+
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-group" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M9.266 14a5.532 5.532 0 0 0-4.141 2H3.031C1.468 16 0 15.25 0 13.516 0 12.25-.047 8 1.937 8c.328 0 1.953 1.328 4.062 1.328.719 0 1.406-.125 2.078-.359A7.624 7.624 0 0 0 7.999 10c0 1.422.453 2.828 1.266 4zM26 23.953C26 26.484 24.328 28 21.828 28H8.172C5.672 28 4 26.484 4 23.953 4 20.422 4.828 15 9.406 15c.531 0 2.469 2.172 5.594 2.172S20.063 15 20.594 15C25.172 15 26 20.422 26 23.953zM10 4c0 2.203-1.797 4-4 4S2 6.203 2 4s1.797-4 4-4 4 1.797 4 4zm11 6c0 3.313-2.688 6-6 6s-6-2.688-6-6 2.688-6 6-6 6 2.688 6 6zm9 3.516C30 15.25 28.531 16 26.969 16h-2.094a5.532 5.532 0 0 0-4.141-2A7.066 7.066 0 0 0 22 10a7.6 7.6 0 0 0-.078-1.031A6.258 6.258 0 0 0 24 9.328C26.109 9.328 27.734 8 28.062 8c1.984 0 1.937 4.25 1.937 5.516zM28 4c0 2.203-1.797 4-4 4s-4-1.797-4-4 1.797-4 4-4 4 1.797 4 4z"></path>
+</svg>
+                    <strong>Contributors to this page:</strong>
+                    
+        <a href="https://developer.mozilla.org/en-US/profiles/fscholz">fscholz</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills">chrisdavidmills</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/sbabey0657">sbabey0657</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/rohitgup14">rohitgup14</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Jeremie">Jeremie</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/kscarfone">kscarfone</a>
+    
+                  </div>
+                
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-clock" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M14 8.5v7c0 .281-.219.5-.5.5h-5a.494.494 0 0 1-.5-.5v-1c0-.281.219-.5.5-.5H12V8.5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zm6.5 5.5c0-4.688-3.813-8.5-8.5-8.5S3.5 9.313 3.5 14s3.813 8.5 8.5 8.5 8.5-3.813 8.5-8.5zm3.5 0c0 6.625-5.375 12-12 12S0 20.625 0 14 5.375 2 12 2s12 5.375 12 12z"></path>
+</svg>
+                    <strong>Last updated by:</strong>
+                    <a href="https://developer.mozilla.org/en-US/profiles/fscholz">fscholz</a>,
+                    <time datetime="2017-12-16T07:12:25.714499-08:00">Dec 16, 2017, 7:12:25 AM</time>
+                  </div>
+                
+              </div>
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+    
+      <div class="newsletter-box">
+        <div class="newsletter">
+    <form id="newsletterForm" class="newsletter-form nodisable" name="newsletter-form" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <div class="newsletter-head">
+            <h2 class="newsletter-teaser">Learn the best of web development</h2>
+            <p class="newsletter-description">Get the latest and greatest from MDN delivered straight to your inbox.</p>
+            
+        </div>
+
+        <div class="newsletter-fields">
+            <input type="hidden" id="fmt" name="fmt" value="H">
+            <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+            <div id="newsletterErrors" class="newsletter-errors"></div>
+
+            <div id="newsletterEmail" class="form-group newsletter-group-email">
+                <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+                <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+            </div>
+
+            <div id="newsletterPrivacy" class="form-group form-group-agree newsletter-group-privacy hidden">
+                <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+                <label for="newsletterPrivacyInput">
+                I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+                </label>
+            </div>
+            <div id="newsletterSubmit" class="newsletter-group-submit">
+                <button id="newsletter-submit" type="submit" class="button neutral newsletter-submit">
+                    Sign up now<svg class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg" width="23" height="28" viewBox="0 0 23 28" aria-hidden="true">
+    <path d="M23 15a2.01 2.01 0 0 1-.578 1.422L12.25 26.594c-.375.359-.891.578-1.422.578s-1.031-.219-1.406-.578L8.25 25.422c-.375-.375-.594-.891-.594-1.422s.219-1.047.594-1.422L12.828 18h-11C.703 18 0 17.062 0 16v-2c0-1.062.703-2 1.828-2h11L8.25 7.406a1.96 1.96 0 0 1 0-2.812l1.172-1.172c.375-.375.875-.594 1.406-.594s1.047.219 1.422.594l10.172 10.172c.375.359.578.875.578 1.406z"></path>
+</svg>
+                </button>
+            </div>
+        </div>
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden">
+        <span>Hide Newsletter Sign-up</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+</div>
+      </div>
+    
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/en-US/docs/Archive/B2G_OS/API/WiFi_Information_API$edit" label="Edit page"></menuitem>
+    <menuitem data-action="/en-US/docs/Archive/B2G_OS/API/WiFi_Information_API$history" label="View page history"></menuitem>
+  </menu>
+
+      </div>
+  </main>
+  <!-- Footer -->
+    <footer id="nav-footer" class="nav-footer"><div class="center"><a href="http://developer.mozilla.org/en-US/docs/Archive/B2G_OS/API/WiFi_Information_API">WiFi Information API</a> by <a href="http://developer.mozilla.org/en-US/docs/Archive/B2G_OS/API/WiFi_Information_API$history">Mozilla Contributors</a> is licensed under <a href="http://creativecommons.org/licenses/by-sa/2.5/" class="external external-icon">CC-BY-SA 2.5</a>.</div></footer> 
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script async="" type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script src="../../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../../static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><!--[endif]---->
+
+    
+    <script src="../../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../../static/build/js/wiki.b26a4c181df3.js" charset="utf-8" id="wikiscript"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../static/build/js/newsletter.a85c5c2892e5.js" charset="utf-8"></script>
+  
+
+
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Archive/B2G_OS/API/WiFi_Information_API by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 10:46:58 GMT -->
+</body></html>

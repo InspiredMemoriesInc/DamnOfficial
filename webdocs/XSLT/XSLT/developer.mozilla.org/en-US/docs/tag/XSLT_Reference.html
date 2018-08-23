@@ -1,0 +1,1067 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/tag/XSLT_Reference by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:53:30 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  <title>Articles tagged: XSLT_Reference</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+
+  
+<link rel="preload" href="../../../static/fonts/locales/ZillaSlab-Regular.f9de6143fdfa.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="license" href="#license">
+  
+
+  
+    
+
+    <link href="../../../static/build/styles/mdn.83865b0f7c30.css" rel="stylesheet" type="text/css">
+
+    
+  
+
+    <link href="../../../static/build/styles/wiki.aaf26c13c39b.css" rel="stylesheet" type="text/css">
+
+
+  <link href="../../../static/build/styles/locale-en-US.ca0bca387b42.css" rel="stylesheet" type="text/css">
+
+  
+    <script>
+      /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
+    </script>
+    
+
+
+
+  
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta property="og:site_name" content="MDN Web Docs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="MDN Web Docs">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../static/img/favicon144.e7e21ca263ca.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../static/img/favicon114.d526f38b09c5.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../static/img/favicon72.cc65d1d762a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../static/img/favicon57.de33179910ae.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="../../../static/img/favicon32.7f3da72dcea1.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script async="" type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  
+      <link rel="alternate" type="application/atom+xml" title="Articles tagged: XSLT_Reference" href="../feeds/atom/tag/XSLT_Reference">
+  
+
+</head>
+<body class="">
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <!--[endif]---->
+
+  
+  
+      <link rel="alternate" type="application/atom+xml" title="Articles tagged: XSLT_Reference" href="../feeds/atom/tag/XSLT_Reference">
+  
+
+
+
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/wiki-compat-tables.9978a5ce31c2.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+
+        // interactive editor config
+        win.mdn.interactiveEditor = {
+            siteUrl: "https://developer.mozilla.org",
+            editorUrl: "https://interactive-examples.mdn.mozilla.net"
+        };
+
+    })(this);
+</script>
+    
+    <ul id="nav-access">
+  <li><a href="#content" id="skip-main">Skip to main content</a></li>
+  <li><a id="skip-language" href="#language">Select language</a></li>
+  <li><a href="#q" id="skip-search">Skip to search</a></li>
+</ul>
+
+    <!-- Header -->
+    <header id="main-header" class="header-main">
+      <a href="https://developer.mozilla.org/en-US/" class="logo">MDN Web Docs</a>
+      <div class="nav-toolbox-wrapper">
+        <nav id="main-nav" class="nav-main" role="navigation">
+    <ul>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web">Technologies
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-tech-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API">APIs / DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn">References &amp; Guides
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-learn-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-contact-submenu">
+              <div class="submenu-column">
+                <ul>
+                  <li>
+                      <a href="https://support.mozilla.org/">Get Firefox help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://stackoverflow.com/">Get web development help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                      <a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/tag/XSLT_Reference">Report a content problem
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</nav>
+        <div id="toolbox" class="toolbox">
+  <ul>
+    
+    <li class="nav-login"><div class="login">
+    
+        
+        <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FXSLT_Reference" class="login-link js-login-link" data-service="GitHub" rel="nofollow">
+            Sign in<svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+    <title>Github</title>
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path>
+</svg>
+        </a>
+    
+</div></li>
+  </ul>
+</div>
+      </div>
+      <form id="nav-main-search" action="https://developer.mozilla.org/en-US/search" method="get" role="search" class="nav-main-search">
+  <div class="search-wrap">
+    <label for="main-q" class="offscreen">Search</label>
+    <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" aria-hidden="true">
+    <span class="search-trigger">
+        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true">
+    <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path>
+</svg>
+    </span>
+    <button type="submit" class="offscreen">Search</button>
+    <button type="button" id="close-header-search" class="close-header-search transparent">
+        <span class="offscreen">Close search</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+  </div>
+</form>
+    </header> 
+
+  <!-- Content will go here -->
+  <main id="content">
+      
+      <div class="center clear">
+      
+
+    <div id="document-list" class="boxed">
+      <h1>Articles tagged: XSLT_Reference</h1>
+      
+        
+
+
+        <p>Found 93 documents</p>
+        <ul class="document-list">
+          
+            <li>
+              <a href="../Web/EXSLT.html">Web/EXSLT</a>
+                
+                  <small>To use an EXSLT function, you need to declare the namespace the function is in, and then use the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/EXSLT/exsl/node-set.html">Web/EXSLT/exsl/node-set</a>
+                
+                  <small>exsl:node-set() returns a node-set from a result tree fragment, which is what you get when you...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/EXSLT/exsl/object-type.html">Web/EXSLT/exsl/object-type</a>
+                
+                  <small>exsl:object-type() returns a string that indicates the type of the specified object.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/EXSLT/math/highest.html">Web/EXSLT/math/highest</a>
+                
+                  <small>math:highest() returns the node in the specified node-set with the highest value (where the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/EXSLT/math/lowest.html">Web/EXSLT/math/lowest</a>
+                
+                  <small>math:lowest() returns the node in the specified node-set with the lowest value (where the lowest...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/EXSLT/math/max.html">Web/EXSLT/math/max</a>
+                
+                  <small>math:max() returns the maximum value of a node-set.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/EXSLT/math/min.html">Web/EXSLT/math/min</a>
+                
+                  <small>math:min() returns the minimum value of a node-set.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/EXSLT/regexp/match.html">Web/EXSLT/regexp/match</a>
+                
+                  <small>regexp:match() performs regular expression matching on a string, returning the submatches found...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/EXSLT/regexp/replace.html">Web/EXSLT/regexp/replace</a>
+                
+                  <small>regexp:replace() replaces the portions of a string that match a given regular expression with...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/EXSLT/regexp/test.html">Web/EXSLT/regexp/test</a>
+                
+                  <small>regexp:test() tests to see whether a string matches a specified regular expression.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/EXSLT/set/difference.html">Web/EXSLT/set/difference</a>
+                
+                  <small>set:difference() returns the difference between two node-sets. In other words, it returns a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/EXSLT/set/distinct.html">Web/EXSLT/set/distinct</a>
+                
+                  <small>set:distinct() returns a subset of the nodes in the specified node-set, returning only nodes...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/EXSLT/set/has-same-node.html">Web/EXSLT/set/has-same-node</a>
+                
+                  <small>set:has-same-node() determines whether two node-sets have any nodes in common.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/EXSLT/set/intersection.html">Web/EXSLT/set/intersection</a>
+                
+                  <small>set:intersection() returns the intersection of two node-sets. In other words, it returns a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/EXSLT/set/leading.html">Web/EXSLT/set/leading</a>
+                
+                  <small>set:leading() returns the nodes in one node-set that come before the first node in the other node-set.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/EXSLT/set/trailing.html">Web/EXSLT/set/trailing</a>
+                
+                  <small>set:trailing() returns the nodes in one node-set that come after the first node in the other node-set.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/EXSLT/str/concat.html">Web/EXSLT/str/concat</a>
+                
+                  <small>str:concat() returns a string containing all the string values in a node-set concatenated together.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/EXSLT/str/split.html">Web/EXSLT/str/split</a>
+                
+                  <small>str:split() splits a string using a pattern string to determine where the splits should occur,...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/EXSLT/str/tokenize.html">Web/EXSLT/str/tokenize</a>
+                
+                  <small>str:tokenize() splits a string using a set of characters as delimiters that determine where the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Axes.html">Web/XPath/Axes</a>
+                
+                  <small>For further information on using XPath expressions, please see the For Further Reading section...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions.html">Web/XPath/Functions</a>
+                
+                  <small></small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/boolean.html">Web/XPath/Functions/boolean</a>
+                
+                  <small>The boolean function evaluates an expression and returns true or false.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/ceiling.html">Web/XPath/Functions/ceiling</a>
+                
+                  <small>The ceiling function evaluates a decimal number and returns the smallest integer greater than or...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/concat.html">Web/XPath/Functions/concat</a>
+                
+                  <small>The concat function concatenates two or more strings and returns the resulting string.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/contains.html">Web/XPath/Functions/contains</a>
+                
+                  <small>The contains function determines whether the first argument string contains the second argument...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/count.html">Web/XPath/Functions/count</a>
+                
+                  <small>The count function counts the number of nodes in a node-set and returns an integer.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/current.html">Web/XPath/Functions/current</a>
+                
+                  <small>The current function can be used to get the context node in an XSLT instruction.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/document.html">Web/XPath/Functions/document</a>
+                
+                  <small>The document finds a node-set in an external document, or multiple external documents, and...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/element-available.html">Web/XPath/Functions/element-available</a>
+                
+                  <small>The element-available function determines if an element is available and returns true or false.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/false.html">Web/XPath/Functions/false</a>
+                
+                  <small>The false function returns boolean false.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/floor.html">Web/XPath/Functions/floor</a>
+                
+                  <small>The floor function evaluates a decimal number and returns the largest integer less than or equal...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/format-number.html">Web/XPath/Functions/format-number</a>
+                
+                  <small>The format-number function evaluates a number and returns a string representing the number in a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/function-available.html">Web/XPath/Functions/function-available</a>
+                
+                  <small>The function-available function determines if a given function is available and returns boolean...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/generate-id.html">Web/XPath/Functions/generate-id</a>
+                
+                  <small>The generate-id function generates a unique id for the first node in a given node-set and...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/id.html">Web/XPath/Functions/id</a>
+                
+                  <small>The id function finds nodes matching the given ids and returns a node-set containing the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/key.html">Web/XPath/Functions/key</a>
+                
+                  <small>The key function returns a node-set of nodes that have the given value for the given key.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/lang.html">Web/XPath/Functions/lang</a>
+                
+                  <small>The lang function determines whether the context node matches the given language and returns...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/last.html">Web/XPath/Functions/last</a>
+                
+                  <small>The last function returns a number equal to the context size from the expression evaluation context.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/local-name.html">Web/XPath/Functions/local-name</a>
+                
+                  <small>The local-name function returns a string representing the local name of the first node in a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/name.html">Web/XPath/Functions/name</a>
+                
+                  <small>The name function returns a string representing the QName of the first node in a given node-set.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/namespace-uri.html">Web/XPath/Functions/namespace-uri</a>
+                
+                  <small>The namespace-uri function returns a string representing the namespace URI of the first node in...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/normalize-space.html">Web/XPath/Functions/normalize-space</a>
+                
+                  <small>The normalize-space function strips leading and trailing white-space from a string, replaces...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/not.html">Web/XPath/Functions/not</a>
+                
+                  <small>The not function evaluates a boolean expression and returns the opposite value.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/number.html">Web/XPath/Functions/number</a>
+                
+                  <small>The number function converts an object to a number and returns the number.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/position.html">Web/XPath/Functions/position</a>
+                
+                  <small>The position function returns a number equal to the context position from the expression...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/round.html">Web/XPath/Functions/round</a>
+                
+                  <small>The round function returns a number that is the nearest integer to the given number.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/starts-with.html">Web/XPath/Functions/starts-with</a>
+                
+                  <small>The starts-with checks whether the first string starts with the second string and returns true or false.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/string.html">Web/XPath/Functions/string</a>
+                
+                  <small>The string function converts the given argument to a string.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/string-length.html">Web/XPath/Functions/string-length</a>
+                
+                  <small>The string-length function returns a number equal to the number of characters in a given string.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/substring.html">Web/XPath/Functions/substring</a>
+                
+                  <small>The substring function returns a part of a given string.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/substring-after.html">Web/XPath/Functions/substring-after</a>
+                
+                  <small>The substring-after function returns a string that is the rest of a given string after a given substring.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/substring-before.html">Web/XPath/Functions/substring-before</a>
+                
+                  <small>The substring-before function returns a string that is the rest of a given string before a given...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/sum.html">Web/XPath/Functions/sum</a>
+                
+                  <small>The sum function returns a number that is the sum of the numeric values of each node in a given node-set.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/system-property.html">Web/XPath/Functions/system-property</a>
+                
+                  <small>The system-property function returns an object representing the given system-property.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/translate.html">Web/XPath/Functions/translate</a>
+                
+                  <small>The translate function evaluates a string and a set of characters to translate and returns the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/true.html">Web/XPath/Functions/true</a>
+                
+                  <small>The true function returns a boolean value of true.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XPath/Functions/unparsed-entity-url.html">Web/XPath/Functions/unparsed-entity-url</a>
+                
+                  <small>The unparsed-entity-url() function returns the URI of the unparsed entity with the given name....</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/apply-imports.html">Web/XSLT/apply-imports</a>
+                
+                  <small>The xsl:apply-imports element is fairly arcane, used mostly in complex stylesheets. Import...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/apply-templates.html">Web/XSLT/apply-templates</a>
+                
+                  <small>The xsl:apply-templates element selects a set of nodes in the input tree and instructs the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/attribute.html">Web/XSLT/attribute</a>
+                
+                  <small>The xsl:attribute element creates an attribute in the output document, using any values that can...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/attribute-set.html">Web/XSLT/attribute-set</a>
+                
+                  <small>The xsl:attribute-set element creates a named set of attributes, which can then be applied as...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/call-template.html">Web/XSLT/call-template</a>
+                
+                  <small>The xsl:call-template element invokes a named template.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/choose.html">Web/XSLT/choose</a>
+                
+                  <small>The xsl:choose element defines a choice among a number of alternatives. It behaves like a switch...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/comment.html">Web/XSLT/comment</a>
+                
+                  <small>The xsl:comment element writes a comment to the output document. It must include only text.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/copy.html">Web/XSLT/copy</a>
+                
+                  <small>The xsl:copy element transfers a shallow copy (the node and any associated namespace node) of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/copy-of.html">Web/XSLT/copy-of</a>
+                
+                  <small>The xsl:copy-of element makes a deep copy (including descendant nodes) of whatever the select...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/decimal-format.html">Web/XSLT/decimal-format</a>
+                
+                  <small>The xsl:decimal-format element defines the characters and symbols that are to be used in...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/element.html">Web/XSLT/element</a>
+                
+                  <small>The xsl:element element creates an element in the output document.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/Elements.html">Web/XSLT/Elements</a>
+                
+                  <small>On a related note, any attribute in an LRE and some attributes of a limited number of XSLT...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/fallback.html">Web/XSLT/fallback</a>
+                
+                  <small>The xsl:fallback element specifies what template to use if a given extension (or, eventually,...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/for-each.html">Web/XSLT/for-each</a>
+                
+                  <small>The xsl:for-each element selects a set of nodes and processes each of them in the same way. It...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/if.html">Web/XSLT/if</a>
+                
+                  <small>The xsl:if element contains a test attribute and a template. If the test evaluates to true, the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/import.html">Web/XSLT/import</a>
+                
+                  <small>The xsl:import element is a top-level element that serves to import the contents of one...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/include.html">Web/XSLT/include</a>
+                
+                  <small>The xsl:include element merges the contents of one stylesheet with another. Unlike the case of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/key.html">Web/XSLT/key</a>
+                
+                  <small>The xsl:key element declares a named key which can be used elsewhere in the stylesheet with the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/message.html">Web/XSLT/message</a>
+                
+                  <small>The xsl:message element outputs a message (to the JavaScript Console in NS) and optionally...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/namespace-alias.html">Web/XSLT/namespace-alias</a>
+                
+                  <small>The xsl:namespace-alias element is a rarely used device that maps a namespace in the stylesheet...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/number.html">Web/XSLT/number</a>
+                
+                  <small>The xsl:number element counts things sequentially. It can also be used to quickly format a number.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/otherwise.html">Web/XSLT/otherwise</a>
+                
+                  <small>The xsl:otherwise element is used to define the action that should be taken when none of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/output.html">Web/XSLT/output</a>
+                
+                  <small>The xsl:output element controls the characteristics of the output document. To function...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/param.html">Web/XSLT/param</a>
+                
+                  <small>The xsl:param element establishes a parameter by name and, optionally, a default value for that...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/preserve-space.html">Web/XSLT/preserve-space</a>
+                
+                  <small>The xsl:preserve-space element defines the elements in the source document for which whitespace...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/processing-instruction.html">Web/XSLT/processing-instruction</a>
+                
+                  <small>The xsl:processing-instruction element writes a processing instruction to the output document.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/sort.html">Web/XSLT/sort</a>
+                
+                  <small>The xsl:sort element defines a sort key for nodes selected by xsl:apply-templates or...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/strip-space.html">Web/XSLT/strip-space</a>
+                
+                  <small>The xsl:strip-space element defines the elements in the source document for which whitespace...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/stylesheet.html">Web/XSLT/stylesheet</a>
+                
+                  <small>The xsl:stylesheet element (or the equivalent xsl:transform element) is the outermost element of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/template.html">Web/XSLT/template</a>
+                
+                  <small>The xsl:template element defines an output producing template. This element must have either the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/text.html">Web/XSLT/text</a>
+                
+                  <small>The xsl:text element writes literal text to the output tree. It may contain #PCDATA, literal...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/transform.html">Web/XSLT/transform</a>
+                
+                  <small>The xsl:transform element is exactly equivalent to the xsl:stylesheet element.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/value-of.html">Web/XSLT/value-of</a>
+                
+                  <small>The xsl:value-of element evaluates an XPath expression, converts it to a string, and writes that...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/variable.html">Web/XSLT/variable</a>
+                
+                  <small>The xsl:variable element declares a global or local variable in a stylesheet and gives it a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/when.html">Web/XSLT/when</a>
+                
+                  <small>The xsl:when element always appears within an xsl:choose element, acting like a case statement.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/XSLT/with-param.html">Web/XSLT/with-param</a>
+                
+                  <small>The xsl:with-param element sets the value of a parameter to be passed into a template.</small>
+                
+            </li>
+          
+        </ul>
+        
+
+
+      
+    </div>
+
+
+      </div>
+  </main>
+  <!-- Footer -->
+     
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script async="" type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script src="../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><!--[endif]---->
+
+    
+    <script src="../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../static/build/js/wiki.b26a4c181df3.js" charset="utf-8" id="wikiscript"></script>
+
+
+
+  
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/tag/XSLT_Reference by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:53:30 GMT -->
+</body></html>

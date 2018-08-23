@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  
+<!-- Mirrored from mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 11:44:52 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>Shopping list example</title>
+    <style>
+      li {
+        margin-bottom: 10px;
+      }
+
+      li button {
+        font-size: 8px;
+        margin-left: 20px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>My shopping list</h1>
+
+    <div>
+      <label for="item">Enter a new item:</label>
+      <input type="text" name="item" id="item">
+      <button>Add item</button>
+    </div>
+
+    <ul>
+
+    </ul>
+
+    <script>
+      var list = document.querySelector('ul');
+      var input = document.querySelector('input');
+      var button = document.querySelector('button');
+
+      button.onclick = function() {
+        var myItem = input.value;
+        input.value = '';
+
+        var listItem = document.createElement('li');
+        var listText = document.createElement('span');
+        var listBtn = document.createElement('button');
+
+        listItem.appendChild(listText);
+        listText.textContent = myItem;
+        listItem.appendChild(listBtn);
+        listBtn.textContent = 'Delete';
+        list.appendChild(listItem);
+
+        listBtn.onclick = function(e) {
+          list.removeChild(listItem);
+        }
+
+        input.focus();
+      }
+    </script>
+  </body>
+
+<!-- Mirrored from mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 11:44:52 GMT -->
+</html>

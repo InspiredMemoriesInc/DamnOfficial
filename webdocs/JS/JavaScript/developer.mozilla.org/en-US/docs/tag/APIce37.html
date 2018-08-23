@@ -1,0 +1,1232 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=12 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 11:42:04 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  <title>Articles tagged: API</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+
+  
+<link rel="preload" href="../../../static/fonts/locales/ZillaSlab-Regular.f9de6143fdfa.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="license" href="#license">
+  
+
+  
+    
+
+    <link href="../../../static/build/styles/mdn.83865b0f7c30.css" rel="stylesheet" type="text/css">
+
+    
+  
+
+    <link href="../../../static/build/styles/wiki.aaf26c13c39b.css" rel="stylesheet" type="text/css">
+
+
+  <link href="../../../static/build/styles/locale-en-US.ca0bca387b42.css" rel="stylesheet" type="text/css">
+
+  
+    <script>
+      /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
+    </script>
+    
+
+
+
+  
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta property="og:site_name" content="MDN Web Docs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="MDN Web Docs">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../static/img/favicon144.e7e21ca263ca.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../static/img/favicon114.d526f38b09c5.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../static/img/favicon72.cc65d1d762a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../static/img/favicon57.de33179910ae.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="../../../static/img/favicon32.7f3da72dcea1.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script async="" type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  
+      <link rel="alternate" type="application/atom+xml" title="Articles tagged: API" href="../feeds/atom/tag/API">
+  
+
+</head>
+<body class="">
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <!--[endif]---->
+
+  
+  
+      <link rel="alternate" type="application/atom+xml" title="Articles tagged: API" href="../feeds/atom/tag/API">
+  
+
+
+
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/wiki-compat-tables.9978a5ce31c2.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+
+        // interactive editor config
+        win.mdn.interactiveEditor = {
+            siteUrl: "https://developer.mozilla.org",
+            editorUrl: "https://interactive-examples.mdn.mozilla.net"
+        };
+
+    })(this);
+</script>
+    
+    <ul id="nav-access">
+  <li><a href="#content" id="skip-main">Skip to main content</a></li>
+  <li><a id="skip-language" href="#language">Select language</a></li>
+  <li><a href="#q" id="skip-search">Skip to search</a></li>
+</ul>
+
+    <!-- Header -->
+    <header id="main-header" class="header-main">
+      <a href="https://developer.mozilla.org/en-US/" class="logo">MDN Web Docs</a>
+      <div class="nav-toolbox-wrapper">
+        <nav id="main-nav" class="nav-main" role="navigation">
+    <ul>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web">Technologies
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-tech-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+                    <li><a href="../Web/API.html">APIs / DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn">References &amp; Guides
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-learn-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-contact-submenu">
+              <div class="submenu-column">
+                <ul>
+                  <li>
+                      <a href="https://support.mozilla.org/">Get Firefox help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://stackoverflow.com/">Get web development help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                      <a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/tag/API%3Fpage%3D12">Report a content problem
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</nav>
+        <div id="toolbox" class="toolbox">
+  <ul>
+    
+    <li class="nav-login"><div class="login">
+    
+        
+        <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FAPI%3Fpage%3D12" class="login-link js-login-link" data-service="GitHub" rel="nofollow">
+            Sign in<svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+    <title>Github</title>
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path>
+</svg>
+        </a>
+    
+</div></li>
+  </ul>
+</div>
+      </div>
+      <form id="nav-main-search" action="https://developer.mozilla.org/en-US/search" method="get" role="search" class="nav-main-search">
+  <div class="search-wrap">
+    <label for="main-q" class="offscreen">Search</label>
+    <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" aria-hidden="true">
+    <span class="search-trigger">
+        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true">
+    <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path>
+</svg>
+    </span>
+    <button type="submit" class="offscreen">Search</button>
+    <button type="button" id="close-header-search" class="close-header-search transparent">
+        <span class="offscreen">Close search</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+  </div>
+</form>
+    </header> 
+
+  <!-- Content will go here -->
+  <main id="content">
+      
+      <div class="center clear">
+      
+
+    <div id="document-list" class="boxed">
+      <h1>Articles tagged: API</h1>
+      
+        
+  <ol class="pagination">
+  
+    <li class="prev">
+      <a href="API1c8b.html?page=11">
+        Previous
+      </a>
+    </li>
+  
+  
+    <li><a href="API2679.html?page=1">1</a></li>
+    
+      <li class="skip">…</li>
+    
+  
+  
+    <li>
+      <a href="API0b08.html?page=9">9</a>
+    </li>
+  
+    <li>
+      <a href="API1448.html?page=10">10</a>
+    </li>
+  
+    <li>
+      <a href="API1c8b.html?page=11">11</a>
+    </li>
+  
+    <li class="selected">
+      <a href="APIce37.html?page=12">12</a>
+    </li>
+  
+    <li>
+      <a href="API8c93.html?page=13">13</a>
+    </li>
+  
+    <li>
+      <a href="APIa7f1.html?page=14">14</a>
+    </li>
+  
+    <li>
+      <a href="API5760.html?page=15">15</a>
+    </li>
+  
+  
+    
+      <li class="skip">…</li>
+    
+    <li><a href="API4618.html?page=53">53</a></li>
+  
+  
+    <li class="next">
+      <a href="API8c93.html?page=13">
+        Next
+      </a>
+    </li>
+  
+  </ol>
+
+
+
+        <p>Found 5269 documents</p>
+        <ul class="document-list">
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/sidebarAction/open.html">Mozilla/Add-ons/WebExtensions/API/sidebarAction/open</a>
+                
+                  <small>None.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/sidebarAction/setIcon.html">Mozilla/Add-ons/WebExtensions/API/sidebarAction/setIcon</a>
+                
+                  <small>Sets the icon for the sidebar.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/sidebarAction/setPanel.html">Mozilla/Add-ons/WebExtensions/API/sidebarAction/setPanel</a>
+                
+                  <small>Sets the sidebar's panel: that is, the HTML document that defines the content of this sidebar.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/sidebarAction/setTitle.html">Mozilla/Add-ons/WebExtensions/API/sidebarAction/setTitle</a>
+                
+                  <small>Sets the sidebar's title. The title is displayed anywhere the browser lists available sidebars....</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/storage.html">Mozilla/Add-ons/WebExtensions/API/storage</a>
+                
+                  <small>Enables extensions to store and retrieve data, and listen for changes to stored items.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/storage/local.html">Mozilla/Add-ons/WebExtensions/API/storage/local</a>
+                
+                  <small>Represents the local storage area. Items in local storage are local to the machine the extension...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/storage/managed.html">Mozilla/Add-ons/WebExtensions/API/storage/managed</a>
+                
+                  <small>A storage.StorageArea object that represents the managed storage area. Items in managed storage...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/storage/onChanged.html">Mozilla/Add-ons/WebExtensions/API/storage/onChanged</a>
+                
+                  <small>Fired when one or more items change.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/storage/StorageArea.html">Mozilla/Add-ons/WebExtensions/API/storage/StorageArea</a>
+                
+                  <small>StorageArea is an object representing a storage area.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/clear.html">Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/clear</a>
+                
+                  <small>Removes all items from the storage area.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get.html">Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get</a>
+                
+                  <small>Retrieves one or more items from the storage area.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/getBytesInUse.html">Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/getBytesInUse</a>
+                
+                  <small>Gets the amount of storage space, in bytes, used one or more items being stored in the storage area.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/remove.html">Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/remove</a>
+                
+                  <small>Removes one or more items from the storage area.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set.html">Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set</a>
+                
+                  <small>Stores one or more items in the storage area, or update existing items.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/storage/StorageChange.html">Mozilla/Add-ons/WebExtensions/API/storage/StorageChange</a>
+                
+                  <small>StorageChange objects contain the following properties:</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/storage/sync.html">Mozilla/Add-ons/WebExtensions/API/storage/sync</a>
+                
+                  <small>Represents the sync storage area. Items in sync storage are synced by the browser, and are...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs.html">Mozilla/Add-ons/WebExtensions/API/tabs</a>
+                
+                  <small>Interact with the browser's tab system.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/captureTab.html">Mozilla/Add-ons/WebExtensions/API/tabs/captureTab</a>
+                
+                  <small>Creates a data URI encoding an image of the visible area of the given tab. You must have the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/captureVisibleTab.html">Mozilla/Add-ons/WebExtensions/API/tabs/captureVisibleTab</a>
+                
+                  <small>Creates a data URI encoding an image of the visible area of the currently active tab in the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/connect.html">Mozilla/Add-ons/WebExtensions/API/tabs/connect</a>
+                
+                  <small>Call this function to set up a connection between the extension's background scripts (or other...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/create.html">Mozilla/Add-ons/WebExtensions/API/tabs/create</a>
+                
+                  <small>Creates a new tab.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/detectLanguage.html">Mozilla/Add-ons/WebExtensions/API/tabs/detectLanguage</a>
+                
+                  <small>Detects the primary language of the content in a tab, using the Compact Language Detector (CLD).</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/discard.html">Mozilla/Add-ons/WebExtensions/API/tabs/discard</a>
+                
+                  <small>Discards one or more tabs.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/duplicate.html">Mozilla/Add-ons/WebExtensions/API/tabs/duplicate</a>
+                
+                  <small>Duplicates a tab, given its ID.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/executeScript.html">Mozilla/Add-ons/WebExtensions/API/tabs/executeScript</a>
+                
+                  <small>Injects JavaScript code into a page.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/get.html">Mozilla/Add-ons/WebExtensions/API/tabs/get</a>
+                
+                  <small>Given a tab ID, get the tab's details as a tabs.Tab object.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/getAllInWindow.html">Mozilla/Add-ons/WebExtensions/API/tabs/getAllInWindow</a>
+                
+                  <small>Gets details about all tabs in the specified window.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/getCurrent.html">Mozilla/Add-ons/WebExtensions/API/tabs/getCurrent</a>
+                
+                  <small>Get&nbsp;a tabs.Tab containing information about the tab that this script is running in.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/getSelected.html">Mozilla/Add-ons/WebExtensions/API/tabs/getSelected</a>
+                
+                  <small>Gets the tab that is selected in the specified window.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/getZoom.html">Mozilla/Add-ons/WebExtensions/API/tabs/getZoom</a>
+                
+                  <small>Gets the current zoom factor for the specified tab.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/getZoomSettings.html">Mozilla/Add-ons/WebExtensions/API/tabs/getZoomSettings</a>
+                
+                  <small>Gets the current zoom settings for a specified tab.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/hide.html">Mozilla/Add-ons/WebExtensions/API/tabs/hide</a>
+                
+                  <small>Hides one or more tabs.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/highlight.html">Mozilla/Add-ons/WebExtensions/API/tabs/highlight</a>
+                
+                  <small>A Promise that will be fulfilled with a&nbsp;windows.Window object containing details about the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS.html">Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS</a>
+                
+                  <small>Injects CSS into a page.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/move.html">Mozilla/Add-ons/WebExtensions/API/tabs/move</a>
+                
+                  <small>Moves one or more tabs to a new position in the same window or to a different window.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfo.html">Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfo</a>
+                
+                  <small>This object contains a boolean indicating whether the tab is muted, and the reason for the last...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfoReason.html">Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfoReason</a>
+                
+                  <small>Specifies the reason a tab was muted or unmuted.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/onActivated.html">Mozilla/Add-ons/WebExtensions/API/tabs/onActivated</a>
+                
+                  <small>Fires when the active tab in a window changes. Note that the tab's URL may not be set at the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/onActiveChanged.html">Mozilla/Add-ons/WebExtensions/API/tabs/onActiveChanged</a>
+                
+                  <small>Fires when the selected tab in a window changes. Note that the tab's URL may not be set at the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/onAttached.html">Mozilla/Add-ons/WebExtensions/API/tabs/onAttached</a>
+                
+                  <small>Fired when a tab is attached to a window, for example because it was moved between windows.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/onCreated.html">Mozilla/Add-ons/WebExtensions/API/tabs/onCreated</a>
+                
+                  <small>Fired when a tab is created.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/onDetached.html">Mozilla/Add-ons/WebExtensions/API/tabs/onDetached</a>
+                
+                  <small>Fired when a tab is detached from a window, for example because it is being moved between windows.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/onHighlightChanged.html">Mozilla/Add-ons/WebExtensions/API/tabs/onHighlightChanged</a>
+                
+                  <small>Fired when the highlighted or selected tabs in a window changes.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/onHighlighted.html">Mozilla/Add-ons/WebExtensions/API/tabs/onHighlighted</a>
+                
+                  <small>Fired when the set of highlighted tabs in a window changes.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/onMoved.html">Mozilla/Add-ons/WebExtensions/API/tabs/onMoved</a>
+                
+                  <small>Fired when a tab is moved within a window.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/onRemoved.html">Mozilla/Add-ons/WebExtensions/API/tabs/onRemoved</a>
+                
+                  <small>Fired when a tab is closed.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/onReplaced.html">Mozilla/Add-ons/WebExtensions/API/tabs/onReplaced</a>
+                
+                  <small>Fired when a tab is replaced with another tab due to prerendering or instant.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/onSelectionChanged.html">Mozilla/Add-ons/WebExtensions/API/tabs/onSelectionChanged</a>
+                
+                  <small>Fires when the selected tab in a window changes.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated.html">Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated</a>
+                
+                  <small>Fired when a tab is updated.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/onZoomChange.html">Mozilla/Add-ons/WebExtensions/API/tabs/onZoomChange</a>
+                
+                  <small>Fired when a tab is zoomed.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/PageSettings.html">Mozilla/Add-ons/WebExtensions/API/tabs/PageSettings</a>
+                
+                  <small>The type tabs.PageSettings is used to control how a tab is rendered as a PDF by the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/print.html">Mozilla/Add-ons/WebExtensions/API/tabs/print</a>
+                
+                  <small>Call this function to print the contents of the active tab. If this function is called, the user...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/printPreview.html">Mozilla/Add-ons/WebExtensions/API/tabs/printPreview</a>
+                
+                  <small>None.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/query.html">Mozilla/Add-ons/WebExtensions/API/tabs/query</a>
+                
+                  <small>Gets all tabs that have the specified properties, or all tabs if no properties are specified.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/reload.html">Mozilla/Add-ons/WebExtensions/API/tabs/reload</a>
+                
+                  <small>Reload a tab, optionally bypassing the local web cache.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/remove.html">Mozilla/Add-ons/WebExtensions/API/tabs/remove</a>
+                
+                  <small>Closes one or more tabs.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/removeCSS.html">Mozilla/Add-ons/WebExtensions/API/tabs/removeCSS</a>
+                
+                  <small>Removes from a page CSS which was previously injected by a call to tabs.insertCSS().</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF.html">Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF</a>
+                
+                  <small>Saves the current page as a PDF file. This will open a dialog, supplied by the underlying...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage.html">Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage</a>
+                
+                  <small>Sends a single message from the extension's background scripts (or other privileged scripts,...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/sendRequest.html">Mozilla/Add-ons/WebExtensions/API/tabs/sendRequest</a>
+                
+                  <small>Sends a single request to the content script(s) in the specified tab, with an optional callback...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/setZoom.html">Mozilla/Add-ons/WebExtensions/API/tabs/setZoom</a>
+                
+                  <small>Zooms the specified tab.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/setZoomSettings.html">Mozilla/Add-ons/WebExtensions/API/tabs/setZoomSettings</a>
+                
+                  <small>Sets zoom settings for the specified tab. These settings are reset to the default settings upon...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/show.html">Mozilla/Add-ons/WebExtensions/API/tabs/show</a>
+                
+                  <small>Shows one or more tabs that were previously hidden by a call to tabs.hide.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/Tab.html">Mozilla/Add-ons/WebExtensions/API/tabs/Tab</a>
+                
+                  <small>The type tabs.Tab contains information about a tab. This provides access to information about...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/TabStatus.html">Mozilla/Add-ons/WebExtensions/API/tabs/TabStatus</a>
+                
+                  <small>Indicates whether the tab has finished loading.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/TAB_ID_NONE.html">Mozilla/Add-ons/WebExtensions/API/tabs/TAB_ID_NONE</a>
+                
+                  <small>A special ID value given to tabs that are not browser tabs (for example, tabs in devtools windows).</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode.html">Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode</a>
+                
+                  <small>Toggles Reader Mode for the given tab.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/update.html">Mozilla/Add-ons/WebExtensions/API/tabs/update</a>
+                
+                  <small>Navigate the tab to a new URL, or modify other properties of the tab.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/WindowType.html">Mozilla/Add-ons/WebExtensions/API/tabs/WindowType</a>
+                
+                  <small>The type of window that hosts this tab.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/ZoomSettings.html">Mozilla/Add-ons/WebExtensions/API/tabs/ZoomSettings</a>
+                
+                  <small>Defines zoom settings for a tab: mode, scope, and default zoom factor.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/ZoomSettingsMode.html">Mozilla/Add-ons/WebExtensions/API/tabs/ZoomSettingsMode</a>
+                
+                  <small>Defines how zoom changes are handled. Extensions can pass this value into tabs.setZoomSettings()...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/tabs/ZoomSettingsScope.html">Mozilla/Add-ons/WebExtensions/API/tabs/ZoomSettingsScope</a>
+                
+                  <small>Defines whether zoom changes will persist for the page's origin, or only take effect in this...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/theme/getCurrent.html">Mozilla/Add-ons/WebExtensions/API/theme/getCurrent</a>
+                
+                  <small>Gets the currently used theme as a Theme object. The arguments available in the color object are...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/theme/reset.html">Mozilla/Add-ons/WebExtensions/API/theme/reset</a>
+                
+                  <small>Resets any theme that was applied using the theme.update() method.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/theme/update.html">Mozilla/Add-ons/WebExtensions/API/theme/update</a>
+                
+                  <small>Updates the browser theme according to the content of given Theme object.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/topSites.html">Mozilla/Add-ons/WebExtensions/API/topSites</a>
+                
+                  <small>Use the topSites API to get an array containing all the sites listed in the browser's "New Tab" page.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/topSites/get.html">Mozilla/Add-ons/WebExtensions/API/topSites/get</a>
+                
+                  <small>Gets an array containing all the sites listed in the browser's "New Tab" page.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/topSites/MostVisitedURL.html">Mozilla/Add-ons/WebExtensions/API/topSites/MostVisitedURL</a>
+                
+                  <small>The MostVisitedURL type contains two properties: the title of a page and its URL.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/types.html">Mozilla/Add-ons/WebExtensions/API/types</a>
+                
+                  <small>Defines the BrowserSetting type, which is used to represent a browser setting.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting.html">Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting</a>
+                
+                  <small>A BrowserSetting is an object representing a browser setting.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/clear.html">Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/clear</a>
+                
+                  <small>Use BrowserSetting.clear() to clear any changes the extension has made to the browser setting....</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/get.html">Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/get</a>
+                
+                  <small>The BrowserSetting.get() method gets the current value of the browser setting, and an...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/onChange.html">Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/onChange</a>
+                
+                  <small>The BrowserSetting.onChange event is fired when the setting is changed.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set.html">Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set</a>
+                
+                  <small>Use BrowserSetting.set() to change the browser setting to a new value.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/webNavigation.html">Mozilla/Add-ons/WebExtensions/API/webNavigation</a>
+                
+                  <small>Add event listeners for the various stages of a navigation. A navigation consists of a frame in...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/webNavigation/getAllFrames.html">Mozilla/Add-ons/WebExtensions/API/webNavigation/getAllFrames</a>
+                
+                  <small>Given a tab ID, retrieves information about all the frames it contains.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/webNavigation/getFrame.html">Mozilla/Add-ons/WebExtensions/API/webNavigation/getFrame</a>
+                
+                  <small>Retrieves information about a particular frame. A frame may be the top-level frame in a tab or a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/webNavigation/onBeforeNavigate.html">Mozilla/Add-ons/WebExtensions/API/webNavigation/onBeforeNavigate</a>
+                
+                  <small>Fired when the browser is about to start a navigation event.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/webNavigation/onCommitted.html">Mozilla/Add-ons/WebExtensions/API/webNavigation/onCommitted</a>
+                
+                  <small>Fired when a navigation is committed. At least part of the new document has been received from...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/webNavigation/onCompleted.html">Mozilla/Add-ons/WebExtensions/API/webNavigation/onCompleted</a>
+                
+                  <small>Fired when a document, including the resources it refers to, is completely loaded and...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/webNavigation/onCreatedNavigationTarget.html">Mozilla/Add-ons/WebExtensions/API/webNavigation/onCreatedNavigationTarget</a>
+                
+                  <small>Fired when a new window, or a new tab in an existing window, is created to host the target of a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/webNavigation/onDOMContentLoaded.html">Mozilla/Add-ons/WebExtensions/API/webNavigation/onDOMContentLoaded</a>
+                
+                  <small>Fired when the DOMContentLoaded event is fired in the page. At this point the document is loaded...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/webNavigation/onErrorOccurred.html">Mozilla/Add-ons/WebExtensions/API/webNavigation/onErrorOccurred</a>
+                
+                  <small>Fired when an error occurs and the navigation is aborted. This can happen if either a network...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/webNavigation/onHistoryStateUpdated.html">Mozilla/Add-ons/WebExtensions/API/webNavigation/onHistoryStateUpdated</a>
+                
+                  <small>Fired when the page used the history API to update the URL displayed in the browser's location...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/webNavigation/onReferenceFragmentUpdated.html">Mozilla/Add-ons/WebExtensions/API/webNavigation/onReferenceFragmentUpdated</a>
+                
+                  <small>Events have three functions:</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/webNavigation/onTabReplaced.html">Mozilla/Add-ons/WebExtensions/API/webNavigation/onTabReplaced</a>
+                
+                  <small>Fired when the contents of the tab is replaced by a different (usually previously pre-rendered) tab.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionQualifier.html">Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionQualifier</a>
+                
+                  <small>Values of this type are strings. Possible values are:</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionType.html">Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionType</a>
+                
+                  <small>Cause of the navigation: for example, the user clicked a link, or typed an address, or clicked a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/webRequest.html">Mozilla/Add-ons/WebExtensions/API/webRequest</a>
+                
+                  <small>Add event listeners for the various stages of making an HTTP request. The event listener...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Add-ons/WebExtensions/API/webRequest/BlockingResponse.html">Mozilla/Add-ons/WebExtensions/API/webRequest/BlockingResponse</a>
+                
+                  <small>An object of this type is returned by event listeners that have set "blocking" in their...</small>
+                
+            </li>
+          
+        </ul>
+        
+  <ol class="pagination">
+  
+    <li class="prev">
+      <a href="API1c8b.html?page=11">
+        Previous
+      </a>
+    </li>
+  
+  
+    <li><a href="API2679.html?page=1">1</a></li>
+    
+      <li class="skip">…</li>
+    
+  
+  
+    <li>
+      <a href="API0b08.html?page=9">9</a>
+    </li>
+  
+    <li>
+      <a href="API1448.html?page=10">10</a>
+    </li>
+  
+    <li>
+      <a href="API1c8b.html?page=11">11</a>
+    </li>
+  
+    <li class="selected">
+      <a href="APIce37.html?page=12">12</a>
+    </li>
+  
+    <li>
+      <a href="API8c93.html?page=13">13</a>
+    </li>
+  
+    <li>
+      <a href="APIa7f1.html?page=14">14</a>
+    </li>
+  
+    <li>
+      <a href="API5760.html?page=15">15</a>
+    </li>
+  
+  
+    
+      <li class="skip">…</li>
+    
+    <li><a href="API4618.html?page=53">53</a></li>
+  
+  
+    <li class="next">
+      <a href="API8c93.html?page=13">
+        Next
+      </a>
+    </li>
+  
+  </ol>
+
+
+
+      
+    </div>
+
+
+      </div>
+  </main>
+  <!-- Footer -->
+     
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script async="" type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script src="../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><!--[endif]---->
+
+    
+    <script src="../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../static/build/js/wiki.b26a4c181df3.js" charset="utf-8" id="wikiscript"></script>
+
+
+
+  
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=12 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 11:42:04 GMT -->
+</body></html>

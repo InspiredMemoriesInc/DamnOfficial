@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/BatteryManager/charging$samples/Example?revision=1363426 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 10:55:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <title>BatteryManager.charging</title>
+    </head>
+    <body>
+        
+            <div id="charging">(charging state unknown)</div>
+        
+        
+            <script>
+                navigator.getBattery().then(function(battery) {
+
+    var charging = battery.charging;
+
+    document.querySelector('#charging').textContent = charging ;
+});
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/BatteryManager/charging$samples/Example?revision=1363426 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 10:55:51 GMT -->
+</html>

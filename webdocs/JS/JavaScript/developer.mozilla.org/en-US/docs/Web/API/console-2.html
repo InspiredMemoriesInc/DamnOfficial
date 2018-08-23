@@ -1,0 +1,2155 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/console by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 08:47:31 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  <title>Console</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+
+  
+<link rel="preload" href="../../../../static/fonts/locales/ZillaSlab-Regular.f9de6143fdfa.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="license" href="#license">
+  
+
+  
+    
+    
+
+    <link href="../../../../static/build/styles/mdn.83865b0f7c30.css" rel="stylesheet" type="text/css">
+
+    
+  
+
+    <link href="../../../../static/build/styles/wiki.aaf26c13c39b.css" rel="stylesheet" type="text/css">
+
+
+    
+
+  <link href="../../../../static/build/styles/locale-en-US.ca0bca387b42.css" rel="stylesheet" type="text/css">
+
+  
+    <script>
+      /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
+    </script>
+    
+
+
+
+  
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta property="og:site_name" content="MDN Web Docs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="MDN Web Docs">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../static/img/favicon144.e7e21ca263ca.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../static/img/favicon114.d526f38b09c5.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../static/img/favicon72.cc65d1d762a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../../static/img/favicon57.de33179910ae.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="../../../../static/img/favicon32.7f3da72dcea1.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script async="" type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  <link rel="dns-prefetch" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/API/Console$json">
+  <link rel="canonical" href="Console.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="Console.html" title="Console">
+  
+    
+      <link rel="alternate" hreflang="de" href="https://developer.mozilla.org/de/docs/Web/API/Console" title="Console">
+    
+      <link rel="alternate" hreflang="es" href="https://developer.mozilla.org/es/docs/Web/API/Console" title="Console">
+    
+      <link rel="alternate" hreflang="fr" href="https://developer.mozilla.org/fr/docs/Web/API/Console" title="Console">
+    
+      <link rel="alternate" hreflang="id" href="https://developer.mozilla.org/id/docs/Web/API/Console" title="Console">
+    
+      <link rel="alternate" hreflang="ja" href="https://developer.mozilla.org/ja/docs/Web/API/console" title="console">
+    
+      <link rel="alternate" hreflang="ko" href="https://developer.mozilla.org/ko/docs/Web/API/Console" title="Console">
+    
+      <link rel="alternate" hreflang="pl" href="https://developer.mozilla.org/pl/docs/Web/API/Console" title="Console">
+    
+      <link rel="alternate" hreflang="pt-BR" href="https://developer.mozilla.org/pt-BR/docs/Web/API/Console" title="Console">
+    
+      <link rel="alternate" hreflang="ru" href="https://developer.mozilla.org/ru/docs/Web/API/Console" title="Console">
+    
+      <link rel="alternate" hreflang="uk" href="https://developer.mozilla.org/uk/docs/Web/API/Console" title="Console">
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Console" title="Console">
+    
+      <link rel="alternate" hreflang="zh-TW" href="https://developer.mozilla.org/zh-TW/docs/Web/API/Console" title="Console">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="Console">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/API/Console">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/API/Console">
+  <meta name="twitter:title" content="Console">
+  
+  <meta property="og:description" content="The Console object provides access to the browser's debugging console (e.g.&nbsp;the Web Console in Firefox). The specifics of how it works varies&nbsp;from browser to browser, but there is a de facto set of features that are typically provided.">
+  <meta name="description" content="The Console object provides access to the browser's debugging console (e.g.&nbsp;the Web Console in Firefox). The specifics of how it works varies&nbsp;from browser to browser, but there is a de facto set of features that are typically provided.">
+  <meta name="twitter:description" content="The Console object provides access to the browser's debugging console (e.g.&nbsp;the Web Console in Firefox). The specifics of how it works varies&nbsp;from browser to browser, but there is a de facto set of features that are typically provided.">
+  
+
+</head>
+<body data-slug="Web/API/Console" contextmenu="edit-history-menu" data-search-url="" class="document">
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <!--[endif]---->
+
+  
+  <link rel="dns-prefetch" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/API/Console$json">
+  <link rel="canonical" href="Console.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="Console.html" title="Console">
+  
+    
+      <link rel="alternate" hreflang="de" href="https://developer.mozilla.org/de/docs/Web/API/Console" title="Console">
+    
+      <link rel="alternate" hreflang="es" href="https://developer.mozilla.org/es/docs/Web/API/Console" title="Console">
+    
+      <link rel="alternate" hreflang="fr" href="https://developer.mozilla.org/fr/docs/Web/API/Console" title="Console">
+    
+      <link rel="alternate" hreflang="id" href="https://developer.mozilla.org/id/docs/Web/API/Console" title="Console">
+    
+      <link rel="alternate" hreflang="ja" href="https://developer.mozilla.org/ja/docs/Web/API/console" title="console">
+    
+      <link rel="alternate" hreflang="ko" href="https://developer.mozilla.org/ko/docs/Web/API/Console" title="Console">
+    
+      <link rel="alternate" hreflang="pl" href="https://developer.mozilla.org/pl/docs/Web/API/Console" title="Console">
+    
+      <link rel="alternate" hreflang="pt-BR" href="https://developer.mozilla.org/pt-BR/docs/Web/API/Console" title="Console">
+    
+      <link rel="alternate" hreflang="ru" href="https://developer.mozilla.org/ru/docs/Web/API/Console" title="Console">
+    
+      <link rel="alternate" hreflang="uk" href="https://developer.mozilla.org/uk/docs/Web/API/Console" title="Console">
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Console" title="Console">
+    
+      <link rel="alternate" hreflang="zh-TW" href="https://developer.mozilla.org/zh-TW/docs/Web/API/Console" title="Console">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="Console">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/API/Console">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/API/Console">
+  <meta name="twitter:title" content="Console">
+  
+  <meta property="og:description" content="The Console object provides access to the browser's debugging console (e.g.&nbsp;the Web Console in Firefox). The specifics of how it works varies&nbsp;from browser to browser, but there is a de facto set of features that are typically provided.">
+  <meta name="description" content="The Console object provides access to the browser's debugging console (e.g.&nbsp;the Web Console in Firefox). The specifics of how it works varies&nbsp;from browser to browser, but there is a de facto set of features that are typically provided.">
+  <meta name="twitter:description" content="The Console object provides access to the browser's debugging console (e.g.&nbsp;the Web Console in Firefox). The specifics of how it works varies&nbsp;from browser to browser, but there is a de facto set of features that are typically provided.">
+  
+
+
+
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/wiki-compat-tables.9978a5ce31c2.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+
+        // interactive editor config
+        win.mdn.interactiveEditor = {
+            siteUrl: "https://developer.mozilla.org",
+            editorUrl: "https://interactive-examples.mdn.mozilla.net"
+        };
+
+    })(this);
+</script>
+    
+    <ul id="nav-access">
+  <li><a href="#content" id="skip-main">Skip to main content</a></li>
+  <li><a id="skip-language" href="#language">Select language</a></li>
+  <li><a href="#q" id="skip-search">Skip to search</a></li>
+</ul>
+
+    <!-- Header -->
+    <header id="main-header" class="header-main">
+      <a href="https://developer.mozilla.org/en-US/" class="logo">MDN Web Docs</a>
+      <div class="nav-toolbox-wrapper">
+        <nav id="main-nav" class="nav-main" role="navigation">
+    <ul>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web">Technologies
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-tech-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+                    <li><a href="../API.html">APIs / DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn">References &amp; Guides
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-learn-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-contact-submenu">
+              <div class="submenu-column">
+                <ul>
+                  <li>
+                      <a href="https://support.mozilla.org/">Get Firefox help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://stackoverflow.com/">Get web development help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                      <a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/console">Report a content problem
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</nav>
+        <div id="toolbox" class="toolbox">
+  <ul>
+    
+    <li class="nav-login"><div class="login">
+    
+        
+        <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2Fconsole" class="login-link js-login-link" data-service="GitHub" rel="nofollow">
+            Sign in<svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+    <title>Github</title>
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path>
+</svg>
+        </a>
+    
+</div></li>
+  </ul>
+</div>
+      </div>
+      <form id="nav-main-search" action="https://developer.mozilla.org/en-US/search" method="get" role="search" class="nav-main-search">
+  <div class="search-wrap">
+    <label for="main-q" class="offscreen">Search</label>
+    <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" aria-hidden="true">
+    <span class="search-trigger">
+        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true">
+    <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path>
+</svg>
+    </span>
+    <button type="submit" class="offscreen">Search</button>
+    <button type="button" id="close-header-search" class="close-header-search transparent">
+        <span class="offscreen">Close search</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+  </div>
+</form>
+    </header> 
+
+  <!-- Content will go here -->
+  <main id="content">
+      
+  <!-- heading -->
+  <div id="wiki-document-head" class="document-head">
+    <div class="center">
+      <!-- action buttons -->
+      <div class="document-actions">
+        
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons">
+      <li>
+          <button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false">
+              <svg class="icon icon-language" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M10.219 16.844c-.031.109-.797-.25-1-.328-.203-.094-1.125-.609-1.359-.766s-1.125-.891-1.234-.938a28.275 28.275 0 0 1-2.094 2.828c-.281.328-1.125 1.391-1.641 1.719-.078.047-.531.094-.594.063.25-.187.969-1.078 1.281-1.437.391-.453 2.25-3.047 2.562-3.641.328-.594 1.312-2.562 1.359-2.75-.156-.016-1.391.406-1.719.516-.313.094-1.172.297-1.234.344-.063.063-.016.25-.047.313s-.313.203-.484.234a1.647 1.647 0 0 1-.734 0c-.203-.047-.391-.25-.438-.328 0 0-.063-.094-.078-.359.187-.063.5-.078.844-.172s1.188-.344 1.641-.5 1.328-.484 1.594-.547c.281-.047.984-.516 1.359-.641s.641-.281.656-.203 0 .422-.016.516c-.016.078-.766 1.547-.875 1.781-.063.125-.5.953-1.203 2.047.25.109.781.328 1 .438.266.125 2.125.906 2.219.938s.266.75.234.875zM7.016 9.25c.047.266-.031.375-.063.438-.156.297-.547.5-.781.594s-.625.187-.938.187c-.141-.016-.422-.063-.766-.406-.187-.203-.328-.75-.266-.688s.516.125.719.078.688-.187.906-.25c.234-.078.703-.203.859-.219.156 0 .281.063.328.266zm10.906 2.016l.984 3.547-2.172-.656zM.609 23.766l10.844-3.625V4.016L.609 7.657v16.109zM20 18.813l1.594.484-2.828-10.266-1.563-.484-3.375 8.375 1.594.484.703-1.719 3.297 1.016zM12.141 3.781l8.953 2.875V.718zM17 24.453l2.469.203-.844 2.5L18 26.125c-1.266.812-2.828 1.437-4.312 1.687-.453.094-.969.187-1.422.187h-1.313c-1.656 0-4.672-.984-5.984-1.937-.094-.078-.125-.141-.125-.25 0-.172.125-.297.281-.297.141 0 .875.453 1.078.547 1.406.703 3.375 1.344 4.953 1.344 1.953 0 3.281-.25 5.063-1.016.516-.234.969-.531 1.453-.797zm7-16.859v16.859c-12.078-3.844-12.094-3.844-12.094-3.844C11.656 20.718.453 24.5.297 24.5a.3.3 0 0 1-.281-.203c0-.016-.016-.031-.016-.047V7.406c.016-.047.031-.125.063-.156.094-.109.219-.141.313-.172.047-.016 1-.328 2.328-.781v-6l8.719 3.094C11.532 3.36 21.251 0 21.392 0c.172 0 .313.125.313.328v6.531z"></path>
+</svg>
+              <span>Languages</span>
+          </button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                
+                
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/de/docs/Web/API/Console" data-locale="de" title="German">Deutsch (de)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/es/docs/Web/API/Console" data-locale="es" title="Spanish">Español (es)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/fr/docs/Web/API/Console" data-locale="fr" title="French">Français (fr)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/id/docs/Web/API/Console" data-locale="id" title="Indonesian">Bahasa Indonesia (id)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ja/docs/Web/API/console" data-locale="ja" title="Japanese">日本語 (ja)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ko/docs/Web/API/Console" data-locale="ko" title="Korean">한국어 (ko)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/pl/docs/Web/API/Console" data-locale="pl" title="Polish">Polski (pl)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/pt-BR/docs/Web/API/Console" data-locale="pt-BR" title="Portuguese (Brazilian)">Português (do&nbsp;Brasil) (pt-BR)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ru/docs/Web/API/Console" data-locale="ru" title="Russian">Русский (ru)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/uk/docs/Web/API/Console" data-locale="uk" title="Ukrainian">Українська (uk)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Console" data-locale="zh-CN" title="Chinese (Simplified)">中文 (简体) (zh-CN)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-TW/docs/Web/API/Console" data-locale="zh-TW" title="Chinese (Traditional)">正體中文 (繁體) (zh-TW)</a></bdi></li>
+                
+              
+
+              
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console$locales" rel="nofollow" id="translations-add">Add a translation</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+      
+      <li class="page-buttons-edit">
+          <a href="https://developer.mozilla.org/en-US/docs/Web/API/Console$edit" class="button neutral" id="edit-button" rel="nofollow">
+              <svg class="icon icon-pencil" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M5.672 24l1.422-1.422-3.672-3.672L2 20.328V22h2v2h1.672zm8.172-14.5a.329.329 0 0 0-.344-.344.368.368 0 0 0-.266.109l-8.469 8.469a.366.366 0 0 0-.109.266c0 .203.141.344.344.344a.368.368 0 0 0 .266-.109l8.469-8.469a.366.366 0 0 0 .109-.266zM13 6.5l6.5 6.5-13 13H0v-6.5zM23.672 8c0 .531-.219 1.047-.578 1.406L20.5 12 14 5.5l2.594-2.578c.359-.375.875-.594 1.406-.594s1.047.219 1.422.594l3.672 3.656c.359.375.578.891.578 1.422z"></path>
+</svg>
+              Edit
+          </a>
+      </li>
+      
+
+        
+
+        <li class="page-buttons-advanced">
+            <button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false">
+                <svg class="icon icon-gear" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M16 14c0-2.203-1.797-4-4-4s-4 1.797-4 4 1.797 4 4 4 4-1.797 4-4zm8-1.703v3.469c0 .234-.187.516-.438.562l-2.891.438a8.86 8.86 0 0 1-.609 1.422c.531.766 1.094 1.453 1.672 2.156.094.109.156.25.156.391s-.047.25-.141.359c-.375.5-2.484 2.797-3.016 2.797a.795.795 0 0 1-.406-.141l-2.156-1.687a9.449 9.449 0 0 1-1.422.594c-.109.953-.203 1.969-.453 2.906a.573.573 0 0 1-.562.438h-3.469c-.281 0-.531-.203-.562-.469l-.438-2.875a9.194 9.194 0 0 1-1.406-.578l-2.203 1.672c-.109.094-.25.141-.391.141s-.281-.063-.391-.172c-.828-.75-1.922-1.719-2.578-2.625a.607.607 0 0 1 .016-.718c.531-.719 1.109-1.406 1.641-2.141a8.324 8.324 0 0 1-.641-1.547l-2.859-.422A.57.57 0 0 1 0 15.705v-3.469c0-.234.187-.516.422-.562l2.906-.438c.156-.5.359-.969.609-1.437a37.64 37.64 0 0 0-1.672-2.156c-.094-.109-.156-.234-.156-.375s.063-.25.141-.359c.375-.516 2.484-2.797 3.016-2.797.141 0 .281.063.406.156L7.828 5.94a9.449 9.449 0 0 1 1.422-.594c.109-.953.203-1.969.453-2.906a.573.573 0 0 1 .562-.438h3.469c.281 0 .531.203.562.469l.438 2.875c.484.156.953.344 1.406.578l2.219-1.672c.094-.094.234-.141.375-.141s.281.063.391.156c.828.766 1.922 1.734 2.578 2.656a.534.534 0 0 1 .109.344c0 .141-.047.25-.125.359-.531.719-1.109 1.406-1.641 2.141.266.5.484 1.016.641 1.531l2.859.438a.57.57 0 0 1 .453.562z"></path>
+</svg>
+                <span>Advanced</span>
+            </button>
+            <div class="submenu js-submenu" id="advanced-menu-submenu">
+                <!-- this page -->
+                <div class="submenu-column">
+                    <div class="title">Advanced</div>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console$history" rel="nofollow">History</a></li>
+                        
+                        
+                        
+
+
+                
+
+                <li class="page-print"><a href="#" onclick="return window.print();">Print this article</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+      </div>
+
+      <div class="document-title">
+        <h1>Console</h1>
+      </div>
+    <nav class="crumbs" role="navigation">
+      <ol typeof="BreadcrumbList" vocab="https://schema.org/" aria-label="breadcrumbs">
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="https://developer.mozilla.org/en-US/docs/Web" property="item" typeof="WebPage">
+              <span property="name">Web technology for developers</span>
+            </a>
+            <meta property="position" content="1">
+          </li>
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="../API.html" property="item" typeof="WebPage">
+              <span property="name">Web APIs</span>
+            </a>
+            <meta property="position" content="2">
+          </li>
+        
+        <li property="itemListElement" typeof="ListItem" class="crumb">
+          <span property="name">Console</span>
+        </li>
+      </ol>
+    </nav></div>
+  </div>
+  
+  <div id="toc" class="toc">
+    <div class="center">
+      <div class="toc-head">Jump to:</div>
+        <ol class="toc-links">
+          <li><a rel="internal" href="#Methods">Methods</a></li><li><a rel="internal" href="#Usage">Usage</a></li><li><a rel="internal" href="#Specifications">Specifications</a></li><li><a rel="internal" href="#Browser_compatibility">Browser compatibility</a></li><li><a rel="internal" href="#Notes">Notes</a></li><li><a rel="internal" href="#See_also">See also</a>
+        </li></ol>
+    </div>
+  </div>
+  
+
+      <div class="center clear">
+      
+
+    <div class="wiki-main-content" id="document-main"><div class="center">
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-left-present">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-main wiki-column text-content">
+
+              
+
+              
+              
+
+              
+
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <div></div>
+
+<p>The <strong><code>Console</code></strong> object provides access to the browser's debugging console (e.g.&nbsp;the <a href="https://developer.mozilla.org/en-US/docs/Tools/Web_Console">Web Console</a> in Firefox). The specifics of how it works varies&nbsp;from browser to browser, but there is a <em>de facto</em> set of features that are typically provided.</p>
+
+<p>The <code>Console</code> object can be accessed from any global object. <a href="Window.html" title="The window object represents a window containing a DOM document; the document property points to the DOM document loaded in that window."><code>Window</code></a> on browsing scopes and <a href="WorkerGlobalScope.html" title="The WorkerGlobalScope interface of the Web Workers API is an interface representing the scope of any worker. Workers have no browsing context; this scope contains the information usually conveyed by Window objects — in this case event handlers, the console or the associated WorkerNavigator object. Each WorkerGlobalScope has its own event loop."><code>WorkerGlobalScope</code></a> as specific variants in workers via the property console. It's exposed as <a href="Window/console.html" title="The Window.console read-only property returns a reference to the Console object, which provides methods for logging information to the browser's console. These methods are intended for debugging purposes only and should not be relied on for presenting information to end users."><code>Window.console</code></a>, and can be referenced as simply <code>console</code>. For example:</p>
+
+<pre class="brush: js">console.log("Failed to open the specified link")</pre>
+
+<p>This page documents the <a href="#Methods">Methods</a> available on the <code>Console</code> object and gives a few <a href="#Usage">Usage</a> examples.</p>
+
+<p></p><div class="note"><strong>Note:</strong>&nbsp;This feature is available in <a href="Web_Workers_API.html">Web Workers</a>.</div><p></p>
+
+<a class="dashAnchor" name="//apple_ref/Section/Methods"></a><h2 id="Methods">Methods</h2>
+
+<dl>
+ <dt><a href="Console/assert.html" title="Writes an error message to the console if the assertion is false. If the assertion is true, nothing happens."><code>Console.assert()</code></a></dt>
+ <dd>Log a message and stack trace to console if the&nbsp;first argument is <code>false</code>.</dd>
+ <dt><a href="Console/clear.html" title="Clears the console."><code>Console.clear()</code></a></dt>
+ <dd>Clear the console.</dd>
+ <dt><a href="Console/count.html" title="Logs the number of times that this particular call to count() has been called. This function takes an optional argument label."><code>Console.count()</code></a></dt>
+ <dd>Log the number of times this line has been called with the given label.</dd>
+ <dt><a href="Console/countReset.html" title="Resets the counter. This function takes an optional argument label."><code>Console.countReset()</code></a></dt>
+ <dd>Resets the value of the counter with the given label.</dd>
+ <dt><a rel="nofollow" href="Console/debug.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>Console.debug()</code></a></dt>
+ <dd>Outputs a message to the console with the log level <code>"debug"</code>.
+ <div class="note"><strong>Note</strong>: Starting with Chromium 58 this method only appears in Chromium browser consoles when level "Verbose" is selected.</div>
+ </dd>
+ <dt><a href="Console/dir.html" title="Displays an interactive list of the properties of the specified JavaScript object. The output is presented as a hierarchical listing with disclosure triangles that let you see the contents of child objects."><code>Console.dir()</code></a></dt>
+ <dd>Displays an interactive listing of the properties of a specified JavaScript object. This listing lets you use disclosure triangles to examine the contents of child objects.</dd>
+ <dt><a href="Console/dirxml.html" title="Displays an interactive tree of the descendant elements of the specified XML/HTML element.&nbsp;If it is not possible to display as an element the JavaScript Object view is shown instead.&nbsp;The output is presented as a hierarchical listing of expandable nodes that let you see the contents of child nodes."><code>Console.dirxml()</code></a></dt>
+ <dd>
+ <p>Displays an XML/HTML Element representation of the specified object&nbsp;if possible&nbsp;or the JavaScript Object view if it is not possible.</p>
+ </dd>
+ <dt><a href="Console/error.html" title="Outputs an error message to the Web Console."><code>Console.error()</code></a></dt>
+ <dd>Outputs an error message. You may use <a href="console-2.html#Using_string_substitutions">string substitution</a> and additional arguments with this method.</dd>
+ <dt><a rel="nofollow" href="Console/exception.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>Console.exception()</code></a> <span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></dt>
+ <dd>An alias for <code>error()</code>.</dd>
+ <dt><a href="Console/group.html" title="Creates a new inline group in the Web Console log. This indents following console messages by an additional level, until console.groupEnd() is called."><code>Console.group()</code></a></dt>
+ <dd>Creates a new inline <a href="console-2.html#Using_groups_in_the_console">group</a>, indenting all following output by another level. To move back out a level, call <code>groupEnd()</code>.</dd>
+ <dt><a href="Console/groupCollapsed.html" title="Creates a new inline group in the Web Console. Unlike console.group(), however, the new group is created collapsed. The user will need to use the disclosure button next to it to expand it, revealing the entries created in the group."><code>Console.groupCollapsed()</code></a></dt>
+ <dd>Creates a new inline <a href="console-2.html#Using_groups_in_the_console">group</a>, indenting all following output by another level. However,&nbsp;unlike <code>group()</code>&nbsp;this starts with the inline group collapsed&nbsp;requiring the use of a disclosure button to expand it. To move back out a level, call <code>groupEnd()</code>.</dd>
+ <dt><a href="Console/groupEnd.html" title="Exits the current inline group in the Web Console. See Using groups in the console in the console documentation for details and examples."><code>Console.groupEnd()</code></a></dt>
+ <dd>Exits the current inline <a href="console-2.html#Using_groups_in_the_console">group</a>.</dd>
+ <dt><a href="Console/info.html" title="Outputs an informational message to the Web Console. In Firefox and Chrome, a small &quot;i&quot; icon is displayed next to these items in the Web Console's log."><code>Console.info()</code></a></dt>
+ <dd>Informative logging of information. You may use <a href="console-2.html#Using_string_substitutions">string substitution</a> and additional arguments with this method.</dd>
+ <dt><a href="Console/log.html" title="Outputs a message to the Web Console."><code>Console.log()</code></a></dt>
+ <dd>For general output of logging information. You may use <a href="console-2.html#Using_string_substitutions">string substitution</a> and additional arguments with this method.</dd>
+ <dt><a href="Console/profile.html" title="Starts recording a performance profile (for example, the Firefox performance tool)."><code>Console.profile()</code></a> <span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></dt>
+ <dd>Starts the browser's built-in profiler (for example, the <a href="https://developer.mozilla.org/en-US/docs/Tools/Performance">Firefox performance tool</a>). You can specify an optional name for the profile.</dd>
+ <dt><a href="Console/profileEnd.html" title="The profileEnd method stops recording a profile previously started with Console.profile()."><code>Console.profileEnd()</code></a> <span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></dt>
+ <dd>Stops the profiler. You can see the resulting profile in the browser's performance tool (for example, the <a href="https://developer.mozilla.org/en-US/docs/Tools/Performance">Firefox performance tool</a>).</dd>
+ <dt><a href="Console/table.html" title="Displays tabular data as a table."><code>Console.table()</code></a></dt>
+ <dd>Displays tabular data as a table.</dd>
+ <dt><a href="Console/time.html" title="Starts a timer you can use to track how long an operation takes. You give each timer a unique name, and may have up to 10,000 timers running on a given page. When you call console.timeEnd() with the same name, the browser will output the time, in milliseconds, that elapsed since the timer was started."><code>Console.time()</code></a></dt>
+ <dd>Starts a <a href="console-2.html#Timers">timer</a> with a name specified as an input parameter. Up to 10,000 simultaneous timers can run on a given page.</dd>
+ <dt><a href="Console/timeEnd.html" title="Stops a timer that was previously started by calling console.time()."><code>Console.timeEnd()</code></a></dt>
+ <dd>Stops the specified <a href="console-2.html#Timers">timer</a> and logs the elapsed time in seconds since it&nbsp;started.</dd>
+ <dt><a href="Console/timeLog.html" title="Logs the current value of a timer that was previously started by calling console.time() to the console."><code>Console.timeLog()</code></a></dt>
+ <dd>Logs the value of the specified <a href="console-2.html#Timers">timer</a> to the console.</dd>
+ <dt><a href="Console/timeStamp.html" title="Adds a single marker to the browser's Performance or Waterfall tool. This lets you correlate a point in your code with the other events recorded in the timeline, such as layout and paint events."><code>Console.timeStamp()</code></a> <span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></dt>
+ <dd>Adds a marker to the browser's <a rel="noopener" href="https://developer.chrome.com/devtools/docs/timeline" class="external">Timeline</a> or <a href="https://developer.mozilla.org/en-US/docs/Tools/Performance/Waterfall">Waterfall</a> tool.</dd>
+ <dt><a href="Console/trace.html" title="Outputs a stack trace to the Web Console."><code>Console.trace()</code></a></dt>
+ <dd>Outputs a <a href="console-2.html#Stack_traces">stack trace</a>.</dd>
+ <dt><a href="Console/warn.html" title="Outputs a warning message to the Web Console."><code>Console.warn()</code></a></dt>
+ <dd>Outputs a warning message. You may use <a href="console-2.html#Using_string_substitutions">string substitution</a> and additional arguments with this method.</dd>
+</dl>
+
+<a class="dashAnchor" name="//apple_ref/Section/Usage"></a><h2 id="Usage" name="Usage">Usage</h2>
+
+<h3 id="Outputting_text_to_the_console" name="Outputting_text_to_the_console">Outputting text to the console</h3>
+
+<p>The most frequently-used feature of the console is logging of text and&nbsp;other data. There are four categories of output you can generate, using the <a href="Console/log.html" title="Outputs a message to the Web Console."><code>console.log()</code></a>, <a href="Console/info.html" title="Outputs an informational message to the Web Console. In Firefox and Chrome, a small &quot;i&quot; icon is displayed next to these items in the Web Console's log."><code>console.info()</code></a>, <a href="Console/warn.html" title="Outputs a warning message to the Web Console."><code>console.warn()</code></a>, and <a href="Console/error.html" title="Outputs an error message to the Web Console."><code>console.error()</code></a> methods respectively. Each of these results in output styled differently in the log, and you can use the filtering controls provided by your browser to only view the kinds of output that interest you.</p>
+
+<p>There are two ways to use each of the output methods; you can simply pass in a list of objects whose string&nbsp;representations get concatenated into one string, then output to the console, or you can pass in a string containing zero or more substitution strings followed by a list of objects&nbsp;to replace them.</p>
+
+<h4 id="Outputting_a_single_object">Outputting a single object</h4>
+
+<p>The simplest way to use the logging methods is to output a single object:</p>
+
+<pre class="brush: js">var someObject = { str: "Some text", id: 5 };
+console.log(someObject);
+</pre>
+
+<p>The output looks something like this:</p>
+
+<pre>[09:27:13.475] ({str:"Some text", id:5})</pre>
+
+<h4 id="Outputting_multiple_objects">Outputting multiple objects</h4>
+
+<p>You can also output multiple objects by simply listing them when calling the logging method, like this:</p>
+
+<pre class="brush: js">var car = "Dodge Charger";
+var someObject = { str: "Some text", id: 5 }; 
+console.info("My first car was a", car, ". The object is:", someObject);</pre>
+
+<p>This output will look like this:</p>
+
+<pre>[09:28:22.711] My first car was a Dodge Charger . The object is: ({str:"Some text", id:5})
+</pre>
+
+<h4 id="Using_string_substitutions">Using string substitutions</h4>
+
+<p>Gecko 9.0 (Firefox 9.0 / Thunderbird 9.0 / SeaMonkey 2.6) introduced support for string substitutions. When passing a string to one of the console object's methods that accepts a string, you may use these substitution strings:</p>
+
+<table style="width: auto;" class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Substitution string</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td>%o or %O</td>
+   <td>Outputs a JavaScript object. Clicking the object name opens more information about it in the inspector.</td>
+  </tr>
+  <tr>
+   <td>%d or %i</td>
+   <td>Outputs an integer. Number formatting is supported, for example&nbsp; <code>console.log("Foo %.2d", 1.1)</code> will output the number as two significant figures with a leading 0:&nbsp;<code>Foo 01</code></td>
+  </tr>
+  <tr>
+   <td>%s</td>
+   <td>Outputs a string.</td>
+  </tr>
+  <tr>
+   <td>%f</td>
+   <td>Outputs a floating-point value. Formatting is supported, for example&nbsp; <code>console.log("Foo %.2f", 1.1)</code> will output the number to 2 decimal places:&nbsp;<code>Foo 1.10</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<div class="note">
+<p><strong>Note</strong>: Precision formatting doesn't work in Chrome</p>
+</div>
+
+<p>Each of these pulls the next argument after the format string off the parameter list. For example:</p>
+
+<pre>for (var i=0; i&lt;5; i++) {
+&nbsp;&nbsp;console.log("Hello, %s. You've called me %d times.", "Bob", i+1);
+}
+</pre>
+
+<p>The output looks like this:</p>
+
+<pre>[13:14:13.481] Hello, Bob. You've called me 1 times.
+[13:14:13.483] Hello, Bob. You've called me 2 times.
+[13:14:13.485] Hello, Bob. You've called me 3 times.
+[13:14:13.487] Hello, Bob. You've called me 4 times.
+[13:14:13.488] Hello, Bob. You've called me 5 times.
+</pre>
+
+<h4 id="Styling_console_output">Styling console output</h4>
+
+<p>You can use the <code>%c</code>&nbsp;directive to apply a CSS style to console output:</p>
+
+<pre class="brush: js">console.log("This is %cMy stylish message", "color: yellow; font-style: italic; background-color: blue;padding: 2px");</pre>
+
+<div>The text before the directive will not be affected, but the text after the directive will be styled using the CSS declarations in the parameter.</div>
+
+<div>&nbsp;</div>
+
+<div><img src="../../../../../mdn.mozillademos.org/files/12527/CSS-styling.png" alt="" style="display: block; margin: 0 auto;"></div>
+
+<div>&nbsp;</div>
+
+<div class="note">
+<p><strong>Note</strong>: Quite a few CSS properties are supported by this styling; you should experiment and see which ones prove&nbsp;useful.</p>
+</div>
+
+<div>&nbsp;</div>
+
+<div><div class="headingWithIndicator">
+    <h3 id="Using_groups_in_the_console">Using groups in the console</h3>
+    <span class="indicatorInHeadline minVer geckoMinVerMethod">Requires Gecko 9.0(Firefox 9.0 / Thunderbird 9.0 / SeaMonkey 2.6)</span>
+</div></div>
+
+<p>You can use nested groups to help organize your output by visually combining related material. To create a new nested block, call <code>console.group()</code>. The <code>console.groupCollapsed()</code> method is similar but creates the new block collapsed, requiring the use of a disclosure button to open it for reading.</p>
+
+<div class="note"><strong>Note:</strong> Collapsed groups are not supported yet in Gecko; the <code>groupCollapsed()</code> method is the same as <code>group()</code> at this time.</div>
+
+<p>To exit the current group, simply call <code>console.groupEnd()</code>. For example, given this code:</p>
+
+<pre class="brush: js">console.log("This is the outer level");
+console.group();
+console.log("Level 2");
+console.group();
+console.log("Level 3");
+console.warn("More of level 3");
+console.groupEnd();
+console.log("Back to level 2");
+console.groupEnd();
+console.debug("Back to the outer level");
+</pre>
+
+<p>The output looks like this:</p>
+
+<p><img src="../../../../../mdn.mozillademos.org/files/3604/nesting.png" alt="nesting.png" class="default internal"></p>
+
+<div><div class="headingWithIndicator">
+    <h3 id="Timers">Timers</h3>
+    <span class="indicatorInHeadline minVer geckoMinVerMethod">Requires Gecko 10.0(Firefox 10.0 / Thunderbird 10.0 / SeaMonkey 2.7)</span>
+</div></div>
+
+<p>In order to calculate the duration of a specific operation, Gecko 10 introduced the support of timers in the <code>console</code> object. To start a timer, call the <code>console.time</code><code>()</code> method, giving it a name as the only parameter. To stop the timer, and to get the elapsed time in milliseconds, just call the <code>console.timeEnd()</code> method, again passing the timer's name as the parameter. Up to 10,000 timers can run simultaneously on a given page.</p>
+
+<p>For example, given this code:</p>
+
+<pre class="brush: js">console.time("answer time");
+alert("Click to continue");
+console.timeLog("answer time");
+alert("Do a bunch of other stuff...");
+console.timeEnd("answer time");
+</pre>
+
+<p>Will log the time needed by the user to dismiss the alert box, log the time to the console, wait for the user to dismiss the second alert, and then log the ending time to the console:</p>
+
+<p><img src="../../../../../mdn.mozillademos.org/files/16113/console-timeLog.png" alt="timerresult.png" style="border: 1px solid black; height: 102px; margin: 0 auto; width: 318px;" class="default internal"></p>
+
+<p>Notice that the timer's name is displayed both when the timer is started and when it's stopped.</p>
+
+<div class="note"><strong>Note:</strong> It's important to note that if you're using this to log the timing for network traffic, the timer will report the total time for the transaction, while the time listed in the network panel is just the amount of time required for the header. If you have response body logging enabled, the time listed for the response header and body combined should match what you see in the console output.</div>
+
+<h3 id="Stack_traces">Stack traces</h3>
+
+<p>The console object also supports outputting a stack trace; this will show you the call path taken to reach the point at which you call <a href="Console/trace.html" title="Outputs a stack trace to the Web Console."><code>console.trace()</code></a>. Given code like this:</p>
+
+<pre class="brush: js">function foo() {
+&nbsp; function bar() {
+&nbsp;&nbsp;&nbsp; console.trace();
+&nbsp; }
+&nbsp; bar();
+}
+
+foo();
+</pre>
+
+<p>The output in the console looks something like this:</p>
+
+<p><img src="../../../../../mdn.mozillademos.org/files/7167/api-trace2.png" alt="" style="display: block; margin-left: auto; margin-right: auto;"></p>
+
+<a class="dashAnchor" name="//apple_ref/Section/Specifications"></a><h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td><a rel="noopener" lang="en" hreflang="en" href="https://console.spec.whatwg.org/" title="The 'Console API' specification" class="external">Console API</a></td>
+   <td><span class="spec-Living">Living Standard</span></td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<a class="dashAnchor" name="//apple_ref/Section/Browser%20compatibility"></a><h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a rel="noopener" href="https://github.com/mdn/browser-compat-data" class="external">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p></p><div class="bc-old"><div class="htab">
+    <a id="AutoCompatibilityTable" name="AutoCompatibilityTable"></a>
+    <ul>
+    <li class="selected">
+    <a>Desktop</a>
+    </li>
+    <li>
+    <a>Mobile</a>
+    </li>
+    </ul>
+    </div><div id="compat-desktop"><table class="compat-table"><thead><tr><th>Feature</th><th>Chrome</th><th>Edge</th><th>Firefox</th><th>Internet Explorer</th><th>Opera</th><th>Safari</th></tr></thead><tbody><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console">Basic support</a></td><td class="full-support">4</td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">2</td><td class="full-support">8<sup><a href="#compatNote_1">1</a></sup></td><td class="full-support">10.1</td><td class="full-support">3.1</td></tr><tr><td>Available in workers</td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">38</td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/assert"><code>assert</code></a></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">12</td><td class="full-support">28</td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/clear"><code>clear</code></a></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">12</td><td class="full-support">48</td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/count"><code>count</code></a></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">12</td><td class="full-support">30</td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/dir"><code>dir</code></a></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">12</td><td class="full-support">8</td><td class="full-support">9</td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/dirxml"><code>dirxml</code></a></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">12</td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/error"><code>error</code></a></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">12</td><td class="full-support">4</td><td class="full-support">8</td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td></tr><tr><td><a rel="nofollow" href="https://developer.mozilla.org/docs/Web/API/Console/exception" class="new">Alias for Console.error</a></td><td class="no-support"><span title="No support">
+      No</span></td><td class="full-support">13</td><td class="full-support">28</td><td class="no-support"><span title="No support">
+      No</span></td><td class="no-support"><span title="No support">
+      No</span></td><td class="no-support"><span title="No support">
+      No</span></td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/group"><code>group</code></a></td><td class="full-support">2</td><td class="full-support">12</td><td class="full-support">4</td><td class="full-support">11</td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">4</td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/groupCollapsed"><code>groupCollapsed</code></a></td><td class="full-support">6</td><td class="full-support">12</td><td class="full-support">52</td><td class="full-support">11</td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="full-support">5.1</td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/groupEnd"><code>groupEnd</code></a></td><td class="full-support">2</td><td class="full-support">12</td><td class="full-support">9</td><td class="full-support">11</td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">4</td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/info"><code>info</code></a></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">12</td><td class="full-support">4</td><td class="full-support">8</td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span><sup><a href="#compatNote_2">2</a></sup></td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/log"><code>log</code></a></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">12</td><td class="full-support">4</td><td class="full-support">8</td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/profile"><code>profile</code></a></td><td class="full-support">53</td><td class="full-support">12</td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/profileEnd"><code>profileEnd</code></a></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">12</td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/table"><code>table</code></a></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">13</td><td class="full-support">34</td><td class="no-support"><span title="No support">
+      No</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/time"><code>time</code></a></td><td class="full-support">2</td><td class="full-support">12</td><td class="full-support">10</td><td class="full-support">11</td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">4</td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/timeEnd"><code>timeEnd</code></a></td><td class="full-support">2</td><td class="full-support">12</td><td class="full-support">10</td><td class="full-support">11</td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">4</td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/timestamp"><code>timestamp</code></a></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="no-support"><span title="No support">
+      No</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/trace"><code>trace</code></a></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">12</td><td class="full-support">10</td><td class="full-support">11</td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/warn"><code>warn</code></a></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">12</td><td class="full-support">4</td><td class="full-support">8</td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td></tr></tbody></table></div><div id="compat-mobile"><table class="compat-table"><thead><tr><th>Feature</th><th>Android webview</th><th>Chrome for Android</th><th>Edge mobile</th><th>Firefox for Android</th><th>Opera Android</th><th>iOS Safari</th><th>Samsung Internet</th></tr></thead><tbody><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console">Basic support</a></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="full-support">3.2</td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td></tr><tr><td>Available in workers</td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">38</td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/assert"><code>assert</code></a></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="full-support">28</td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/clear"><code>clear</code></a></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="full-support">48</td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/count"><code>count</code></a></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">30</td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/dir"><code>dir</code></a></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">8</td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/dirxml"><code>dirxml</code></a></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="no-support"><span title="No support">
+      No</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/error"><code>error</code></a></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">4</td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td></tr><tr><td><a rel="nofollow" href="https://developer.mozilla.org/docs/Web/API/Console/exception" class="new">Alias for Console.error</a></td><td class="no-support"><span title="No support">
+      No</span></td><td class="no-support"><span title="No support">
+      No</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">28</td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="no-support"><span title="No support">
+      No</span></td><td class="no-support"><span title="No support">
+      No</span></td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/group"><code>group</code></a></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">4</td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/groupCollapsed"><code>groupCollapsed</code></a></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">52</td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/groupEnd"><code>groupEnd</code></a></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">9</td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/info"><code>info</code></a></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">4</td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/log"><code>log</code></a></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">4</td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/profile"><code>profile</code></a></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">10</td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/profileEnd"><code>profileEnd</code></a></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">10</td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/table"><code>table</code></a></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">34</td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/time"><code>time</code></a></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">10</td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/timeEnd"><code>timeEnd</code></a></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">10</td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/timestamp"><code>timestamp</code></a></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="full-support">10</td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/trace"><code>trace</code></a></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">10</td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td></tr><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Console/warn"><code>warn</code></a></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">4</td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td></tr></tbody></table></div><p id="compatNote_1">1. Only functions when developer tools are opened. Otherwise, the 'console' object is undefined.</p><p id="compatNote_2">2. No information icon</p></div><div class="bc-data hidden"><table class="bc-table bc-table-web"><thead><tr class="bc-platforms"><td></td><th colspan="6" class="bc-platform-desktop"><abbr class="only-icon" title="Desktop"><span>Desktop</span><i class="ic-desktop"></i></abbr></th><th colspan="7" class="bc-platform-mobile"><abbr class="only-icon" title="Mobile"><span>Mobile</span><i class="ic-mobile"></i></abbr></th></tr><tr class="bc-browsers"><td></td><th class="bc-browser-chrome"><abbr class="only-icon" title="Chrome"><span>Chrome</span><i class="ic-chrome"></i></abbr></th><th class="bc-browser-edge"><abbr class="only-icon" title="Edge"><span>Edge</span><i class="ic-edge"></i></abbr></th><th class="bc-browser-firefox"><abbr class="only-icon" title="Firefox"><span>Firefox</span><i class="ic-firefox"></i></abbr></th><th class="bc-browser-ie"><abbr class="only-icon" title="Internet Explorer"><span>Internet Explorer</span><i class="ic-ie"></i></abbr></th><th class="bc-browser-opera"><abbr class="only-icon" title="Opera"><span>Opera</span><i class="ic-opera"></i></abbr></th><th class="bc-browser-safari"><abbr class="only-icon" title="Safari"><span>Safari</span><i class="ic-safari"></i></abbr></th><th class="bc-browser-webview_android"><abbr class="only-icon" title="Android webview"><span>Android webview</span><i class="ic-webview_android"></i></abbr></th><th class="bc-browser-chrome_android"><abbr class="only-icon" title="Chrome for Android"><span>Chrome for Android</span><i class="ic-chrome_android"></i></abbr></th><th class="bc-browser-edge_mobile"><abbr class="only-icon" title="Edge Mobile"><span>Edge Mobile</span><i class="ic-edge_mobile"></i></abbr></th><th class="bc-browser-firefox_android"><abbr class="only-icon" title="Firefox for Android"><span>Firefox for Android</span><i class="ic-firefox_android"></i></abbr></th><th class="bc-browser-opera_android"><abbr class="only-icon" title="Opera for Android"><span>Opera for Android</span><i class="ic-opera_android"></i></abbr></th><th class="bc-browser-safari_ios"><abbr class="only-icon" title="iOS Safari"><span>iOS Safari</span><i class="ic-safari_ios"></i></abbr></th><th class="bc-browser-samsunginternet_android"><abbr class="only-icon" title="Samsung Internet"><span>Samsung Internet</span><i class="ic-samsunginternet_android"></i></abbr></th></tr></thead><tbody><tr><th scope="row">Basic support</th><td class="bc-supports-yes bc-browser-chrome"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              4</td><td class="bc-supports-yes bc-browser-edge"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-firefox"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              2</td><td class="bc-supports-partial bc-browser-ie bc-has-history"><abbr class="bc-level-partial only-icon" title="Partial support">
+              <span>Partial support</span>
+            </abbr>8<div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> </div><section id="sect1" class="bc-history"><dl><dt class="bc-supports-partial bc-supports"><abbr class="bc-level-partial only-icon" title="Partial support">
+              <span>Partial support</span>
+            </abbr>8<div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> </div></dt><dd><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> Only functions when developer tools are opened. Otherwise, the 'console' object is undefined.</dd></dl></section></td><td class="bc-supports-yes bc-browser-opera"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              10.1</td><td class="bc-supports-yes bc-browser-safari"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              3.1</td><td class="bc-supports-yes bc-browser-webview_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-chrome_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-edge_mobile"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-firefox_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-unknown bc-browser-opera_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-yes bc-browser-safari_ios"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              3.2</td><td class="bc-supports-yes bc-browser-samsunginternet_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td></tr><tr><th scope="row">Available in workers</th><td class="bc-supports-yes bc-browser-chrome"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-edge"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-firefox"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              38</td><td class="bc-supports-yes bc-browser-ie"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-opera"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-safari"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-unknown bc-browser-webview_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-chrome_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-yes bc-browser-edge_mobile"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-firefox_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              38</td><td class="bc-supports-unknown bc-browser-opera_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-safari_ios"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-samsunginternet_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td></tr><tr><th scope="row"><a href="https://developer.mozilla.org/docs/Web/API/Console/assert"><code>assert</code></a></th><td class="bc-supports-yes bc-browser-chrome"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-edge"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              12</td><td class="bc-supports-yes bc-browser-firefox"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              28</td><td class="bc-supports-yes bc-browser-ie"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-opera"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-safari"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-unknown bc-browser-webview_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-chrome_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-edge_mobile"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-yes bc-browser-firefox_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              28</td><td class="bc-supports-unknown bc-browser-opera_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-safari_ios"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-samsunginternet_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td></tr><tr><th scope="row"><a href="https://developer.mozilla.org/docs/Web/API/Console/clear"><code>clear</code></a></th><td class="bc-supports-yes bc-browser-chrome"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-edge"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              12</td><td class="bc-supports-yes bc-browser-firefox"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              48</td><td class="bc-supports-yes bc-browser-ie"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-opera"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-safari"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-unknown bc-browser-webview_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-chrome_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-edge_mobile"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-yes bc-browser-firefox_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              48</td><td class="bc-supports-unknown bc-browser-opera_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-safari_ios"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-samsunginternet_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td></tr><tr><th scope="row"><a href="https://developer.mozilla.org/docs/Web/API/Console/count"><code>count</code></a></th><td class="bc-supports-yes bc-browser-chrome"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-edge"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              12</td><td class="bc-supports-yes bc-browser-firefox"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              30</td><td class="bc-supports-yes bc-browser-ie"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-opera"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-safari"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-unknown bc-browser-webview_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-chrome_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-yes bc-browser-edge_mobile"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-firefox_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              30</td><td class="bc-supports-unknown bc-browser-opera_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-safari_ios"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-samsunginternet_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td></tr><tr><th scope="row"><a href="https://developer.mozilla.org/docs/Web/API/Console/dir"><code>dir</code></a> <div class="bc-icons"><abbr class="only-icon" title="Experimental. Expect behavior to change in the future."><span>Experimental</span><i class="ic-experimental"></i></abbr><abbr class="only-icon" title="Non-standard. Expect poor cross-browser support."><span>Non-standard</span><i class="ic-non-standard"></i></abbr></div></th><td class="bc-supports-yes bc-browser-chrome"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-edge"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              12</td><td class="bc-supports-yes bc-browser-firefox"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              8</td><td class="bc-supports-yes bc-browser-ie"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              9</td><td class="bc-supports-yes bc-browser-opera"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-safari"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-unknown bc-browser-webview_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-chrome_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-yes bc-browser-edge_mobile"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-firefox_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              8</td><td class="bc-supports-unknown bc-browser-opera_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-safari_ios"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-samsunginternet_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td></tr><tr><th scope="row"><a href="https://developer.mozilla.org/docs/Web/API/Console/dirxml"><code>dirxml</code></a> <div class="bc-icons"><abbr class="only-icon" title="Experimental. Expect behavior to change in the future."><span>Experimental</span><i class="ic-experimental"></i></abbr><abbr class="only-icon" title="Non-standard. Expect poor cross-browser support."><span>Non-standard</span><i class="ic-non-standard"></i></abbr></div></th><td class="bc-supports-yes bc-browser-chrome"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-edge"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              12</td><td class="bc-supports-yes bc-browser-firefox"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-ie"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-opera"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-unknown bc-browser-safari"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-webview_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-chrome_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-yes bc-browser-edge_mobile"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-no bc-browser-firefox_android"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td><td class="bc-supports-unknown bc-browser-opera_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-safari_ios"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-samsunginternet_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td></tr><tr><th scope="row"><a href="https://developer.mozilla.org/docs/Web/API/Console/error"><code>error</code></a></th><td class="bc-supports-yes bc-browser-chrome"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-edge"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              12</td><td class="bc-supports-yes bc-browser-firefox"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              4</td><td class="bc-supports-yes bc-browser-ie"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              8</td><td class="bc-supports-yes bc-browser-opera"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-safari"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-webview_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-unknown bc-browser-chrome_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-yes bc-browser-edge_mobile"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-firefox_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              4</td><td class="bc-supports-unknown bc-browser-opera_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-safari_ios"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-samsunginternet_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td></tr><tr><th scope="row"><a rel="nofollow" href="https://developer.mozilla.org/docs/Web/API/Console/exception" class="new">Alias for Console.error</a> <div class="bc-icons"><abbr class="only-icon" title="Deprecated. Not for use in new websites."><span>Deprecated</span><i class="ic-deprecated"></i></abbr><abbr class="only-icon" title="Non-standard. Expect poor cross-browser support."><span>Non-standard</span><i class="ic-non-standard"></i></abbr></div></th><td class="bc-supports-no bc-browser-chrome"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td><td class="bc-supports-yes bc-browser-edge"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              13</td><td class="bc-supports-yes bc-browser-firefox"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              28</td><td class="bc-supports-no bc-browser-ie"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td><td class="bc-supports-no bc-browser-opera"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td><td class="bc-supports-no bc-browser-safari"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td><td class="bc-supports-no bc-browser-webview_android"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td><td class="bc-supports-no bc-browser-chrome_android"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td><td class="bc-supports-yes bc-browser-edge_mobile"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-firefox_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              28</td><td class="bc-supports-unknown bc-browser-opera_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-no bc-browser-safari_ios"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td><td class="bc-supports-no bc-browser-samsunginternet_android"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td></tr><tr><th scope="row"><a href="https://developer.mozilla.org/docs/Web/API/Console/group"><code>group</code></a></th><td class="bc-supports-yes bc-browser-chrome"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              2</td><td class="bc-supports-yes bc-browser-edge"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              12</td><td class="bc-supports-yes bc-browser-firefox"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              4</td><td class="bc-supports-yes bc-browser-ie"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              11</td><td class="bc-supports-yes bc-browser-opera"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-safari"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              4</td><td class="bc-supports-unknown bc-browser-webview_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-chrome_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-yes bc-browser-edge_mobile"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-firefox_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              4</td><td class="bc-supports-unknown bc-browser-opera_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-safari_ios"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-samsunginternet_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td></tr><tr><th scope="row"><a href="https://developer.mozilla.org/docs/Web/API/Console/groupCollapsed"><code>groupCollapsed</code></a></th><td class="bc-supports-yes bc-browser-chrome"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              6</td><td class="bc-supports-yes bc-browser-edge"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              12</td><td class="bc-supports-yes bc-browser-firefox"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              52</td><td class="bc-supports-yes bc-browser-ie"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              11</td><td class="bc-supports-unknown bc-browser-opera"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-yes bc-browser-safari"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              5.1</td><td class="bc-supports-unknown bc-browser-webview_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-chrome_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-yes bc-browser-edge_mobile"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-firefox_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              52</td><td class="bc-supports-unknown bc-browser-opera_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-safari_ios"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-samsunginternet_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td></tr><tr><th scope="row"><a href="https://developer.mozilla.org/docs/Web/API/Console/groupEnd"><code>groupEnd</code></a></th><td class="bc-supports-yes bc-browser-chrome"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              2</td><td class="bc-supports-yes bc-browser-edge"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              12</td><td class="bc-supports-yes bc-browser-firefox"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              9</td><td class="bc-supports-yes bc-browser-ie"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              11</td><td class="bc-supports-yes bc-browser-opera"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-safari"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              4</td><td class="bc-supports-unknown bc-browser-webview_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-chrome_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-yes bc-browser-edge_mobile"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-firefox_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              9</td><td class="bc-supports-unknown bc-browser-opera_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-safari_ios"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-samsunginternet_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td></tr><tr><th scope="row"><a href="https://developer.mozilla.org/docs/Web/API/Console/info"><code>info</code></a></th><td class="bc-supports-yes bc-browser-chrome"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-edge"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              12</td><td class="bc-supports-yes bc-browser-firefox"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              4</td><td class="bc-supports-yes bc-browser-ie"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              8</td><td class="bc-supports-yes bc-browser-opera"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-safari bc-has-history"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes<div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> </div><section id="sect2" class="bc-history"><dl><dt class="bc-supports-yes bc-supports"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes<div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> </div></dt><dd><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> No information icon</dd></dl></section></td><td class="bc-supports-unknown bc-browser-webview_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-chrome_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-yes bc-browser-edge_mobile"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-firefox_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              4</td><td class="bc-supports-unknown bc-browser-opera_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-safari_ios"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-samsunginternet_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td></tr><tr><th scope="row"><a href="https://developer.mozilla.org/docs/Web/API/Console/log"><code>log</code></a></th><td class="bc-supports-yes bc-browser-chrome"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-edge"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              12</td><td class="bc-supports-yes bc-browser-firefox"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              4</td><td class="bc-supports-yes bc-browser-ie"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              8</td><td class="bc-supports-yes bc-browser-opera"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-safari"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-unknown bc-browser-webview_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-chrome_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-yes bc-browser-edge_mobile"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-firefox_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              4</td><td class="bc-supports-unknown bc-browser-opera_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-safari_ios"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-samsunginternet_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td></tr><tr><th scope="row"><a href="https://developer.mozilla.org/docs/Web/API/Console/profile"><code>profile</code></a> <div class="bc-icons"><abbr class="only-icon" title="Experimental. Expect behavior to change in the future."><span>Experimental</span><i class="ic-experimental"></i></abbr><abbr class="only-icon" title="Non-standard. Expect poor cross-browser support."><span>Non-standard</span><i class="ic-non-standard"></i></abbr></div></th><td class="bc-supports-yes bc-browser-chrome"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              53</td><td class="bc-supports-yes bc-browser-edge"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              12</td><td class="bc-supports-yes bc-browser-firefox"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-ie"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-unknown bc-browser-opera"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-safari"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-webview_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-chrome_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-yes bc-browser-edge_mobile"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-firefox_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              10</td><td class="bc-supports-unknown bc-browser-opera_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-safari_ios"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-samsunginternet_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td></tr><tr><th scope="row"><a href="https://developer.mozilla.org/docs/Web/API/Console/profileEnd"><code>profileEnd</code></a> <div class="bc-icons"><abbr class="only-icon" title="Experimental. Expect behavior to change in the future."><span>Experimental</span><i class="ic-experimental"></i></abbr><abbr class="only-icon" title="Non-standard. Expect poor cross-browser support."><span>Non-standard</span><i class="ic-non-standard"></i></abbr></div></th><td class="bc-supports-yes bc-browser-chrome"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-edge"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              12</td><td class="bc-supports-yes bc-browser-firefox"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-ie"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-unknown bc-browser-opera"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-safari"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-webview_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-chrome_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-yes bc-browser-edge_mobile"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-firefox_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              10</td><td class="bc-supports-unknown bc-browser-opera_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-safari_ios"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-samsunginternet_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td></tr><tr><th scope="row"><a href="https://developer.mozilla.org/docs/Web/API/Console/table"><code>table</code></a></th><td class="bc-supports-yes bc-browser-chrome"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-edge"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              13</td><td class="bc-supports-yes bc-browser-firefox"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              34</td><td class="bc-supports-no bc-browser-ie"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td><td class="bc-supports-yes bc-browser-opera"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-safari"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-unknown bc-browser-webview_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-chrome_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-yes bc-browser-edge_mobile"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-firefox_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              34</td><td class="bc-supports-unknown bc-browser-opera_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-safari_ios"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-samsunginternet_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td></tr><tr><th scope="row"><a href="https://developer.mozilla.org/docs/Web/API/Console/time"><code>time</code></a></th><td class="bc-supports-yes bc-browser-chrome"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              2</td><td class="bc-supports-yes bc-browser-edge"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              12</td><td class="bc-supports-yes bc-browser-firefox"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              10</td><td class="bc-supports-yes bc-browser-ie"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              11</td><td class="bc-supports-yes bc-browser-opera"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-safari"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              4</td><td class="bc-supports-unknown bc-browser-webview_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-chrome_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-yes bc-browser-edge_mobile"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-firefox_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              10</td><td class="bc-supports-unknown bc-browser-opera_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-safari_ios"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-samsunginternet_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td></tr><tr><th scope="row"><a href="https://developer.mozilla.org/docs/Web/API/Console/timeEnd"><code>timeEnd</code></a></th><td class="bc-supports-yes bc-browser-chrome"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              2</td><td class="bc-supports-yes bc-browser-edge"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              12</td><td class="bc-supports-yes bc-browser-firefox"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              10</td><td class="bc-supports-yes bc-browser-ie"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              11</td><td class="bc-supports-yes bc-browser-opera"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-safari"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              4</td><td class="bc-supports-unknown bc-browser-webview_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-chrome_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-yes bc-browser-edge_mobile"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-firefox_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              10</td><td class="bc-supports-unknown bc-browser-opera_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-safari_ios"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-samsunginternet_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td></tr><tr><th scope="row"><a href="https://developer.mozilla.org/docs/Web/API/Console/timestamp"><code>timestamp</code></a> <div class="bc-icons"><abbr class="only-icon" title="Experimental. Expect behavior to change in the future."><span>Experimental</span><i class="ic-experimental"></i></abbr><abbr class="only-icon" title="Non-standard. Expect poor cross-browser support."><span>Non-standard</span><i class="ic-non-standard"></i></abbr></div></th><td class="bc-supports-yes bc-browser-chrome"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-unknown bc-browser-edge"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-yes bc-browser-firefox"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-no bc-browser-ie"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td><td class="bc-supports-yes bc-browser-opera"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-safari"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-unknown bc-browser-webview_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-chrome_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-edge_mobile"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-yes bc-browser-firefox_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              10</td><td class="bc-supports-unknown bc-browser-opera_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-safari_ios"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-samsunginternet_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td></tr><tr><th scope="row"><a href="https://developer.mozilla.org/docs/Web/API/Console/trace"><code>trace</code></a></th><td class="bc-supports-yes bc-browser-chrome"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-edge"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              12</td><td class="bc-supports-yes bc-browser-firefox"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              10</td><td class="bc-supports-yes bc-browser-ie"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              11</td><td class="bc-supports-yes bc-browser-opera"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-safari"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-unknown bc-browser-webview_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-chrome_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-yes bc-browser-edge_mobile"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-firefox_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              10</td><td class="bc-supports-unknown bc-browser-opera_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-safari_ios"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-samsunginternet_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td></tr><tr><th scope="row"><a href="https://developer.mozilla.org/docs/Web/API/Console/warn"><code>warn</code></a></th><td class="bc-supports-yes bc-browser-chrome"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-edge"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              12</td><td class="bc-supports-yes bc-browser-firefox"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              4</td><td class="bc-supports-yes bc-browser-ie"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              8</td><td class="bc-supports-yes bc-browser-opera"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-safari"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-unknown bc-browser-webview_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-chrome_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-yes bc-browser-edge_mobile"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-firefox_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              4</td><td class="bc-supports-unknown bc-browser-opera_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-safari_ios"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-samsunginternet_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td></tr></tbody></table><section id="sect3" class="bc-legend"><h3 id="Legend" class="offscreen">Legend</h3><dl><dt><span class="bc-supports-yes bc-supports">
+                <abbr class="bc-level bc-level-yes only-icon" title="Full support">
+                 <span>Full support</span>
+                 &nbsp;
+                </abbr></span></dt><dd>Full support</dd><dt><span class="bc-supports-partial bc-supports">
+                <abbr class="bc-level bc-level-partial only-icon" title="Partial support">
+                 <span>Partial support</span>
+                 &nbsp;
+                </abbr></span></dt><dd>Partial support</dd><dt><span class="bc-supports-no bc-supports">
+                <abbr class="bc-level bc-level-no only-icon" title="No support">
+                 <span>No support</span>
+                 &nbsp;
+                </abbr></span></dt><dd>No support</dd><dt><span class="bc-supports-unknown bc-supports">
+                <abbr class="bc-level bc-level-unknown only-icon" title="Compatibility unknown">
+                 <span>Compatibility unknown</span>
+                 &nbsp;
+                </abbr></span></dt><dd>Compatibility unknown</dd><dt><abbr class="only-icon" title="Experimental. Expect behavior to change in the future."><span>Experimental. Expect behavior to change in the future.</span><i class="ic-experimental"></i></abbr></dt><dd>Experimental. Expect behavior to change in the future.</dd><dt><abbr class="only-icon" title="Non-standard. Expect poor cross-browser support."><span>Non-standard. Expect poor cross-browser support.</span><i class="ic-non-standard"></i></abbr></dt><dd>Non-standard. Expect poor cross-browser support.</dd><dt><abbr class="only-icon" title="Deprecated. Not for use in new websites."><span>Deprecated. Not for use in new websites.</span><i class="ic-deprecated"></i></abbr></dt><dd>Deprecated. Not for use in new websites.</dd><dt><abbr class="only-icon" title="See implementation notes."><span>See implementation notes.</span><i class="ic-footnote"></i></abbr></dt><dd>See implementation notes.</dd></dl></section></div><p></p>
+
+<a class="dashAnchor" name="//apple_ref/Section/Notes"></a><h2 id="Notes">Notes</h2>
+
+<ul>
+ <li>At least in Firefox, if a page defines a <code>console</code> object, that object overrides the one built into Firefox.</li>
+ <li>Prior to <span title="(Firefox 12.0 / Thunderbird 12.0 / SeaMonkey 2.9)">Gecko&nbsp;12.0</span>, the console object's methods only work when the Web Console is open. Starting with <span title="(Firefox 12.0 / Thunderbird 12.0 / SeaMonkey 2.9)">Gecko&nbsp;12.0</span>, output is cached until the Web Console is opened, then displayed at that time.</li>
+ <li>It's worth noting that the Firefox's built-in <code>Console</code> object is compatible with the one provided by <a rel="noopener" href="http://getfirebug.com/" class="external" title="http://getfirebug.com/">Firebug</a>.</li>
+</ul>
+
+<a class="dashAnchor" name="//apple_ref/Section/See%20also"></a><h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Tools" title="Tools">Tools</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Tools/Web_Console" title="Web Console">Web Console</a> — how the Web Console in Firefox handles console API calls</li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Tools/Remote_Debugging">Remote debugging</a> — how to see console output when the debugging target is a mobile device</li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Debugging/On-device_console_logging" title="/en-US/docs/Mozilla/Firefox_OS/Debugging/On-device_console_logging">On-device console logging</a> — how to do logging on Firefox OS devices</li>
+</ul>
+
+<h3 id="Other_implementations">Other implementations</h3>
+
+<ul>
+ <li><a rel="noopener" href="https://developers.google.com/chrome-developer-tools/docs/console-api" class="external">Google Chrome DevTools</a></li>
+ <li><a rel="noopener" href="http://getfirebug.com/wiki/index.php/Console_API" class="external">Firebug</a></li>
+ <li><a rel="noopener" href="http://msdn.microsoft.com/en-us/library/hh772173(v=vs.85).aspx" class="external">Internet Explorer</a></li>
+ <li><a rel="noopener" href="https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html" class="external">Safari</a></li>
+</ul>
+                  
+                
+              </article>
+
+              <!-- contributors -->
+              <div class="wiki-block contributors">
+                <h2 class="offscreen">Document Tags and Contributors</h2>
+                
+                
+  <div class="tag-attach-list contributors-sub">
+    <svg class="icon icon-tags" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M7 7c0-1.109-.891-2-2-2s-2 .891-2 2 .891 2 2 2 2-.891 2-2zm16.672 9c0 .531-.219 1.047-.578 1.406l-7.672 7.688c-.375.359-.891.578-1.422.578s-1.047-.219-1.406-.578L1.422 13.906C.625 13.125 0 11.609 0 10.5V4c0-1.094.906-2 2-2h6.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422zm6 0c0 .531-.219 1.047-.578 1.406l-7.672 7.688a2.08 2.08 0 0 1-1.422.578c-.812 0-1.219-.375-1.75-.922l7.344-7.344c.359-.359.578-.875.578-1.406s-.219-1.047-.578-1.422L14.422 3.422C13.625 2.625 12.11 2 11 2h3.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422z"></path>
+</svg>
+    <strong>Tags:</strong>&nbsp;
+    <ul class="tags tags-small">
+      
+        <li><a href="../../tag/API.html" rel="nofollow">API</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/console" rel="nofollow">console</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Debugging" rel="nofollow">Debugging</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Interface" rel="nofollow">Interface</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Reference" rel="nofollow">Reference</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/web console" rel="nofollow">web console</a></li>
+      
+    </ul>
+  </div>
+
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-group" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M9.266 14a5.532 5.532 0 0 0-4.141 2H3.031C1.468 16 0 15.25 0 13.516 0 12.25-.047 8 1.937 8c.328 0 1.953 1.328 4.062 1.328.719 0 1.406-.125 2.078-.359A7.624 7.624 0 0 0 7.999 10c0 1.422.453 2.828 1.266 4zM26 23.953C26 26.484 24.328 28 21.828 28H8.172C5.672 28 4 26.484 4 23.953 4 20.422 4.828 15 9.406 15c.531 0 2.469 2.172 5.594 2.172S20.063 15 20.594 15C25.172 15 26 20.422 26 23.953zM10 4c0 2.203-1.797 4-4 4S2 6.203 2 4s1.797-4 4-4 4 1.797 4 4zm11 6c0 3.313-2.688 6-6 6s-6-2.688-6-6 2.688-6 6-6 6 2.688 6 6zm9 3.516C30 15.25 28.531 16 26.969 16h-2.094a5.532 5.532 0 0 0-4.141-2A7.066 7.066 0 0 0 22 10a7.6 7.6 0 0 0-.078-1.031A6.258 6.258 0 0 0 24 9.328C26.109 9.328 27.734 8 28.062 8c1.984 0 1.937 4.25 1.937 5.516zM28 4c0 2.203-1.797 4-4 4s-4-1.797-4-4 1.797-4 4-4 4 1.797 4 4z"></path>
+</svg>
+                    <strong>Contributors to this page:</strong>
+                    
+        <a href="https://developer.mozilla.org/en-US/profiles/irenesmith">irenesmith</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/connorshea">connorshea</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Thw0rted">Thw0rted</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/porfirion">porfirion</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/fscholz">fscholz</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/ngtvspc">ngtvspc</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/KevinSennes">KevinSennes</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/VladPavel15">VladPavel15</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/sideshowbarker">sideshowbarker</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/KateSturmey">KateSturmey</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Odd">Odd</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/sajadtorkamani">sajadtorkamani</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/wxdude225">wxdude225</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills">chrisdavidmills</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/mfulton26">mfulton26</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/chaosrock">chaosrock</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/benjamingr">benjamingr</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/ohrus">ohrus</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/dcoates">dcoates</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/valtlai">valtlai</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/madarche">madarche</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/laszlovandenhoek">laszlovandenhoek</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/yairEO">yairEO</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/nilsding">nilsding</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Davidnorman">Davidnorman</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Delapouite">Delapouite</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/vit100">vit100</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/cvrebert">cvrebert</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/kscarfone">kscarfone</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/bkdotcom">bkdotcom</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Alleycat">Alleycat</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Naesten">Naesten</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Nickolay">Nickolay</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Havvy">Havvy</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/tregagnon">tregagnon</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/steven.pribilinskiy@gmail.com">steven.pribilinskiy@gmail.com</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/vitorbritto">vitorbritto</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/ethertank">ethertank</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/myakura">myakura</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/yyss">yyss</a>
+    
+                  </div>
+                
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-clock" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M14 8.5v7c0 .281-.219.5-.5.5h-5a.494.494 0 0 1-.5-.5v-1c0-.281.219-.5.5-.5H12V8.5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zm6.5 5.5c0-4.688-3.813-8.5-8.5-8.5S3.5 9.313 3.5 14s3.813 8.5 8.5 8.5 8.5-3.813 8.5-8.5zm3.5 0c0 6.625-5.375 12-12 12S0 20.625 0 14 5.375 2 12 2s12 5.375 12 12z"></path>
+</svg>
+                    <strong>Last updated by:</strong>
+                    <a href="https://developer.mozilla.org/en-US/profiles/irenesmith">irenesmith</a>,
+                    <time datetime="2018-07-27T12:54:23.775637-07:00">Jul 27, 2018, 12:54:23 PM</time>
+                  </div>
+                
+              </div>
+            </div>
+
+            
+              <!-- quick links and approvals strip -->
+              <div id="wiki-left" class="column-strip wiki-column">
+
+                <!-- crumbs -->
+                
+  
+    
+  
+
+                
+                  <!-- quick links -->
+                  
+  <div class="quick-links" id="quick-links">
+    <div class="quick-links-head">Related Topics</div>
+    <ol><li><strong><a href="Console.html"><code>Console</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><a href="console/assert-2.html" title="Writes an error message to the console if the assertion is false. If the assertion is true, nothing happens."><code>assert()</code></a></li><li><a href="Console/clear.html" title="Clears the console."><code>clear()</code></a></li><li><a href="Console/count.html" title="Logs the number of times that this particular call to count() has been called. This function takes an optional argument label."><code>count()</code></a></li><li><a href="Console/countReset.html" title="Resets the counter. This function takes an optional argument label."><code>countReset()</code></a></li><li><a href="Console/dir.html" title="Displays an interactive list of the properties of the specified JavaScript object. The output is presented as a hierarchical listing with disclosure triangles that let you see the contents of child objects."><code>dir()</code></a></li><li><a href="Console/dirxml.html" title="Displays an interactive tree of the descendant elements of the specified XML/HTML element.&nbsp;If it is not possible to display as an element the JavaScript Object view is shown instead.&nbsp;The output is presented as a hierarchical listing of expandable nodes that let you see the contents of child nodes."><code>dirxml()</code></a></li><li><a href="Console/error.html" title="Outputs an error message to the Web Console."><code>error()</code></a></li><li><a href="Console/group.html" title="Creates a new inline group in the Web Console log. This indents following console messages by an additional level, until console.groupEnd() is called."><code>group()</code></a></li><li><a href="Console/groupCollapsed.html" title="Creates a new inline group in the Web Console. Unlike console.group(), however, the new group is created collapsed. The user will need to use the disclosure button next to it to expand it, revealing the entries created in the group."><code>groupCollapsed()</code></a></li><li><a href="Console/groupEnd.html" title="Exits the current inline group in the Web Console. See Using groups in the console in the console documentation for details and examples."><code>groupEnd()</code></a></li><li><a href="Console/info.html" title="Outputs an informational message to the Web Console. In Firefox and Chrome, a small &quot;i&quot; icon is displayed next to these items in the Web Console's log."><code>info()</code></a></li><li><a href="Console/log.html" title="Outputs a message to the Web Console."><code>log()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="Console/profile.html" title="Starts recording a performance profile (for example, the Firefox performance tool)."><code>profile()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="Console/profileEnd.html" title="The profileEnd method stops recording a profile previously started with Console.profile()."><code>profileEnd()</code></a></li><li><a href="Console/table.html" title="Displays tabular data as a table."><code>table()</code></a></li><li><a href="Console/time.html" title="Starts a timer you can use to track how long an operation takes. You give each timer a unique name, and may have up to 10,000 timers running on a given page. When you call console.timeEnd() with the same name, the browser will output the time, in milliseconds, that elapsed since the timer was started."><code>time()</code></a></li><li><a href="Console/timeEnd.html" title="Stops a timer that was previously started by calling console.time()."><code>timeEnd()</code></a></li><li><a href="Console/timeLog.html" title="Logs the current value of a timer that was previously started by calling console.time() to the console."><code>timeLog()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="Console/timeStamp.html" title="Adds a single marker to the browser's Performance or Waterfall tool. This lets you correlate a point in your code with the other events recorded in the timeline, such as layout and paint events."><code>timeStamp()</code></a></li><li><a href="Console/trace.html" title="Outputs a stack trace to the Web Console."><code>trace()</code></a></li><li><a href="Console/warn.html" title="Outputs a warning message to the Web Console."><code>warn()</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Related pages for Console API</strong></a><ol><li><a href="Window/console.html"><code>Window.console</code></a></li><li><a href="WorkerGlobalScope/console.html"><code>WorkerGlobalScope.console</code></a></li></ol></li></ol>
+  </div>
+                
+
+                <!-- approvals -->
+                
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+    
+      <div class="newsletter-box">
+        <div class="newsletter">
+    <form id="newsletterForm" class="newsletter-form nodisable" name="newsletter-form" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <div class="newsletter-head">
+            <h2 class="newsletter-teaser">Learn the best of web development</h2>
+            <p class="newsletter-description">Get the latest and greatest from MDN delivered straight to your inbox.</p>
+            
+        </div>
+
+        <div class="newsletter-fields">
+            <input type="hidden" id="fmt" name="fmt" value="H">
+            <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+            <div id="newsletterErrors" class="newsletter-errors"></div>
+
+            <div id="newsletterEmail" class="form-group newsletter-group-email">
+                <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+                <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+            </div>
+
+            <div id="newsletterPrivacy" class="form-group form-group-agree newsletter-group-privacy hidden">
+                <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+                <label for="newsletterPrivacyInput">
+                I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+                </label>
+            </div>
+            <div id="newsletterSubmit" class="newsletter-group-submit">
+                <button id="newsletter-submit" type="submit" class="button neutral newsletter-submit">
+                    Sign up now<svg class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg" width="23" height="28" viewBox="0 0 23 28" aria-hidden="true">
+    <path d="M23 15a2.01 2.01 0 0 1-.578 1.422L12.25 26.594c-.375.359-.891.578-1.422.578s-1.031-.219-1.406-.578L8.25 25.422c-.375-.375-.594-.891-.594-1.422s.219-1.047.594-1.422L12.828 18h-11C.703 18 0 17.062 0 16v-2c0-1.062.703-2 1.828-2h11L8.25 7.406a1.96 1.96 0 0 1 0-2.812l1.172-1.172c.375-.375.875-.594 1.406-.594s1.047.219 1.422.594l10.172 10.172c.375.359.578.875.578 1.406z"></path>
+</svg>
+                </button>
+            </div>
+        </div>
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden">
+        <span>Hide Newsletter Sign-up</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+</div>
+      </div>
+    
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/en-US/docs/Web/API/Console$edit" label="Edit page"></menuitem>
+    <menuitem data-action="/en-US/docs/Web/API/Console$history" label="View page history"></menuitem>
+  </menu>
+
+      </div>
+  </main>
+  <!-- Footer -->
+    <footer id="nav-footer" class="nav-footer"><div class="center"><a href="http://developer.mozilla.org/en-US/docs/Web/API/console">Console</a> by <a href="http://developer.mozilla.org/en-US/docs/Web/API/console$history">Mozilla Contributors</a> is licensed under <a href="http://creativecommons.org/licenses/by-sa/2.5/" class="external external-icon">CC-BY-SA 2.5</a>.</div></footer> 
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script async="" type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script src="../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><!--[endif]---->
+
+    
+    <script src="../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../static/build/js/wiki.b26a4c181df3.js" charset="utf-8" id="wikiscript"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../static/build/js/newsletter.a85c5c2892e5.js" charset="utf-8"></script>
+  
+
+
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/console by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 08:47:32 GMT -->
+</body></html>

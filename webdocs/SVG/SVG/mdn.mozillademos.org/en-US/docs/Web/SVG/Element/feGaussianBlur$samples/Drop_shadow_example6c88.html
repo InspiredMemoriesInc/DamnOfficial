@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/SVG/Element/feGaussianBlur$samples/Drop_shadow_example?revision=1368834 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:45:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <title>&lt;feGaussianBlur&gt;</title>
+    </head>
+    <body>
+        
+            <svg width="120" height="120"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <filter id="dropShadow">
+    <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+    <feOffset dx="2" dy="4" />
+    <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+    </feMerge>
+  </filter>
+
+  <circle cx="60"  cy="60" r="50" fill="green"
+          filter="url(#dropShadow)" />
+</svg>
+        
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/SVG/Element/feGaussianBlur$samples/Drop_shadow_example?revision=1368834 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:45:10 GMT -->
+</html>

@@ -1,0 +1,1542 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/CSS/position by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:40:06 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  <title>position</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+
+  
+<link rel="preload" href="../../../../static/fonts/locales/ZillaSlab-Regular.f9de6143fdfa.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="license" href="#license">
+  
+
+  
+    
+    
+
+    <link href="../../../../static/build/styles/mdn.83865b0f7c30.css" rel="stylesheet" type="text/css">
+
+    
+  
+
+    <link href="../../../../static/build/styles/wiki.aaf26c13c39b.css" rel="stylesheet" type="text/css">
+
+
+    
+
+  <link href="../../../../static/build/styles/locale-en-US.ca0bca387b42.css" rel="stylesheet" type="text/css">
+
+  
+    <script>
+      /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
+    </script>
+    
+
+
+
+  
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta property="og:site_name" content="MDN Web Docs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="MDN Web Docs">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../static/img/favicon144.e7e21ca263ca.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../static/img/favicon114.d526f38b09c5.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../static/img/favicon72.cc65d1d762a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../../static/img/favicon57.de33179910ae.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="../../../../static/img/favicon32.7f3da72dcea1.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script async="" type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  <link rel="dns-prefetch" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/CSS/position$json">
+  <link rel="canonical" href="position.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="position.html" title="position">
+  
+    
+      <link rel="alternate" hreflang="bg" href="https://developer.mozilla.org/bg/docs/Web/CSS/position" title="position">
+    
+      <link rel="alternate" hreflang="de" href="https://developer.mozilla.org/de/docs/Web/CSS/position" title="position">
+    
+      <link rel="alternate" hreflang="es" href="https://developer.mozilla.org/es/docs/Web/CSS/position" title="position">
+    
+      <link rel="alternate" hreflang="fa" href="https://developer.mozilla.org/fa/docs/Web/CSS/position" title="موقعیت">
+    
+      <link rel="alternate" hreflang="fr" href="https://developer.mozilla.org/fr/docs/Web/CSS/position" title="position">
+    
+      <link rel="alternate" hreflang="ja" href="https://developer.mozilla.org/ja/docs/Web/CSS/position" title="position">
+    
+      <link rel="alternate" hreflang="ko" href="https://developer.mozilla.org/ko/docs/Web/CSS/position" title="position">
+    
+      <link rel="alternate" hreflang="pt-BR" href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/position" title="position">
+    
+      <link rel="alternate" hreflang="ru" href="https://developer.mozilla.org/ru/docs/Web/CSS/position" title="position">
+    
+      <link rel="alternate" hreflang="uk" href="https://developer.mozilla.org/uk/docs/Web/CSS/position" title="position">
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/position" title="position">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="position">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/CSS/position">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/CSS/position">
+  <meta name="twitter:title" content="position">
+  
+  <meta property="og:description" content="The position CSS property specifies how an element is positioned in a document. The top, right, bottom, and left properties determine the final location of positioned elements.">
+  <meta name="description" content="The position CSS property specifies how an element is positioned in a document. The top, right, bottom, and left properties determine the final location of positioned elements.">
+  <meta name="twitter:description" content="The position CSS property specifies how an element is positioned in a document. The top, right, bottom, and left properties determine the final location of positioned elements.">
+  
+
+</head>
+<body data-slug="Web/CSS/position" contextmenu="edit-history-menu" data-search-url="" class="document">
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <!--[endif]---->
+
+  
+  <link rel="dns-prefetch" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/CSS/position$json">
+  <link rel="canonical" href="position.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="position.html" title="position">
+  
+    
+      <link rel="alternate" hreflang="bg" href="https://developer.mozilla.org/bg/docs/Web/CSS/position" title="position">
+    
+      <link rel="alternate" hreflang="de" href="https://developer.mozilla.org/de/docs/Web/CSS/position" title="position">
+    
+      <link rel="alternate" hreflang="es" href="https://developer.mozilla.org/es/docs/Web/CSS/position" title="position">
+    
+      <link rel="alternate" hreflang="fa" href="https://developer.mozilla.org/fa/docs/Web/CSS/position" title="موقعیت">
+    
+      <link rel="alternate" hreflang="fr" href="https://developer.mozilla.org/fr/docs/Web/CSS/position" title="position">
+    
+      <link rel="alternate" hreflang="ja" href="https://developer.mozilla.org/ja/docs/Web/CSS/position" title="position">
+    
+      <link rel="alternate" hreflang="ko" href="https://developer.mozilla.org/ko/docs/Web/CSS/position" title="position">
+    
+      <link rel="alternate" hreflang="pt-BR" href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/position" title="position">
+    
+      <link rel="alternate" hreflang="ru" href="https://developer.mozilla.org/ru/docs/Web/CSS/position" title="position">
+    
+      <link rel="alternate" hreflang="uk" href="https://developer.mozilla.org/uk/docs/Web/CSS/position" title="position">
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/position" title="position">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="position">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/CSS/position">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/CSS/position">
+  <meta name="twitter:title" content="position">
+  
+  <meta property="og:description" content="The position CSS property specifies how an element is positioned in a document. The top, right, bottom, and left properties determine the final location of positioned elements.">
+  <meta name="description" content="The position CSS property specifies how an element is positioned in a document. The top, right, bottom, and left properties determine the final location of positioned elements.">
+  <meta name="twitter:description" content="The position CSS property specifies how an element is positioned in a document. The top, right, bottom, and left properties determine the final location of positioned elements.">
+  
+
+
+
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/wiki-compat-tables.9978a5ce31c2.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+
+        // interactive editor config
+        win.mdn.interactiveEditor = {
+            siteUrl: "https://developer.mozilla.org",
+            editorUrl: "https://interactive-examples.mdn.mozilla.net"
+        };
+
+    })(this);
+</script>
+    
+    <ul id="nav-access">
+  <li><a href="#content" id="skip-main">Skip to main content</a></li>
+  <li><a id="skip-language" href="#language">Select language</a></li>
+  <li><a href="#q" id="skip-search">Skip to search</a></li>
+</ul>
+
+    <!-- Header -->
+    <header id="main-header" class="header-main">
+      <a href="https://developer.mozilla.org/en-US/" class="logo">MDN Web Docs</a>
+      <div class="nav-toolbox-wrapper">
+        <nav id="main-nav" class="nav-main" role="navigation">
+    <ul>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web">Technologies
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-tech-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+                    <li><a href="../CSS.html">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API">APIs / DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn">References &amp; Guides
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-learn-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-contact-submenu">
+              <div class="submenu-column">
+                <ul>
+                  <li>
+                      <a href="https://support.mozilla.org/">Get Firefox help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://stackoverflow.com/">Get web development help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                      <a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/CSS/position">Report a content problem
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</nav>
+        <div id="toolbox" class="toolbox">
+  <ul>
+    
+    <li class="nav-login"><div class="login">
+    
+        
+        <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FCSS%2Fposition" class="login-link js-login-link" data-service="GitHub" rel="nofollow">
+            Sign in<svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+    <title>Github</title>
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path>
+</svg>
+        </a>
+    
+</div></li>
+  </ul>
+</div>
+      </div>
+      <form id="nav-main-search" action="https://developer.mozilla.org/en-US/search" method="get" role="search" class="nav-main-search">
+  <div class="search-wrap">
+    <label for="main-q" class="offscreen">Search</label>
+    <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" aria-hidden="true">
+    <span class="search-trigger">
+        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true">
+    <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path>
+</svg>
+    </span>
+    <button type="submit" class="offscreen">Search</button>
+    <button type="button" id="close-header-search" class="close-header-search transparent">
+        <span class="offscreen">Close search</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+  </div>
+</form>
+    </header> 
+
+  <!-- Content will go here -->
+  <main id="content">
+      
+  <!-- heading -->
+  <div id="wiki-document-head" class="document-head">
+    <div class="center">
+      <!-- action buttons -->
+      <div class="document-actions">
+        
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons">
+      <li>
+          <button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false">
+              <svg class="icon icon-language" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M10.219 16.844c-.031.109-.797-.25-1-.328-.203-.094-1.125-.609-1.359-.766s-1.125-.891-1.234-.938a28.275 28.275 0 0 1-2.094 2.828c-.281.328-1.125 1.391-1.641 1.719-.078.047-.531.094-.594.063.25-.187.969-1.078 1.281-1.437.391-.453 2.25-3.047 2.562-3.641.328-.594 1.312-2.562 1.359-2.75-.156-.016-1.391.406-1.719.516-.313.094-1.172.297-1.234.344-.063.063-.016.25-.047.313s-.313.203-.484.234a1.647 1.647 0 0 1-.734 0c-.203-.047-.391-.25-.438-.328 0 0-.063-.094-.078-.359.187-.063.5-.078.844-.172s1.188-.344 1.641-.5 1.328-.484 1.594-.547c.281-.047.984-.516 1.359-.641s.641-.281.656-.203 0 .422-.016.516c-.016.078-.766 1.547-.875 1.781-.063.125-.5.953-1.203 2.047.25.109.781.328 1 .438.266.125 2.125.906 2.219.938s.266.75.234.875zM7.016 9.25c.047.266-.031.375-.063.438-.156.297-.547.5-.781.594s-.625.187-.938.187c-.141-.016-.422-.063-.766-.406-.187-.203-.328-.75-.266-.688s.516.125.719.078.688-.187.906-.25c.234-.078.703-.203.859-.219.156 0 .281.063.328.266zm10.906 2.016l.984 3.547-2.172-.656zM.609 23.766l10.844-3.625V4.016L.609 7.657v16.109zM20 18.813l1.594.484-2.828-10.266-1.563-.484-3.375 8.375 1.594.484.703-1.719 3.297 1.016zM12.141 3.781l8.953 2.875V.718zM17 24.453l2.469.203-.844 2.5L18 26.125c-1.266.812-2.828 1.437-4.312 1.687-.453.094-.969.187-1.422.187h-1.313c-1.656 0-4.672-.984-5.984-1.937-.094-.078-.125-.141-.125-.25 0-.172.125-.297.281-.297.141 0 .875.453 1.078.547 1.406.703 3.375 1.344 4.953 1.344 1.953 0 3.281-.25 5.063-1.016.516-.234.969-.531 1.453-.797zm7-16.859v16.859c-12.078-3.844-12.094-3.844-12.094-3.844C11.656 20.718.453 24.5.297 24.5a.3.3 0 0 1-.281-.203c0-.016-.016-.031-.016-.047V7.406c.016-.047.031-.125.063-.156.094-.109.219-.141.313-.172.047-.016 1-.328 2.328-.781v-6l8.719 3.094C11.532 3.36 21.251 0 21.392 0c.172 0 .313.125.313.328v6.531z"></path>
+</svg>
+              <span>Languages</span>
+          </button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                
+                
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/bg/docs/Web/CSS/position" data-locale="bg" title="Bulgarian">Български (bg)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/de/docs/Web/CSS/position" data-locale="de" title="German">Deutsch (de)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/es/docs/Web/CSS/position" data-locale="es" title="Spanish">Español (es)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/fa/docs/Web/CSS/position" data-locale="fa" title="Persian">فارسی (fa)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/fr/docs/Web/CSS/position" data-locale="fr" title="French">Français (fr)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ja/docs/Web/CSS/position" data-locale="ja" title="Japanese">日本語 (ja)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ko/docs/Web/CSS/position" data-locale="ko" title="Korean">한국어 (ko)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/position" data-locale="pt-BR" title="Portuguese (Brazilian)">Português (do&nbsp;Brasil) (pt-BR)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ru/docs/Web/CSS/position" data-locale="ru" title="Russian">Русский (ru)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/uk/docs/Web/CSS/position" data-locale="uk" title="Ukrainian">Українська (uk)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/position" data-locale="zh-CN" title="Chinese (Simplified)">中文 (简体) (zh-CN)</a></bdi></li>
+                
+              
+
+              
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position$locales" rel="nofollow" id="translations-add">Add a translation</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+      
+      <li class="page-buttons-edit">
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position$edit" class="button neutral" id="edit-button" rel="nofollow">
+              <svg class="icon icon-pencil" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M5.672 24l1.422-1.422-3.672-3.672L2 20.328V22h2v2h1.672zm8.172-14.5a.329.329 0 0 0-.344-.344.368.368 0 0 0-.266.109l-8.469 8.469a.366.366 0 0 0-.109.266c0 .203.141.344.344.344a.368.368 0 0 0 .266-.109l8.469-8.469a.366.366 0 0 0 .109-.266zM13 6.5l6.5 6.5-13 13H0v-6.5zM23.672 8c0 .531-.219 1.047-.578 1.406L20.5 12 14 5.5l2.594-2.578c.359-.375.875-.594 1.406-.594s1.047.219 1.422.594l3.672 3.656c.359.375.578.891.578 1.422z"></path>
+</svg>
+              Edit
+          </a>
+      </li>
+      
+
+        
+
+        <li class="page-buttons-advanced">
+            <button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false">
+                <svg class="icon icon-gear" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M16 14c0-2.203-1.797-4-4-4s-4 1.797-4 4 1.797 4 4 4 4-1.797 4-4zm8-1.703v3.469c0 .234-.187.516-.438.562l-2.891.438a8.86 8.86 0 0 1-.609 1.422c.531.766 1.094 1.453 1.672 2.156.094.109.156.25.156.391s-.047.25-.141.359c-.375.5-2.484 2.797-3.016 2.797a.795.795 0 0 1-.406-.141l-2.156-1.687a9.449 9.449 0 0 1-1.422.594c-.109.953-.203 1.969-.453 2.906a.573.573 0 0 1-.562.438h-3.469c-.281 0-.531-.203-.562-.469l-.438-2.875a9.194 9.194 0 0 1-1.406-.578l-2.203 1.672c-.109.094-.25.141-.391.141s-.281-.063-.391-.172c-.828-.75-1.922-1.719-2.578-2.625a.607.607 0 0 1 .016-.718c.531-.719 1.109-1.406 1.641-2.141a8.324 8.324 0 0 1-.641-1.547l-2.859-.422A.57.57 0 0 1 0 15.705v-3.469c0-.234.187-.516.422-.562l2.906-.438c.156-.5.359-.969.609-1.437a37.64 37.64 0 0 0-1.672-2.156c-.094-.109-.156-.234-.156-.375s.063-.25.141-.359c.375-.516 2.484-2.797 3.016-2.797.141 0 .281.063.406.156L7.828 5.94a9.449 9.449 0 0 1 1.422-.594c.109-.953.203-1.969.453-2.906a.573.573 0 0 1 .562-.438h3.469c.281 0 .531.203.562.469l.438 2.875c.484.156.953.344 1.406.578l2.219-1.672c.094-.094.234-.141.375-.141s.281.063.391.156c.828.766 1.922 1.734 2.578 2.656a.534.534 0 0 1 .109.344c0 .141-.047.25-.125.359-.531.719-1.109 1.406-1.641 2.141.266.5.484 1.016.641 1.531l2.859.438a.57.57 0 0 1 .453.562z"></path>
+</svg>
+                <span>Advanced</span>
+            </button>
+            <div class="submenu js-submenu" id="advanced-menu-submenu">
+                <!-- this page -->
+                <div class="submenu-column">
+                    <div class="title">Advanced</div>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position$history" rel="nofollow">History</a></li>
+                        
+                        
+                        
+
+
+                
+
+                <li class="page-print"><a href="#" onclick="return window.print();">Print this article</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+      </div>
+
+      <div class="document-title">
+        <h1>position</h1>
+      </div>
+    </div>
+  </div>
+  
+  <div id="toc" class="toc">
+    <div class="center">
+      <div class="toc-head">Jump to:</div>
+        <ol class="toc-links">
+          <li><a href="#Syntax" rel="internal">Syntax</a></li><li><a href="#Examples" rel="internal">Examples</a></li><li><a href="#Accessibility_concerns" rel="internal">Accessibility concerns</a></li><li><a href="#Specifications" rel="internal">Specifications</a></li><li><a href="#Browser_compatibility" rel="internal">Browser compatibility</a>
+        </li></ol>
+    </div>
+  </div>
+  
+
+      <div class="center clear">
+      
+
+    <div class="wiki-main-content" id="document-main"><div class="center">
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-left-present">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-main wiki-column text-content">
+
+              
+
+              
+              
+
+              
+
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <div></div>
+
+<p>The <strong><code>position</code></strong> <a href="../CSS.html" title="CSS">CSS</a> property specifies how an element is positioned in a document. The <a href="top.html" title="The top CSS property participates in specifying the vertical position of a positioned element. It has no effect on non-positioned elements."><code>top</code></a>, <a href="right.html" title="The right CSS property participates in specifying the horizontal position of a positioned element. It has no effect on non-positioned elements."><code>right</code></a>, <a href="bottom.html" title="The bottom CSS property participates in specifying the vertical position of a positioned element. It has no effect on non-positioned elements."><code>bottom</code></a>, and <a href="left.html" title="The left CSS property participates in specifying the horizontal position of a positioned element. It has no effect on non-positioned elements."><code>left</code></a> properties determine the final location of positioned elements.</p>
+
+<div><iframe src="../../../../../interactive-examples.mdn.mozilla.net/pages/css/position.html" class="interactive  " width="100%" frameborder="0" height="250"></iframe></div>
+
+<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples" class="external" rel="noopener">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
+
+<h3 id="Types_of_positioning">Types of positioning</h3>
+
+<ul>
+ <li>A <strong>positioned element</strong> is an element whose <a href="computed_value.html" title="CSS/computed_value">computed</a> <code>position</code> value is either <code>relative</code>, <code>absolute</code>, <code>fixed</code>, or <code>sticky</code>. (In other words, it's anything except <code>static</code>.)</li>
+ <li>A <strong>relatively positioned element</strong> is an element whose <a href="computed_value.html" title="CSS/computed_value">computed</a> <code>position</code> value is <code>relative</code>. The <a href="top.html" title="The top CSS property participates in specifying the vertical position of a positioned element. It has no effect on non-positioned elements."><code>top</code></a> and <a href="bottom.html" title="The bottom CSS property participates in specifying the vertical position of a positioned element. It has no effect on non-positioned elements."><code>bottom</code></a> properties specify the vertical offset from its normal position; the <a href="left.html" title="The left CSS property participates in specifying the horizontal position of a positioned element. It has no effect on non-positioned elements."><code>left</code></a> and <a href="right.html" title="The right CSS property participates in specifying the horizontal position of a positioned element. It has no effect on non-positioned elements."><code>right</code></a> properties specify the horizontal offset.</li>
+ <li>An <strong>absolutely positioned element</strong> is an element whose <a href="computed_value.html" title="CSS/computed_value">computed</a> <code>position</code> value is <code>absolute</code> or <code>fixed</code>. The <a href="top.html" title="The top CSS property participates in specifying the vertical position of a positioned element. It has no effect on non-positioned elements."><code>top</code></a>, <a href="right.html" title="The right CSS property participates in specifying the horizontal position of a positioned element. It has no effect on non-positioned elements."><code>right</code></a>, <a href="bottom.html" title="The bottom CSS property participates in specifying the vertical position of a positioned element. It has no effect on non-positioned elements."><code>bottom</code></a>, and <a href="left.html" title="The left CSS property participates in specifying the horizontal position of a positioned element. It has no effect on non-positioned elements."><code>left</code></a> properties specify offsets from the edges of the element's <a href="Containing_block.html">containing block</a>. (The containing block is the ancestor relative to which the element is positioned.) If the element has margins, they are added to the offset.</li>
+ <li>A <strong>stickily positioned element</strong> is an element whose <a href="computed_value.html" title="CSS/computed_value">computed</a> <code>position</code> value is <code>sticky</code>. It's treated as relatively positioned until its <a href="Containing_block.html">containing block</a> crosses a specified threshold (such as setting <a href="top.html" title="The top CSS property participates in specifying the vertical position of a positioned element. It has no effect on non-positioned elements."><code>top</code></a> to value other than auto) within its flow root (or the container it scrolls within), at which point it is treated as "stuck" until meeting the opposite edge of its <a href="Containing_block.html">containing block</a>.</li>
+</ul>
+
+<p>Most of the time, absolutely positioned elements that have <a href="height.html" title="The height CSS property specifies the height of an element. By default, the property defines the height of the content area. If box-sizing is set to border-box, however, it instead determines the height of the border area."><code>height</code></a> and <a href="width.html" title="The width CSS property specifies the width of an element. By default, the property defines the width of the content area. If box-sizing is set to border-box, however, it instead determines the width of the border area."><code>width</code></a> set to <code>auto</code> are sized so as to fit their contents. However, non-<a href="Replaced_element.html">replaced</a>, absolutely positioned elements can be made to fill the available vertical space by specifying both <a href="top.html" title="The top CSS property participates in specifying the vertical position of a positioned element. It has no effect on non-positioned elements."><code>top</code></a> and <a href="bottom.html" title="The bottom CSS property participates in specifying the vertical position of a positioned element. It has no effect on non-positioned elements."><code>bottom</code></a> and leaving <a href="height.html" title="The height CSS property specifies the height of an element. By default, the property defines the height of the content area. If box-sizing is set to border-box, however, it instead determines the height of the border area."><code>height</code></a> unspecified (that is, <code>auto</code>). They can likewise be made to fill the available horizontal space by specifying both <a href="left.html" title="The left CSS property participates in specifying the horizontal position of a positioned element. It has no effect on non-positioned elements."><code>left</code></a> and <a href="right.html" title="The right CSS property participates in specifying the horizontal position of a positioned element. It has no effect on non-positioned elements."><code>right</code></a> and leaving <a href="width.html" title="The width CSS property specifies the width of an element. By default, the property defines the width of the content area. If box-sizing is set to border-box, however, it instead determines the width of the border area."><code>width</code></a> as <code>auto</code>.</p>
+
+<p>Except for the case just described (of absolutely positioned elements filling the available space):</p>
+
+<ul>
+ <li>If both <code>top</code> and <code>bottom</code> are specified (technically, not <code>auto</code>), <code>top</code> wins.</li>
+ <li>If both <code>left</code> and <code>right</code> are specified, <code>left</code> wins when <a href="direction.html" title="The direction CSS property sets the direction of text, table columns, and horizontal overflow."><code>direction</code></a> is <code>ltr</code> (English, horizontal Japanese, etc.) and <code>right</code> wins when <a href="direction.html" title="The direction CSS property sets the direction of text, table columns, and horizontal overflow."><code>direction</code></a> is <code>rtl</code> (Persian, Arabic, Hebrew, etc.).</li>
+</ul>
+
+<a class="dashAnchor" name="//apple_ref/Section/Syntax"></a><h2 id="Syntax">Syntax</h2>
+
+<p>The <code>position</code> property is specified as a single keyword chosen from the list of values below.</p>
+
+<h3 id="Values">Values</h3>
+
+<dl>
+ <dt id="static"><code>static</code></dt>
+ <dd>The element is positioned according to the normal flow of the document. The <a href="top.html" title="The top CSS property participates in specifying the vertical position of a positioned element. It has no effect on non-positioned elements."><code>top</code></a>, <a href="right.html" title="The right CSS property participates in specifying the horizontal position of a positioned element. It has no effect on non-positioned elements."><code>right</code></a>, <a href="bottom.html" title="The bottom CSS property participates in specifying the vertical position of a positioned element. It has no effect on non-positioned elements."><code>bottom</code></a>, <a href="left.html" title="The left CSS property participates in specifying the horizontal position of a positioned element. It has no effect on non-positioned elements."><code>left</code></a>, and <a href="z-index.html" title="The z-index CSS property specifies the z-order of a positioned element and its descendants. When elements overlap, z-order determines which one covers the other. An element with a larger z-index generally covers an element with a lower one."><code>z-index</code></a> properties have <em>no effect</em>. This is the default value.</dd>
+ <dt id="relative"><code>relative</code></dt>
+ <dd>The element is positioned according to the normal flow of the document, and then offset <em>relative to itself</em> based on the values of <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code>. The offset does not affect the position of any other elements; thus, the space given for the element in the page layout is the same as if position were <code>static</code>.</dd>
+ <dd>This value creates a new <a href="CSS_Positioning/Understanding_z_index/The_stacking_context.html" class="new" rel="nofollow">stacking context</a> when the value of <code>z-index</code> is not <code>auto</code>. Its effect on <code>table-*-group</code>, <code>table-row</code>, <code>table-column</code>, <code>table-cell</code>, and <code>table-caption</code> elements is undefined.</dd>
+ <dt id="absolute"><code>absolute</code></dt>
+ <dd>The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to its closest positioned ancestor, if any; otherwise, it is placed relative to the initial <a href="Containing_block.html">containing block</a>. Its final position is determined by the values of <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code>.</dd>
+ <dd>This value creates a new <a href="CSS_Positioning/Understanding_z_index/The_stacking_context.html" class="new" rel="nofollow">stacking context</a> when the value of <code>z-index</code> is not <code>auto</code>. The margins of absolutely positioned boxes do not <a href="CSS_Box_Model/Mastering_margin_collapsing.html">collapse</a> with other margins.</dd>
+ <dt id="fixed"><code>fixed</code></dt>
+ <dd>The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to the initial <a href="Containing_block.html">containing block</a> established by the <a href="https://developer.mozilla.org/en-US/docs/Glossary/viewport" title="viewport: A viewport represents a polygonal (normally rectangular) area in computer graphics that is currently being viewed. In web browser terms, it refers to the part of the document you're viewing which is currently visible in its window (or the screen, if the document is being viewed in full screen mode). Content outside the viewport is not visible onscreen until scrolled into view." class="glossaryLink">viewport</a>, except when one of its ancestors has a <code>transform</code>, <code>perspective</code>, or <code>filter</code> property set to something other than <code>none</code> (see the <a href="https://www.w3.org/TR/css-transforms-1/#propdef-transform" class="external" rel="noopener">CSS Transforms Spec</a>), in which case that ancestor behaves as the containing block. (Note that there are browser inconsistencies with <code>perspective</code> and <code>filter</code> contributing to containing block formation.) Its final position is determined by the values of <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code>.</dd>
+ <dd>This value always creates a new <a href="CSS_Positioning/Understanding_z_index/The_stacking_context.html" class="new" rel="nofollow">stacking context</a>. In printed documents, the element is placed in the same position on <em>every page</em>.</dd>
+ <dt id="sticky"><code>sticky</code></dt>
+ <dd>The element is positioned according to the normal flow of the document, and then offset relative to its<em> nearest scrolling ancestor</em> and <a href="Containing_block.html">containing block</a> (nearest block-level ancestor), including table-related elements, based on the values of <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code>. The offset does not affect the position of any other elements.</dd>
+ <dd>This value always creates a new <a href="CSS_Positioning/Understanding_z_index/The_stacking_context.html" class="new" rel="nofollow">stacking context</a>. Note that a sticky element "sticks" to its nearest ancestor that has a "scrolling mechanism" (created when <code>overflow</code> is <code>hidden</code>, <code>scroll</code>, <code>auto</code>, or <code>overlay</code>), even if that ancestor isn't the nearest actually scrolling ancestor. This effectively inhibits any "sticky" behavior (see the <a href="https://github.com/w3c/csswg-drafts/issues/865" class="external" rel="noopener">Github issue on W3C CSSWG</a>).</dd>
+</dl>
+
+<h3 id="Formal_syntax">Formal syntax</h3>
+
+<pre class="syntaxbox">static <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> relative <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> absolute <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> sticky <a href="Value_definition_syntax.html#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> fixed</pre>
+
+<a class="dashAnchor" name="//apple_ref/Section/Examples"></a><h2 id="Examples">Examples</h2>
+
+<h3 id="Relative_positioning" name="Relative_positioning">Relative positioning</h3>
+
+<p>Relatively positioned elements are offset a given amount from their normal position within the document, but without the offset affecting other elements. In the example below, note how the other elements are placed as if "Two" were taking up the space of its normal location.</p>
+
+<h4 id="HTML">HTML</h4>
+
+<pre class="brush: html">&lt;div class="box" id="one"&gt;One&lt;/div&gt;
+&lt;div class="box" id="two"&gt;Two&lt;/div&gt;
+&lt;div class="box" id="three"&gt;Three&lt;/div&gt;
+&lt;div class="box" id="four"&gt;Four&lt;/div&gt;
+</pre>
+
+<h4 id="CSS">CSS</h4>
+
+<pre class="brush: css">.box {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background: red;
+  color: white;
+}
+
+#two {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  background: blue;
+}
+</pre>
+
+<p><iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/position%24samples/Relative_positioning96fa.html?revision=1389010" class="live-sample-frame sample-code-frame" height="200px" width="600px" id="frame_Relative_positioning" frameborder="0"></iframe></p>
+
+<h3 id="Absolute_positioning" name="Absolute_positioning">Absolute positioning</h3>
+
+<p>Elements that are relatively positioned remain in the normal flow of the document. In contrast, an element that is absolutely positioned is taken out of the flow; thus, other elements are positioned as if it did not exist. The absolutely positioned element is positioned relative to its <em>nearest positioned ancestor</em> (i.e., the nearest ancestor that is not <code>static</code>). If a positioned ancestor doesn't exist,&nbsp; it is positioned relative to the ICB (initial containing block — see also the <a href="https://www.w3.org/TR/CSS2/visudet.html#containing-block-details" class="external" rel="noopener">W3C definition</a>), which the containing block of the document's root element.</p>
+
+<p>A simple example follows:</p>
+
+<pre class="brush: html">&lt;h1&gt;Absolute positioning&lt;/h1&gt;
+
+&lt;p&gt;I am a basic block level element. My adjacent block level elements sit on new lines below me.&lt;/p&gt;
+
+&lt;p class="positioned"&gt;By default we span 100% of the width of our parent element, and we are as tall as our child content. Our total width and height is our content + padding + border width/height.&lt;/p&gt;
+
+&lt;p&gt;We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.&lt;/p&gt;
+
+&lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements &lt;span&gt;wrap onto a new line if possible — like this one containing text&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;</pre>
+
+<pre class="brush: css">body {
+&nbsp; width: 500px;
+&nbsp; margin: 0 auto;
+}
+
+p {
+  background: aqua;
+  border: 3px solid blue;
+  padding: 10px;
+  margin: 10px;
+}
+
+span {
+  background: red;
+  border: 1px solid black;
+}
+
+.positioned {
+  position: absolute;
+  background: yellow;
+  top: 30px;
+  left: 30px;
+}</pre>
+
+<p><iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/position%24samples/Absolute_positioning96fa.html?revision=1389010" class="live-sample-frame sample-code-frame" height="420" width="100%" id="frame_Absolute_positioning" frameborder="0"></iframe></p>
+
+<p>&nbsp;</p>
+
+<h3 id="Fixed_positioning" name="Fixed_positioning">Fixed positioning</h3>
+
+<p>Fixed positioning is similar to absolute positioning, with the exception that the element's <a href="Containing_block.html">containing block</a> is the initial containing block established by the&nbsp;<em>viewport</em>, unless any ancestor has&nbsp;<code>transform</code>,&nbsp;<code>perspective</code>, or&nbsp;<code>filter</code>&nbsp;property set to something other than <code>none</code> (see <a href="https://www.w3.org/TR/css-transforms-1/#propdef-transform" class="external" rel="noopener">CSS Transforms Spec</a>), which then causes that ancestor to take&nbsp;the place of the elements <a href="Containing_block.html">containing block</a>. This can be used to create a "floating" element that stays in the same position regardless of scrolling. In the example below, box "One" is fixed at 80 pixels from the top of the page and 10 pixels from the left. Even after scrolling, it remains in the same place relative to the viewport.</p>
+
+<h4 id="HTML_2">HTML</h4>
+
+<pre class="brush: html">&lt;div class="outer"&gt;
+  &lt;p&gt;
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor eget pulvinar lobortis.
+    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ac dolor augue.
+    Pellentesque mi mi, laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
+    Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut arcu aliquam purus viverra dictum vel sit amet mi.
+    Duis nisl mauris, aliquam sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem aliquam, congue porttitor tortor.
+    Sed tempor nisl a lorem consequat, id maximus erat aliquet. Sed sagittis porta libero sed condimentum.
+    Aliquam finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id ultrices ultrices, tempor et tellus.
+  &lt;/p&gt;
+  &lt;p&gt;
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor eget pulvinar lobortis.
+    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ac dolor augue.
+    Pellentesque mi mi, laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
+    Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut arcu aliquam purus viverra dictum vel sit amet mi.
+    Duis nisl mauris, aliquam sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem aliquam, congue porttitor tortor.
+    Sed tempor nisl a lorem consequat, id maximus erat aliquet. Sed sagittis porta libero sed condimentum.
+    Aliquam finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id ultrices ultrices, tempor et tellus.
+  &lt;/p&gt;
+  &lt;div class="box" id="one"&gt;One&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<h4 id="CSS_2">CSS</h4>
+
+<pre class="brush: css">.box {
+  width: 100px;
+  height: 100px;
+  background: red;
+  color: white;
+}
+
+#one {
+  position: fixed;
+  top: 80px;
+  left: 10px;
+  background: blue;
+}
+
+.outer {
+  width: 500px;
+  height: 300px;
+  overflow: scroll;
+  padding-left: 150px;
+}
+</pre>
+
+<p><iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/position%24samples/Fixed_positioning96fa.html?revision=1389010" class="live-sample-frame sample-code-frame" height="300px" width="800px" id="frame_Fixed_positioning" frameborder="0"></iframe></p>
+
+<h3 id="Sticky_positioning" name="Sticky_positioning">Sticky positioning</h3>
+
+<p>Sticky positioning can be thought of as a hybrid of relative and fixed positioning. A stickily positioned element is treated as relatively positioned until it crosses a specified threshold, at which point it is treated as fixed until it reaches the boundary of its parent. For instance...</p>
+
+<pre class="brush: css">#one { position: sticky; top: 10px; }</pre>
+
+<p>...would position the element with id <em>one</em> relatively until the viewport were scrolled such that the element would be less than 10 pixels from the top. Beyond that threshold, the element would be fixed to 10 pixels from the top.</p>
+
+<p>A common use for sticky positioning is for the headings in an alphabetized list. The "B" heading will appear just below the items that begin with "A" until they are scrolled offscreen. Rather than sliding offscreen with the rest of the content, the "B" heading will then remain fixed to the top of the viewport until all the "B" items have scrolled offscreen, at which point it will be covered up by the "C" heading, and so on.</p>
+
+<p>You must specify a threshold with at least one of <code>top</code>, <code>right</code>, <code>bottom</code>, or <code>left</code> for sticky positioning to behave as expected. Otherwise, it will be indistinguishable from relative positioning.</p>
+
+<h4 id="HTML_3">HTML</h4>
+
+<pre class="brush: html">&lt;dl&gt;
+  &lt;div&gt;
+    &lt;dt&gt;A&lt;/dt&gt;
+    &lt;dd&gt;Andrew W.K.&lt;/dd&gt;
+    &lt;dd&gt;Apparat&lt;/dd&gt;
+    &lt;dd&gt;Arcade Fire&lt;/dd&gt;
+    &lt;dd&gt;At The Drive-In&lt;/dd&gt;
+    &lt;dd&gt;Aziz Ansari&lt;/dd&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;dt&gt;C&lt;/dt&gt;
+    &lt;dd&gt;Chromeo&lt;/dd&gt;
+    &lt;dd&gt;Common&lt;/dd&gt;
+    &lt;dd&gt;Converge&lt;/dd&gt;
+    &lt;dd&gt;Crystal Castles&lt;/dd&gt;
+    &lt;dd&gt;Cursive&lt;/dd&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;dt&gt;E&lt;/dt&gt;
+    &lt;dd&gt;Explosions In The Sky&lt;/dd&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;dt&gt;T&lt;/dt&gt;
+    &lt;dd&gt;Ted Leo &amp;amp; The Pharmacists&lt;/dd&gt;
+    &lt;dd&gt;T-Pain&lt;/dd&gt;
+    &lt;dd&gt;Thrice&lt;/dd&gt;
+    &lt;dd&gt;TV On The Radio&lt;/dd&gt;
+    &lt;dd&gt;Two Gallants&lt;/dd&gt;
+  &lt;/div&gt;
+&lt;/dl&gt;
+</pre>
+
+<h4 id="CSS_3">CSS</h4>
+
+<pre class="brush: css">* {
+  box-sizing: border-box;
+}
+
+dl &gt; div {
+  background: #FFF;
+  padding: 24px 0 0 0;
+}
+
+dt {
+  background: #B8C1C8;
+  border-bottom: 1px solid #989EA4;
+  border-top: 1px solid #717D85;
+  color: #FFF;
+  font: bold 18px/21px Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 2px 0 0 12px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
+}
+
+dd {
+  font: bold 20px/45px Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0 0 0 12px;
+  white-space: nowrap;
+}
+
+dd + dd {
+  border-top: 1px solid #CCC;
+}
+</pre>
+
+<p><iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/CSS/position%24samples/Sticky_positioning96fa.html?revision=1389010" class="live-sample-frame sample-code-frame" height="300px" width="500px" id="frame_Sticky_positioning" frameborder="0"></iframe></p>
+
+<a class="dashAnchor" name="//apple_ref/Section/Accessibility%20concerns"></a><h2 id="Accessibility_concerns">Accessibility concerns</h2>
+
+<p>Ensure that elements&nbsp;positioned with an&nbsp;<code>absolute</code> or <code>fixed</code> value do&nbsp;not obscure other content when the page is zoomed to increase text size.</p>
+
+<ul>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
+ <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html" class="external" rel="noopener">Visual Presentation: Understanding SC 1.4.8 | Understanding WCAG 2.0</a></li>
+</ul>
+
+<a class="dashAnchor" name="//apple_ref/Section/Specifications"></a><h2 id="Specifications" name="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><a href="https://www.w3.org/TR/CSS2/visuren.html#propdef-position" hreflang="en" lang="en" class="external" rel="noopener">CSS Level&nbsp;2 (Revision&nbsp;1)<br><small lang="en-US">The definition of 'position' in that specification.</small></a></td>
+   <td><span class="spec-REC">Recommendation</span></td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><a href="https://drafts.csswg.org/css-position-3/#position-property" hreflang="en" lang="en" class="external" rel="noopener">CSS Positioned Layout Module Level&nbsp;3<br><small lang="en-US">The definition of 'position' in that specification.</small></a></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+   <td>Adds <code>sticky</code> property value.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p></p><table class="properties"><tbody><tr><th scope="row"><a href="initial_value.html">Initial value</a></th><td><code>static</code></td></tr><tr><th scope="row">Applies to</th><td>all elements</td></tr><tr><th scope="row"><a href="inheritance.html">Inherited</a></th><td>no</td></tr><tr><th scope="row">Media</th><td>visual</td></tr><tr><th scope="row"><a href="computed_value.html">Computed value</a></th><td>as specified</td></tr><tr><th scope="row">Animation type</th><td>discrete</td></tr><tr><th scope="row">Canonical order</th><td>the unique non-ambiguous order defined by the formal grammar</td></tr><tr><th scope="row">Creates <a href="CSS_Positioning/Understanding_z_index/The_stacking_context.html">stacking context</a></th><td>yes</td></tr></tbody></table><p></p>
+
+<a class="dashAnchor" name="//apple_ref/Section/Browser%20compatibility"></a><h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
+
+<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data" class="external" rel="noopener">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p></p><div class="bc-old"><div class="htab">
+    <a id="AutoCompatibilityTable" name="AutoCompatibilityTable"></a>
+    <ul>
+    <li class="selected">
+    <a>Desktop</a>
+    </li>
+    <li>
+    <a>Mobile</a>
+    </li>
+    </ul>
+    </div><div id="compat-desktop"><table class="compat-table"><thead><tr><th>Feature</th><th>Chrome</th><th>Edge</th><th>Firefox</th><th>Internet Explorer</th><th>Opera</th><th>Safari</th></tr></thead><tbody><tr><td><a href="https://developer.mozilla.org/docs/Web/CSS/position">Basic support</a></td><td class="full-support">1</td><td class="full-support">12</td><td class="full-support">1<sup><a href="#compatNote_1">1</a></sup></td><td class="full-support">4<sup><a href="#compatNote_2">2</a></sup></td><td class="full-support">4</td><td class="full-support">1</td></tr><tr><td><code>fixed</code></td><td class="full-support">1</td><td class="full-support">12</td><td class="full-support">1<sup><a href="#compatNote_3">3</a></sup></td><td class="full-support">7</td><td class="full-support">4</td><td class="full-support">1</td></tr><tr><td><code>sticky</code></td><td class="full-support">56</td><td class="full-support">16</td><td class="full-support"><p>32</p><p>26&nbsp;— 48<sup><a href="#compatNote_4">4</a></sup></p></td><td class="no-support"><span title="No support">
+      No</span></td><td class="full-support">43</td><td class="full-support">6.1<span class="inlineIndicator prefixBox prefixBoxInline" title="prefix">
+      <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with '-webkit-' as this
+      browser considers it experimental">-webkit-
+      </a></span></td></tr><tr><td>Table elements as <code>absolute</code> positioning containers</td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="full-support">30<sup><a href="#compatNote_5">5</a></sup></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td></tr><tr><td>Table elements as <code>sticky</code> positioning containers</td><td class="no-support"><span title="No support">
+      No</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="full-support">59</td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="no-support"><span title="No support">
+      No</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td></tr></tbody></table></div><div id="compat-mobile"><table class="compat-table"><thead><tr><th>Feature</th><th>Android webview</th><th>Chrome for Android</th><th>Edge mobile</th><th>Firefox for Android</th><th>Opera Android</th><th>iOS Safari</th><th>Samsung Internet</th></tr></thead><tbody><tr><td><a href="https://developer.mozilla.org/docs/Web/CSS/position">Basic support</a></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support">4</td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td></tr><tr><td><code>fixed</code></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="full-support"><span title="Please update this with the earliest version of support.">
+      Yes</span></td></tr><tr><td><code>sticky</code></td><td class="full-support">56</td><td class="full-support">56</td><td class="full-support">16</td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="full-support">43</td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="full-support">6.0</td></tr><tr><td>Table elements as <code>absolute</code> positioning containers</td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="full-support">30<sup><a href="#compatNote_5">5</a></sup></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td></tr><tr><td>Table elements as <code>sticky</code> positioning containers</td><td class="no-support"><span title="No support">
+      No</span></td><td class="no-support"><span title="No support">
+      No</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="full-support">59</td><td class="no-support"><span title="No support">
+      No</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="no-support"><span title="No support">
+      No</span></td></tr></tbody></table></div><p id="compatNote_1">1. Before Firefox 57, absolute positioning did not work correctly when applied to elements inside tables that have <a href="https://developer.mozilla.org/docs/Web/CSS/border-collapse"><code>border-collapse</code></a> applied to them (<a href="https://bugzil.la/1379306" class="external" rel="noopener">bug 1379306</a>).</p><p id="compatNote_2">2. In Internet Explorer, fixed positioning doesn't work if the document is in <a href="http://msdn.microsoft.com/en-us/library/ie/ms531140(v=vs.85).aspx" class="external" rel="noopener">quirks mode</a>.</p><p id="compatNote_3">3. Before Firefox 44, <code>position: fixed</code> didn't create a stacking context in most cases. Firefox and the specification have been modified to mimic Chrome and Safari's long-time behavior.</p><p id="compatNote_4">4. From version 26 until version 48 (exclusive): this feature is behind the <code>layout.css.sticky.enabled</code> preference (needs to be set to <code>true</code>). To change preferences in Firefox, visit about:config.</p><p id="compatNote_5">5. Firefox helps developers transition to the new behavior and detect any rendering issues it may cause on their sites by printing the following warning to the JavaScript console: "Absolute positioning of table rows and row groups is now supported. This site may need to be updated because it may depend on this feature having no effect."</p></div><div class="bc-data hidden"><table class="bc-table bc-table-web"><thead><tr class="bc-platforms"><td></td><th colspan="6" class="bc-platform-desktop"><abbr class="only-icon" title="Desktop"><span>Desktop</span><i class="ic-desktop"></i></abbr></th><th colspan="7" class="bc-platform-mobile"><abbr class="only-icon" title="Mobile"><span>Mobile</span><i class="ic-mobile"></i></abbr></th></tr><tr class="bc-browsers"><td></td><th class="bc-browser-chrome"><abbr class="only-icon" title="Chrome"><span>Chrome</span><i class="ic-chrome"></i></abbr></th><th class="bc-browser-edge"><abbr class="only-icon" title="Edge"><span>Edge</span><i class="ic-edge"></i></abbr></th><th class="bc-browser-firefox"><abbr class="only-icon" title="Firefox"><span>Firefox</span><i class="ic-firefox"></i></abbr></th><th class="bc-browser-ie"><abbr class="only-icon" title="Internet Explorer"><span>Internet Explorer</span><i class="ic-ie"></i></abbr></th><th class="bc-browser-opera"><abbr class="only-icon" title="Opera"><span>Opera</span><i class="ic-opera"></i></abbr></th><th class="bc-browser-safari"><abbr class="only-icon" title="Safari"><span>Safari</span><i class="ic-safari"></i></abbr></th><th class="bc-browser-webview_android"><abbr class="only-icon" title="Android webview"><span>Android webview</span><i class="ic-webview_android"></i></abbr></th><th class="bc-browser-chrome_android"><abbr class="only-icon" title="Chrome for Android"><span>Chrome for Android</span><i class="ic-chrome_android"></i></abbr></th><th class="bc-browser-edge_mobile"><abbr class="only-icon" title="Edge Mobile"><span>Edge Mobile</span><i class="ic-edge_mobile"></i></abbr></th><th class="bc-browser-firefox_android"><abbr class="only-icon" title="Firefox for Android"><span>Firefox for Android</span><i class="ic-firefox_android"></i></abbr></th><th class="bc-browser-opera_android"><abbr class="only-icon" title="Opera for Android"><span>Opera for Android</span><i class="ic-opera_android"></i></abbr></th><th class="bc-browser-safari_ios"><abbr class="only-icon" title="iOS Safari"><span>iOS Safari</span><i class="ic-safari_ios"></i></abbr></th><th class="bc-browser-samsunginternet_android"><abbr class="only-icon" title="Samsung Internet"><span>Samsung Internet</span><i class="ic-samsunginternet_android"></i></abbr></th></tr></thead><tbody><tr><th scope="row">Basic support</th><td class="bc-supports-yes bc-browser-chrome"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              1</td><td class="bc-supports-yes bc-browser-edge"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              12</td><td class="bc-supports-yes bc-browser-firefox bc-has-history"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              1<div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> </div><section id="sect1" class="bc-history"><dl><dt class="bc-supports-yes bc-supports"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              1<div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> </div></dt><dd><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> Before Firefox 57, absolute positioning did not work correctly when applied to elements inside tables that have <a href="https://developer.mozilla.org/docs/Web/CSS/border-collapse"><code>border-collapse</code></a> applied to them (<a href="https://bugzil.la/1379306" class="external" rel="noopener">bug 1379306</a>).</dd></dl></section></td><td class="bc-supports-yes bc-browser-ie bc-has-history"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              4<div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> </div><section id="sect2" class="bc-history"><dl><dt class="bc-supports-yes bc-supports"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              4<div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> </div></dt><dd><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> In Internet Explorer, fixed positioning doesn't work if the document is in <a href="http://msdn.microsoft.com/en-us/library/ie/ms531140(v=vs.85).aspx" class="external" rel="noopener">quirks mode</a>.</dd></dl></section></td><td class="bc-supports-yes bc-browser-opera"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              4</td><td class="bc-supports-yes bc-browser-safari"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              1</td><td class="bc-supports-yes bc-browser-webview_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-chrome_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-edge_mobile"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-firefox_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              4</td><td class="bc-supports-yes bc-browser-opera_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-safari_ios"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-samsunginternet_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td></tr><tr><th scope="row"><code>fixed</code></th><td class="bc-supports-yes bc-browser-chrome"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              1</td><td class="bc-supports-yes bc-browser-edge"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              12</td><td class="bc-supports-yes bc-browser-firefox bc-has-history"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              1<div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> </div><section id="sect3" class="bc-history"><dl><dt class="bc-supports-yes bc-supports"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              1<div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> </div></dt><dd><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> Before Firefox 44, <code>position: fixed</code> didn't create a stacking context in most cases. Firefox and the specification have been modified to mimic Chrome and Safari's long-time behavior.</dd></dl></section></td><td class="bc-supports-yes bc-browser-ie"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              7</td><td class="bc-supports-yes bc-browser-opera"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              4</td><td class="bc-supports-yes bc-browser-safari"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              1</td><td class="bc-supports-yes bc-browser-webview_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-yes bc-browser-chrome_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-unknown bc-browser-edge_mobile"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-firefox_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-yes bc-browser-opera_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td><td class="bc-supports-unknown bc-browser-safari_ios"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-yes bc-browser-samsunginternet_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              Yes</td></tr><tr><th scope="row"><code>sticky</code></th><td class="bc-supports-yes bc-browser-chrome"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              56</td><td class="bc-supports-yes bc-browser-edge"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              16</td><td class="bc-supports-yes bc-browser-firefox bc-has-history"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              32<div class="bc-icons"></div><section id="sect4" class="bc-history"><dl><dt class="bc-supports-yes bc-supports"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              32<div class="bc-icons"></div></dt><dd></dd><dt class="bc-supports-no bc-supports"><abbr class="bc-level-no only-icon" title="No support">
+              <span>No support</span>
+            </abbr>26&nbsp;— 48<div class="bc-icons"><abbr class="only-icon" title="User must explicitly enable this feature."><span>Disabled</span><i class="ic-disabled"></i></abbr> </div></dt><dd><abbr class="only-icon" title="User must explicitly enable this feature."><span>Disabled</span><i class="ic-disabled"></i></abbr> From version 26 until version 48 (exclusive): this feature is behind the <code>layout.css.sticky.enabled</code> preference (needs to be set to <code>true</code>). To change preferences in Firefox, visit about:config.</dd></dl></section></td><td class="bc-supports-no bc-browser-ie"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td><td class="bc-supports-yes bc-browser-opera"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              43</td><td class="bc-supports-yes bc-browser-safari bc-has-history"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              6.1<div class="bc-icons"><abbr class="only-icon" title="Requires the vendor prefix: -webkit-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> </div><section id="sect5" class="bc-history"><dl><dt class="bc-supports-yes bc-supports"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              6.1<div class="bc-icons"><abbr class="only-icon" title="Requires the vendor prefix: -webkit-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> </div></dt><dd><abbr class="only-icon" title="Requires the vendor prefix: -webkit-"><span>Prefixed</span><i class="ic-prefix"></i></abbr> Requires the vendor prefix: -webkit-</dd></dl></section></td><td class="bc-supports-yes bc-browser-webview_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              56</td><td class="bc-supports-yes bc-browser-chrome_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              56</td><td class="bc-supports-yes bc-browser-edge_mobile"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              16</td><td class="bc-supports-unknown bc-browser-firefox_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-yes bc-browser-opera_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              43</td><td class="bc-supports-unknown bc-browser-safari_ios"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-yes bc-browser-samsunginternet_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              6.0</td></tr><tr><th scope="row">Table elements as <code>absolute</code> positioning containers</th><td class="bc-supports-unknown bc-browser-chrome"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-edge"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-yes bc-browser-firefox bc-has-history"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              30<div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> </div><section id="sect6" class="bc-history"><dl><dt class="bc-supports-yes bc-supports"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              30<div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> </div></dt><dd><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> Firefox helps developers transition to the new behavior and detect any rendering issues it may cause on their sites by printing the following warning to the JavaScript console: "Absolute positioning of table rows and row groups is now supported. This site may need to be updated because it may depend on this feature having no effect."</dd></dl></section></td><td class="bc-supports-unknown bc-browser-ie"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-opera"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-safari"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-webview_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-chrome_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-edge_mobile"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-yes bc-browser-firefox_android bc-has-history"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              30<div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> </div><section id="sect7" class="bc-history"><dl><dt class="bc-supports-yes bc-supports"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              30<div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> </div></dt><dd><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> Firefox helps developers transition to the new behavior and detect any rendering issues it may cause on their sites by printing the following warning to the JavaScript console: "Absolute positioning of table rows and row groups is now supported. This site may need to be updated because it may depend on this feature having no effect."</dd></dl></section></td><td class="bc-supports-unknown bc-browser-opera_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-safari_ios"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-unknown bc-browser-samsunginternet_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td></tr><tr><th scope="row">Table elements as <code>sticky</code> positioning containers</th><td class="bc-supports-no bc-browser-chrome"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td><td class="bc-supports-unknown bc-browser-edge"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-yes bc-browser-firefox"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              59</td><td class="bc-supports-unknown bc-browser-ie"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-no bc-browser-opera"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td><td class="bc-supports-unknown bc-browser-safari"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-no bc-browser-webview_android"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td><td class="bc-supports-no bc-browser-chrome_android"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td><td class="bc-supports-unknown bc-browser-edge_mobile"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-yes bc-browser-firefox_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              59</td><td class="bc-supports-no bc-browser-opera_android"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td><td class="bc-supports-unknown bc-browser-safari_ios"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-no bc-browser-samsunginternet_android"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td></tr></tbody></table><section id="sect8" class="bc-legend"><h3 id="Legend" class="offscreen">Legend</h3><dl><dt><span class="bc-supports-yes bc-supports">
+                <abbr class="bc-level bc-level-yes only-icon" title="Full support">
+                 <span>Full support</span>
+                 &nbsp;
+                </abbr></span></dt><dd>Full support</dd><dt><span class="bc-supports-no bc-supports">
+                <abbr class="bc-level bc-level-no only-icon" title="No support">
+                 <span>No support</span>
+                 &nbsp;
+                </abbr></span></dt><dd>No support</dd><dt><span class="bc-supports-unknown bc-supports">
+                <abbr class="bc-level bc-level-unknown only-icon" title="Compatibility unknown">
+                 <span>Compatibility unknown</span>
+                 &nbsp;
+                </abbr></span></dt><dd>Compatibility unknown</dd><dt><abbr class="only-icon" title="See implementation notes."><span>See implementation notes.</span><i class="ic-footnote"></i></abbr></dt><dd>See implementation notes.</dd><dt><abbr class="only-icon" title="User must explicitly enable this feature."><span>User must explicitly enable this feature.</span><i class="ic-disabled"></i></abbr></dt><dd>User must explicitly enable this feature.</dd><dt><abbr class="only-icon" title="Requires a vendor prefix or different name for use."><span>Requires a vendor prefix or different name for use.</span><i class="ic-prefix"></i></abbr></dt><dd>Requires a vendor prefix or different name for use.</dd></dl></section></div><p></p>
+                  
+                
+              </article>
+
+              <!-- contributors -->
+              <div class="wiki-block contributors">
+                <h2 class="offscreen">Document Tags and Contributors</h2>
+                
+                
+  <div class="tag-attach-list contributors-sub">
+    <svg class="icon icon-tags" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M7 7c0-1.109-.891-2-2-2s-2 .891-2 2 .891 2 2 2 2-.891 2-2zm16.672 9c0 .531-.219 1.047-.578 1.406l-7.672 7.688c-.375.359-.891.578-1.422.578s-1.047-.219-1.406-.578L1.422 13.906C.625 13.125 0 11.609 0 10.5V4c0-1.094.906-2 2-2h6.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422zm6 0c0 .531-.219 1.047-.578 1.406l-7.672 7.688a2.08 2.08 0 0 1-1.422.578c-.812 0-1.219-.375-1.75-.922l7.344-7.344c.359-.359.578-.875.578-1.406s-.219-1.047-.578-1.422L14.422 3.422C13.625 2.625 12.11 2 11 2h3.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422z"></path>
+</svg>
+    <strong>Tags:</strong>&nbsp;
+    <ul class="tags tags-small">
+      
+        <li><a href="../../tag/CSS.html" rel="nofollow">CSS</a></li>
+      
+        <li><a href="../../tag/CSS%20Positioning.html" rel="nofollow">CSS Positioning</a></li>
+      
+        <li><a href="../../tag/CSS%20Property.html" rel="nofollow">CSS Property</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Reference" rel="nofollow">Reference</a></li>
+      
+    </ul>
+  </div>
+
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-group" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M9.266 14a5.532 5.532 0 0 0-4.141 2H3.031C1.468 16 0 15.25 0 13.516 0 12.25-.047 8 1.937 8c.328 0 1.953 1.328 4.062 1.328.719 0 1.406-.125 2.078-.359A7.624 7.624 0 0 0 7.999 10c0 1.422.453 2.828 1.266 4zM26 23.953C26 26.484 24.328 28 21.828 28H8.172C5.672 28 4 26.484 4 23.953 4 20.422 4.828 15 9.406 15c.531 0 2.469 2.172 5.594 2.172S20.063 15 20.594 15C25.172 15 26 20.422 26 23.953zM10 4c0 2.203-1.797 4-4 4S2 6.203 2 4s1.797-4 4-4 4 1.797 4 4zm11 6c0 3.313-2.688 6-6 6s-6-2.688-6-6 2.688-6 6-6 6 2.688 6 6zm9 3.516C30 15.25 28.531 16 26.969 16h-2.094a5.532 5.532 0 0 0-4.141-2A7.066 7.066 0 0 0 22 10a7.6 7.6 0 0 0-.078-1.031A6.258 6.258 0 0 0 24 9.328C26.109 9.328 27.734 8 28.062 8c1.984 0 1.937 4.25 1.937 5.516zM28 4c0 2.203-1.797 4-4 4s-4-1.797-4-4 1.797-4 4-4 4 1.797 4 4z"></path>
+</svg>
+                    <strong>Contributors to this page:</strong>
+                    
+        <a href="https://developer.mozilla.org/en-US/profiles/mfluehr">mfluehr</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/juandesouza">juandesouza</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/jonjohnjohnson">jonjohnjohnson</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills">chrisdavidmills</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/momopig">momopig</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/ericwbailey">ericwbailey</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/pepsiman">pepsiman</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/kedevked">kedevked</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/JanCVanB">JanCVanB</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Sebastianz">Sebastianz</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/fscholz">fscholz</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/HM100">HM100</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/jpmedley">jpmedley</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/perigean">perigean</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/DarkNami">DarkNami</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Azin">Azin</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/gatezh">gatezh</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/mcortesi">mcortesi</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/joejordanbrown">joejordanbrown</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/pallxk">pallxk</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/jtojnar">jtojnar</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/huusz">huusz</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/kenrick95">kenrick95</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/AAaEide">AAaEide</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/kputh">kputh</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/schalkneethling">schalkneethling</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Nerketur">Nerketur</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/stephaniehobson">stephaniehobson</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/CarloMartini">CarloMartini</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/idupree">idupree</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/phistuck">phistuck</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/LPGhatguy">LPGhatguy</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Zcorpan">Zcorpan</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/mjroyappa">mjroyappa</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/erikadoyle">erikadoyle</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Coogie">Coogie</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/sarod">sarod</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Alohci">Alohci</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/roryokane">roryokane</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Siilwyn">Siilwyn</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/izzygomez">izzygomez</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/MexieAndCo">MexieAndCo</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/watsoncn">watsoncn</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/joe88688">joe88688</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/renoirb">renoirb</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/WartClaes">WartClaes</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/audiodude">audiodude</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/MajinBui">MajinBui</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/SphinxKnight">SphinxKnight</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/jsx">jsx</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/pcat">pcat</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/alflanagan">alflanagan</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/tregagnon">tregagnon</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/seth">seth</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/realityking">realityking</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/HTMLValidator">HTMLValidator</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/yole">yole</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/SimonSimCity">SimonSimCity</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/dharkness">dharkness</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/yisi">yisi</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/zziccardi">zziccardi</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/jeff_mangus">jeff_mangus</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/rvighne">rvighne</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/appsforartists">appsforartists</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/chilloutman">chilloutman</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/NMK">NMK</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/kscarfone">kscarfone</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/frankyan">frankyan</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/mnoorenberghe">mnoorenberghe</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/crumpled">crumpled</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/KyliRouge">KyliRouge</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/cyletech">cyletech</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/ethertank">ethertank</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/FredB">FredB</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/juandopazo">juandopazo</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/bobbykjack">bobbykjack</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/grendel">grendel</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/jojomojo">jojomojo</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/mmclark">mmclark</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Jürgen Jeka">Jürgen Jeka</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/TigerSoldier">TigerSoldier</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Mgjbot">Mgjbot</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/DBaron">DBaron</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/BijuGC">BijuGC</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Fredchat">Fredchat</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Taken">Taken</a>
+    
+                  </div>
+                
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-clock" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M14 8.5v7c0 .281-.219.5-.5.5h-5a.494.494 0 0 1-.5-.5v-1c0-.281.219-.5.5-.5H12V8.5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zm6.5 5.5c0-4.688-3.813-8.5-8.5-8.5S3.5 9.313 3.5 14s3.813 8.5 8.5 8.5 8.5-3.813 8.5-8.5zm3.5 0c0 6.625-5.375 12-12 12S0 20.625 0 14 5.375 2 12 2s12 5.375 12 12z"></path>
+</svg>
+                    <strong>Last updated by:</strong>
+                    <a href="https://developer.mozilla.org/en-US/profiles/mfluehr">mfluehr</a>,
+                    <time datetime="2018-06-18T12:15:20.585135-07:00">Jun 18, 2018, 12:15:20 PM</time>
+                  </div>
+                
+              </div>
+            </div>
+
+            
+              <!-- quick links and approvals strip -->
+              <div id="wiki-left" class="column-strip wiki-column">
+
+                <!-- crumbs -->
+                
+  
+    <nav class="crumbs" role="navigation">
+      <ol typeof="BreadcrumbList" vocab="https://schema.org/" aria-label="breadcrumbs">
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="https://developer.mozilla.org/en-US/docs/Web" property="item" typeof="WebPage">
+              <span property="name">Web technology for developers</span>
+            </a>
+            <meta property="position" content="1">
+          </li>
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="../CSS.html" property="item" typeof="WebPage">
+              <span property="name">CSS: Cascading Style Sheets</span>
+            </a>
+            <meta property="position" content="2">
+          </li>
+        
+        <li property="itemListElement" typeof="ListItem" class="crumb">
+          <span property="name">position</span>
+        </li>
+      </ol>
+    </nav>
+  
+
+                
+                  <!-- quick links -->
+                  
+  <div class="quick-links" id="quick-links">
+    <div class="quick-links-head">Related Topics</div>
+    <ol><li><strong><a href="../CSS.html">CSS</a></strong></li><li><strong><a href="Reference.html">CSS Reference</a></strong></li><li><strong><a href="CSS_Positioning.html">CSS Positioning</a></strong></li><li data-default-state="open"><a href="#"><strong>Guides</strong></a><ol><li><a href="CSS_Positioning/Understanding_z_index.html" title="The z-index attribute lets you adjust the order of the layering of objects when rendering content.">Understanding CSS z-index</a></li></ol></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><a href="bottom.html" title="The bottom CSS property participates in specifying the vertical position of a positioned element. It has no effect on non-positioned elements."><code>bottom</code></a></li><li><a href="clear.html" title="The clear CSS property specifies whether an element can be next to floating elements that precede it or must be moved down (cleared) below them. The clear property applies to both floating and non-floating elements."><code>clear</code></a></li><li><a href="float.html" title="The float CSS property specifies that an element should be placed along the left or right side of its container, allowing text and inline elements to wrap around it. The element is removed from the normal flow of the web page, though still remaining a part of the flow (in contrast to absolute positioning)."><code>float</code></a></li><li><a href="left.html" title="The left CSS property participates in specifying the horizontal position of a positioned element. It has no effect on non-positioned elements."><code>left</code></a></li><li><em><code>position</code></em></li><li><a href="right.html" title="The right CSS property participates in specifying the horizontal position of a positioned element. It has no effect on non-positioned elements."><code>right</code></a></li><li><a href="top.html" title="The top CSS property participates in specifying the vertical position of a positioned element. It has no effect on non-positioned elements."><code>top</code></a></li><li><a href="z-index.html" title="The z-index CSS property specifies the z-order of a positioned element and its descendants. When elements overlap, z-order determines which one covers the other. An element with a larger z-index generally covers an element with a lower one."><code>z-index</code></a></li></ol></li></ol>
+  </div>
+                
+
+                <!-- approvals -->
+                
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+    
+      <div class="newsletter-box">
+        <div class="newsletter">
+    <form id="newsletterForm" class="newsletter-form nodisable" name="newsletter-form" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <div class="newsletter-head">
+            <h2 class="newsletter-teaser">Learn the best of web development</h2>
+            <p class="newsletter-description">Get the latest and greatest from MDN delivered straight to your inbox.</p>
+            
+        </div>
+
+        <div class="newsletter-fields">
+            <input type="hidden" id="fmt" name="fmt" value="H">
+            <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+            <div id="newsletterErrors" class="newsletter-errors"></div>
+
+            <div id="newsletterEmail" class="form-group newsletter-group-email">
+                <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+                <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+            </div>
+
+            <div id="newsletterPrivacy" class="form-group form-group-agree newsletter-group-privacy hidden">
+                <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+                <label for="newsletterPrivacyInput">
+                I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+                </label>
+            </div>
+            <div id="newsletterSubmit" class="newsletter-group-submit">
+                <button id="newsletter-submit" type="submit" class="button neutral newsletter-submit">
+                    Sign up now<svg class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg" width="23" height="28" viewBox="0 0 23 28" aria-hidden="true">
+    <path d="M23 15a2.01 2.01 0 0 1-.578 1.422L12.25 26.594c-.375.359-.891.578-1.422.578s-1.031-.219-1.406-.578L8.25 25.422c-.375-.375-.594-.891-.594-1.422s.219-1.047.594-1.422L12.828 18h-11C.703 18 0 17.062 0 16v-2c0-1.062.703-2 1.828-2h11L8.25 7.406a1.96 1.96 0 0 1 0-2.812l1.172-1.172c.375-.375.875-.594 1.406-.594s1.047.219 1.422.594l10.172 10.172c.375.359.578.875.578 1.406z"></path>
+</svg>
+                </button>
+            </div>
+        </div>
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden">
+        <span>Hide Newsletter Sign-up</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+</div>
+      </div>
+    
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/en-US/docs/Web/CSS/position$edit" label="Edit page"></menuitem>
+    <menuitem data-action="/en-US/docs/Web/CSS/position$history" label="View page history"></menuitem>
+  </menu>
+
+      </div>
+  </main>
+  <!-- Footer -->
+    <footer id="nav-footer" class="nav-footer"><div class="center"><a href="http://developer.mozilla.org/en-US/docs/Web/CSS/position">position</a> by <a href="http://developer.mozilla.org/en-US/docs/Web/CSS/position$history">Mozilla Contributors</a> is licensed under <a href="http://creativecommons.org/licenses/by-sa/2.5/" class="external external-icon">CC-BY-SA 2.5</a>.</div></footer> 
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script async="" type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script src="../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><!--[endif]---->
+
+    
+    <script src="../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../static/build/js/wiki.b26a4c181df3.js" charset="utf-8" id="wikiscript"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../static/build/js/newsletter.a85c5c2892e5.js" charset="utf-8"></script>
+  
+
+
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/CSS/position by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:40:06 GMT -->
+</body></html>

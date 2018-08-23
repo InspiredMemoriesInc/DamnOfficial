@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/fr/docs/Web/HTML/Element/abbr$samples/Mettre_en_forme_des_abréviations?revision=1393464 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:18:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            abbr {
+  font-variant: all-small-caps;
+}
+        </style>
+        
+        <title>&lt;abbr&gt;</title>
+    </head>
+    <body>
+        
+            <p>Avec <abbr>CSS</abbr>, on peut mettre en forme les éléments.</p>
+        
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/fr/docs/Web/HTML/Element/abbr$samples/Mettre_en_forme_des_abréviations?revision=1393464 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:18:04 GMT -->
+</html>

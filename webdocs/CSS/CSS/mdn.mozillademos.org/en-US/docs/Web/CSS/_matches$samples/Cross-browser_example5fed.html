@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/:matches$samples/Cross-browser_example?revision=1370565 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:49:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            :matches(header, main, footer) p:hover {
+  color: red;
+  cursor: pointer;
+}
+
+:-webkit-any(header, main, footer) p:hover {
+  color: red;
+  cursor: pointer;
+}
+
+:-moz-any(header, main, footer) p:hover {
+  color: red;
+  cursor: pointer;
+}
+        </style>
+        
+        <title>:matches() (:any())</title>
+    </head>
+    <body>
+        
+            <header>
+  <p>This is my header paragraph</p>
+</header>
+
+<main>
+  <ul>
+    <li><p>This is my first</p><p>list item</p></li>
+    <li><p>This is my second</p><p>list item</p></li>
+  </ul>
+</main>
+
+<footer>
+  <p>This is my footer paragraph</p>
+</footer>
+        
+        
+            <script>
+                let matchedItems;
+
+try {
+  matchedItems = document.querySelectorAll(':matches(header, main, footer) p');
+} catch(e) {
+  try {
+    matchedItems = document.querySelectorAll(':-webkit-any(header, main, footer) p');
+  } catch(e) {
+    try {
+      matchedItems = document.querySelectorAll(':-moz-any(header, main, footer) p');
+    } catch(e) {
+      console.log('Your browser doesn\'t support :matches() or :any()');
+    }
+  }
+}
+
+for(let i = 0; i < matchedItems.length; i++) {
+  applyHandler(matchedItems[i]);
+}
+
+function applyHandler(elem) {
+  elem.addEventListener('click', function(e) {
+    alert('This paragraph is inside a ' + e.target.parentNode.nodeName);
+  });
+}
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/:matches$samples/Cross-browser_example?revision=1370565 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:49:11 GMT -->
+</html>

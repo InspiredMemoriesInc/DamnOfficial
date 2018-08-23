@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/mask-repeat$samples/Single_value?revision=1397615 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:48:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            #masked {
+  width: 250px;
+  height: 250px;
+  background: blue linear-gradient(red, blue);
+  mask-image: url(../../../../../files/12676/star.svg);
+  mask-repeat: repeat; /* Can be changed in the live sample */
+  margin-bottom: 10px;
+}
+
+        </style>
+        
+        <title>mask-repeat</title>
+    </head>
+    <body>
+        
+            <div id="masked">
+</div>
+<select id="repetition">
+  <option value="repeat-x">repeat-x</option>
+  <option value="repeat-y">repeat-y</option>
+  <option value="repeat" selected>repeat</option>
+  <option value="space">space</option>
+  <option value="round">round</option>
+  <option value="no-repeat">no-repeat</option>
+</select>
+
+        
+        
+            <script>
+                var repetition = document.getElementById("repetition");
+repetition.addEventListener("change", function (evt) {
+  document.getElementById("masked").style.maskRepeat = evt.target.value;
+});
+
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/mask-repeat$samples/Single_value?revision=1397615 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:48:38 GMT -->
+</html>

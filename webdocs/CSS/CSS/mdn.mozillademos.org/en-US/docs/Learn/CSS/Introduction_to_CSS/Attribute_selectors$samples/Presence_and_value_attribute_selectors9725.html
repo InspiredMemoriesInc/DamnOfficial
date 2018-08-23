@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Attribute_selectors$samples/Presence_and_value_attribute_selectors?revision=1385082 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:50:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            /* All elements with the attribute "data-vegetable"
+   are given green text */
+[data-vegetable] {
+  color: green;
+}
+
+/* All elements with the attribute "data-vegetable"
+   with the exact value "liquid" are given a golden
+   background color */
+[data-vegetable="liquid"] {
+  background-color: goldenrod;
+}
+
+/* All elements with the attribute "data-vegetable",
+   containing the value "spicy", even among others,
+   are given a red text color */
+[data-vegetable~="spicy"] {
+  color: red;
+}
+
+        </style>
+        
+        <title>Attribute selectors</title>
+    </head>
+    <body>
+        
+            Ingredients for my recipe: <i lang="fr-FR">Poulet basquaise</i>
+<ul>
+  <li data-quantity="1kg" data-vegetable>Tomatoes</li>
+  <li data-quantity="3" data-vegetable>Onions</li>
+  <li data-quantity="3" data-vegetable>Garlic</li>
+  <li data-quantity="700g" data-vegetable="not spicy like chili">Red pepper</li>
+  <li data-quantity="2kg" data-meat>Chicken</li>
+  <li data-quantity="optional 150g" data-meat>Bacon bits</li>
+  <li data-quantity="optional 10ml" data-vegetable="liquid">Olive oil</li>
+  <li data-quantity="25cl" data-vegetable="liquid">White wine</li>
+</ul>
+        
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Attribute_selectors$samples/Presence_and_value_attribute_selectors?revision=1385082 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:50:39 GMT -->
+</html>

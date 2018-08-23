@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Experiment:StaticExamplesOnTop/CSS/align-items$samples/Example?revision=1230491 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:52:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            #container {
+  display: flex;
+  height:200px;
+  width: 240px;
+  flex-wrap: wrap;
+  align-items: flex-end; /* Can be changed in the live sample */
+  background-color: #8c8c8c;
+}
+
+div > div {
+  border: 2px solid #8c8c8c;
+  width: 50px;
+}
+
+#item1 {
+  background-color: #8cffa0;
+  min-height: 30px;
+}
+
+#item2 {
+  background-color: #a0c8ff;
+  min-height: 50px;
+}
+
+#item3 {
+  background-color: #ffa08c;
+  min-height: 40px;
+}
+
+#item4 {
+  background-color: #ffff8c;
+  min-height: 60px;
+}
+
+#item5 {
+  background-color: #ff8cff;
+  min-height: 70px;
+}
+
+#item6 {
+  background-color: #8cffff;
+  min-height: 50px;
+}
+        </style>
+        
+        <title>align-items</title>
+    </head>
+    <body>
+        
+            <div id="container">
+  <div id="item1"></div>
+  <div id="item2"></div>
+  <div id="item3"></div>
+  <div id="item4"></div>
+  <div id="item5"></div>
+  <div id="item6"></div>
+</div>
+<select id="itemsAlignment">
+  <option value="flex-start">flex-start</option>
+  <option value="flex-end" selected>flex-end</option>
+  <option value="center">center</option>
+  <option value="baseline">baseline</option>
+  <option value="stretch">stretch</option>
+</select>
+
+        
+        
+            <script>
+                var itemsAlignment = document.getElementById("itemsAlignment");
+itemsAlignment.addEventListener("change", function (evt) {
+  document.getElementById("container").style.alignItems = evt.target.value;
+});
+
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Experiment:StaticExamplesOnTop/CSS/align-items$samples/Example?revision=1230491 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:52:25 GMT -->
+</html>

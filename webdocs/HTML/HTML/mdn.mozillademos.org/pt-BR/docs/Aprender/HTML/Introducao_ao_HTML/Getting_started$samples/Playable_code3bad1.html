@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started$samples/Playable_code3?revision=1400983 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:17:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            body {
+  font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
+}
+
+.input, .output {
+  width: 90%;
+  height: 10em;
+  padding: 10px;
+  border: 1px solid #0095dd;
+}
+
+img {
+  max-width: 100%;
+}
+
+.output {
+  overflow: auto;
+}
+
+button {
+  padding: 10px 10px 10px 0;
+}
+
+        </style>
+        
+        <title>Iniciando com HTML</title>
+    </head>
+    <body>
+        
+            <h2>Input</h2>
+<textarea id="code" class="input">
+&lt;p&gt;This is my page&lt;/p&gt;</textarea>
+<h2>Output</h2>
+<div class="output"></div>
+<div class="controls">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
+</div>
+
+        
+        
+            <script>
+                var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var code = textarea.value;
+var output = document.querySelector(".output");
+var solution = document.getElementById("solution");
+
+function drawOutput() {
+  output.innerHTML = textarea.value;
+}
+
+reset.addEventListener("click", function() {
+  textarea.value = code;
+  drawOutput();
+});
+
+solution.addEventListener("click", function() {
+  textarea.value = '<p>I really enjoy <strong>playing the drums</strong>. One of my favourite drummers is Neal Peart, who\
+ plays in the band <a href="https://en.wikipedia.org/wiki/Rush_%28band%29" title="Rush Wikipedia article">Rush</a>.\
+ My favourite Rush album is currently <a href="http://www.deezer.com/album/942295">Moving Pictures</a>.</p>\
+<img src="../../../../../../../www.cygnus-x1.net/links/rush/images/albums/sectors/sector2-movingpictures-cover-s.html">';
+  drawOutput();
+});
+
+textarea.addEventListener("input", drawOutput);
+window.addEventListener("load", drawOutput);
+
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started$samples/Playable_code3?revision=1400983 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:17:57 GMT -->
+</html>

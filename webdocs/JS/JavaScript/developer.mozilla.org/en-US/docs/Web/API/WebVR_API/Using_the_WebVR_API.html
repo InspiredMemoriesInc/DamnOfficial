@@ -1,0 +1,1204 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 10:04:41 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  <title>Using the WebVR API</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+
+  
+<link rel="preload" href="../../../../../static/fonts/locales/ZillaSlab-Regular.f9de6143fdfa.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="license" href="#license">
+  
+
+  
+    
+    
+
+    <link href="../../../../../static/build/styles/mdn.83865b0f7c30.css" rel="stylesheet" type="text/css">
+
+    
+  
+
+    <link href="../../../../../static/build/styles/wiki.aaf26c13c39b.css" rel="stylesheet" type="text/css">
+
+
+    
+
+  <link href="../../../../../static/build/styles/locale-en-US.ca0bca387b42.css" rel="stylesheet" type="text/css">
+
+  
+    <script>
+      /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
+    </script>
+    
+
+
+
+  
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta property="og:site_name" content="MDN Web Docs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="MDN Web Docs">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../static/img/favicon144.e7e21ca263ca.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../static/img/favicon114.d526f38b09c5.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../static/img/favicon72.cc65d1d762a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../../../static/img/favicon57.de33179910ae.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="../../../../../static/img/favicon32.7f3da72dcea1.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script async="" type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  <link rel="dns-prefetch" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API$json">
+  <link rel="canonical" href="Using_the_WebVR_API.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="Using_the_WebVR_API.html" title="Using the WebVR API">
+  
+    
+      <link rel="alternate" hreflang="es" href="https://developer.mozilla.org/es/docs/Web/API/WebVR_API/Using_the_WebVR_API" title="Uso de la API de WebVR">
+    
+      <link rel="alternate" hreflang="fi" href="https://developer.mozilla.org/fi/docs/Web/API/WebVR_API/Using_the_WebVR_API" title="Using the WebVR API">
+    
+      <link rel="alternate" hreflang="ja" href="https://developer.mozilla.org/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API" title="WebVR APIの使い方">
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebVR_API/Using_the_WebVR_API" title="Using the WebVR API">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="Using the WebVR API">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API">
+  <meta name="twitter:title" content="Using the WebVR API">
+  
+  <meta property="og:description" content="This article has given you the very basics of how to create a simple WebVR 1.1 app, to help you get started.">
+  <meta name="description" content="This article has given you the very basics of how to create a simple WebVR 1.1 app, to help you get started.">
+  <meta name="twitter:description" content="This article has given you the very basics of how to create a simple WebVR 1.1 app, to help you get started.">
+  
+
+</head>
+<body data-slug="Web/API/WebVR_API/Using_the_WebVR_API" contextmenu="edit-history-menu" data-search-url="" class="document">
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <!--[endif]---->
+
+  
+  <link rel="dns-prefetch" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API$json">
+  <link rel="canonical" href="Using_the_WebVR_API.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="Using_the_WebVR_API.html" title="Using the WebVR API">
+  
+    
+      <link rel="alternate" hreflang="es" href="https://developer.mozilla.org/es/docs/Web/API/WebVR_API/Using_the_WebVR_API" title="Uso de la API de WebVR">
+    
+      <link rel="alternate" hreflang="fi" href="https://developer.mozilla.org/fi/docs/Web/API/WebVR_API/Using_the_WebVR_API" title="Using the WebVR API">
+    
+      <link rel="alternate" hreflang="ja" href="https://developer.mozilla.org/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API" title="WebVR APIの使い方">
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebVR_API/Using_the_WebVR_API" title="Using the WebVR API">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="Using the WebVR API">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API">
+  <meta name="twitter:title" content="Using the WebVR API">
+  
+  <meta property="og:description" content="This article has given you the very basics of how to create a simple WebVR 1.1 app, to help you get started.">
+  <meta name="description" content="This article has given you the very basics of how to create a simple WebVR 1.1 app, to help you get started.">
+  <meta name="twitter:description" content="This article has given you the very basics of how to create a simple WebVR 1.1 app, to help you get started.">
+  
+
+
+
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/wiki-compat-tables.9978a5ce31c2.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+
+        // interactive editor config
+        win.mdn.interactiveEditor = {
+            siteUrl: "https://developer.mozilla.org",
+            editorUrl: "https://interactive-examples.mdn.mozilla.net"
+        };
+
+    })(this);
+</script>
+    
+    <ul id="nav-access">
+  <li><a href="#content" id="skip-main">Skip to main content</a></li>
+  <li><a id="skip-language" href="#language">Select language</a></li>
+  <li><a href="#q" id="skip-search">Skip to search</a></li>
+</ul>
+
+    <!-- Header -->
+    <header id="main-header" class="header-main">
+      <a href="https://developer.mozilla.org/en-US/" class="logo">MDN Web Docs</a>
+      <div class="nav-toolbox-wrapper">
+        <nav id="main-nav" class="nav-main" role="navigation">
+    <ul>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web">Technologies
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-tech-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+                    <li><a href="../../API.html">APIs / DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn">References &amp; Guides
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-learn-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-contact-submenu">
+              <div class="submenu-column">
+                <ul>
+                  <li>
+                      <a href="https://support.mozilla.org/">Get Firefox help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://stackoverflow.com/">Get web development help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                      <a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API">Report a content problem
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</nav>
+        <div id="toolbox" class="toolbox">
+  <ul>
+    
+    <li class="nav-login"><div class="login">
+    
+        
+        <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWebVR_API%2FUsing_the_WebVR_API" class="login-link js-login-link" data-service="GitHub" rel="nofollow">
+            Sign in<svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+    <title>Github</title>
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path>
+</svg>
+        </a>
+    
+</div></li>
+  </ul>
+</div>
+      </div>
+      <form id="nav-main-search" action="https://developer.mozilla.org/en-US/search" method="get" role="search" class="nav-main-search">
+  <div class="search-wrap">
+    <label for="main-q" class="offscreen">Search</label>
+    <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" aria-hidden="true">
+    <span class="search-trigger">
+        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true">
+    <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path>
+</svg>
+    </span>
+    <button type="submit" class="offscreen">Search</button>
+    <button type="button" id="close-header-search" class="close-header-search transparent">
+        <span class="offscreen">Close search</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+  </div>
+</form>
+    </header> 
+
+  <!-- Content will go here -->
+  <main id="content">
+      
+  <!-- heading -->
+  <div id="wiki-document-head" class="document-head">
+    <div class="center">
+      <!-- action buttons -->
+      <div class="document-actions">
+        
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons">
+      <li>
+          <button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false">
+              <svg class="icon icon-language" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M10.219 16.844c-.031.109-.797-.25-1-.328-.203-.094-1.125-.609-1.359-.766s-1.125-.891-1.234-.938a28.275 28.275 0 0 1-2.094 2.828c-.281.328-1.125 1.391-1.641 1.719-.078.047-.531.094-.594.063.25-.187.969-1.078 1.281-1.437.391-.453 2.25-3.047 2.562-3.641.328-.594 1.312-2.562 1.359-2.75-.156-.016-1.391.406-1.719.516-.313.094-1.172.297-1.234.344-.063.063-.016.25-.047.313s-.313.203-.484.234a1.647 1.647 0 0 1-.734 0c-.203-.047-.391-.25-.438-.328 0 0-.063-.094-.078-.359.187-.063.5-.078.844-.172s1.188-.344 1.641-.5 1.328-.484 1.594-.547c.281-.047.984-.516 1.359-.641s.641-.281.656-.203 0 .422-.016.516c-.016.078-.766 1.547-.875 1.781-.063.125-.5.953-1.203 2.047.25.109.781.328 1 .438.266.125 2.125.906 2.219.938s.266.75.234.875zM7.016 9.25c.047.266-.031.375-.063.438-.156.297-.547.5-.781.594s-.625.187-.938.187c-.141-.016-.422-.063-.766-.406-.187-.203-.328-.75-.266-.688s.516.125.719.078.688-.187.906-.25c.234-.078.703-.203.859-.219.156 0 .281.063.328.266zm10.906 2.016l.984 3.547-2.172-.656zM.609 23.766l10.844-3.625V4.016L.609 7.657v16.109zM20 18.813l1.594.484-2.828-10.266-1.563-.484-3.375 8.375 1.594.484.703-1.719 3.297 1.016zM12.141 3.781l8.953 2.875V.718zM17 24.453l2.469.203-.844 2.5L18 26.125c-1.266.812-2.828 1.437-4.312 1.687-.453.094-.969.187-1.422.187h-1.313c-1.656 0-4.672-.984-5.984-1.937-.094-.078-.125-.141-.125-.25 0-.172.125-.297.281-.297.141 0 .875.453 1.078.547 1.406.703 3.375 1.344 4.953 1.344 1.953 0 3.281-.25 5.063-1.016.516-.234.969-.531 1.453-.797zm7-16.859v16.859c-12.078-3.844-12.094-3.844-12.094-3.844C11.656 20.718.453 24.5.297 24.5a.3.3 0 0 1-.281-.203c0-.016-.016-.031-.016-.047V7.406c.016-.047.031-.125.063-.156.094-.109.219-.141.313-.172.047-.016 1-.328 2.328-.781v-6l8.719 3.094C11.532 3.36 21.251 0 21.392 0c.172 0 .313.125.313.328v6.531z"></path>
+</svg>
+              <span>Languages</span>
+          </button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                
+                
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/es/docs/Web/API/WebVR_API/Using_the_WebVR_API" data-locale="es" title="Spanish">Español (es)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/fi/docs/Web/API/WebVR_API/Using_the_WebVR_API" data-locale="fi" title="Finnish">suomi (fi)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API" data-locale="ja" title="Japanese">日本語 (ja)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebVR_API/Using_the_WebVR_API" data-locale="zh-CN" title="Chinese (Simplified)">中文 (简体) (zh-CN)</a></bdi></li>
+                
+              
+
+              
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API$locales" rel="nofollow" id="translations-add">Add a translation</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+      
+      <li class="page-buttons-edit">
+          <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API$edit" class="button neutral" id="edit-button" rel="nofollow">
+              <svg class="icon icon-pencil" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M5.672 24l1.422-1.422-3.672-3.672L2 20.328V22h2v2h1.672zm8.172-14.5a.329.329 0 0 0-.344-.344.368.368 0 0 0-.266.109l-8.469 8.469a.366.366 0 0 0-.109.266c0 .203.141.344.344.344a.368.368 0 0 0 .266-.109l8.469-8.469a.366.366 0 0 0 .109-.266zM13 6.5l6.5 6.5-13 13H0v-6.5zM23.672 8c0 .531-.219 1.047-.578 1.406L20.5 12 14 5.5l2.594-2.578c.359-.375.875-.594 1.406-.594s1.047.219 1.422.594l3.672 3.656c.359.375.578.891.578 1.422z"></path>
+</svg>
+              Edit
+          </a>
+      </li>
+      
+
+        
+
+        <li class="page-buttons-advanced">
+            <button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false">
+                <svg class="icon icon-gear" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M16 14c0-2.203-1.797-4-4-4s-4 1.797-4 4 1.797 4 4 4 4-1.797 4-4zm8-1.703v3.469c0 .234-.187.516-.438.562l-2.891.438a8.86 8.86 0 0 1-.609 1.422c.531.766 1.094 1.453 1.672 2.156.094.109.156.25.156.391s-.047.25-.141.359c-.375.5-2.484 2.797-3.016 2.797a.795.795 0 0 1-.406-.141l-2.156-1.687a9.449 9.449 0 0 1-1.422.594c-.109.953-.203 1.969-.453 2.906a.573.573 0 0 1-.562.438h-3.469c-.281 0-.531-.203-.562-.469l-.438-2.875a9.194 9.194 0 0 1-1.406-.578l-2.203 1.672c-.109.094-.25.141-.391.141s-.281-.063-.391-.172c-.828-.75-1.922-1.719-2.578-2.625a.607.607 0 0 1 .016-.718c.531-.719 1.109-1.406 1.641-2.141a8.324 8.324 0 0 1-.641-1.547l-2.859-.422A.57.57 0 0 1 0 15.705v-3.469c0-.234.187-.516.422-.562l2.906-.438c.156-.5.359-.969.609-1.437a37.64 37.64 0 0 0-1.672-2.156c-.094-.109-.156-.234-.156-.375s.063-.25.141-.359c.375-.516 2.484-2.797 3.016-2.797.141 0 .281.063.406.156L7.828 5.94a9.449 9.449 0 0 1 1.422-.594c.109-.953.203-1.969.453-2.906a.573.573 0 0 1 .562-.438h3.469c.281 0 .531.203.562.469l.438 2.875c.484.156.953.344 1.406.578l2.219-1.672c.094-.094.234-.141.375-.141s.281.063.391.156c.828.766 1.922 1.734 2.578 2.656a.534.534 0 0 1 .109.344c0 .141-.047.25-.125.359-.531.719-1.109 1.406-1.641 2.141.266.5.484 1.016.641 1.531l2.859.438a.57.57 0 0 1 .453.562z"></path>
+</svg>
+                <span>Advanced</span>
+            </button>
+            <div class="submenu js-submenu" id="advanced-menu-submenu">
+                <!-- this page -->
+                <div class="submenu-column">
+                    <div class="title">Advanced</div>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API$history" rel="nofollow">History</a></li>
+                        
+                        
+                        
+
+
+                
+
+                <li class="page-print"><a href="#" onclick="return window.print();">Print this article</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+      </div>
+
+      <div class="document-title">
+        <h1>Using the WebVR API</h1>
+      </div>
+    <nav class="crumbs" role="navigation">
+      <ol typeof="BreadcrumbList" vocab="https://schema.org/" aria-label="breadcrumbs">
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="https://developer.mozilla.org/en-US/docs/Web" property="item" typeof="WebPage">
+              <span property="name">Web technology for developers</span>
+            </a>
+            <meta property="position" content="1">
+          </li>
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="../../API.html" property="item" typeof="WebPage">
+              <span property="name">Web APIs</span>
+            </a>
+            <meta property="position" content="2">
+          </li>
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="../WebVR_API.html" property="item" typeof="WebPage">
+              <span property="name">WebVR API</span>
+            </a>
+            <meta property="position" content="3">
+          </li>
+        
+        <li property="itemListElement" typeof="ListItem" class="crumb">
+          <span property="name">Using the WebVR API</span>
+        </li>
+      </ol>
+    </nav></div>
+  </div>
+  
+  <div id="toc" class="toc">
+    <div class="center">
+      <div class="toc-head">Jump to:</div>
+        <ol class="toc-links">
+          <li><a href="#Getting_started" rel="internal">Getting started</a></li><li><a href="#Introducing_our_demo" rel="internal">Introducing our demo</a></li><li><a href="#How_does_it_work" rel="internal">How does it work?</a></li><li><a href="#WebVR_events" rel="internal">WebVR events</a></li><li><a href="#Summary" rel="internal">Summary</a>
+        </li></ol>
+    </div>
+  </div>
+  
+
+      <div class="center clear">
+      
+
+    <div class="wiki-main-content" id="document-main"><div class="center">
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-left-present">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-main wiki-column text-content">
+
+              
+
+              
+              
+
+              
+
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <div><section class="Quick_links" id="Quick_Links"><!-- --></section></div>
+
+<p class="summary">The WebVR API is a fantastic addition to the web developer's toolkit, allowing WebGL scenes to be presented in virtual reality displays such as the Oculus Rift and HTC Vive. But how do you get started with developing VR apps for the Web? This article will guide you through the basics.</p>
+
+<div class="note">
+<p><strong>Note</strong>: The WebVR API's most stable version — 1.1 — has recently been implemented in Firefox 55 (Windows in release version, and Mac OS X on Nightly only) and is also available in Chrome when used with Google Daydream hardware. There is also a later evolution of the spec — 2.0 — but this is at an early stage right now. You can find information on the latest state of the specs at <a href="https://w3c.github.io/webvr/" class="external" rel="noopener">WebVR Spec Version List</a>.</p>
+</div>
+
+<a class="dashAnchor" name="//apple_ref/Section/Getting%20started"></a><h2 id="Getting_started">Getting started</h2>
+
+<p>To get started, you need:</p>
+
+<ul>
+ <li>Supporting VR hardware.
+  <ul>
+   <li>The cheapest option is to use a mobile device, supporting browser, and device mount (e.g. Google Cardboard). This won't be quite as good an experience as dedicated hardware, but you won't need to purchase a powerful computer or dedicated VR display.</li>
+   <li>Dedicated hardware can be costly, but it does provide a better experience. The most WebVR-compatible hardware at the moment is the HTC VIVE, and The Oculus Rift. The frontpage of <a href="https://webvr.info/" class="external" rel="noopener">webvr.info</a> has some further useful information about available hardware, and what browser support them.</li>
+  </ul>
+ </li>
+ <li>A computer powerful enough to handle rendering/displaying of VR scenes using your dedicated VR Hardware, if required. To give you an idea of what you need, look at the relevant guide for the VR you are purchasing (e.g. <a href="https://www.vive.com/us/ready/" class="external" rel="noopener">VIVE READY Computers</a>).</li>
+ <li>A supporting browser installed — the latest <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/" class="external" rel="noopener">Firefox Nightly</a> or <a href="https://www.google.com/chrome/index.html" class="external" rel="noopener">Chrome</a> are your best options right now, on desktop or mobile.</li>
+</ul>
+
+<p>Once you have everything assembled, you can test to see whether your setup works with WebVR by going to our <a href="../../../../../../mdn.github.io/webvr-tests/aframe-demo/index.html" class="external" rel="noopener">simple A-Frame demo</a>, and seeing whether the scene renders and whether you can enter VR display mode by pressing the button at the bottom right.</p>
+
+<p><a href="https://aframe.io/" class="external" rel="noopener">A-Frame</a> is by far the best option if you want to create a WebVR-compatible 3D scene quickly, without needing to understand a bunch of new JavaScript code. It doesn't however teach you how the raw WebVR API works, and this is what we'll get on to next.</p>
+
+<a class="dashAnchor" name="//apple_ref/Section/Introducing%20our%20demo"></a><h2 id="Introducing_our_demo">Introducing our demo</h2>
+
+<p>To illustrate how the WebVR API works, we'll study our raw-webgl-example, which looks a bit like this:</p>
+
+<p><img src="../../../../../../mdn.mozillademos.org/files/15121/Capture1.png" alt="" style="display: block; height: 761px; margin: 0px auto; width: 1341px;"></p>
+
+<div class="note">
+<p><strong>Note</strong>: You can find the <a href="https://github.com/mdn/webvr-tests/tree/master/raw-webgl-example" class="external" rel="noopener">source code of our demo</a> on GitHub, and <a href="../../../../../../mdn.github.io/webvr-tests/raw-webgl-example/index.html" class="external" rel="noopener">view it live</a> also.</p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong>: If WebVR isn't working in your browser, you might need to make sure it is running through your graphics card. For example for NVIDIA cards, if you've got the NVIDIA control panel set up successfully, there will be a context menu option available — right click on Firefox, then choose <em>Run with graphics processor &gt; High-performance NVIDIA processor</em>.</p>
+</div>
+
+<p>Our demo features the holy grail of WebGL demos — a rotating 3D cube. We've implemented this using raw <a href="../WebGL_API.html">WebGL API</a> code. We won't be teaching any basic JavaScript or WebGL, just the WebVR parts.</p>
+
+<p>Our demo also features:</p>
+
+<ul>
+ <li>A button to start (and stop) our scene from being presented in the VR display.</li>
+ <li>A button to show (and hide) VR pose data, i.e. the position and orientation of the headset, updated in real time.</li>
+</ul>
+
+<p>When you look through the source code of <a href="https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js" class="external" rel="noopener">our demo's main JavaScript file</a>, you can easily find the WebVR-specific parts by searching for the string "WebVR" in preceding comments.</p>
+
+<div class="note">
+<p><strong>Note</strong>: To find out more about basic JavaScript and WebGL, consult our <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript">JavaScript learning material</a>, and our <a href="../WebGL_API/Tutorial.html">WebGL Tutorial</a>.</p>
+</div>
+
+<a class="dashAnchor" name="//apple_ref/Section/How%20does%20it%20work%3F"></a><h2 id="How_does_it_work">How does it work?</h2>
+
+<p>At this point, let's look at how the WebVR parts of the code work.</p>
+
+<p>A typical (simple) WebVR app works like this:</p>
+
+<ol>
+ <li><a href="../Navigator/getVRDisplays.html" title="The getVRDisplays() method of the Navigator interface returns a promise that resolves to an array of VRDisplay objects representing any available VR displays connected to the computer."><code>Navigator.getVRDisplays()</code></a> is used to get a reference to your VR display.</li>
+ <li><a href="../VRDisplay/requestPresent.html" title="The requestPresent() method of the VRDisplay interface starts the VRDisplay presenting a scene."><code>VRDisplay.requestPresent()</code></a> is used to start presenting to the VR display.</li>
+ <li>WebVR's dedicated <a href="../VRDisplay/requestAnimationFrame.html" title="The requestAnimationFrame() method of the VRDisplay interface is a special implementation of Window.requestAnimationFrame containing a callback function that will be called every time a new frame of the VRDisplay presentation is rendered:"><code>VRDisplay.requestAnimationFrame()</code></a> method is used to run the app's rendering loop at the correct refresh rate for the display.</li>
+ <li>Inside the rendering loop, you grab the data required to display the current frame (<a href="../VRDisplay/getFrameData.html" title="The getFrameData() method of the VRDisplay interface accepts a VRFrameData object and populates it with the information required to render the current frame."><code>VRDisplay.getFrameData()</code></a>), draw the displayed scene twice — once for the view in each eye — then submit the rendered view to the display to show to the user via (<a href="../VRDisplay/submitFrame.html" title="The submitFrame() method of the VRDisplay interface captures the current state of the VRLayerInit currently being presented and displays it on the VRDisplay."><code>VRDisplay.submitFrame()</code></a>).</li>
+</ol>
+
+<p>In the below sections we'll look at our raw-webgl-demo in detail, and see where exactly the above features are used.</p>
+
+<h3 id="Starting_with_some_variables">Starting with some variables</h3>
+
+<p>The first WebVR-related code you'll meet is this following block:</p>
+
+<pre class="brush: js">// WebVR variables
+
+var frameData = new VRFrameData();
+var vrDisplay;
+var btn = document.querySelector('.stop-start');
+var normalSceneFrame;
+var vrSceneFrame;
+
+var poseStatsBtn = document.querySelector('.pose-stats');
+var poseStatsSection = document.querySelector('section');
+poseStatsSection.style.visibility = 'hidden'; // hide it initially
+
+var posStats = document.querySelector('.pos');
+var orientStats = document.querySelector('.orient');
+var linVelStats = document.querySelector('.lin-vel');
+var linAccStats = document.querySelector('.lin-acc');
+var angVelStats = document.querySelector('.ang-vel');
+var angAccStats = document.querySelector('.ang-acc');
+var poseStatsDisplayed = false;</pre>
+
+<p>Let's briefly explain these:</p>
+
+<ul>
+ <li><code>frameData</code> contains a <a href="../VRFrameData.html" title="The VRFrameData interface of the WebVR API represents all the information needed to render a single frame of a VR scene; constructed by VRDisplay.getFrameData()."><code>VRFrameData</code></a> object, created using the <a href="../VRFrameData/VRFrameData.html" title="The VRFrameData constructor creates a VRFrameData object instance."><code>VRFrameData()</code></a> constructor. This is initially empty, but will later contain the data required to render each frame to show in the VR display, updated constantly as the rendering loop runs.</li>
+ <li><code>vrDisplay</code> starts uninitialized, but will later on hold a reference to our VR headset (<a href="../VRDisplay.html" title="The VRDisplay interface of the WebVR API represents any VR device supported by this API. It includes generic information such as device IDs and descriptions, as well as methods for starting to present a VR scene, retrieving eye parameters and display capabilities, and other important functionality."><code>VRDisplay</code></a> — the central control object of the API).</li>
+ <li><code>btn</code> and <code>poseStatsBtn</code> hold references to the two buttons we are using to control our app.</li>
+ <li><code>normalSceneFrame</code> and <code>vrSceneFrame</code> start uninitialized, but later on will hold references to <a href="../Window/requestAnimationFrame.html" title="You should call this method whenever you're ready to update your animation onscreen. This will request that your animation function be called before the browser performs the next repaint. The number of callbacks is usually 60 times per second, but will generally match the display refresh rate in most web browsers as per W3C recommendation. requestAnimationFrame() calls are paused in most browsers when running in background tabs or hidden <iframe>s in order to improve performance and battery life."><code>Window.requestAnimationFrame()</code></a> and <a href="../VRDisplay/requestAnimationFrame.html" title="The requestAnimationFrame() method of the VRDisplay interface is a special implementation of Window.requestAnimationFrame containing a callback function that will be called every time a new frame of the VRDisplay presentation is rendered:"><code>VRDisplay.requestAnimationFrame()</code></a> calls — these will initiate the running of a normal rendering loop, and a special WebVR rendering loop; we'll explain the difference between these two later on.</li>
+ <li>The other variables store references to different parts of the VR pose data display box, which you can see in the bottom right hand corner of the UI.</li>
+</ul>
+
+<h3 id="Getting_a_reference_to_our_VR_display">Getting a reference to our VR display</h3>
+
+<p>One of the major functions inside our code is <code>start()</code> — we run this function when the body has finished loading:</p>
+
+<pre class="brush: js">// start
+//
+// Called when the body has loaded is created to get the ball rolling.
+
+document.body.onload = start;</pre>
+
+<p>To begin with, <code>start()</code> retrieves a WebGL context to use to render 3D graphics into the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas" title="Use the HTML <canvas> element with the canvas scripting API to draw graphics and animations."><code>&lt;canvas&gt;</code></a> element in <a href="https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/index.html" class="external" rel="noopener">our HTML</a>. We then check whether the <code>gl</code> context is available — if so, we run a number of functions to set up the scene for display.</p>
+
+<pre class="brush: js">function start() {
+  canvas = document.getElementById("glcanvas");
+
+  initWebGL(canvas);      // Initialize the GL context
+
+  // WebGL setup code here</pre>
+
+<p>Next, we start the process of actually rendering the scene onto the canvas, by setting the canvas to fill the entire browser viewport, and running the rendering loop (<code>drawScene()</code>) for the first time. This is the non-WebVR — normal — rendering loop.</p>
+
+<pre class="brush: js">    // draw the scene normally, without WebVR - for those who don't have it and want to see the scene in their browser
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    drawScene();</pre>
+
+<p>Now onto our first WebVR-specific code. First of all, we check to see if <a href="../Navigator/getVRDisplays.html" title="The getVRDisplays() method of the Navigator interface returns a promise that resolves to an array of VRDisplay objects representing any available VR displays connected to the computer."><code>Navigator.getVRDisplays</code></a> exists — this is the entry point into the API, and therefore good basic feature detection for WebVR. You'll see at the end of the block (inside the <code>else</code> clause) that if this doesn't exist, we log a message to indicate that WebVR 1.1 isn't supported by the browser.</p>
+
+<pre class="brush: js">    // WebVR: Check to see if WebVR is supported
+    if(navigator.getVRDisplays) {
+      console.log('WebVR 1.1 supported');</pre>
+
+<p>Inside our <code>if() { ... }</code> block, we run the <a href="../Navigator/getVRDisplays.html" title="The getVRDisplays() method of the Navigator interface returns a promise that resolves to an array of VRDisplay objects representing any available VR displays connected to the computer."><code>Navigator.getVRDisplays()</code></a> function. This returns a promise, which is fulfilled with an array containing all the VR display devices connected to the computer. If none are connected, the array will be empty.</p>
+
+<pre class="brush: js">      // Then get the displays attached to the computer
+      navigator.getVRDisplays().then(function(displays) {</pre>
+
+<p>Inside the promise <code>then()</code> block, we check whether the array length is more than 0; if so, we set the value of our <code>vrDisplay</code> variable to the 0 index item inside the array. <code>vrDisplay</code> now contains a <a href="../VRDisplay.html" title="The VRDisplay interface of the WebVR API represents any VR device supported by this API. It includes generic information such as device IDs and descriptions, as well as methods for starting to present a VR scene, retrieving eye parameters and display capabilities, and other important functionality."><code>VRDisplay</code></a> object representing our connected display!</p>
+
+<pre class="brush: js">        // If a display is available, use it to present the scene
+        if(displays.length &gt; 0) {
+          vrDisplay = displays[0];
+          console.log('Display found');</pre>
+
+<div class="note">
+<p><strong>Note</strong>: It is unlikely that you'll have multiple VR displays connected to your computer, and this is just a simple demo, so this will do for now.</p>
+</div>
+
+<h3 id="Starting_and_stopping_the_VR_presentation">Starting and stopping the VR presentation</h3>
+
+<p>Now we have a <a href="../VRDisplay.html" title="The VRDisplay interface of the WebVR API represents any VR device supported by this API. It includes generic information such as device IDs and descriptions, as well as methods for starting to present a VR scene, retrieving eye parameters and display capabilities, and other important functionality."><code>VRDisplay</code></a> object, we can use it do a number of things. The next thing we want to do is wire up functionality to start and stop presentation of the WebGL content to the display.</p>
+
+<p>Continuing on with the previous code block, we now add an event listener to our start/stop button (<code>btn</code>) — when this button is clicked we want to check whether we are presenting to the display already (we do this in a fairly dumb fashion, by checking what the button <code><a href="../Node/textContent.html">textContent</a></code> contains).</p>
+
+<p>If the display is not already presenting, we use the <a href="../VRDisplay/requestPresent.html" title="The requestPresent() method of the VRDisplay interface starts the VRDisplay presenting a scene."><code>VRDisplay.requestPresent()</code></a> method to request that the browser start presenting content to the display. This takes as a parameter an array of the <a href="../VRLayerInit.html" title="The VRLayerInit interface (dictionary) of the WebVR API represents a content layer (an HTMLCanvasElement or OffscreenCanvas) that you want to present in a VR display."><code>VRLayerInit</code></a> objects representing the layers you want to present in the display.</p>
+
+<p>Since the maximum number of layers you can display is currently 1, and the only required object member is the <a href="../VRLayerInit/source.html" title="The source property of the VRLayerInit interface (dictionary) defines the canvas whose contents will be presented by the VRDisplay."><code>VRLayerInit.source</code></a> property (which is a reference to the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas" title="Use the HTML <canvas> element with the canvas scripting API to draw graphics and animations."><code>&lt;canvas&gt;</code></a> you want to present in that layer; the other parameters are given sensible defaults — see <a href="../VRLayerInit/leftBounds.html" title="The leftBounds property of the {{domxref(&quot;VRLayerInit&quot;)}} interface (dictionary) defines the left texture bounds of the canvas whose contents will be presented by the {{domxref(&quot;VRDisplay&quot;)}}."><code>leftBounds</code></a> and <a href="../VRLayerInit/rightBounds.html" title="The rightBounds property of the {{domxref(&quot;VRLayerInit&quot;)}} interface (dictionary) defines the right texture bounds of the canvas whose contents will be presented by the {{domxref(&quot;VRDisplay&quot;)}}."><code>rightBounds</code></a>)), the parameter is simply [{ source: canvas }].</p>
+
+<p><code>requestPresent()</code> returns a promise that is fulfilled when the presentation begins successfully.</p>
+
+<pre class="brush: js">          // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
+          btn.addEventListener('click', function() {
+            if(btn.textContent === 'Start VR display') {
+              vrDisplay.requestPresent([{ source: canvas }]).then(function() {
+                console.log('Presenting to WebVR display');</pre>
+
+<p>With our presentation request successful, we now want to start setting up to render content to present to the VRDisplay. First of all we set the canvas to the same size as the VR display area. We do this by getting the <a href="../VREyeParameters.html" title="The VREyeParameters interface of the WebVR API represents all the information required to correctly render a scene for a given eye, including field of view information."><code>VREyeParameters</code></a> for both eyes using <a href="../VRDisplay/getEyeParameters.html" title="The getEyeParameters() method of the VRDisplay interface returns the VREyeParameters object containing the eye parameters for the specified eye."><code>VRDisplay.getEyeParameters()</code></a>.</p>
+
+<p>We then do some simple math to calculate the total width of the VRDisplay rendering area based on the eye <a href="../VREyeParameters/renderWidth.html" title="The renderWidth read-only property of the VREyeParameters interface describes the recommended render target width of each eye viewport, in pixels."><code>VREyeParameters.renderWidth</code></a> and <a href="../VREyeParameters/renderHeight.html" title="The renderHeight read-only property of the VREyeParameters interface describes the recommended render target height of each eye viewport, in pixels."><code>VREyeParameters.renderHeight</code></a>.</p>
+
+<pre class="brush: js">                // Set the canvas size to the size of the vrDisplay viewport
+
+                var leftEye = vrDisplay.getEyeParameters('left');
+                var rightEye = vrDisplay.getEyeParameters('right');
+
+                canvas.width = Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
+                canvas.height = Math.max(leftEye.renderHeight, rightEye.renderHeight);</pre>
+
+<p>Next, we <a href="../Window/cancelAnimationFrame.html" title="Cancels an animation frame request previously scheduled through a call to window.requestAnimationFrame()."><code>cancel the animation loop</code></a> previously set in motion by the <a href="../Window/requestAnimationFrame.html" title="You should call this method whenever you're ready to update your animation onscreen. This will request that your animation function be called before the browser performs the next repaint. The number of callbacks is usually 60 times per second, but will generally match the display refresh rate in most web browsers as per W3C recommendation. requestAnimationFrame() calls are paused in most browsers when running in background tabs or hidden <iframe>s in order to improve performance and battery life."><code>Window.requestAnimationFrame()</code></a> call inside the <code>drawScene()</code> function, and instead invoke <code>drawVRScene()</code>. This function renders the same scene as before, but with some special WebVR magic going on. The loop inside here is maintained by WebVR's special <a href="../VRDisplay/requestAnimationFrame.html" title="The requestAnimationFrame() method of the VRDisplay interface is a special implementation of Window.requestAnimationFrame containing a callback function that will be called every time a new frame of the VRDisplay presentation is rendered:"><code>VRDisplay.requestAnimationFrame</code></a> method.</p>
+
+<pre class="brush: js">                // stop the normal presentation, and start the vr presentation
+                window.cancelAnimationFrame(normalSceneFrame);
+                drawVRScene();</pre>
+
+<p>Finally, we update the button text so that the next time it is pressed, it will stop presentation to the VR display.</p>
+
+<pre class="brush: js">                btn.textContent = 'Exit VR display';
+              });</pre>
+
+<p><br>
+ To stop the VR presentation when the button is subsequently pressed, we call <a href="../VRDisplay/exitPresent.html" title="The exitPresent() method of the VRDisplay interface stops the VRDisplay presenting a scene."><code>VRDisplay.exitPresent()</code></a>. We also reverse the button's text content, and swap over the <code>requestAnimationFrame</code> calls. You can see here that we are using <a href="../VRDisplay/cancelAnimationFrame.html" title="The cancelAnimationFrame() method of the VRDisplay interface is a special implementation of Window.cancelAnimationFrame that unregisters callbacks registered with VRDisplay.requestAnimationFrame()."><code>VRDisplay.cancelAnimationFrame</code></a> to stop the VR rendering loop, and starting the normal rendering loop off again by calling <code>drawScene()</code>.</p>
+
+<pre class="brush: js">            } else {
+              vrDisplay.exitPresent();
+              console.log('Stopped presenting to WebVR display');
+
+              btn.textContent = 'Start VR display';
+
+              // Stop the VR presentation, and start the normal presentation
+              vrDisplay.cancelAnimationFrame(vrSceneFrame);
+              drawScene();
+            }
+          });
+        }
+      });
+    } else {
+      console.log('WebVR API not supported by this browser.');
+    }
+  }
+}</pre>
+
+<p>Once the presentation starts, you'll be able to see the stereoscopic view displayed in the browser:</p>
+
+<p><img src="../../../../../../mdn.mozillademos.org/files/15123/Capture2.png" alt="" style="display: block; margin: 0 auto;"></p>
+
+<p>You'll learn below how the stereoscopic view is actually produced.</p>
+
+<h3 id="Why_does_WebVR_have_its_own_requestAnimationFrame()">Why does WebVR have its own requestAnimationFrame()?</h3>
+
+<p>This is a good question. The reason is that for smooth rendering inside the VR display, you need to render the content at the display's native refresh rate, not that of the computer. VR display refresh rates are greater than PC refresh rates, typically up to 90fps. The rate will be differ from the computer's core refresh rate.</p>
+
+<p>Note that when the VR display is not presenting, <a href="../VRDisplay/requestAnimationFrame.html" title="The requestAnimationFrame() method of the VRDisplay interface is a special implementation of Window.requestAnimationFrame containing a callback function that will be called every time a new frame of the VRDisplay presentation is rendered:"><code>VRDisplay.requestAnimationFrame</code></a> runs identically to <a href="../Window/requestAnimationFrame.html" title="You should call this method whenever you're ready to update your animation onscreen. This will request that your animation function be called before the browser performs the next repaint. The number of callbacks is usually 60 times per second, but will generally match the display refresh rate in most web browsers as per W3C recommendation. requestAnimationFrame() calls are paused in most browsers when running in background tabs or hidden <iframe>s in order to improve performance and battery life."><code>Window.requestAnimationFrame</code></a>, so if you wanted, you could just use a single rendering loop, rather than the two we are using in our app. We have used two because we wanted to do slightly different things depending on whether the VR display is presenting or not, and keep things separated for ease of comprehension.</p>
+
+<h3 id="Rendering_and_display">Rendering and display</h3>
+
+<p>At this point, we've seen all the code required to access the VR hardware, request that we present our scene to the hardware, and start running the rending loop. Let's now look at the code for the rendering loop, and explain how the WebVR-specific parts of it work.</p>
+
+<p>First of all, we begin the definition of our rendering loop function — <code>drawVRScene()</code>. The first thing we do inside here is make a call to <a href="../VRDisplay/requestAnimationFrame.html" title="The requestAnimationFrame() method of the VRDisplay interface is a special implementation of Window.requestAnimationFrame containing a callback function that will be called every time a new frame of the VRDisplay presentation is rendered:"><code>VRDisplay.requestAnimationFrame()</code></a> to keep the loop running after it has been called once (this occurred earlier on in our code when we started presenting to the VR display). This call is set as the value of the global <code>vrSceneFrame</code> variable, so we can cancel the loop with a call to <a href="../VRDisplay/cancelAnimationFrame.html" title="The cancelAnimationFrame() method of the VRDisplay interface is a special implementation of Window.cancelAnimationFrame that unregisters callbacks registered with VRDisplay.requestAnimationFrame()."><code>VRDisplay.cancelAnimationFrame()</code></a> once we exit VR presenting.</p>
+
+<pre class="brush: js">function drawVRScene() {
+  // WebVR: Request the next frame of the animation
+  vrSceneFrame = vrDisplay.requestAnimationFrame(drawVRScene);</pre>
+
+<p>Next, we call <a href="../VRDisplay/getFrameData.html" title="The getFrameData() method of the VRDisplay interface accepts a VRFrameData object and populates it with the information required to render the current frame."><code>VRDisplay.getFrameData()</code></a>, passing it the name of the variable that we want to use to contain the frame data. We initialized this earlier on — <code>frameData</code>. After the call completes, this variable will contain the data need to render the next frame to the VR device, packaged up as a <a href="../VRFrameData.html" title="The VRFrameData interface of the WebVR API represents all the information needed to render a single frame of a VR scene; constructed by VRDisplay.getFrameData()."><code>VRFrameData</code></a> object. This contains things like projection and view matrices for rendering the scene correctly for the left and right eye view, and the current <a href="../VRPose.html" title="The VRPose interface of the WebVR API represents the state of a VR sensor at a given timestamp (which includes orientation, position, velocity, and acceleration information.)"><code>VRPose</code></a> object, which contains data on the VR display such as orientation, position, etc.</p>
+
+<p>This has to be called on every frame so the rendered view is always up-to-date.</p>
+
+<pre class="brush: js">  // Populate frameData with the data of the next frame to display
+  vrDisplay.getFrameData(frameData);</pre>
+
+<p>Now we retrieve the current <a href="../VRPose.html" title="The VRPose interface of the WebVR API represents the state of a VR sensor at a given timestamp (which includes orientation, position, velocity, and acceleration information.)"><code>VRPose</code></a> from the <a href="../VRFrameData/pose.html" title="The pose read-only property of the VRFrameData interface returns the VRPose of the VRDisplay at the current VRFrameData.timestamp."><code>VRFrameData.pose</code></a> property, store the position and orientation for use later on, and send the current pose to the pose stats box for display, if the <code>poseStatsDisplayed</code> variable is set to true.</p>
+
+<pre class="brush: js">  // You can get the position, orientation, etc. of the display from the current frame's pose
+
+  var curFramePose = frameData.pose;
+  var curPos = curFramePose.position;
+  var curOrient = curFramePose.orientation;
+  if(poseStatsDisplayed) {
+    displayPoseStats(curFramePose);
+  }</pre>
+
+<p>&nbsp; We now clear the canvas before we start drawing on it, so that the next frame is clearly seen, and we don't also see previous rendered frames:</p>
+
+<pre class="brush: js">  // Clear the canvas before we start drawing on it.
+
+  gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);</pre>
+
+<p>We now render the view for both the left and right eyes. First of all we need to create projection and view locations for use in the rendering. these are <a href="../WebGLUniformLocation.html" title="The WebGLUniformLocation interface is part of the WebGL API and represents the location of a uniform variable in a shader program."><code>WebGLUniformLocation</code></a> objects, created using the <a href="../WebGLRenderingContext/getUniformLocation.html" title="The WebGLRenderingContext.getUniformLocation() method of the WebGL API returns a WebGLUniformLocation of a uniform variable in a given WebGLProgram."><code>WebGLRenderingContext.getUniformLocation()</code></a> method, passing it the shader program's identifier and an identifying name as parameters.</p>
+
+<pre class="brush: js">  // WebVR: Create the required projection and view matrix locations needed
+  // for passing into the uniformMatrix4fv methods below
+
+  var projectionMatrixLocation = gl.getUniformLocation(shaderProgram, "projMatrix");
+  var viewMatrixLocation = gl.getUniformLocation(shaderProgram, "viewMatrix");</pre>
+
+<p>The next rendering step involves:</p>
+
+<ul>
+ <li>Specifying the viewport size for the left eye, using <a href="../WebGLRenderingContext/viewport.html" title="The WebGLRenderingContext.viewport() method of the WebGL API sets the viewport, which specifies the affine transformation of x and y from normalized device coordinates to window coordinates."><code>WebGLRenderingContext.viewport</code></a> — this is logically the first half of the canvas width, and the full canvas height.</li>
+ <li>Specifying the view and projection matrix values to use to render the left eye — this is done using the <a href="../WebGLRenderingContext/uniformMatrix.html" title="The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify&nbsp; matrix values for uniform variables."><code>WebGLRenderingContext.uniformMatrix4fv</code></a> method, which is passed the location values we retrieved above, and the left matrices obtained from the <a href="../VRFrameData.html" title="The VRFrameData interface of the WebVR API represents all the information needed to render a single frame of a VR scene; constructed by VRDisplay.getFrameData()."><code>VRFrameData</code></a> object.</li>
+ <li>Running the <code>drawGeometry()</code> function, which renders the actual scene — because of what we specified in the previous two steps, we will render it for the left eye only.</li>
+</ul>
+
+<pre class="brush: js">  // WebVR: Render the left eye’s view to the left half of the canvas
+  gl.viewport(0, 0, canvas.width * 0.5, canvas.height);
+  gl.uniformMatrix4fv(projectionMatrixLocation, false, frameData.leftProjectionMatrix);
+  gl.uniformMatrix4fv(viewMatrixLocation, false, frameData.leftViewMatrix);
+  drawGeometry();</pre>
+
+<p>We now do exactly the same thing, but for the right eye:</p>
+
+<pre class="brush: js">  // WebVR: Render the right eye’s view to the right half of the canvas
+  gl.viewport(canvas.width * 0.5, 0, canvas.width * 0.5, canvas.height);
+  gl.uniformMatrix4fv(projectionMatrixLocation, false, frameData.rightProjectionMatrix);
+  gl.uniformMatrix4fv(viewMatrixLocation, false, frameData.rightViewMatrix);
+  drawGeometry();</pre>
+
+<p>Next we define our <code>drawGeometry()</code> function. Most of this is just general WebGL code required to draw our 3D cube. You'll see some WebVR-specific parts in the <code>mvTranslate()</code> and <code>mvRotate()</code> function calls — these pass matrices into the WebGL program that define the translation and rotation of the cube for the current frame</p>
+
+<p>You'll see that we are modifying these values by the position (<code>curPos</code>) and orientation (<code>curOrient</code>) of the VR display we got from the <a href="../VRPose.html" title="The VRPose interface of the WebVR API represents the state of a VR sensor at a given timestamp (which includes orientation, position, velocity, and acceleration information.)"><code>VRPose</code></a> object. The result is that, for example, as you move or rotate your head left, the x position value (<code>curPos[0]</code>) and y rotation value (<code>[curOrient[1]</code>) are added to the x translation value, meaning that the cube will move to the right, as you'd expect when you are looking at something and then move/turn your head left.</p>
+
+<p>This is a quick and dirty way to use VR pose data, but it illustrates the basic principle.</p>
+
+<pre class="brush: js">  function drawGeometry() {
+    // Establish the perspective with which we want to view the
+    // scene. Our field of view is 45 degrees, with a width/height
+    // ratio of 640:480, and we only want to see objects between 0.1 units
+    // and 100 units away from the camera.
+
+    perspectiveMatrix = makePerspective(45, 640.0/480.0, 0.1, 100.0);
+
+    // Set the drawing position to the "identity" point, which is
+    // the center of the scene.
+
+    loadIdentity();
+
+    // Now move the drawing position a bit to where we want to start
+    // drawing the cube.
+
+    mvTranslate([
+                  0.0 - (curPos[0] * 25) + (curOrient[1] * 25),
+                  5.0 - (curPos[1] * 25) - (curOrient[0] * 25),
+                  -15.0 - (curPos[2] * 25)
+               ]);
+
+    // Save the current matrix, then rotate before we draw.
+
+    mvPushMatrix();
+    mvRotate(cubeRotation, [0.25, 0, 0.25 - curOrient[2] * 0.5]);
+
+    // Draw the cube by binding the array buffer to the cube's vertices
+    // array, setting attributes, and pushing it to GL.
+
+    gl.bindBuffer(gl.ARRAY_BUFFER, cubeVerticesBuffer);
+    gl.vertexAttribPointer(vertexPositionAttribute, 3, gl.FLOAT, false, 0, 0);
+
+    // Set the texture coordinates attribute for the vertices.
+
+    gl.bindBuffer(gl.ARRAY_BUFFER, cubeVerticesTextureCoordBuffer);
+    gl.vertexAttribPointer(textureCoordAttribute, 2, gl.FLOAT, false, 0, 0);
+
+    // Specify the texture to map onto the faces.
+
+    gl.activeTexture(gl.TEXTURE0);
+    gl.bindTexture(gl.TEXTURE_2D, cubeTexture);
+    gl.uniform1i(gl.getUniformLocation(shaderProgram, "uSampler"), 0);
+
+    // Draw the cube.
+
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, cubeVerticesIndexBuffer);
+    setMatrixUniforms();
+    gl.drawElements(gl.TRIANGLES, 36, gl.UNSIGNED_SHORT, 0);
+
+    // Restore the original matrix
+
+    mvPopMatrix();
+  }
+</pre>
+
+<p>The next bit of the code has nothing to do with WebVR — it just updates the rotation of the cube on each frame:</p>
+
+<pre class="brush: js">  // Update the rotation for the next draw, if it's time to do so.
+
+  var currentTime = (new Date).getTime();
+  if (lastCubeUpdateTime) {
+    var delta = currentTime - lastCubeUpdateTime;
+
+    cubeRotation += (30 * delta) / 1000.0;
+  }
+
+  lastCubeUpdateTime = currentTime;</pre>
+
+<p>The last part of the rendering loop involves us calling <a href="../VRDisplay/submitFrame.html" title="The submitFrame() method of the VRDisplay interface captures the current state of the VRLayerInit currently being presented and displays it on the VRDisplay."><code>VRDisplay.submitFrame()</code></a> — now all the work has been done and we've rendered the display on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas" title="Use the HTML <canvas> element with the canvas scripting API to draw graphics and animations."><code>&lt;canvas&gt;</code></a>, this method then submits the frame to the VR display so it is displayed on there as well.</p>
+
+<pre class="brush: js">  // WebVR: Indicate that we are ready to present the rendered frame to the VR display
+  vrDisplay.submitFrame();
+}</pre>
+
+<h3 id="Displaying_the_pose_(position_orientation_etc.)_data">Displaying the pose (position, orientation, etc.) data</h3>
+
+<p>In this section we'll discuss the <code>displayPoseStats()</code> function, which displays our updated pose data on each frame. The function is fairly simple.</p>
+
+<p>First of all, we store the six different property values obtainable from the <a href="../VRPose.html" title="The VRPose interface of the WebVR API represents the state of a VR sensor at a given timestamp (which includes orientation, position, velocity, and acceleration information.)"><code>VRPose</code></a> object in their own variables — each one is a <a href="../../JavaScript/Reference/Global_Objects/Float32Array.html" title="The documentation about this has not yet been written; please consider contributing!"><code>Float32Array</code></a>.</p>
+
+<pre class="brush: js">function displayPoseStats(pose) {
+  var pos = pose.position;
+  var orient = pose.orientation;
+  var linVel = pose.linearVelocity;
+  var linAcc = pose.linearAcceleration;
+  var angVel = pose.angularVelocity;
+  var angAcc = pose.angularAcceleration;</pre>
+
+<p>We then write out the data into the information box, updating it on every frame. We've clamped each value to three decimal places using <code><a href="../../JavaScript/Reference/Global_Objects/Number/toFixed.html">toFixed()</a></code>, as the values are hard to read otherwise.</p>
+
+<p>You should note that we've used a conditional expression to detect whether the linear acceleration and angular acceleration arrays are successfully returned before we display the data. These values are not reported by most VR hardware as yet, so the code would throw an error if we did not do this (the arrays return <code>null</code> if they are not successfully reported).</p>
+
+<pre class="brush: js">  posStats.textContent = 'Position: x ' + pos[0].toFixed(3) + ', y ' + pos[1].toFixed(3) + ', z ' + pos[2].toFixed(3);
+  orientStats.textContent = 'Orientation: x ' + orient[0].toFixed(3) + ', y ' + orient[1].toFixed(3) + ', z ' + orient[2].toFixed(3);
+  linVelStats.textContent = 'Linear velocity: x ' + linVel[0].toFixed(3) + ', y ' + linVel[1].toFixed(3) + ', z ' + linVel[2].toFixed(3);
+  angVelStats.textContent = 'Angular velocity: x ' + angVel[0].toFixed(3) + ', y ' + angVel[1].toFixed(3) + ', z ' + angVel[2].toFixed(3);
+
+  if(linAcc) {
+    linAccStats.textContent = 'Linear acceleration: x ' + linAcc[0].toFixed(3) + ', y ' + linAcc[1].toFixed(3) + ', z ' + linAcc[2].toFixed(3);
+  } else {
+    linAccStats.textContent = 'Linear acceleration not reported';
+  }
+
+  if(angAcc) {
+    angAccStats.textContent = 'Angular acceleration: x ' + angAcc[0].toFixed(3) + ', y ' + angAcc[1].toFixed(3) + ', z ' + angAcc[2].toFixed(3);
+  } else {
+    angAccStats.textContent = 'Angular acceleration not reported';
+  }
+}</pre>
+
+<a class="dashAnchor" name="//apple_ref/Section/WebVR%20events"></a><h2 id="WebVR_events">WebVR events</h2>
+
+<p>The WebVR spec features a number of events that are fired, allowing our app code to react to changes in the state of the VR display (see <a href="../WebVR_API.html#Window_events">Window events</a>). For example:</p>
+
+<ul>
+ <li><code><a href="../../Events/vrdisplaypresentchange.html" title="/en-US/docs/Web/Events/vrdisplaypresentchange">vrdisplaypresentchange</a></code> — Fires when the presenting state of a VR display changes — i.e. goes from presenting to not presenting, or vice versa.</li>
+ <li><code><a href="../../Events/vrdisplayconnect.html" title="/en-US/docs/Web/Events/vrdisplayconnect">vrdisplayconnect</a></code> — Fires when a compatible VR display has been connected to the computer.</li>
+ <li><code><a href="../../Events/vrdisplaydisconnect.html" title="/en-US/docs/Web/Events/vrdisplaydisconnect">vrdisplaydisconnect</a></code> — Fires when a compatible VR display has been disconnected from the computer.</li>
+</ul>
+
+<p>To demonstrate how they work, our simple demo includes the following example:</p>
+
+<pre class="brush: js">window.addEventListener('vrdisplaypresentchange', function(e) {
+  console.log('Display ' + e.display.displayId + ' presentation has changed. Reason given: ' + e.reason + '.');
+});</pre>
+
+<p>As you can see, the <a href="../VRDisplayEvent.html" title="The VRDisplayEvent interface of the WebVR API represents represents the event object of WebVR-related events (see the list of WebVR window extensions)."><code>event object</code></a> provides two useful properties — <a href="../VRDisplayEvent/display.html" title="The display read-only property of the VRDisplayEvent interface returns the VRDisplay associated with this event."><code>VRDisplayEvent.display</code></a>, which contains a reference to the <a href="../VRDisplay.html" title="The VRDisplay interface of the WebVR API represents any VR device supported by this API. It includes generic information such as device IDs and descriptions, as well as methods for starting to present a VR scene, retrieving eye parameters and display capabilities, and other important functionality."><code>VRDisplay</code></a> the event was fired in response to, and <a href="../VRDisplayEvent/reason.html" title="The reason read-only property of the VRDisplayEvent interface returns a human-readable reason why the event was fired."><code>VRDisplayEvent.reason</code></a>, which contains a human-readable reason why the event was fired.</p>
+
+<p>This is a very useful event; you could use it to handle cases where the display gets disconnected unexpectedly, stopping errors from being thrown and making sure the user is aware of the situation. In Google's Webvr.info presentation demo, the event is used to run an <a href="https://github.com/toji/webvr.info/blob/master/samples/03-vr-presentation.html#L174" class="external" rel="noopener"><code>onVRPresentChange()</code> function</a>, which updates the UI controls as appropriate and resizes the canvas.</p>
+
+<a class="dashAnchor" name="//apple_ref/Section/Summary"></a><h2 id="Summary">Summary</h2>
+
+<p>This article has given you the very basics of how to create a simple WebVR 1.1 app, to help you get started.</p>
+                  
+                
+              </article>
+
+              <!-- contributors -->
+              <div class="wiki-block contributors">
+                <h2 class="offscreen">Document Tags and Contributors</h2>
+                
+                
+  <div class="tag-attach-list contributors-sub">
+    <svg class="icon icon-tags" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M7 7c0-1.109-.891-2-2-2s-2 .891-2 2 .891 2 2 2 2-.891 2-2zm16.672 9c0 .531-.219 1.047-.578 1.406l-7.672 7.688c-.375.359-.891.578-1.422.578s-1.047-.219-1.406-.578L1.422 13.906C.625 13.125 0 11.609 0 10.5V4c0-1.094.906-2 2-2h6.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422zm6 0c0 .531-.219 1.047-.578 1.406l-7.672 7.688a2.08 2.08 0 0 1-1.422.578c-.812 0-1.219-.375-1.75-.922l7.344-7.344c.359-.359.578-.875.578-1.406s-.219-1.047-.578-1.422L14.422 3.422C13.625 2.625 12.11 2 11 2h3.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422z"></path>
+</svg>
+    <strong>Tags:</strong>&nbsp;
+    <ul class="tags tags-small">
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/1.1" rel="nofollow">1.1</a></li>
+      
+        <li><a href="../../../tag/API.html" rel="nofollow">API</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Canvas" rel="nofollow">Canvas</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Tutorial" rel="nofollow">Tutorial</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Virtual Reality" rel="nofollow">Virtual Reality</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/VR" rel="nofollow">VR</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/WebGL" rel="nofollow">WebGL</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/WebVR" rel="nofollow">WebVR</a></li>
+      
+    </ul>
+  </div>
+
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-group" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M9.266 14a5.532 5.532 0 0 0-4.141 2H3.031C1.468 16 0 15.25 0 13.516 0 12.25-.047 8 1.937 8c.328 0 1.953 1.328 4.062 1.328.719 0 1.406-.125 2.078-.359A7.624 7.624 0 0 0 7.999 10c0 1.422.453 2.828 1.266 4zM26 23.953C26 26.484 24.328 28 21.828 28H8.172C5.672 28 4 26.484 4 23.953 4 20.422 4.828 15 9.406 15c.531 0 2.469 2.172 5.594 2.172S20.063 15 20.594 15C25.172 15 26 20.422 26 23.953zM10 4c0 2.203-1.797 4-4 4S2 6.203 2 4s1.797-4 4-4 4 1.797 4 4zm11 6c0 3.313-2.688 6-6 6s-6-2.688-6-6 2.688-6 6-6 6 2.688 6 6zm9 3.516C30 15.25 28.531 16 26.969 16h-2.094a5.532 5.532 0 0 0-4.141-2A7.066 7.066 0 0 0 22 10a7.6 7.6 0 0 0-.078-1.031A6.258 6.258 0 0 0 24 9.328C26.109 9.328 27.734 8 28.062 8c1.984 0 1.937 4.25 1.937 5.516zM28 4c0 2.203-1.797 4-4 4s-4-1.797-4-4 1.797-4 4-4 4 1.797 4 4z"></path>
+</svg>
+                    <strong>Contributors to this page:</strong>
+                    
+        <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills">chrisdavidmills</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/asad009">asad009</a>
+    
+                  </div>
+                
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-clock" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M14 8.5v7c0 .281-.219.5-.5.5h-5a.494.494 0 0 1-.5-.5v-1c0-.281.219-.5.5-.5H12V8.5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zm6.5 5.5c0-4.688-3.813-8.5-8.5-8.5S3.5 9.313 3.5 14s3.813 8.5 8.5 8.5 8.5-3.813 8.5-8.5zm3.5 0c0 6.625-5.375 12-12 12S0 20.625 0 14 5.375 2 12 2s12 5.375 12 12z"></path>
+</svg>
+                    <strong>Last updated by:</strong>
+                    <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills">chrisdavidmills</a>,
+                    <time datetime="2017-08-23T03:28:44.770539-07:00">Aug 23, 2017, 3:28:44 AM</time>
+                  </div>
+                
+              </div>
+            </div>
+
+            
+              <!-- quick links and approvals strip -->
+              <div id="wiki-left" class="column-strip wiki-column">
+
+                <!-- crumbs -->
+                
+  
+    
+  
+
+                
+                  <!-- quick links -->
+                  
+  <div class="quick-links" id="quick-links">
+    <div class="quick-links-head">Related Topics</div>
+    <ol><li><strong><a href="../WebVR_API.html">WebVR API</a></strong></li><li><strong><a href="../WebVR_API.html"><code>WebVR_API</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Events</strong></a><ol><li><a href="../../Events/vrdisplayconnect.html"><code>vrdisplayconnected</code></a></li><li><a href="../../Events/vrdisplaydisconnect.html"><code>vrdisplaydisconnected</code></a></li><li><a href="../../Events/vrdisplayactivate.html"><code>vrdisplayactivate</code></a></li><li><a href="../../Events/vrdisplaydeactivate.html"><code>vrdisplaydeactivate</code></a></li><li><a href="../../Events/vrdisplayblur.html"><code>vrdisplayblur</code></a></li><li><a href="../../Events/vrdisplayfocus.html"><code>vrdisplayfocus</code></a></li><li><a href="../../Events/vrdisplaypresentchange.html"><code>vrdisplaypresentchange</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Related pages for WebVR API</strong></a><ol><li><a href="../Gamepad/displayId.html"><code>Gamepad.displayId</code></a></li><li><a href="../Navigator/getVRDisplays.html"><code>Navigator.getVRDisplays()</code></a></li><li><a href="../VRDisplay.html"><code>VRDisplay</code></a></li><li><a href="../VRDisplayCapabilities.html"><code>VRDisplayCapabilities</code></a></li><li><a href="../VRDisplayEvent.html"><code>VRDisplayEvent</code></a></li><li><a href="../VREyeParameters.html"><code>VREyeParameters</code></a></li><li><a href="../VRFieldOfView.html"><code>VRFieldOfView</code></a></li><li><a href="../VRFrameData.html"><code>VRFrameData</code></a></li><li><a href="../VRLayerInit.html"><code>VRLayerInit</code></a></li><li><a href="../VRPose.html"><code>VRPose</code></a></li><li><a href="../VRStageParameters.html"><code>VRStageParameters</code></a></li></ol></li></ol>
+  </div>
+                
+
+                <!-- approvals -->
+                
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+    
+      <div class="newsletter-box">
+        <div class="newsletter">
+    <form id="newsletterForm" class="newsletter-form nodisable" name="newsletter-form" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <div class="newsletter-head">
+            <h2 class="newsletter-teaser">Learn the best of web development</h2>
+            <p class="newsletter-description">Get the latest and greatest from MDN delivered straight to your inbox.</p>
+            
+        </div>
+
+        <div class="newsletter-fields">
+            <input type="hidden" id="fmt" name="fmt" value="H">
+            <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+            <div id="newsletterErrors" class="newsletter-errors"></div>
+
+            <div id="newsletterEmail" class="form-group newsletter-group-email">
+                <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+                <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+            </div>
+
+            <div id="newsletterPrivacy" class="form-group form-group-agree newsletter-group-privacy hidden">
+                <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+                <label for="newsletterPrivacyInput">
+                I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+                </label>
+            </div>
+            <div id="newsletterSubmit" class="newsletter-group-submit">
+                <button id="newsletter-submit" type="submit" class="button neutral newsletter-submit">
+                    Sign up now<svg class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg" width="23" height="28" viewBox="0 0 23 28" aria-hidden="true">
+    <path d="M23 15a2.01 2.01 0 0 1-.578 1.422L12.25 26.594c-.375.359-.891.578-1.422.578s-1.031-.219-1.406-.578L8.25 25.422c-.375-.375-.594-.891-.594-1.422s.219-1.047.594-1.422L12.828 18h-11C.703 18 0 17.062 0 16v-2c0-1.062.703-2 1.828-2h11L8.25 7.406a1.96 1.96 0 0 1 0-2.812l1.172-1.172c.375-.375.875-.594 1.406-.594s1.047.219 1.422.594l10.172 10.172c.375.359.578.875.578 1.406z"></path>
+</svg>
+                </button>
+            </div>
+        </div>
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden">
+        <span>Hide Newsletter Sign-up</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+</div>
+      </div>
+    
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API$edit" label="Edit page"></menuitem>
+    <menuitem data-action="/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API$history" label="View page history"></menuitem>
+  </menu>
+
+      </div>
+  </main>
+  <!-- Footer -->
+    <footer id="nav-footer" class="nav-footer"><div class="center"><a href="http://developer.mozilla.org/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API">Using the WebVR API</a> by <a href="http://developer.mozilla.org/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API$history">Mozilla Contributors</a> is licensed under <a href="http://creativecommons.org/licenses/by-sa/2.5/" class="external external-icon">CC-BY-SA 2.5</a>.</div></footer> 
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script async="" type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script src="../../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../../static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><!--[endif]---->
+
+    
+    <script src="../../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../../static/build/js/wiki.b26a4c181df3.js" charset="utf-8" id="wikiscript"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../static/build/js/newsletter.a85c5c2892e5.js" charset="utf-8"></script>
+  
+
+
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 10:04:41 GMT -->
+</body></html>

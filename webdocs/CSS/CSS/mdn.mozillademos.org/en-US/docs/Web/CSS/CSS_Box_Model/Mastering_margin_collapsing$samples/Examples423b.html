@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing$samples/Examples?revision=1321957 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:49:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            div {
+  margin: 2rem 0;
+  background: lavender;
+}
+
+p {
+  margin: .4rem 0 1.2rem 0;
+  background: yellow;
+}
+        </style>
+        
+        <title>Mastering margin collapsing</title>
+    </head>
+    <body>
+        
+            <p>The bottom margin of this paragraph is collapsed …</p>
+<p>… with the top margin of this paragraph, yielding a margin of <code>1.2rem</code> in between.</p>
+
+<div>This parent element contains two paragraphs!
+  <p>This paragraph has a <code>.4rem</code> margin between it and the text above.</p>
+  <p>My bottom margin collapses with my parent, yielding a bottom margin of <code>2rem</code>.</p>
+</div>
+
+<p>I am <code>2rem</code> below the element above.</p>
+        
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing$samples/Examples?revision=1321957 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:49:14 GMT -->
+</html>

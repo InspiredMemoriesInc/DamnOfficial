@@ -1,0 +1,1612 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 22:51:29 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  <title>Images in HTML</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+
+  
+<link rel="preload" href="../../../../../static/fonts/locales/ZillaSlab-Regular.f9de6143fdfa.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="license" href="#license">
+  
+
+  
+    
+    
+
+    <link href="../../../../../static/build/styles/mdn.83865b0f7c30.css" rel="stylesheet" type="text/css">
+
+    
+  
+
+    <link href="../../../../../static/build/styles/wiki.aaf26c13c39b.css" rel="stylesheet" type="text/css">
+
+
+    
+
+  <link href="../../../../../static/build/styles/locale-en-US.ca0bca387b42.css" rel="stylesheet" type="text/css">
+
+  
+    <script>
+      /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
+    </script>
+    
+
+
+
+  
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta property="og:site_name" content="MDN Web Docs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="MDN Web Docs">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../static/img/favicon144.e7e21ca263ca.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../static/img/favicon114.d526f38b09c5.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../static/img/favicon72.cc65d1d762a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../../../static/img/favicon57.de33179910ae.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="../../../../../static/img/favicon32.7f3da72dcea1.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script async="" type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  <link rel="dns-prefetch" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML$json">
+  <link rel="canonical" href="Images_in_HTML.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="Images_in_HTML.html" title="Images in HTML">
+  
+    
+      <link rel="alternate" hreflang="bg" href="https://developer.mozilla.org/bg/docs/Learn/HTML/Multimedia_and_embedding/изображения_в_HTML" title="Изображения в  HTML">
+    
+      <link rel="alternate" hreflang="ca" href="https://developer.mozilla.org/ca/docs/Learn/HTML/Multimèdia_i_incrustar/Images_in_HTML" title="Imatges en HTML">
+    
+      <link rel="alternate" hreflang="es" href="https://developer.mozilla.org/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML" title="Images in HTML">
+    
+      <link rel="alternate" hreflang="fr" href="../../../../../fr/docs/Apprendre/HTML/Multimedia_and_embedding/Images_in_HTML.html" title="Les images en HTML">
+    
+      <link rel="alternate" hreflang="it" href="https://developer.mozilla.org/it/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML" title="Immagini in HTML">
+    
+      <link rel="alternate" hreflang="ko" href="https://developer.mozilla.org/ko/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML" title="HTML의 이미지">
+    
+      <link rel="alternate" hreflang="nl" href="../../../../../nl/docs/Learn/HTML/Multimedia_inbedden/Afbeeldingen_in_HTML.html" title="Afbeeldingen in HTML">
+    
+      <link rel="alternate" hreflang="pt-BR" href="../../../../../pt-BR/docs/Aprender/HTML/Multimedia_and_embedding/Images_in_HTML.html" title="Imagens no HTML">
+    
+      <link rel="alternate" hreflang="pt-PT" href="https://developer.mozilla.org/pt-PT/docs/Learn/HTML/Multimedia_and_embedding/Imagens_em_HTML" title="Images em HTML">
+    
+      <link rel="alternate" hreflang="ru" href="https://developer.mozilla.org/ru/docs/Learn/HTML/Multimedia_and_embedding/Изображения_в_HTML" title="Изображения в HTML">
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML" title="HTML中的图片">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="Images in HTML">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">
+  <meta name="twitter:title" content="Images in HTML">
+  
+  <meta property="og:description" content="In the beginning, the Web was just text, and it was really quite boring. Fortunately, it wasn't too long before the ability to embed images (and other more interesting types of content) inside web pages was added. There are other types of multimedia to consider, but it is logical to start with the humble img element, used to embed a simple image in a webpage. In this article we'll look at how to use it in depth, including the basics, annotating it with captions using figure, and detailing how it relates to CSS background images.">
+  <meta name="description" content="In the beginning, the Web was just text, and it was really quite boring. Fortunately, it wasn't too long before the ability to embed images (and other more interesting types of content) inside web pages was added. There are other types of multimedia to consider, but it is logical to start with the humble img element, used to embed a simple image in a webpage. In this article we'll look at how to use it in depth, including the basics, annotating it with captions using figure, and detailing how it relates to CSS background images.">
+  <meta name="twitter:description" content="In the beginning, the Web was just text, and it was really quite boring. Fortunately, it wasn't too long before the ability to embed images (and other more interesting types of content) inside web pages was added. There are other types of multimedia to consider, but it is logical to start with the humble img element, used to embed a simple image in a webpage. In this article we'll look at how to use it in depth, including the basics, annotating it with captions using figure, and detailing how it relates to CSS background images.">
+  
+
+</head>
+<body data-slug="Learn/HTML/Multimedia_and_embedding/Images_in_HTML" contextmenu="edit-history-menu" data-search-url="" class="document">
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <!--[endif]---->
+
+  
+  <link rel="dns-prefetch" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML$json">
+  <link rel="canonical" href="Images_in_HTML.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="Images_in_HTML.html" title="Images in HTML">
+  
+    
+      <link rel="alternate" hreflang="bg" href="https://developer.mozilla.org/bg/docs/Learn/HTML/Multimedia_and_embedding/изображения_в_HTML" title="Изображения в  HTML">
+    
+      <link rel="alternate" hreflang="ca" href="https://developer.mozilla.org/ca/docs/Learn/HTML/Multimèdia_i_incrustar/Images_in_HTML" title="Imatges en HTML">
+    
+      <link rel="alternate" hreflang="es" href="https://developer.mozilla.org/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML" title="Images in HTML">
+    
+      <link rel="alternate" hreflang="fr" href="../../../../../fr/docs/Apprendre/HTML/Multimedia_and_embedding/Images_in_HTML.html" title="Les images en HTML">
+    
+      <link rel="alternate" hreflang="it" href="https://developer.mozilla.org/it/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML" title="Immagini in HTML">
+    
+      <link rel="alternate" hreflang="ko" href="https://developer.mozilla.org/ko/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML" title="HTML의 이미지">
+    
+      <link rel="alternate" hreflang="nl" href="../../../../../nl/docs/Learn/HTML/Multimedia_inbedden/Afbeeldingen_in_HTML.html" title="Afbeeldingen in HTML">
+    
+      <link rel="alternate" hreflang="pt-BR" href="../../../../../pt-BR/docs/Aprender/HTML/Multimedia_and_embedding/Images_in_HTML.html" title="Imagens no HTML">
+    
+      <link rel="alternate" hreflang="pt-PT" href="https://developer.mozilla.org/pt-PT/docs/Learn/HTML/Multimedia_and_embedding/Imagens_em_HTML" title="Images em HTML">
+    
+      <link rel="alternate" hreflang="ru" href="https://developer.mozilla.org/ru/docs/Learn/HTML/Multimedia_and_embedding/Изображения_в_HTML" title="Изображения в HTML">
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML" title="HTML中的图片">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="Images in HTML">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">
+  <meta name="twitter:title" content="Images in HTML">
+  
+  <meta property="og:description" content="In the beginning, the Web was just text, and it was really quite boring. Fortunately, it wasn't too long before the ability to embed images (and other more interesting types of content) inside web pages was added. There are other types of multimedia to consider, but it is logical to start with the humble img element, used to embed a simple image in a webpage. In this article we'll look at how to use it in depth, including the basics, annotating it with captions using figure, and detailing how it relates to CSS background images.">
+  <meta name="description" content="In the beginning, the Web was just text, and it was really quite boring. Fortunately, it wasn't too long before the ability to embed images (and other more interesting types of content) inside web pages was added. There are other types of multimedia to consider, but it is logical to start with the humble img element, used to embed a simple image in a webpage. In this article we'll look at how to use it in depth, including the basics, annotating it with captions using figure, and detailing how it relates to CSS background images.">
+  <meta name="twitter:description" content="In the beginning, the Web was just text, and it was really quite boring. Fortunately, it wasn't too long before the ability to embed images (and other more interesting types of content) inside web pages was added. There are other types of multimedia to consider, but it is logical to start with the humble img element, used to embed a simple image in a webpage. In this article we'll look at how to use it in depth, including the basics, annotating it with captions using figure, and detailing how it relates to CSS background images.">
+  
+
+
+
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/wiki-compat-tables.9978a5ce31c2.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+
+        // interactive editor config
+        win.mdn.interactiveEditor = {
+            siteUrl: "https://developer.mozilla.org",
+            editorUrl: "https://interactive-examples.mdn.mozilla.net"
+        };
+
+    })(this);
+</script>
+    
+    <ul id="nav-access">
+  <li><a href="#content" id="skip-main">Skip to main content</a></li>
+  <li><a id="skip-language" href="#language">Select language</a></li>
+  <li><a href="#q" id="skip-search">Skip to search</a></li>
+</ul>
+
+    <!-- Header -->
+    <header id="main-header" class="header-main">
+      <a href="https://developer.mozilla.org/en-US/" class="logo">MDN Web Docs</a>
+      <div class="nav-toolbox-wrapper">
+        <nav id="main-nav" class="nav-main" role="navigation">
+    <ul>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web">Technologies
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-tech-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="../../../Web/HTML.html">HTML</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API">APIs / DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn">References &amp; Guides
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-learn-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-contact-submenu">
+              <div class="submenu-column">
+                <ul>
+                  <li>
+                      <a href="https://support.mozilla.org/">Get Firefox help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://stackoverflow.com/">Get web development help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                      <a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Report a content problem
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</nav>
+        <div id="toolbox" class="toolbox">
+  <ul>
+    
+    <li class="nav-login"><div class="login">
+    
+        
+        <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FLearn%2FHTML%2FMultimedia_and_embedding%2FImages_in_HTML" class="login-link js-login-link" data-service="GitHub" rel="nofollow">
+            Sign in<svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+    <title>Github</title>
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path>
+</svg>
+        </a>
+    
+</div></li>
+  </ul>
+</div>
+      </div>
+      <form id="nav-main-search" action="https://developer.mozilla.org/en-US/search" method="get" role="search" class="nav-main-search">
+  <div class="search-wrap">
+    <label for="main-q" class="offscreen">Search</label>
+    <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" aria-hidden="true">
+    <span class="search-trigger">
+        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true">
+    <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path>
+</svg>
+    </span>
+    <button type="submit" class="offscreen">Search</button>
+    <button type="button" id="close-header-search" class="close-header-search transparent">
+        <span class="offscreen">Close search</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+  </div>
+</form>
+    </header> 
+
+  <!-- Content will go here -->
+  <main id="content">
+      
+  <!-- heading -->
+  <div id="wiki-document-head" class="document-head">
+    <div class="center">
+      <!-- action buttons -->
+      <div class="document-actions">
+        
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons">
+      <li>
+          <button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false">
+              <svg class="icon icon-language" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M10.219 16.844c-.031.109-.797-.25-1-.328-.203-.094-1.125-.609-1.359-.766s-1.125-.891-1.234-.938a28.275 28.275 0 0 1-2.094 2.828c-.281.328-1.125 1.391-1.641 1.719-.078.047-.531.094-.594.063.25-.187.969-1.078 1.281-1.437.391-.453 2.25-3.047 2.562-3.641.328-.594 1.312-2.562 1.359-2.75-.156-.016-1.391.406-1.719.516-.313.094-1.172.297-1.234.344-.063.063-.016.25-.047.313s-.313.203-.484.234a1.647 1.647 0 0 1-.734 0c-.203-.047-.391-.25-.438-.328 0 0-.063-.094-.078-.359.187-.063.5-.078.844-.172s1.188-.344 1.641-.5 1.328-.484 1.594-.547c.281-.047.984-.516 1.359-.641s.641-.281.656-.203 0 .422-.016.516c-.016.078-.766 1.547-.875 1.781-.063.125-.5.953-1.203 2.047.25.109.781.328 1 .438.266.125 2.125.906 2.219.938s.266.75.234.875zM7.016 9.25c.047.266-.031.375-.063.438-.156.297-.547.5-.781.594s-.625.187-.938.187c-.141-.016-.422-.063-.766-.406-.187-.203-.328-.75-.266-.688s.516.125.719.078.688-.187.906-.25c.234-.078.703-.203.859-.219.156 0 .281.063.328.266zm10.906 2.016l.984 3.547-2.172-.656zM.609 23.766l10.844-3.625V4.016L.609 7.657v16.109zM20 18.813l1.594.484-2.828-10.266-1.563-.484-3.375 8.375 1.594.484.703-1.719 3.297 1.016zM12.141 3.781l8.953 2.875V.718zM17 24.453l2.469.203-.844 2.5L18 26.125c-1.266.812-2.828 1.437-4.312 1.687-.453.094-.969.187-1.422.187h-1.313c-1.656 0-4.672-.984-5.984-1.937-.094-.078-.125-.141-.125-.25 0-.172.125-.297.281-.297.141 0 .875.453 1.078.547 1.406.703 3.375 1.344 4.953 1.344 1.953 0 3.281-.25 5.063-1.016.516-.234.969-.531 1.453-.797zm7-16.859v16.859c-12.078-3.844-12.094-3.844-12.094-3.844C11.656 20.718.453 24.5.297 24.5a.3.3 0 0 1-.281-.203c0-.016-.016-.031-.016-.047V7.406c.016-.047.031-.125.063-.156.094-.109.219-.141.313-.172.047-.016 1-.328 2.328-.781v-6l8.719 3.094C11.532 3.36 21.251 0 21.392 0c.172 0 .313.125.313.328v6.531z"></path>
+</svg>
+              <span>Languages</span>
+          </button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                
+                
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/bg/docs/Learn/HTML/Multimedia_and_embedding/изображения_в_HTML" data-locale="bg" title="Bulgarian">Български (bg)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ca/docs/Learn/HTML/Multimèdia_i_incrustar/Images_in_HTML" data-locale="ca" title="Catalan">Català (ca)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML" data-locale="es" title="Spanish">Español (es)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../../fr/docs/Apprendre/HTML/Multimedia_and_embedding/Images_in_HTML.html" data-locale="fr" title="French">Français (fr)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/it/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML" data-locale="it" title="Italian">Italiano (it)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ko/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML" data-locale="ko" title="Korean">한국어 (ko)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../../nl/docs/Learn/HTML/Multimedia_inbedden/Afbeeldingen_in_HTML.html" data-locale="nl" title="Dutch">Nederlands (nl)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../../pt-BR/docs/Aprender/HTML/Multimedia_and_embedding/Images_in_HTML.html" data-locale="pt-BR" title="Portuguese (Brazilian)">Português (do&nbsp;Brasil) (pt-BR)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/pt-PT/docs/Learn/HTML/Multimedia_and_embedding/Imagens_em_HTML" data-locale="pt-PT" title="Portuguese (Portugal)">Português (Europeu) (pt-PT)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ru/docs/Learn/HTML/Multimedia_and_embedding/Изображения_в_HTML" data-locale="ru" title="Russian">Русский (ru)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML" data-locale="zh-CN" title="Chinese (Simplified)">中文 (简体) (zh-CN)</a></bdi></li>
+                
+              
+
+              
+                <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML$locales" rel="nofollow" id="translations-add">Add a translation</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+      
+      <li class="page-buttons-edit">
+          <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML$edit" class="button neutral" id="edit-button" rel="nofollow">
+              <svg class="icon icon-pencil" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M5.672 24l1.422-1.422-3.672-3.672L2 20.328V22h2v2h1.672zm8.172-14.5a.329.329 0 0 0-.344-.344.368.368 0 0 0-.266.109l-8.469 8.469a.366.366 0 0 0-.109.266c0 .203.141.344.344.344a.368.368 0 0 0 .266-.109l8.469-8.469a.366.366 0 0 0 .109-.266zM13 6.5l6.5 6.5-13 13H0v-6.5zM23.672 8c0 .531-.219 1.047-.578 1.406L20.5 12 14 5.5l2.594-2.578c.359-.375.875-.594 1.406-.594s1.047.219 1.422.594l3.672 3.656c.359.375.578.891.578 1.422z"></path>
+</svg>
+              Edit
+          </a>
+      </li>
+      
+
+        
+
+        <li class="page-buttons-advanced">
+            <button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false">
+                <svg class="icon icon-gear" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M16 14c0-2.203-1.797-4-4-4s-4 1.797-4 4 1.797 4 4 4 4-1.797 4-4zm8-1.703v3.469c0 .234-.187.516-.438.562l-2.891.438a8.86 8.86 0 0 1-.609 1.422c.531.766 1.094 1.453 1.672 2.156.094.109.156.25.156.391s-.047.25-.141.359c-.375.5-2.484 2.797-3.016 2.797a.795.795 0 0 1-.406-.141l-2.156-1.687a9.449 9.449 0 0 1-1.422.594c-.109.953-.203 1.969-.453 2.906a.573.573 0 0 1-.562.438h-3.469c-.281 0-.531-.203-.562-.469l-.438-2.875a9.194 9.194 0 0 1-1.406-.578l-2.203 1.672c-.109.094-.25.141-.391.141s-.281-.063-.391-.172c-.828-.75-1.922-1.719-2.578-2.625a.607.607 0 0 1 .016-.718c.531-.719 1.109-1.406 1.641-2.141a8.324 8.324 0 0 1-.641-1.547l-2.859-.422A.57.57 0 0 1 0 15.705v-3.469c0-.234.187-.516.422-.562l2.906-.438c.156-.5.359-.969.609-1.437a37.64 37.64 0 0 0-1.672-2.156c-.094-.109-.156-.234-.156-.375s.063-.25.141-.359c.375-.516 2.484-2.797 3.016-2.797.141 0 .281.063.406.156L7.828 5.94a9.449 9.449 0 0 1 1.422-.594c.109-.953.203-1.969.453-2.906a.573.573 0 0 1 .562-.438h3.469c.281 0 .531.203.562.469l.438 2.875c.484.156.953.344 1.406.578l2.219-1.672c.094-.094.234-.141.375-.141s.281.063.391.156c.828.766 1.922 1.734 2.578 2.656a.534.534 0 0 1 .109.344c0 .141-.047.25-.125.359-.531.719-1.109 1.406-1.641 2.141.266.5.484 1.016.641 1.531l2.859.438a.57.57 0 0 1 .453.562z"></path>
+</svg>
+                <span>Advanced</span>
+            </button>
+            <div class="submenu js-submenu" id="advanced-menu-submenu">
+                <!-- this page -->
+                <div class="submenu-column">
+                    <div class="title">Advanced</div>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML$history" rel="nofollow">History</a></li>
+                        
+                        
+                        
+
+
+                
+
+                <li class="page-print"><a href="#" onclick="return window.print();">Print this article</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+      </div>
+
+      <div class="document-title">
+        <h1>Images in HTML</h1>
+      </div>
+    </div>
+  </div>
+  
+
+      <div class="center clear">
+      
+
+    <div class="wiki-main-content" id="document-main"><div class="center">
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-left-present">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-main wiki-column text-content">
+
+              
+
+              
+              
+
+              
+
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <div></div>
+
+<div><div class="prevnext">
+    <div><a href="../Multimedia_and_embedding.html" style="float: left; width: 60%; text-align: left;"><span style="display: inline-block; background: #eaeff2; border-radius: 4px; box-shadow: inset 0 -1px #bbbfc2; color: #4d4353; padding: 0.3em 0.8em;"><i class="icon-arrow-up"></i> Overview: Multimedia and embedding</span></a><a href="Video_and_audio_content.html" style="width: 20%; float: right; text-align: right;"><span style="display: inline-block; background: #eaeff2; border-radius: 4px; box-shadow: inset 0 -1px #bbbfc2; color: #4d4353; padding: 0.3em 0.8em;"> Next  <i class="icon-arrow-right"></i></span></a></div>
+    <p>&nbsp;</p>
+</div></div>
+
+<p class="summary">In the beginning, the Web was just text, and it was really quite boring. Fortunately, it wasn't too long before the ability to embed images (and other more interesting types of content) inside web pages was added. There are other types of multimedia to consider, but it is logical to start with the humble <a href="../../../Web/HTML/Element/img.html" title="The HTML <img> element embeds an image into the document."><code>&lt;img&gt;</code></a> element, used to embed a simple image in a webpage. In this article we'll look at how to use it in depth, including the basics, annotating it with captions using <a href="../../../Web/HTML/Element/figure.html" title="The HTML <figure> element represents self-contained content, frequently with a caption (<figcaption>), and is typically referenced as a single unit."><code>&lt;figure&gt;</code></a>, and detailing how it relates to <a href="https://developer.mozilla.org/en-US/docs/Glossary/CSS" class="glossaryLink" title="CSS: CSS (Cascading Style Sheets) is a declarative language that controls how webpages look in the browser.">CSS</a> background images.</p>
+
+<table class="learn-box standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Prerequisites:</th>
+   <td>Basic computer literacy, <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, basic knowledge of <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>, familiarity with HTML fundamentals (as covered in <a href="../Introduction_to_HTML/Getting_started.html">Getting started with HTML</a>.)</td>
+  </tr>
+  <tr>
+   <th scope="row">Objective:</th>
+   <td>To learn how to embed simple images in HTML, annotate them with captions, and how HTML images relate to CSS background images.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="How_do_we_put_an_image_on_a_webpage">How do we put an image on a webpage?</h2>
+
+<p>In order to put a simple image on a webpage, we use the <a href="../../../Web/HTML/Element/img.html" title="The HTML <img> element embeds an image into the document."><code>&lt;img&gt;</code></a> element. This is an <a href="https://developer.mozilla.org/en-US/docs/Glossary/empty_element" class="glossaryLink" title="empty element: An empty element is an element from HTML, SVG, or MathML that cannot have any child nodes (i.e., nested elements or text nodes).">empty element</a> (meaning that it has no text content or closing tag) that requires a minimum of one attribute to be useful — <code>src</code> (sometimes spoken as its full title, <em>source</em>). The <code>src</code> attribute contains a path pointing to the image you want to embed in the page, which can be a relative or absolute URL, in the same way as <a href="../../../Web/HTML/Element/a.html" title="The HTML <a> element (or anchor element) creates a hyperlink to other web pages, files, locations within the same page, email addresses, or any other URL."><code>&lt;a&gt;</code></a> element <code>href</code> attribute values.</p>
+
+<div class="note">
+<p><strong>Note</strong>: You should read <a href="../Introduction_to_HTML/Creating_hyperlinks.html#A_quick_primer_on_URLs_and_paths">A quick primer on URLs and paths</a> to refresh your memory on relative and absolute URLs before continuing.</p>
+</div>
+
+<p>So for example, if your image is called <code>dinosaur.jpg</code>, and it sits in the same directory as your HTML page, you could embed the image like so:</p>
+
+<pre class="brush: html">&lt;img src="dinosaur.jpg"&gt;</pre>
+
+<p>If the image was in an <code>images</code> subdirectory, which was inside the same directory as the HTML page (which Google recommends for <a href="https://developer.mozilla.org/en-US/docs/Glossary/SEO" class="glossaryLink" title="SEO: SEO (Search Engine Optimization) is the process of making a website more visible in search results, also termed improving search rankings.">SEO</a>/indexing purposes), then you'd embed it like this:</p>
+
+<pre class="brush: html">&lt;img src="images/dinosaur.jpg"&gt;</pre>
+
+<p>And so on.</p>
+
+<div class="note">
+<p><strong>Note</strong>: Search engines also read image filenames and count them towards SEO. Therefore, give your image a descriptive filename; <code>dinosaur.jpg</code> is better than <code>img835.png</code>.</p>
+</div>
+
+<p>You could embed the image using its absolute URL, for example:</p>
+
+<pre class="brush: html">&lt;img src="https://www.example.com/images/dinosaur.jpg"&gt;</pre>
+
+<p>But this is pointless, as it just makes the browser do more work, looking up the IP address from the DNS server all over again, etc. You'll almost always keep the images for your website on the same server as your HTML.</p>
+
+<div class="warning">
+<p><strong>Warning:</strong> Most images are copyrighted. Do <strong>not</strong> display an image on your webpage unless:<br>
+ <br>
+ 1) you own the image<br>
+ 2) you have received explicit, written permission from the image's owner, or<br>
+ 3) you have ample proof that the image is, in fact, in the public domain.<br>
+ <br>
+ Copyright violations are illegal and unethical. In addition, <strong>never</strong> point your <code>src</code> attribute at an image hosted on someone else's website that you don't have permission to link to. This is called "hotlinking". Again, stealing someone's bandwidth is illegal. It also slows down your page, leaving you with no control over whether the image is removed or replaced with something embarrassing.</p>
+</div>
+
+<p>Our above code would give us the following result:</p>
+
+<p><img src="../../../../../../mdn.mozillademos.org/files/12700/basic-image.png" alt="A basic image of a dinosaur, embedded in a browser, with &quot;Images in HTML&quot; written above it" style="display: block; height: 700px; margin: 0px auto; width: 700px;"></p>
+
+<div class="note">
+<p><strong>Note</strong>: Elements like <a href="../../../Web/HTML/Element/img.html" title="The HTML <img> element embeds an image into the document."><code>&lt;img&gt;</code></a> and&nbsp;<a href="../../../Web/HTML/Element/video.html" title="The HTML Video element (<video>) embeds a media player which supports video playback into the document."><code>&lt;video&gt;</code></a> are sometimes referred to as <strong>replaced elements</strong>. This is because the element's content and size are defined by an external resource (like an image or video file), not by the contents of the element itself.</p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong>: You can find the finished example from this section <a rel="noopener" href="../../../../../../mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html" class="external">running on Github</a> (see the <a rel="noopener" href="https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html" class="external">source code</a> too.)</p>
+</div>
+
+<h3 id="Alternative_text">Alternative text</h3>
+
+<p>The next attribute we'll look at is <code>alt</code>. Its value is supposed to be a textual description of the image, for use in situations where the image cannot be seen/displayed. For example, our above code could be modified like so:</p>
+
+<pre class="brush: html">&lt;img src="images/dinosaur.jpg"
+     alt="The head and torso of a dinosaur skeleton;
+          it has a large head with long sharp teeth"&gt;</pre>
+
+<p>The easiest way to test your <code>alt</code> text is to purposely misspell your filename. If for example our image name was spelled&nbsp;<code>dinosooooor.jpg</code>, the browser wouldn't display the image, and display the alt text instead:</p>
+
+<p><img src="../../../../../../mdn.mozillademos.org/files/12702/alt-text.png" alt="The Images in HTML title, but this time the dinosaur image is not displayed, and alt text is in its place." style="display: block; height: 700px; margin: 0px auto; width: 700px;"></p>
+
+<p>So, why would you ever see or need alt text? It can come in handy for a number of reasons:</p>
+
+<ul>
+ <li>The user is visually impaired, and using a <a rel="noopener" href="https://en.wikipedia.org/wiki/Screen_reader" class="external">screen reader</a> to read the web out to them. In fact, having alt text available to describe images is useful to most users.</li>
+ <li>As described above, you might have spelled the file or path name wrong.</li>
+ <li>The browser doesn't support the image type. Some people still use text-only browsers, such as <a rel="noopener" href="https://en.wikipedia.org/wiki/Lynx_(web_browser)" class="external">Lynx</a>, which alternatively displays the alt text of images.</li>
+ <li>You may want to provide text for search engines to utilize. For example, search engines can match alt text with search queries.</li>
+ <li>Users have turned off images to reduce data transfer volume and distractions. This is especially common on mobile phones, and in countries where bandwidth is limited and expensive.</li>
+</ul>
+
+<p>What exactly should you write inside your <code>alt</code> attribute? It depends on <em>why </em>the image is there in the first place. In other words, what you lose if your image doesn't show up:</p>
+
+<ul>
+ <li><strong>Decoration. </strong>You should use&nbsp;<a href="#CSS_background_images">CSS background images</a> for decorative images, but if you must use HTML,&nbsp;add a blank <code>alt=""</code>. If the image isn't part of the content, a screen reader shouldn't waste time reading it.</li>
+ <li><strong>Content. </strong>If your image provides significant information, provide the same information in a <em>brief </em><code>alt</code> text – or even better, in the main text which everybody can see. Don't write redundant <code>alt</code> text. How annoying would it be for a sighted user if all paragraphs were written twice in the main content? If the image is described adequately by the main text body, you can just use <code>alt=""</code>.</li>
+ <li><strong>Link.</strong> If you put an image inside <a href="../../../Web/HTML/Element/a.html" title="The HTML <a> element (or anchor element) creates a hyperlink to other web pages, files, locations within the same page, email addresses, or any other URL."><code>&lt;a&gt;</code></a> tags, to turn an image into a link, you still must provide <a href="../Introduction_to_HTML/Creating_hyperlinks.html#Use_clear_link_wording">accessible link text</a>. In such cases you may, either, write it inside the same <code>&lt;a&gt;</code> element, or inside the image's <code>alt</code> attribute&nbsp;– whichever works best in your case.</li>
+ <li><strong>Text.</strong> You should not put your text into images. If your main heading needs a drop shadow, for example, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow">use CSS</a> for that rather than putting the text into an image. However, If you <em>really can't avoid doing this</em>, you should supply the text inside the <code>alt</code> attribute.</li>
+</ul>
+
+<p>Essentially, the key is to deliver a usable experience, even when the images can't be seen. This ensures all users are not missing any of the content. Try turning off images in your browser and see how things look. You'll soon realize how helpful alt text is if the image cannot be seen.</p>
+
+<div class="note">
+<p><strong>Note</strong>: For more information, see our guide to <a href="../../Accessibility/HTML.html#Text_alternatives">Text Alternatives</a>.</p>
+</div>
+
+<h3 id="Width_and_height">Width and height</h3>
+
+<p>You can use the <code>width</code> and <code>height</code> attributes to specify the width and height of your image. You can find your image's width and height in a number of ways. For example on the Mac you can use <kbd>Cmd</kbd> + <kbd>I</kbd> to get the info display up for the image file. Returning to our example, we could do this:</p>
+
+<pre class="brush: html">&lt;img src="images/dinosaur.jpg"
+     alt="The head and torso of a dinosaur skeleton;
+          it has a large head with long sharp teeth"
+     width="400"
+     height="341"&gt;</pre>
+
+<p>This doesn't result in much difference to the display, under normal circumstances. But if the image isn't being displayed, for example, the user has just navigated to the page, and the image hasn't yet loaded, you'll notice the browser is leaving a space for the image to appear in:</p>
+
+<p><img src="../../../../../../mdn.mozillademos.org/files/12706/alt-text-with-width-height.png" alt="The Images in HTML title, with dinosaur alt text, displayed inside a large box that results from width and height settings" style="display: block; height: 700px; margin: 0px auto; width: 700px;"></p>
+
+<p>This is a good thing to do, resulting in the page loading quicker and more smoothly.</p>
+
+<p>However, you shouldn't alter the size of your images using HTML attributes. If you set the image size too big, you'll end up with images that look grainy, fuzzy, or too small, and wasting bandwidth downloading an image that is not fitting the user's needs. The image may also end up looking distorted, if you don't maintain the correct <a rel="noopener" href="https://en.wikipedia.org/wiki/Aspect_ratio_(image)" class="external">aspect ratio</a>. You should use an image editor to put your image at the correct size before putting it on your webpage.</p>
+
+<div class="note">
+<p><strong>Note</strong>: If you do need to alter an image's size, you should use <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">CSS</a> instead.</p>
+</div>
+
+<h3 id="Image_titles">Image titles</h3>
+
+<p>As <a href="../Introduction_to_HTML/Creating_hyperlinks.html#Adding_supporting_information_with_%3Ctitle%3E">with links</a>, you can also add <code>title</code> attributes to images, to provide further supporting information if needed. In our example, we could do this:</p>
+
+<pre class="brush: html">&lt;img src="images/dinosaur.jpg"
+     alt="The head and torso of a dinosaur skeleton;
+          it has a large head with long sharp teeth"
+     width="400"
+     height="341"
+     title="A T-Rex on display in the Manchester University Museum"&gt;</pre>
+
+<p>This gives us a tooltip on mouse hover, just like link titles:</p>
+
+<p><img src="../../../../../../mdn.mozillademos.org/files/12708/image-with-title.png" alt="The dinosaur image, with a tooltip title on top of it that reads A T-Rex on display at the Manchester University Museum " style="display: block; height: 341px; margin: 0px auto; width: 400px;"></p>
+
+<p>However, this does not come recommended — <code>title</code> has a number of accessibility problems, mainly based around the fact that screen reader support is very unpredictable and most browsers won't show it unless you are hovering with a mouse (so e.g. no access to keyboard users). If you are interested in more information about this, read <a rel="noopener" href="https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/" class="external">The Trials and Tribulations of the Title Attribute</a> by Scott O'Hara.</p>
+
+<p>It is better to include such supporting information in the main article text, rather than attached to the image.</p>
+
+<h3 id="Active_learning_embedding_an_image">Active learning: embedding an image</h3>
+
+<p>It is now your turn to play! This active learning section will have you up and running with a simple embedding exercise. You are provided with a basic <a href="../../../Web/HTML/Element/img.html" title="The HTML <img> element embeds an image into the document."><code>&lt;img&gt;</code></a> tag; we'd like you to embed the image located at the following URL:</p>
+
+<p>https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg</p>
+
+<p>Earlier we said to never hotlink to images on other servers, but this is just for learning purposes, so we'll let you off this one time.</p>
+
+<p>We would also like you to:</p>
+
+<ul>
+ <li>Add some alt text, and check that it works by misspelling the image URL.</li>
+ <li>Set the image's correct <code>width</code> and <code>height</code> (hint; it is 200px wide and 171px high), then experiment with other values to see what the effect is.</li>
+ <li>Set a <code>title</code> on the image.</li>
+</ul>
+
+<p>If you make a mistake, you can always reset it using the <em>Reset</em> button. If you get really stuck, press the <em>Show solution</em> button to see an answer:</p>
+
+<div class="hidden">
+<h6 id="Playable_code">Playable code</h6>
+
+<p>&nbsp;</p>
+
+<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
+
+&lt;div class="output" style="min-height: 50px;"&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;Editable code&lt;/h2&gt;
+&lt;p class="a11y-label"&gt;Press Esc to move focus away from the code area (Tab inserts a tab character).&lt;/p&gt;
+
+&lt;textarea id="code" class="input" style="min-height: 100px; width: 95%"&gt;
+&lt;img&gt;
+&lt;/textarea&gt;
+
+&lt;div class="playable-buttons"&gt;
+  &lt;input id="reset" type="button" value="Reset"&gt;
+  &lt;input id="solution" type="button" value="Show solution"&gt;
+&lt;/div&gt;</pre>
+
+<p>&nbsp;</p>
+
+<pre class="brush: css">html {
+  font-family: sans-serif;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+.a11y-label {
+  margin: 0;
+  text-align: right;
+  font-size: 0.7rem;
+  width: 98%;
+}
+
+body {
+  margin: 10px;
+  background: #f5f9fa;
+}</pre>
+
+<p>&nbsp;</p>
+
+<pre class="brush: js">var textarea = document.getElementById('code');
+var reset = document.getElementById('reset');
+var solution = document.getElementById('solution');
+var output = document.querySelector('.output');
+var code = textarea.value;
+var userEntry = textarea.value;
+
+function updateCode() {
+  output.innerHTML = textarea.value;
+}
+
+reset.addEventListener('click', function() {
+  textarea.value = code;
+  userEntry = textarea.value;
+  solutionEntry = htmlSolution;
+  solution.value = 'Show solution';
+  updateCode();
+});
+
+solution.addEventListener('click', function() {
+  if(solution.value === 'Show solution') {
+    textarea.value = solutionEntry;
+    solution.value = 'Hide solution';
+  } else {
+    textarea.value = userEntry;
+    solution.value = 'Show solution';
+  }
+  updateCode();
+});
+
+var htmlSolution = '&lt;img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n width="200"\n height="171"\n title="A T-Rex on display in the Manchester University Museum"&gt;';
+var solutionEntry = htmlSolution;
+
+textarea.addEventListener('input', updateCode);
+window.addEventListener('load', updateCode);
+
+// stop tab key tabbing out of textarea and
+// make it write a tab at the caret position instead
+
+textarea.onkeydown = function(e){
+  if (e.keyCode === 9) {
+    e.preventDefault();
+    insertAtCaret('\t');
+  }
+
+  if (e.keyCode === 27) {
+    textarea.blur();
+  }
+};
+
+function insertAtCaret(text) {
+  var scrollPos = textarea.scrollTop;
+  var caretPos = textarea.selectionStart;
+
+  var front = (textarea.value).substring(0, caretPos);
+  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  textarea.value = front + text + back;
+  caretPos = caretPos + text.length;
+  textarea.selectionStart = caretPos;
+  textarea.selectionEnd = caretPos;
+  textarea.focus();
+  textarea.scrollTop = scrollPos;
+}
+
+// Update the saved userCode every time the user updates the text area code
+
+textarea.onkeyup = function(){
+  // We only want to save the state when the user code is being shown,
+  // not the solution, so that solution is not saved over the user code
+  if(solution.value === 'Show solution') {
+    userEntry = textarea.value;
+  } else {
+    solutionEntry = textarea.value;
+  }
+
+  updateCode();
+};</pre>
+
+<p>&nbsp;</p>
+</div>
+
+<p><iframe src="../../../../../../mdn.mozillademos.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML%24samples/Playable_code389f.html?revision=1395042" height="350" width="700" id="frame_Playable_code" class="live-sample-frame hide-codepen-jsfiddle" frameborder="0"></iframe></p>
+
+<h2 id="Annotating_images_with_figures_and_figure_captions">Annotating images with figures and figure captions</h2>
+
+<p>Speaking of captions, there are a number of ways that you could add a caption to go with your image. For example, there would be nothing to stop you doing this:</p>
+
+<pre class="brush: html">&lt;div class="figure"&gt;
+  &lt;img src="images/dinosaur.jpg"
+       alt="The head and torso of a dinosaur skeleton;
+            it has a large head with long sharp teeth"
+       width="400"
+       height="341"&gt;
+
+  &lt;p&gt;A T-Rex on display in the Manchester University Museum.&lt;/p&gt;
+&lt;/div&gt;</pre>
+
+<p>This is ok. It contains the content you need, and is nicely stylable using CSS. But there is a problem here: there is nothing that semantically links the image to its caption, which can cause problems for screen readers. For example, when you have 50 images and captions, which caption goes with which image?</p>
+
+<p>A better solution, is to use the HTML5 <a href="../../../Web/HTML/Element/figure.html" title="The HTML <figure> element represents self-contained content, frequently with a caption (<figcaption>), and is typically referenced as a single unit."><code>&lt;figure&gt;</code></a> and <a href="../../../Web/HTML/Element/figcaption.html" title="The HTML <figcaption> element represents a caption or a legend associated with a figure or an illustration described by the rest of the data of the <figure> element which is its immediate ancestor."><code>&lt;figcaption&gt;</code></a> elements. These are created for exactly this purpose: to provide a semantic container for figures, and clearly link the figure to the caption. Our above example could be rewritten like this:</p>
+
+<pre>&lt;figure&gt;
+  &lt;img src="images/dinosaur.jpg"
+       alt="The head and torso of a dinosaur skeleton;
+            it has a large head with long sharp teeth"
+       width="400"
+       height="341"&gt;
+
+  &lt;figcaption&gt;A T-Rex on display in the Manchester University Museum.&lt;/figcaption&gt;
+&lt;/figure&gt;</pre>
+
+<p>The <a href="../../../Web/HTML/Element/figcaption.html" title="The HTML <figcaption> element represents a caption or a legend associated with a figure or an illustration described by the rest of the data of the <figure> element which is its immediate ancestor."><code>&lt;figcaption&gt;</code></a> element tells browsers, and assistive technology that the caption describes the other content of the <a href="../../../Web/HTML/Element/figure.html" title="The HTML <figure> element represents self-contained content, frequently with a caption (<figcaption>), and is typically referenced as a single unit."><code>&lt;figure&gt;</code></a> element.</p>
+
+<div class="note">
+<p><strong>Note</strong>: From an accessibility viewpoint, captions and <code><a href="../../../Web/HTML/Element/img.html#attr-alt">alt</a></code> text have distinct roles. Captions benefit even people who can see the image, whereas&nbsp;<code><a href="../../../Web/HTML/Element/img.html#attr-alt">alt</a></code> text provides the same functionality as an absent image. Therefore, captions and <code>alt</code> text shouldn't just say the same thing, because they both appear when the image is gone. Try turning images off in your browser and see how it looks.</p>
+</div>
+
+<p>A figure doesn't have to be an image. It is an independent unit of content that:</p>
+
+<ul>
+ <li>Expresses your meaning in a compact, easy-to-grasp way.</li>
+ <li>Could go in several places in the page's linear flow.</li>
+ <li>Provides essential information supporting the main text.</li>
+</ul>
+
+<p>A figure could be several images, a code snippet, audio, video, equations, a table, or something else.</p>
+
+<h3 id="Active_learning_creating_a_figure">Active learning: creating a figure</h3>
+
+<p>In this active learning section, we'd like you to take the finished code from the previous active learning section, and turn it into a figure:</p>
+
+<ul>
+ <li>Wrap it in a <a href="../../../Web/HTML/Element/figure.html" title="The HTML <figure> element represents self-contained content, frequently with a caption (<figcaption>), and is typically referenced as a single unit."><code>&lt;figure&gt;</code></a> element.</li>
+ <li>Copy the text out of the <code>title</code> attribute, remove the <code>title</code> attribute, and put the text inside a <a href="../../../Web/HTML/Element/figcaption.html" title="The HTML <figcaption> element represents a caption or a legend associated with a figure or an illustration described by the rest of the data of the <figure> element which is its immediate ancestor."><code>&lt;figcaption&gt;</code></a> element below the image.</li>
+</ul>
+
+<p>If you make a mistake, you can always reset it using the <em>Reset</em> button. If you get really stuck, press the <em>Show solution</em> button to see an answer:</p>
+
+<div class="hidden">
+<h6 id="Playable_code_2">Playable code 2</h6>
+
+<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
+
+&lt;div class="output" style="min-height: 50px;"&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;Editable code&lt;/h2&gt;
+&lt;p class="a11y-label"&gt;Press Esc to move focus away from the code area (Tab inserts a tab character).&lt;/p&gt;
+
+&lt;textarea id="code" class="input" style="min-height: 100px; width: 95%"&gt;
+&lt;/textarea&gt;
+
+&lt;div class="playable-buttons"&gt;
+  &lt;input id="reset" type="button" value="Reset"&gt;
+  &lt;input id="solution" type="button" value="Show solution"&gt;
+&lt;/div&gt;</pre>
+
+<p>&nbsp;</p>
+
+<pre class="brush: css">html {
+  font-family: sans-serif;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+.a11y-label {
+  margin: 0;
+  text-align: right;
+  font-size: 0.7rem;
+  width: 98%;
+}
+
+body {
+  margin: 10px;
+  background: #f5f9fa;
+}</pre>
+
+<p>&nbsp;</p>
+
+<pre class="brush: js">var textarea = document.getElementById('code');
+var reset = document.getElementById('reset');
+var solution = document.getElementById('solution');
+var output = document.querySelector('.output');
+var code = textarea.value;
+var userEntry = textarea.value;
+
+function updateCode() {
+  output.innerHTML = textarea.value;
+}
+
+reset.addEventListener('click', function() {
+  textarea.value = code;
+  userEntry = textarea.value;
+  solutionEntry = htmlSolution;
+  solution.value = 'Show solution';
+  updateCode();
+});
+
+solution.addEventListener('click', function() {
+  if(solution.value === 'Show solution') {
+    textarea.value = solutionEntry;
+    solution.value = 'Hide solution';
+  } else {
+    textarea.value = userEntry;
+    solution.value = 'Show solution';
+  }
+  updateCode();
+});
+
+var htmlSolution = '&lt;figure&gt;\n &lt;img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n width="200"\n height="171"&gt;\n &lt;figcaption&gt;A T-Rex on display in the Manchester University Museum&lt;/figcaption&gt;\n&lt;/figure&gt;';
+var solutionEntry = htmlSolution;
+
+textarea.addEventListener('input', updateCode);
+window.addEventListener('load', updateCode);
+
+// stop tab key tabbing out of textarea and
+// make it write a tab at the caret position instead
+
+textarea.onkeydown = function(e){
+  if (e.keyCode === 9) {
+    e.preventDefault();
+    insertAtCaret('\t');
+  }
+
+  if (e.keyCode === 27) {
+    textarea.blur();
+  }
+};
+
+function insertAtCaret(text) {
+  var scrollPos = textarea.scrollTop;
+  var caretPos = textarea.selectionStart;
+
+  var front = (textarea.value).substring(0, caretPos);
+  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  textarea.value = front + text + back;
+  caretPos = caretPos + text.length;
+  textarea.selectionStart = caretPos;
+  textarea.selectionEnd = caretPos;
+  textarea.focus();
+  textarea.scrollTop = scrollPos;
+}
+
+// Update the saved userCode every time the user updates the text area code
+
+textarea.onkeyup = function(){
+  // We only want to save the state when the user code is being shown,
+  // not the solution, so that solution is not saved over the user code
+  if(solution.value === 'Show solution') {
+    userEntry = textarea.value;
+  } else {
+    solutionEntry = textarea.value;
+  }
+
+  updateCode();
+};</pre>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+</div>
+
+<p><iframe src="../../../../../../mdn.mozillademos.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML%24samples/Playable_code_2389f.html?revision=1395042" height="350" width="700" id="frame_Playable_code_2" class="live-sample-frame hide-codepen-jsfiddle" frameborder="0"></iframe></p>
+
+<h2 id="CSS_background_images">CSS background images</h2>
+
+<p>You can also use CSS to embed images into webpages (and JavaScript, but that's another story entirely). The CSS <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-image" title="The background-image CSS property sets one or more&nbsp;background images on an element."><code>background-image</code></a> property, and the other <code>background-*</code> properties, are used to control background image placement. For example, to place a background image on every paragraph on a page, you could do this:</p>
+
+<pre class="brush: css">p {
+  background-image: url("images/dinosaur.jpg");
+}</pre>
+
+<p>The resulting embedded image, is arguably easier to position and control than HTML images. So why bother with HTML images? As hinted to above, CSS background images are for decoration only. If you just want to add something pretty to your page to enhance the visuals, this is fine. Though, such images have no semantic meaning at all. They can't have any text equivalents, are invisible to screen readers, etc. This is HTML images time to shine!</p>
+
+<p>Summing up: if an image has meaning, in terms of your content, you should use an HTML image. If an image is purely decoration, you should use CSS background images.</p>
+
+<div class="note">
+<p><strong>Note</strong>: You'll learn a lot more about <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes/Backgrounds">CSS background images</a> in our <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">CSS</a> topic.</p>
+</div>
+
+<p>That's all for now. We have covered images and captions in detail. In the next article we'll move it up a gear, looking at how to use HTML to embed video and audio in web pages.</p>
+
+<p></p><div class="prevnext">
+    <div><a href="../Multimedia_and_embedding.html" style="float: left; width: 60%; text-align: left;"><span style="display: inline-block; background: #eaeff2; border-radius: 4px; box-shadow: inset 0 -1px #bbbfc2; color: #4d4353; padding: 0.3em 0.8em;"><i class="icon-arrow-up"></i> Overview: Multimedia and embedding</span></a><a href="Video_and_audio_content.html" style="width: 20%; float: right; text-align: right;"><span style="display: inline-block; background: #eaeff2; border-radius: 4px; box-shadow: inset 0 -1px #bbbfc2; color: #4d4353; padding: 0.3em 0.8em;"> Next  <i class="icon-arrow-right"></i></span></a></div>
+    <p>&nbsp;</p>
+</div><p></p>
+
+<h2 id="In_this_module">In this module</h2>
+
+<ul>
+ <li><a href="Images_in_HTML.html">Images in HTML</a></li>
+ <li><a href="Video_and_audio_content.html">Video and audio content</a></li>
+ <li><a href="Other_embedding_technologies.html">From &lt;object&gt; to &lt;iframe&gt; — other embedding technologies</a></li>
+ <li><a href="Adding_vector_graphics_to_the_Web.html">Adding vector graphics to the Web</a></li>
+ <li><a href="Responsive_images.html">Responsive images</a></li>
+ <li><a href="Mozilla_splash_page.html">Mozilla splash page</a></li>
+</ul>
+                  
+                
+              </article>
+
+              <!-- contributors -->
+              <div class="wiki-block contributors">
+                <h2 class="offscreen">Document Tags and Contributors</h2>
+                
+                
+  <div class="tag-attach-list contributors-sub">
+    <svg class="icon icon-tags" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M7 7c0-1.109-.891-2-2-2s-2 .891-2 2 .891 2 2 2 2-.891 2-2zm16.672 9c0 .531-.219 1.047-.578 1.406l-7.672 7.688c-.375.359-.891.578-1.422.578s-1.047-.219-1.406-.578L1.422 13.906C.625 13.125 0 11.609 0 10.5V4c0-1.094.906-2 2-2h6.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422zm6 0c0 .531-.219 1.047-.578 1.406l-7.672 7.688a2.08 2.08 0 0 1-1.422.578c-.812 0-1.219-.375-1.75-.922l7.344-7.344c.359-.359.578-.875.578-1.406s-.219-1.047-.578-1.422L14.422 3.422C13.625 2.625 12.11 2 11 2h3.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422z"></path>
+</svg>
+    <strong>Tags:</strong>&nbsp;
+    <ul class="tags tags-small">
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/alt text" rel="nofollow">alt text</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Article" rel="nofollow">Article</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Beginner" rel="nofollow">Beginner</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/captions" rel="nofollow">captions</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/figcaption" rel="nofollow">figcaption</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/figure" rel="nofollow">figure</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Guide" rel="nofollow">Guide</a></li>
+      
+        <li><a href="../../../tag/HTML.html" rel="nofollow">HTML</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Image" rel="nofollow">Image</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/img" rel="nofollow">img</a></li>
+      
+    </ul>
+  </div>
+
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-group" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M9.266 14a5.532 5.532 0 0 0-4.141 2H3.031C1.468 16 0 15.25 0 13.516 0 12.25-.047 8 1.937 8c.328 0 1.953 1.328 4.062 1.328.719 0 1.406-.125 2.078-.359A7.624 7.624 0 0 0 7.999 10c0 1.422.453 2.828 1.266 4zM26 23.953C26 26.484 24.328 28 21.828 28H8.172C5.672 28 4 26.484 4 23.953 4 20.422 4.828 15 9.406 15c.531 0 2.469 2.172 5.594 2.172S20.063 15 20.594 15C25.172 15 26 20.422 26 23.953zM10 4c0 2.203-1.797 4-4 4S2 6.203 2 4s1.797-4 4-4 4 1.797 4 4zm11 6c0 3.313-2.688 6-6 6s-6-2.688-6-6 2.688-6 6-6 6 2.688 6 6zm9 3.516C30 15.25 28.531 16 26.969 16h-2.094a5.532 5.532 0 0 0-4.141-2A7.066 7.066 0 0 0 22 10a7.6 7.6 0 0 0-.078-1.031A6.258 6.258 0 0 0 24 9.328C26.109 9.328 27.734 8 28.062 8c1.984 0 1.937 4.25 1.937 5.516zM28 4c0 2.203-1.797 4-4 4s-4-1.797-4-4 1.797-4 4-4 4 1.797 4 4z"></path>
+</svg>
+                    <strong>Contributors to this page:</strong>
+                    
+        <a href="https://developer.mozilla.org/en-US/profiles/adyavanapalli">adyavanapalli</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills">chrisdavidmills</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/bripmccann">bripmccann</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/sideshowbarker">sideshowbarker</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Ajimi">Ajimi</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/stephaniehobson">stephaniehobson</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Potch">Potch</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/andrealaw">andrealaw</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/tedmetaltns">tedmetaltns</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/david_ross">david_ross</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Looserof7">Looserof7</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/jamalss">jamalss</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/mishkadoma">mishkadoma</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/jswisher">jswisher</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/rishianand">rishianand</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/richardzacur">richardzacur</a>
+    
+                  </div>
+                
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-clock" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M14 8.5v7c0 .281-.219.5-.5.5h-5a.494.494 0 0 1-.5-.5v-1c0-.281.219-.5.5-.5H12V8.5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zm6.5 5.5c0-4.688-3.813-8.5-8.5-8.5S3.5 9.313 3.5 14s3.813 8.5 8.5 8.5 8.5-3.813 8.5-8.5zm3.5 0c0 6.625-5.375 12-12 12S0 20.625 0 14 5.375 2 12 2s12 5.375 12 12z"></path>
+</svg>
+                    <strong>Last updated by:</strong>
+                    <a href="https://developer.mozilla.org/en-US/profiles/adyavanapalli">adyavanapalli</a>,
+                    <time datetime="2018-07-11T04:33:04.834335-07:00">Jul 11, 2018, 4:33:04 AM</time>
+                  </div>
+                
+              </div>
+            </div>
+
+            
+              <!-- quick links and approvals strip -->
+              <div id="wiki-left" class="column-strip wiki-column">
+
+                <!-- crumbs -->
+                
+  
+    <nav class="crumbs" role="navigation">
+      <ol typeof="BreadcrumbList" vocab="https://schema.org/" aria-label="breadcrumbs">
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn" property="item" typeof="WebPage">
+              <span property="name">Learn web development</span>
+            </a>
+            <meta property="position" content="1">
+          </li>
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="../../HTML.html" property="item" typeof="WebPage">
+              <span property="name">Learning HTML: Guides and tutorials</span>
+            </a>
+            <meta property="position" content="2">
+          </li>
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="../Multimedia_and_embedding.html" property="item" typeof="WebPage">
+              <span property="name">Multimedia and embedding</span>
+            </a>
+            <meta property="position" content="3">
+          </li>
+        
+        <li property="itemListElement" typeof="ListItem" class="crumb">
+          <span property="name">Images in HTML</span>
+        </li>
+      </ol>
+    </nav>
+  
+
+                
+                  <!-- quick links -->
+                  
+  <div class="quick-links" id="quick-links">
+    <div class="quick-links-head">Related Topics</div>
+    
+
+<ol>
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web"><strong>Complete beginners start here!</strong></a></li>
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web">Getting started with the Web</a>
+    <ol>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web">Getting started with the Web overview</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software">Installing basic software</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">What will your website look like?</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">Dealing with files</a></li>
+      <li><a href="../../Getting_started_with_the_web/HTML_basics.html">HTML basics</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics">CSS basics</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics">JavaScript basics</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website">Publishing your website</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works">How the Web works</a></li>
+    </ol>
+  </li>
+  <li data-default-state="open"><a href="../../HTML.html"><strong>HTML — Structuring the Web</strong></a></li>
+  <li data-default-state="closed"><a href="../Introduction_to_HTML.html">Introduction to HTML</a>
+    <ol>
+      <li><a href="../Introduction_to_HTML.html">Introduction to HTML overview</a></li>
+      <li><a href="../Introduction_to_HTML/Getting_started.html">Getting started with HTML</a></li>
+      <li><a href="../Introduction_to_HTML/The_head_metadata_in_HTML.html">What's in the head? Metadata in HTML</a></li>
+      <li><a href="../Introduction_to_HTML/HTML_text_fundamentals.html">HTML text fundamentals</a></li>
+      <li><a href="../Introduction_to_HTML/Creating_hyperlinks.html">Creating hyperlinks</a></li>
+      <li><a href="../Introduction_to_HTML/Advanced_text_formatting.html">Advanced text formatting</a></li>
+      <li><a href="../Introduction_to_HTML/Document_and_website_structure.html">Document and website structure</a></li>
+      <li><a href="../Introduction_to_HTML/Debugging_HTML.html">Debugging HTML</a></li>
+      <li><a href="../Introduction_to_HTML/Marking_up_a_letter.html">Assessment: Marking up a letter</a></li>
+      <li><a href="../Introduction_to_HTML/Structuring_a_page_of_content.html">Assessment: Structuring a page of content</a></li>
+    </ol>
+  </li>
+  <li data-default-state="open"><a href="../Multimedia_and_embedding.html">Multimedia and embedding</a>
+    <ol>
+      <li><a href="../Multimedia_and_embedding.html">Multimedia and embedding overview</a></li>
+      <li><a href="Images_in_HTML.html">Images in HTML</a></li>
+      <li><a href="Video_and_audio_content.html">Video and audio content</a></li>
+      <li><a href="Other_embedding_technologies.html">From object to iframe — other embedding technologies</a></li>
+      <li><a href="Adding_vector_graphics_to_the_Web.html">Adding vector graphics to the Web</a></li>
+      <li><a href="Responsive_images.html">Responsive images</a></li>
+      <li><a href="Mozilla_splash_page.html">Assessment: Mozilla splash page</a></li>
+    </ol>
+  </li>
+  <li data-default-state="closed"><a href="../Tables.html">HTML tables</a>
+    <ol>
+      <li><a href="../Tables.html">HTML tables overview</a></li>
+      <li><a href="../Tables/Basics.html">HTML table basics</a></li>
+      <li><a href="../Tables/Advanced.html">HTML Table advanced features and accessibility</a></li>
+      <li><a href="../Tables/Structuring_planet_data.html">Assessment: Structuring planet data</a></li>
+    </ol>
+  </li>
+  <li data-default-state="closed"><a href="../Forms.html">HTML forms</a>
+    <ol>
+      <li><a href="../Forms.html">HTML forms overview</a></li>
+      <li><a href="../Forms/Your_first_HTML_form.html">Your first HTML form</a></li>
+      <li><a href="../Forms/How_to_structure_an_HTML_form.html">How to structure an HTML form</a></li>
+      <li><a href="../Forms/The_native_form_widgets.html">The native form widgets</a></li>
+      <li><a href="../Forms/Sending_and_retrieving_form_data.html">Sending form data</a></li>
+      <li><a href="../Forms/Form_validation.html">Form validation</a></li>
+      <li><a href="../Forms/How_to_build_custom_form_widgets.html">How to build custom form widgets</a></li>
+      <li><a href="../Forms/Sending_forms_through_JavaScript.html">Sending forms through JavaScript</a></li>
+      <li><a href="../Forms/HTML_forms_in_legacy_browsers.html">HTML forms in legacy browsers</a></li>
+      <li><a href="../Forms/Styling_HTML_forms.html">Styling HTML forms</a></li>
+      <li><a href="../Forms/Advanced_styling_for_HTML_forms.html">Advanced styling for HTML forms</a></li>
+      <li><a href="../Forms/Property_compatibility_table_for_form_widgets.html">Property compatibility table for form widgets</a></li>
+    </ol>
+  </li>
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS"><strong>CSS — Styling the Web</strong></a></li>
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a>
+    <ol>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS overview</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works">How CSS works</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Syntax">CSS syntax</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors">Selectors introduction</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Simple_selectors">Simple selectors</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Attribute_selectors">Attribute selectors</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Pseudo-classes_and_pseudo-elements">Pseudo-classes and pseudo-elements</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Combinators_and_multiple_selectors">Combinators and multiple selectors</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units">CSS values and units</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance">Cascade and inheritance</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model">The box model</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS">Debugging CSS</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension">Assessment: Fundamental CSS comprehension</a></li>
+    </ol>
+  </li>
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text">Styling text</a>
+    <ol>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text">Styling text overview</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals">Fundamental text and font styling</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_lists">Styling lists</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_links">Styling links</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Web_fonts">Web fonts</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage">Assessment: Typesetting a community school homepage</a></li>
+    </ol>
+  </li>
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes">Styling boxes</a>
+    <ol>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes">Styling boxes overview</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes/Box_model_recap">Box model recap</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes/Backgrounds">Backgrounds</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes/Borders">Borders</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes/Styling_tables">Styling tables</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes/Advanced_box_effects">Advanced box effects</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper">Assessment: Creating fancy letterheaded paper</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes/A_cool_looking_box">Assessment: A cool-looking box</a></li>
+    </ol>
+  </li>
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout">CSS layout</a>
+    <ol>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout">CSS layout overview</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Introduction">Introduction</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats">Floats</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning">Positioning</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Practical_positioning_examples">Practical positioning examples</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids">Grids</a></li>
+    </ol>
+  </li>
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript"><strong>JavaScript — Dynamic client-side scripting</strong></a></li>
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps">JavaScript first steps</a>
+    <ol>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps">JavaScript first steps overview</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript">What is JavaScript?</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash">A first splash into JavaScript</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong">What went wrong? Troubleshooting JavaScript</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables">Storing the information you need — Variables</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Math">Basic in JavaScript — Numbers and operators</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Strings">Handling text — Strings in JavaScript</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods">Useful string methods</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Arrays">Arrays</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator">Assessment: Silly story generator</a></li>
+    </ol>
+  </li>
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks">JavaScript building blocks</a>
+    <ol>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks">JavaScript building blocks overview</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals">Making decisions in your code — Conditionals</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code">Looping code</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions">Functions — Reusable blocks of code</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function">Build your own function</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Return_values">Function return values</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery">Assessment: Image gallery</a></li>
+    </ol>
+  </li>
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects">Introducing JavaScript objects</a>
+    <ol>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects">Introducing JavaScript objects overview</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics">Object basics</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS">Object-oriented JavaScript for beginners</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes">Object prototypes</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Inheritance">Inheritance in JavaScript</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON">Working with JSON data</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_building_practise">Object building practise</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features">Assessment: Adding features to our bouncing balls demo</a></li>
+    </ol>
+  </li>
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs">Client-side web APIs</a>
+    <ol>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs">Client-side web APIs</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">Introduction to web APIs</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">Manipulating documents</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">Fetching data from the server</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs">Third party APIs</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics">Drawing graphics</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs">Video and audio APIs</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage">Client-side storage</a></li>
+    </ol>
+  </li>
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility"><strong>Accessibility — Make the web usable by everyone</strong></a></li>
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility">Accessibility guides</a>
+    <ol>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility">Accessibility overview</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility">What is accessibility?</a></li>
+      <li><a href="../../Accessibility/HTML.html">HTML: A good basis for accessibility</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/CSS_and_JavaScript">CSS and JavaScript accessibility best practices</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA basics</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/Multimedia">Accessible multimedia</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/Mobile">Mobile accessibility</a></li>
+    </ol>
+    </li><li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility">Accessibility assessment</a>
+    <ol>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/Accessibility_troubleshooting">Assessment: Accessibility troubleshooting</a></li>
+    </ol>
+  </li>
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing"><strong>Tools and testing</strong></a></li>
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing">Cross browser testing</a>
+    <ol>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing">Cross browser testing overview</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">Introduction to cross browser testing</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies">Strategies for carrying out testing</a></li>
+      <li><a href="../../Tools_and_testing/Cross_browser_testing/HTML_and_CSS.html">Handling common HTML and CSS problems</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript">Handling common JavaScript problems</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility">Handling common accessibility problems</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection">Implementing feature detection</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing">Introduction to automated testing</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment">Setting up your own test automation environment</a></li>
+    </ol>
+  </li>
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side"><strong>Server-side website programming</strong></a></li>
+
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps">First steps</a>
+    <ol>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps">First steps overview</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Introduction">Introduction to the server-side</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview">Client-Server overview</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Web_frameworks">Server-side web frameworks</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security">Website security</a></li>
+    </ol>
+  </li>
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django">Django web framework (Python)</a>
+    <ol>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django">Django web framework (Python) overview</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Introduction">Introduction</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/development_environment">Setting up a development environment</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Tutorial: The Local Library website</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/skeleton_website">Tutorial Part 2: Creating a skeleton website</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Models">Tutorial Part 3: Using models</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Admin_site">Tutorial Part 4: Django admin site</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Home_page">Tutorial Part 5: Creating our home page</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Generic_views">Tutorial Part 6: Generic list and detail views</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Sessions">Tutorial Part 7: Sessions framework</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Authentication">Tutorial Part 8: User authentication and permissions</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms">Tutorial Part 9: Working with forms</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing">Tutorial Part 10: Testing a Django web application</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial Part 11: Deploying Django to production</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/web_application_security">Web application security</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/django_assessment_blog">Assessment: DIY mini blog</a></li>
+    </ol>
+  </li>
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs">Express Web Framework (node.js/JavaScript)</a>
+    <ol>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs">Express Web Framework (Node.js/JavaScript) overview</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction">Express/Node introduction</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment">Setting up a Node (Express) development environment</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">Express tutorial: The Local Library website</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">Express Tutorial Part 2: Creating a skeleton website</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">Express Tutorial Part 3: Using a database (with Mongoose)</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes">Express Tutorial Part 4: Routes and controllers</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: Working with forms</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/deployment">Express Tutorial Part 7: Deploying to production</a></li>
+    </ol>
+  </li>
+  <li><a href="#"><strong>Further resources</strong></a></li>
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/Other_learning_material">Advanced learning material</a>
+    <ol>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/WebGL">WebGL: Graphics processing</a></li>
+    </ol>
+  </li>
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions">Common questions</a>
+    <ol>
+      <li><a href="../Howto.html">HTML questions</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Howto">CSS questions</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Howto">JavaScript questions</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions#How_the_Web_works">How the Web works</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions#Tools_and_setup">Tools and setup</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions#Design_and_accessibility">Design and accessibility</a></li>
+    </ol>
+  </li>
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/How_to_contribute">How to contribute</a></li>
+</ol>
+
+
+  </div>
+                
+
+                <!-- approvals -->
+                
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+    
+      <div class="newsletter-box">
+        <div class="newsletter">
+    <form id="newsletterForm" class="newsletter-form nodisable" name="newsletter-form" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <div class="newsletter-head">
+            <h2 class="newsletter-teaser">Learn the best of web development</h2>
+            <p class="newsletter-description">Get the latest and greatest from MDN delivered straight to your inbox.</p>
+            
+        </div>
+
+        <div class="newsletter-fields">
+            <input type="hidden" id="fmt" name="fmt" value="H">
+            <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+            <div id="newsletterErrors" class="newsletter-errors"></div>
+
+            <div id="newsletterEmail" class="form-group newsletter-group-email">
+                <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+                <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+            </div>
+
+            <div id="newsletterPrivacy" class="form-group form-group-agree newsletter-group-privacy hidden">
+                <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+                <label for="newsletterPrivacyInput">
+                I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+                </label>
+            </div>
+            <div id="newsletterSubmit" class="newsletter-group-submit">
+                <button id="newsletter-submit" type="submit" class="button neutral newsletter-submit">
+                    Sign up now<svg class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg" width="23" height="28" viewBox="0 0 23 28" aria-hidden="true">
+    <path d="M23 15a2.01 2.01 0 0 1-.578 1.422L12.25 26.594c-.375.359-.891.578-1.422.578s-1.031-.219-1.406-.578L8.25 25.422c-.375-.375-.594-.891-.594-1.422s.219-1.047.594-1.422L12.828 18h-11C.703 18 0 17.062 0 16v-2c0-1.062.703-2 1.828-2h11L8.25 7.406a1.96 1.96 0 0 1 0-2.812l1.172-1.172c.375-.375.875-.594 1.406-.594s1.047.219 1.422.594l10.172 10.172c.375.359.578.875.578 1.406z"></path>
+</svg>
+                </button>
+            </div>
+        </div>
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden">
+        <span>Hide Newsletter Sign-up</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+</div>
+      </div>
+    
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML$edit" label="Edit page"></menuitem>
+    <menuitem data-action="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML$history" label="View page history"></menuitem>
+  </menu>
+
+      </div>
+  </main>
+  <!-- Footer -->
+    <footer id="nav-footer" class="nav-footer"><div class="center"><a href="http://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Images in HTML</a> by <a href="http://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML$history">Mozilla Contributors</a> is licensed under <a href="http://creativecommons.org/licenses/by-sa/2.5/" class="external external-icon">CC-BY-SA 2.5</a>.</div></footer> 
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script async="" type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script src="../../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../../static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><!--[endif]---->
+
+    
+    <script src="../../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../../static/build/js/wiki.b26a4c181df3.js" charset="utf-8" id="wikiscript"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../static/build/js/newsletter.a85c5c2892e5.js" charset="utf-8"></script>
+  
+
+
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 22:51:30 GMT -->
+</body></html>

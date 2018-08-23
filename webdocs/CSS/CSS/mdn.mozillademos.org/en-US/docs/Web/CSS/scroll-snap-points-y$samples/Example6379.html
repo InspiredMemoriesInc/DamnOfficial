@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/scroll-snap-points-y$samples/Example?revision=1325193 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:52:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            #container {
+  height: 200px;
+  width: 220px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-snap-points-y: repeat(200px);
+  scroll-snap-type: mandatory;
+  font-size: 0;
+}
+
+#container > div {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  line-height: 200px;
+  text-align: center;
+  font-size: 100px;
+}
+
+#container > div:nth-child(even) {
+  background-color: #87EA87;
+}
+
+#container > div:nth-child(odd) {
+  background-color: #87CCEA;
+}
+        </style>
+        
+        <title>scroll-snap-points-y</title>
+    </head>
+    <body>
+        
+            <div id="container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+        
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/scroll-snap-points-y$samples/Example?revision=1325193 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:52:04 GMT -->
+</html>

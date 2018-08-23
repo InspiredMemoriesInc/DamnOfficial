@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/SVG/Attribute/pointer-events$samples/topExample?revision=1402248 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 10:41:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            html,body,svg { height:100% }
+        </style>
+        
+        <title>pointer-events</title>
+    </head>
+    <body>
+        
+            <svg viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg">
+  <!--
+  The circle will always intercept the mouse event.
+  To change the color of the rect underneath you have
+  to click outside the circle
+  -->
+  <rect x="0" y="0" height="10" width="10" fill="black" />
+  <circle cx="5" cy="5" r="4" fill="white"
+          pointer-events="visiblePoint" />
+
+  <!--
+  The circle below will never catch a mouse event.
+  The rect underneath will change color whether you
+  are clicking on the circle or the rect itself
+  -->
+  <rect x="10" y="0" height="10" width="10" fill="black" />
+  <circle cx="15" cy="5" r="4" fill="white"
+          pointer-events="none" />
+</svg>
+        
+        
+            <script>
+                window.addEventListener('mouseup', (e) => {
+  // Let's pick a random color between #000000 and #FFFFFF
+  const color = Math.round(Math.random() * 0xFFFFFF)
+
+  // Let's format the color to fit CSS requirements
+  const fill = '#' + color.toString(16).padStart(6,'0')
+
+  // Let's apply our color in the
+  // element we actually clicked on
+  e.target.style.fill = fill
+})
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/SVG/Attribute/pointer-events$samples/topExample?revision=1402248 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 10:41:09 GMT -->
+</html>

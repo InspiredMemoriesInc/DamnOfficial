@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/fr/docs/Web/HTML/Element/abbr$samples/Définir_une_abréviation?revision=1393464 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:18:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <title>&lt;abbr&gt;</title>
+    </head>
+    <body>
+        
+            <p><dfn id="html"><abbr title="HyperText Markup Language">HTML</abbr>
+</dfn> est un langage de balise qui permet de créer la structure et d'organiser
+la sémantique d'une page web.</p>
+
+<p>Une <dfn id="spec">Spécification</dfn>
+(<abbr title="Specification">spec</abbr>) est un document qui décrit, de façon
+détaillée comme une technologie ou une API fonctionne et comment l'utiliser.</p>
+        
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/fr/docs/Web/HTML/Element/abbr$samples/Définir_une_abréviation?revision=1393464 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:18:04 GMT -->
+</html>

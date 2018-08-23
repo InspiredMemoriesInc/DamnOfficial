@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/SVGCircleElement$samples/Example?revision=1375619 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 08:35:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <title>SVGCircleElement</title>
+    </head>
+    <body>
+        
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="50" fill="gold" id="circle"
+      onclick="clickCircle();"/> 
+</svg>
+
+        
+        
+            <script>
+                function clickCircle() {
+  var circle = document.getElementById("circle");
+  // Randomly determine if the circle radius will increase or decrease
+  var change = Math.random() > 0.5 ? 10 : -10;
+  circle.setAttribute("r", circle.r.baseVal.value + change);
+}
+
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/SVGCircleElement$samples/Example?revision=1375619 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 08:35:44 GMT -->
+</html>

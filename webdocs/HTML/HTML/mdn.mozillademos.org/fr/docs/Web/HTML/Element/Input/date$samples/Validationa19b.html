@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/fr/docs/Web/HTML/Element/Input/date$samples/Validation?revision=1393760 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:18:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            div {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+label {
+  display: inline-block;
+  width: 300px;
+}
+
+input:invalid+span:after {
+  content: '✖';
+  padding-left: 5px;
+}
+
+input:valid+span:after {
+  content: '✓';
+  padding-left: 5px;
+}
+        </style>
+        
+        <title>&lt;input type=&#34;date&#34;&gt;</title>
+    </head>
+    <body>
+        
+            <form>
+  <div>
+    <label for="party">Sélectionner la meilleure date (entre le premier et le 20 avril) :</label>
+    <input type="date" id="party" name="party" min="2017-04-01" max="2017-04-20" required>
+    <span class="validity"></span>
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+        
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/fr/docs/Web/HTML/Element/Input/date$samples/Validation?revision=1393760 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:18:39 GMT -->
+</html>
