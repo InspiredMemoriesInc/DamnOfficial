@@ -1,0 +1,189 @@
+    .entry-meta {
+        font-size: 13px;
+        line-height: 16px;
+        font-family: $meta_font_family;
+
+        letter-spacing: normal;
+
+        color: $skin_meta_text_color;
+
+        strong {
+            font-weight: 400;
+        }
+
+        a {
+            color: $skin_important_text_color;
+        }
+    }
+
+    .entry-meta-m {
+        .entry-views {
+            vertical-align: middle;
+
+            &:before {
+                font-size: 32px;
+                line-height: 32px;
+            }
+        }
+
+        .entry-views-popular {
+            &:before {
+                content: "\e015";
+
+                color: #ff577b;
+            }
+
+            strong {
+                color: #ff577b;
+            }
+        }
+
+        .entry-views-hot {
+            &:before {
+                content: "\e01c";
+
+                color: #ff0036;
+            }
+
+            strong {
+                color: #ff0036;
+            }
+        }
+
+        .entry-views-trending {
+            &:before {
+                content: "\e00e";
+                content: "\e030";
+
+                color: #bf0029;
+            }
+
+            strong {
+                color: #bf0029;
+            }
+        }
+
+        .entry-comments-link a:before {
+            font-size: 32px;
+            line-height: 32px;
+        }
+    }
+
+
+
+    .entry-meta-wrap {
+        display: block;
+
+        &:after {
+            display: table;
+            clear: both;
+            content: "";
+        }
+
+        .entry-date {
+            @if ( 'bunchy' != $stack ) {
+                display: block;
+            }
+        }
+    }
+
+
+    .entry-meta-stats {
+        display: inline-block;
+        clear: both;
+        position: relative;
+        z-index: 6;
+
+        margin-bottom: 0.75rem;
+        //padding: side-values( 3px 10px 3px 10px );
+        padding: side-values( 3px 10px 3px 0 );
+
+        font-size: 13px;
+        line-height: 15px;
+    }
+
+    @if ( 'bottom' == $badge_position ) {
+        .entry-flags + .entry-body {
+            .entry-meta-stats {
+                padding-#{$left}: 10px;
+            }
+        }
+    }
+
+
+
+
+    .entry-meta-byline {
+        margin: 10px 0;
+
+        &:after {
+            clear: both;
+            display: table;
+            content: "";
+        }
+    }
+
+
+    .entry-meta-m {
+        margin-bottom: 0.75rem;
+
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 18px;
+
+        /* Clearfix */
+        &:after {
+            display: table;
+            clear: both;
+            content: "";
+        }
+
+        strong {
+            @if ( 'hardcore' == $stack ) {
+                font-family: "Rajdhani", "Roboto", sans-serif;
+                font-weight: 700;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+            } @else {
+                font-weight: 600;
+            }
+        }
+
+        .entry-date {
+            font-size: 13px;
+            white-space: nowrap;
+        }
+
+        .entry-meta-wrap {
+            //float: #{$left};
+
+            margin-#{$right}: 10px;
+            margin-bottom: 0.75rem;
+        }
+    }
+
+    @media only screen and ( min-width: 481px ) {
+        .entry-meta-m {
+            .entry-meta-wrap {
+                float: #{$left};
+            }
+
+            .entry-meta-wrap + .entry-meta-wrap {
+                float: #{$right};
+                margin-#{$left}: 10px;
+                margin-#{$right}: 0;
+            }
+        }
+    }
+
+    .entry-header{
+        .entry-meta-bunchy{
+
+            .entry-author,
+            .entry-date,
+            .entry-categories {
+                display:inline-block;
+                float:none;
+            }
+        }
+    }

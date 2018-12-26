@@ -1,0 +1,475 @@
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clear {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+    *zoom: 1;    
+}
+
+//sectioning
+.section-full { padding: 150px 0; }
+.section      { padding: 75px 0; }
+.top-half     { padding-top: 75px; }
+.top-full     { padding-top: 150px; }
+.bottom-half  { padding-bottom: 75px;}
+.bottom-full  { padding-bottom: 150px;}
+.relative     { position: relative;}
+.montserrat   { font-family: $montserrat;}
+.block        { display: block;}
+.inline       { display: inline-block;}
+.radius       { border-radius: 3px;}
+.w100         { width: 100%;}
+.danger       { color: #ff4951;}
+.ov-hidden    { overflow: hidden;}
+.z-index-1    {z-index: 1}
+.z-index-2    {z-index: 2}
+
+// margin top
+.mt-10       { margin-top: 10px;}
+.mt-15       { margin-top: 15px;}
+.mt-20       { margin-top: 20px;}
+.mt-25       { margin-top: 25px;}
+.mt-30       { margin-top: 30px;}
+.mt-35       { margin-top: 35px;}
+.mt-40       { margin-top: 40px;}
+.mt-50       { margin-top: 50px;}
+.mt-60       { margin-top: 60px;}
+.mt-70       { margin-top: 70px;}
+.mt-80       { margin-top: 80px;}
+.mt-90       { margin-top: 90px;}
+.mt-100       { margin-top: 100px;}
+// margin-bottom
+.mb-0        { margin-bottom: 0px;}
+.mb-5        { margin-bottom: 5px;}
+.mb-10       { margin-bottom: 10px;}
+.mb-15       { margin-bottom: 15px;}
+.mb-20       { margin-bottom: 20px;}
+.mb-25       { margin-bottom: 25px;}
+.mb-30       { margin-bottom: 30px;}
+.mb-40       { margin-bottom: 40px;}
+.mb-50       { margin-bottom: 50px;}
+.mb-60       { margin-bottom: 60px;}
+.mb-70       { margin-bottom: 70px;}
+.mb-80       { margin-bottom: 80px;}
+.mb-90       { margin-bottom: 90px;}
+.mb-100       { margin-bottom: 100px;}
+// margin left
+.ml-5        { margin-left: 5px;}
+.ml-10       { margin-left: 10px;}
+.ml-15       { margin-left: 15px;}
+.ml-20       { margin-left: 20px;}
+.ml-25       { margin-left: 25px;}
+// margin right
+.mr-5        { margin-right: 5px;}
+.mr-10       { margin-right: 10px;}
+.mr-15       { margin-right: 15px;}
+.mr-20       { margin-right: 20px;}
+.mr-25       { margin-right: 25px;}
+.mr-30       { margin-right: 30px;}
+
+// font-weight
+.fw-700 {
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+}
+.fw-500 {
+    font-weight: 500;
+}
+.fw-400 {
+    font-weight: 400;
+}
+.fw-300 {
+    font-weight: 300;
+}
+.fz-12 {
+    font-size: 12px;
+}
+
+// css flexible box
+.flex {
+    @include flexbox();
+}
+.inline-flex {
+    @include inline-flex();
+}
+.flex-middle {
+    @include align-items(center);
+}
+.flex-grow-1 {
+    @include flex-grow(1);
+}
+.flex-flow-rw {
+    @include flex-flow(row wrap);
+}
+.space-between {
+    @include justify-content(space-between);
+}
+.flex-center {
+    @include justify-content(center);
+}
+.flex-top {
+    @include align-self (flex-start);
+}
+.flex-bottom {
+    @include align-self (flex-end);
+}
+.flex-left {
+    @include justify-content(flex-start);
+}
+.flex-right {
+    @include justify-content(flex-end);
+}
+
+//buttons
+.btn {
+    border-radius: 3px;
+    border: 0 none;
+    font-family: $montserrat;
+    @include transition(all 0.3s ease 0s);
+}
+
+.btn-theme {
+    background-color: $primary-color;
+    border: 1px solid transparent;
+    color: #fff;
+    line-height: 50px;
+    padding: 0 50px;
+    &:hover, &:focus {
+        background-color: transparent;
+        border-color: $primary-color;
+        color: $primary-color;
+    }
+}
+
+.btn-white {
+    background-color: #fff;
+    border: 1px solid transparent;
+    color: $primary-color;
+    &.btn-border:hover {
+        border-color: transparent;
+    }
+    &:hover, &:focus {
+        background-color: $primary-color;
+        border-color: #fff;
+        color: #fff;
+    }
+}
+
+.btn-mid {
+    font-size: 12px;
+    height: 33px;
+    line-height: 32px;
+    padding: 0 30px;
+}
+
+.btn-round {
+    border-radius: 50px;
+}
+
+.btn-round-left {
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+.btn-border {
+    border: 1px solid rgba($primary-color, 0.1);
+}
+
+// row without gutter
+.no-gutter {
+    margin-left: 0;
+    margin-right: 0;
+    & > [class^="col-"] {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+//colors
+.white-bg {
+    background-color: #fff;
+}
+.gray-bg {
+    background-color: $gray-bg;
+}
+.primary-bg {
+    background-color: $primary-color;
+}
+.default-shadow {
+    box-shadow: $default-shadow;
+}
+.title-color {
+    color: $title-color;
+}
+.text-light {
+    color: #fff;
+}
+.text-light-54 {
+    color: rgba(#fff, 0.54);
+}
+.text-dark-54 {
+    color: rgba($primary-color, 0.54);
+}
+.text-link {
+    color: rgba($primary-color, 0.54);
+    a {
+       color: rgba($primary-color, 0.54); 
+    }
+    &:hover, &:focus, a:hover, a:focus {
+        color: $text-color;
+    }
+}
+.link-light, .link-light:hover, .link-light:focus {
+    color: #fff;
+}
+.title-link, .title-link:hover {
+    color: $primary-color;
+}
+.link-underline:hover {
+    text-decoration: underline;
+}
+.animated-link {
+    i {
+        @include transition (all 0.3s ease 0s);
+    }
+    &:hover {
+        i {@include transform(translateX(5px));}
+    }
+}
+.transition {
+    @include transition (all 0.3s ease 0s);
+}
+
+.parallax-bg {
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.absolute-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    @include transform(translate(-50%, -50%));
+}
+
+.section-title {
+    .title-inner {
+        &::before,
+        &::after {
+            background-color: rgba($primary-color, 0.3);
+            content: "";
+            height: 70px;
+            position: absolute;
+            top: 50%;
+            width: 1px;
+            @include transform(translateY(-50%));
+        }
+
+        &::before {
+            left: 73px;
+        }
+
+        &::after {
+            right: 73px;
+        }   
+    }
+    .last {
+        display: block;
+        &::before,
+        &::after {
+            background-color: rgba($primary-color, 0.3);
+            content: "";
+            height: 50px;
+            position: absolute;
+            top: 50%;
+            width: 1px;
+            @include transform(translateY(-50%));
+        }
+
+        &::before {
+            left: 87px;
+        }
+
+        &::after {
+            right: 87px;
+        }
+    }
+    h2 {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1;
+        span {
+            display: block;
+        }
+        &::before,
+        &::after {
+            background-color: rgba($primary-color, 0.3);
+            content: "";
+            height: 100px;
+            position: absolute;
+            top: 50%;
+            width: 1px;
+            @include transform(translateY(-50%));
+        }
+
+        &::before {
+            left: 58px;
+        }
+
+        &::after {
+            right: 58px;
+        }
+    }
+    &.style-2 {
+        .title-inner {
+            &::before,
+            &::after {
+                height: 30px;
+            }
+            &::before {
+                left: -20px;
+            }
+            &::after {
+                right: -20px;
+            }            
+        }
+        h2 {
+            &::before,
+            &::after {
+                height: 50px;
+            }
+            &::before {
+                left: -10px;
+            }
+            &::after {
+                right: -10px;
+            }
+        }
+        span {
+            display: inline-block;
+            padding-left: 30px;
+            padding-right: 30px;
+            &::before,
+            &::after {
+                background-color: rgba(#000, 0.3);
+                content: '';
+                height: 80px;
+                position: absolute;
+                top: 50%;
+                width: 1px;
+                @include transform(translateY(-50%));
+            }
+            &::before {
+                left: 0;
+            }
+            &::after {
+                right: 0;
+            }
+        }
+    }
+    &.light {
+        .title-inner, .last, h2, span {
+            &::before,
+            &::after {
+                background-color: rgba(#fff, 0.54);
+            }
+        }
+    }
+}
+
+// slider controls
+.bullet-one {
+    margin-bottom: 85px;
+    .owl-controls {
+        bottom: -90px;
+        left: 0;
+        position: absolute;
+        right: 0;
+    }
+    .owl-dot {
+        background-color: rgba($primary-color, 0.38);
+        border-radius: 10px;
+        display: inline-block;
+        height: 10px;
+        margin: 0 4px;
+        position: relative;
+        width: 10px;
+        z-index: 0;
+        @include transition (all 0.3s ease 0s);
+        &::before,
+        &::after {
+            background-color: #000;
+            border-radius: 10px;
+            content: "";
+            height: 10px;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 10px;
+            opacity: 0;
+            @include transition (all 0.3s ease 0s);
+        }
+        &::after {
+            background-color: #fff;
+            top: 3px;
+            z-index: -1;
+        }
+        &.active {
+            height: 31px;
+            &::before,
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+    &.center {
+        .owl-dots {
+            text-align: center;
+        }        
+    }
+    &.light {
+        .owl-dots {
+            text-align: center;
+        }
+        .owl-dot {
+            background-color: rgba(#fff, 0.38);
+            &::before {
+                background-color: #fff;
+            }
+            &::after {
+                background-color: $primary-color;
+            }
+        }
+    }
+}
+
+
+
+

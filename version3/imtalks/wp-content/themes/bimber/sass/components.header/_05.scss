@@ -1,0 +1,109 @@
+// Stretched. Primary nav centered between and logo an drops.
+
+.g1-preheader-05 {
+    > .g1-row-inner {
+        max-width: none;
+    }
+}
+
+.g1-header-05 {
+    > .g1-row-inner {
+        max-width: none;
+
+        > .g1-column {
+            @include display(flex);
+            @include flex-wrap(wrap);
+            @include align-items(center);
+        }
+    }
+
+    .g1-primary-nav {
+        display: none;
+        float: #{$left};
+    }
+
+    .g1-helper {
+        @include flex(1 1 auto);
+    }
+
+    .snax-button,
+    .g1-drop {
+        display: none;
+        float: $right;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .snax-button {
+        margin-#{$left}: 20px;
+    }
+
+    .g1-drop-the-user,
+    .g1-drop-the-search {
+        display: block;
+    }
+
+    .g1-socials-items{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and ( max-width: 768px  ) {
+    .g1-header-05 {
+        .g1-drop-the-user + .g1-drop-the-search {
+            display: none;
+        }
+    }
+}
+
+@media only screen and ( min-width: 769px ) {
+    .g1-header-05 {
+        .snax-button,
+        .g1-drop {
+            display: block;
+        }
+    }
+}
+
+@media only screen and ( min-width: 1025px ) {
+    .g1-preheader-05 {
+        > .g1-row-inner {
+            > .g1-column {
+                padding-#{$left}: 30px;
+                padding-#{$right}: 30px;
+            }
+        }
+    }
+
+    .g1-header-05 {
+        > .g1-row-inner {
+            > .g1-column {
+                padding-#{$left}: 30px;
+                padding-#{$right}: 30px;
+            }
+        }
+
+        .g1-hamburger {
+            display: none;
+        }
+
+        .g1-id {
+            margin-#{$left}: 0;
+            margin-#{$right}: 20px;
+        }
+
+        .g1-primary-nav {
+            display: block;
+
+            position: absolute;
+            #{$left}: 0;
+            #{$right}: 0;
+            top: 50%;
+
+            @include translateY(-50%);
+
+            text-align: center;
+        }
+    }
+}

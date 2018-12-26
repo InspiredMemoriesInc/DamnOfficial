@@ -1,0 +1,13 @@
+.g1-header-hardcore {
+    .g1-id {
+        text-align: center;
+
+        float: none !important;
+        margin-#{$left}: auto !important;
+        margin-#{$right}: auto !important;
+    }
+
+    .g1-quick-nav {
+        float: none;
+    }
+}

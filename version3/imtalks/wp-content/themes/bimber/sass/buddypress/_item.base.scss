@@ -1,0 +1,100 @@
+#buddypress {
+    // Group or member header
+    #item-header {
+        padding-top: 1.5rem;
+        text-align: center;
+
+        background-color: #f2f2f2;
+    }
+
+    #item-header-content {
+        padding-top: 1.5rem;
+        //padding-bottom: 1.5rem;
+    }
+
+    // Group meta, like "Private Group active 1 month, 2 weeks ago"
+    #item-meta {
+    }
+
+    // Container for #group-admins and #group-mods
+    #item-actions {
+    }
+}
+
+
+
+@media only screen and ( min-width: $mobile_breakpoint + 1px ) {
+    #item-wrapper {
+        > .g1-row-inner {
+            max-width: 1182px;
+
+            &:after {
+                clear: both;
+                display: table;
+                content: "";
+            }
+        }
+    }
+
+    #item-header {
+        float: $left;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        order: -1;
+
+        padding-#{$left}: 30px;
+        padding-#{$right}: 30px;
+    }
+
+    #cover-image-container {
+        float: $right;
+    }
+
+    #item-header-content {
+        clear: $left;
+        float: $left;
+        padding-#{$left}: 30px;
+        padding-#{$right}: 30px;
+    }
+
+    #item-content {
+        //clear: $right;
+        //float: $right;
+        //display: block;
+        padding-top: 1.5rem;
+        padding-bottom: 3rem;
+        margin: 0 0 auto auto;
+    }
+
+    #item-wrapper.item-wrapper-with-cover-image {
+        > .g1-row-inner {
+            @include display(flex);
+            @include flex-wrap(wrap);
+            @include align-items(stretch);
+        }
+    }
+}
+
+.buddypress-home{
+    .g1-collection-items{
+        display:flex;
+        flex-wrap: wrap;
+    }
+    .g1-collection-item{
+        padding:15px;
+        display:flex;
+        flex-wrap: wrap;
+    }
+    .bimber-buddypress-home-item{
+        aside{
+            width:100%;
+        }
+        border:1px solid #e6e6e6;
+        padding:25px;
+        width:100%;
+        display:flex;
+    }
+}

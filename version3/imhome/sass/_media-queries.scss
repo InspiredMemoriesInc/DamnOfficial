@@ -1,0 +1,1306 @@
+/*============================================================
+    For 15 inch and larger
+==============================================================*/
+@media only screen and (min-width: 1367px) {
+	.site-header .container-fluid,
+	.site-footer .container-fluid {
+	  	padding-left: 100px;
+	  	padding-right: 100px;
+	}
+	.search-area {
+	  	left: 0;
+	  	right: 0;
+	}
+}
+
+/*============================================================
+	Macbook pro 13 inch
+==============================================================*/
+@media only screen and (min-width: 1151px) and (max-width: 1366px) {
+	.service-2 {
+	  	padding: 40px 20px 38px;
+	}
+	.team-desc .thumb img {
+	  	width: 35%;
+	}
+	.team-wrapper .site-footer {
+	  	bottom: 20px;
+	}
+}
+
+
+/*============================================================
+	For Small Desktop / tablet landscape
+==============================================================*/
+
+@media (min-width: 980px) and (max-width: 1150px) {
+	.site-header,
+	.site-footer {
+		.container-fluid {
+		  	padding-left: 50px;
+		  	padding-right: 50px;
+		}
+	}
+	.primary-nav > li > a,
+	.header-actions li a {
+	 	padding-left: 10px;
+	 	padding-right: 10px;
+	}
+	.toggle-header {
+	  	margin-left: 20px;
+	}
+	.banner-7 {
+		background-position: right bottom;
+		background-size: 60%;
+	}
+	.banner-slider-1 {
+		.container {
+	    	padding-left: 40px;
+	    }
+	    .slide-content {
+		    h2 {
+		    	font-size: 40px;
+		    	line-height: 48px;
+		    }
+		}
+	}
+	.quote-item {
+		blockquote,
+		.author-info {
+		 	padding-left: 23px;
+		 	padding-right: 23px;
+		}
+	}
+	.blog-post .desc {
+	  	padding: 25px;
+	}
+	.contact-inner h2 {
+	  	font-size: 40px;
+	}
+	.post-entry {
+		.summery > div {
+		    padding-left: 30px;
+		    padding-right: 30px;
+		}
+		h5 a {
+			margin-top: 0;
+		}
+	}
+	.woocommerce-thankyou-order-details li {
+	    padding: 0 30px;
+	}
+	.mp-portfolio img {
+	  	max-width: 50%;
+	}
+	.about-shape img {
+	    width: 67%;
+	}
+	.about-tab {
+	    top: 30px;
+	}
+	.about-shape img {
+	    width: 60%;
+	}
+	.service-wrapper {
+		.bg-overlay::before {
+		    background-size: 100%;
+		    bottom: 0;
+		}
+		.heading {
+	    	margin-top: 55%;
+	    }
+	}
+	.service-2 {
+	    margin-right: 0;
+	    padding: 10px 10px 10px 60px;
+	    .shade-text {
+	        font-size: 55px;
+	    }
+	}
+}
+
+/*============================================================
+    Ipad Portrait 1024px
+==============================================================*/
+
+@media only screen and (max-width: 1025px) {
+    .parallax-bg {
+        background-attachment: scroll !important;
+        background-position: center top !important;
+        background-size: cover !important;
+    }
+}
+
+/*============================================================
+	Tablet (Portrait) Design for a width of 768px
+==============================================================*/
+
+@media (min-width: 768px) and (max-width: 979px) {
+	.site-header,
+	.site-footer {
+		.container-fluid {
+			padding-left: 30px;
+		  	padding-right: 30px;
+		}
+	}
+
+	.disable-flex-sm {
+		@include flex-flow(row wrap);
+	}
+
+	ul.primary-nav {
+		background-color: #fff;
+		box-shadow: $default-shadow;
+		display: none;
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 100%;
+		li {
+			display: block;
+			a {
+				line-height: 35px;
+				padding-left: 30px;
+				padding-right: 30px;
+			}
+		}
+	}
+	.tp-header {
+		.primary-nav > li > a {
+			color: #000;
+			&::before {
+	  			background-color: #000;
+	  		}
+	  	}
+	  	.header-actions > li > a {
+	  	  	color: #000;
+	  	}
+	}
+	.primary-nav {
+		.sub-menu {
+			background-color: #fff;
+			display: none;
+		    position: relative;
+		    opacity: 1;
+		    padding: 0 45px;
+		    visibility: visible;
+			@include transform(scaleY(1));
+			@include transition(all 0s ease 0s);
+		    li a {
+		    	font-size: 12px;
+		    	padding-left: 45px;
+		    	padding-right: 45px;
+		    	color: $title-color;
+		    }
+		}
+	}
+	.is-sticky ul.primary-nav > li > a {
+	  	line-height: 35px;
+	}
+	.search-area {
+	  	left: 30px;
+	  	right: 30px;
+	  	.header-search {
+		  	left: 30px;
+		  	right: 30px;
+	  	}
+	}
+	
+	.banner-2 {
+		.banner-content {
+			img {
+	  			width: 100%;
+	  		}
+	  		h2 {
+	  			letter-spacing: 16px;
+	  		}
+	  	}
+	}
+	.banner-3 h2 {
+	  	font-size: 30px;
+	}
+	.banner-5 {
+		.flex {
+			display: block;
+			margin-top: 150px;
+		}
+		.media-desc {
+			padding: 60px;
+			position: relative;
+			right: 0;
+			top: auto;
+			@include transform (none);
+		}
+	}
+	.banner-7 {
+		background-attachment: scroll;
+		background-position: right center;
+		background-size: 50%;
+		h2 {
+		    font-size: 42px;
+		    line-height: 50px;
+		}
+	}
+	.banner-slider-1 {
+		.container {
+	    	padding-left: 40px;
+	    }
+	    .slide-content {
+		    h2 {
+		    	font-size: 40px;
+		    	line-height: 48px;
+		    }
+		}
+	}
+	.liberty-holder {
+		img {
+	    	width: 100%;
+	    	margin-left: auto;
+	    	margin-right: auto;
+	    }
+	}
+	.liberty-shape {
+	    margin-left: 24px;
+	}
+	.liberty-shape::before,
+	.liberty-shape::after,
+	.shape-inner::before,
+	.shape-inner::after {
+	    height: 295px;
+	    width: 295px;
+	}
+	.service-1 .desc {
+	  	padding: 15px;
+	}
+	.service-2 {
+	    margin: 300px 0 0 130px;
+	    padding: 10px 10px 10px 10px;
+	}
+	.team-member figcaption,
+	.hover-1 figcaption {
+	  	bottom: 20px;
+	  	left: 20px;
+	  	right: 20px;
+	}
+	.quote-item {
+		blockquote {
+		}
+	}
+	.btn-theme {
+	  	font-size: 12px;
+	  	line-height: 40px;
+	  	padding: 0 40px;
+	}
+	.client-logo {
+		margin-bottom: 30px;
+	}
+	.contact-inner {
+	  	padding: 50px 30px;
+	  	h2 {
+	  	    font-size: 35px;
+	  	    margin-bottom: 15px;
+	  	}
+	}
+
+	.map-section {
+		#gmap {
+			min-height: 350px;
+		}
+	}
+	.widget-area {
+	    margin-top: 80px;
+	}
+	.woocommerce-thankyou-order-details li {
+	    padding: 0 15px;
+	}
+	.cart-subtotal {
+		padding-left: 10px;
+		padding-right: 10px;
+		hr {
+		    margin-left: -10px;
+		    margin-right: -10px;
+		}
+	}
+	.mp-portfolio img {
+	  	max-width: 50%;
+	}
+	.about-tab {
+		top: 30px;
+		li:not(:last-child) {
+		    margin-right: 25px;
+		}
+	}
+	.service-wrapper .bg-overlay {
+	    width: 100%;
+	    height: 50%;
+	}
+}
+
+/*============================================================
+    Ipad Portrait 1024px
+==============================================================*/
+
+@media (min-width: 768px) {
+    .vertical-nav {
+    	display: block;
+    	height: 100%;
+    	opacity: 0;
+    	padding: 0;
+    	position: fixed;
+    	right: 0;
+    	top: 0;
+    	visibility: hidden;
+    	width: 50%;
+    	.primary-nav {
+    		background-color: transparent;
+    		box-shadow: none;
+    		display: block;
+    		left: 50%;
+    		padding: 0;
+    		position: absolute;
+    		top: 50%;
+    		width: auto;
+    		@include transition(all 0.3s ease 0s);
+    		@include transform(translate(-50%, -50%));
+    		& > li {
+    			display: block;
+    			opacity: 0;
+    			@include transition(all 0.3s ease 0.4s);
+    			@include transform(translateX(-40px));
+    			&:nth-child(2) {
+    				@include transition-delay(0.5s, 0.3s);
+    			}
+    			&:nth-child(3) {
+    				@include transition-delay(0.52s, 0.3s);
+    			}
+    			&:nth-child(4) {
+    				@include transition-delay(0.54s, 0.3s);
+    			}
+    			&:nth-child(5) {
+    				@include transition-delay(0.56s, 0.3s);
+    			}
+    			&:nth-child(6) {
+    				@include transition-delay(0.58s, 0.3s);
+    			}
+    			&:nth-child(7) {
+    				@include transition-delay(0.6s, 0.3s);
+    			}
+    			& > a {
+    				font-size: 24px;
+    				font-weight: 700;
+    				line-height: 48px;
+    			}
+    		}
+    	}
+    	&.active {
+    		opacity: 1;
+    		visibility: visible;
+    		.primary-nav {
+    			& > li {
+    				opacity: 1;
+    				@include transform(translateX(0px));
+    			}
+    		}
+    	}
+    }
+}
+
+/*============================================================
+	Mobile (Portrait) Design for a width of 320px
+==============================================================*/
+
+@media only screen and (max-width: 767px) {
+	.site-header,
+	.site-footer {
+		.container-fluid {
+			padding-left: 15px;
+		  	padding-right: 15px;
+		}
+	}
+	.menu-wrapper {
+	  	.primary-nav {
+			background-color: #fff;
+			box-shadow: $default-shadow;
+			left: 0;
+			position: absolute;
+			top: 100%;
+			width: 100%;
+			z-index: 10;
+	  	}
+	}
+	.tp-header .navbar-brand,
+	.navbar-brand img,
+	.toggle-header {
+	  	height: 65px;
+	}
+	.toggle-header {
+	  	position: relative;
+	  	z-index: 2;
+	}
+	.navbar-collapse {
+		.header-actions {
+			display: block;
+		}
+	}
+	.menu-wrapper > ul > li > a,
+	.toggle-header {
+	  	line-height: 65px;
+	}
+	.navbar-header {
+		padding-left: 15px;
+		padding-right: 15px;
+		&::before,
+		&::after {
+			content: none;
+		}
+	}
+	.navbar-collapse {
+		display: block;
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: -1px;
+		z-index: 1;
+	}
+	ul.primary-nav {
+		background-color: #fff;
+		display: none;
+		box-shadow: $default-shadow;
+		li {
+			display: block;
+			a {
+				line-height: 35px;
+				padding-left: 30px;
+				padding-right: 30px;
+			}
+		}
+	}
+	ul.header-actions {
+		text-align: right;
+		margin-right: 70px;
+		li {
+			a {
+				padding: 0 10px;
+				line-height: 65px;
+			}
+		}
+	}
+	.mini-cart {
+		position: relative;
+		&:hover {
+			.mini-cart-wrapper {
+				@include transform(scaleY(0));
+			}
+		}
+		&.active, &.active:hover {
+			.mini-cart-wrapper {
+				@include transform(scaleY(1));
+			}
+		}
+	}
+	.toggle-header {
+	  	margin-left: 20px;
+	}
+	.tp-header {
+		.primary-nav > li > a {
+			color: #000;
+			&::before {
+	  			background-color: #000;
+	  		}
+	  	}
+	  	.header-actions > li > a {
+	  	  	color: #000;
+	  	}
+	}
+	.primary-nav {
+		.sub-menu {
+			background-color: #fff;
+			display: none;
+		    position: relative;
+		    opacity: 1;
+		    padding: 0;
+		    visibility: visible;
+			@include transform(scaleY(1));
+			@include transition(all 0s ease 0s);
+		    li a {
+		    	font-size: 12px;
+		    	padding-left: 45px;
+		    	padding-right: 45px;
+		    	color: $title-color;
+		    }
+		}
+	}
+	.is-sticky {
+		ul.primary-nav > li > a {
+	  		line-height: 35px;
+	  	}
+	}
+	.mp-wrapper .mp-nav li a {
+	 	padding-left: 15px; 
+	 	padding-right: 15px;
+	}
+	.primary-nav {
+		&.style-2 {
+			background-color: transparent;
+			box-shadow: none;
+			& > li {
+				& > a {
+					background-color: rgba(#000, 0.85);
+					border-top: 1px solid rgba(255, 255, 255, 0.15);
+					color: #fff !important;
+					font-size: 10px;
+					height: 38px;
+					line-height: 38px;
+					padding: 0 20px;
+					&:before,
+					&:before {
+						content: none;
+					}
+				}
+			}
+		}
+	}
+	.search-area {
+	  	left: 0;
+	  	right: 0;
+	  	.header-search {
+		  	left: 15px;
+		  	right: 15px;
+	  	}
+	  	input {
+	  		font-size: 14px;
+	  	}
+	}
+	
+	.banner-1 .banner-content img {
+	  	width: 70%;
+	}
+	.banner-2 {
+		.banner-content {
+			img {
+	  			width: 100%;
+	  		}
+	  		h2 {
+	  			font-size: 20px;
+	  			letter-spacing: 13px;
+	  			line-height: 36px;
+	  		}
+	  	}
+	}
+	.banner-3 {
+		.row.flex {
+			@include align-content(center);
+			@include flex-wrap(wrap);
+		}
+		h2 {
+			font-size: 25px;
+			margin: 50px 0 15px;
+		}
+		.text-right {
+			text-align: left;
+		}
+	}
+	.banner-5 {
+		.flex {
+			display: block;
+			margin-top: 100px;
+		}
+		.media-desc {
+			padding: 25px;
+			position: relative;
+			right: 0;
+			top: auto;
+			@include transform (none);
+		}
+	}
+	.banner-7 {
+		background-attachment: scroll;
+		background-position: center bottom;
+		background-size: contain;
+		h2 {
+		    font-size: 42px;
+		    line-height: 50px;
+		}
+		.col-xs-12 {
+			margin-top: 150px;
+		    text-align: center;
+			@include align-self(flex-start);
+		}
+	}
+	.banner-slider-1 {
+		.container {
+	    	padding-left: 15px;
+	    }
+	    .slide-content h2 {
+	        font-size: 24px;
+	        line-height: 29px;
+	    }
+		h2, p, a {
+			color: #fff;
+		}
+	    .half-img-holder,
+	    .active .half-img-holder {
+	    	width: 100%;
+	    }
+	}
+	.banner-9 h2 {
+	    font-size: 40px;
+	    line-height: 60px;
+	}
+	.service-1 .desc {
+	  	padding: 15px;
+	}
+	.service-2 {
+	    margin: 300px 0 0 130px;
+	    padding: 10px 10px 10px 10px;
+	}
+
+	.isotope-filter {
+	  	min-height: auto;
+	  	li {
+	  		display: inline-block;
+	  		margin-right: 20px;
+	  		&:last-child {
+	  			margin-right: 0;
+	  		}
+	  	}
+	}
+
+	.team-member {
+		margin-bottom: 30px;
+	}
+
+	.team-member figcaption,
+	.hover-1 figcaption {
+	  	bottom: 30px;
+	  	left: 30px;
+	  	right: 30px;
+	}
+	
+	.quote-item {
+		blockquote {
+		  	padding: 34px 20px 35px;
+		}
+		.author-info {
+		  	padding-left: 20px;
+		  	padding-right: 20px;
+		}
+	}
+
+	.price-table.active {
+	  	margin: 30px 0;
+	  	@include transform (scale(1));
+	}
+	.btn-theme {
+	  	font-size: 12px;
+	  	line-height: 40px;
+	  	padding: 0 40px;
+	}
+
+	.client-logo {
+		margin-bottom: 30px;
+	}
+
+	.blog-post .desc {
+	  	padding: 20px;
+	}
+	.post-entry {
+		&.flex {
+	    	display: block;
+	    }
+	    .summery > div {
+	        padding: 30px 20px;
+	    }
+	    h5 a {
+	    	margin-top: 0;
+	    }
+	}
+
+	.post-pagination.single {
+		margin-top: 30px;
+	}
+
+	.disable-flex-xs {
+		@include flex-flow(row wrap);
+	}
+
+	.widget-area {
+	    margin-top: 80px;
+	}
+	.cta-inner {
+	  	display: block;
+	  	h2 {
+	  		font-size: 24px;
+	  		margin-bottom: 20px;
+	  	}
+	}
+
+	.contact-inner {
+	  	padding: 50px 30px;
+	  	& > .row {
+	  	  	display: block;
+	  	}
+	  	h2 {
+	  	  	font-size: 24px;
+	  	}
+	  	.contact-form {
+	  		margin-top: 30px;
+	  	}
+	}
+
+	.map-section {
+		#gmap {
+			min-height: 200px;
+		}
+	}
+
+	.client-item.flex {
+		display: block;
+		.text-right {
+			text-align: left;
+		}
+	}
+
+	.ph-inner,
+	.page-bc {
+	    @include flex-flow(row wrap);
+	}
+	.page-bc {
+		width: 100%;
+	}
+	.page-title {
+	    margin-bottom: 30px;
+	}
+	.pf-single {
+		.pf-image {
+			margin-bottom: 30px;
+		}
+	}
+
+	.woocommerce-thankyou-order-details {
+		display: block;
+		li + li {
+	    	padding-top: 15px;
+	    }
+	}
+	.table-1 tbody tr td,
+	.table-1 tfoot tr td,
+	.order-details .table-1 tfoot tr th,
+	.table-1 thead tr th {
+	    padding-left: 10px;
+	    padding-right: 10px;
+	}
+	.calculate-tax,
+	.coupon-box {
+	    margin-bottom: 50px;
+	}
+
+	.flex {
+		.desc {
+			h5 {
+				white-space: nowrap;
+			}
+		}
+	}
+
+	.cart-actions a:last-child {
+		margin-top: 15px;
+	}
+	.checkout-login-box {
+	    margin-bottom: 30px;
+	}
+	.woocommerce-info .login-form,
+	.woocommerce-info .checkout-coupon {
+	    padding-left: 20px;
+	    padding-right: 20px;
+	}
+	.payment-actions {
+		a {
+			padding-left: 28px;
+			padding-right: 28px;
+			margin: 0;
+		}
+	}
+	.mp-wrapper {
+		.bg-overlay {
+		  	height: 50%;
+		  	width: 100%;
+		}
+		.site-footer {
+	  		position: static;
+	  		margin-bottom: 30px;
+	  		.text-right {
+	  			text-align: left;
+	  		}
+		  	.custom-control-container {
+		  		margin-top: 20px;
+		  	}
+	  	}
+	}
+	.home-wrapper {
+	  	.fullscreen {
+	  		height: auto !important;
+	  	}
+	  	.left-content {
+	  	  	margin: 100px 0 80px;
+	  	  	h2 {
+	  	  	  	font-size: 24px;
+	  	  	  	line-height: 38px;
+	  	  	}
+	  	}
+	  	.right-content {
+	  	  	margin-bottom: 50px;
+	  	}
+	  	.bottom-nav.light {
+	  		a {
+	  			color: $text-color;
+	  		}
+	  	}
+	}
+	.service-2 {
+	  	padding: 40px 30px 38px;
+	}
+	
+	.mp-portfolio {
+		img {
+		  	margin-top: 60px;
+		  	max-width: 30%;
+		}
+		h3 {
+			font-size: 18px;
+			margin-bottom: 15px;
+		}
+	}
+	.about-wrapper {
+		.bg-overlay {
+			height: 38%;
+		}
+		.fullscreen {
+			height: auto !important;
+		}
+		.left-content {
+			margin-bottom: 100px;
+		}
+		.site-footer {
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+		.bottom-nav {
+			margin-bottom: 20px;
+		}
+	}
+	.about-tab {
+		left: 15px;
+		margin: 100px 0 40px;
+		position: relative;
+		top: auto;
+		z-index: auto;
+		li {
+		  	margin-right: 20px;
+		  	a {
+		  		color: #fff;
+		  	}
+		}
+		.active a {
+			border-bottom: 2px solid;
+			color: #fff;
+			padding-bottom: 2px;
+		}
+	}
+	.service-wrapper {
+		.fullscreen {
+			height: auto !important;
+		}
+		.service-2 {
+			margin-top: 160px;
+		}		
+	}
+	.team-wrapper {
+		.fullscreen {
+			height: auto !important;
+		}
+		.team-desc {
+		    margin-top: 140px;
+		    margin-bottom: 110px;
+		    img {
+		    	width: 50%;
+		    }
+		}
+		.bottom-nav {
+			margin-top: 30px;
+			li a {
+				color: $text-color;
+			}
+		}
+		.site-footer {
+			margin-bottom: 30px;
+		}
+	}
+	.blog-wrapper {
+		.thumb img {
+		  	display: block;
+		  	margin: 0px auto 0;
+		  	width: 40%;
+		}
+		.fullscreen,
+		.halfscreen {
+			height: auto !important;
+		}
+		.meta, h3 {
+			color: $text-color;
+		}
+		.meta {
+			margin-bottom: 0;
+		}
+		.site-footer {
+			margin-top: 50px;
+			margin-bottom: 30px;
+		}
+	}
+	.contact-wrapper {
+		.fullscreen {
+			height: auto !important;
+		}
+		.mp-contact {
+		  	margin: 100px 0 70px;
+		}
+		.contact-form {
+		  	margin-bottom: 50px;
+		  	margin-top: 50px;
+		}
+		.site-footer {
+			margin-bottom: 30px;
+		}
+	}
+	.bottom-nav.dark-xs li a {
+		color: $text-color;
+	}
+	.home-wrapper,
+	.about-wrapper,
+	.service-wrapper,
+	.team-wrapper ,
+	.blog-wrapper ,
+	.contact-wrapper {
+		.toggle-header.dark {
+			span {
+				background-color: #fff;
+				&::before, &::after {
+					background-color: #fff;
+				}
+			}
+		}
+		.is-sticky {
+			.toggle-header.dark {
+				span {
+					background-color: $text-color;
+					&::before, &::after {
+						background-color: $text-color;
+					}
+				}
+				&.active {
+					span {
+						background-color: transparent;
+					}
+				}
+			}
+		}
+	}
+	.mp-portfolio {
+		.thumb {
+	  		margin-top: 75px;
+	  	}
+		.desc {
+	  		margin-top: 50px;
+	  	}
+	}
+	.banner-3 {
+		.fullscreen {
+			height: auto !important;
+		}
+		.cocoen {
+		 	width: 50%;
+		 	margin: 100px auto 30px;
+		}
+		h2 {
+			font-size: 17px;
+			margin: 0px 0 15px;
+			position: relative;
+			text-align: center;
+		}
+		img {
+		  	display: block;
+		  	margin: 0 auto;
+		}
+		.col-xs-12 {
+			text-align: center;
+		}
+		.scroll-down {
+		    margin: 50px 0 0;
+		    position: relative;
+		}
+	}
+  	.service-wrapper {
+  		.heading {
+  	  		margin-bottom: 200px;
+  	  		margin-top: 130px;
+  	  	}
+  	  	.bg-overlay {
+  	  	  	height: 430px;
+  	  	}
+	  	.service-2 {
+	  		margin: 0;
+	  	}
+  	}
+  	.service-2 {
+  		padding: 40px 0px;
+  		.icon {
+  		  	font-size: 80px;
+  		  	margin-bottom: 50px;
+  		  	margin-left: 0;
+  		}
+  		.shade-text {
+  		  	bottom: 200px;
+  		  	font-size: 35px;
+  		  	left: 0;
+  		  	line-height: 40px;
+  		}
+  	}
+}
+
+
+@media only screen and (max-width: 320px) {
+	.mini-cart-wrapper {
+	  	max-width: 270px;
+	  	min-width: auto;
+	  	padding: 20px;
+	  	right: -46px;
+	}
+	.home-wrapper .bg-overlay {
+  		height: 43%;
+  	}
+  	.banner-7 {
+  		background-size: 50% auto;
+  		h2 {
+  	  		font-size: 30px;
+  	  	}
+  	  	p {
+  	  		font-size: 14px;
+  	  	}
+  	}
+  	.banner-slider-1 .container {
+  	  	min-height: 260px;
+  	}
+  	.banner-slider-1 .owl-nav {
+  	  	right: 0;
+  	}
+	.blog-wrapper {
+		.bg-overlay {
+			height: 45%;
+		}
+		.thumb {
+			margin: 100px 0;
+			img {
+		  		width: 30%;
+		  	}
+		}
+	}
+	.contact-wrapper .bg-overlay {
+	  	height: 45%;
+	}
+}
+
+@media only screen and (min-width: 321px) and (max-width: 360px) {
+	.mini-cart-wrapper {
+	  	right: -46px;
+	}
+	.home-wrapper .bg-overlay {
+  		height: 45%;
+  	}
+	.blog-wrapper {
+		.bg-overlay {
+			height: 46%;
+		}
+		.thumb {
+			margin: 100px 0;
+			img {
+		  		width: 30%;
+		  	}
+		}
+	}
+	.contact-wrapper .bg-overlay {
+	  	height: 45%;
+	}
+}
+
+@media only screen and (min-width: 361px) and (max-width: 480px) {
+	.home-wrapper .bg-overlay {
+  		height: 43%;
+  	}
+	.about-wrapper {
+		.bg-overlay {
+	  		height: 45%;
+	  	}
+	  	.left-content {
+	  		h2 {
+	  			margin-bottom: 10px;
+	  		}
+	  	}
+	}
+	.blog-wrapper {
+		.thumb {
+			margin: 100px 0;
+			img {
+		  		width: 30%;
+		  	}
+		}
+	}
+	.portfolio-wrapper {
+		.fullscreen {
+			height: auto !important;
+		}
+		.desc {
+			margin-top: 30px;
+		}
+	}
+	.service-wrapper {
+		.fullscreen {
+			height: auto !important;
+		}
+		.multi-carusel-2 {
+		    margin: 110px 0;
+		}
+	}
+	.contact-wrapper .bg-overlay {
+	  	height: 44%;
+	}
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+	.banner-6 img {
+	  	margin-top: 50px;
+	}
+	.team-wrapper {
+		& > [class^="col-"] {
+			text-align: center;
+		}
+		.team-member {
+			display: inline-block;
+			text-align: left;
+		}
+	}
+	.isotope-no-gutter {
+		& > [class^="col-"] {
+			text-align: center;
+		}
+		.portfolio {
+			display: inline-block;
+			text-align: left;
+		}
+	}
+	.blog-post-wrapper {
+		& > [class^="col-"] {
+			text-align: center;
+		}
+		.blog-post {
+			display: inline-block;
+			text-align: left;
+		}
+	}
+}
+
+@media only screen and (min-width: 481px) and (max-width: 568px) {
+	.home-wrapper .bg-overlay {
+  		height: 43%;
+  	}
+	.about-wrapper {
+		.bg-overlay {
+	  		height: 48%;
+	  	}
+	  	.left-content {
+	  		h2 {
+	  			margin-bottom: 10px;
+	  		}
+	  	}
+	}
+	.blog-wrapper {
+		.thumb {
+			margin: 100px 0;
+			img {
+		  		width: 30%;
+		  	}
+		}
+	}
+	.portfolio-wrapper {
+		.fullscreen {
+			height: auto !important;
+		}
+		.desc {
+			margin-top: 30px;
+		}
+	}
+	.service-wrapper {
+		.fullscreen {
+			height: auto !important;
+		}
+		.multi-carusel-2 {
+		    margin: 110px 0;
+		}
+	}
+	.contact-wrapper .bg-overlay {
+	  	height: 43%;
+	}
+}
+
+@media only screen and (min-width: 569px) and (max-width: 600px) {
+	.home-wrapper .bg-overlay {
+	  	height: 42%;
+	}
+	.about-wrapper {
+		.bg-overlay {
+	  		height: 48%;
+	  	}
+	  	.left-content {
+	  		h2 {
+	  			margin-bottom: 10px;
+	  		}
+	  	}
+	}
+	.blog-wrapper {
+		.thumb {
+			margin: 100px 0;
+			img {
+		  		width: 30%;
+		  	}
+		}
+	}
+	.contact-wrapper .bg-overlay {
+	  	height: 42%;
+	}
+}
+
+@media only screen and (min-width: 601px) and (max-width: 640px) {
+	.home-wrapper .bg-overlay {
+	  	height: 43%;
+	}
+	.about-wrapper {
+		.bg-overlay {
+	  		height: 48%;
+	  	}
+	  	.left-content {
+	  		h2 {
+	  			margin-bottom: 10px;
+	  		}
+	  	}
+	}
+	.blog-wrapper {
+		.thumb {
+			margin: 100px 0;
+			img {
+		  		width: 30%;
+		  	}
+		}
+	}
+	.contact-wrapper .bg-overlay {
+	  	height: 42%;
+	}
+}

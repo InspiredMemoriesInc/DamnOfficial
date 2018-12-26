@@ -1,266 +1,367 @@
-/**
- * main.js
- * http://www.codrops.com
- *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- * 
- * Copyright 2016, Codrops
- * http://www.codrops.com
- */
-;(function(window) {
+/*
 
-	'use strict';
+Script  : Main JS
+Version : 1.0
+Author  : Surjith S M
+URI     : http://themeforest.net/user/surjithctly
 
-	// Helper vars and functions.
-	function extend( a, b ) {
-		for( var key in b ) { 
-			if( b.hasOwnProperty( key ) ) {
-				a[key] = b[key];
-			}
-		}
-		return a;
-	}
+Copyright © All rights Reserved
+Surjith S M / @surjithctly
 
-	// from http://www.quirksmode.org/js/events_properties.html#position
-	function getMousePos(e) {
-		var posx = 0, posy = 0;
-		if (!e) var e = window.event;
-		if (e.pageX || e.pageY) 	{
-			posx = e.pageX;
-			posy = e.pageY;
-		}
-		else if (e.clientX || e.clientY) 	{
-			posx = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
-			posy = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
-		}
-		return { x : posx, y : posy }
-	}
+*/
 
-	/**
-	 * TiltFx obj.
-	 */
-	function TiltFx(el, options) {
-		this.DOM = {};
-		this.DOM.el = el;
-		this.options = extend({}, this.options);
-		extend(this.options, options);
-		this._init();
-	}
+$(function() {
 
-	TiltFx.prototype.options = {
-		movement: {
-			imgWrapper : {
-				translation : {x: 0, y: 0, z: 0},
-				rotation : {x: -5, y: 5, z: 0},
-				reverseAnimation : {
-					duration : 1200,
-					easing : 'easeOutElastic',
-					elasticity : 600
-				}
-			},
-			lines : {
-				translation : {x: 10, y: 10, z: [0,10]},
-				reverseAnimation : {
-					duration : 1000,
-					easing : 'easeOutExpo',
-					elasticity : 600
-				}
-			},
-			caption : {
-				translation : {x: 20, y: 20, z: 0},
-				rotation : {x: 0, y: 0, z: 0},
-				reverseAnimation : {
-					duration : 1500,
-					easing : 'easeOutElastic',
-					elasticity : 600
-				}
-			},
-			caption0 : {
-				translation : {x: 20, y: 20, z: 0},
-				rotation : {x: 0, y: 0, z: 0},
-				reverseAnimation : {
-					duration : 1500,
-					easing : 'easeOutElastic',
-					elasticity : 600
-				}
-			},
-			caption1 : {
-				translation : {x: 20, y: 20, z: 0},
-				rotation : {x: 0, y: 0, z: 0},
-				reverseAnimation : {
-					duration : 1500,
-					easing : 'easeOutElastic',
-					elasticity : 600
-				}
-			},
-			caption2 : {
-				translation : {x: 20, y: 20, z: 0},
-				rotation : {x: 0, y: 0, z: 0},
-				reverseAnimation : {
-					duration : 1500,
-					easing : 'easeOutElastic',
-					elasticity : 600
-				}
-			},
-			caption3 : {
-				translation : {x: 20, y: 20, z: 0},
-				rotation : {x: 0, y: 0, z: 0},
-				reverseAnimation : {
-					duration : 1500,
-					easing : 'easeOutElastic',
-					elasticity : 600
-				}
-			},
-			caption4 : {
-				translation : {x: 20, y: 20, z: 0},
-				rotation : {x: 0, y: 0, z: 0},
-				reverseAnimation : {
-					duration : 1500,
-					easing : 'easeOutElastic',
-					elasticity : 600
-				}
-			},
-			caption5 : {
-				translation : {x: 20, y: 20, z: 0},
-				rotation : {x: 0, y: 0, z: 0},
-				reverseAnimation : {
-					duration : 1500,
-					easing : 'easeOutElastic',
-					elasticity : 600
-				}
-			},
-			/*
-			overlay : {
-				translation : {x: 10, y: 10, z: [0,50]},
-				reverseAnimation : {
-					duration : 500,
-					easing : 'easeOutExpo'
-				}
-			},
-			*/
-			shine : {
-				translation : {x: 50, y: 50, z: 0},
-				reverseAnimation : {
-					duration : 1200,
-					easing : 'easeOutElastic',
-					elasticity: 600
-				}
-			}
-		}
-	};
+    "use strict";
 
-	/**
-	 * Init.
-	 */
-	TiltFx.prototype._init = function() {
-		this.DOM.animatable = {};
-		this.DOM.animatable.imgWrapper = this.DOM.el.querySelector('.tilter__figure');
-		this.DOM.animatable.lines = this.DOM.el.querySelector('.tilter__deco--lines');
-		this.DOM.animatable.caption = this.DOM.el.querySelector('.tilter__caption');
-		
-		var allCap = document.querySelectorAll('.tilter__caption');
-		for (var i = 0; i < allCap.length; i++) {
-			allCap[i];
-			this.DOM.animatable["caption"+i] = allCap[i];
-		}
+    /* ================================================
+       On Scroll Menu
+       ================================================ */
 
-		this.DOM.animatable.overlay = this.DOM.el.querySelector('.tilter__deco--overlay');
-		this.DOM.animatable.shine = this.DOM.el.querySelector('.tilter__deco--shine > div');
-		this._initEvents();
-	};
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 600) {
+            $('.js-reveal-menu').removeClass('reveal-menu-hidden').addClass('reveal-menu-visible');
+        } else {
+            $('.js-reveal-menu').removeClass('reveal-menu-visible').addClass('reveal-menu-hidden');
+        }
+    });
 
-	/**
-	 * Init/Bind events.
-	 */
-	TiltFx.prototype._initEvents = function() {
-		var self = this;
-		
-		this.mouseenterFn = function() {
-			for(var key in self.DOM.animatable) {
-				anime.remove(self.DOM.animatable[key]);
-			}
-		};
-		
-		this.mousemoveFn = function(ev) {
-			requestAnimationFrame(function() { self._layout(ev); });
-		};
-		
-		this.mouseleaveFn = function(ev) {
-			requestAnimationFrame(function() {
-				for(var key in self.DOM.animatable) {
-					if( self.options.movement[key] == undefined ) {continue;}
-					anime({
-						targets: self.DOM.animatable[key],
-						duration: self.options.movement[key].reverseAnimation != undefined ? self.options.movement[key].reverseAnimation.duration || 0 : 1,
-						easing: self.options.movement[key].reverseAnimation != undefined ? self.options.movement[key].reverseAnimation.easing || 'linear' : 'linear',
-						elasticity: self.options.movement[key].reverseAnimation != undefined ? self.options.movement[key].reverseAnimation.elasticity || null : null,
-						scaleX: 1,
-						scaleY: 1,
-						scaleZ: 1,
-						translateX: 0,
-						translateY: 0,
-						translateZ: 0,
-						rotateX: 0,
-						rotateY: 0,
-						rotateZ: 0
-					});
-				}
-			});
-		};
+    /* ================================================
+       Parallax Header
+       ================================================ */
 
-		this.DOM.el.addEventListener('mousemove', this.mousemoveFn);
-		this.DOM.el.addEventListener('mouseleave', this.mouseleaveFn);
-		this.DOM.el.addEventListener('mouseenter', this.mouseenterFn);
-	};
+    if ($('.parallax-bg').length) {
+        $('.parallax-bg').parallax({
+            speed: 0.20
+        });
+    }
 
-	TiltFx.prototype._layout = function(ev) {
-		// Mouse position relative to the document.
-		var mousepos = getMousePos(ev),
-			// Document scrolls.
-			docScrolls = {left : document.body.scrollLeft + document.documentElement.scrollLeft, top : document.body.scrollTop + document.documentElement.scrollTop},
-			bounds = this.DOM.el.getBoundingClientRect(),
-			// Mouse position relative to the main element (this.DOM.el).
-			relmousepos = { x : mousepos.x - bounds.left - docScrolls.left, y : mousepos.y - bounds.top - docScrolls.top };
+    /* ================================================
+       FLEX SLIDER
+       ================================================ */
 
-		// Movement settings for the animatable elements.
-		for(var key in this.DOM.animatable) {
-			if( this.DOM.animatable[key] == undefined || this.options.movement[key] == undefined ) {
-				continue;
-			}
-			var t = this.options.movement[key] != undefined ? this.options.movement[key].translation || {x:0,y:0,z:0} : {x:0,y:0,z:0},
-				r = this.options.movement[key] != undefined ? this.options.movement[key].rotation || {x:0,y:0,z:0} : {x:0,y:0,z:0},
-				setRange = function (obj) {
-					for(var k in obj) {
-						if( obj[k] == undefined ) {
-							obj[k] = [0,0];
-						}
-						else if( typeof obj[k] === 'number' ) {
-							obj[k] = [-1*obj[k],obj[k]];
-						}
-					}
-				};
+    if ($('.flexslider').length) {
+        $('.flexslider').flexslider({
+            animation: "slide",
+            useCSS: Modernizr.touch
+        });
+    }
 
-			setRange(t);
-			setRange(r);
-			
-			var transforms = {
-				translation : {
-					x: (t.x[1]-t.x[0])/bounds.width*relmousepos.x + t.x[0],
-					y: (t.y[1]-t.y[0])/bounds.height*relmousepos.y + t.y[0],
-					z: (t.z[1]-t.z[0])/bounds.height*relmousepos.y + t.z[0],
-				},
-				rotation : {
-					x: (r.x[1]-r.x[0])/bounds.height*relmousepos.y + r.x[0],
-					y: (r.y[1]-r.y[0])/bounds.width*relmousepos.x + r.y[0],
-					z: (r.z[1]-r.z[0])/bounds.width*relmousepos.x + r.z[0]
-				}
-			};
+    /* ================================================
+       Initialize Countdown
+       ================================================ */
 
-			this.DOM.animatable[key].style.WebkitTransform = this.DOM.animatable[key].style.transform = 'translateX(' + transforms.translation.x + 'px) translateY(' + transforms.translation.y + 'px) translateZ(' + transforms.translation.z + 'px) rotateX(' + transforms.rotation.x + 'deg) rotateY(' + transforms.rotation.y + 'deg) rotateZ(' + transforms.rotation.z + 'deg)';
-		}
-	};
+    /*Fetch Event Date From HTML. For Not tech Savvy Users */
 
-	window.TiltFx = TiltFx;
+    var get_date = $('#countdown').data('event-date');
 
-})(window);
+    if (get_date) {
+        $("#countdown").countdown({
+            date: get_date,
+            /*Change date and time in HTML data-event-date attribute */
+            format: "on"
+        });
+    }
+
+    /* ================================================
+       Initialize Tabs
+       ================================================ */
+
+    $('#schedule-tabs a').on("click",function(e) {
+        e.preventDefault()
+        $(this).tab('show')
+    });
+
+    /* ================================================
+       Stat Counter
+       ================================================ */
+
+    $('#stats-counter').appear(function() {
+        $('.count').countTo({
+            refreshInterval: 50
+        });
+    });
+
+    /* ================================================
+       Initialize Slick Slider 
+       ================================================ */
+
+    /* 
+       SLICK SLIDER
+       ------------ */
+
+    if ($('.slick-slider').length) {
+        $('.slick-slider').slick({
+            slidesToShow: 6,
+            slidesToScroll: 6,
+            infinite: true,
+            autoplay: false,
+            arrows: true,
+            dots: true,
+            responsive: [{
+                breakpoint: 1200,
+                settings: {
+                    arrows: true,
+                    slidesToShow: 5,
+                    slidesToScroll: 5
+                }
+            }, {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            }, {
+                breakpoint: 520,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }]
+        });
+    }
+
+    /* 
+    SPONSORS
+    -------- */
+
+    if ($('.sponsor-slider').length) {
+        $('.sponsor-slider').slick({
+            centerMode: true,
+            centerPadding: '30px',
+            slidesToShow: 3,
+            autoplay: true,
+            arrows: false,
+            responsive: [{
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 3
+                }
+            }, {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                }
+            }]
+        });
+    }
+
+    /* 
+       SPEAKERS
+       -------- */
+
+    if ($('.speaker-slider').length) {
+        $('.speaker-slider').slick({
+            slidesToShow: 6,
+            autoplay: false,
+            arrows: true,
+            responsive: [{
+                breakpoint: 1200,
+                settings: {
+                    arrows: true,
+                    slidesToShow: 5
+                }
+            }, {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3
+                }
+            }, {
+                breakpoint: 520,
+                settings: {
+                    slidesToShow: 1
+                }
+            }]
+        });
+    }
+
+    /* ================================================
+       Scroll Functions
+       ================================================ */
+
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 1000) {
+            $('.back_to_top').fadeIn('slow');
+        } else {
+            $('.back_to_top').fadeOut('slow');
+        }
+    });
+
+    $('nav a[href^=#]:not([href=#]), .back_to_top').on('click', function(event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top - 50
+        }, 1500);
+        event.preventDefault();
+    });
+
+});
+
+/* ================================================
+  Video Gallery
+  ================================================ */
+
+$(".play-video").on("click",function(e) {
+    e.preventDefault();
+    var videourl = $(this).data("video-url");
+    $(this).append('<i class="video-loader fa fa-spinner fa-spin"></i>')
+    $('.media-video iframe').attr('src', videourl);
+    setTimeout(function() {
+        $('.video-loader').remove();
+    }, 1000);
+});
+
+/* ================================================
+   Magnific Popup
+   ================================================ */
+if ($('.popup-gallery').length) {
+    $('.popup-gallery').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        tLoading: 'Loading image #%curr%...',
+        mainClass: 'mfp-img-mobile',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+        },
+        image: {
+            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
+        },
+        zoom: {
+            enabled: true,
+            duration: 300, // don't foget to change the duration also in CSS
+            opener: function(element) {
+                return element.find('img');
+            }
+        }
+    });
+}
+
+/* ================================================
+   jQuery Validate - Reset Defaults
+   ================================================ */
+
+$.validator.setDefaults({
+    highlight: function(element) {
+        $(element).closest('.form-group').addClass('has-error');
+    },
+    unhighlight: function(element) {
+        $(element).closest('.form-group').removeClass('has-error');
+    },
+    errorElement: 'small',
+    errorClass: 'help-block',
+    errorPlacement: function(error, element) {
+        if (element.parent('.input-group').length) {
+            error.insertAfter(element.parent());
+        }
+        if (element.parent('label').length) {
+            error.insertAfter(element.parent());
+        } else {
+            error.insertAfter(element);
+        }
+    }
+});
+
+/* ================================================
+   Add to Calendar
+   ================================================ */
+
+(function() {
+    if (window.addtocalendar)
+        if (typeof window.addtocalendar.start == "function") return;
+    if (window.ifaddtocalendar == undefined) {
+        window.ifaddtocalendar = 1;
+        var d = document,
+            s = d.createElement('script'),
+            g = 'getElementsByTagName';
+        s.type = 'text/javascript';
+        s.charset = 'UTF-8';
+        s.async = true;
+        s.src = ('https:' == window.location.protocol ? 'https' : 'http') + '://addtocalendar.com/atc/1.5/atc.min.js';
+        var h = d[g]('body')[0];
+        h.appendChild(s);
+    }
+})();
+
+/* ================================================
+   Twitter Widget
+   ================================================ */
+
+window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+
+    t._e = [];
+    t.ready = function(f) {
+        t._e.push(f);
+    };
+
+    return t;
+}(document, "script", "twitter-wjs"));
+
+/* ================================================
+   Paypal Form Validation
+   ================================================ */
+
+// validate Registration Form
+$("#paypal-regn").validate({
+    rules: {
+        first_name: "required",
+        last_name: "required",
+        email: {
+            required: true,
+            email: true
+        },
+        os0: "required",
+        quantity: "required",
+        agree: "required"
+    },
+    messages: {
+        first_name: "Your first name",
+        last_name: "Your last name",
+        email: "We need your email address",
+        os0: "Choose your Pass",
+        quantity: "How many seats",
+        agree: "Please accept our terms and privacy policy"
+    },
+    submitHandler: function(form) {
+        $("#reserve-btn").attr("disabled", true);
+        form.submit();
+    }
+});
+
+/*
+ * // End $ Strict Function
+ * ------------------------ */
+
+$(function() {
+
+    /* ================================================
+       Initialize WOW JS
+       ================================================ */
+
+    if ($('body').hasClass('animate-page')) {
+        wow = new WOW({
+            animateClass: 'animated',
+            offset: 100,
+            mobile: false
+        });
+        wow.init();
+    }
+});
+
+/*
+ * End $ Function
+ * -------------- */

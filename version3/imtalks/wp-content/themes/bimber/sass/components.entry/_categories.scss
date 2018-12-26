@@ -1,0 +1,49 @@
+@if ( 'bunchy' != $stack ) {
+    /* Entry categories */
+    .entry-category {
+        display: inline-block;
+        position: relative;
+
+        padding: $categories_padding;
+        border-width:: $categories_border_width;
+        //margin: side-values( 1px 1px 0 0 );
+
+        font-size: 13px;
+        line-height: 15px;
+
+        font-family: $categories_font_family;
+        font-weight: $categories_font_weight;
+        text-transform: $categories_case;
+
+        pointer-events: auto;
+        border-style: solid;
+        text-shadow: none;
+
+        border-color: $categories_border_color;
+        background-color: $categories_background_color;
+        color: $categories_text_color;
+
+        @include transition(
+            border-color 0.375s ease-in-out,
+            background-color 0.375s ease-in-out,
+            color 0.375s ease-in-out
+        );
+    }
+}
+
+.entry-categories {
+    display: inline;
+
+    margin: 0 0 16px; // Backward compatibility.
+    margin: 0 0 1rem;
+}
+
+.entry-categories-inner {
+    display: inline;
+
+    margin-top: -1px;
+
+    @if ( 'bunchy' != $stack ) {
+        font-size: 0;
+    }
+}
