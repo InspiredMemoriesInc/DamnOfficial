@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Simple_selectors$samples/Playable_code?revision=1395421 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:50:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <title>Simple selectors</title>
+    </head>
+    <body>
+        
+            <div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
+  <h2>HTML Input</h2>
+  <textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"><h1>Hello World!</h1>
+
+<p>This is a paragraph.</p>
+
+<ul>
+  <li>This is</li>
+  <li>A list</li>
+</ul></textarea>
+
+  <h2>CSS Input</h2>
+  <textarea id="code" class="css-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">h1 {
+  color: red;
+  text-shadow: 1px 1px 1px black;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.1));
+  padding: 3px;
+  text-align: center;
+  box-shadow: inset 2px 2px 5px rgba(0,0,0,0.5), inset -2px -2px 5px rgba(255,255,255,0.5);
+}</textarea>
+
+  <h2>Output</h2>
+  <div class="output" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
+  <div class="controls">
+    <input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;">
+    <input id="solution" type="button" value="Show solution" style="margin: 10px 0 0 10px;">
+  </div>
+</div>
+
+        
+        
+            <script>
+                var htmlInput = document.querySelector(".html-input");
+var cssInput = document.querySelector(".css-input");
+var reset = document.getElementById("reset");
+var htmlCode = htmlInput.value;
+var cssCode = cssInput.value;
+var output = document.querySelector(".output");
+var solution = document.getElementById("solution");
+
+var styleElem = document.createElement('style');
+var headElem = document.querySelector('head');
+headElem.appendChild(styleElem);
+
+function drawOutput() {
+  output.innerHTML = htmlInput.value;
+  styleElem.textContent = cssInput.value;
+}
+
+reset.addEventListener("click", function() {
+  htmlInput.value = htmlCode;
+  cssInput.value = cssCode;
+  drawOutput();
+});
+
+solution.addEventListener("click", function() {
+  htmlInput.value = htmlCode;
+  cssInput.value = 'h1, p, ul, li {\n  color: red;\n  text-shadow: 1px 1px 1px black;\n  background: linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.1));\n  padding: 3px;\n  text-align: center;\n  box-shadow: inset 2px 2px 5px rgba(0,0,0,0.5), inset -2px -2px 5px rgba(255,255,255,0.5);\n}';
+  drawOutput();
+});
+
+htmlInput.addEventListener("input", drawOutput);
+cssInput.addEventListener("input", drawOutput);
+window.addEventListener("load", drawOutput);
+
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Simple_selectors$samples/Playable_code?revision=1395421 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:50:37 GMT -->
+</html>

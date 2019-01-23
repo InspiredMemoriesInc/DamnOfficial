@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/mask-clip$samples/Example?revision=1331124 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:48:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            #masked {
+  width: 100px;
+  height: 100px;
+  background-color: #8cffa0;
+  margin: 20px;
+  border: 20px solid #8ca0ff;
+  padding: 20px;
+  mask-image: url(../../../../../files/12668/MDN.svg);
+  mask-size: 100% 100%;
+  mask-clip: border-box; /* Can be changed in the live sample */
+}
+
+        </style>
+        
+        <title>mask-clip</title>
+    </head>
+    <body>
+        
+            <div id="masked">
+</div>
+<select id="clipBox">
+  <option value="content-box">content-box</option>
+  <option value="padding-box">padding-box</option>
+  <option value="border-box" selected>border-box</option>
+  <option value="margin-box">margin-box</option>
+  <option value="fill-box">fill-box</option>
+  <option value="stroke-box">stroke-box</option>
+  <option value="view-box">view-box</option>
+  <option value="no-clip">no-clip</option>
+</select>
+
+        
+        
+            <script>
+                var clipBox = document.getElementById("clipBox");
+clipBox.addEventListener("change", function (evt) {
+  document.getElementById("masked").style.maskClip = evt.target.value;
+});
+
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/mask-clip$samples/Example?revision=1331124 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:48:38 GMT -->
+</html>

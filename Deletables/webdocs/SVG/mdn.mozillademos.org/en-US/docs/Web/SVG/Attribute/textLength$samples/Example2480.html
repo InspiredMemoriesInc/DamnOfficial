@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/SVG/Attribute/textLength$samples/Example?revision=1389012 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:46:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            .controls {
+  font: 16px "Open Sans", "Arial", sans-serif;
+}
+        </style>
+        
+        <title>textLength</title>
+    </head>
+    <body>
+        
+            <svg width="10cm" height="3cm" viewBox="0 0 1000 300"
+    xmlns="http://www.w3.org/2000/svg" version="1.1">
+ 
+  <rect x="1" y="1" width="998" height="298"
+      fill="none" stroke="green" stroke-width="2" />
+ 
+  <text id="hello" x="10" y="150"
+      font-family="sans-serif" font-size="60" fill="green">
+    Hello world!
+  </text>
+</svg> <div class="controls">
+  <input type="range" id="widthSlider" min="80" max="978">
+  <span id="widthDisplay"></span>
+</div>
+        
+        
+            <script>
+                const widthSlider = document.getElementById("widthSlider"); 
+const widthDisplay = document.getElementById("widthDisplay"); 
+const textElement = document.getElementById("hello"); 
+const baseLength = Math.floor(textElement.textLength.baseVal.value);
+
+widthSlider.value = baseLength;
+ 
+widthSlider.addEventListener("input", function(event) { 
+  textElement.textLength.baseVal.newValueSpecifiedUnits( 
+      SVGLength.SVG_LENGTHTYPE_PX, widthSlider.valueAsNumber); 
+  widthDisplay.innerText = widthSlider.value; 
+}, false); 
+ 
+widthSlider.dispatchEvent(new Event("input"));
+
+
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/SVG/Attribute/textLength$samples/Example?revision=1389012 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:46:35 GMT -->
+</html>

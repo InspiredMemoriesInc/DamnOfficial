@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/KeyboardEvent/code$samples/Exercising_KeyboardEvent?revision=1381950 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 10:59:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            #output {
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid black;
+}
+        </style>
+        
+        <title>KeyboardEvent.code</title>
+    </head>
+    <body>
+        
+            <p>Press keys on the keyboard to see what the KeyboardEvent's key and code
+   values are for each one.</p>
+<div id="output">
+</div>
+
+        
+        
+            <script>
+                window.addEventListener("keydown", function(event) {
+  let str = "KeyboardEvent: key='" + event.key + "' | code='" +
+            event.code + "'";
+  let el = document.createElement("span");
+  el.innerHTML = str + "<br/>";
+ 
+  document.getElementById("output").appendChild(el);
+}, true);
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/KeyboardEvent/code$samples/Exercising_KeyboardEvent?revision=1381950 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 10:59:17 GMT -->
+</html>

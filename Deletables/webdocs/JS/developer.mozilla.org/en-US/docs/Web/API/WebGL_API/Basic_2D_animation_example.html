@@ -1,0 +1,1108 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 10:53:18 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  <title>A basic 2D WebGL animation example</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+
+  
+<link rel="preload" href="../../../../../static/fonts/locales/ZillaSlab-Regular.f9de6143fdfa.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="license" href="#license">
+  
+
+  
+    
+    
+
+    <link href="../../../../../static/build/styles/mdn.83865b0f7c30.css" rel="stylesheet" type="text/css">
+
+    
+  
+
+    <link href="../../../../../static/build/styles/wiki.aaf26c13c39b.css" rel="stylesheet" type="text/css">
+
+
+    
+
+  <link href="../../../../../static/build/styles/locale-en-US.ca0bca387b42.css" rel="stylesheet" type="text/css">
+
+  
+    <script>
+      /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
+    </script>
+    
+
+
+
+  
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta property="og:site_name" content="MDN Web Docs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="MDN Web Docs">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../static/img/favicon144.e7e21ca263ca.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../static/img/favicon114.d526f38b09c5.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../static/img/favicon72.cc65d1d762a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../../../static/img/favicon57.de33179910ae.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="../../../../../static/img/favicon32.7f3da72dcea1.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script async="" type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  <link rel="dns-prefetch" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example$json">
+  <link rel="canonical" href="Basic_2D_animation_example.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="Basic_2D_animation_example.html" title="A basic 2D WebGL animation example">
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="A basic 2D WebGL animation example">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example">
+  <meta name="twitter:title" content="A basic 2D WebGL animation example">
+  
+  <meta property="og:description" content="This is a pretty simple example, since it's just drawing one simple object, but the concepts used here extend to much more complex animations.">
+  <meta name="description" content="This is a pretty simple example, since it's just drawing one simple object, but the concepts used here extend to much more complex animations.">
+  <meta name="twitter:description" content="This is a pretty simple example, since it's just drawing one simple object, but the concepts used here extend to much more complex animations.">
+  
+
+</head>
+<body data-slug="Web/API/WebGL_API/Basic_2D_animation_example" contextmenu="edit-history-menu" data-search-url="" class="document">
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <!--[endif]---->
+
+  
+  <link rel="dns-prefetch" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example$json">
+  <link rel="canonical" href="Basic_2D_animation_example.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="Basic_2D_animation_example.html" title="A basic 2D WebGL animation example">
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="A basic 2D WebGL animation example">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example">
+  <meta name="twitter:title" content="A basic 2D WebGL animation example">
+  
+  <meta property="og:description" content="This is a pretty simple example, since it's just drawing one simple object, but the concepts used here extend to much more complex animations.">
+  <meta name="description" content="This is a pretty simple example, since it's just drawing one simple object, but the concepts used here extend to much more complex animations.">
+  <meta name="twitter:description" content="This is a pretty simple example, since it's just drawing one simple object, but the concepts used here extend to much more complex animations.">
+  
+
+
+
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/wiki-compat-tables.9978a5ce31c2.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+
+        // interactive editor config
+        win.mdn.interactiveEditor = {
+            siteUrl: "https://developer.mozilla.org",
+            editorUrl: "https://interactive-examples.mdn.mozilla.net"
+        };
+
+    })(this);
+</script>
+    
+    <ul id="nav-access">
+  <li><a href="#content" id="skip-main">Skip to main content</a></li>
+  <li><a id="skip-language" href="#language">Select language</a></li>
+  <li><a href="#q" id="skip-search">Skip to search</a></li>
+</ul>
+
+    <!-- Header -->
+    <header id="main-header" class="header-main">
+      <a href="https://developer.mozilla.org/en-US/" class="logo">MDN Web Docs</a>
+      <div class="nav-toolbox-wrapper">
+        <nav id="main-nav" class="nav-main" role="navigation">
+    <ul>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web">Technologies
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-tech-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+                    <li><a href="../../API.html">APIs / DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn">References &amp; Guides
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-learn-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-contact-submenu">
+              <div class="submenu-column">
+                <ul>
+                  <li>
+                      <a href="https://support.mozilla.org/">Get Firefox help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://stackoverflow.com/">Get web development help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                      <a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example">Report a content problem
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</nav>
+        <div id="toolbox" class="toolbox">
+  <ul>
+    
+    <li class="nav-login"><div class="login">
+    
+        
+        <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWebGL_API%2FBasic_2D_animation_example" class="login-link js-login-link" data-service="GitHub" rel="nofollow">
+            Sign in<svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+    <title>Github</title>
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path>
+</svg>
+        </a>
+    
+</div></li>
+  </ul>
+</div>
+      </div>
+      <form id="nav-main-search" action="https://developer.mozilla.org/en-US/search" method="get" role="search" class="nav-main-search">
+  <div class="search-wrap">
+    <label for="main-q" class="offscreen">Search</label>
+    <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" aria-hidden="true">
+    <span class="search-trigger">
+        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true">
+    <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path>
+</svg>
+    </span>
+    <button type="submit" class="offscreen">Search</button>
+    <button type="button" id="close-header-search" class="close-header-search transparent">
+        <span class="offscreen">Close search</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+  </div>
+</form>
+    </header> 
+
+  <!-- Content will go here -->
+  <main id="content">
+      
+  <!-- heading -->
+  <div id="wiki-document-head" class="document-head">
+    <div class="center">
+      <!-- action buttons -->
+      <div class="document-actions">
+        
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons">
+      <li>
+          <button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false">
+              <svg class="icon icon-language" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M10.219 16.844c-.031.109-.797-.25-1-.328-.203-.094-1.125-.609-1.359-.766s-1.125-.891-1.234-.938a28.275 28.275 0 0 1-2.094 2.828c-.281.328-1.125 1.391-1.641 1.719-.078.047-.531.094-.594.063.25-.187.969-1.078 1.281-1.437.391-.453 2.25-3.047 2.562-3.641.328-.594 1.312-2.562 1.359-2.75-.156-.016-1.391.406-1.719.516-.313.094-1.172.297-1.234.344-.063.063-.016.25-.047.313s-.313.203-.484.234a1.647 1.647 0 0 1-.734 0c-.203-.047-.391-.25-.438-.328 0 0-.063-.094-.078-.359.187-.063.5-.078.844-.172s1.188-.344 1.641-.5 1.328-.484 1.594-.547c.281-.047.984-.516 1.359-.641s.641-.281.656-.203 0 .422-.016.516c-.016.078-.766 1.547-.875 1.781-.063.125-.5.953-1.203 2.047.25.109.781.328 1 .438.266.125 2.125.906 2.219.938s.266.75.234.875zM7.016 9.25c.047.266-.031.375-.063.438-.156.297-.547.5-.781.594s-.625.187-.938.187c-.141-.016-.422-.063-.766-.406-.187-.203-.328-.75-.266-.688s.516.125.719.078.688-.187.906-.25c.234-.078.703-.203.859-.219.156 0 .281.063.328.266zm10.906 2.016l.984 3.547-2.172-.656zM.609 23.766l10.844-3.625V4.016L.609 7.657v16.109zM20 18.813l1.594.484-2.828-10.266-1.563-.484-3.375 8.375 1.594.484.703-1.719 3.297 1.016zM12.141 3.781l8.953 2.875V.718zM17 24.453l2.469.203-.844 2.5L18 26.125c-1.266.812-2.828 1.437-4.312 1.687-.453.094-.969.187-1.422.187h-1.313c-1.656 0-4.672-.984-5.984-1.937-.094-.078-.125-.141-.125-.25 0-.172.125-.297.281-.297.141 0 .875.453 1.078.547 1.406.703 3.375 1.344 4.953 1.344 1.953 0 3.281-.25 5.063-1.016.516-.234.969-.531 1.453-.797zm7-16.859v16.859c-12.078-3.844-12.094-3.844-12.094-3.844C11.656 20.718.453 24.5.297 24.5a.3.3 0 0 1-.281-.203c0-.016-.016-.031-.016-.047V7.406c.016-.047.031-.125.063-.156.094-.109.219-.141.313-.172.047-.016 1-.328 2.328-.781v-6l8.719 3.094C11.532 3.36 21.251 0 21.392 0c.172 0 .313.125.313.328v6.531z"></path>
+</svg>
+              <span>Languages</span>
+          </button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                <li class="smaller">No translations exist for this article.</li>
+              
+
+              
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example$locales" rel="nofollow" id="translations-add">Add a translation</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+      
+      <li class="page-buttons-edit">
+          <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example$edit" class="button neutral" id="edit-button" rel="nofollow">
+              <svg class="icon icon-pencil" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M5.672 24l1.422-1.422-3.672-3.672L2 20.328V22h2v2h1.672zm8.172-14.5a.329.329 0 0 0-.344-.344.368.368 0 0 0-.266.109l-8.469 8.469a.366.366 0 0 0-.109.266c0 .203.141.344.344.344a.368.368 0 0 0 .266-.109l8.469-8.469a.366.366 0 0 0 .109-.266zM13 6.5l6.5 6.5-13 13H0v-6.5zM23.672 8c0 .531-.219 1.047-.578 1.406L20.5 12 14 5.5l2.594-2.578c.359-.375.875-.594 1.406-.594s1.047.219 1.422.594l3.672 3.656c.359.375.578.891.578 1.422z"></path>
+</svg>
+              Edit
+          </a>
+      </li>
+      
+
+        
+
+        <li class="page-buttons-advanced">
+            <button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false">
+                <svg class="icon icon-gear" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M16 14c0-2.203-1.797-4-4-4s-4 1.797-4 4 1.797 4 4 4 4-1.797 4-4zm8-1.703v3.469c0 .234-.187.516-.438.562l-2.891.438a8.86 8.86 0 0 1-.609 1.422c.531.766 1.094 1.453 1.672 2.156.094.109.156.25.156.391s-.047.25-.141.359c-.375.5-2.484 2.797-3.016 2.797a.795.795 0 0 1-.406-.141l-2.156-1.687a9.449 9.449 0 0 1-1.422.594c-.109.953-.203 1.969-.453 2.906a.573.573 0 0 1-.562.438h-3.469c-.281 0-.531-.203-.562-.469l-.438-2.875a9.194 9.194 0 0 1-1.406-.578l-2.203 1.672c-.109.094-.25.141-.391.141s-.281-.063-.391-.172c-.828-.75-1.922-1.719-2.578-2.625a.607.607 0 0 1 .016-.718c.531-.719 1.109-1.406 1.641-2.141a8.324 8.324 0 0 1-.641-1.547l-2.859-.422A.57.57 0 0 1 0 15.705v-3.469c0-.234.187-.516.422-.562l2.906-.438c.156-.5.359-.969.609-1.437a37.64 37.64 0 0 0-1.672-2.156c-.094-.109-.156-.234-.156-.375s.063-.25.141-.359c.375-.516 2.484-2.797 3.016-2.797.141 0 .281.063.406.156L7.828 5.94a9.449 9.449 0 0 1 1.422-.594c.109-.953.203-1.969.453-2.906a.573.573 0 0 1 .562-.438h3.469c.281 0 .531.203.562.469l.438 2.875c.484.156.953.344 1.406.578l2.219-1.672c.094-.094.234-.141.375-.141s.281.063.391.156c.828.766 1.922 1.734 2.578 2.656a.534.534 0 0 1 .109.344c0 .141-.047.25-.125.359-.531.719-1.109 1.406-1.641 2.141.266.5.484 1.016.641 1.531l2.859.438a.57.57 0 0 1 .453.562z"></path>
+</svg>
+                <span>Advanced</span>
+            </button>
+            <div class="submenu js-submenu" id="advanced-menu-submenu">
+                <!-- this page -->
+                <div class="submenu-column">
+                    <div class="title">Advanced</div>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example$history" rel="nofollow">History</a></li>
+                        
+                        
+                        
+
+
+                
+
+                <li class="page-print"><a href="#" onclick="return window.print();">Print this article</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+      </div>
+
+      <div class="document-title">
+        <h1>A basic 2D WebGL animation example</h1>
+      </div>
+    <nav class="crumbs" role="navigation">
+      <ol typeof="BreadcrumbList" vocab="https://schema.org/" aria-label="breadcrumbs">
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="https://developer.mozilla.org/en-US/docs/Web" property="item" typeof="WebPage">
+              <span property="name">Web technology for developers</span>
+            </a>
+            <meta property="position" content="1">
+          </li>
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="../../API.html" property="item" typeof="WebPage">
+              <span property="name">Web APIs</span>
+            </a>
+            <meta property="position" content="2">
+          </li>
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="../WebGL_API.html" property="item" typeof="WebPage">
+              <span property="name">The WebGL API: 2D and 3D graphics for the web</span>
+            </a>
+            <meta property="position" content="3">
+          </li>
+        
+        <li property="itemListElement" typeof="ListItem" class="crumb">
+          <span property="name">A basic 2D WebGL animation example</span>
+        </li>
+      </ol>
+    </nav></div>
+  </div>
+  
+  <div id="toc" class="toc">
+    <div class="center">
+      <div class="toc-head">Jump to:</div>
+        <ol class="toc-links">
+          <li><a rel="internal" href="#Vertex_shader">Vertex shader</a></li><li><a rel="internal" href="#Fragment_shader">Fragment shader</a></li><li><a rel="internal" href="#HTML">HTML</a></li><li><a rel="internal" href="#JavaScript">JavaScript</a></li><li><a rel="internal" href="#Result">Result</a></li><li><a rel="internal" href="#See_also">See also</a>
+        </li></ol>
+    </div>
+  </div>
+  
+
+      <div class="center clear">
+      
+
+    <div class="wiki-main-content" id="document-main"><div class="center">
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-left-present">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-main wiki-column text-content">
+
+              
+
+              
+              
+
+              
+
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <div></div>
+
+<div id="live-sample">
+<p>In this WebGL example, we create a canvas and within it render a rotating square using WebGL. The coordinate system we use to represent our scene is the same as the canvas's coordinate system. That is, (0, 0) is at the top-left corner and the bottom-right corner is at (600, 460).</p>
+
+<a class="dashAnchor" name="//apple_ref/Section/Vertex%20shader"></a><h2 id="Vertex_shader">Vertex shader</h2>
+
+<p>First, let's take a look at the vertex shader. Its job, as always, is to convert the coordinates we're using for our scene into clipspace coordinates (that is, the system by which (0, 0) is at the center of the context and each axis extends from -1.0 to 1.0 regardless of the actual size of the context).</p>
+
+<pre class="brush: html">&lt;script id="vertex-shader" type="x-shader/x-vertex"&gt;
+  attribute vec2 aVertexPosition;
+
+  uniform vec2 uScalingFactor;
+  uniform vec2 uRotationVector;
+
+  void main() {
+    vec2 rotatedPosition = vec2(
+      aVertexPosition.x * uRotationVector.y +
+            aVertexPosition.y * uRotationVector.x,
+      aVertexPosition.y * uRotationVector.y -
+            aVertexPosition.x * uRotationVector.x
+    );
+
+    gl_Position = vec4(rotatedPosition * uScalingFactor, 0.0, 1.0);
+  }
+&lt;/script&gt;</pre>
+
+<p>The main program shares with us the attribute <code>aVertexPosition</code>, which is the position of the vertex in whatever coordinate system it's using. We need to convert these values so that both components of the position are in the range -1.0 to 1.0. This can be done easily enough by multiplying by a scaling factor that's based ont the context's aspect ratio. We'll see that compuation shortly.</p>
+
+<p>We're also rotating the shape, and we can do that here, by applying a transform. We'll do that first. The rotated position of the vertex is computed by applying the rotation vector, found in the uniform <code>uRotationVector</code>, that's been computed by the JavaScript code.</p>
+
+<p>Then the final position is computed by multiplying the rotated position by the scaling vector provided by the JavaScript code in <code>uScalingFactor</code>. The values of <code>z</code> and <code>w</code> are fixed at 0.0 and 1.0, respectively, since we're drawing in 2D.</p>
+
+<p>The standard WebGL global <code>gl_Position</code> is then set to the transformed and rotated vertex's position.</p>
+
+<a class="dashAnchor" name="//apple_ref/Section/Fragment%20shader"></a><h2 id="Fragment_shader">Fragment shader</h2>
+
+<p>Next comes the fragment shader. Its role is to return the color of each pixel in the shape being rendered. Since we're drawing a solid, untextured object with no lighting applied, this is exceptionally simple:</p>
+
+<pre class="brush: html">&lt;script id="fragment-shader" type="x-shader/x-fragment"&gt;
+  #ifdef GL_ES
+    precision highp float;
+  #endif
+
+  uniform vec4 uGlobalColor;
+
+  void main() {
+    gl_FragColor = uGlobalColor;
+  }
+&lt;/script&gt;</pre>
+
+<p>This starts by specifying the precision of the <code>float</code> type, as required. Then we set the global <code>gl_FragColor</code> to the value of the uniform <code>uGlobalColor</code>, which is set by the JavaScript code to the color being used to draw the square.</p>
+
+<a class="dashAnchor" name="//apple_ref/Section/HTML"></a><h2 id="HTML">HTML</h2>
+
+<p>The HTML consists solely of the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas" title="Use the HTML <canvas> element with either the canvas scripting API or the WebGL API to draw graphics and animations."><code>&lt;canvas&gt;</code></a> that we'll obtain a WebGL context on.</p>
+
+<pre class="brush: html">&lt;canvas id="glcanvas" width="600" height="460"&gt;
+  Oh no! Your browser doesn't support canvas!
+&lt;/canvas&gt;</pre>
+
+<a class="dashAnchor" name="//apple_ref/Section/JavaScript"></a><h2 id="JavaScript">JavaScript</h2>
+
+<h3 id="Globals_and_initialization">Globals and initialization</h3>
+
+<p>First, the global variables. We won't discuss these here; instead, we'll talk about them as they're used in the code to come.</p>
+
+<pre class="brush: js">let gl = null;
+let glCanvas = null;
+
+// Aspect ratio and coordinate system
+// details
+
+let aspectRatio;
+let currentRotation = [0, 1];
+let currentScale = [1.0, 1.0];
+
+// Vertex information
+
+let vertexArray;
+let vertexBuffer;
+let vertexNumComponents;
+let vertexCount;
+
+// Rendering data shared with the
+// scalers.
+
+let uScalingFactor;
+let uGlobalColor;
+let uRotationVector;
+let aVertexPosition;
+
+// Animation timing
+
+let previousTime = 0.0;
+let degreesPerSecond = 90.0;
+</pre>
+
+<p>Initializing the program is handled through a <code><a href="../../Events/load.html" title="/en-US/docs/Web/Events/load">load</a></code> event handler called <code>startup()</code>:</p>
+
+<pre class="brush: js">window.addEventListener("load", startup, false);
+
+function startup() {
+  glCanvas = document.getElementById("glcanvas");
+  gl = glCanvas.getContext("webgl");
+
+  const shaderSet = [
+    {
+      type: gl.VERTEX_SHADER,
+      id: "vertex-shader"
+    },
+    {
+      type: gl.FRAGMENT_SHADER,
+      id: "fragment-shader"
+    }
+  ];
+
+  shaderProgram = buildShaderProgram(shaderSet);
+
+  aspectRatio = glCanvas.width/glCanvas.height;
+  currentRotation = [0, 1];
+  currentScale = [1.0, aspectRatio];
+
+  vertexArray = new Float32Array([
+      -0.5, 0.5, 0.5, 0.5, 0.5, -0.5,
+      -0.5, 0.5, 0.5, -0.5, -0.5, -0.5
+  ]);
+
+  vertexBuffer = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
+  gl.bufferData(gl.ARRAY_BUFFER, vertexArray, gl.STATIC_DRAW);
+
+  vertexNumComponents = 2;
+  vertexCount = vertexArray.length/vertexNumComponents;
+
+  currentAngle = 0.0;
+  rotationRate = 6;
+
+  animateScene();
+}</pre>
+
+<p>After getting the WebGL context, <code>gl</code>, we need to begin by building the shader program. Here, we're using code designed to let us add multiple shaders to our program quite easily. The array <code>shaderSet</code> contains a list of objects, each describing one shader function to be compiled into the program. Each function has a type (one of <code>gl.VERTEX_SHADER</code> or <code>gl.FRAGMENT_SHADER</code>) and an ID (the ID of the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script" title="The HTML <script> element is used to embed or reference executable code; this is typically used to embed or refer to JavaScript code."><code>&lt;script&gt;</code></a> element containing the shader's code).</p>
+
+<p>The shader set is passed into the function <code>buildShaderProgram()</code>, which returns the compiled and linked shader program.&nbsp; We'll look at how this works next.</p>
+
+<p>Once the shader program is built, we compute the aspect ratio of our context by dividing its width by its height. Then we set the current rotation vector for the animation to <code>[0,&nbsp;1]</code>, and the scaling vector to <code>[1.0,&nbsp;aspectRatio]</code>. The scaling vector, as we saw in the vertex shader, is used to scale the coordinates to fit the -1.0 to 1.0 range.</p>
+
+<p>The array of vertices is created next, as a <a href="../../JavaScript/Reference/Global_Objects/Float32Array.html" title="The Float32Array typed array represents an array of 32-bit floating point numbers (corresponding to the C float data type) in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation)."><code>Float32Array</code></a> with six coordinates (three 2D vertices) per triangle to be drawn, for a total of 12 values.</p>
+
+<p>As you can see, we're using a coordinate system of -1.0 to 1.0 for each axis. Why, you may ask, do we need to do any adjustments at all? This is simply because our context is not square. We're using a context that's 600 pixels wide and 460 tall. Each of those dimensions is mapped to the range -1.0 to 1.0. Since the two axes aren't the same length, if we don't adjust the values of one of the two axes, the square will get stretched out in one direction or the other. So we need to normalize these values.</p>
+
+<p>Once the vertex array has been created, we create a new GL buffer to contain them by calling <a href="../WebGLRenderingContext/createBuffer.html" title="The WebGLRenderingContext.createBuffer() method of the WebGL API creates and initializes a WebGLBuffer storing data such as vertices or colors."><code>gl.createBuffer()</code></a>. We bind the standard WebGL array buffer reference to that by calling <a href="../WebGLRenderingContext/bindBuffer.html" title="The WebGLRenderingContext.bindBuffer() method of the WebGL API binds a given WebGLBuffer to a target."><code>gl.bindBuffer()</code></a> and then copy the vertex data into the buffer using <a href="../WebGLRenderingContext/bufferData.html" title="The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store."><code>gl.bufferData()</code></a>. The usage hint <code>gl.STATIC_DRAW</code> is specified, telling WebGL that the data will be set only one time and never modified, but will be used repeatedly. This lets WebGL consider any optimizations it can apply that may improve performance based on that information.</p>
+
+<p>With the vertex data now provided to WebGL, we set <code>vertexNumComponents</code> to the number of components in each vertex (2, since they're 2D vertexes) and <code>vertexCount</code> to the number of vertexes in the vertex list.</p>
+
+<p>Then the current rotation angle (in degrees) is set to 0.0, since we haven't performed any rotation yet, and the rotation speed (in degrees per screen refresh period, typically 60 FPS) is set to 6.</p>
+
+<p>Finally, <code>animateScene()</code> is called to render the first frame and schedule the rendering of the next frame of the animation.</p>
+
+<h3 id="Compiling_and_linking_the_shader_program">Compiling and linking the shader program</h3>
+
+<h4 id="Constructing_and_linking_the_program">Constructing and linking the program</h4>
+
+<p>The <code>buildShaderProgram()</code> function accepts as input an array of objects describing a set of shader functions to be compiled and linked into the shader program and returns the shader program after it's been built and linked.</p>
+
+<pre class="brush: js">function buildShaderProgram(shaderInfo) {
+  let program = gl.createProgram();
+
+  shaderInfo.forEach(function(desc) {
+    let shader = compileShader(desc.id, desc.type);
+
+    if (shader) {
+      gl.attachShader(program, shader);
+    }
+  });
+
+  gl.linkProgram(program)
+
+  if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+    console.log("Error linking shader program:");
+    console.log(gl.getProgramInfoLog(program));
+  }
+
+  return program;
+}</pre>
+
+<p>First, <a href="../WebGLRenderingContext/createProgram.html" title="The WebGLRenderingContext.createProgram() method of the WebGL API creates and initializes a WebGLProgram object."><code>gl.createProgram()</code></a> is called to create a new, empty, GLSL program.</p>
+
+<p>Then, for each shader in the specified list of shaders, we call a <code>compileShader()</code> function to compile it, passing into it the ID and type of the shader function to build. Each of those objects includes, as mentioned before, the ID of the <code>&lt;script&gt;</code> element the shader code is found in and the type of shader it is. The compiled shader is attached to the shader program by passing it into <a href="../WebGLRenderingContext/attachShader.html" title="The WebGLRenderingContext.attachShader() method of the WebGL API attaches either a fragment or vertex WebGLShader to a WebGLProgram."><code>gl.attachShader()</code></a>.</p>
+
+<div class="note">
+<p>We could go a step farther here, actually, and look at the value of the <code>&lt;script&gt;</code> element's <code>type</code> attribute to determine the shader type.</p>
+</div>
+
+<p>Once all of the shaders are compiled, the program is linked using <a href="../WebGLRenderingContext/linkProgram.html" title="The WebGLRenderingContext.linkProgram() method of the WebGL API links a given WebGLProgram to the attached vertex and fragment shaders."><code>gl.linkProgram()</code></a>.</p>
+
+<p>If an error occurrs while linking the program, the error message is logged to console.</p>
+
+<p>Finally, the compiled program is returned to the caller.</p>
+
+<h4 id="Compiling_an_individual_shader">Compiling an individual shader</h4>
+
+<p>The <code>compileShader()</code> function, below, is called by <code>buildShaderProgram()</code> to compile a single shader.</p>
+
+<pre class="brush: js">function compileShader(id, type) {
+  let code = document.getElementById(id).firstChild.nodeValue;
+  let shader = gl.createShader(type);
+
+  gl.shaderSource(shader, code);
+  gl.compileShader(shader);
+
+  if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+    console.log(`Error compiling ${type === gl.VERTEX_SHADER ? "vertex" : "fragment"} shader:`);
+    console.log(gl.getShaderInfoLog(shader));
+  }
+  return shader;
+}</pre>
+
+<p>The code is fetched from the HTML document by obtaining the value of the text node contained within the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script" title="The HTML <script> element is used to embed or reference executable code; this is typically used to embed or refer to JavaScript code."><code>&lt;script&gt;</code></a> element with the specified ID. Then a new shader of the specified type is created using <a href="../WebGLRenderingContext/createShader.html" title="The WebGLRenderingContext.createShader() method of the WebGL API creates a WebGLShader that can then be configured further using WebGLRenderingContext.shaderSource() and WebGLRenderingContext.compileShader()."><code>gl.createShader()</code></a>.</p>
+
+<p>The source code is sent into the new shader by passing it into <a href="../WebGLRenderingContext/shaderSource.html" title="The WebGLRenderingContext.shaderSource() method of the WebGL API sets the source code of a WebGLShader."><code>gl.shaderSource()</code></a>, and then the shader is compiled using <a href="../WebGLRenderingContext/compileShader.html" title="The WebGLRenderingContext.compileShader() method of the WebGL API compiles a GLSL shader into binary data so that it can be used by a WebGLProgram."><code>gl.compileShader()</code></a></p>
+
+<p>Compile errors are logged to the console. Note the use of a <a href="../../JavaScript/Reference/Template_literals.html">template literal</a> string to insert the correct shader type string into the message that gets generated. The actual error details are obtained by calling <a href="../WebGLRenderingContext/getShaderInfoLog.html" title="The WebGLRenderingContext.getShaderInfoLog returns the information log for the specified WebGLShader object. It contains warnings, debugging and compile information."><code>gl.getShaderInfoLog()</code></a>.</p>
+
+<p>Finally, the compiled shader is returned to the caller (which is the <code>buildShaderProgram()</code> function.</p>
+
+<h3 id="Drawing_and_animating_the_scene">Drawing and animating the scene</h3>
+
+<p>The <code>animateScene()</code> function is called to render each animation frame.</p>
+
+<pre class="brush: js">function animateScene() {
+  gl.viewport(0, 0, glCanvas.width, glCanvas.height);
+  gl.clearColor(0.8, 0.9, 1.0, 1.0);
+  gl.clear(gl.COLOR_BUFFER_BIT);
+
+  let radians = currentAngle * Math.PI / 180.0;
+  currentRotation[0] = Math.sin(radians);
+  currentRotation[1] = Math.cos(radians);
+
+  gl.useProgram(shaderProgram);
+
+  uScalingFactor =
+      gl.getUniformLocation(shaderProgram, "uScalingFactor");
+  uGlobalColor =
+      gl.getUniformLocation(shaderProgram, "uGlobalColor");
+  uRotationVector =
+      gl.getUniformLocation(shaderProgram, "uRotationVector");
+
+  gl.uniform2fv(uScalingFactor, currentScale);
+  gl.uniform2fv(uRotationVector, currentRotation);
+  gl.uniform4fv(uGlobalColor, [0.1, 0.7, 0.2, 1.0]);
+
+  gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
+
+  aVertexPosition =
+      gl.getAttribLocation(shaderProgram, "aVertexPosition");
+
+  gl.enableVertexAttribArray(aVertexPosition);
+  gl.vertexAttribPointer(aVertexPosition, vertexNumComponents,
+        gl.FLOAT, false, 0, 0);
+
+  gl.drawArrays(gl.TRIANGLES, 0, vertexCount);
+
+  window.requestAnimationFrame(function(currentTime) {
+    let deltaAngle = ((currentTime - previousTime) / 1000.0)
+          * degreesPerSecond;
+
+    currentAngle = (currentAngle + deltaAngle) % 360;
+
+    previousTime = currentTime;
+    animateScene();
+  });
+}</pre>
+
+<p>The first thing that needs to be done in order to draw a frame of the animation is to clear the background to the desired color. In this case, we set the viewport based on the size of the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas" title="Use the HTML <canvas> element with either the canvas scripting API or the WebGL API to draw graphics and animations."><code>&lt;canvas&gt;</code></a>, call <a href="../WebGLRenderingContext/clearColor.html" title="The WebGLRenderingContext.clearColor() method of the WebGL API specifies the color values used when clearing color buffers."><code>clearColor()</code></a> to set the color to use when clearing content, then we clear the buffer with <a href="../WebGLRenderingContext/clear.html" title="The WebGLRenderingContext.clear() method of the WebGL API clears buffers to preset values."><code>clear()</code></a>.</p>
+
+<p>Next, the current rotation vector is computed by converting the current rotation in degrees (<code>currentAngle</code>) into <a rel="noopener" href="https://en.wikipedia.org/wiki/radians" class="external" title="radians">radians</a>, then setting the first component of the rotation vector to the <a rel="noopener" href="https://en.wikipedia.org/wiki/sine" class="external" title="sine">sine</a> of that value and the second component to the <a rel="noopener" href="https://en.wikipedia.org/wiki/cosine" class="external" title="cosine">cosine</a>. The <code>currentRotation</code> vector is now the location of the point on the <a rel="noopener" href="https://en.wikipedia.org/wiki/unit circle" class="external" title="unit circle">unit circle</a> located at the angle <code>currentAngle</code>.</p>
+
+<p><a href="../WebGLRenderingContext/useProgram.html" title="The WebGLRenderingContext.useProgram() method of the WebGL API sets the specified WebGLProgram as part of the current rendering state."><code>useProgram()</code></a> is called to activate the GLSL shading program we established previously. Then we obtain the locations of each of the uniforms used to share information between the JavaScript code and the shaders (with <a href="../WebGLRenderingContext/getUniformLocation.html" title="Part of the WebGL API, the WebGLRenderingContext method getUniformLocation() returns the location of a specific uniform variable which is part of a given WebGLProgram."><code>getUniformLocation()</code></a>).</p>
+
+<p>The uniform named <code>uScalingFactor</code> is set to the <code>currentScale</code> value previously computed; this, as you may recall, is the value used to adjust the coordinate system based on the aspect ratio of the context. This is done using <a href="../WebGLRenderingContext/uniform.html" title="The WebGLRenderingContext.uniform[1234][fi][v]() method of the WebGL API specifies the value of a uniform variable."><code>uniform2fv()</code></a> (since this is a 2-value floating-point vector).</p>
+
+<p><code>uRotationVector</code> is set to the current rotation vector (<code>currentRotation)</code>, also using <code>uniform2fv()</code>.</p>
+
+<p><code>uGlobalColor</code> is set using <a href="../WebGLRenderingContext/uniform.html" title="The WebGLRenderingContext.uniform[1234][fi][v]() method of the WebGL API specifies the value of a uniform variable."><code>uniform4fv()</code></a> to the color we wish to use when drawing the square. This is a 4-component floating-point vector (one component each for red, green, blue, and alpha).</p>
+
+<p>Now that that's all out of the way, we can set up the vertex buffer and draw our shape, first, the buffer of vertexes that will be used to draw the triangles of the shape is set by calling <a href="../WebGLRenderingContext/bindBuffer.html" title="The WebGLRenderingContext.bindBuffer() method of the WebGL API binds a given WebGLBuffer to a target."><code>bindBuffer()</code></a>. Then the vertex position attribute's index is obtained from the shader program by calling <a href="../WebGLRenderingContext/getAttribLocation.html" title="The WebGLRenderingContext.getAttribLocation() method of the WebGL API returns the location of an attribute variable in a given WebGLProgram."><code>getAttribLocation()</code></a>.</p>
+
+<p>With the index of the vertex position attribute now available in <code>aVertexPosition</code>, we call <code>enableVertexAttribArray()</code> to enable the position attribute so it can be used by the shader program (in particular, by the vertex shader).</p>
+
+<p>Then the vertex buffer is bound to the <code>aVertexPosition</code> attribute by calling <a href="../WebGLRenderingContext/vertexAttribPointer.html" title="The WebGLRenderingContext.vertexAttribPointer() method of the WebGL API binds the buffer currently bound to gl.ARRAY_BUFFER to a generic vertex attribute of the current vertex buffer object and specifies its layout."><code>vertexAttribPointer()</code></a>. This step is not obvious, since this binding is almost a side effect. But as a result, accessing <code>aVertexPosition</code> now obtains data from the vertex buffer.</p>
+
+<p>With the association in place between the vertex buffer for our shape and the <code>aVertexPosition</code> attribute used to deliver vertexes one by one into the vertex shader, we're ready to draw the shape by calling <a href="../WebGLRenderingContext/drawArrays.html" title="The WebGLRenderingContext.drawArrays() method of the WebGL API renders primitives from array data."><code>drawArrays()</code></a>.</p>
+
+<p>At this point, the frame has been drawn. All that's left to do is to schedule to draw the next one. That's done here by calling <a href="../Window/requestAnimationFrame.html" title="The window.requestAnimationFrame() method tells the browser that you wish to perform an animation and requests that the browser call a specified function to update an animation before the next repaint. The method takes a callback as an argument to be invoked before the repaint."><code>requestAnimationFrame()</code></a>, which asks that a callback function be executed the next time the browser is ready to update the screen.</p>
+
+<p>Our <code>requestAnimationFrame()</code> callback receives as input a single parameter, <code>currentTime</code>, which specifies the time at which the frame drawing began. We use that and the saved time at which the last frame was drawn, <code>previousTime</code>, along with the number of degrees per second the square should rotate (<code>degreesPerSecond</code>) to calculate the new value of <code>currentAngle</code>. Then the value of <code>previousTime</code> is updated and we call <code>animateScene()</code> to draw the next frame (and in turn schedule the next frame to be drawn, ad infinitum).</p>
+</div>
+
+<a class="dashAnchor" name="//apple_ref/Section/Result"></a><h2 id="Result">Result</h2>
+
+<p>This is a pretty simple example, since it's just drawing one simple object, but the concepts used here extend to much more complex animations.</p>
+
+<p><iframe src="../../../../../../mdn.mozillademos.org/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example%24samples/live-sample2bea.html?revision=1331888" height="500" width="660" id="frame_live-sample" class="live-sample-frame sample-code-frame" frameborder="0"></iframe></p>
+
+<a class="dashAnchor" name="//apple_ref/Section/See%20also"></a><h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="../WebGL_API.html">WebGL API</a></li>
+ <li><a href="Tutorial.html">WebGL tutorial</a></li>
+</ul>
+                  
+                
+              </article>
+
+              <!-- contributors -->
+              <div class="wiki-block contributors">
+                <h2 class="offscreen">Document Tags and Contributors</h2>
+                
+                
+  <div class="tag-attach-list contributors-sub">
+    <svg class="icon icon-tags" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M7 7c0-1.109-.891-2-2-2s-2 .891-2 2 .891 2 2 2 2-.891 2-2zm16.672 9c0 .531-.219 1.047-.578 1.406l-7.672 7.688c-.375.359-.891.578-1.422.578s-1.047-.219-1.406-.578L1.422 13.906C.625 13.125 0 11.609 0 10.5V4c0-1.094.906-2 2-2h6.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422zm6 0c0 .531-.219 1.047-.578 1.406l-7.672 7.688a2.08 2.08 0 0 1-1.422.578c-.812 0-1.219-.375-1.75-.922l7.344-7.344c.359-.359.578-.875.578-1.406s-.219-1.047-.578-1.422L14.422 3.422C13.625 2.625 12.11 2 11 2h3.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422z"></path>
+</svg>
+    <strong>Tags:</strong>&nbsp;
+    <ul class="tags tags-small">
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/2D Animation" rel="nofollow">2D Animation</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/2D Graphics" rel="nofollow">2D Graphics</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Animation" rel="nofollow">Animation</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Drawing" rel="nofollow">Drawing</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Example" rel="nofollow">Example</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Graphics" rel="nofollow">Graphics</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/WebGL" rel="nofollow">WebGL</a></li>
+      
+        <li><a href="../../../tag/WebGL%20API.html" rel="nofollow">WebGL API</a></li>
+      
+    </ul>
+  </div>
+
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-group" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M9.266 14a5.532 5.532 0 0 0-4.141 2H3.031C1.468 16 0 15.25 0 13.516 0 12.25-.047 8 1.937 8c.328 0 1.953 1.328 4.062 1.328.719 0 1.406-.125 2.078-.359A7.624 7.624 0 0 0 7.999 10c0 1.422.453 2.828 1.266 4zM26 23.953C26 26.484 24.328 28 21.828 28H8.172C5.672 28 4 26.484 4 23.953 4 20.422 4.828 15 9.406 15c.531 0 2.469 2.172 5.594 2.172S20.063 15 20.594 15C25.172 15 26 20.422 26 23.953zM10 4c0 2.203-1.797 4-4 4S2 6.203 2 4s1.797-4 4-4 4 1.797 4 4zm11 6c0 3.313-2.688 6-6 6s-6-2.688-6-6 2.688-6 6-6 6 2.688 6 6zm9 3.516C30 15.25 28.531 16 26.969 16h-2.094a5.532 5.532 0 0 0-4.141-2A7.066 7.066 0 0 0 22 10a7.6 7.6 0 0 0-.078-1.031A6.258 6.258 0 0 0 24 9.328C26.109 9.328 27.734 8 28.062 8c1.984 0 1.937 4.25 1.937 5.516zM28 4c0 2.203-1.797 4-4 4s-4-1.797-4-4 1.797-4 4-4 4 1.797 4 4z"></path>
+</svg>
+                    <strong>Contributors to this page:</strong>
+                    
+        <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>
+    
+                  </div>
+                
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-clock" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M14 8.5v7c0 .281-.219.5-.5.5h-5a.494.494 0 0 1-.5-.5v-1c0-.281.219-.5.5-.5H12V8.5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zm6.5 5.5c0-4.688-3.813-8.5-8.5-8.5S3.5 9.313 3.5 14s3.813 8.5 8.5 8.5 8.5-3.813 8.5-8.5zm3.5 0c0 6.625-5.375 12-12 12S0 20.625 0 14 5.375 2 12 2s12 5.375 12 12z"></path>
+</svg>
+                    <strong>Last updated by:</strong>
+                    <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>,
+                    <time datetime="2017-11-30T09:01:13.642042-08:00">Nov 30, 2017, 9:01:13 AM</time>
+                  </div>
+                
+              </div>
+            </div>
+
+            
+              <!-- quick links and approvals strip -->
+              <div id="wiki-left" class="column-strip wiki-column">
+
+                <!-- crumbs -->
+                
+  
+    
+  
+
+                
+                  <!-- quick links -->
+                  
+  <div class="quick-links" id="quick-links">
+    <div class="quick-links-head">Related Topics</div>
+    
+ <ol>
+  <li><a href="../WebGL_API.html"><strong>WebGL API</strong></a></li>
+  <li data-default-state="open"><a href="Tutorial.html"><strong>WebGL tutorial</strong></a>
+   <ol>
+     <li><a href="Tutorial/Getting_started_with_WebGL.html">Getting started with WebGL</a></li>
+     <li><a href="Tutorial/Adding_2D_content_to_a_WebGL_context.html">Adding 2D content to a WebGL context</a></li>
+     <li><a href="Tutorial/Using_shaders_to_apply_color_in_WebGL.html">Using shaders to apply color in WebGL</a></li>
+     <li><a href="Tutorial/Animating_objects_with_WebGL.html">Animating objects with WebGL</a></li>
+     <li><a href="Tutorial/Creating_3D_objects_using_WebGL.html">Creating 3D objects using WebGL</a></li>
+     <li><a href="Tutorial/Using_textures_in_WebGL.html">Using textures in WebGL</a></li>
+     <li><a href="Tutorial/Lighting_in_WebGL.html">Lighting in WebGL</a></li>
+     <li><a href="Tutorial/Animating_textures_in_WebGL.html">Animating textures in WebGL</a></li>
+   </ol>
+  </li>
+  <li data-default-state="open"><a href="#"><strong>Examples and articles</strong></a>
+   <ol>
+    <li><a href="Matrix_math_for_the_web.html">Matrix math for the web</a></li>
+    <li><a href="WebGL_model_view_projection.html">WebGL model view projection</a></li>
+    <li><a href="WebGL_best_practices.html">WebGL best practices</a></li>
+    <li><a href="Using_Extensions.html">Using WebGL extensions</a></li>
+    <li><a href="Basic_2D_animation_example.html">A basic 2D WebGL animation example</a></li>
+   </ol>
+  </li>
+  <li data-default-state="open"><a href="#"><strong>Interfaces</strong></a>
+   <ol>
+    <li><a href="../WebGLRenderingContext.html" title="This example demonstrates how to detect a WebGL rendering context and reports the result to the user."><code>WebGLRenderingContext</code></a></li>
+    <li><a href="../WebGL2RenderingContext.html" title="The WebGL2RenderingContext interface provides the OpenGL ES 3.0 rendering context for the drawing surface of an HTML <canvas> element."><code>WebGL2RenderingContext</code></a></li>
+    <li><a href="../WebGLActiveInfo.html" title="The WebGLActiveInfo interface is part of the WebGL API and represents the information returned by calling the WebGLRenderingContext.getActiveAttrib() and WebGLRenderingContext.getActiveUniform() methods."><code>WebGLActiveInfo</code></a></li>
+    <li><a href="../WebGLBuffer.html" title="The WebGLBuffer interface is part of the WebGL API and represents an opaque buffer object storing data such as vertices or colors."><code>WebGLBuffer</code></a></li>
+    <li><a href="../WebGLContextEvent.html" title="The WebContextEvent interface is part of the WebGL API and is an interface for an event that is generated in response to a status change to the WebGL rendering context."><code>WebGLContextEvent</code></a></li>
+    <li><a href="../WebGLFramebuffer.html" title="The WebGLFramebuffer interface is part of the WebGL API and represents a collection of buffers that serve as a rendering destination."><code>WebGLFramebuffer</code></a></li>
+    <li><a href="../WebGLProgram.html" title="The WebGLProgram is part of the WebGL API and is a combination of two compiled WebGLShaders consisting of a vertex shader and a fragment shader (both written in GLSL). These are then linked into a usable program."><code>WebGLProgram</code></a></li>
+    <li><a href="../WebGLQuery.html" title="The WebGLQuery interface is part of the WebGL 2 API and provides ways to asynchronously query for information. By default, occlusion queries and primitive queries are available."><code>WebGLQuery</code></a></li>
+    <li><a href="../WebGLRenderbuffer.html" title="The WebGLRenderbuffer interface is part of the WebGL API and represents a buffer that can contain an image, or can be source or target of an rendering operation."><code>WebGLRenderbuffer</code></a></li>
+    <li><a href="../WebGLSampler.html" title="The WebGLSampler interface is part of the WebGL 2 API and stores sampling parameters for WebGLTexture access inside of a shader."><code>WebGLSampler</code></a></li>
+    <li><a href="../WebGLShader.html" title="The WebGLShader is part of the WebGL API and can either be a vertex or a fragment shader. A WebGLProgram requires both types of shaders."><code>WebGLShader</code></a></li>
+    <li><a href="../WebGLShaderPrecisionFormat.html" title="The WebGLShaderPrecisionFormat interface is part of the WebGL API and represents the information returned by calling the WebGLRenderingContext.getShaderPrecisionFormat() method."><code>WebGLShaderPrecisionFormat</code></a></li>
+    <li><a href="../WebGLSync.html" title="The WebGLSync interface is part of the WebGL 2 API and is used to synchronize activities between the GPU and the application."><code>WebGLSync</code></a></li>
+    <li><a href="../WebGLTexture.html" title="The WebGLTexture interface is part of the WebGL API and represents an opaque texture object providing storage and state for texturing operations."><code>WebGLTexture</code></a></li>
+    <li><a href="../WebGLTransformFeedback.html" title="The WebGLTransformFeedback interface is part of the WebGL 2 API and enables transform feedback, which is the process of capturing primitives generated by vertex processing. It allows to preserve the post-transform rendering state of an object and resubmit this data multiple times."><code>WebGLTransformFeedback</code></a></li>
+    <li><a href="../WebGLUniformLocation.html" title="The WebGLUniformLocation interface is part of the WebGL API and represents the location of a uniform variable in a shader program."><code>WebGLUniformLocation</code></a></li>
+    <li><a href="../WebGLVertexArrayObject.html" title="The WebGLVertexArrayObject interface is part of the WebGL 2 API, represents vertex array objects (VAOs) pointing to vertex array data, and provides names for different sets of vertex data."><code>WebGLVertexArrayObject</code></a></li>
+   </ol>
+  </li>
+  <li><strong><a href="https://developer.mozilla.org/en-US/docs/MDN">Documentation:</a></strong></li>
+  <li data-default-state="closed"><a href="#">Useful lists</a>
+   <ol>
+    <li><a href="https://developer.mozilla.org/en-US/docs/tag/WebGL">Pages tagged "WebGL"</a></li>
+   </ol>
+  </li>
+  <li data-default-state="closed"><a href="#">Contribute</a>
+   <ol>
+    <li><a href="../../../MDN/Doc_status/API/WebGL.html">WebGL doc status</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/MDN">The MDN project</a></li>
+   </ol>
+  </li>
+ </ol>
+
+  </div>
+                
+
+                <!-- approvals -->
+                
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+    
+      <div class="newsletter-box">
+        <div class="newsletter">
+    <form id="newsletterForm" class="newsletter-form nodisable" name="newsletter-form" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <div class="newsletter-head">
+            <h2 class="newsletter-teaser">Learn the best of web development</h2>
+            <p class="newsletter-description">Get the latest and greatest from MDN delivered straight to your inbox.</p>
+            
+        </div>
+
+        <div class="newsletter-fields">
+            <input type="hidden" id="fmt" name="fmt" value="H">
+            <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+            <div id="newsletterErrors" class="newsletter-errors"></div>
+
+            <div id="newsletterEmail" class="form-group newsletter-group-email">
+                <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+                <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+            </div>
+
+            <div id="newsletterPrivacy" class="form-group form-group-agree newsletter-group-privacy hidden">
+                <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+                <label for="newsletterPrivacyInput">
+                I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+                </label>
+            </div>
+            <div id="newsletterSubmit" class="newsletter-group-submit">
+                <button id="newsletter-submit" type="submit" class="button neutral newsletter-submit">
+                    Sign up now<svg class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg" width="23" height="28" viewBox="0 0 23 28" aria-hidden="true">
+    <path d="M23 15a2.01 2.01 0 0 1-.578 1.422L12.25 26.594c-.375.359-.891.578-1.422.578s-1.031-.219-1.406-.578L8.25 25.422c-.375-.375-.594-.891-.594-1.422s.219-1.047.594-1.422L12.828 18h-11C.703 18 0 17.062 0 16v-2c0-1.062.703-2 1.828-2h11L8.25 7.406a1.96 1.96 0 0 1 0-2.812l1.172-1.172c.375-.375.875-.594 1.406-.594s1.047.219 1.422.594l10.172 10.172c.375.359.578.875.578 1.406z"></path>
+</svg>
+                </button>
+            </div>
+        </div>
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden">
+        <span>Hide Newsletter Sign-up</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+</div>
+      </div>
+    
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example$edit" label="Edit page"></menuitem>
+    <menuitem data-action="/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example$history" label="View page history"></menuitem>
+  </menu>
+
+      </div>
+  </main>
+  <!-- Footer -->
+    <footer id="nav-footer" class="nav-footer"><div class="center"><a href="http://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example">A basic 2D WebGL animation example</a> by <a href="http://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example$history">Mozilla Contributors</a> is licensed under <a href="http://creativecommons.org/licenses/by-sa/2.5/" class="external external-icon">CC-BY-SA 2.5</a>.</div></footer> 
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script async="" type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script src="../../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../../static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><!--[endif]---->
+
+    
+    <script src="../../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../../static/build/js/wiki.b26a4c181df3.js" charset="utf-8" id="wikiscript"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../static/build/js/newsletter.a85c5c2892e5.js" charset="utf-8"></script>
+  
+
+
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 10:53:19 GMT -->
+</body></html>

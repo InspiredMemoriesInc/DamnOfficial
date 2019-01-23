@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/CanvasRenderingContext2D/arcTo$samples/Using_the_arc_method?revision=1350793 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 10:15:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <title>CanvasRenderingContext2D.arcTo()</title>
+    </head>
+    <body>
+        
+            <canvas id="canvas"></canvas>
+
+        
+        
+            <script>
+                var canvas = document.getElementById('canvas');
+var ctx = canvas.getContext('2d');
+
+ctx.beginPath();
+ctx.moveTo(150, 20);
+ctx.arcTo(150, 100, 50, 20, 30);
+ctx.lineTo(50, 20)
+ctx.stroke();
+
+ctx.fillStyle = 'blue';
+// starting point
+ctx.fillRect(150, 20, 10, 10);
+
+ctx.fillStyle = 'red';
+// control point one
+ctx.fillRect(150, 100, 10, 10);
+// control point two
+ctx.fillRect(50, 20, 10, 10);
+
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/CanvasRenderingContext2D/arcTo$samples/Using_the_arc_method?revision=1350793 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 10:15:38 GMT -->
+</html>

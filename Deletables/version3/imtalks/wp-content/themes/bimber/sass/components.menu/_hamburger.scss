@@ -1,0 +1,48 @@
+$_hamburger_width: 30px;
+$_hamburger_height: 20px;
+$_hamburger_line: 2px;
+
+.g1-hamburger {
+    display: block;
+    float: $left;
+    margin-#{$right}: 20px;
+    z-index: 1;
+
+    cursor: pointer;
+    color: inherit;
+}
+
+.g1-hamburger-icon {
+    display: block;
+    @include box-sizing( border-box );
+    position: relative;
+    border-width: $_hamburger_line 0;
+    width: $_hamburger_width;
+    height: $_hamburger_height;
+
+    border-style: solid;
+
+    @include border-radius( $_hamburger_line/2 );
+
+
+    &:before,
+    &:after {
+        display: block;
+        position: absolute;
+        #{$left}: 0;
+        #{$right}: auto;
+        top: 50%;
+        width: 100%;
+        margin-top: -$_hamburger_line/2;
+
+        border-width: $_hamburger_line/2 0;
+
+        border-style: solid;
+
+        content: "";
+    }
+}
+
+.g1-hamburger-label {
+    display: none;
+}

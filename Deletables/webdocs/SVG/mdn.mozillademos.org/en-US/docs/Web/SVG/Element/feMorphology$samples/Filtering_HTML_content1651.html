@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/SVG/Element/feMorphology$samples/Filtering_HTML_content?revision=1371829 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:45:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            p {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3em;
+}
+
+#thin {
+  filter: url(#erode);
+}
+
+#thick {
+  filter: url(#dilate);
+}
+        </style>
+        
+        <title>&lt;feMorphology&gt;</title>
+    </head>
+    <body>
+        
+            <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+  <filter id="erode">
+    <feMorphology operator="erode" radius="1"/>
+  </filter>
+  <filter id="dilate">
+    <feMorphology operator="dilate" radius="2"/>
+  </filter>
+</svg>
+
+<p>Normal text</p>
+<p id="thin">Thinned text</p>
+<p id="thick">Fattened text</p>
+        
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/SVG/Element/feMorphology$samples/Filtering_HTML_content?revision=1371829 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:45:11 GMT -->
+</html>

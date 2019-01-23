@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/HTMLElement/accessKeyLabel$samples/Example?revision=1382225 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:18:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <title>accessKeyLabel</title>
+    </head>
+    <body>
+        
+            <button accesskey="h" title="Caption" id="btn1">Hover me</button>
+
+        
+        
+            <script>
+                var node = document.getElementById('btn1');
+if (node.accessKeyLabel) {
+  node.title += ' [' + node.accessKeyLabel + ']';
+} else {
+  node.title += ' [' + node.accessKey + ']';
+}
+
+node.onclick = function () {
+  var p = document.createElement('p');
+  p.textContent = 'Clicked!';
+  node.parentNode.appendChild(p);
+};
+
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/HTMLElement/accessKeyLabel$samples/Example?revision=1382225 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:18:39 GMT -->
+</html>

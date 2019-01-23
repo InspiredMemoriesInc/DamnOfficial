@@ -1,0 +1,1228 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/tag/CSS?page=5 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:49:53 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  <title>Articles tagged: CSS</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+
+  
+<link rel="preload" href="../../../static/fonts/locales/ZillaSlab-Regular.f9de6143fdfa.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="license" href="#license">
+  
+
+  
+    
+
+    <link href="../../../static/build/styles/mdn.83865b0f7c30.css" rel="stylesheet" type="text/css">
+
+    
+  
+
+    <link href="../../../static/build/styles/wiki.aaf26c13c39b.css" rel="stylesheet" type="text/css">
+
+
+  <link href="../../../static/build/styles/locale-en-US.ca0bca387b42.css" rel="stylesheet" type="text/css">
+
+  
+    <script>
+      /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
+    </script>
+    
+
+
+
+  
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta property="og:site_name" content="MDN Web Docs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="MDN Web Docs">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../static/img/favicon144.e7e21ca263ca.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../static/img/favicon114.d526f38b09c5.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../static/img/favicon72.cc65d1d762a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../static/img/favicon57.de33179910ae.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="../../../static/img/favicon32.7f3da72dcea1.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script async="" type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  
+      <link rel="alternate" type="application/atom+xml" title="Articles tagged: CSS" href="../feeds/atom/tag/CSS">
+  
+
+</head>
+<body class="">
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <!--[endif]---->
+
+  
+  
+      <link rel="alternate" type="application/atom+xml" title="Articles tagged: CSS" href="../feeds/atom/tag/CSS">
+  
+
+
+
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/wiki-compat-tables.9978a5ce31c2.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+
+        // interactive editor config
+        win.mdn.interactiveEditor = {
+            siteUrl: "https://developer.mozilla.org",
+            editorUrl: "https://interactive-examples.mdn.mozilla.net"
+        };
+
+    })(this);
+</script>
+    
+    <ul id="nav-access">
+  <li><a href="#content" id="skip-main">Skip to main content</a></li>
+  <li><a id="skip-language" href="#language">Select language</a></li>
+  <li><a href="#q" id="skip-search">Skip to search</a></li>
+</ul>
+
+    <!-- Header -->
+    <header id="main-header" class="header-main">
+      <a href="https://developer.mozilla.org/en-US/" class="logo">MDN Web Docs</a>
+      <div class="nav-toolbox-wrapper">
+        <nav id="main-nav" class="nav-main" role="navigation">
+    <ul>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web">Technologies
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-tech-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+                    <li><a href="../Web/CSS.html">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API">APIs / DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn">References &amp; Guides
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-learn-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-contact-submenu">
+              <div class="submenu-column">
+                <ul>
+                  <li>
+                      <a href="https://support.mozilla.org/">Get Firefox help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://stackoverflow.com/">Get web development help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                      <a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/tag/CSS%3Fpage%3D5">Report a content problem
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</nav>
+        <div id="toolbox" class="toolbox">
+  <ul>
+    
+    <li class="nav-login"><div class="login">
+    
+        
+        <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FCSS%3Fpage%3D5" class="login-link js-login-link" data-service="GitHub" rel="nofollow">
+            Sign in<svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+    <title>Github</title>
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path>
+</svg>
+        </a>
+    
+</div></li>
+  </ul>
+</div>
+      </div>
+      <form id="nav-main-search" action="https://developer.mozilla.org/en-US/search" method="get" role="search" class="nav-main-search">
+  <div class="search-wrap">
+    <label for="main-q" class="offscreen">Search</label>
+    <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" aria-hidden="true">
+    <span class="search-trigger">
+        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true">
+    <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path>
+</svg>
+    </span>
+    <button type="submit" class="offscreen">Search</button>
+    <button type="button" id="close-header-search" class="close-header-search transparent">
+        <span class="offscreen">Close search</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+  </div>
+</form>
+    </header> 
+
+  <!-- Content will go here -->
+  <main id="content">
+      
+      <div class="center clear">
+      
+
+    <div id="document-list" class="boxed">
+      <h1>Articles tagged: CSS</h1>
+      
+        
+  <ol class="pagination">
+  
+    <li class="prev">
+      <a href="CSSfdb0.html?page=4">
+        Previous
+      </a>
+    </li>
+  
+  
+    <li><a href="CSS2679.html?page=1">1</a></li>
+    
+  
+  
+    <li>
+      <a href="CSS4658.html?page=2">2</a>
+    </li>
+  
+    <li>
+      <a href="CSS9ba9.html?page=3">3</a>
+    </li>
+  
+    <li>
+      <a href="CSSfdb0.html?page=4">4</a>
+    </li>
+  
+    <li class="selected">
+      <a href="CSSaf4d.html?page=5">5</a>
+    </li>
+  
+    <li>
+      <a href="CSSc575.html?page=6">6</a>
+    </li>
+  
+    <li>
+      <a href="CSS235c.html?page=7">7</a>
+    </li>
+  
+    <li>
+      <a href="CSSfdfa.html?page=8">8</a>
+    </li>
+  
+  
+    
+      <li class="skip">…</li>
+    
+    <li><a href="CSS1c8b.html?page=11">11</a></li>
+  
+  
+    <li class="next">
+      <a href="CSSc575.html?page=6">
+        Next
+      </a>
+    </li>
+  
+  </ol>
+
+
+
+        <p>Found 1100 documents</p>
+        <ul class="document-list">
+          
+            <li>
+              <a href="../Web/CSS/_empty.html">Web/CSS/:empty</a>
+                
+                  <small>The :empty CSS pseudo-class represents any element that has no children. Children can be either...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_enabled.html">Web/CSS/:enabled</a>
+                
+                  <small>The :enabled CSS pseudo-class represents any enabled element. An element is enabled if it can be...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_first.html">Web/CSS/:first</a>
+                
+                  <small>The :first CSS pseudo-class, used with the&nbsp; @page at-rule, represents the first page of a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_first-child.html">Web/CSS/:first-child</a>
+                
+                  <small>The :first-child CSS pseudo-class represents the first element among a group of sibling elements.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_first-of-type.html">Web/CSS/:first-of-type</a>
+                
+                  <small>The :first-of-type CSS pseudo-class represents the first element of its type among a group of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_focus.html">Web/CSS/:focus</a>
+                
+                  <small>The :focus CSS pseudo-class represents an element (such as a form input) that has received...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_focus-visible.html">Web/CSS/:focus-visible</a>
+                
+                  <small>The :focus-visible pseudo-class applies while an element matches the focus pseudo-class and the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_focus-within.html">Web/CSS/:focus-within</a>
+                
+                  <small>The :focus-within CSS pseudo-class represents an element that has received focus or contains an...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_fullscreen.html">Web/CSS/:fullscreen</a>
+                
+                  <small>The :fullscreen CSS pseudo-class represents an element that's displayed when the browser is in...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_has.html">Web/CSS/:has</a>
+                
+                  <small>The :has() CSS pseudo-class represents an element if any of the selectors passed as parameters...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_host.html">Web/CSS/:host</a>
+                
+                  <small>The :host CSS pseudo-class selects the shadow host of the shadow DOM containing the CSS it is...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_host().html">Web/CSS/:host()</a>
+                
+                  <small>The :host() CSS pseudo-class function selects the shadow host of the shadow DOM containing the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_host-context().html">Web/CSS/:host-context()</a>
+                
+                  <small>The :host-context() CSS pseudo-class function selects the shadow host of the shadow DOM...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_hover.html">Web/CSS/:hover</a>
+                
+                  <small>The :hover CSS pseudo-class matches when the user interacts with an element with a pointing...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_in-range.html">Web/CSS/:in-range</a>
+                
+                  <small>The :in-range CSS pseudo-class represents an input element whose current value is within the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_indeterminate.html">Web/CSS/:indeterminate</a>
+                
+                  <small>The :indeterminate CSS pseudo-class represents any form element whose state is indeterminate.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_invalid.html">Web/CSS/:invalid</a>
+                
+                  <small>The :invalid CSS pseudo-class represents any input or other form element whose contents fail to validate.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_lang.html">Web/CSS/:lang</a>
+                
+                  <small>The :lang() CSS pseudo-class matches elements based on the language they are determined to be in.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_last-child.html">Web/CSS/:last-child</a>
+                
+                  <small>The :last-child CSS pseudo-class represents the last element among a group of sibling elements.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_last-of-type.html">Web/CSS/:last-of-type</a>
+                
+                  <small>The :last-of-type CSS pseudo-class represents the last element of its type among a group of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_left.html">Web/CSS/:left</a>
+                
+                  <small>The :left CSS pseudo-class, used with the @page at-rule, represents all left-hand pages of a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_link.html">Web/CSS/:link</a>
+                
+                  <small>The :link CSS pseudo-class represents an element that has not yet been visited. It matches every...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_matches.html">Web/CSS/:matches</a>
+                
+                  <small>The :matches() CSS pseudo-class function takes a selector list as its argument, and selects any...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_not.html">Web/CSS/:not</a>
+                
+                  <small>The :not() CSS pseudo-class represents elements that do not match a list of selectors. Since it...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_nth-child.html">Web/CSS/:nth-child</a>
+                
+                  <small>The :nth-child() CSS pseudo-class matches elements based on their position in a group of siblings.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_nth-last-child.html">Web/CSS/:nth-last-child</a>
+                
+                  <small>The :nth-last-child() CSS pseudo-class matches elements based on their position among a group of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_nth-last-of-type.html">Web/CSS/:nth-last-of-type</a>
+                
+                  <small>The :nth-last-of-type() CSS pseudo-class matches elements of a given type, based on their...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_nth-of-type.html">Web/CSS/:nth-of-type</a>
+                
+                  <small>The :nth-of-type() CSS pseudo-class matches elements of a given type, based on their position...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_only-child.html">Web/CSS/:only-child</a>
+                
+                  <small>The :only-child CSS pseudo-class represents an element without any siblings. This is the same as...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_only-of-type.html">Web/CSS/:only-of-type</a>
+                
+                  <small>The :only-of-type CSS pseudo-class represents an element that has no siblings of the same type.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_optional.html">Web/CSS/:optional</a>
+                
+                  <small>The :optional CSS pseudo-class represents any input, select, or textarea element that does not...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_out-of-range.html">Web/CSS/:out-of-range</a>
+                
+                  <small>The :out-of-range CSS pseudo-class represents an input element whose current value is outside...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_placeholder-shown.html">Web/CSS/:placeholder-shown</a>
+                
+                  <small>The :placeholder-shown CSS pseudo-class represents any input or textarea element that is...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_read-only.html">Web/CSS/:read-only</a>
+                
+                  <small>The :read-only CSS pseudo-class represents an element (such as a locked text input) that is not...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_read-write.html">Web/CSS/:read-write</a>
+                
+                  <small>The :read-write CSS pseudo-class represents an element (such as a text input) that is editable...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_required.html">Web/CSS/:required</a>
+                
+                  <small>The :required CSS pseudo-class represents any input, select, or textarea&nbsp;element that has the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_right.html">Web/CSS/:right</a>
+                
+                  <small>The :right CSS pseudo-class, used with the @page at-rule, represents all right-hand pages of a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_root.html">Web/CSS/:root</a>
+                
+                  <small>The :root CSS pseudo-class matches the root element of a tree representing the document. In...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_scope.html">Web/CSS/:scope</a>
+                
+                  <small>The :scope CSS pseudo-class represents elements that are a reference point for selectors to...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_target.html">Web/CSS/:target</a>
+                
+                  <small>The :target CSS pseudo-class represents a unique element (the target element) with an id...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_valid.html">Web/CSS/:valid</a>
+                
+                  <small>The :valid CSS pseudo-class represents any input or other form element whose contents validate...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/_visited.html">Web/CSS/:visited</a>
+                
+                  <small>The :visited CSS pseudo-class represents links that the user has already visited. For privacy...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40charset.html">Web/CSS/@charset</a>
+                
+                  <small>The @charset CSS at-rule specifies the character encoding used in the style sheet. It must be...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40counter-style.html">Web/CSS/@counter-style</a>
+                
+                  <small>The @counter-style CSS at-rule lets you define counter styles that are not part of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40counter-style/additive-symbols.html">Web/CSS/@counter-style/additive-symbols</a>
+                
+                  <small>The additive-symbols descriptor lets you specify symbols when the value of a counter system...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40counter-style/fallback.html">Web/CSS/@counter-style/fallback</a>
+                
+                  <small>The fallback descriptor can be used to specify a counter style to fall back to if the current...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40counter-style/negative.html">Web/CSS/@counter-style/negative</a>
+                
+                  <small>When defining custom counter styles, the negative descriptor lets you alter the representations...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40counter-style/pad.html">Web/CSS/@counter-style/pad</a>
+                
+                  <small>The pad descriptor can be used with custom counter style definitions when you need the marker...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40counter-style/prefix.html">Web/CSS/@counter-style/prefix</a>
+                
+                  <small>The prefix descriptor of the @counter-style rule specifies content that will be prepended to the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40counter-style/range.html">Web/CSS/@counter-style/range</a>
+                
+                  <small>When defining custom counter styles, the range descriptor lets the author specify a range of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40counter-style/speak-as.html">Web/CSS/@counter-style/speak-as</a>
+                
+                  <small>The speak-as descriptor specifies how a counter symbol constructed with a given @counter-style...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40counter-style/suffix.html">Web/CSS/@counter-style/suffix</a>
+                
+                  <small>The suffix descriptor of the@counter-style rule specifies content that will be appended to the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40counter-style/symbols.html">Web/CSS/@counter-style/symbols</a>
+                
+                  <small>The symbols CSS descriptor is used to specify the symbols that the specified counter system will...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40counter-style/system.html">Web/CSS/@counter-style/system</a>
+                
+                  <small>The system descriptor specifies the algorithm to be used for converting the integer value of a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40document.html">Web/CSS/@document</a>
+                
+                  <small>The @document CSS at-rule restricts the style rules contained within it based on the URL of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40font-face.html">Web/CSS/@font-face</a>
+                
+                  <small>The @font-face CSS at-rule specifies a custom font with which to display text; the font can be...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40font-face/font-display.html">Web/CSS/@font-face/font-display</a>
+                
+                  <small>The font-display descriptor determines how a font face is displayed based on whether and when it...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40font-face/font-family.html">Web/CSS/@font-face/font-family</a>
+                
+                  <small>The font-family&nbsp;CSS descriptor allows authors to specify the font family for the font specified...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40font-face/font-style.html">Web/CSS/@font-face/font-style</a>
+                
+                  <small>The font-style CSS descriptor allows authors to specify font styles for the fonts specified in...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40font-face/font-variation-settings.html">Web/CSS/@font-face/font-variation-settings</a>
+                
+                  <small>The font-variation-settings CSS descriptor allows authors to specify low-level OpenType or...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40font-face/src.html">Web/CSS/@font-face/src</a>
+                
+                  <small>The src CSS descriptor of the @font-face rule specifies the resource containing font data. It is...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40font-face/unicode-range.html">Web/CSS/@font-face/unicode-range</a>
+                
+                  <small>The unicode-range CSS descriptor sets the specific range of characters to be used from a font...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40font-feature-values.html">Web/CSS/@font-feature-values</a>
+                
+                  <small>The @font-feature-values CSS at-rule lets you use a common name in the font-variant-alternates...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40import.html">Web/CSS/@import</a>
+                
+                  <small>The @import CSS at-rule is used to import style rules from other style sheets. These rules must...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40keyframes.html">Web/CSS/@keyframes</a>
+                
+                  <small>The @keyframes CSS at-rule controls the intermediate steps in a CSS animation sequence by...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40media.html">Web/CSS/@media</a>
+                
+                  <small>The @media CSS at-rule can be used to apply part of a style sheet based on the result of one or...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40media/-moz-device-pixel-ratio.html">Web/CSS/@media/-moz-device-pixel-ratio</a>
+                
+                  <small>The -moz-device-pixel-ratio Gecko-only CSS media feature can be used to apply styles based on...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40media/-moz-mac-graphite-theme.html">Web/CSS/@media/-moz-mac-graphite-theme</a>
+                
+                  <small>The -moz-mac-graphite-theme Gecko-only CSS media feature can be used to apply styles based on...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40media/-moz-maemo-classic.html">Web/CSS/@media/-moz-maemo-classic</a>
+                
+                  <small>The -moz-maemo-classic Gecko-only CSS media feature can be used to apply styles based on whether...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40media/-moz-os-version.html">Web/CSS/@media/-moz-os-version</a>
+                
+                  <small>The -moz-os-version Gecko-only CSS media feature can be used to apply styles based on the user's...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40media/-moz-scrollbar-end-backward.html">Web/CSS/@media/-moz-scrollbar-end-backward</a>
+                
+                  <small>Media: media/visual Accepts min/max prefixes: no</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40media/-moz-scrollbar-end-forward.html">Web/CSS/@media/-moz-scrollbar-end-forward</a>
+                
+                  <small>Media: media/visual Accepts min/max prefixes: no</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40media/-moz-scrollbar-start-backward.html">Web/CSS/@media/-moz-scrollbar-start-backward</a>
+                
+                  <small>Media: media/visual Accepts min/max prefixes: no</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40media/-moz-scrollbar-start-forward.html">Web/CSS/@media/-moz-scrollbar-start-forward</a>
+                
+                  <small>Media: media/visual Accepts min/max prefixes: no</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40media/-moz-scrollbar-thumb-proportional.html">Web/CSS/@media/-moz-scrollbar-thumb-proportional</a>
+                
+                  <small>Media: media/visual Accepts min/max prefixes: no</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40media/-moz-touch-enabled.html">Web/CSS/@media/-moz-touch-enabled</a>
+                
+                  <small>Media: media/visual Accepts min/max prefixes: no</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40media/-moz-windows-accent-color-in-titlebar.html">Web/CSS/@media/-moz-windows-accent-color-in-titlebar</a>
+                
+                  <small>The -moz-windows-accent-color-in-titlebar Gecko-only CSS media feature can be used to apply...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40media/-moz-windows-classic.html">Web/CSS/@media/-moz-windows-classic</a>
+                
+                  <small>Media: media/visual Accepts min/max prefixes: no</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40media/-moz-windows-compositor.html">Web/CSS/@media/-moz-windows-compositor</a>
+                
+                  <small>Media: media/visual Accepts min/max prefixes: no</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40media/-moz-windows-default-theme.html">Web/CSS/@media/-moz-windows-default-theme</a>
+                
+                  <small>Media: media/visual Accepts min/max prefixes: no</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40media/-moz-windows-glass.html">Web/CSS/@media/-moz-windows-glass</a>
+                
+                  <small>Media: media/visual Accepts min/max prefixes: no</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40media/-moz-windows-theme.html">Web/CSS/@media/-moz-windows-theme</a>
+                
+                  <small>The -moz-windows-theme Gecko-only CSS media feature is useful for customizing application skins...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40media/-webkit-animation.html">Web/CSS/@media/-webkit-animation</a>
+                
+                  <small>The -webkit-animation Boolean CSS media feature is a Chrome extension whose value is true if...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40media/-webkit-device-pixel-ratio.html">Web/CSS/@media/-webkit-device-pixel-ratio</a>
+                
+                  <small>The -webkit-device-pixel-ratio is a non-standard Boolean CSS media feature which is an...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40media/-webkit-transform-2d.html">Web/CSS/@media/-webkit-transform-2d</a>
+                
+                  <small>The -webkit-transform-2d Boolean CSS media feature is a Chrome extension whose value is true if...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40media/-webkit-transform-3d.html">Web/CSS/@media/-webkit-transform-3d</a>
+                
+                  <small>The -webkit-transform-3d Boolean CSS media feature is a Chrome extension whose value is true if...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40media/-webkit-transition.html">Web/CSS/@media/-webkit-transition</a>
+                
+                  <small>The -webkit-transition Boolean CSS media feature is a Chrome extension whose value is true if...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40media/any-hover.html">Web/CSS/@media/any-hover</a>
+                
+                  <small>The&nbsp;any-hover CSS media feature can be used to test whether any available input mechanism can...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40media/any-pointer.html">Web/CSS/@media/any-pointer</a>
+                
+                  <small>The&nbsp;any-pointer CSS media feature tests whether the user has any pointing device (such as a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40media/aspect-ratio.html">Web/CSS/@media/aspect-ratio</a>
+                
+                  <small>The&nbsp;aspect-ratio CSS media feature can be used to test the aspect ratio of the viewport.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40media/color.html">Web/CSS/@media/color</a>
+                
+                  <small>The&nbsp;color&nbsp;CSS media feature can be used to test the number of bits per color component (red,...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40media/color-gamut.html">Web/CSS/@media/color-gamut</a>
+                
+                  <small>The color-gamut CSS media feature can be used to test the approximate range of colors that are...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40media/color-index.html">Web/CSS/@media/color-index</a>
+                
+                  <small>The&nbsp;color-index&nbsp;CSS media feature can be used to test the number of entries in the output...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40media/device-aspect-ratio.html">Web/CSS/@media/device-aspect-ratio</a>
+                
+                  <small>The&nbsp;device-aspect-ratio CSS media feature can be used to test the width-to-height aspect ratio...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40media/device-height.html">Web/CSS/@media/device-height</a>
+                
+                  <small>The device-height CSS media feature can be used to test the height of an output device's...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40media/device-width.html">Web/CSS/@media/device-width</a>
+                
+                  <small>The device-width CSS media feature can be used to test the width of an output device's rendering surface.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40media/display-mode.html">Web/CSS/@media/display-mode</a>
+                
+                  <small>The display-mode&nbsp;CSS media feature can be used to test the display mode of an application. You...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40media/grid.html">Web/CSS/@media/grid</a>
+                
+                  <small>The&nbsp;grid&nbsp;CSS media feature can be used to test whether the output device uses a&nbsp;grid-based screen.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40media/height.html">Web/CSS/@media/height</a>
+                
+                  <small>The&nbsp;height&nbsp;CSS media feature can be used to apply styles based on the height of the viewport (or...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/CSS/%40media/hover.html">Web/CSS/@media/hover</a>
+                
+                  <small>The&nbsp;hover CSS media feature can be used to test whether the user's&nbsp;primary input mechanism can...</small>
+                
+            </li>
+          
+        </ul>
+        
+  <ol class="pagination">
+  
+    <li class="prev">
+      <a href="CSSfdb0.html?page=4">
+        Previous
+      </a>
+    </li>
+  
+  
+    <li><a href="CSS2679.html?page=1">1</a></li>
+    
+  
+  
+    <li>
+      <a href="CSS4658.html?page=2">2</a>
+    </li>
+  
+    <li>
+      <a href="CSS9ba9.html?page=3">3</a>
+    </li>
+  
+    <li>
+      <a href="CSSfdb0.html?page=4">4</a>
+    </li>
+  
+    <li class="selected">
+      <a href="CSSaf4d.html?page=5">5</a>
+    </li>
+  
+    <li>
+      <a href="CSSc575.html?page=6">6</a>
+    </li>
+  
+    <li>
+      <a href="CSS235c.html?page=7">7</a>
+    </li>
+  
+    <li>
+      <a href="CSSfdfa.html?page=8">8</a>
+    </li>
+  
+  
+    
+      <li class="skip">…</li>
+    
+    <li><a href="CSS1c8b.html?page=11">11</a></li>
+  
+  
+    <li class="next">
+      <a href="CSSc575.html?page=6">
+        Next
+      </a>
+    </li>
+  
+  </ol>
+
+
+
+      
+    </div>
+
+
+      </div>
+  </main>
+  <!-- Footer -->
+     
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script async="" type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script src="../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><!--[endif]---->
+
+    
+    <script src="../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../static/build/js/wiki.b26a4c181df3.js" charset="utf-8" id="wikiscript"></script>
+
+
+
+  
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/tag/CSS?page=5 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:49:53 GMT -->
+</body></html>

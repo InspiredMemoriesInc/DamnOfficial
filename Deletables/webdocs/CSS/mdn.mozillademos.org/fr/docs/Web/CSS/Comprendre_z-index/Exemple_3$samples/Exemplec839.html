@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/fr/docs/Web/CSS/Comprendre_z-index/Exemple_3$samples/Exemple?revision=1091339 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:52:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            div {
+  font: 12px Arial;
+}
+
+span.bold {
+  font-weight: bold;
+}
+
+div.lev1 {
+  width: 250px;
+  height: 70px;
+  position: relative;
+  border: 2px outset #669966;
+  background-color: #ccffcc;
+  padding-left: 5px;
+}
+
+#container1 {
+  z-index: 1;
+  position: absolute;
+  top: 30px;
+  left: 75px;
+}
+
+div.lev2 {
+  opacity: 0.9;
+  width: 200px;
+  height: 60px;
+  position: relative;
+  border: 2px outset #990000;
+  background-color: #ffdddd;
+  padding-left: 5px;
+}
+
+#container2 {
+  z-index: 1;
+  position: absolute;
+  top: 20px;
+  left: 110px;
+}
+
+div.lev3 {
+  z-index: 10;
+  width: 100px;
+  position: relative;
+  border: 2px outset #000099;
+  background-color: #ddddff;
+  padding-left: 5px;
+}
+        </style>
+        
+        <title>Exemple d&#39;empilement 3</title>
+    </head>
+    <body>
+        
+            <br/>
+
+<div class="lev1">
+<span class="bold">LEVEL #1</span>
+  <div id="container1">
+    <div class="lev2">
+      <br/><span class="bold">LEVEL #2</span>
+      <br/>z-index: 1;
+      <div id="container2">  
+        <div class="lev3"><span class="bold">LEVEL #3</span></div>
+        <div class="lev3"><span class="bold">LEVEL #3</span></div>
+        <div class="lev3"><span class="bold">LEVEL #3</span></div>
+        <div class="lev3"><span class="bold">LEVEL #3</span></div>
+        <div class="lev3"><span class="bold">LEVEL #3</span></div>
+        <div class="lev3"><span class="bold">LEVEL #3</span></div>
+        <div class="lev3"><span class="bold">LEVEL #3</span></div>
+        <div class="lev3"><span class="bold">LEVEL #3</span></div>
+        <div class="lev3"><span class="bold">LEVEL #3</span></div>
+        <div class="lev3"><span class="bold">LEVEL #3</span></div>
+        <div class="lev3"><span class="bold">LEVEL #3</span></div>  
+      </div>
+    </div>
+    <div class="lev2">
+      <br/><span class="bold">LEVEL #2</span>
+      <br/>z-index: 1;
+    </div>    
+  </div>
+</div>
+
+<div class="lev1">
+  <span class="bold">LEVEL #1</span>
+</div>
+
+<div class="lev1">
+  <span class="bold">LEVEL #1</span>
+</div>
+
+<div class="lev1">
+  <span class="bold">LEVEL #1</span>
+</div>
+
+        
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/fr/docs/Web/CSS/Comprendre_z-index/Exemple_3$samples/Exemple?revision=1091339 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:52:48 GMT -->
+</html>

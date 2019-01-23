@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin$samples/miter?revision=1389693 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:46:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            html,body,svg { height:100% }
+        </style>
+        
+        <title>stroke-linejoin</title>
+    </head>
+    <body>
+        
+            <svg viewBox="0 -1 10 7" xmlns="http://www.w3.org/2000/svg">
+  <!-- Effect of the "miter" value -->
+  <path d="M1,5 l2,-3 l2,3" stroke="black" fill="none"
+        stroke-linejoin="miter" />
+
+  <!-- Effect of the "miter" value on a sharp angle
+       where de default miter limit is exceeded -->
+  <path d="M7,5 l0.75,-3 l0.75,3" stroke="black" fill="none"
+        stroke-linejoin="miter" />
+
+  <!-- the following red dotted line show where
+       the miter value falls back to the bevel value -->
+  <path d="M0,0 h10" stroke="red" stroke-dasharray="0.05"  stroke-width="0.025"/>
+
+  <!-- the following pink lines highlight the position of the path for each stroke -->
+  <g>
+    <path d="M1,5 l2,-3 l2,3" stroke="pink" fill="none" stroke-width="0.025" />
+    <circle cx="1" cy="5" r="0.05" fill="pink" />
+    <circle cx="3" cy="2" r="0.05" fill="pink" />
+    <circle cx="5" cy="5" r="0.05" fill="pink" />
+    
+    <path d="M7,5 l0.75,-3 l0.75,3" stroke="pink" fill="none" stroke-width="0.025" />
+    <circle cx="7"    cy="5" r="0.05" fill="pink" />
+    <circle cx="7.75" cy="2" r="0.05" fill="pink" />
+    <circle cx="8.5"  cy="5" r="0.05" fill="pink" />
+  </g>
+</svg>
+        
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin$samples/miter?revision=1389693 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:46:35 GMT -->
+</html>

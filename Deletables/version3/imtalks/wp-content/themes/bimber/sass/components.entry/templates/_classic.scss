@@ -1,0 +1,14 @@
+.entry-header {
+    .entry-categories {
+        float: #{$left};
+    }
+
+    .entry-flags {
+        position: static;
+        float: #{$right};
+    }
+
+    .entry-title {
+        clear: both;
+    }
+}

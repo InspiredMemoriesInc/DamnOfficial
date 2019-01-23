@@ -1,0 +1,149 @@
+/* General styles */
+
+hr {
+  width: 80%;
+  margin: 50px auto;
+}
+
+/* Simple size/length example */
+
+#length-simple p {
+  margin: 5px;
+  padding: 10px;
+  border: 2px solid black;
+  background-color: cyan;
+}
+
+/* length units example */
+
+#length-simple p:nth-child(1) {
+  width: 150px;
+  font-size: 18px;
+}
+
+#length-simple p:nth-child(2) {
+  width: 250px;
+  font-size: 24px;
+}
+
+#length-simple p:nth-child(3) {
+  width: 350px;
+  font-size: 30px;
+}
+
+/* unitless number example */
+
+#unitless p {
+  line-height: 1.5;
+}
+
+/* CSS animation example */
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#animation p {
+  color: red;
+  width: 100px;
+  font-size: 40px;
+  transform-origin: center;
+}
+
+#animation p:hover {
+  animation-name: rotate;
+  animation-duration: 0.6s;
+  animation-timing-function: linear;
+  animation-iteration-count: 5;
+}
+
+/* Percentage example */
+
+#percentage div {
+  margin: 10px;
+  font-size: 200%;
+  color: white;
+  height: 150px;
+  border: 2px solid black;
+}
+
+#percentage div:nth-child(1) {
+  background-color: red;
+  width: 1300px;
+}
+
+#percentage div:nth-child(2) {
+  background-color: blue;
+  width: 75%;
+}
+
+/* Color example */
+
+/* equivalent to the red keyword */
+#color p:nth-child(1) {
+  background-color: rgb(255,0,0);
+}
+
+/* equivalent to the blue keyword */
+#color p:nth-child(2) {
+  background-color: rgb(0,0,255);
+}
+
+/* has no exact keyword equivalent */
+#color p:nth-child(3) {
+  background-color: rgb(224,176,255);
+}
+
+/* length playground for live sample */
+
+#length-playground .outer {
+  width: 100%;
+  height: 200px;
+  background-color: red;
+}
+
+#length-playground .inner {
+  width: 550px;
+  height: 200px;
+  background-color: blue;
+}
+
+/* color playground for live sample */
+
+#color-playground .first {
+  background-color: red;
+  width: 400px;
+  height: 200px;
+  top: 0;
+  left: 100px;
+}
+
+#color-playground .second {
+  background-color: blue;
+  width: 200px;
+  height: 200px;
+  top: -50px;
+  left: 125px;
+}
+
+#color-playground .third {
+  background-color: pink;
+  width: 200px;
+  height: 300px;
+  top: -375px;
+  left: 250px;
+}
+
+#color-playground div {
+  position: relative;
+}
+ #main-header {display:none !important} #toc.fixed { position: static !important; overflow-y: visible !important; } #redesignNotice {display:none !important} .contributors {display:none !important} .wiki-left-present:not(.wiki-left-closed) #wiki-left {display:none !important} .wiki-left-present:not(.wiki-left-closed) #toc.fixed {width: 100% !important; max-height:none !important} #wiki-content {width:100% !important} #wiki-content {float:left !important} .notification-tray, .section-edit {display:none !important} .communitybox, #wiki-controls {display:none !important} .syntaxbox-help{display:none !important} .article-meta { display:none !important} #wiki-right {padding-bottom: 25px !important; width:100% !important} .column-strip.quick-links {margin-bottom:0px !important} .redesign-beta-notice {display:none !important} #tabzilla-panel {display:none !important} main>.center {padding-top:10px !important} .share {display:none !important} .breadcrumbs {display:none !important} .global-notice, .page-buttons {display:none !important} .crumbs {display:none !important} .languages {display:none !important} #toc {max-height:none !important} .offline-notice {display:none} #redirected-from {display:none} #masthead {display:none}
+#nav-toolbar {display:none} .line-highlight:before, .line-highlight[data-end]:after {display:none !important} #helpful-survey {display:none !important}
+#page-buttons{display:none} .contributor-avatars {display:none !important} .document-head { background-color:white !important; padding: 0px 0 20px !important} .newsletter-box {display:none !important} .center {max-width:none !important} #wiki-column-container {overflow:visible !important} .sample-code-frame {padding:0px !important; border: none !important} #sessionMsg.errormsg{display:none}
+.page-watch {display:none} .document-head h1 {margin-top:10px !important} #wikiArticle {border-bottom:0px !important} #wiki-content,#wiki-left,#wiki-right{margin-right:0;width:auto!important;float:none;padding-bottom:40px}#wiki-right #toc{padding:10px 20px}#wiki-right #toc .toggler{pointer-events:auto;color:#387894}#wiki-right #toc .toggler i{display:inline-block}#wiki-right #toc .toggle-container{display:none}.no-js #wiki-right #toc .toggle-container{display:block}#wiki-column-container,#wiki-content{width:auto!important} #wiki-column-container, #wiki-content {width:100% !important} #kserrors {display:none !important} .banner, .blockIndicator, .geckoVersionNote, .inheritsbox, .note, .notice, .overheadIndicator, .standardNoteBlock, .warning, .text-content p, .text-content dl, .text-content ol, .text-content ul {max-width:none !important} .summary {border:0px !important} body {font-size:16px}

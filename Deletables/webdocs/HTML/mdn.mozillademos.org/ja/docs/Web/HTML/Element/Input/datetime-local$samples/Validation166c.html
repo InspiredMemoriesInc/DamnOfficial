@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/ja/docs/Web/HTML/Element/Input/datetime-local$samples/Validation?revision=1393180 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:18:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            div {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+label {
+  display: inline-block;
+  width: 300px;
+}
+
+input:invalid+span:after {
+    content: '✖';
+    padding-left: 5px;
+}
+
+input:valid+span:after {
+    content: '✓';
+    padding-left: 5px;
+}
+        </style>
+        
+        <title>&lt;input type=&#34;datetime-local&#34;&gt;</title>
+    </head>
+    <body>
+        
+            <form>
+    <div>
+        <label for="party">希望するパーティーの日時を選択して下さい (必須、6月1日午前8:30～6月30日午後4:30) </label>
+        <input id="party" type="datetime-local" name="partydate" min="2017-06-01T08:30" max="2017-06-30T16:30" required>
+        <span class="validity"></span>
+    </div>
+    <div>
+        <input type="submit" value="予約する！">
+    </div>
+</form>
+        
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/ja/docs/Web/HTML/Element/Input/datetime-local$samples/Validation?revision=1393180 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:18:39 GMT -->
+</html>

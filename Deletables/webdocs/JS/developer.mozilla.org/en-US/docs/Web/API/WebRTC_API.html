@@ -1,0 +1,1007 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/WebRTC_API by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 08:50:16 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  <title>WebRTC API</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+
+  
+<link rel="preload" href="../../../../static/fonts/locales/ZillaSlab-Regular.f9de6143fdfa.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="license" href="#license">
+  
+
+  
+    
+    
+
+    <link href="../../../../static/build/styles/mdn.83865b0f7c30.css" rel="stylesheet" type="text/css">
+
+    
+  
+
+    <link href="../../../../static/build/styles/wiki.aaf26c13c39b.css" rel="stylesheet" type="text/css">
+
+
+    
+
+  <link href="../../../../static/build/styles/locale-en-US.ca0bca387b42.css" rel="stylesheet" type="text/css">
+
+  
+    <script>
+      /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
+    </script>
+    
+
+
+
+  
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta property="og:site_name" content="MDN Web Docs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="MDN Web Docs">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../static/img/favicon144.e7e21ca263ca.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../static/img/favicon114.d526f38b09c5.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../static/img/favicon72.cc65d1d762a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../../static/img/favicon57.de33179910ae.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="../../../../static/img/favicon32.7f3da72dcea1.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script async="" type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  <link rel="dns-prefetch" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API$json">
+  <link rel="canonical" href="WebRTC_API.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="WebRTC_API.html" title="WebRTC API">
+  
+    
+      <link rel="alternate" hreflang="es" href="https://developer.mozilla.org/es/docs/Web/API/WebRTC_API" title="API de WebRTC">
+    
+      <link rel="alternate" hreflang="fr" href="https://developer.mozilla.org/fr/docs/Web/API/WebRTC_API" title="L'API WebRTC">
+    
+      <link rel="alternate" hreflang="id" href="https://developer.mozilla.org/id/docs/Web/API/WebRTC_API" title="WebRTC API">
+    
+      <link rel="alternate" hreflang="ja" href="https://developer.mozilla.org/ja/docs/Web/API/WebRTC_API" title="WebRTC API">
+    
+      <link rel="alternate" hreflang="ko" href="https://developer.mozilla.org/ko/docs/Web/API/WebRTC_API" title="WebRTC API">
+    
+      <link rel="alternate" hreflang="pt-BR" href="https://developer.mozilla.org/pt-BR/docs/Web/API/WebRTC_API" title="WebRTC API">
+    
+      <link rel="alternate" hreflang="pt-PT" href="https://developer.mozilla.org/pt-PT/docs/Web/API/API_WebRTC" title="API de WebRTC">
+    
+      <link rel="alternate" hreflang="ru" href="https://developer.mozilla.org/ru/docs/Web/API/WebRTC_API" title="WebRTC API">
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebRTC_API" title="WebRTC API">
+    
+      <link rel="alternate" hreflang="zh-TW" href="https://developer.mozilla.org/zh-TW/docs/Web/API/WebRTC_API" title="WebRTC API">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="WebRTC API">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">
+  <meta name="twitter:title" content="WebRTC API">
+  
+  <meta property="og:description" content="WebRTC (Web Real-Time Communications) is a technology which enables Web applications and sites to capture and optionally stream audio and/or video media, as well as to exchange arbitrary data between browsers without requiring an intermediary.">
+  <meta name="description" content="WebRTC (Web Real-Time Communications) is a technology which enables Web applications and sites to capture and optionally stream audio and/or video media, as well as to exchange arbitrary data between browsers without requiring an intermediary.">
+  <meta name="twitter:description" content="WebRTC (Web Real-Time Communications) is a technology which enables Web applications and sites to capture and optionally stream audio and/or video media, as well as to exchange arbitrary data between browsers without requiring an intermediary.">
+  
+
+</head>
+<body data-slug="Web/API/WebRTC_API" contextmenu="edit-history-menu" data-search-url="" class="document">
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <!--[endif]---->
+
+  
+  <link rel="dns-prefetch" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API$json">
+  <link rel="canonical" href="WebRTC_API.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="WebRTC_API.html" title="WebRTC API">
+  
+    
+      <link rel="alternate" hreflang="es" href="https://developer.mozilla.org/es/docs/Web/API/WebRTC_API" title="API de WebRTC">
+    
+      <link rel="alternate" hreflang="fr" href="https://developer.mozilla.org/fr/docs/Web/API/WebRTC_API" title="L'API WebRTC">
+    
+      <link rel="alternate" hreflang="id" href="https://developer.mozilla.org/id/docs/Web/API/WebRTC_API" title="WebRTC API">
+    
+      <link rel="alternate" hreflang="ja" href="https://developer.mozilla.org/ja/docs/Web/API/WebRTC_API" title="WebRTC API">
+    
+      <link rel="alternate" hreflang="ko" href="https://developer.mozilla.org/ko/docs/Web/API/WebRTC_API" title="WebRTC API">
+    
+      <link rel="alternate" hreflang="pt-BR" href="https://developer.mozilla.org/pt-BR/docs/Web/API/WebRTC_API" title="WebRTC API">
+    
+      <link rel="alternate" hreflang="pt-PT" href="https://developer.mozilla.org/pt-PT/docs/Web/API/API_WebRTC" title="API de WebRTC">
+    
+      <link rel="alternate" hreflang="ru" href="https://developer.mozilla.org/ru/docs/Web/API/WebRTC_API" title="WebRTC API">
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebRTC_API" title="WebRTC API">
+    
+      <link rel="alternate" hreflang="zh-TW" href="https://developer.mozilla.org/zh-TW/docs/Web/API/WebRTC_API" title="WebRTC API">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="WebRTC API">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">
+  <meta name="twitter:title" content="WebRTC API">
+  
+  <meta property="og:description" content="WebRTC (Web Real-Time Communications) is a technology which enables Web applications and sites to capture and optionally stream audio and/or video media, as well as to exchange arbitrary data between browsers without requiring an intermediary.">
+  <meta name="description" content="WebRTC (Web Real-Time Communications) is a technology which enables Web applications and sites to capture and optionally stream audio and/or video media, as well as to exchange arbitrary data between browsers without requiring an intermediary.">
+  <meta name="twitter:description" content="WebRTC (Web Real-Time Communications) is a technology which enables Web applications and sites to capture and optionally stream audio and/or video media, as well as to exchange arbitrary data between browsers without requiring an intermediary.">
+  
+
+
+
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/wiki-compat-tables.9978a5ce31c2.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+
+        // interactive editor config
+        win.mdn.interactiveEditor = {
+            siteUrl: "https://developer.mozilla.org",
+            editorUrl: "https://interactive-examples.mdn.mozilla.net"
+        };
+
+    })(this);
+</script>
+    
+    <ul id="nav-access">
+  <li><a href="#content" id="skip-main">Skip to main content</a></li>
+  <li><a id="skip-language" href="#language">Select language</a></li>
+  <li><a href="#q" id="skip-search">Skip to search</a></li>
+</ul>
+
+    <!-- Header -->
+    <header id="main-header" class="header-main">
+      <a href="https://developer.mozilla.org/en-US/" class="logo">MDN Web Docs</a>
+      <div class="nav-toolbox-wrapper">
+        <nav id="main-nav" class="nav-main" role="navigation">
+    <ul>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web">Technologies
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-tech-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+                    <li><a href="../API.html">APIs / DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn">References &amp; Guides
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-learn-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-contact-submenu">
+              <div class="submenu-column">
+                <ul>
+                  <li>
+                      <a href="https://support.mozilla.org/">Get Firefox help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://stackoverflow.com/">Get web development help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                      <a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">Report a content problem
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</nav>
+        <div id="toolbox" class="toolbox">
+  <ul>
+    
+    <li class="nav-login"><div class="login">
+    
+        
+        <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWebRTC_API" class="login-link js-login-link" data-service="GitHub" rel="nofollow">
+            Sign in<svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+    <title>Github</title>
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path>
+</svg>
+        </a>
+    
+</div></li>
+  </ul>
+</div>
+      </div>
+      <form id="nav-main-search" action="https://developer.mozilla.org/en-US/search" method="get" role="search" class="nav-main-search">
+  <div class="search-wrap">
+    <label for="main-q" class="offscreen">Search</label>
+    <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" aria-hidden="true">
+    <span class="search-trigger">
+        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true">
+    <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path>
+</svg>
+    </span>
+    <button type="submit" class="offscreen">Search</button>
+    <button type="button" id="close-header-search" class="close-header-search transparent">
+        <span class="offscreen">Close search</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+  </div>
+</form>
+    </header> 
+
+  <!-- Content will go here -->
+  <main id="content">
+      
+  <!-- heading -->
+  <div id="wiki-document-head" class="document-head">
+    <div class="center">
+      <!-- action buttons -->
+      <div class="document-actions">
+        
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons">
+      <li>
+          <button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false">
+              <svg class="icon icon-language" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M10.219 16.844c-.031.109-.797-.25-1-.328-.203-.094-1.125-.609-1.359-.766s-1.125-.891-1.234-.938a28.275 28.275 0 0 1-2.094 2.828c-.281.328-1.125 1.391-1.641 1.719-.078.047-.531.094-.594.063.25-.187.969-1.078 1.281-1.437.391-.453 2.25-3.047 2.562-3.641.328-.594 1.312-2.562 1.359-2.75-.156-.016-1.391.406-1.719.516-.313.094-1.172.297-1.234.344-.063.063-.016.25-.047.313s-.313.203-.484.234a1.647 1.647 0 0 1-.734 0c-.203-.047-.391-.25-.438-.328 0 0-.063-.094-.078-.359.187-.063.5-.078.844-.172s1.188-.344 1.641-.5 1.328-.484 1.594-.547c.281-.047.984-.516 1.359-.641s.641-.281.656-.203 0 .422-.016.516c-.016.078-.766 1.547-.875 1.781-.063.125-.5.953-1.203 2.047.25.109.781.328 1 .438.266.125 2.125.906 2.219.938s.266.75.234.875zM7.016 9.25c.047.266-.031.375-.063.438-.156.297-.547.5-.781.594s-.625.187-.938.187c-.141-.016-.422-.063-.766-.406-.187-.203-.328-.75-.266-.688s.516.125.719.078.688-.187.906-.25c.234-.078.703-.203.859-.219.156 0 .281.063.328.266zm10.906 2.016l.984 3.547-2.172-.656zM.609 23.766l10.844-3.625V4.016L.609 7.657v16.109zM20 18.813l1.594.484-2.828-10.266-1.563-.484-3.375 8.375 1.594.484.703-1.719 3.297 1.016zM12.141 3.781l8.953 2.875V.718zM17 24.453l2.469.203-.844 2.5L18 26.125c-1.266.812-2.828 1.437-4.312 1.687-.453.094-.969.187-1.422.187h-1.313c-1.656 0-4.672-.984-5.984-1.937-.094-.078-.125-.141-.125-.25 0-.172.125-.297.281-.297.141 0 .875.453 1.078.547 1.406.703 3.375 1.344 4.953 1.344 1.953 0 3.281-.25 5.063-1.016.516-.234.969-.531 1.453-.797zm7-16.859v16.859c-12.078-3.844-12.094-3.844-12.094-3.844C11.656 20.718.453 24.5.297 24.5a.3.3 0 0 1-.281-.203c0-.016-.016-.031-.016-.047V7.406c.016-.047.031-.125.063-.156.094-.109.219-.141.313-.172.047-.016 1-.328 2.328-.781v-6l8.719 3.094C11.532 3.36 21.251 0 21.392 0c.172 0 .313.125.313.328v6.531z"></path>
+</svg>
+              <span>Languages</span>
+          </button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                
+                
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/es/docs/Web/API/WebRTC_API" data-locale="es" title="Spanish">Español (es)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/fr/docs/Web/API/WebRTC_API" data-locale="fr" title="French">Français (fr)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/id/docs/Web/API/WebRTC_API" data-locale="id" title="Indonesian">Bahasa Indonesia (id)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ja/docs/Web/API/WebRTC_API" data-locale="ja" title="Japanese">日本語 (ja)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ko/docs/Web/API/WebRTC_API" data-locale="ko" title="Korean">한국어 (ko)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/pt-BR/docs/Web/API/WebRTC_API" data-locale="pt-BR" title="Portuguese (Brazilian)">Português (do&nbsp;Brasil) (pt-BR)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/pt-PT/docs/Web/API/API_WebRTC" data-locale="pt-PT" title="Portuguese (Portugal)">Português (Europeu) (pt-PT)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ru/docs/Web/API/WebRTC_API" data-locale="ru" title="Russian">Русский (ru)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebRTC_API" data-locale="zh-CN" title="Chinese (Simplified)">中文 (简体) (zh-CN)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-TW/docs/Web/API/WebRTC_API" data-locale="zh-TW" title="Chinese (Traditional)">正體中文 (繁體) (zh-TW)</a></bdi></li>
+                
+              
+
+              
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API$locales" rel="nofollow" id="translations-add">Add a translation</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+      
+      <li class="page-buttons-edit">
+          <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API$edit" class="button neutral" id="edit-button" rel="nofollow">
+              <svg class="icon icon-pencil" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M5.672 24l1.422-1.422-3.672-3.672L2 20.328V22h2v2h1.672zm8.172-14.5a.329.329 0 0 0-.344-.344.368.368 0 0 0-.266.109l-8.469 8.469a.366.366 0 0 0-.109.266c0 .203.141.344.344.344a.368.368 0 0 0 .266-.109l8.469-8.469a.366.366 0 0 0 .109-.266zM13 6.5l6.5 6.5-13 13H0v-6.5zM23.672 8c0 .531-.219 1.047-.578 1.406L20.5 12 14 5.5l2.594-2.578c.359-.375.875-.594 1.406-.594s1.047.219 1.422.594l3.672 3.656c.359.375.578.891.578 1.422z"></path>
+</svg>
+              Edit
+          </a>
+      </li>
+      
+
+        
+
+        <li class="page-buttons-advanced">
+            <button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false">
+                <svg class="icon icon-gear" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M16 14c0-2.203-1.797-4-4-4s-4 1.797-4 4 1.797 4 4 4 4-1.797 4-4zm8-1.703v3.469c0 .234-.187.516-.438.562l-2.891.438a8.86 8.86 0 0 1-.609 1.422c.531.766 1.094 1.453 1.672 2.156.094.109.156.25.156.391s-.047.25-.141.359c-.375.5-2.484 2.797-3.016 2.797a.795.795 0 0 1-.406-.141l-2.156-1.687a9.449 9.449 0 0 1-1.422.594c-.109.953-.203 1.969-.453 2.906a.573.573 0 0 1-.562.438h-3.469c-.281 0-.531-.203-.562-.469l-.438-2.875a9.194 9.194 0 0 1-1.406-.578l-2.203 1.672c-.109.094-.25.141-.391.141s-.281-.063-.391-.172c-.828-.75-1.922-1.719-2.578-2.625a.607.607 0 0 1 .016-.718c.531-.719 1.109-1.406 1.641-2.141a8.324 8.324 0 0 1-.641-1.547l-2.859-.422A.57.57 0 0 1 0 15.705v-3.469c0-.234.187-.516.422-.562l2.906-.438c.156-.5.359-.969.609-1.437a37.64 37.64 0 0 0-1.672-2.156c-.094-.109-.156-.234-.156-.375s.063-.25.141-.359c.375-.516 2.484-2.797 3.016-2.797.141 0 .281.063.406.156L7.828 5.94a9.449 9.449 0 0 1 1.422-.594c.109-.953.203-1.969.453-2.906a.573.573 0 0 1 .562-.438h3.469c.281 0 .531.203.562.469l.438 2.875c.484.156.953.344 1.406.578l2.219-1.672c.094-.094.234-.141.375-.141s.281.063.391.156c.828.766 1.922 1.734 2.578 2.656a.534.534 0 0 1 .109.344c0 .141-.047.25-.125.359-.531.719-1.109 1.406-1.641 2.141.266.5.484 1.016.641 1.531l2.859.438a.57.57 0 0 1 .453.562z"></path>
+</svg>
+                <span>Advanced</span>
+            </button>
+            <div class="submenu js-submenu" id="advanced-menu-submenu">
+                <!-- this page -->
+                <div class="submenu-column">
+                    <div class="title">Advanced</div>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API$history" rel="nofollow">History</a></li>
+                        
+                        
+                        
+
+
+                
+
+                <li class="page-print"><a href="#" onclick="return window.print();">Print this article</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+      </div>
+
+      <div class="document-title">
+        <h1>WebRTC API</h1>
+      </div>
+    <nav class="crumbs" role="navigation">
+      <ol typeof="BreadcrumbList" vocab="https://schema.org/" aria-label="breadcrumbs">
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="https://developer.mozilla.org/en-US/docs/Web" property="item" typeof="WebPage">
+              <span property="name">Web technology for developers</span>
+            </a>
+            <meta property="position" content="1">
+          </li>
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="../API.html" property="item" typeof="WebPage">
+              <span property="name">Web APIs</span>
+            </a>
+            <meta property="position" content="2">
+          </li>
+        
+        <li property="itemListElement" typeof="ListItem" class="crumb">
+          <span property="name">WebRTC API</span>
+        </li>
+      </ol>
+    </nav></div>
+  </div>
+  
+  <div id="toc" class="toc">
+    <div class="center">
+      <div class="toc-head">Jump to:</div>
+        <ol class="toc-links">
+          <li><a rel="internal" href="#WebRTC_concepts_and_usage">WebRTC concepts and usage</a></li><li><a rel="internal" href="#WebRTC_interfaces">WebRTC interfaces</a></li><li><a rel="internal" href="#Guides">Guides</a></li><li><a rel="internal" href="#Tutorials">Tutorials</a></li><li><a rel="internal" href="#Resources">Resources</a></li><li><a rel="internal" href="#Specifications">Specifications</a></li><li><a rel="internal" href="#See_also">See also</a>
+        </li></ol>
+    </div>
+  </div>
+  
+
+      <div class="center clear">
+      
+
+    <div class="wiki-main-content" id="document-main"><div class="center">
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-left-present">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-main wiki-column text-content">
+
+              
+
+              
+              
+
+              
+
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <div></div>
+
+<p><span class="seoSummary"><strong>WebRTC</strong> (Web Real-Time Communications) is a technology which enables Web applications and sites to capture and optionally stream audio and/or video media, as well as to exchange arbitrary data between browsers without requiring an intermediary.</span> The set of standards that comprises WebRTC makes it possible to share data and perform teleconferencing peer-to-peer, without requiring that the user install plug-ins or any other third-party software.</p>
+
+<p>WebRTC consists of several interrelated APIs and protocols which work together to achieve this. The documentation you'll find here will help you understand the fundamentals of WebRTC, how to set up and use both data and media connections, and more.</p>
+
+<a class="dashAnchor" name="//apple_ref/Section/WebRTC%20concepts%20and%20usage"></a><h2 id="WebRTC_concepts_and_usage">WebRTC concepts and usage</h2>
+
+<p>WebRTC serves multiple purposes, and overlaps substantially with the Media Capture and Streams API. Together, they provide powerful multimedia capabilities to the Web, including support for audio and video conferencing, file exchange, identity management, and interfacing with legacy telephone systems by sending <a href="https://developer.mozilla.org/en-US/docs/Glossary/DTMF" class="glossaryLink" title="DTMF: Dual-Tone Multi-Frequency (DTMF) signaling is a system by which audible tones are used to represent buttons being pressed on a keypad. Frequently referred to in the United States as &quot;touch tone&quot; (after the Touch-Tone trademark used when the transition from pulse dialing to DTMF began), DTMF makes it possible to signal the digits 0-9 as well as the letters &quot;A&quot; through &quot;D&quot; and the symbols &quot;#&quot; and &quot;*&quot;. Few telephone keypads include the letters, which are typically used for control signaling by the telephone network.">DTMF</a> signals. Connections between peers can be made without requiring any special drivers or plug-ins, and can often be made without any intermediary servers.</p>
+
+<p>Connections between two peers are created using—and represented by—the <a href="RTCPeerConnection.html" title="The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed."><code>RTCPeerConnection</code></a> interface. Once a connection has been established and opened, media streams (<a href="MediaStream.html" title="The MediaStream interface represents a stream of media content. A stream consists of several tracks such as&nbsp;video or audio tracks. Each track is specified as an instance of MediaStreamTrack."><code>MediaStream</code></a>s) and/or data channels (<a href="RTCDataChannel.html" title="The RTCDataChannel interface represents a network channel which can be used for bidirectional peer-to-peer transfers of arbitrary data. Every data channel is associated with an RTCPeerConnection, and each peer connection can have up to a theoretical maximum of 65,534 data channels (the actual limit may vary from browser to browser)."><code>RTCDataChannel</code></a>s) can be added to the connection.</p>
+
+<p>Media streams can consist of any number of tracks of media information; tracks, which are represented by objects based on the <a href="MediaStreamTrack.html" title="The MediaStreamTrack interface represents&nbsp;a single media track within a stream; typically, these are audio or video tracks, but other track types may exist as well."><code>MediaStreamTrack</code></a> interface, may contain one of a number of types of media data, including audio, video, and text (such as subtitles or even chapter names). Most streams consist of at least one audio track and likely also a video track, and can be used to send and receive both live media or stored media information (such as a streamed movie).</p>
+
+<p>You can also use the connection between two peers to exchange arbitrary binary data using the <a href="RTCDataChannel.html" title="The RTCDataChannel interface represents a network channel which can be used for bidirectional peer-to-peer transfers of arbitrary data. Every data channel is associated with an RTCPeerConnection, and each peer connection can have up to a theoretical maximum of 65,534 data channels (the actual limit may vary from browser to browser)."><code>RTCDataChannel</code></a> interface. This can be used for back-channel information, metadata exchange, game status packets, file transfers, or even as a primary channel for data transfer.</p>
+
+<p><em><strong>more details and links to relevant guides and tutorials needed</strong></em></p>
+
+<a class="dashAnchor" name="//apple_ref/Section/WebRTC%20interfaces"></a><h2 id="WebRTC_interfaces">WebRTC interfaces</h2>
+
+<p>Because WebRTC provides interfaces that work together to accomplish a variety of tasks, we have divided up the interfaces in the list below by category. Please see the sidebar for an alphabetical list.</p>
+
+<h3 id="Connection_setup_and_management">Connection setup and management</h3>
+
+<p>These interfaces are used to set up, open, and manage WebRTC connections.</p>
+
+<dl>
+ <dt><a href="RTCPeerConnection.html" title="The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed."><code>RTCPeerConnection</code></a></dt>
+ <dd>Represents a WebRTC connection between the local computer and a remote peer. It is used to handle efficient streaming of data between the two peers.</dd>
+ <dt><a href="RTCDataChannel.html" title="The RTCDataChannel interface represents a network channel which can be used for bidirectional peer-to-peer transfers of arbitrary data. Every data channel is associated with an RTCPeerConnection, and each peer connection can have up to a theoretical maximum of 65,534 data channels (the actual limit may vary from browser to browser)."><code>RTCDataChannel</code></a></dt>
+ <dd>Represents a bi-directional data channel between two peers of a connection.</dd>
+ <dt><a href="RTCDataChannelEvent.html" title="The RTCDataChannelEvent() constructor returns a new RTCDataChannelEvent object, which represents a datachannel event. These events sent to an RTCPeerConnection when its remote peer is asking to open an RTCDataChannel between the two peers."><code>RTCDataChannelEvent</code></a></dt>
+ <dd>Represents events that occur while attaching a <a href="RTCDataChannel.html" title="The RTCDataChannel interface represents a network channel which can be used for bidirectional peer-to-peer transfers of arbitrary data. Every data channel is associated with an RTCPeerConnection, and each peer connection can have up to a theoretical maximum of 65,534 data channels (the actual limit may vary from browser to browser)."><code>RTCDataChannel</code></a> to a <a href="RTCPeerConnection.html" title="The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed."><code>RTCPeerConnection</code></a>. The only event sent with this interface is <code><a href="../Events/datachannel.html" title="/en-US/docs/Web/Events/datachannel">datachannel</a></code>.</dd>
+ <dt><a href="RTCSessionDescription.html" title="The RTCSessionDescription interface describes one end of a connection—or potential connection—and how it's configured. Each RTCSessionDescription consists of a description type indicating which part of the offer/answer negotiation process it describes and of the SDP descriptor of the session."><code>RTCSessionDescription</code></a></dt>
+ <dd>Represents the parameters of a session. Each <code>RTCSessionDescription</code> consists of a description <a href="RTCSessionDescription/type.html" title="The property RTCSessionDescription.type is a read-only value of type RTCSdpType which describes the description's type."><code>type</code></a> indicating which part of the offer/answer negotiation process it describes and of the <a href="https://developer.mozilla.org/en-US/docs/Glossary/SDP" class="glossaryLink" title="SDP: SDP (Session Description Protocol) is the standard describing a peer-to-peer connection. SDP contains the codec, source address, and timing information of audio and video.">SDP</a> descriptor of the session.</dd>
+ <dt><a href="RTCSessionDescriptionCallback.html" title="The RTCSessionDescriptionCallback type is used to represent the callback function passed into the deprecated callback-based version of createOffer() or createAnswer() when using them to create offers or answers."><code>RTCSessionDescriptionCallback</code></a></dt>
+ <dd>The RTCSessionDescriptionCallback is passed into the <a href="RTCPeerConnection.html" title="The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed."><code>RTCPeerConnection</code></a> object when requesting it to create offers or answers.</dd>
+ <dt><a href="RTCStatsReport.html" title="The RTCStatsReport interface is used to provide statistics data about WebRTC connections as returned by the RTCPeerConnection.getStats(), RTCRtpReceiver.getStats(), and RTCRtpSender.getStats() methods."><code>RTCStatsReport</code></a></dt>
+ <dd>Provides information detailing statistics for a connection or for an individual track on the connection; the report can be obtained by calling <a rel="nofollow" href="RTCPeerConnection/getStats.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>RTCPeerConnection.getStats()</code></a>.</dd>
+ <dt><a href="RTCIceCandidate.html" title="The RTCIceCandidate interface—part of the WebRTC API—represents a candidate Internet Connectivity Establishment (ICE) configuration which may be used to establish an RTCPeerConnection."><code>RTCIceCandidate</code></a></dt>
+ <dd>Represents a candidate internet connectivity establishment (ICE) server for establishing an <a href="RTCPeerConnection.html" title="The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed."><code>RTCPeerConnection</code></a>.</dd>
+ <dt><a href="RTCIceTransport.html" title="The RTCIceTransport interface provides access to information about the ICE transport layer over which the data is being sent and received."><code>RTCIceTransport</code></a></dt>
+ <dd>Represents information about an internet connectivity establishment (ICE) transport.</dd>
+ <dt><a href="RTCIceServer.html" title="The RTCIceServer dictionary defines how to connect to a single ICE server (such as a STUN or TURN server). It includes both the URL and the necessary credentials, if any, to connect to the server."><code>RTCIceServer</code></a></dt>
+ <dd>Defines how to connect to a single ICE server (such as a STUN or TURN server).</dd>
+ <dt><a href="RTCPeerConnectionIceEvent.html" title="The RTCPeerConnectionIceEvent interface represents events that occurs in relation to ICE candidates with the target, usually an RTCPeerConnection. Only one event is of this type: icecandidate."><code>RTCPeerConnectionIceEvent</code></a></dt>
+ <dd>Represents events that occurs in relation to ICE candidates with the target, usually an <a href="RTCPeerConnection.html" title="The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed."><code>RTCPeerConnection</code></a>. Only one event is of this type: <code><a href="../Events/icecandidate.html" title="/en-US/docs/Web/Events/icecandidate">icecandidate</a></code>.</dd>
+ <dt><a href="RTCRtpSender.html" title="The RTCRtpSender interface provides the ability to control and obtain details about how a particular MediaStreamTrack is encoded and sent to a remote peer."><code>RTCRtpSender</code></a></dt>
+ <dd>Manages the encoding and transmission of data for a <a href="MediaStreamTrack.html" title="The MediaStreamTrack interface represents&nbsp;a single media track within a stream; typically, these are audio or video tracks, but other track types may exist as well."><code>MediaStreamTrack</code></a> on an <a href="RTCPeerConnection.html" title="The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed."><code>RTCPeerConnection</code></a>.</dd>
+ <dt><a href="RTCRtpReceiver.html" title="The RTCRtpReceiver interface of the the WebRTC API&nbsp;manages the reception and decoding of data for a&nbsp;MediaStreamTrack on an&nbsp;RTCPeerConnection."><code>RTCRtpReceiver</code></a></dt>
+ <dd>Manages the reception and decoding of data for a <a href="MediaStreamTrack.html" title="The MediaStreamTrack interface represents&nbsp;a single media track within a stream; typically, these are audio or video tracks, but other track types may exist as well."><code>MediaStreamTrack</code></a> on an <a href="RTCPeerConnection.html" title="The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed."><code>RTCPeerConnection</code></a>.</dd>
+ <dt><a href="RTCRtpContributingSource.html" title="The RTCRtpContributingSource dictionary of the the WebRTC API is used by getContributingSources() to provide information&nbsp;about a given contributing source (CSRC), including the most recent time a packet that the source contributed was played out."><code>RTCRtpContributingSource</code></a></dt>
+ <dd>Contains information about a given contributing source (CSRC) including the most recent time a packet that the source contributed was played out.</dd>
+ <dt><a href="RTCTrackEvent.html" title="The WebRTC API interface RTCTrackEvent represents the track event, which is sent when a new MediaStreamTrack is added to an RTCRtpReceiver which is part of the RTCPeerConnection."><code>RTCTrackEvent</code></a></dt>
+ <dd>Indicates that a new incoming <a href="MediaStreamTrack.html" title="The MediaStreamTrack interface represents&nbsp;a single media track within a stream; typically, these are audio or video tracks, but other track types may exist as well."><code>MediaStreamTrack</code></a> was created and an associated <a href="RTCRtpReceiver.html" title="The RTCRtpReceiver interface of the the WebRTC API&nbsp;manages the reception and decoding of data for a&nbsp;MediaStreamTrack on an&nbsp;RTCPeerConnection."><code>RTCRtpReceiver</code></a> object was added to the <a href="RTCPeerConnection.html" title="The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed."><code>RTCPeerConnection</code></a> object.</dd>
+ <dt><a href="RTCConfiguration.html" title="The RTCConfiguration dictionary is used to provide configuration options for an RTCPeerConnection. It may be passed into the constructor when instantiating a connection, or used with the RTCPeerConnection.getConfiguration() and RTCPeerConnection.setConfiguration() methods, which allow inspecting and changing the configuration while a connection is established."><code>RTCConfiguration</code></a></dt>
+ <dd>Used to provide configuration options for an <a href="RTCPeerConnection.html" title="The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed."><code>RTCPeerConnection</code></a>.</dd>
+</dl>
+
+<dl>
+ <dt><a href="RTCSctpTransport.html" title="The RTCSctpTransport interface provides information which describes a Stream Control Transmission Protocol (SCTP) transport. This provides information about limitations of the transport, but also provides a way to access the underlying Datagram Transport Layer Security (DTLS) transport over which SCTP packets for all of an RTCPeerConnection's data channels are sent and received."><code>RTCSctpTransport</code></a></dt>
+ <dd>Provides information which describes a Stream Control Transmission Protocol (<strong><a href="https://developer.mozilla.org/en-US/docs/Glossary/SCTP" class="glossaryLink" title="SCTP: SCTP (Stream Control Transmission Protocol) is an IETF standard for a transport protocol which enables the reliable, in-order transmission of messages while offering congestion control, multi-homing, and other features to improve reliability and stability of the connection. It's used for sending traditional telephone calls over the Internet, but is also used for WebRTC data.">SCTP</a></strong>) transport and also provides a way to access the underlying Datagram Transport Layer Security (<strong><a rel="nofollow" href="https://developer.mozilla.org/en-US/docs/Glossary/DTLS" class="glossaryLink new" title="The definition of that term (DTLS) has not been written yet; please consider contributing it!">DTLS</a></strong>) transport over which SCTP packets for all of an <a href="RTCPeerConnection.html" title="The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed."><code>RTCPeerConnection</code></a>'s data channels are sent and received.</dd>
+</dl>
+
+<h3 id="Identity_and_security">Identity and security</h3>
+
+<p>The WebRTC API includes a number of interfaces to manage security and identity.</p>
+
+<dl>
+ <dt><a rel="nofollow" href="RTCIdentityProvider.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>RTCIdentityProvider</code></a></dt>
+ <dd>Enables a user agent is able to request that an identity assertion be generated or validated.</dd>
+ <dt><a href="RTCIdentityAssertion.html" title="The RTCIdentityAssertion&nbsp;interface of the the WebRTC API&nbsp;represents the identity of the a remote peer of the current connection. If no peer has yet been set and verified this interface returns null. Once set it can't be changed."><code>RTCIdentityAssertion</code></a></dt>
+ <dd>Represents the identity of the a remote peer of the current connection. If no peer has yet been set and verified this interface returns <code>null</code>. Once set it can't be changed.</dd>
+ <dt><a rel="nofollow" href="RTCIdentityProviderRegistrar.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>RTCIdentityProviderRegistrar</code></a></dt>
+ <dd>Registers an identity provider (idP).</dd>
+ <dt><a href="RTCIdentityEvent.html" title="The RTCIdentityEvent interface represents an identity assertion&nbsp;generated by an identity provider (idP). This is usually for an RTCPeerConnection.&nbsp;The only event sent with this type is identityresult.."><code>RTCIdentityEvent</code></a></dt>
+ <dd>Represents an identity assertion generated by an identity provider (idP). This is usually for an <a href="RTCPeerConnection.html" title="The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed."><code>RTCPeerConnection</code></a>. The only event sent with this type is <code><a href="../Events/identityresult.html" title="/en-US/docs/Web/Events/identityresult">identityresult</a></code>.</dd>
+ <dt><a href="RTCIdentityErrorEvent.html" title="The RTCIdentityErrorEvent interface represents an error associated with the identity provider (idP). This is usually for an&nbsp;RTCPeerConnection.&nbsp;Two events are sent with this type: idpassertionerror and idpvalidationerror."><code>RTCIdentityErrorEvent</code></a></dt>
+ <dd>Represents an error associated with the identity provider (idP). This is usually for an <a href="RTCPeerConnection.html" title="The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed."><code>RTCPeerConnection</code></a>. Two events are sent with this type: <code><a href="../Events/idpassertionerror.html" title="/en-US/docs/Web/Events/idpassertionerror">idpassertionerror</a></code> and <code><a href="../Events/idpvalidationerror.html" title="/en-US/docs/Web/Events/idpvalidationerror">idpvalidationerror</a></code>.</dd>
+ <dt><a href="RTCCertificate.html" title="The interface of the the WebRTC API provides an object represents a certificate that an RTCPeerConnection&nbsp;uses to authenticate."><code>RTCCertificate</code></a></dt>
+ <dd>Represents a certificate that an <a href="RTCPeerConnection.html" title="The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed."><code>RTCPeerConnection</code></a> uses to authenticate.</dd>
+</dl>
+
+<h3 id="Telephony">Telephony</h3>
+
+<p>These interfaces are related to interactivity with public-switched telephone networks (PTSNs).</p>
+
+<dl>
+ <dt><a href="RTCDTMFSender.html" title="tbd"><code>RTCDTMFSender</code></a></dt>
+ <dd>Manages the encoding and transmission of dual-tone multi-frequency (DTMF) signaling for an <a href="RTCPeerConnection.html" title="The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed."><code>RTCPeerConnection</code></a>.</dd>
+ <dt><a href="RTCDTMFToneChangeEvent.html" title="The RTCDTMFToneChangeEvent interface represents events sent to indicate that DTMF tones have started or finished playing. This interface is used by the tonechange event."><code>RTCDTMFToneChangeEvent</code></a></dt>
+ <dd>Indicates an occurrence of a of dual-tone multi-frequency (DTMF). This event does not bubble (except where otherwise stated) and is not cancelable (except where otherwise stated).</dd>
+</dl>
+
+<a class="dashAnchor" name="//apple_ref/Section/Guides"></a><h2 id="Guides">Guides</h2>
+
+<dl>
+ <dt><a href="WebRTC_API/Protocols.html">Introduction to WebRTC protocols</a></dt>
+ <dd>This article introduces the protocols on top of which the WebRTC API is built.</dd>
+ <dt><a href="WebRTC_API/Connectivity.html">WebRTC connectivity</a></dt>
+ <dd>A guide to how WebRTC connections work and how the various protocols and interfaces can be used together to build powerful communication apps.</dd>
+ <dt><a href="WebRTC_API/Session_lifetime.html">Lifetime of a WebRTC session</a></dt>
+ <dd>WebRTC lets you build peer-to-peer communication of arbitrary data, audio, or video—or any combination thereof—into a browser application. In this article, we'll look at the lifetime of a WebRTC session, from establishing the connection all the way through closing the connection when it's no longer needed.</dd>
+ <dt><a href="WebRTC_API/Signaling_and_video_calling.html">Signaling and two-way video calling</a></dt>
+ <dd>A tutorial and example which turns a WebSocket-based chat system created for a previous example and adds support for opening video calls among participants. The chat server's WebSocket connection is used for WebRTC signaling.</dd>
+ <dt><a href="WebRTC_API/Using_data_channels.html">Using WebRTC data channels</a></dt>
+ <dd>This guide covers how you can use a peer connection and an associated <a href="RTCDataChannel.html" title="The RTCDataChannel interface represents a network channel which can be used for bidirectional peer-to-peer transfers of arbitrary data. Every data channel is associated with an RTCPeerConnection, and each peer connection can have up to a theoretical maximum of 65,534 data channels (the actual limit may vary from browser to browser)."><code>RTCDataChannel</code></a> to exchange arbitrary data between two peers.</dd>
+ <dt><a href="WebRTC_API/Using_DTMF.html">Using DTMF with WebRTC</a></dt>
+ <dd>WebRTC's support for interacting with gateways that link to old-school telephone systems includes support for sending DTMF tones using the <a href="RTCDTMFSender.html" title="tbd"><code>RTCDTMFSender</code></a> interface. This guide shows how to do so.</dd>
+</dl>
+
+<a class="dashAnchor" name="//apple_ref/Section/Tutorials"></a><h2 id="Tutorials">Tutorials</h2>
+
+<dl>
+ <dt><a href="WebRTC_API/adapter.html">Improving compatibility using WebRTC adapter.js</a></dt>
+ <dd>The WebRTC organization <a rel="noopener" href="https://github.com/webrtc/adapter/" class="external">provides on GitHub the WebRTC adapter</a> to work around compatibility issues in different browsers' WebRTC implementations. The adapter is a JavaScript shim which lets your code to be written to the specification so that it will "just work" in all browsers with WebRTC support.</dd>
+ <dt><a href="WebRTC_API/Taking_still_photos.html">Taking still photos with WebRTC</a></dt>
+ <dd>This article shows how to use WebRTC to access the camera on a computer or mobile phone with WebRTC support and take a photo with it.</dd>
+ <dt><a href="WebRTC_API/Simple_RTCDataChannel_sample.html">A simple RTCDataChannel sample</a></dt>
+ <dd>The <a href="RTCDataChannel.html" title="The RTCDataChannel interface represents a network channel which can be used for bidirectional peer-to-peer transfers of arbitrary data. Every data channel is associated with an RTCPeerConnection, and each peer connection can have up to a theoretical maximum of 65,534 data channels (the actual limit may vary from browser to browser)."><code>RTCDataChannel</code></a> interface is a feature which lets you open a channel between two peers over which you may send and receive arbitrary data. The API is intentionally similar to the <a href="WebSockets_API.html">WebSocket API</a>, so that the same programming model can be used for each.</dd>
+</dl>
+
+<a class="dashAnchor" name="//apple_ref/Section/Resources"></a><h2 id="Resources">Resources</h2>
+
+<h3 id="Protocols">Protocols</h3>
+
+<h4 id="WebRTC-proper_protocols">WebRTC-proper protocols</h4>
+
+<ul>
+ <li><a rel="noopener" href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-alpn/" class="external"><cite>Application Layer Protocol Negotiation for Web Real-Time Communications</cite></a></li>
+ <li><a rel="noopener" href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-audio/" class="external"><cite>WebRTC Audio Codec and Processing Requirements</cite></a></li>
+ <li><a rel="noopener" href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-data-channel/" class="external"><cite>RTCWeb Data Channels</cite></a></li>
+ <li><a rel="noopener" href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-data-protocol/" class="external"><cite>RTCWeb Data Channel Protocol</cite></a></li>
+ <li><a rel="noopener" href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-rtp-usage/" class="external"><cite>Web Real-Time Communication (WebRTC): Media Transport and Use of RTP</cite></a></li>
+ <li><a rel="noopener" href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-security-arch/" class="external"><cite>WebRTC Security Architecture</cite></a></li>
+ <li><a rel="noopener" href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-transports/" class="external"><cite>Transports for RTCWEB</cite></a></li>
+</ul>
+
+<h4 id="Related_supporting_protocols">Related supporting protocols</h4>
+
+<ul>
+ <li><a rel="noopener" href="https://tools.ietf.org/html/rfc5245" class="external">Interactive Connectivity Establishment (ICE): A Protocol for Network Address Translator (NAT) Traversal for Offer/Answer Protocol</a></li>
+ <li><a rel="noopener" href="https://tools.ietf.org/html/rfc5389" class="external"><cite>Session Traversal Utilities for NAT (STUN)</cite></a></li>
+ <li><a rel="noopener" href="https://tools.ietf.org/html/rfc7064" class="external"><cite>URI Scheme for the Session Traversal Utilities for NAT (STUN) Protocol</cite></a></li>
+ <li><a rel="noopener" href="https://tools.ietf.org/html/rfc7065" class="external"><cite>Traversal Using Relays around NAT (TURN) Uniform Resource Identifiers</cite></a></li>
+ <li><a rel="noopener" href="https://tools.ietf.org/html/rfc3264" class="external"><cite>An Offer/Answer Model with Session Description Protocol (SDP)</cite></a></li>
+ <li><a rel="noopener" href="https://datatracker.ietf.org/doc/draft-ietf-tram-turn-third-party-authz/" class="external"><cite>Session Traversal Utilities for NAT (STUN) Extension for Third Party Authorization</cite></a></li>
+</ul>
+
+<a class="dashAnchor" name="//apple_ref/Section/Specifications"></a><h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><a rel="noopener" lang="en" hreflang="en" href="https://w3c.github.io/webrtc-pc/" title="The 'WebRTC 1.0: Real-time Communication Between Browsers' specification" class="external">WebRTC 1.0: Real-time Communication Between Browsers</a></td>
+   <td><span class="spec-CR">Candidate Recommendation</span></td>
+   <td>The initial definition of the API of WebRTC.</td>
+  </tr>
+  <tr>
+   <td><a rel="noopener" lang="en" hreflang="en" href="https://w3c.github.io/mediacapture-main/" title="The 'Media Capture and Streams' specification" class="external">Media Capture and Streams</a></td>
+   <td><span class="spec-CR">Candidate Recommendation</span></td>
+   <td>The initial definition of the object conveying the stream of media content.</td>
+  </tr>
+  <tr>
+   <td><a rel="noopener" lang="en" hreflang="en" href="https://w3c.github.io/mediacapture-fromelement/" title="The 'Media Capture from DOM Elements' specification" class="external">Media Capture from DOM Elements</a></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+   <td>The initial definition on how to obtain stream of content from DOM Elements</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>In additions to these specifications defining the API needed to use WebRTC, there are several protocols, listed under <a href="#Protocols">resources</a>.</p>
+
+<a class="dashAnchor" name="//apple_ref/Section/See%20also"></a><h2 class="Related_Topics" id="See_also">See also</h2>
+
+<ul>
+ <li><a href="MediaDevices.html" title="The MediaDevices interface provides access to connected media input devices like cameras and microphones, as well as screen sharing. In essence, it lets you obtain access to any hardware source of media data."><code>MediaDevices</code></a></li>
+ <li><a href="MediaStreamEvent.html" title="The MediaStreamEvent interface represents events that occurs in relation to a MediaStream. Two events of this type can be thrown: addstream and removestream."><code>MediaStreamEvent</code></a></li>
+ <li><a href="MediaStreamConstraints.html" title="The MediaStreamConstraints dictionary is used when calling getUserMedia() to specify what kinds of tracks should be included in the returned MediaStream, and, optionally, to establish constraints for those tracks' settings."><code>MediaStreamConstraints</code></a></li>
+ <li><a href="MediaStreamTrack.html" title="The MediaStreamTrack interface represents&nbsp;a single media track within a stream; typically, these are audio or video tracks, but other track types may exist as well."><code>MediaStreamTrack</code></a></li>
+ <li><a href="MessageEvent.html" title="The MessageEvent interface represents a message received by a target object."><code>MessageEvent</code></a></li>
+ <li><a href="MediaStream.html" title="The MediaStream interface represents a stream of media content. A stream consists of several tracks such as&nbsp;video or audio tracks. Each track is specified as an instance of MediaStreamTrack."><code>MediaStream</code></a></li>
+ <li><a rel="noopener" href="https://hacks.mozilla.org/2015/06/firefox-multistream-and-renegotiation-for-jitsi-videobridge/" class="external">Firefox multistream and renegotiation for Jitsi Videobridge</a></li>
+ <li><a rel="noopener" href="https://hacks.mozilla.org/2015/04/peering-through-the-webrtc-fog-with-socketpeer/" class="external">Peering Through the WebRTC Fog with SocketPeer</a></li>
+ <li><a rel="noopener" href="https://hacks.mozilla.org/2014/04/inside-the-party-bus-building-a-web-app-with-multiple-live-video-streams-interactive-graphics/" class="external">Inside the Party Bus: Building a Web App with Multiple Live Video Streams + Interactive Graphics</a></li>
+</ul>
+                  
+                
+              </article>
+
+              <!-- contributors -->
+              <div class="wiki-block contributors">
+                <h2 class="offscreen">Document Tags and Contributors</h2>
+                
+                
+  <div class="tag-attach-list contributors-sub">
+    <svg class="icon icon-tags" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M7 7c0-1.109-.891-2-2-2s-2 .891-2 2 .891 2 2 2 2-.891 2-2zm16.672 9c0 .531-.219 1.047-.578 1.406l-7.672 7.688c-.375.359-.891.578-1.422.578s-1.047-.219-1.406-.578L1.422 13.906C.625 13.125 0 11.609 0 10.5V4c0-1.094.906-2 2-2h6.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422zm6 0c0 .531-.219 1.047-.578 1.406l-7.672 7.688a2.08 2.08 0 0 1-1.422.578c-.812 0-1.219-.375-1.75-.922l7.344-7.344c.359-.359.578-.875.578-1.406s-.219-1.047-.578-1.422L14.422 3.422C13.625 2.625 12.11 2 11 2h3.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422z"></path>
+</svg>
+    <strong>Tags:</strong>&nbsp;
+    <ul class="tags tags-small">
+      
+        <li><a href="../../tag/API.html" rel="nofollow">API</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Audio" rel="nofollow">Audio</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Landing" rel="nofollow">Landing</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Media" rel="nofollow">Media</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Networking" rel="nofollow">Networking</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/streaming" rel="nofollow">streaming</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Video" rel="nofollow">Video</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/WebRTC" rel="nofollow">WebRTC</a></li>
+      
+        <li><a href="../../tag/WebRTC%20API.html" rel="nofollow">WebRTC API</a></li>
+      
+    </ul>
+  </div>
+
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-group" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M9.266 14a5.532 5.532 0 0 0-4.141 2H3.031C1.468 16 0 15.25 0 13.516 0 12.25-.047 8 1.937 8c.328 0 1.953 1.328 4.062 1.328.719 0 1.406-.125 2.078-.359A7.624 7.624 0 0 0 7.999 10c0 1.422.453 2.828 1.266 4zM26 23.953C26 26.484 24.328 28 21.828 28H8.172C5.672 28 4 26.484 4 23.953 4 20.422 4.828 15 9.406 15c.531 0 2.469 2.172 5.594 2.172S20.063 15 20.594 15C25.172 15 26 20.422 26 23.953zM10 4c0 2.203-1.797 4-4 4S2 6.203 2 4s1.797-4 4-4 4 1.797 4 4zm11 6c0 3.313-2.688 6-6 6s-6-2.688-6-6 2.688-6 6-6 6 2.688 6 6zm9 3.516C30 15.25 28.531 16 26.969 16h-2.094a5.532 5.532 0 0 0-4.141-2A7.066 7.066 0 0 0 22 10a7.6 7.6 0 0 0-.078-1.031A6.258 6.258 0 0 0 24 9.328C26.109 9.328 27.734 8 28.062 8c1.984 0 1.937 4.25 1.937 5.516zM28 4c0 2.203-1.797 4-4 4s-4-1.797-4-4 1.797-4 4-4 4 1.797 4 4z"></path>
+</svg>
+                    <strong>Contributors to this page:</strong>
+                    
+        <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/mfuji09">mfuji09</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/bschnelle">bschnelle</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/tomrittervg">tomrittervg</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/tocretpa">tocretpa</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Cocoa">Cocoa</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/jpmedley">jpmedley</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>
+    
+                  </div>
+                
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-clock" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M14 8.5v7c0 .281-.219.5-.5.5h-5a.494.494 0 0 1-.5-.5v-1c0-.281.219-.5.5-.5H12V8.5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zm6.5 5.5c0-4.688-3.813-8.5-8.5-8.5S3.5 9.313 3.5 14s3.813 8.5 8.5 8.5 8.5-3.813 8.5-8.5zm3.5 0c0 6.625-5.375 12-12 12S0 20.625 0 14 5.375 2 12 2s12 5.375 12 12z"></path>
+</svg>
+                    <strong>Last updated by:</strong>
+                    <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>,
+                    <time datetime="2018-04-03T07:57:44.446133-07:00">Apr 3, 2018, 7:57:44 AM</time>
+                  </div>
+                
+              </div>
+            </div>
+
+            
+              <!-- quick links and approvals strip -->
+              <div id="wiki-left" class="column-strip wiki-column">
+
+                <!-- crumbs -->
+                
+  
+    
+  
+
+                
+                  <!-- quick links -->
+                  
+  <div class="quick-links" id="quick-links">
+    <div class="quick-links-head">Related Topics</div>
+    <ol><li><strong><a href="WebRTC_API.html">WebRTC API</a></strong></li><li><strong><a href="WebRTC_API.html"><code>WebRTC_API</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Events</strong></a><ol><li><a href="../Events/addstream.html"><code>addstream</code></a></li><li><a href="../Events/icecandidate.html"><code>icecandidate</code></a></li><li><a href="../Events/iceconnectionstatechange.html"><code>iceconnectionstatechange</code></a></li><li><a rel="nofollow" href="../Events/icegatheringstatechange.html" class="new"><code>icegatheringstatechange</code></a></li><li><a href="../Events/negotiationneeded.html"><code>negotiationneeded</code></a></li><li><a href="../Events/removestream.html"><code>removestream</code></a></li><li><a href="../Events/signalingstatechange.html"><code>signalingstatechange</code></a></li><li><a href="../Events/datachannel.html"><code>datachannel</code></a></li><li><a href="../Events/close.html"><code>close</code></a></li><li><a href="../Events/error.html"><code>error</code></a></li><li><a href="../Events/message.html"><code>message</code></a></li><li><a href="../Events/open.html"><code>open</code></a></li><li><a href="../Events/tonechange.html"><code>tonechange</code></a></li><li><a href="../Events/identityresult.html"><code>identityresult</code></a></li><li><a href="../Events/idpassertionerror.html"><code>idpassertionerror</code></a></li><li><a href="../Events/idpvalidationerror.html"><code>idpvalidationerror</code></a></li><li><a href="../Events/peeridentity.html"><code>peeridentity</code></a></li><li><a rel="nofollow" href="../Events/isolationchange.html" class="new"><code>isolationchange</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Related pages for WebRTC</strong></a><ol><li><a href="MediaDevices/getUserMedia.html"><code>MediaDevices.getUserMedia()</code></a></li><li><a href="MediaStreamEvent.html"><code>MediaStreamEvent</code></a></li><li><a href="RTCCertificate.html"><code>RTCCertificate</code></a></li><li><a href="RTCConfiguration.html"><code>RTCConfiguration</code></a></li><li><a href="RTCDTMFSender.html"><code>RTCDTMFSender</code></a></li><li><a href="RTCDTMFToneChangeEvent.html"><code>RTCDTMFToneChangeEvent</code></a></li><li><a href="RTCDataChannel.html"><code>RTCDataChannel</code></a></li><li><a href="RTCDataChannelEvent.html"><code>RTCDataChannelEvent</code></a></li><li><a href="RTCIceCandidate.html"><code>RTCIceCandidate</code></a></li><li><a href="RTCIdentityErrorEvent.html"><code>RTCIdentityErrorEvent</code></a></li><li><a href="RTCIdentityEvent.html"><code>RTCIdentityEvent</code></a></li><li><a rel="nofollow" href="RTCIdentityProvider.html" class="new"><code>RTCIdentityProvider</code></a></li><li><a rel="nofollow" href="RTCIdentityProviderRegistrar.html" class="new"><code>RTCIdentityProviderRegistrar</code></a></li><li><a href="RTCPeerConnection.html"><code>RTCPeerConnection</code></a></li><li><a href="RTCPeerConnectionIceEvent.html"><code>RTCPeerConnectionIceEvent</code></a></li><li><a href="RTCRtpCodecParameters.html"><code>RTCRtpCodecParameters</code></a></li><li><a href="RTCRtpContributingSource.html"><code>RTCRtpContributingSource</code></a></li><li><a href="RTCRtpEncodingParameters.html"><code>RTCRtpEncodingParameters</code></a></li><li><a href="RTCRtpReceiver.html"><code>RTCRtpReceiver</code></a></li><li><a href="RTCRtpSender.html"><code>RTCRtpSender</code></a></li><li><a href="RTCRtpSynchronizationSource.html"><code>RTCRtpSynchronizationSource</code></a></li><li><a href="RTCRtpTransceiver.html"><code>RTCRtpTransceiver</code></a></li><li><a href="RTCRtpTransceiverDirection.html"><code>RTCRtpTransceiverDirection</code></a></li><li><a href="RTCRtpTransceiverInit.html"><code>RTCRtpTransceiverInit</code></a></li><li><a href="RTCSessionDescription.html"><code>RTCSessionDescription</code></a></li><li><a href="RTCSessionDescriptionCallback.html"><code>RTCSessionDescriptionCallback</code></a></li><li><a href="RTCStatsReport.html"><code>RTCStatsReport</code></a></li><li><a href="RTCTrackEvent.html"><code>RTCTrackEvent</code></a></li></ol></li></ol>
+  </div>
+                
+
+                <!-- approvals -->
+                
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+    
+      <div class="newsletter-box">
+        <div class="newsletter">
+    <form id="newsletterForm" class="newsletter-form nodisable" name="newsletter-form" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <div class="newsletter-head">
+            <h2 class="newsletter-teaser">Learn the best of web development</h2>
+            <p class="newsletter-description">Get the latest and greatest from MDN delivered straight to your inbox.</p>
+            
+        </div>
+
+        <div class="newsletter-fields">
+            <input type="hidden" id="fmt" name="fmt" value="H">
+            <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+            <div id="newsletterErrors" class="newsletter-errors"></div>
+
+            <div id="newsletterEmail" class="form-group newsletter-group-email">
+                <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+                <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+            </div>
+
+            <div id="newsletterPrivacy" class="form-group form-group-agree newsletter-group-privacy hidden">
+                <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+                <label for="newsletterPrivacyInput">
+                I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+                </label>
+            </div>
+            <div id="newsletterSubmit" class="newsletter-group-submit">
+                <button id="newsletter-submit" type="submit" class="button neutral newsletter-submit">
+                    Sign up now<svg class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg" width="23" height="28" viewBox="0 0 23 28" aria-hidden="true">
+    <path d="M23 15a2.01 2.01 0 0 1-.578 1.422L12.25 26.594c-.375.359-.891.578-1.422.578s-1.031-.219-1.406-.578L8.25 25.422c-.375-.375-.594-.891-.594-1.422s.219-1.047.594-1.422L12.828 18h-11C.703 18 0 17.062 0 16v-2c0-1.062.703-2 1.828-2h11L8.25 7.406a1.96 1.96 0 0 1 0-2.812l1.172-1.172c.375-.375.875-.594 1.406-.594s1.047.219 1.422.594l10.172 10.172c.375.359.578.875.578 1.406z"></path>
+</svg>
+                </button>
+            </div>
+        </div>
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden">
+        <span>Hide Newsletter Sign-up</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+</div>
+      </div>
+    
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/en-US/docs/Web/API/WebRTC_API$edit" label="Edit page"></menuitem>
+    <menuitem data-action="/en-US/docs/Web/API/WebRTC_API$history" label="View page history"></menuitem>
+  </menu>
+
+      </div>
+  </main>
+  <!-- Footer -->
+    <footer id="nav-footer" class="nav-footer"><div class="center"><a href="http://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC API</a> by <a href="http://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API$history">Mozilla Contributors</a> is licensed under <a href="http://creativecommons.org/licenses/by-sa/2.5/" class="external external-icon">CC-BY-SA 2.5</a>.</div></footer> 
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script async="" type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script src="../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><!--[endif]---->
+
+    
+    <script src="../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../static/build/js/wiki.b26a4c181df3.js" charset="utf-8" id="wikiscript"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../static/build/js/newsletter.a85c5c2892e5.js" charset="utf-8"></script>
+  
+
+
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/WebRTC_API by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 08:50:16 GMT -->
+</body></html>

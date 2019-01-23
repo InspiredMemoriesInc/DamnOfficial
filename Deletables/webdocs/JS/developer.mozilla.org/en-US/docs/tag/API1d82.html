@@ -1,0 +1,1232 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=24 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:10:27 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  <title>Articles tagged: API</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+
+  
+<link rel="preload" href="../../../static/fonts/locales/ZillaSlab-Regular.f9de6143fdfa.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="license" href="#license">
+  
+
+  
+    
+
+    <link href="../../../static/build/styles/mdn.83865b0f7c30.css" rel="stylesheet" type="text/css">
+
+    
+  
+
+    <link href="../../../static/build/styles/wiki.aaf26c13c39b.css" rel="stylesheet" type="text/css">
+
+
+  <link href="../../../static/build/styles/locale-en-US.ca0bca387b42.css" rel="stylesheet" type="text/css">
+
+  
+    <script>
+      /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
+    </script>
+    
+
+
+
+  
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta property="og:site_name" content="MDN Web Docs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="MDN Web Docs">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../static/img/favicon144.e7e21ca263ca.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../static/img/favicon114.d526f38b09c5.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../static/img/favicon72.cc65d1d762a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../static/img/favicon57.de33179910ae.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="../../../static/img/favicon32.7f3da72dcea1.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script async="" type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  
+      <link rel="alternate" type="application/atom+xml" title="Articles tagged: API" href="../feeds/atom/tag/API">
+  
+
+</head>
+<body class="">
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <!--[endif]---->
+
+  
+  
+      <link rel="alternate" type="application/atom+xml" title="Articles tagged: API" href="../feeds/atom/tag/API">
+  
+
+
+
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/wiki-compat-tables.9978a5ce31c2.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+
+        // interactive editor config
+        win.mdn.interactiveEditor = {
+            siteUrl: "https://developer.mozilla.org",
+            editorUrl: "https://interactive-examples.mdn.mozilla.net"
+        };
+
+    })(this);
+</script>
+    
+    <ul id="nav-access">
+  <li><a href="#content" id="skip-main">Skip to main content</a></li>
+  <li><a id="skip-language" href="#language">Select language</a></li>
+  <li><a href="#q" id="skip-search">Skip to search</a></li>
+</ul>
+
+    <!-- Header -->
+    <header id="main-header" class="header-main">
+      <a href="https://developer.mozilla.org/en-US/" class="logo">MDN Web Docs</a>
+      <div class="nav-toolbox-wrapper">
+        <nav id="main-nav" class="nav-main" role="navigation">
+    <ul>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web">Technologies
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-tech-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+                    <li><a href="../Web/API.html">APIs / DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn">References &amp; Guides
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-learn-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-contact-submenu">
+              <div class="submenu-column">
+                <ul>
+                  <li>
+                      <a href="https://support.mozilla.org/">Get Firefox help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://stackoverflow.com/">Get web development help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                      <a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/tag/API%3Fpage%3D24">Report a content problem
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</nav>
+        <div id="toolbox" class="toolbox">
+  <ul>
+    
+    <li class="nav-login"><div class="login">
+    
+        
+        <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FAPI%3Fpage%3D24" class="login-link js-login-link" data-service="GitHub" rel="nofollow">
+            Sign in<svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+    <title>Github</title>
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path>
+</svg>
+        </a>
+    
+</div></li>
+  </ul>
+</div>
+      </div>
+      <form id="nav-main-search" action="https://developer.mozilla.org/en-US/search" method="get" role="search" class="nav-main-search">
+  <div class="search-wrap">
+    <label for="main-q" class="offscreen">Search</label>
+    <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" aria-hidden="true">
+    <span class="search-trigger">
+        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true">
+    <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path>
+</svg>
+    </span>
+    <button type="submit" class="offscreen">Search</button>
+    <button type="button" id="close-header-search" class="close-header-search transparent">
+        <span class="offscreen">Close search</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+  </div>
+</form>
+    </header> 
+
+  <!-- Content will go here -->
+  <main id="content">
+      
+      <div class="center clear">
+      
+
+    <div id="document-list" class="boxed">
+      <h1>Articles tagged: API</h1>
+      
+        
+  <ol class="pagination">
+  
+    <li class="prev">
+      <a href="API89ae.html?page=23">
+        Previous
+      </a>
+    </li>
+  
+  
+    <li><a href="API2679.html?page=1">1</a></li>
+    
+      <li class="skip">…</li>
+    
+  
+  
+    <li>
+      <a href="APIe4a7.html?page=21">21</a>
+    </li>
+  
+    <li>
+      <a href="API3c09.html?page=22">22</a>
+    </li>
+  
+    <li>
+      <a href="API89ae.html?page=23">23</a>
+    </li>
+  
+    <li class="selected">
+      <a href="API1d82.html?page=24">24</a>
+    </li>
+  
+    <li>
+      <a href="API8c06.html?page=25">25</a>
+    </li>
+  
+    <li>
+      <a href="API19d2.html?page=26">26</a>
+    </li>
+  
+    <li>
+      <a href="API2459.html?page=27">27</a>
+    </li>
+  
+  
+    
+      <li class="skip">…</li>
+    
+    <li><a href="API4618.html?page=53">53</a></li>
+  
+  
+    <li class="next">
+      <a href="API8c06.html?page=25">
+        Next
+      </a>
+    </li>
+  
+  </ol>
+
+
+
+        <p>Found 5269 documents</p>
+        <ul class="document-list">
+          
+            <li>
+              <a href="../Web/API/FileRequest/lockedFile.html">Web/API/FileRequest/lockedFile</a>
+                
+                  <small>The lockedFile property represents the LockedFile object from which the request was started.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FileRequest/onprogress.html">Web/API/FileRequest/onprogress</a>
+                
+                  <small>This property specifies a callback function to be run repeatedly while the operation represented...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FileSystem.html">Web/API/FileSystem</a>
+                
+                  <small>The File and Directory Entries API interface FileSystem is used to represent a file system....</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FileSystem/name.html">Web/API/FileSystem/name</a>
+                
+                  <small>The read-only name property of the FileSystem interface indicates the file system's name. This...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FileSystem/root.html">Web/API/FileSystem/root</a>
+                
+                  <small>The read-only root property of the FileSystem interface specifies a FileSystemDirectoryEntry...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FileSystemDirectoryEntry.html">Web/API/FileSystemDirectoryEntry</a>
+                
+                  <small>The FileSystemDirectoryEntry interface of the File and Directory Entries API represents a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FileSystemDirectoryEntry/createReader.html">Web/API/FileSystemDirectoryEntry/createReader</a>
+                
+                  <small>The FileSystemDirectoryEntry interface's method createReader() returns a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FileSystemDirectoryEntry/getDirectory.html">Web/API/FileSystemDirectoryEntry/getDirectory</a>
+                
+                  <small>The FileSystemDirectoryEntry interface's method getDirectory() returns a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FileSystemDirectoryEntry/getFile.html">Web/API/FileSystemDirectoryEntry/getFile</a>
+                
+                  <small>The FileSystemDirectoryEntry interface's method getFile() returns a FileSystemFileEntry object...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FileSystemDirectoryEntry/removeRecursively.html">Web/API/FileSystemDirectoryEntry/removeRecursively</a>
+                
+                  <small>The FileSystemDirectoryEntry interface's method removeRecursively() removes the directory as...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FileSystemDirectoryReader.html">Web/API/FileSystemDirectoryReader</a>
+                
+                  <small>The FileSystemDirectoryReader interface of the File and Directory Entries API lets you access...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FileSystemDirectoryReader/readEntries.html">Web/API/FileSystemDirectoryReader/readEntries</a>
+                
+                  <small>The FileSystemDirectoryReader interface's readEntries() method retrieves the directory entries...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FileSystemEntry.html">Web/API/FileSystemEntry</a>
+                
+                  <small>The FileSystemEntry interface of the File and Directory Entries API represents a single in a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FileSystemEntry/copyTo.html">Web/API/FileSystemEntry/copyTo</a>
+                
+                  <small>The FileSystemEntry interface's method copyTo() copies the file specified by the entry to a new...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FileSystemEntry/filesystem.html">Web/API/FileSystemEntry/filesystem</a>
+                
+                  <small>The read-only filesystem property of the FileSystemEntry interface contains a FileSystem object...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FileSystemEntry/fullPath.html">Web/API/FileSystemEntry/fullPath</a>
+                
+                  <small>The read-only fullPath property of the FileSystemEntry interface returns a USVString specifying...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FileSystemEntry/getMetadata.html">Web/API/FileSystemEntry/getMetadata</a>
+                
+                  <small>The FileSystemEntry interface's method getMetadata() obtains a Metadata object with information...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FileSystemEntry/getParent.html">Web/API/FileSystemEntry/getParent</a>
+                
+                  <small>The FileSystemEntry interface's method getParent() obtains a FileSystemDirectoryEntry.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FileSystemEntry/isDirectory.html">Web/API/FileSystemEntry/isDirectory</a>
+                
+                  <small>The read-only isDirectory property of the FileSystemEntry interface is true if the entry...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FileSystemEntry/isFile.html">Web/API/FileSystemEntry/isFile</a>
+                
+                  <small>The read-only isFile property of the FileSystemEntry interface is true if the entry represents a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FileSystemEntry/moveTo.html">Web/API/FileSystemEntry/moveTo</a>
+                
+                  <small>The FileSystemEntry interface's method moveTo() moves the file specified by the entry to a new...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FileSystemEntry/name.html">Web/API/FileSystemEntry/name</a>
+                
+                  <small>The read-only name property of the FileSystemEntry interface returns a USVString specifying the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FileSystemEntry/remove.html">Web/API/FileSystemEntry/remove</a>
+                
+                  <small>The FileSystemEntry interface's method remove() deletes the file or directory from the file...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FileSystemEntry/toURL.html">Web/API/FileSystemEntry/toURL</a>
+                
+                  <small>The FileSystemEntry interface's method toURL() creates and returns a string containing a URL...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FileSystemFileEntry.html">Web/API/FileSystemFileEntry</a>
+                
+                  <small>The FileSystemFileEntry interface of the File System API represents a file in a file system. It...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FileSystemFileEntry/createWriter.html">Web/API/FileSystemFileEntry/createWriter</a>
+                
+                  <small>The FileSystemFileEntry interface's method createWriter() returns a FileWriter object which can...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FileSystemFileEntry/file.html">Web/API/FileSystemFileEntry/file</a>
+                
+                  <small>The FileSystemFileEntry interface's method file() returns a File object which can be used to...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FileSystemFlags.html">Web/API/FileSystemFlags</a>
+                
+                  <small>The FileSystemFlags dictionary defines a set of values which are used when specifying option...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FileSystemFlags/create.html">Web/API/FileSystemFlags/create</a>
+                
+                  <small>The create property on the FileSystemFlags dictionary is used to indicate whether or not the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FileSystemFlags/exclusive.html">Web/API/FileSystemFlags/exclusive</a>
+                
+                  <small>The exclusive property on the FileSystemFlags dictionary is used in tandem with the create...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FileSystemSync.html">Web/API/FileSystemSync</a>
+                
+                  <small>In the File System API, a FileSystemSync object represents a file system. It has two properties.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/File_and_Directory_Entries_API.html">Web/API/File_and_Directory_Entries_API</a>
+                
+                  <small>The File and Directory Entries API simulates a local file system that web apps can navigate...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/File_and_Directory_Entries_API/Firefox_support.html">Web/API/File_and_Directory_Entries_API/Firefox_support</a>
+                
+                  <small>The original File System API was created to let browsers implement support for accessing a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/File_and_Directory_Entries_API/Introduction.html">Web/API/File_and_Directory_Entries_API/Introduction</a>
+                
+                  <small>The File and Directory Entries API simulates a local file system that web apps can navigate...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/File_Handle_API.html">Web/API/File_Handle_API</a>
+                
+                  <small>The FileHandle API allows for the manipulating of files, including creating files and modifying...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FocusEvent.html">Web/API/FocusEvent</a>
+                
+                  <small>The FocusEvent interface represents focus-related events like focus, blur, focusin, or focusout.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FocusEvent/FocusEvent.html">Web/API/FocusEvent/FocusEvent</a>
+                
+                  <small>The FocusEvent() constructor returns a newly created FocusEvent object with an optional...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FocusEvent/relatedTarget.html">Web/API/FocusEvent/relatedTarget</a>
+                
+                  <small>The FocusEvent.relatedTarget read-only property represents a secondary target for this event,...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FontFace.html">Web/API/FontFace</a>
+                
+                  <small>The FontFace interface represents a single usable font face. It allows&nbsp;control of the source of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FontFace/display.html">Web/API/FontFace/display</a>
+                
+                  <small>The display property of the FontFace interface determines how a font face is displayed based on...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FontFaceSet.html">Web/API/FontFaceSet</a>
+                
+                  <small>The FontFaceSet interface of the CSS Font Loading API&nbsp;manages the loading of font-faces&nbsp;and...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FontFaceSet/check.html">Web/API/FontFaceSet/check</a>
+                
+                  <small>A Boolean that is true if the font list is available</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FontFaceSet/load.html">Web/API/FontFaceSet/load</a>
+                
+                  <small>A Promise of an Array of FontFace loaded. The promise is fulfilled when all the fonts are...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FontFaceSet/ready.html">Web/API/FontFaceSet/ready</a>
+                
+                  <small>The ready&nbsp;readonly property of the FontFaceSet interface returns a Promise that resolves to the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FontFaceSetLoadEvent.html">Web/API/FontFaceSetLoadEvent</a>
+                
+                  <small>The FontFaceSetLoadEvent interface of the the Css Font Loading API&nbsp;is fired whenever a FontFaceSet loads.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FontFaceSetLoadEvent/fontfaces.html">Web/API/FontFaceSetLoadEvent/fontfaces</a>
+                
+                  <small>The fontfaces read-only property of the FontFaceLoadEventInit interface returns an array of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FontFaceSetLoadEvent/FontFaceSetLoadEvent.html">Web/API/FontFaceSetLoadEvent/FontFaceSetLoadEvent</a>
+                
+                  <small>The FontFaceSetLoadEvent constructor creates a new FontFaceLoadEvent object which is fired...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FormData.html">Web/API/FormData</a>
+                
+                  <small>The FormData interface provides a way to easily construct a set of key/value pairs representing...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FormData/append.html">Web/API/FormData/append</a>
+                
+                  <small>The append() method of the FormData interface appends a new value onto an existing key inside a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FormData/delete.html">Web/API/FormData/delete</a>
+                
+                  <small>The delete() method of the FormData interface deletes a key and its value(s) from a FormData object.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FormData/entries.html">Web/API/FormData/entries</a>
+                
+                  <small>The FormData.entries() method returns an iterator allowing to go through all key/value pairs...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FormData/FormData.html">Web/API/FormData/FormData</a>
+                
+                  <small>The FormData() constructor creates a new FormData object.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FormData/get.html">Web/API/FormData/get</a>
+                
+                  <small>The get() method of the FormData interface returns the first value associated with a given key...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FormData/getAll.html">Web/API/FormData/getAll</a>
+                
+                  <small>The getAll() method of the FormData interface returns all the values associated with a given key...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FormData/has.html">Web/API/FormData/has</a>
+                
+                  <small>The has() method of the FormData interface returns a boolean stating whether a FormData object...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FormData/keys.html">Web/API/FormData/keys</a>
+                
+                  <small>The FormData.keys() method returns an iterator allowing to go through all keys contained in this...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FormData/set.html">Web/API/FormData/set</a>
+                
+                  <small>The set() method of the FormData interface sets a new value for an existing key inside a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/FormData/values.html">Web/API/FormData/values</a>
+                
+                  <small>The FormData.values() method returns an iterator allowing to go through all values contained in...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Fullscreen_API.html">Web/API/Fullscreen_API</a>
+                
+                  <small>The Fullscreen API provides an easy way for web content to be presented using the user's entire...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/GainNode.html">Web/API/GainNode</a>
+                
+                  <small>The GainNode interface represents a change in volume. It is an AudioNode audio-processing module...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/GainNode/gain.html">Web/API/GainNode/gain</a>
+                
+                  <small>An AudioParam.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/GainNode/GainNode.html">Web/API/GainNode/GainNode</a>
+                
+                  <small>The GainNode() constructor of the Web Audio API creates a new GainNode object which an AudioNode...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Gamepad.html">Web/API/Gamepad</a>
+                
+                  <small>The Gamepad interface of the Gamepad API defines an individual gamepad or other controller,...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Gamepad/axes.html">Web/API/Gamepad/axes</a>
+                
+                  <small>The Gamepad.axes property of the Gamepad interface returns an array representing the controls...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Gamepad/buttons.html">Web/API/Gamepad/buttons</a>
+                
+                  <small>The Gamepad.buttons property of the Gamepad interface returns an array of gamepadButton objects...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Gamepad/connected.html">Web/API/Gamepad/connected</a>
+                
+                  <small>The Gamepad.connected property of the Gamepad interface returns a boolean indicating whether the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Gamepad/displayId.html">Web/API/Gamepad/displayId</a>
+                
+                  <small>The displayId read-only property of the Gamepad interface returns the VRDisplay.displayId of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Gamepad/hand.html">Web/API/Gamepad/hand</a>
+                
+                  <small>The hand read-only property of the Gamepad interface returns an enum defining what hand the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Gamepad/hapticActuators.html">Web/API/Gamepad/hapticActuators</a>
+                
+                  <small>The hapticActuators read-only property of the Gamepad interface returns an array containing...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Gamepad/id.html">Web/API/Gamepad/id</a>
+                
+                  <small>The Gamepad.id property of the Gamepad interface returns a string containing some information...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Gamepad/index.html">Web/API/Gamepad/index</a>
+                
+                  <small>The Gamepad.index property of the Gamepad interface returns an integer that is auto-incremented...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Gamepad/mapping.html">Web/API/Gamepad/mapping</a>
+                
+                  <small>The Gamepad.mapping property of the Gamepad interface returns a string indicating whether the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Gamepad/pose.html">Web/API/Gamepad/pose</a>
+                
+                  <small>The pose read-only property of the Gamepad interface returns a GamepadPose object representing...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Gamepad/timestamp.html">Web/API/Gamepad/timestamp</a>
+                
+                  <small>The Gamepad.timestamp property of the Gamepad interface returns a DOMHighResTimeStamp...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/GamepadButton.html">Web/API/GamepadButton</a>
+                
+                  <small>The GamepadButton interface defines an individual button of a gamepad or other controller,...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/GamepadButton/pressed.html">Web/API/GamepadButton/pressed</a>
+                
+                  <small>The GamepadButton.pressed property of the GamepadButton interface returns a boolean indicating...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/GamepadButton/value.html">Web/API/GamepadButton/value</a>
+                
+                  <small>The GamepadButton.value property of the GamepadButton interface returns a double value used to...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/GamepadEvent.html">Web/API/GamepadEvent</a>
+                
+                  <small>The GamepadEvent interface of the Gamepad API contains references to gamepads connected to the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/GamepadEvent/gamepad.html">Web/API/GamepadEvent/gamepad</a>
+                
+                  <small>The GamepadEvent.gamepad property of the GamepadEvent interface returns a Gamepad object,...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/GamepadEvent/GamepadEvent.html">Web/API/GamepadEvent/GamepadEvent</a>
+                
+                  <small>The GamepadEvent_ constructor creates a new GamepadEvent object.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/GamepadHapticActuator.html">Web/API/GamepadHapticActuator</a>
+                
+                  <small>The GamepadHapticActuator interface of the Gamepad API represents hardware in the controller...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/GamepadHapticActuator/pulse.html">Web/API/GamepadHapticActuator/pulse</a>
+                
+                  <small>The pulse() method of the GamepadHapticActuator interface makes the hardware pulse at a certain...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/GamepadHapticActuator/type.html">Web/API/GamepadHapticActuator/type</a>
+                
+                  <small>The type read-only property of the GamepadHapticActuator interface returns an enum representing...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/GamepadPose.html">Web/API/GamepadPose</a>
+                
+                  <small>The GamepadPose interface of the Gamepad API represents the pose of a WebVR controller at a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/GamepadPose/angularAcceleration.html">Web/API/GamepadPose/angularAcceleration</a>
+                
+                  <small>The angularAcceleration read-only property of the GamepadPose interface returns an array...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/GamepadPose/angularVelocity.html">Web/API/GamepadPose/angularVelocity</a>
+                
+                  <small>The angularVelocity read-only property of the GamepadPose interface returns an array...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/GamepadPose/hasOrientation.html">Web/API/GamepadPose/hasOrientation</a>
+                
+                  <small>The hasOrientation read-only property of the GamepadPose interface returns a Boolean stating...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/GamepadPose/hasPosition.html">Web/API/GamepadPose/hasPosition</a>
+                
+                  <small>The hasPosition read-only property of the GamepadPose interface returns a Boolean stating...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/GamepadPose/linearAcceleration.html">Web/API/GamepadPose/linearAcceleration</a>
+                
+                  <small>The linearAcceleration read-only property of the GamepadPose interface returns an array...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/GamepadPose/linearVelocity.html">Web/API/GamepadPose/linearVelocity</a>
+                
+                  <small>The linearVelocity read-only property of the GamepadPose interface returns an array representing...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/GamepadPose/orientation.html">Web/API/GamepadPose/orientation</a>
+                
+                  <small>The orientation read-only property of the GamepadPose interface returns the orientation of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/GamepadPose/position.html">Web/API/GamepadPose/position</a>
+                
+                  <small>The position read-only property of the GamepadPose interface returns the position of the Gamepad...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Gamepad_API.html">Web/API/Gamepad_API</a>
+                
+                  <small>The&nbsp;Gamepad API&nbsp;is a way for developers to access and respond to signals from gamepads and other...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Gamepad_API/Using_the_Gamepad_API.html">Web/API/Gamepad_API/Using_the_Gamepad_API</a>
+                
+                  <small>HTML5 introduced many of the necessary components for rich, interactive game development....</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Geolocation.html">Web/API/Geolocation</a>
+                
+                  <small>The Geolocation interface represents an object able to programmatically obtain the position of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Geolocation/clearWatch.html">Web/API/Geolocation/clearWatch</a>
+                
+                  <small>The Geolocation.clearWatch() method is used to unregister location/error monitoring handlers...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Geolocation/getCurrentPosition.html">Web/API/Geolocation/getCurrentPosition</a>
+                
+                  <small>The Geolocation.getCurrentPosition() method is used to get the current position of the device.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Geolocation/watchPosition.html">Web/API/Geolocation/watchPosition</a>
+                
+                  <small>The Geolocation method watchPosition() method is used to register a handler function that will...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/GeometryUtils.html">Web/API/GeometryUtils</a>
+                
+                  <small>The GeometryUtils interface provides different utility function to retrieve geometry information...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/GestureEvent.html">Web/API/GestureEvent</a>
+                
+                  <small>The GestureEvent is a proprietary interface specific to WebKit which gives information regarding...</small>
+                
+            </li>
+          
+        </ul>
+        
+  <ol class="pagination">
+  
+    <li class="prev">
+      <a href="API89ae.html?page=23">
+        Previous
+      </a>
+    </li>
+  
+  
+    <li><a href="API2679.html?page=1">1</a></li>
+    
+      <li class="skip">…</li>
+    
+  
+  
+    <li>
+      <a href="APIe4a7.html?page=21">21</a>
+    </li>
+  
+    <li>
+      <a href="API3c09.html?page=22">22</a>
+    </li>
+  
+    <li>
+      <a href="API89ae.html?page=23">23</a>
+    </li>
+  
+    <li class="selected">
+      <a href="API1d82.html?page=24">24</a>
+    </li>
+  
+    <li>
+      <a href="API8c06.html?page=25">25</a>
+    </li>
+  
+    <li>
+      <a href="API19d2.html?page=26">26</a>
+    </li>
+  
+    <li>
+      <a href="API2459.html?page=27">27</a>
+    </li>
+  
+  
+    
+      <li class="skip">…</li>
+    
+    <li><a href="API4618.html?page=53">53</a></li>
+  
+  
+    <li class="next">
+      <a href="API8c06.html?page=25">
+        Next
+      </a>
+    </li>
+  
+  </ol>
+
+
+
+      
+    </div>
+
+
+      </div>
+  </main>
+  <!-- Footer -->
+     
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script async="" type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script src="../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><!--[endif]---->
+
+    
+    <script src="../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../static/build/js/wiki.b26a4c181df3.js" charset="utf-8" id="wikiscript"></script>
+
+
+
+  
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=24 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:10:27 GMT -->
+</body></html>

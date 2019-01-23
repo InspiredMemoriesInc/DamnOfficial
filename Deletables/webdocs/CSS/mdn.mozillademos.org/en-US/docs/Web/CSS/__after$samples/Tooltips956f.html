@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/::after$samples/Tooltips?revision=1392663 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:45:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            span[data-descr] {
+  position: relative;
+  text-decoration: underline;
+  color: #00F;
+  cursor: help;
+}
+
+span[data-descr]:hover::after {
+  content: attr(data-descr);
+  position: absolute;
+  left: 0;
+  top: 24px;
+  min-width: 200px;
+  border: 1px #aaaaaa solid;
+  border-radius: 10px;
+  background-color: #ffffcc;
+  padding: 12px;
+  color: #000000;
+  font-size: 14px;
+  z-index: 1;
+}
+        </style>
+        
+        <title>::after (:after)</title>
+    </head>
+    <body>
+        
+            <p>Here we have some
+  <span data-descr="collection of words and punctuation">text</span> with a few
+  <span data-descr="small popups that appear when hovering">tooltips</span>.
+</p>
+
+        
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/::after$samples/Tooltips?revision=1392663 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:45:39 GMT -->
+</html>

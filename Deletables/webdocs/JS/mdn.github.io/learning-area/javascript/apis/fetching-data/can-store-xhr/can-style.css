@@ -1,0 +1,184 @@
+/* General */
+
+html {
+  font-family: 'Raleway', sans-serif;
+  background-color: yellow;
+  font-size: 10px;
+}
+
+body {
+  width: 800px;
+  margin: 0 auto;
+}
+
+/* Typography */
+
+h1, h2 {
+  font-family: 'Cherry Swash', cursive;
+  margin: 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 5rem;
+  background: url(icons/bean_can.png) no-repeat 20% center, url(icons/bean_can.png) no-repeat 80% center;
+  background-size: 48px 48px;
+}
+
+h2 {
+  font-size: 2rem;
+  color: yellow;
+  text-align: right;
+  width: 160px;
+  position: absolute;
+  right: 4%;
+  z-index: 3000;
+  text-shadow: 2px 2px 1px black;
+  line-height: 2rem;
+  padding-top: 0.3rem;
+}
+
+
+
+p, label, input, select, button, li {
+  font-size: 1.5rem;
+}
+
+li {
+  line-height: 1.5;
+}
+
+/* block styling */
+
+header, aside, main, footer {
+  padding: 20px;
+}
+
+header {
+  border: 5px solid black;
+  border-bottom: 0;
+}
+
+aside {
+  border-right: 5px solid black;
+}
+
+body > div {
+  border: 5px solid black;
+  display: flex;
+}
+
+footer {
+  border: 5px solid black;
+  border-top: 0;
+}
+
+aside {
+  flex: 3;
+}
+
+main {
+  flex: 7;
+}
+
+/* Form styling */
+
+aside {
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+}
+
+aside div {
+  margin-bottom: 20px;
+}
+
+label, select, input {
+  display: block;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+select, input, button {
+  width: 100%;
+}
+
+input {
+  background: black;
+  box-shadow: inset 1px 1px 1px white;
+  color: yellow;
+  border: none;
+  padding: 5px;
+  width: 201.5px;
+}
+
+button {
+  background: black;
+  color: yellow;
+  padding: 5px 0;
+  border: none;
+  border-radius: 10px;
+  box-shadow: inset 1px 1px 2px white, inset -1px -1px 2px #ccc;
+}
+
+/* Styling the products */
+
+main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+section {
+  width: 45%;
+  margin: 5px;
+  background-color: black;
+  position: relative;
+  height: 215px;
+}
+
+section img {
+  width: 100%;
+  display: block;
+  position: absolute;
+  bottom: 0px;
+}
+
+section p {
+  color: yellow;
+  background: black;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 2px 2px 1px yellow;
+  position: absolute;
+  right: 10px;
+  bottom: -6px;
+  z-index: 2000;
+}
+
+.vegetables {
+  background: black url(icons/vegetable.png) no-repeat 2px 2px;
+  background-size: 24px 24px;
+}
+
+.meat {
+  background: black url(icons/meat.png) no-repeat 2px 2px;
+  background-size: 24px 24px;
+}
+
+.soup {
+  background: black url(icons/soup.png) no-repeat 2px 2px;
+  background-size: 24px 24px;
+}
+
+ #main-header {display:none !important} #toc.fixed { position: static !important; overflow-y: visible !important; } #redesignNotice {display:none !important} .contributors {display:none !important} .wiki-left-present:not(.wiki-left-closed) #wiki-left {display:none !important} .wiki-left-present:not(.wiki-left-closed) #toc.fixed {width: 100% !important; max-height:none !important} #wiki-content {width:100% !important} #wiki-content {float:left !important} .notification-tray, .section-edit {display:none !important} .communitybox, #wiki-controls {display:none !important} .syntaxbox-help{display:none !important} .article-meta { display:none !important} #wiki-right {padding-bottom: 25px !important; width:100% !important} .column-strip.quick-links {margin-bottom:0px !important} .redesign-beta-notice {display:none !important} #tabzilla-panel {display:none !important} main>.center {padding-top:10px !important} .share {display:none !important} .breadcrumbs {display:none !important} .global-notice, .page-buttons {display:none !important} .crumbs {display:none !important} .languages {display:none !important} #toc {max-height:none !important} .offline-notice {display:none} #redirected-from {display:none} #masthead {display:none}
+#nav-toolbar {display:none} .line-highlight:before, .line-highlight[data-end]:after {display:none !important} #helpful-survey {display:none !important}
+#page-buttons{display:none} .contributor-avatars {display:none !important} .document-head { background-color:white !important; padding: 0px 0 20px !important} .newsletter-box {display:none !important} .center {max-width:none !important} #wiki-column-container {overflow:visible !important} .sample-code-frame {padding:0px !important; border: none !important} #sessionMsg.errormsg{display:none}
+.page-watch {display:none} .document-head h1 {margin-top:10px !important} #wikiArticle {border-bottom:0px !important} #wiki-content,#wiki-left,#wiki-right{margin-right:0;width:auto!important;float:none;padding-bottom:40px}#wiki-right #toc{padding:10px 20px}#wiki-right #toc .toggler{pointer-events:auto;color:#387894}#wiki-right #toc .toggler i{display:inline-block}#wiki-right #toc .toggle-container{display:none}.no-js #wiki-right #toc .toggle-container{display:block}#wiki-column-container,#wiki-content{width:auto!important} #wiki-column-container, #wiki-content {width:100% !important} #kserrors {display:none !important} .banner, .blockIndicator, .geckoVersionNote, .inheritsbox, .note, .notice, .overheadIndicator, .standardNoteBlock, .warning, .text-content p, .text-content dl, .text-content ol, .text-content ul {max-width:none !important} .summary {border:0px !important} body {font-size:16px}
+
+.crumbs {display:block !important} .crumbs {margin-top:10px !important; margin-bottom:0 !important; padding-bottom:0 !important; border:none !important}

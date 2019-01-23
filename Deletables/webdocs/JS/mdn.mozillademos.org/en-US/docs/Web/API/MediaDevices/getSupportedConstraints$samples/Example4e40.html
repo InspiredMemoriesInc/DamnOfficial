@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/MediaDevices/getSupportedConstraints$samples/Example?revision=1397400 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 10:59:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            body {
+  font: 15px Arial, sans-serif;
+}
+        </style>
+        
+        <title>MediaDevices.getSupportedConstraints()</title>
+    </head>
+    <body>
+        
+            <p>The following media constraints are supported by your browser:</p>
+
+<ul id="constraintList">
+</ul>
+        
+        
+            <script>
+                let constraintList = document.getElementById("constraintList");
+let supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
+
+for (let constraint in supportedConstraints) {
+  if (supportedConstraints.hasOwnProperty(constraint)) {
+    let elem = document.createElement("li");
+    
+    elem.innerHTML = "<code>" + constraint + "</code>";
+    constraintList.appendChild(elem);
+  }
+}
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/MediaDevices/getSupportedConstraints$samples/Example?revision=1397400 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 10:59:26 GMT -->
+</html>

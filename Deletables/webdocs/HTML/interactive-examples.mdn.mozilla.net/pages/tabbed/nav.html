@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from interactive-examples.mdn.mozilla.net/pages/tabbed/nav.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:05:40 GMT -->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>HTML Demo: &lt;nav></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../../css/codemirror-tabbed-5-31-0.css" rel="stylesheet" />
+    <link href="../../css/tabbed-editor.css" rel="stylesheet" />
+    <script>"use strict";function postToKuma(e){window.parent.postMessage(e,"https://developer.mozilla.org/")}postToKuma({markName:"interactive-editor-loading"}),document.addEventListener("readystatechange",function(e){switch(e.target.readyState){case"interactive":postToKuma({markName:"interactive-editor-interactive",measureName:"ie-time-to-interactive",startMark:"interactive-editor-loading",endMark:"interactive-editor-interactive"});break;case"complete":postToKuma({markName:"interactive-editor-complete",measureName:"ie-time-to-complete",startMark:"interactive-editor-loading",endMark:"interactive-editor-complete"})}});</script>
+  </head>
+  <body>
+      <header class="output-header hidden">
+        <h4>HTML Demo: &lt;nav></h4>
+        <button id="reset" class="reset" type="button">Reset</button>
+      </header>
+      <div id="editor-container" class="editor-container tabbed-standard">
+          <section id="tab-container" class="tabs">
+              <div id="tablist" role="tablist">
+                  <button role="tab" aria-selected="true" aria-controls="html-panel" id="html">
+                      HTML
+                  </button>
+                  <button role="tab" aria-selected="false" aria-controls="css-panel" id="css" tabindex="-1">
+                      CSS
+                  </button>
+              </div>
+              <section id="html-panel" tabindex="0" role="tabpanel" aria-labelledby="html">
+<div id="html-editor"><pre><code>&lt;nav class="crumbs">
+    &lt;ol>
+        &lt;li class="crumb">&lt;a href="https://example.org/bikes">Bikes&lt;/a>&lt;/li>
+        &lt;li class="crumb">&lt;a href="https://example.org/bikes/bmx">BMX&lt;/a>&lt;/li>
+        &lt;li class="crumb">Jump Bike 3000&lt;/li>
+    &lt;/ol>
+&lt;/nav>
+&lt;h1>Jump Bike 3000&lt;/h1>
+&lt;p>This BMX bike is a solid step into the pro world. It looks as legit as it rides and is built to polish your skills.&lt;/p>
+</pre></code></div>
+              </section>
+              <section id="css-panel" tabindex="0" role="tabpanel" aria-labelledby="css" class="hidden">
+<div id="css-editor"><pre><code>.crumbs ol {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.crumb {
+    display: inline-block;
+}
+
+.crumb a::after {
+    display: inline-block;
+    color: #000;
+    content: '>';
+    font-size: 80%;
+    font-weight: bold;
+    padding: 0 3px;
+}
+</pre></code></div>
+              </section>
+          </section>
+          <h4 class="output-label">Output</h4>
+          <div id="output" class="shadow-container">
+              <shadow-output></shadow-output>
+          </div>
+      </div>
+
+    
+
+    <script src="../../js/codemirror-tabbed-5-31-0.js"></script>
+    <script src="../../js/tabbed-editor.js"></script>
+  </body>
+
+<!-- Mirrored from interactive-examples.mdn.mozilla.net/pages/tabbed/nav.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:05:40 GMT -->
+</html>

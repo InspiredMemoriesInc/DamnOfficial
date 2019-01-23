@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/mask-type$samples/maskluminance?revision=1349625 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:48:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            
+.redsquare {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(128, 128, 128);
+  border: solid 1px black;
+  mask: url("#m");
+}
+
+        </style>
+        
+        <title>mask-type</title>
+    </head>
+    <body>
+        
+            
+<div class="redsquare"></div>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0">
+  <defs>
+    <mask id="m" maskContentUnits="objectBoundingBox"
+        style="mask-type:luminance">
+      <rect x=".1" y=".1" width=".8" height=".8"
+          fill="red" fill-opacity="0.7"/>
+    </mask>
+  </defs>
+</svg>
+
+        
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/mask-type$samples/maskluminance?revision=1349625 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:48:38 GMT -->
+</html>

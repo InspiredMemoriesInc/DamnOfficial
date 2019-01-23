@@ -1,0 +1,107 @@
+.mc4wp-form {
+    label {
+        display: block;
+    }
+}
+
+.g1-newsletter {
+    @if ( 'miami' == $stack ) {
+        margin-bottom: 60px;
+    } @else {
+        margin-bottom: 30px;
+    }
+
+
+    .mc4wp-form {
+
+        input[type=text],
+        input[type=email],
+        input[type=select] {
+            width: 100%;
+        }
+
+        input[type=submit] {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    @if ( 'bunchy' == $stack ) {
+        .g1-box-icon{
+            display:none;
+        }
+    }
+}
+
+.g1-newsletter-privacy {
+    margin-top: -0.25em;
+
+    @include if-not-stack( 'miami' ) {
+        opacity: 0.666;
+    }
+}
+
+
+
+.g1-box {
+    .mc4wp-form-fields {
+        label {
+            position: absolute;
+            clip: rect(1px, 1px, 1px, 1px);
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+        p {
+            margin-bottom: 0.75em;
+        }
+    }
+}
+
+
+
+.g1-newsletter-horizontal {
+    max-width: 758px;
+    margin: 3em auto;
+
+    .g1-collection-item & {
+        margin-top: 30px;
+        margin-bottom: 60px;
+    }
+
+    .g1-mega + .g1-delta,
+    .g1-alpha + .g1-delta {
+        margin-top: -1.5rem;
+    }
+}
+
+
+
+@media only screen and ( min-width: 481px ) {
+    .g1-newsletter-horizontal {
+        .mc4wp-form-fields {
+            display: flex;
+            flex-wrap: wrap;
+
+            max-width: 561px;
+            margin-#{$left}: auto;
+            margin-#{$right}: auto;
+
+            input[type=email] {
+                text-align: $left;
+            }
+
+            p {
+                display: inline-block;
+                vertical-align: top;
+                margin-#{$left}: 5px;
+                margin-#{$right}: 5px;
+            }
+
+            p:first-child {
+                @include flex(1 1 auto);
+            }
+        }
+    }
+}

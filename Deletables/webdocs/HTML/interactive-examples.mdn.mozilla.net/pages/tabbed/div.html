@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from interactive-examples.mdn.mozilla.net/pages/tabbed/div.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:02:49 GMT -->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>HTML Demo: &lt;div></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../../css/codemirror-tabbed-5-31-0.css" rel="stylesheet" />
+    <link href="../../css/tabbed-editor.css" rel="stylesheet" />
+    <script>"use strict";function postToKuma(e){window.parent.postMessage(e,"https://developer.mozilla.org/")}postToKuma({markName:"interactive-editor-loading"}),document.addEventListener("readystatechange",function(e){switch(e.target.readyState){case"interactive":postToKuma({markName:"interactive-editor-interactive",measureName:"ie-time-to-interactive",startMark:"interactive-editor-loading",endMark:"interactive-editor-interactive"});break;case"complete":postToKuma({markName:"interactive-editor-complete",measureName:"ie-time-to-complete",startMark:"interactive-editor-loading",endMark:"interactive-editor-complete"})}});</script>
+  </head>
+  <body>
+      <header class="output-header hidden">
+        <h4>HTML Demo: &lt;div></h4>
+        <button id="reset" class="reset" type="button">Reset</button>
+      </header>
+      <div id="editor-container" class="editor-container tabbed-standard">
+          <section id="tab-container" class="tabs">
+              <div id="tablist" role="tablist">
+                  <button role="tab" aria-selected="true" aria-controls="html-panel" id="html">
+                      HTML
+                  </button>
+                  <button role="tab" aria-selected="false" aria-controls="css-panel" id="css" tabindex="-1">
+                      CSS
+                  </button>
+              </div>
+              <section id="html-panel" tabindex="0" role="tabpanel" aria-labelledby="html">
+<div id="html-editor"><pre><code>&lt;blockquote>
+    &lt;p>It was on display in the bottom of a locked filing cabinet stuck in a disused lavatory with a sign on the door saying:&lt;/p>
+    &lt;div class="warning">
+        &lt;img src="/media/examples/leopard.jpg" />
+        &lt;!-- Photo by Andreas Berlin on Unsplash -->
+        &lt;p>Beware of the leopard&lt;/p>
+    &lt;/div>
+&lt;/blockquote>
+
+&lt;cite>― Douglas Adams, The Hitchhiker's Guide to the Galaxy &lt;/cite>
+</pre></code></div>
+              </section>
+              <section id="css-panel" tabindex="0" role="tabpanel" aria-labelledby="css" class="hidden">
+<div id="css-editor"><pre><code>.output {
+    font:  .9rem/1.5 sans-serif;
+}
+
+blockquote {
+    margin: 0;
+}
+
+p {
+    margin: .2rem;
+}
+
+.warning {
+    border: 10px ridge #f00;
+    background-color: #ff0;
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.warning img {
+    width: 100%;
+}
+
+.warning p {
+    font: small-caps bold 1.2rem sans-serif;
+    text-align: center;
+}
+
+cite {
+    font-size: .8rem;
+}
+</pre></code></div>
+              </section>
+          </section>
+          <h4 class="output-label">Output</h4>
+          <div id="output" class="shadow-container">
+              <shadow-output></shadow-output>
+          </div>
+      </div>
+
+    
+
+    <script src="../../js/codemirror-tabbed-5-31-0.js"></script>
+    <script src="../../js/tabbed-editor.js"></script>
+  </body>
+
+<!-- Mirrored from interactive-examples.mdn.mozilla.net/pages/tabbed/div.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:02:49 GMT -->
+</html>

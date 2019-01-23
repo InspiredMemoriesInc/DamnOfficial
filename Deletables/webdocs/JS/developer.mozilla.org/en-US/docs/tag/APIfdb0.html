@@ -1,0 +1,1230 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=4 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 08:38:21 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  <title>Articles tagged: API</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+
+  
+<link rel="preload" href="../../../static/fonts/locales/ZillaSlab-Regular.f9de6143fdfa.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="license" href="#license">
+  
+
+  
+    
+
+    <link href="../../../static/build/styles/mdn.83865b0f7c30.css" rel="stylesheet" type="text/css">
+
+    
+  
+
+    <link href="../../../static/build/styles/wiki.aaf26c13c39b.css" rel="stylesheet" type="text/css">
+
+
+  <link href="../../../static/build/styles/locale-en-US.ca0bca387b42.css" rel="stylesheet" type="text/css">
+
+  
+    <script>
+      /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
+    </script>
+    
+
+
+
+  
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta property="og:site_name" content="MDN Web Docs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="MDN Web Docs">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../static/img/favicon144.e7e21ca263ca.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../static/img/favicon114.d526f38b09c5.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../static/img/favicon72.cc65d1d762a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../static/img/favicon57.de33179910ae.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="../../../static/img/favicon32.7f3da72dcea1.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script async="" type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  
+      <link rel="alternate" type="application/atom+xml" title="Articles tagged: API" href="../feeds/atom/tag/API">
+  
+
+</head>
+<body class="">
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <!--[endif]---->
+
+  
+  
+      <link rel="alternate" type="application/atom+xml" title="Articles tagged: API" href="../feeds/atom/tag/API">
+  
+
+
+
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/wiki-compat-tables.9978a5ce31c2.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+
+        // interactive editor config
+        win.mdn.interactiveEditor = {
+            siteUrl: "https://developer.mozilla.org",
+            editorUrl: "https://interactive-examples.mdn.mozilla.net"
+        };
+
+    })(this);
+</script>
+    
+    <ul id="nav-access">
+  <li><a href="#content" id="skip-main">Skip to main content</a></li>
+  <li><a id="skip-language" href="#language">Select language</a></li>
+  <li><a href="#q" id="skip-search">Skip to search</a></li>
+</ul>
+
+    <!-- Header -->
+    <header id="main-header" class="header-main">
+      <a href="https://developer.mozilla.org/en-US/" class="logo">MDN Web Docs</a>
+      <div class="nav-toolbox-wrapper">
+        <nav id="main-nav" class="nav-main" role="navigation">
+    <ul>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web">Technologies
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-tech-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+                    <li><a href="../Web/API.html">APIs / DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn">References &amp; Guides
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-learn-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-contact-submenu">
+              <div class="submenu-column">
+                <ul>
+                  <li>
+                      <a href="https://support.mozilla.org/">Get Firefox help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://stackoverflow.com/">Get web development help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                      <a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/tag/API%3Fpage%3D4">Report a content problem
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</nav>
+        <div id="toolbox" class="toolbox">
+  <ul>
+    
+    <li class="nav-login"><div class="login">
+    
+        
+        <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FAPI%3Fpage%3D4" class="login-link js-login-link" data-service="GitHub" rel="nofollow">
+            Sign in<svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+    <title>Github</title>
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path>
+</svg>
+        </a>
+    
+</div></li>
+  </ul>
+</div>
+      </div>
+      <form id="nav-main-search" action="https://developer.mozilla.org/en-US/search" method="get" role="search" class="nav-main-search">
+  <div class="search-wrap">
+    <label for="main-q" class="offscreen">Search</label>
+    <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" aria-hidden="true">
+    <span class="search-trigger">
+        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true">
+    <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path>
+</svg>
+    </span>
+    <button type="submit" class="offscreen">Search</button>
+    <button type="button" id="close-header-search" class="close-header-search transparent">
+        <span class="offscreen">Close search</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+  </div>
+</form>
+    </header> 
+
+  <!-- Content will go here -->
+  <main id="content">
+      
+      <div class="center clear">
+      
+
+    <div id="document-list" class="boxed">
+      <h1>Articles tagged: API</h1>
+      
+        
+  <ol class="pagination">
+  
+    <li class="prev">
+      <a href="API9ba9.html?page=3">
+        Previous
+      </a>
+    </li>
+  
+  
+  
+    <li>
+      <a href="API2679.html?page=1">1</a>
+    </li>
+  
+    <li>
+      <a href="API4658.html?page=2">2</a>
+    </li>
+  
+    <li>
+      <a href="API9ba9.html?page=3">3</a>
+    </li>
+  
+    <li class="selected">
+      <a href="APIfdb0.html?page=4">4</a>
+    </li>
+  
+    <li>
+      <a href="APIaf4d.html?page=5">5</a>
+    </li>
+  
+    <li>
+      <a href="APIc575.html?page=6">6</a>
+    </li>
+  
+    <li>
+      <a href="API235c.html?page=7">7</a>
+    </li>
+  
+    <li>
+      <a href="APIfdfa.html?page=8">8</a>
+    </li>
+  
+  
+    
+      <li class="skip">…</li>
+    
+    <li><a href="API4618.html?page=53">53</a></li>
+  
+  
+    <li class="next">
+      <a href="APIaf4d.html?page=5">
+        Next
+      </a>
+    </li>
+  
+  </ol>
+
+
+
+        <p>Found 5269 documents</p>
+        <ul class="document-list">
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMmsMessage/sender.html">Archive/B2G_OS/API/MozMmsMessage/sender</a>
+                
+                  <small>The sender property provides the phone number of the sender of a given message.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMmsMessage/smil.html">Archive/B2G_OS/API/MozMmsMessage/smil</a>
+                
+                  <small>The smil property represents a stringified version of the SMIL content of the message (an MMS is...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMmsMessage/subject.html">Archive/B2G_OS/API/MozMmsMessage/subject</a>
+                
+                  <small>The subject property is a string representing the subject of the message (in many cases, its title).</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMmsMessage/threadId.html">Archive/B2G_OS/API/MozMmsMessage/threadId</a>
+                
+                  <small>The threadId property represents the id of the thread the message is part of.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMmsMessage/timestamp.html">Archive/B2G_OS/API/MozMmsMessage/timestamp</a>
+                
+                  <small>The timestamp property represents the timestamp of a given message.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMmsMessage/type.html">Archive/B2G_OS/API/MozMmsMessage/type</a>
+                
+                  <small>The type property represents the type of the message. It provides a convenient way to be sure...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileCCInfo.html">Archive/B2G_OS/API/MozMobileCCInfo</a>
+                
+                  <small>The MozMobileICCInfo interface allow to access access to information stored in the device's ICC...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileCCInfo/iccid.html">Archive/B2G_OS/API/MozMobileCCInfo/iccid</a>
+                
+                  <small>iccid is a read-only property representing the Integrated Circuit Card (ICC) Identifier.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileCCInfo/isDisplayNetworkNameRequired.html">Archive/B2G_OS/API/MozMobileCCInfo/isDisplayNetworkNameRequired</a>
+                
+                  <small>isDisplayNetworkNameRequired is a read-only property that indicates the Network name must be a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileCCInfo/isDisplaySpnRequired.html">Archive/B2G_OS/API/MozMobileCCInfo/isDisplaySpnRequired</a>
+                
+                  <small>isDisplaySpnRequired is a read-only property that indicates the Service provider name must be a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileCCInfo/mcc.html">Archive/B2G_OS/API/MozMobileCCInfo/mcc</a>
+                
+                  <small>mcc is a read-only property representing the Mobile Country Code (MCC) of the subscriber's home network.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileCCInfo/mnc.html">Archive/B2G_OS/API/MozMobileCCInfo/mnc</a>
+                
+                  <small>mnc is a read-only property representing the Mobile Network Code (MNC) of the subscriber's home network.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileCCInfo/msisdn.html">Archive/B2G_OS/API/MozMobileCCInfo/msisdn</a>
+                
+                  <small>msisdn is a read-only property representing the Mobile Station ISDN Number (MSISDN) of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileCCInfo/spn.html">Archive/B2G_OS/API/MozMobileCCInfo/spn</a>
+                
+                  <small>spn is a read-only property representing the Service Provider Name (SPN) of the subscriber's...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileCellInfo.html">Archive/B2G_OS/API/MozMobileCellInfo</a>
+                
+                  <small>The MozMobileCellInfo interface allow to access to cell location information.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileCellInfo/gsmCellId.html">Archive/B2G_OS/API/MozMobileCellInfo/gsmCellId</a>
+                
+                  <small>gsmCellId is a read-only property that provides the mobile Cell ID for the current GSM / WCDMA networks.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileCellInfo/gsmLocationAreaCode.html">Archive/B2G_OS/API/MozMobileCellInfo/gsmLocationAreaCode</a>
+                
+                  <small>gsmLocationAreaCode is a read-only property that provides the mobile Location Area Code (LAC)...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileCFInfo.html">Archive/B2G_OS/API/MozMobileCFInfo</a>
+                
+                  <small>The MozMobileCFInfo interface defines options used to retrieve or define call forwarding settings.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileCFInfo/action.html">Archive/B2G_OS/API/MozMobileCFInfo/action</a>
+                
+                  <small>action is a read-only property that indicates what to do with the call forwarding rule.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileCFInfo/active.html">Archive/B2G_OS/API/MozMobileCFInfo/active</a>
+                
+                  <small>active is a read-only property that indicates whether call forwarding is active (true) or not...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileCFInfo/number.html">Archive/B2G_OS/API/MozMobileCFInfo/number</a>
+                
+                  <small>number is a read-only property that indicates the phone number where to forward the calls.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileCFInfo/reason.html">Archive/B2G_OS/API/MozMobileCFInfo/reason</a>
+                
+                  <small>reason is a read-only property that indicates the reason the call is being forwarded.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileCFInfo/serviceClass.html">Archive/B2G_OS/API/MozMobileCFInfo/serviceClass</a>
+                
+                  <small>serviceClass is a read-only property that represents the service for which the call forward is set up.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileCFInfo/timeSeconds.html">Archive/B2G_OS/API/MozMobileCFInfo/timeSeconds</a>
+                
+                  <small>timeSeconds is a read-only property representing the time in seconds to wait before a call is forwarded.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnection.html">Archive/B2G_OS/API/MozMobileConnection</a>
+                
+                  <small>This API is used to get information about the current mobile voice and data connection states of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnection/cancelMMI.html">Archive/B2G_OS/API/MozMobileConnection/cancelMMI</a>
+                
+                  <small>The cancelMMI method cancels the current MMI request if one exists.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnection/cardState.html">Archive/B2G_OS/API/MozMobileConnection/cardState</a>
+                
+                  <small>The cardState is a read-only property that indicates the state of the device's ICC card.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnection/data.html">Archive/B2G_OS/API/MozMobileConnection/data</a>
+                
+                  <small>The data is a read-only property that gives access to information about the device's data connection.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnection/getCallForwardingOption.html">Archive/B2G_OS/API/MozMobileConnection/getCallForwardingOption</a>
+                
+                  <small>The getCallForwardingOption method is used to query current options for call forwarding.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnection/getCardLock.html">Archive/B2G_OS/API/MozMobileConnection/getCardLock</a>
+                
+                  <small>The getCardLock method is used to find out about the status of an integrated circuit card (ICC)...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnection/getNetworks.html">Archive/B2G_OS/API/MozMobileConnection/getNetworks</a>
+                
+                  <small>The getNetworks method is used to search for available networks.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnection/icc.html">Archive/B2G_OS/API/MozMobileConnection/icc</a>
+                
+                  <small>The icc is a read-only property that gives access to ICC related funcionality.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnection/iccInfo.html">Archive/B2G_OS/API/MozMobileConnection/iccInfo</a>
+                
+                  <small>The iccInfo is a read-only property that gives access to information stored in the device's ICC card.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnection/networkSelectionMode.html">Archive/B2G_OS/API/MozMobileConnection/networkSelectionMode</a>
+                
+                  <small>The networkSelectionMode is a read-only property that indicates the selection mode of the voice...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnection/oncardstatechange.html">Archive/B2G_OS/API/MozMobileConnection/oncardstatechange</a>
+                
+                  <small>The oncardstatechange property specifies an event listener to receive cardstatechange events....</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnection/oncfstatechange.html">Archive/B2G_OS/API/MozMobileConnection/oncfstatechange</a>
+                
+                  <small>The oncfstatechange property specifies an event listener to receive cfstatechange events. These...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnection/ondatachange.html">Archive/B2G_OS/API/MozMobileConnection/ondatachange</a>
+                
+                  <small>The ondatachange property specifies an event listener to receive datachange events. These events...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnection/ondataerror.html">Archive/B2G_OS/API/MozMobileConnection/ondataerror</a>
+                
+                  <small>The ondataerror property specifies an event listener to receive dataerror events. These events...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnection/onicccardlockerror.html">Archive/B2G_OS/API/MozMobileConnection/onicccardlockerror</a>
+                
+                  <small>The onicccardlockerror property specifies an event listener to receive icccardlockerror events....</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnection/oniccinfochange.html">Archive/B2G_OS/API/MozMobileConnection/oniccinfochange</a>
+                
+                  <small>The oniccinfochange property specifies an event listener to receive iccinfochange events. These...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnection/onussdreceived.html">Archive/B2G_OS/API/MozMobileConnection/onussdreceived</a>
+                
+                  <small>The onussdreceived property specifies an event listener to receive ussdreceived events. These...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnection/onvoicechange.html">Archive/B2G_OS/API/MozMobileConnection/onvoicechange</a>
+                
+                  <small>The onvoicechange property specifies an event listener to receive voicechange events. These...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnection/selectNetwork.html">Archive/B2G_OS/API/MozMobileConnection/selectNetwork</a>
+                
+                  <small>The selectNetwork method is used to manually select a network, overriding the radio's current selection.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnection/selectNetworkAutomatically.html">Archive/B2G_OS/API/MozMobileConnection/selectNetworkAutomatically</a>
+                
+                  <small>The selectNetworkAutomatically method is used to tell the radio to automatically select a network.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnection/sendMMI.html">Archive/B2G_OS/API/MozMobileConnection/sendMMI</a>
+                
+                  <small>The sendMMI method is used to send an MMI code.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnection/setCallForwardingOption.html">Archive/B2G_OS/API/MozMobileConnection/setCallForwardingOption</a>
+                
+                  <small>The setCallForwardingOption method is used to configure call forward options.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnection/setCardLock.html">Archive/B2G_OS/API/MozMobileConnection/setCardLock</a>
+                
+                  <small>The setCardLock method is used to set or modify the state of a card lock.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnection/unlockCardLock.html">Archive/B2G_OS/API/MozMobileConnection/unlockCardLock</a>
+                
+                  <small>The unlockCardLock method is used to unlock a card lock.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnection/voice.html">Archive/B2G_OS/API/MozMobileConnection/voice</a>
+                
+                  <small>The voice is a read-only property that gives access to information about the voice connection.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnectionInfo.html">Archive/B2G_OS/API/MozMobileConnectionInfo</a>
+                
+                  <small>The MozMobileConnectionInfo interface allows to access connection information for voice or data....</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnectionInfo/cell.html">Archive/B2G_OS/API/MozMobileConnectionInfo/cell</a>
+                
+                  <small>cell is a read-only property that gives access to cell location information.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnectionInfo/connected.html">Archive/B2G_OS/API/MozMobileConnectionInfo/connected</a>
+                
+                  <small>connected is a read-only property that indicates whether the connection is ready (true) or not (false).</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnectionInfo/emergencyCallsOnly.html">Archive/B2G_OS/API/MozMobileConnectionInfo/emergencyCallsOnly</a>
+                
+                  <small>emergencyCallsOnly is a read-only property that indicates whether only emergency calls are possible.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnectionInfo/lastKnownMcc.html">Archive/B2G_OS/API/MozMobileConnectionInfo/lastKnownMcc</a>
+                
+                  <small>lastKnownMcc is a read-only property that represents the Mobile Country Code (MCC) of the last...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnectionInfo/network.html">Archive/B2G_OS/API/MozMobileConnectionInfo/network</a>
+                
+                  <small>network is a read-only property that gives access to the network operator information.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnectionInfo/relSignalStrength.html">Archive/B2G_OS/API/MozMobileConnectionInfo/relSignalStrength</a>
+                
+                  <small>relSignalStrength is a read-only property that gives the signal strength, represented linearly...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnectionInfo/roaming.html">Archive/B2G_OS/API/MozMobileConnectionInfo/roaming</a>
+                
+                  <small>roaming is a read-only property that indicates whether the connection is going through a foreign...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnectionInfo/signalStrength.html">Archive/B2G_OS/API/MozMobileConnectionInfo/signalStrength</a>
+                
+                  <small>signalStrength is a read-only property that gives the signal strength in dBm.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnectionInfo/state.html">Archive/B2G_OS/API/MozMobileConnectionInfo/state</a>
+                
+                  <small>state is a read-only property that gives the state of the connection.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileConnectionInfo/type.html">Archive/B2G_OS/API/MozMobileConnectionInfo/type</a>
+                
+                  <small>type is a read-only property that gives the type of connection.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileMessageManager.html">Archive/B2G_OS/API/MozMobileMessageManager</a>
+                
+                  <small>Provides support for sending and managing both MMS and SMS messages on a device with WebSMS.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileMessageManager/delete.html">Archive/B2G_OS/API/MozMobileMessageManager/delete</a>
+                
+                  <small>The delete method is used to delete a given message.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileMessageManager/getMessage.html">Archive/B2G_OS/API/MozMobileMessageManager/getMessage</a>
+                
+                  <small>The getMessage method is used to access a given SMS message.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileMessageManager/getMessages.html">Archive/B2G_OS/API/MozMobileMessageManager/getMessages</a>
+                
+                  <small>The getMessages method is used to access a list of messages.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileMessageManager/getSegmentInfoForText.html">Archive/B2G_OS/API/MozMobileMessageManager/getSegmentInfoForText</a>
+                
+                  <small>The getSegmentInfoForText method is used to get the information necessary to create a multi-part...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileMessageManager/getThreads.html">Archive/B2G_OS/API/MozMobileMessageManager/getThreads</a>
+                
+                  <small>The getThreads method is used to iterate through a list of MozMobileMessageThread objects. Each...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileMessageManager/markMessageRead.html">Archive/B2G_OS/API/MozMobileMessageManager/markMessageRead</a>
+                
+                  <small>The markMessageRead method is used to change the read state of a given message.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileMessageManager/ondeliveryerror.html">Archive/B2G_OS/API/MozMobileMessageManager/ondeliveryerror</a>
+                
+                  <small>Specifies an event listener to receive deliveryerror events. These events occur when an SMS or...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileMessageManager/ondeliverysuccess.html">Archive/B2G_OS/API/MozMobileMessageManager/ondeliverysuccess</a>
+                
+                  <small>Specifies an event listener to receive deliverysuccess events. These events occur when an SMS or...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileMessageManager/onfailed.html">Archive/B2G_OS/API/MozMobileMessageManager/onfailed</a>
+                
+                  <small>Specifies an event listener to receive failed events. These events occur when an SMS or MMS has failed.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileMessageManager/onreceived.html">Archive/B2G_OS/API/MozMobileMessageManager/onreceived</a>
+                
+                  <small>Specifies an event listener to receive received events. These events occur when an SMS or MMS is...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileMessageManager/onretrieving.html">Archive/B2G_OS/API/MozMobileMessageManager/onretrieving</a>
+                
+                  <small>Specifies an event listener to receive retrieving events. These events occur when an SMS or MMS...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileMessageManager/onsending.html">Archive/B2G_OS/API/MozMobileMessageManager/onsending</a>
+                
+                  <small>Specifies an event listener to receive sending events. These events occur when an SMS or MMS...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileMessageManager/onsent.html">Archive/B2G_OS/API/MozMobileMessageManager/onsent</a>
+                
+                  <small>Specifies an event listener to receive sent events. These events occur when an SMS or MMS is sent.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileMessageManager/retrieveMMS.html">Archive/B2G_OS/API/MozMobileMessageManager/retrieveMMS</a>
+                
+                  <small>The retrieveMMS method is used to access a given MMS message.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileMessageManager/send.html">Archive/B2G_OS/API/MozMobileMessageManager/send</a>
+                
+                  <small>The send method is used to send an SMS message to one or more receivers.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileMessageManager/sendMMS.html">Archive/B2G_OS/API/MozMobileMessageManager/sendMMS</a>
+                
+                  <small>The sendMMS method is used to send an MMS message to one or more receivers.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileMessageThread.html">Archive/B2G_OS/API/MozMobileMessageThread</a>
+                
+                  <small>The DOM MozMobileMessageThread object represents a thread of messages.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileMessageThread/body.html">Archive/B2G_OS/API/MozMobileMessageThread/body</a>
+                
+                  <small>The body property represents the body of the last message available in the thread.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileMessageThread/id.html">Archive/B2G_OS/API/MozMobileMessageThread/id</a>
+                
+                  <small>The id property represents the unique id of the thread. Each message belonging to that thread...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileMessageThread/lastMessageType.html">Archive/B2G_OS/API/MozMobileMessageThread/lastMessageType</a>
+                
+                  <small>The lastMessageType property represents the type of the last message in the thread.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileMessageThread/participants.html">Archive/B2G_OS/API/MozMobileMessageThread/participants</a>
+                
+                  <small>The participants property is a list of all the participants' addresses to the thread.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileMessageThread/timestamp.html">Archive/B2G_OS/API/MozMobileMessageThread/timestamp</a>
+                
+                  <small>The timestamp property represent the timestamp of the last message is the thread.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileMessageThread/unreadCount.html">Archive/B2G_OS/API/MozMobileMessageThread/unreadCount</a>
+                
+                  <small>The unreadCount property represents the number of unread messages belonging to the thread.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileNetworkInfo.html">Archive/B2G_OS/API/MozMobileNetworkInfo</a>
+                
+                  <small>The MozMobileNetworkInfo interface allows access to information related to the network carrier....</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileNetworkInfo/longName.html">Archive/B2G_OS/API/MozMobileNetworkInfo/longName</a>
+                
+                  <small>longName is a read-only property that gives the long name of the network operator.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileNetworkInfo/mcc.html">Archive/B2G_OS/API/MozMobileNetworkInfo/mcc</a>
+                
+                  <small>The mcc is a read-only property that represents the Mobile Country Code (MCC) of the network operator.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileNetworkInfo/mnc.html">Archive/B2G_OS/API/MozMobileNetworkInfo/mnc</a>
+                
+                  <small>The mnc is a read-only property that represents the Mobile Network Code (MNC) of the network operator.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileNetworkInfo/shortName.html">Archive/B2G_OS/API/MozMobileNetworkInfo/shortName</a>
+                
+                  <small>shortName is a read-only property that gives the long name of the network operator.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozMobileNetworkInfo/state.html">Archive/B2G_OS/API/MozMobileNetworkInfo/state</a>
+                
+                  <small>The state is a read-only property that gives the state of the network operator.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozNDEFRecord.html">Archive/B2G_OS/API/MozNDEFRecord</a>
+                
+                  <small>MozNDEFRecord is a data structure that implements the NFC Data Exchange Format (NDEF). It is a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozNDEFRecord/id.html">Archive/B2G_OS/API/MozNDEFRecord/id</a>
+                
+                  <small>The id property of the MozNDEFRecord interface is application dependent (an appropriate id can...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozNDEFRecord/payload.html">Archive/B2G_OS/API/MozNDEFRecord/payload</a>
+                
+                  <small>The payload property of the MozNDEFRecord interface is application dependent (for example, a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozNDEFRecord/tnf.html">Archive/B2G_OS/API/MozNDEFRecord/tnf</a>
+                
+                  <small>The tnf property of the MozNDEFRecord interface contains the Type Name Format (3-bit field) of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozNDEFRecord/type.html">Archive/B2G_OS/API/MozNDEFRecord/type</a>
+                
+                  <small>The type property of the MozNDEFRecord interface... fill in description of what it does</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozNetworkStats.html">Archive/B2G_OS/API/MozNetworkStats</a>
+                
+                  <small>The MozNetworkStats object gives access to statistics about the data usage for a given network.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozNetworkStats/connectionType.html">Archive/B2G_OS/API/MozNetworkStats/connectionType</a>
+                
+                  <small>The connectionType property indicates for which network the data usage statistics are provided.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozNetworkStats/data.html">Archive/B2G_OS/API/MozNetworkStats/data</a>
+                
+                  <small>The data property is a list of data usage statistics chunk. Each chunk is a MozNetworkStatsData...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozNetworkStats/end.html">Archive/B2G_OS/API/MozNetworkStats/end</a>
+                
+                  <small>The end property is a date equal to the one of the last MozNetworkStatsData objects available...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozNetworkStats/start.html">Archive/B2G_OS/API/MozNetworkStats/start</a>
+                
+                  <small>The start property is a date equal to the one of the first MozNetworkStatsData objects available...</small>
+                
+            </li>
+          
+        </ul>
+        
+  <ol class="pagination">
+  
+    <li class="prev">
+      <a href="API9ba9.html?page=3">
+        Previous
+      </a>
+    </li>
+  
+  
+  
+    <li>
+      <a href="API2679.html?page=1">1</a>
+    </li>
+  
+    <li>
+      <a href="API4658.html?page=2">2</a>
+    </li>
+  
+    <li>
+      <a href="API9ba9.html?page=3">3</a>
+    </li>
+  
+    <li class="selected">
+      <a href="APIfdb0.html?page=4">4</a>
+    </li>
+  
+    <li>
+      <a href="APIaf4d.html?page=5">5</a>
+    </li>
+  
+    <li>
+      <a href="APIc575.html?page=6">6</a>
+    </li>
+  
+    <li>
+      <a href="API235c.html?page=7">7</a>
+    </li>
+  
+    <li>
+      <a href="APIfdfa.html?page=8">8</a>
+    </li>
+  
+  
+    
+      <li class="skip">…</li>
+    
+    <li><a href="API4618.html?page=53">53</a></li>
+  
+  
+    <li class="next">
+      <a href="APIaf4d.html?page=5">
+        Next
+      </a>
+    </li>
+  
+  </ol>
+
+
+
+      
+    </div>
+
+
+      </div>
+  </main>
+  <!-- Footer -->
+     
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script async="" type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script src="../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><!--[endif]---->
+
+    
+    <script src="../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../static/build/js/wiki.b26a4c181df3.js" charset="utf-8" id="wikiscript"></script>
+
+
+
+  
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=4 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 08:38:21 GMT -->
+</body></html>

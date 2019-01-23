@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/basic-shape$samples/Animated_polygon?revision=1377096 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:46:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            div {
+  width: 300px;
+  height: 300px;
+  background: repeating-linear-gradient(red, orange 50px);
+  clip-path: polygon(50% 0%, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0% 50%, 40% 40%);
+  animation: 4s poly infinite alternate ease-in-out;
+  margin: 10px auto;
+}
+
+@keyframes poly {
+  from {
+    clip-path: polygon(50% 0%, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0% 50%, 40% 40%);
+  }
+
+  to {
+    clip-path: polygon(50% 30%, 100% 0%, 70% 50%, 100% 100%, 50% 70%, 0% 100%, 30% 50%, 0% 0%);
+  }
+}
+        </style>
+        
+        <title>&lt;basic-shape&gt;</title>
+    </head>
+    <body>
+        
+            <div></div>
+        
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/basic-shape$samples/Animated_polygon?revision=1377096 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:46:30 GMT -->
+</html>

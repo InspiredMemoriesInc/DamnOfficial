@@ -1,0 +1,1236 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 22:59:01 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  <title>Using HTML sections and outlines</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+
+  
+<link rel="preload" href="../../../../../static/fonts/locales/ZillaSlab-Regular.f9de6143fdfa.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="license" href="#license">
+  
+
+  
+    
+    
+
+    <link href="../../../../../static/build/styles/mdn.83865b0f7c30.css" rel="stylesheet" type="text/css">
+
+    
+  
+
+    <link href="../../../../../static/build/styles/wiki.aaf26c13c39b.css" rel="stylesheet" type="text/css">
+
+
+    
+
+  <link href="../../../../../static/build/styles/locale-en-US.ca0bca387b42.css" rel="stylesheet" type="text/css">
+
+  
+    <script>
+      /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
+    </script>
+    
+
+
+
+  
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta property="og:site_name" content="MDN Web Docs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="MDN Web Docs">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../static/img/favicon144.e7e21ca263ca.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../static/img/favicon114.d526f38b09c5.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../static/img/favicon72.cc65d1d762a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../../../static/img/favicon57.de33179910ae.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="../../../../../static/img/favicon32.7f3da72dcea1.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script async="" type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  <link rel="dns-prefetch" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines$json">
+  <link rel="canonical" href="Using_HTML_sections_and_outlines.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="Using_HTML_sections_and_outlines.html" title="Using HTML sections and outlines">
+  
+    
+      <link rel="alternate" hreflang="bn-BD" href="https://developer.mozilla.org/bn-BD/docs/Web/Guide/HTML/HTML5_ডকুমেন্টের_সেকশন_এবং_আউটলাইন" title="HTML5 ডকুমেন্টের সেকশন এবং আউটলাইন">
+    
+      <link rel="alternate" hreflang="ca" href="https://developer.mozilla.org/ca/docs/Web/Guide/HTML/Us_de_seccions_i_esquemes_en_HTML" title="Us de seccions i esquemes en HTML 5">
+    
+      <link rel="alternate" hreflang="de" href="https://developer.mozilla.org/de/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document" title="Sections and Outlines of an HTML5 Document">
+    
+      <link rel="alternate" hreflang="es" href="https://developer.mozilla.org/es/docs/Sections_and_Outlines_of_an_HTML5_document" title="Secciones y esquema de un documento HTML5">
+    
+      <link rel="alternate" hreflang="fr" href="https://developer.mozilla.org/fr/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document" title="Structures et sections d'un document HTML5">
+    
+      <link rel="alternate" hreflang="it" href="https://developer.mozilla.org/it/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document" title="Sezioni e Struttura di un Documento HTML5">
+    
+      <link rel="alternate" hreflang="ja" href="https://developer.mozilla.org/ja/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document" title="HTML5 ドキュメントのセクションとアウトライン">
+    
+      <link rel="alternate" hreflang="ko" href="https://developer.mozilla.org/ko/docs/Web/HTML/HTML5_문서의_섹션과_윤곽" title="HTML5 문서의 섹션과 아웃라인">
+    
+      <link rel="alternate" hreflang="pl" href="https://developer.mozilla.org/pl/docs/Web/Guide/HTML/Sekcje_oraz_konspekt_dokumentu_HTML5" title="Sekcje oraz konspekt dokumentu HTML5">
+    
+      <link rel="alternate" hreflang="pt-BR" href="https://developer.mozilla.org/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document" title="Seções e estrutura de um documento HTML5">
+    
+      <link rel="alternate" hreflang="pt-PT" href="https://developer.mozilla.org/pt-PT/docs/Web/Guide/HTML/Utilizar_estruturas_e_seccoes_de_HTML" title="Utilizar estruturas e secções de HTML">
+    
+      <link rel="alternate" hreflang="ru" href="https://developer.mozilla.org/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document" title="Использование разделов и создание структуры HTML документа">
+    
+      <link rel="alternate" hreflang="uk" href="https://developer.mozilla.org/uk/docs/Web/Guide/HTML/Використання_HTML-секцій_та_структура_документу" title="Використання HTML-секцій та структура документу">
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document" title="HTML5的文档节段和纲要">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="Using HTML sections and outlines">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines">
+  <meta name="twitter:title" content="Using HTML sections and outlines">
+  
+  <meta property="og:description" content="The HTML5 specification brings several new elements to web developers allowing them to describe the structure of a web document with standard semantics. This document describes these elements and how to use them to define the desired outline for any document.">
+  <meta name="description" content="The HTML5 specification brings several new elements to web developers allowing them to describe the structure of a web document with standard semantics. This document describes these elements and how to use them to define the desired outline for any document.">
+  <meta name="twitter:description" content="The HTML5 specification brings several new elements to web developers allowing them to describe the structure of a web document with standard semantics. This document describes these elements and how to use them to define the desired outline for any document.">
+  
+
+</head>
+<body data-slug="Web/Guide/HTML/Using_HTML_sections_and_outlines" contextmenu="edit-history-menu" data-search-url="" class="document">
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <!--[endif]---->
+
+  
+  <link rel="dns-prefetch" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines$json">
+  <link rel="canonical" href="Using_HTML_sections_and_outlines.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="Using_HTML_sections_and_outlines.html" title="Using HTML sections and outlines">
+  
+    
+      <link rel="alternate" hreflang="bn-BD" href="https://developer.mozilla.org/bn-BD/docs/Web/Guide/HTML/HTML5_ডকুমেন্টের_সেকশন_এবং_আউটলাইন" title="HTML5 ডকুমেন্টের সেকশন এবং আউটলাইন">
+    
+      <link rel="alternate" hreflang="ca" href="https://developer.mozilla.org/ca/docs/Web/Guide/HTML/Us_de_seccions_i_esquemes_en_HTML" title="Us de seccions i esquemes en HTML 5">
+    
+      <link rel="alternate" hreflang="de" href="https://developer.mozilla.org/de/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document" title="Sections and Outlines of an HTML5 Document">
+    
+      <link rel="alternate" hreflang="es" href="https://developer.mozilla.org/es/docs/Sections_and_Outlines_of_an_HTML5_document" title="Secciones y esquema de un documento HTML5">
+    
+      <link rel="alternate" hreflang="fr" href="https://developer.mozilla.org/fr/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document" title="Structures et sections d'un document HTML5">
+    
+      <link rel="alternate" hreflang="it" href="https://developer.mozilla.org/it/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document" title="Sezioni e Struttura di un Documento HTML5">
+    
+      <link rel="alternate" hreflang="ja" href="https://developer.mozilla.org/ja/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document" title="HTML5 ドキュメントのセクションとアウトライン">
+    
+      <link rel="alternate" hreflang="ko" href="https://developer.mozilla.org/ko/docs/Web/HTML/HTML5_문서의_섹션과_윤곽" title="HTML5 문서의 섹션과 아웃라인">
+    
+      <link rel="alternate" hreflang="pl" href="https://developer.mozilla.org/pl/docs/Web/Guide/HTML/Sekcje_oraz_konspekt_dokumentu_HTML5" title="Sekcje oraz konspekt dokumentu HTML5">
+    
+      <link rel="alternate" hreflang="pt-BR" href="https://developer.mozilla.org/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document" title="Seções e estrutura de um documento HTML5">
+    
+      <link rel="alternate" hreflang="pt-PT" href="https://developer.mozilla.org/pt-PT/docs/Web/Guide/HTML/Utilizar_estruturas_e_seccoes_de_HTML" title="Utilizar estruturas e secções de HTML">
+    
+      <link rel="alternate" hreflang="ru" href="https://developer.mozilla.org/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document" title="Использование разделов и создание структуры HTML документа">
+    
+      <link rel="alternate" hreflang="uk" href="https://developer.mozilla.org/uk/docs/Web/Guide/HTML/Використання_HTML-секцій_та_структура_документу" title="Використання HTML-секцій та структура документу">
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document" title="HTML5的文档节段和纲要">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="Using HTML sections and outlines">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines">
+  <meta name="twitter:title" content="Using HTML sections and outlines">
+  
+  <meta property="og:description" content="The HTML5 specification brings several new elements to web developers allowing them to describe the structure of a web document with standard semantics. This document describes these elements and how to use them to define the desired outline for any document.">
+  <meta name="description" content="The HTML5 specification brings several new elements to web developers allowing them to describe the structure of a web document with standard semantics. This document describes these elements and how to use them to define the desired outline for any document.">
+  <meta name="twitter:description" content="The HTML5 specification brings several new elements to web developers allowing them to describe the structure of a web document with standard semantics. This document describes these elements and how to use them to define the desired outline for any document.">
+  
+
+
+
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/wiki-compat-tables.9978a5ce31c2.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+
+        // interactive editor config
+        win.mdn.interactiveEditor = {
+            siteUrl: "https://developer.mozilla.org",
+            editorUrl: "https://interactive-examples.mdn.mozilla.net"
+        };
+
+    })(this);
+</script>
+    
+    <ul id="nav-access">
+  <li><a href="#content" id="skip-main">Skip to main content</a></li>
+  <li><a id="skip-language" href="#language">Select language</a></li>
+  <li><a href="#q" id="skip-search">Skip to search</a></li>
+</ul>
+
+    <!-- Header -->
+    <header id="main-header" class="header-main">
+      <a href="https://developer.mozilla.org/en-US/" class="logo">MDN Web Docs</a>
+      <div class="nav-toolbox-wrapper">
+        <nav id="main-nav" class="nav-main" role="navigation">
+    <ul>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web">Technologies
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-tech-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="../../HTML.html">HTML</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API">APIs / DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn">References &amp; Guides
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-learn-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-contact-submenu">
+              <div class="submenu-column">
+                <ul>
+                  <li>
+                      <a href="https://support.mozilla.org/">Get Firefox help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://stackoverflow.com/">Get web development help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                      <a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines">Report a content problem
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</nav>
+        <div id="toolbox" class="toolbox">
+  <ul>
+    
+    <li class="nav-login"><div class="login">
+    
+        
+        <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FGuide%2FHTML%2FUsing_HTML_sections_and_outlines" class="login-link js-login-link" data-service="GitHub" rel="nofollow">
+            Sign in<svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+    <title>Github</title>
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path>
+</svg>
+        </a>
+    
+</div></li>
+  </ul>
+</div>
+      </div>
+      <form id="nav-main-search" action="https://developer.mozilla.org/en-US/search" method="get" role="search" class="nav-main-search">
+  <div class="search-wrap">
+    <label for="main-q" class="offscreen">Search</label>
+    <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" aria-hidden="true">
+    <span class="search-trigger">
+        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true">
+    <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path>
+</svg>
+    </span>
+    <button type="submit" class="offscreen">Search</button>
+    <button type="button" id="close-header-search" class="close-header-search transparent">
+        <span class="offscreen">Close search</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+  </div>
+</form>
+    </header> 
+
+  <!-- Content will go here -->
+  <main id="content">
+      
+  <!-- heading -->
+  <div id="wiki-document-head" class="document-head">
+    <div class="center">
+      <!-- action buttons -->
+      <div class="document-actions">
+        
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons">
+      <li>
+          <button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false">
+              <svg class="icon icon-language" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M10.219 16.844c-.031.109-.797-.25-1-.328-.203-.094-1.125-.609-1.359-.766s-1.125-.891-1.234-.938a28.275 28.275 0 0 1-2.094 2.828c-.281.328-1.125 1.391-1.641 1.719-.078.047-.531.094-.594.063.25-.187.969-1.078 1.281-1.437.391-.453 2.25-3.047 2.562-3.641.328-.594 1.312-2.562 1.359-2.75-.156-.016-1.391.406-1.719.516-.313.094-1.172.297-1.234.344-.063.063-.016.25-.047.313s-.313.203-.484.234a1.647 1.647 0 0 1-.734 0c-.203-.047-.391-.25-.438-.328 0 0-.063-.094-.078-.359.187-.063.5-.078.844-.172s1.188-.344 1.641-.5 1.328-.484 1.594-.547c.281-.047.984-.516 1.359-.641s.641-.281.656-.203 0 .422-.016.516c-.016.078-.766 1.547-.875 1.781-.063.125-.5.953-1.203 2.047.25.109.781.328 1 .438.266.125 2.125.906 2.219.938s.266.75.234.875zM7.016 9.25c.047.266-.031.375-.063.438-.156.297-.547.5-.781.594s-.625.187-.938.187c-.141-.016-.422-.063-.766-.406-.187-.203-.328-.75-.266-.688s.516.125.719.078.688-.187.906-.25c.234-.078.703-.203.859-.219.156 0 .281.063.328.266zm10.906 2.016l.984 3.547-2.172-.656zM.609 23.766l10.844-3.625V4.016L.609 7.657v16.109zM20 18.813l1.594.484-2.828-10.266-1.563-.484-3.375 8.375 1.594.484.703-1.719 3.297 1.016zM12.141 3.781l8.953 2.875V.718zM17 24.453l2.469.203-.844 2.5L18 26.125c-1.266.812-2.828 1.437-4.312 1.687-.453.094-.969.187-1.422.187h-1.313c-1.656 0-4.672-.984-5.984-1.937-.094-.078-.125-.141-.125-.25 0-.172.125-.297.281-.297.141 0 .875.453 1.078.547 1.406.703 3.375 1.344 4.953 1.344 1.953 0 3.281-.25 5.063-1.016.516-.234.969-.531 1.453-.797zm7-16.859v16.859c-12.078-3.844-12.094-3.844-12.094-3.844C11.656 20.718.453 24.5.297 24.5a.3.3 0 0 1-.281-.203c0-.016-.016-.031-.016-.047V7.406c.016-.047.031-.125.063-.156.094-.109.219-.141.313-.172.047-.016 1-.328 2.328-.781v-6l8.719 3.094C11.532 3.36 21.251 0 21.392 0c.172 0 .313.125.313.328v6.531z"></path>
+</svg>
+              <span>Languages</span>
+          </button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                
+                
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/bn-BD/docs/Web/Guide/HTML/HTML5_ডকুমেন্টের_সেকশন_এবং_আউটলাইন" data-locale="bn-BD" title="Bengali (Bangladesh)">বাংলা (বাংলাদেশ) (bn-BD)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ca/docs/Web/Guide/HTML/Us_de_seccions_i_esquemes_en_HTML" data-locale="ca" title="Catalan">Català (ca)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/de/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document" data-locale="de" title="German">Deutsch (de)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/es/docs/Sections_and_Outlines_of_an_HTML5_document" data-locale="es" title="Spanish">Español (es)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/fr/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document" data-locale="fr" title="French">Français (fr)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/it/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document" data-locale="it" title="Italian">Italiano (it)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ja/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document" data-locale="ja" title="Japanese">日本語 (ja)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ko/docs/Web/HTML/HTML5_문서의_섹션과_윤곽" data-locale="ko" title="Korean">한국어 (ko)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/pl/docs/Web/Guide/HTML/Sekcje_oraz_konspekt_dokumentu_HTML5" data-locale="pl" title="Polish">Polski (pl)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document" data-locale="pt-BR" title="Portuguese (Brazilian)">Português (do&nbsp;Brasil) (pt-BR)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/pt-PT/docs/Web/Guide/HTML/Utilizar_estruturas_e_seccoes_de_HTML" data-locale="pt-PT" title="Portuguese (Portugal)">Português (Europeu) (pt-PT)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document" data-locale="ru" title="Russian">Русский (ru)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/uk/docs/Web/Guide/HTML/Використання_HTML-секцій_та_структура_документу" data-locale="uk" title="Ukrainian">Українська (uk)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document" data-locale="zh-CN" title="Chinese (Simplified)">中文 (简体) (zh-CN)</a></bdi></li>
+                
+              
+
+              
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines$locales" rel="nofollow" id="translations-add">Add a translation</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+      
+      <li class="page-buttons-edit">
+          <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines$edit" class="button neutral" id="edit-button" rel="nofollow">
+              <svg class="icon icon-pencil" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M5.672 24l1.422-1.422-3.672-3.672L2 20.328V22h2v2h1.672zm8.172-14.5a.329.329 0 0 0-.344-.344.368.368 0 0 0-.266.109l-8.469 8.469a.366.366 0 0 0-.109.266c0 .203.141.344.344.344a.368.368 0 0 0 .266-.109l8.469-8.469a.366.366 0 0 0 .109-.266zM13 6.5l6.5 6.5-13 13H0v-6.5zM23.672 8c0 .531-.219 1.047-.578 1.406L20.5 12 14 5.5l2.594-2.578c.359-.375.875-.594 1.406-.594s1.047.219 1.422.594l3.672 3.656c.359.375.578.891.578 1.422z"></path>
+</svg>
+              Edit
+          </a>
+      </li>
+      
+
+        
+
+        <li class="page-buttons-advanced">
+            <button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false">
+                <svg class="icon icon-gear" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M16 14c0-2.203-1.797-4-4-4s-4 1.797-4 4 1.797 4 4 4 4-1.797 4-4zm8-1.703v3.469c0 .234-.187.516-.438.562l-2.891.438a8.86 8.86 0 0 1-.609 1.422c.531.766 1.094 1.453 1.672 2.156.094.109.156.25.156.391s-.047.25-.141.359c-.375.5-2.484 2.797-3.016 2.797a.795.795 0 0 1-.406-.141l-2.156-1.687a9.449 9.449 0 0 1-1.422.594c-.109.953-.203 1.969-.453 2.906a.573.573 0 0 1-.562.438h-3.469c-.281 0-.531-.203-.562-.469l-.438-2.875a9.194 9.194 0 0 1-1.406-.578l-2.203 1.672c-.109.094-.25.141-.391.141s-.281-.063-.391-.172c-.828-.75-1.922-1.719-2.578-2.625a.607.607 0 0 1 .016-.718c.531-.719 1.109-1.406 1.641-2.141a8.324 8.324 0 0 1-.641-1.547l-2.859-.422A.57.57 0 0 1 0 15.705v-3.469c0-.234.187-.516.422-.562l2.906-.438c.156-.5.359-.969.609-1.437a37.64 37.64 0 0 0-1.672-2.156c-.094-.109-.156-.234-.156-.375s.063-.25.141-.359c.375-.516 2.484-2.797 3.016-2.797.141 0 .281.063.406.156L7.828 5.94a9.449 9.449 0 0 1 1.422-.594c.109-.953.203-1.969.453-2.906a.573.573 0 0 1 .562-.438h3.469c.281 0 .531.203.562.469l.438 2.875c.484.156.953.344 1.406.578l2.219-1.672c.094-.094.234-.141.375-.141s.281.063.391.156c.828.766 1.922 1.734 2.578 2.656a.534.534 0 0 1 .109.344c0 .141-.047.25-.125.359-.531.719-1.109 1.406-1.641 2.141.266.5.484 1.016.641 1.531l2.859.438a.57.57 0 0 1 .453.562z"></path>
+</svg>
+                <span>Advanced</span>
+            </button>
+            <div class="submenu js-submenu" id="advanced-menu-submenu">
+                <!-- this page -->
+                <div class="submenu-column">
+                    <div class="title">Advanced</div>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines$history" rel="nofollow">History</a></li>
+                        
+                        
+                        
+
+
+                
+
+                <li class="page-print"><a href="#" onclick="return window.print();">Print this article</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+      </div>
+
+      <div class="document-title">
+        <h1>Using HTML sections and outlines</h1>
+      </div>
+    </div>
+  </div>
+  
+  <div id="toc" class="toc">
+    <div class="center">
+      <div class="toc-head">Jump to:</div>
+        <ol class="toc-links">
+          <li><a href="#Structure_of_a_document_in_HTML_4" rel="internal">Structure of a document in HTML 4</a></li><li><a href="#Problems_solved_by_HTML5" rel="internal">Problems solved by HTML5</a></li><li><a href="#The_HTML5_outline_algorithm" rel="internal">The HTML5 outline algorithm</a></li><li><a href="#Addresses_in_sectioning_elements" rel="internal">Addresses in sectioning elements</a></li><li><a href="#Using_HTML5_elements_in_non-HTML5_browsers" rel="internal">Using HTML5 elements in non-HTML5 browsers</a></li><li><a href="#Conclusion" rel="internal">Conclusion</a>
+        </li></ol>
+    </div>
+  </div>
+  
+
+      <div class="center clear">
+      
+
+    <div class="wiki-main-content" id="document-main"><div class="center">
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-left-closed wiki-left-none">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-all wiki-column text-content">
+
+              
+
+              
+              
+
+              
+
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <div class="warning">
+<p><strong>Important</strong>: There are currently no known implementations of the outline algorithm in graphical browsers or assistive technology user agents, although the algorithm is implemented in other software such as conformance checkers. Therefore the <a href="http://www.w3.org/TR/html5/sections.html#outline" class="external" rel="noopener">outline</a> algorithm cannot be relied upon to convey document structure to users. Authors are advised to use heading <a href="http://www.w3.org/TR/html5/sections.html#rank" class="external" rel="noopener">rank</a> (<code><a href="http://www.w3.org/TR/html5/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements" class="external" rel="noopener">h1</a></code>-<code><a href="http://www.w3.org/TR/html5/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements" class="external" rel="noopener">h6</a></code>) to convey document structure.</p>
+</div>
+
+<p>The HTML5 specification brings several new elements to web developers allowing them to describe the structure of a web document with standard semantics. This document describes these elements and how to use them to define the desired outline for any document.</p>
+
+<a class="dashAnchor" name="//apple_ref/Section/Structure%20of%20a%20document%20in%20HTML%204"></a><h2 id="Structure_of_a_document_in_HTML_4">Structure of a document in HTML 4</h2>
+
+<p>The structure of a document, i.e., the semantic structure of what is between <code>&lt;body&gt;</code> and <code>&lt;/body&gt;</code>, is fundamental to presenting the page to the user. HTML4 uses the notion of sections and sub-sections of a document to describe its structure. A section is defined by a (<a href="../../HTML/Element/div.html" title="The HTML Content Division element (<div>) is the generic container for flow content. It has no effect on the content or layout until styled using CSS."><code>&lt;div&gt;</code></a>) element with heading elements (<a href="../../HTML/Element/Heading_Elements.html" title="Heading elements implement six levels of document headings, <h1> is the most important and <h6> is the least. A heading element briefly describes the topic of the section it introduces. Heading information may be used by user agents, for example, to construct a table of contents for a document automatically."><code>&lt;h1&gt;</code></a>, <a href="../../HTML/Element/Heading_Elements.html" title="Heading elements implement six levels of document headings, <h1> is the most important and <h6> is the least. A heading element briefly describes the topic of the section it introduces. Heading information may be used by user agents, for example, to construct a table of contents for a document automatically."><code>&lt;h2&gt;</code></a>, <a href="../../HTML/Element/Heading_Elements.html" title="Heading elements implement six levels of document headings, <h1> is the most important and <h6> is the least. A heading element briefly describes the topic of the section it introduces. Heading information may be used by user agents, for example, to construct a table of contents for a document automatically."><code>&lt;h3&gt;</code></a>, <a href="../../HTML/Element/Heading_Elements.html" title="Heading elements implement six levels of document headings, <h1> is the most important and <h6> is the least. A heading element briefly describes the topic of the section it introduces. Heading information may be used by user agents, for example, to construct a table of contents for a document automatically."><code>&lt;h4&gt;</code></a>, <a href="../../HTML/Element/Heading_Elements.html" title="Heading elements implement six levels of document headings, <h1> is the most important and <h6> is the least. A heading element briefly describes the topic of the section it introduces. Heading information may be used by user agents, for example, to construct a table of contents for a document automatically."><code>&lt;h5&gt;</code></a>, or <a href="../../HTML/Element/Heading_Elements.html" title="Heading elements implement six levels of document headings, <h1> is the most important and <h6> is the least. A heading element briefly describes the topic of the section it introduces. Heading information may be used by user agents, for example, to construct a table of contents for a document automatically."><code>&lt;h6&gt;</code></a>) within it, defining its title. The relationships of these elements leads to the structure of the document and its outline.</p>
+
+<p>So the following mark-up:</p>
+
+<div style="overflow: hidden;">
+<pre class="brush:xml">&lt;div class="section" id="forest-elephants" &gt;
+  &lt;h1&gt;Forest elephants&lt;/h1&gt;
+  &lt;p&gt;In this section, we discuss the lesser known forest elephants.
+    ...this section continues...
+  &lt;div class="subsection" id="forest-habitat" &gt;
+    &lt;h2&gt;Habitat&lt;/h2&gt;
+    &lt;p&gt;Forest elephants do not live in trees but among them.
+     ...this subsection continues...
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</div>
+
+<p>leads to the following outline (without the implicit level numbers displayed):</p>
+
+<pre>1. Forest elephants
+   1.1 Habitat
+</pre>
+
+<p>The <a href="../../HTML/Element/div.html" title="The HTML Content Division element (<div>) is the generic container for flow content. It has no effect on the content or layout until styled using CSS."><code>&lt;div&gt;</code></a> elements aren't mandatory to define a new section. The mere presence of a heading element is enough to imply a new section. Therefore,</p>
+
+<pre class="brush:xml">&lt;h1&gt;Forest elephants&lt;/h1&gt;
+  &lt;p&gt;In this section, we discuss the lesser known forest elephants.
+    ...this section continues...
+  &lt;h2&gt;Habitat&lt;/h2&gt;
+  &lt;p&gt;Forest elephants do not live in trees but among them.
+    ...this subsection continues...
+  &lt;h2&gt;Diet&lt;/h2&gt;
+&lt;h1&gt;Mongolian gerbils&lt;/h1&gt;
+</pre>
+
+<p>leads to the following outline:</p>
+
+<pre>1. Forest elephants
+   1.1 Habitat
+&nbsp;&nbsp; 1.2 Diet
+2. Mongolian gerbils
+</pre>
+
+<a class="dashAnchor" name="//apple_ref/Section/Problems%20solved%20by%20HTML5"></a><h2 id="Problems_solved_by_HTML5">Problems solved by HTML5</h2>
+
+<p>The HTML 4 definition of the structure of a document and its implied outlining algorithm is very rough and leads to numerous problems:</p>
+
+<ol>
+ <li>Usage of <a href="../../HTML/Element/div.html" title="The HTML Content Division element (<div>) is the generic container for flow content. It has no effect on the content or layout until styled using CSS."><code>&lt;div&gt;</code></a> for defining semantic sections, without defining specific values for the <strong>class</strong> attributes makes the automation of the outlining algorithm impossible ("Is that <a href="../../HTML/Element/div.html" title="The HTML Content Division element (<div>) is the generic container for flow content. It has no effect on the content or layout until styled using CSS."><code>&lt;div&gt;</code></a> part of the outline of the page, defining a section or a subsection?" Or "is it only a presentational <a href="../../HTML/Element/div.html" title="The HTML Content Division element (<div>) is the generic container for flow content. It has no effect on the content or layout until styled using CSS."><code>&lt;div&gt;</code></a>, only used for styling?"). In other terms, the HTML4 spec is very imprecise on what is a section and how its scope is defined. Automatic generation of outlines is important, especially for <a href="http://en.wikipedia.org/wiki/Assistive_technology" title="http://en.wikipedia.org/wiki/Assistive_technology" class="external" rel="noopener">assistive technology</a>, that are likely to adapt the way they present information to the users according to the structure of the document. HTML5 removes the need for <a href="../../HTML/Element/div.html" title="The HTML Content Division element (<div>) is the generic container for flow content. It has no effect on the content or layout until styled using CSS."><code>&lt;div&gt;</code></a> elements from the outlining algorithm by introducing a new element, <a href="../../HTML/Element/section.html" title="The HTML <section> element represents a standalone section — which doesn't have a more specific semantic element to represent it — contained within an HTML document."><code>&lt;section&gt;</code></a>, the HTML&nbsp;Section Element.</li>
+ <li>Merging several documents is hard: inclusion of a sub-document in a main document means changing the level of the HTML Headings Element so that the outline is kept. This is solved in HTML5 as the newly introduced sectioning elements (<a href="../../HTML/Element/article.html" title="The HTML <article> element represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable (e.g., in syndication). Examples include: a forum post, a magazine or newspaper article, or a blog entry."><code>&lt;article&gt;</code></a>, <a href="../../HTML/Element/section.html" title="The HTML <section> element represents a standalone section — which doesn't have a more specific semantic element to represent it — contained within an HTML document."><code>&lt;section&gt;</code></a>, <a href="../../HTML/Element/nav.html" title="The HTML <nav> element represents a section of a page whose purpose is to provide navigation links, either within the current document or to other documents. Common examples of navigation sections are menus, tables of contents, and indexes."><code>&lt;nav&gt;</code></a> and <a href="../../HTML/Element/aside.html" title="The HTML <aside> element represents a portion of a document whose content is only indirectly related to the document's main content."><code>&lt;aside&gt;</code></a>) are always subsections of their nearest ancestor section, regardless of what sections are created by internal headings.</li>
+ <li>In HTML4, every section is part of the document outline. But documents are often not that linear. A document can have special sections containing information that is not part of, though it is related to, the main flow, like an advertisement block or an explanation box. HTML5 introduces the <a href="../../HTML/Element/aside.html" title="The HTML <aside> element represents a portion of a document whose content is only indirectly related to the document's main content."><code>&lt;aside&gt;</code></a> element allowing such sections to not be part of the main outline.</li>
+ <li>Again, in HTML4, because every section is part of the document outline, there is no way to have sections containing information related not to the document but to the whole site, like logos, menus, table of contents, or copyright information and legal notices. For that purpose, HTML5 introduces three new elements:&nbsp;<a href="../../HTML/Element/nav.html" title="The HTML <nav> element represents a section of a page whose purpose is to provide navigation links, either within the current document or to other documents. Common examples of navigation sections are menus, tables of contents, and indexes."><code>&lt;nav&gt;</code></a> for collections of links, such as a table of contents, <a href="../../HTML/Element/footer.html" title="The HTML <footer> element represents a footer for its nearest sectioning content or sectioning root element. A footer typically contains information about the author of the section, copyright data or links to related documents."><code>&lt;footer&gt;</code></a> and <a href="../../HTML/Element/header.html" title="The HTML <header> element represents introductory content, typically a group of introductory or navigational aids. It may contain some heading elements but also other elements like a logo, a search form, an author name, and so on."><code>&lt;header&gt;</code></a> for site-related information. Note that <a href="../../HTML/Element/header.html" title="The HTML <header> element represents introductory content, typically a group of introductory or navigational aids. It may contain some heading elements but also other elements like a logo, a search form, an author name, and so on."><code>&lt;header&gt;</code></a> and <a href="../../HTML/Element/footer.html" title="The HTML <footer> element represents a footer for its nearest sectioning content or sectioning root element. A footer typically contains information about the author of the section, copyright data or links to related documents."><code>&lt;footer&gt;</code></a> are not sectioning content like <a href="../../HTML/Element/section.html" title="The HTML <section> element represents a standalone section — which doesn't have a more specific semantic element to represent it — contained within an HTML document."><code>&lt;section&gt;</code></a>, rather, they exist to semantically mark up parts of a section.</li>
+</ol>
+
+<p>More generally, HTML5 brings precision to the sectioning and heading features, allowing document outlines to be predictable and used by the browser to improve the user experience.</p>
+
+<a class="dashAnchor" name="//apple_ref/Section/The%20HTML5%20outline%20algorithm"></a><h2 id="The_HTML5_outline_algorithm">The HTML5 outline algorithm</h2>
+
+<p>Let's consider the algorithms&nbsp; underlying the way HTML handles sections and outlines.</p>
+
+<h3 id="Defining_sections">Defining sections</h3>
+
+<p>All content lying inside the <a href="../../HTML/Element/body.html" title="The HTML <body> Element represents the content of an HTML&nbsp;document. There can be only one <body> element in a document."><code>&lt;body&gt;</code></a> element is part of a section. Sections in HTML5 can be nested. Beside the main section, defined by the <a href="../../HTML/Element/body.html" title="The HTML <body> Element represents the content of an HTML&nbsp;document. There can be only one <body> element in a document."><code>&lt;body&gt;</code></a> element, section limits are defined either explicitly or implicitly. Explicitly-defined sections are the content within <a href="../../HTML/Element/body.html" title="The HTML <body> Element represents the content of an HTML&nbsp;document. There can be only one <body> element in a document."><code>&lt;body&gt;</code></a>,&nbsp; <a href="../../HTML/Element/section.html" title="The HTML <section> element represents a standalone section — which doesn't have a more specific semantic element to represent it — contained within an HTML document."><code>&lt;section&gt;</code></a>,&nbsp; <a href="../../HTML/Element/article.html" title="The HTML <article> element represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable (e.g., in syndication). Examples include: a forum post, a magazine or newspaper article, or a blog entry."><code>&lt;article&gt;</code></a>,&nbsp; <a href="../../HTML/Element/aside.html" title="The HTML <aside> element represents a portion of a document whose content is only indirectly related to the document's main content."><code>&lt;aside&gt;</code></a>, and <a href="../../HTML/Element/nav.html" title="The HTML <nav> element represents a section of a page whose purpose is to provide navigation links, either within the current document or to other documents. Common examples of navigation sections are menus, tables of contents, and indexes."><code>&lt;nav&gt;</code></a> tags.&nbsp;</p>
+
+<div class="note">Each section can have its own heading hierarchy. Therefore, even a nested section can have an <a href="../../HTML/Element/Heading_Elements.html" title="Heading elements implement six levels of document headings, <h1> is the most important and <h6> is the least. A heading element briefly describes the topic of the section it introduces. Heading information may be used by user agents, for example, to construct a table of contents for a document automatically."><code>&lt;h1&gt;</code></a>. See <a href="#Defining_headings">Defining headings</a></div>
+
+<p>Let's look at an example — here we have a document with a top level section and a footer defined. Inside the top level section we have three subsections, defined by two <a href="../../HTML/Element/section.html" title="The HTML <section> element represents a standalone section — which doesn't have a more specific semantic element to represent it — contained within an HTML document."><code>&lt;section&gt;</code></a> elements and an <a href="../../HTML/Element/aside.html" title="The HTML <aside> element represents a portion of a document whose content is only indirectly related to the document's main content."><code>&lt;aside&gt;</code></a> element:</p>
+
+<pre class="brush:xml">&lt;section&gt;
+
+&nbsp; &lt;h1&gt;Forest elephants&lt;/h1&gt; 
+
+&nbsp; &lt;section&gt;
+&nbsp;&nbsp;&nbsp; &lt;h1&gt;Introduction&lt;/h1&gt;
+&nbsp;&nbsp;&nbsp; &lt;p&gt;In this section, we discuss the lesser known forest elephants.&lt;/p&gt;
+&nbsp; &lt;/section&gt;
+
+&nbsp; &lt;section&gt;
+&nbsp;&nbsp;&nbsp; &lt;h1&gt;Habitat&lt;/h1&gt;
+&nbsp;&nbsp;&nbsp; &lt;p&gt;Forest&nbsp;elephants&nbsp;do&nbsp;not&nbsp;live&nbsp;in&nbsp;trees&nbsp;but&nbsp;among&nbsp;them.&lt;/p&gt;
+&nbsp; &lt;/section&gt;
+
+&nbsp; &lt;aside&gt;
+&nbsp;&nbsp;&nbsp; &lt;p&gt;advertising block&lt;/p&gt;
+&nbsp; &lt;/aside&gt;
+
+&lt;/section&gt;
+
+&lt;footer&gt;
+&nbsp; &lt;p&gt;(c) 2010 The Example company&lt;/p&gt;
+&lt;/footer&gt;</pre>
+
+<p>This leads to the following outline:</p>
+
+<pre>1. Forest elephants
+&nbsp;&nbsp; 1.1 Introduction
+&nbsp;&nbsp; 1.2 Habitat
+</pre>
+
+<h3 id="Defining_headings">Defining headings</h3>
+
+<p>While the HTML Sectioning elements define the structure of the document, an outline also needs headings to be useful. The basic rule is simple: the first HTML heading element (one of <a href="../../HTML/Element/Heading_Elements.html" title="Heading elements implement six levels of document headings, <h1> is the most important and <h6> is the least. A heading element briefly describes the topic of the section it introduces. Heading information may be used by user agents, for example, to construct a table of contents for a document automatically."><code>&lt;h1&gt;</code></a>, <a href="../../HTML/Element/Heading_Elements.html" title="Heading elements implement six levels of document headings, <h1> is the most important and <h6> is the least. A heading element briefly describes the topic of the section it introduces. Heading information may be used by user agents, for example, to construct a table of contents for a document automatically."><code>&lt;h2&gt;</code></a>, <a href="../../HTML/Element/Heading_Elements.html" title="Heading elements implement six levels of document headings, <h1> is the most important and <h6> is the least. A heading element briefly describes the topic of the section it introduces. Heading information may be used by user agents, for example, to construct a table of contents for a document automatically."><code>&lt;h3&gt;</code></a>, <a href="../../HTML/Element/Heading_Elements.html" title="Heading elements implement six levels of document headings, <h1> is the most important and <h6> is the least. A heading element briefly describes the topic of the section it introduces. Heading information may be used by user agents, for example, to construct a table of contents for a document automatically."><code>&lt;h4&gt;</code></a>, <a href="../../HTML/Element/Heading_Elements.html" title="Heading elements implement six levels of document headings, <h1> is the most important and <h6> is the least. A heading element briefly describes the topic of the section it introduces. Heading information may be used by user agents, for example, to construct a table of contents for a document automatically."><code>&lt;h5&gt;</code></a>, <a href="../../HTML/Element/Heading_Elements.html" title="Heading elements implement six levels of document headings, <h1> is the most important and <h6> is the least. A heading element briefly describes the topic of the section it introduces. Heading information may be used by user agents, for example, to construct a table of contents for a document automatically."><code>&lt;h6&gt;</code></a>) defines the heading of the current section.</p>
+
+<p>The heading elements have a <em>rank</em> given by the number in the element name, where <a href="../../HTML/Element/Heading_Elements.html" title="Heading elements implement six levels of document headings, <h1> is the most important and <h6> is the least. A heading element briefly describes the topic of the section it introduces. Heading information may be used by user agents, for example, to construct a table of contents for a document automatically."><code>&lt;h1&gt;</code></a> has the <em>highest</em> rank, and <a href="../../HTML/Element/Heading_Elements.html" title="Heading elements implement six levels of document headings, <h1> is the most important and <h6> is the least. A heading element briefly describes the topic of the section it introduces. Heading information may be used by user agents, for example, to construct a table of contents for a document automatically."><code>&lt;h6&gt;</code></a> has the <em>lowest</em> rank. Relative ranking matters only within a section; the structure of the sections determines the outline, not the heading rank of the sections. For example, consider this code:</p>
+
+<pre class="brush:xml">&lt;section&gt;
+&nbsp; &lt;h1&gt;Forest elephants&lt;/h1&gt;&nbsp;&nbsp;&nbsp; 
+&nbsp; &lt;p&gt;In this section, we discuss the lesser known forest elephants. 
+&nbsp;&nbsp;&nbsp;&nbsp;...this section continues...
+&nbsp; &lt;section&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Habitat&lt;/h2&gt;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Forest elephants do not live in trees but among them.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...this subsection continues...
+&nbsp; &lt;/section&gt;
+&lt;/section&gt;
+&lt;section&gt;
+&nbsp; &lt;h3&gt;Mongolian gerbils&lt;/h3&gt;
+&nbsp; &lt;p&gt;In this section, we discuss the famous mongolian gerbils. 
+&nbsp;&nbsp;&nbsp;&nbsp; ...this section continues...
+&lt;/section&gt;</pre>
+
+<p>This creates the following outline:</p>
+
+<pre>1. Forest elephants
+   1.1 Habitat
+2. Mongolian gerbils</pre>
+
+<p>Note that the rank of the heading element (in the example <a href="../../HTML/Element/Heading_Elements.html" title="Heading elements implement six levels of document headings, <h1> is the most important and <h6> is the least. A heading element briefly describes the topic of the section it introduces. Heading information may be used by user agents, for example, to construct a table of contents for a document automatically."><code>&lt;h1&gt;</code></a> for the first top-level section, <a href="../../HTML/Element/Heading_Elements.html" title="Heading elements implement six levels of document headings, <h1> is the most important and <h6> is the least. A heading element briefly describes the topic of the section it introduces. Heading information may be used by user agents, for example, to construct a table of contents for a document automatically."><code>&lt;h2&gt;</code></a> for the subsection and <a href="../../HTML/Element/Heading_Elements.html" title="Heading elements implement six levels of document headings, <h1> is the most important and <h6> is the least. A heading element briefly describes the topic of the section it introduces. Heading information may be used by user agents, for example, to construct a table of contents for a document automatically."><code>&lt;h3&gt;</code></a> for the second top-level section) is not important. (Any rank can be used as the heading of an explicitly-defined section, although this practice is not recommended.)</p>
+
+<h3 id="Implicit_sectioning">Implicit sectioning</h3>
+
+<p>Because the HTML5 Sectioning Elements aren't mandatory to define an outline, to keep compatibility with the existing web dominated by HTML4, there is a way to define sections without them. This is called <em>implicit sectioning</em>.</p>
+
+<p>The heading elements (<a href="../../HTML/Element/Heading_Elements.html" title="Heading elements implement six levels of document headings, <h1> is the most important and <h6> is the least. A heading element briefly describes the topic of the section it introduces. Heading information may be used by user agents, for example, to construct a table of contents for a document automatically."><code>&lt;h1&gt;</code></a> to <a href="../../HTML/Element/Heading_Elements.html" title="Heading elements implement six levels of document headings, <h1> is the most important and <h6> is the least. A heading element briefly describes the topic of the section it introduces. Heading information may be used by user agents, for example, to construct a table of contents for a document automatically."><code>&lt;h6&gt;</code></a>) define&nbsp;a new, implicit section when they aren't the first heading of their parent,&nbsp;explicit,&nbsp;sections. The way this implicit section is positioned in the outline is defined by its relative rank with the previous heading in its parent section. If it is of a lower rank than the previous heading, it opens an implicit sub-section of the section. This code:</p>
+
+<pre class="brush:xml">&lt;section&gt;
+&nbsp; &lt;h1&gt;Forest elephants&lt;/h1&gt;&nbsp; 
+&nbsp; &lt;p&gt;In this section, we discuss the lesser known forest elephants.
+&nbsp;&nbsp;&nbsp; ...this section continues...
+&nbsp; &lt;h3 class="implicit subsection"&gt;Habitat&lt;/h3&gt;
+&nbsp;&nbsp;&lt;p&gt;Forest elephants do not live in trees but among them.
+&nbsp;&nbsp;&nbsp;&nbsp;...this subsection continues...
+&lt;/section&gt;</pre>
+
+<p>leading to the following outline:</p>
+
+<pre>1. Forest elephants
+   1.1 Habitat&nbsp;<em>(implicitly defined by the h3 element)</em>
+</pre>
+
+<p>If it is of the same rank as the previous heading, it closes the previous section (which may have been explicit!) and opens a new implicit one at the same level:&nbsp;</p>
+
+<pre class="brush:xml">&lt;section&gt;
+&nbsp; &lt;h1&gt;Forest elephants&lt;/h1&gt;&nbsp; 
+&nbsp; &lt;p&gt;In this section, we discuss the lesser known forest elephants.
+&nbsp;&nbsp;&nbsp;&nbsp;...this section continues...
+&nbsp; &lt;h1 class="implicit section"&gt;Mongolian gerbils&lt;/h1&gt;
+&nbsp; &lt;p&gt;Mongolian gerbils are cute little mammals.
+&nbsp; &nbsp;&nbsp;...this section continues...
+&lt;/section&gt;</pre>
+
+<p>leading to the following outline:&nbsp;</p>
+
+<pre>1. Forest elephants
+2. Mongolian gerbils <em>(implicitly defined by the h1 element, which closed the previous section at the same time)</em>
+</pre>
+
+<p>If it is of a higher rank than the previous heading, it closes the previous section and opens a new implicit one at the higher level:</p>
+
+<pre class="brush:xml">&lt;body&gt;
+&nbsp; &lt;h1&gt;Mammals&lt;/h1&gt;
+&nbsp; &lt;h2&gt;Whales&lt;/h2&gt;
+&nbsp; &lt;p&gt;In this section, we discuss the swimming whales.
+&nbsp;&nbsp;&nbsp; ...this section continues...
+&nbsp; &lt;section&gt;
+&nbsp;&nbsp;&nbsp; &lt;h3&gt;Forest elephants&lt;/h3&gt;&nbsp; 
+&nbsp;&nbsp;&nbsp; &lt;p&gt;In this section, we discuss the lesser known forest elephants.
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;...this section continues...
+&nbsp;&nbsp;&nbsp; &lt;h3&gt;Mongolian gerbils&lt;/h3&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt;Hordes of gerbils have spread their range far beyond Mongolia.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; ...this subsection continues...
+&nbsp;&nbsp;&nbsp; &lt;h2&gt;Reptiles&lt;/h2&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt;Reptiles are animals with cold blood.
+&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; ...this section continues...
+&nbsp; &lt;/section&gt;
+&lt;/body&gt;</pre>
+
+<p>leading to the following outline:</p>
+
+<pre>1. Mammals
+   1.1 Whales <em>(implicitly defined by the h2 element)</em>
+   1.2 Forest elephants <em>(explicitly defined by the section element)</em>
+   1.3 Mongolian gerbils <em>(implicitly defined by the h3 element, which closes the previous section at the same time)</em>
+2. Reptiles <em>(implicitly defined by the h2 element, which closes the previous section at the same time)</em>
+</pre>
+
+<p>This is not the outline that one might expect by quickly glancing at the heading tags. To make your markup human-understandable, it is a good practice to use explicit tags for opening and closing sections, and to match the heading rank to the intended section nesting level. However, this is not required by the HTML5 specification. If you find that browsers are rendering your document outline in unexpected ways, check whether you have sections that are implicitly closed by heading elements.</p>
+
+<p>An exception to the rule of thumb that heading rank should match the section nesting level is for sections that may be reused in multiple documents. For example, a section might be stored in a content-management system and assembled into documents at run time. In this case, a good practice is to start at <a href="../../HTML/Element/Heading_Elements.html" title="Heading elements implement six levels of document headings, <h1> is the most important and <h6> is the least. A heading element briefly describes the topic of the section it introduces. Heading information may be used by user agents, for example, to construct a table of contents for a document automatically."><code>&lt;h1&gt;</code></a> for the top heading level of the reusable section. The nesting level of the reusable section will be determined by the section hierarchy of the document in which it appears. Explicit section tags are still helpful in this case.</p>
+
+<h3 id="Sectioning_roots"><a name="sectioning_root">Sectioning roots</a></h3>
+
+<p>&nbsp;A <a id="sectioning root" name="sectioning root">sectioning root</a> is an HTML element that can have its own outline, but the sections and headings inside it do&nbsp;not contribute to the outline of its ancestor. Beside <a href="../../HTML/Element/body.html" title="The HTML <body> Element represents the content of an HTML&nbsp;document. There can be only one <body> element in a document."><code>&lt;body&gt;</code></a> which is the logical sectioning root of a document, these are often elements that introduce external content to the page:&nbsp;<a href="../../HTML/Element/blockquote.html" title="The HTML <blockquote> Element (or HTML Block Quotation Element) indicates that the enclosed text is an extended quotation. Usually, this is rendered visually by indentation (see Notes for how to change it). A URL for the source of the quotation may be given using the cite attribute, while a text representation of the source can be given using the <cite> element."><code>&lt;blockquote&gt;</code></a>, <a href="../../HTML/Element/details.html" title="The HTML Details Element (<details>) is used to create a disclosure widget in which information is visible only when the widget is toggled into an &quot;open&quot; state. A summary or label can be provided using the <summary> element."><code>&lt;details&gt;</code></a>, <a href="../../HTML/Element/fieldset.html" title="The HTML <fieldset> element is used to group several controls as well as labels (<label>) within a web form."><code>&lt;fieldset&gt;</code></a>, <a href="../../HTML/Element/figure.html" title="The HTML <figure> element represents self-contained content, frequently with a caption (<figcaption>), and is typically referenced as a single unit."><code>&lt;figure&gt;</code></a> and <a href="../../HTML/Element/td.html" title="The HTML <td> element defines a cell of a table that contains data. It participates in the table model."><code>&lt;td&gt;</code></a>.</p>
+
+<p>Example:</p>
+
+<pre class="brush:xml">&lt;section&gt;
+&nbsp; &lt;h1&gt;Forest elephants&lt;/h1&gt; 
+&nbsp; &lt;section&gt;
+&nbsp;&nbsp;&nbsp; &lt;h2&gt;Introduction&lt;/h2&gt;
+&nbsp;&nbsp;&nbsp; &lt;p&gt;In this section, we discuss the lesser known forest elephants&lt;/p&gt;
+&nbsp; &lt;/section&gt;
+&nbsp; &lt;section&gt;
+&nbsp;&nbsp;&nbsp; &lt;h2&gt;Habitat&lt;/h2&gt;
+&nbsp;&nbsp;&nbsp; &lt;p&gt;Forest&nbsp;elephants&nbsp;do not&nbsp;live&nbsp;in&nbsp;trees&nbsp;but&nbsp;among&nbsp;them. Let's
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; look what scientists are saying in "&lt;cite&gt;The Forest Elephant in Borneo&lt;/cite&gt;":&lt;/p&gt;
+&nbsp;&nbsp;&nbsp; &lt;blockquote&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;h1&gt;Borneo&lt;/h1&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt;The forest element lives in Borneo...&lt;/p&gt;
+&nbsp;&nbsp;&nbsp; &lt;/blockquote&gt;
+&nbsp; &lt;/section&gt;
+&lt;/section&gt;
+</pre>
+
+<p>This example results in the following outline:</p>
+
+<pre>1. Forest elephants
+   1.1 Introduction
+&nbsp;&nbsp; 1.2 Habitat</pre>
+
+<p>This outline doesn't contain the internal outline of the <a href="../../HTML/Element/blockquote.html" title="The HTML <blockquote> Element (or HTML Block Quotation Element) indicates that the enclosed text is an extended quotation. Usually, this is rendered visually by indentation (see Notes for how to change it). A URL for the source of the quotation may be given using the cite attribute, while a text representation of the source can be given using the <cite> element."><code>&lt;blockquote&gt;</code></a> element, which, being an external citation, is a sectioning root and isolates its internal outline.</p>
+
+<h3 id="Sections_outside_the_outline">Sections outside the outline</h3>
+
+<p>HTML5 introduces two new elements that allow defining sections that don't belong to the main outline of a web document:</p>
+
+<ol>
+ <li>The HTML&nbsp;Aside Section Element (<a href="../../HTML/Element/aside.html" title="The HTML <aside> element represents a portion of a document whose content is only indirectly related to the document's main content."><code>&lt;aside&gt;</code></a>) defines a section that, though related to the main element, doesn't belong to the main flow, like an explanation box or an advertisement. It has its own outline, but doesn't belong to the main one.</li>
+ <li>The HTML Navigational Section Element (<a href="../../HTML/Element/nav.html" title="The HTML <nav> element represents a section of a page whose purpose is to provide navigation links, either within the current document or to other documents. Common examples of navigation sections are menus, tables of contents, and indexes."><code>&lt;nav&gt;</code></a>) defines a section that contains navigation links. There can be several of them in a document, for example one with page internal links like a table of contents, and another with site navigational links. These links are not part of the main document flow and outline, and are generally not initially rendered by screen readers and similar assistive technologies.</li>
+</ol>
+
+<h3 id="Headers_and_Footers">Headers and Footers</h3>
+
+<p>HTML5 also introduces two new elements that can be used to mark up the header and the footer of a section:</p>
+
+<ol>
+ <li>The HTML Header Element (<a href="../../HTML/Element/header.html" title="The HTML <header> element represents introductory content, typically a group of introductory or navigational aids. It may contain some heading elements but also other elements like a logo, a search form, an author name, and so on."><code>&lt;header&gt;</code></a>) defines a page header — typically containing the logo and name of the site and possibly a horizontal menu — or section header, containing perhaps the section's heading, author name, etc. <a href="../../HTML/Element/article.html" title="The HTML <article> element represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable (e.g., in syndication). Examples include: a forum post, a magazine or newspaper article, or a blog entry."><code>&lt;article&gt;</code></a>, <a href="../../HTML/Element/section.html" title="The HTML <section> element represents a standalone section — which doesn't have a more specific semantic element to represent it — contained within an HTML document."><code>&lt;section&gt;</code></a>, <a href="../../HTML/Element/aside.html" title="The HTML <aside> element represents a portion of a document whose content is only indirectly related to the document's main content."><code>&lt;aside&gt;</code></a>, and <a href="../../HTML/Element/nav.html" title="The HTML <nav> element represents a section of a page whose purpose is to provide navigation links, either within the current document or to other documents. Common examples of navigation sections are menus, tables of contents, and indexes."><code>&lt;nav&gt;</code></a> can have their own <a href="../../HTML/Element/header.html" title="The HTML <header> element represents introductory content, typically a group of introductory or navigational aids. It may contain some heading elements but also other elements like a logo, a search form, an author name, and so on."><code>&lt;header&gt;</code></a>. Despite its name, it is not necessarily positioned at the beginning of the page or section.</li>
+ <li>The HTML&nbsp;Footer Element (<a href="../../HTML/Element/footer.html" title="The HTML <footer> element represents a footer for its nearest sectioning content or sectioning root element. A footer typically contains information about the author of the section, copyright data or links to related documents."><code>&lt;footer&gt;</code></a>) defines a page footer — typically containing the copyright and legal notices&nbsp;and sometimes some links — or section footer, containing perhaps the section's publication date, license information, etc. <a href="../../HTML/Element/article.html" title="The HTML <article> element represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable (e.g., in syndication). Examples include: a forum post, a magazine or newspaper article, or a blog entry."><code>&lt;article&gt;</code></a>, <a href="../../HTML/Element/section.html" title="The HTML <section> element represents a standalone section — which doesn't have a more specific semantic element to represent it — contained within an HTML document."><code>&lt;section&gt;</code></a>, <a href="../../HTML/Element/aside.html" title="The HTML <aside> element represents a portion of a document whose content is only indirectly related to the document's main content."><code>&lt;aside&gt;</code></a>, and <a href="../../HTML/Element/nav.html" title="The HTML <nav> element represents a section of a page whose purpose is to provide navigation links, either within the current document or to other documents. Common examples of navigation sections are menus, tables of contents, and indexes."><code>&lt;nav&gt;</code></a> can have their own <a href="../../HTML/Element/footer.html" title="The HTML <footer> element represents a footer for its nearest sectioning content or sectioning root element. A footer typically contains information about the author of the section, copyright data or links to related documents."><code>&lt;footer&gt;</code></a>. Despite its name, it is not necessarily positioned at the end of the page or section.</li>
+</ol>
+
+<p>These do not create new sections in the outline, rather, they mark up content inside sections of the page.</p>
+
+<a class="dashAnchor" name="//apple_ref/Section/Addresses%20in%20sectioning%20elements"></a><h2 id="Addresses_in_sectioning_elements">Addresses in sectioning elements</h2>
+
+<p>The author of a document often wants to publish some contact information, such as the author's name and address. HTML4 allowed this via the <a href="../../HTML/Element/address.html" title="The HTML&nbsp;<address> element indicates that the enclosed HTML provides contact information for a person or people, or for an organization."><code>&lt;address&gt;</code></a> element, which has been extended in HTML5.</p>
+
+<p>A document can be made of different sections from different authors. A section from another author than the one of the main page is defined using the <a href="../../HTML/Element/article.html" title="The HTML <article> element represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable (e.g., in syndication). Examples include: a forum post, a magazine or newspaper article, or a blog entry."><code>&lt;article&gt;</code></a> element. Consequently, the <a href="../../HTML/Element/address.html" title="The HTML&nbsp;<address> element indicates that the enclosed HTML provides contact information for a person or people, or for an organization."><code>&lt;address&gt;</code></a> element is now linked to its nearest <a href="../../HTML/Element/body.html" title="The HTML <body> Element represents the content of an HTML&nbsp;document. There can be only one <body> element in a document."><code>&lt;body&gt;</code></a> or <a href="../../HTML/Element/article.html" title="The HTML <article> element represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable (e.g., in syndication). Examples include: a forum post, a magazine or newspaper article, or a blog entry."><code>&lt;article&gt;</code></a> ancestor.</p>
+
+<a class="dashAnchor" name="//apple_ref/Section/Using%20HTML5%20elements%20in%20non%2DHTML5%20browsers"></a><h2 id="Using_HTML5_elements_in_non-HTML5_browsers">Using HTML5 elements in non-HTML5 browsers</h2>
+
+<p>Sections and headings elements should work in most non-HTML5 browsers. Though unsupported, they don't need a special DOM&nbsp;interface and they only need a specific CSS styling as unknown elements are styled as <code>display:inline</code> by default:</p>
+
+<pre class="brush: css">article, aside, footer, header, hgroup, nav, section {
+&nbsp; display:block;
+}
+</pre>
+
+<p>Of course the web developer can style them differently, but keep in mind that in a non-HTML5 browser, the default styling is different from what is expected for such elements. Also note that the <a href="../../HTML/Element/time.html" title="The HTML <time> element represents either a time on a 24-hour clock or a precise date in the Gregorian calendar (with optional time and timezone information)."><code>&lt;time&gt;</code></a> element has not been included, because the default styling for it in a non-HTML5 browser is the same as the one in an HTML5-compatible one.</p>
+
+<p>This method has its limitation though, as some browsers do not allow styling of unsupported elements. That is the case of the Internet Explorer (version 8 and earlier), which need a specific script to allow this:</p>
+
+<pre class="brush:xml">&lt;!--[if&nbsp;lt IE 9]&gt;
+&nbsp;&nbsp;&lt;script&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;document.createElement("article");
+&nbsp;&nbsp;&nbsp;&nbsp;document.createElement("aside");
+&nbsp;&nbsp;&nbsp;&nbsp;document.createElement("footer");
+&nbsp;&nbsp;&nbsp;&nbsp;document.createElement("header");
+&nbsp;&nbsp;&nbsp;&nbsp;document.createElement("hgroup");
+&nbsp;&nbsp;&nbsp;&nbsp;document.createElement("nav");
+&nbsp;&nbsp;&nbsp;&nbsp;document.createElement("section");
+&nbsp;&nbsp;&nbsp;&nbsp;document.createElement("time");
+&nbsp;&nbsp;&lt;/script&gt;
+&lt;![endif]--&gt;
+</pre>
+
+<p>This script means that, in the case of Internet Explorer (8 and earlier), scripting should be enabled in order to display HTML5 sectioning and headings elements properly. If not, they won't be displayed, which may be problematic as these elements are likely defining the structure of the whole page. That's why an explicit <a href="../../HTML/Element/noscript.html" title="The HTML <noscript> element defines a section of HTML to be inserted if a script type on the page is unsupported or if scripting is currently turned off in the browser."><code>&lt;noscript&gt;</code></a> element should be added inside the <a href="../../HTML/Element/head.html" title="The HTML <head> element provides general information (metadata) about the document, including its title and links to its&nbsp;scripts and style sheets."><code>&lt;head&gt;</code></a> element for this case:</p>
+
+<pre class="brush:xml">&lt;noscript&gt;
+&nbsp;&nbsp;&lt;p&gt;&lt;strong&gt;This web page requires JavaScript to be enabled.&lt;/strong&gt;&lt;/p&gt;
+&nbsp;&nbsp;&lt;p&gt;JavaScript is an object-oriented computer programming language&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;commonly used to create interactive effects within web browsers.&lt;/p&gt;
+&nbsp;&nbsp;&lt;p&gt;&lt;a href="https://goo.gl/koeeaJ"&gt;How to enable JavaScript?&lt;/a&gt;&lt;/p&gt;
+&lt;/noscript&gt;
+</pre>
+
+<p>This leads to the following code to allow the support of the HTML5 sections and headings elements in non-HTML5 browsers, even for Internet Explorer (8 and older), with a proper fallback for the case where this latter browser is configured not to use scripting:</p>
+
+<pre class="brush:xml">&lt;!--[if&nbsp;lt IE 9]&gt;
+&nbsp;&nbsp;&lt;script&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;document.createElement("article");
+&nbsp;&nbsp;&nbsp;&nbsp;document.createElement("aside");
+&nbsp;&nbsp;&nbsp;&nbsp;document.createElement("footer");
+&nbsp;&nbsp;&nbsp;&nbsp;document.createElement("header");
+&nbsp;&nbsp;&nbsp;&nbsp;document.createElement("hgroup");
+&nbsp;&nbsp;&nbsp;&nbsp;document.createElement("nav");
+&nbsp;&nbsp;&nbsp;&nbsp;document.createElement("section");
+&nbsp;&nbsp;&nbsp;&nbsp;document.createElement("time");
+&nbsp;&nbsp;&lt;/script&gt;
+&lt;![endif]--&gt;
+&lt;noscript&gt;
+&nbsp;&nbsp;&lt;p&gt;&lt;strong&gt;This web page requires JavaScript to be enabled.&lt;/strong&gt;&lt;/p&gt;
+&nbsp;&nbsp;&lt;p&gt;JavaScript is an object-oriented computer programming language&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;commonly used to create interactive effects within web browsers.&lt;/p&gt;
+&nbsp;&nbsp;&lt;p&gt;&lt;a href="https://goo.gl/koeeaJ"&gt;How to enable JavaScript?&lt;/a&gt;&lt;/p&gt;
+&lt;/noscript&gt;
+</pre>
+
+<a class="dashAnchor" name="//apple_ref/Section/Conclusion"></a><h2 id="Conclusion">Conclusion</h2>
+
+<p>The new semantic elements introduced in HTML5 bring the ability to describe the structure and the outline of a web document in a standard way. They bring a big advantage for people having HTML5 browsers and needing the structure to help them understand the page, for instance people needing the help of some assistive technology. These new semantic elements are simple to use and, with very few burdens, can be made to work also in non-HTML5 browsers. Therefore they should be used without restrictions.</p>
+
+<div><div class="horizFlexboxContainer">
+  <div class="smallTextMultiColumnBoxHeading">HTML5 Documentation</div>
+  <div class="smallTextMultiColumnBoxList">
+<table class="html5ArticleToc">
+	<tbody>
+		<tr>
+			<td style="width: 150px; border-left: none; border-right: none; border-top: none; border-bottom: dotted 2px rgba(224,244,244,200);"><a href="HTML5.html#HTML" title="HTML5 Documentation">HTML</a></td>
+			<td style="border-left: none; border-right: none; border-top: none; border-bottom: dotted 2px rgba(224,244,244,200);">
+				<ul>
+					<li><a href="../../../Learn/HTML/Multimedia_and_embedding/Video_and_audio_content.html" title="Using HTML5 audio and video">Audio/Video</a></li>
+					<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API" title="Canvas">Canvas</a></li>
+					<li><a href="https://developer.mozilla.org/en-US/docs/WebGL" title="WebGL">WebGL</a></li>
+					<li><a href="https://developer.mozilla.org/en-US/docs/SVG" title="SVG">SVG</a></li>
+					<li><a href="https://developer.mozilla.org/en-US/docs/MathML" title="MathML">MathML</a></li>
+					<li><a href="HTML5.html#WebForms" title="HTML5 Thematic Classification #WebForms">WebForms</a></li>
+					<li><a href="../../HTML/Using_the_application_cache.html" title="Using Application Cache">AppCache</a></li>
+					<li><a href="https://developer.mozilla.org/en-US/docs/Using_microformats" title="Using microformats">Microformats</a></li>
+					<li><a href="HTML5.html#Semantic_tags" title="HTML5 Thematic Classification#Semantic tags">SemanticTags</a></li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 150px; border-left: none; border-right: none; border-top: none; border-bottom: dotted 2px rgba(224,244,244,200);"><a href="HTML5.html#JavaScript" title="HTML5 Thematic Classification #JavaScript">JavaScript</a></td>
+			<td style="border-left: none; border-right: none; border-top: none; border-bottom: dotted 2px rgba(224,244,244,200);">
+				<ul>
+					<li><a href="HTML5.html#Client-Side_Storage" title="HTML5 Thematic Classification #Client-Side Storage">Storage</a></li>
+					<li><a href="HTML5.html#IndexedDB" title="HTML5 Thematic Classification #IndexedDB">IndexedDB</a></li>
+					<li><a href="https://developer.mozilla.org/en-US/docs/WebSockets" title="WebSockets">WebSockets</a></li>
+					<li><a href="https://developer.mozilla.org/en-US/docs/Using_web_workers" title="Using web workers">WebWorkers</a></li>
+					<li><a href="https://developer.mozilla.org/en-US/docs/Online_and_offline_events" title="Online and offline events">Events</a></li>
+					<li><a href="https://developer.mozilla.org/en-US/docs/DragDrop/Drag_and_Drop" title="Drag and Drop">Drag/Drop</a></li>
+					<li><a href="https://developer.mozilla.org/en-US/docs/Web-based_protocol_handlers" title="Web-based protocol handlers">ProtocolHandler</a></li>
+					<li><a href="https://developer.mozilla.org/en-US/docs/Using_geolocation" title="Using geolocation">Geolocation</a></li>
+					<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/hasFocus" title="Focus management in HTML">Focus</a></li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td style="border: none;"><a href="HTML5.html#CSS" title="HTML5 Thematic Classification #CSS">CSS</a></td>
+			<td style="border: none;">
+				<ul>
+					<li><a href="https://developer.mozilla.org/en-US/docs/Mozilla_CSS_support_chart" title="Mozilla CSS support chart">NewSelectors</a></li>
+					<li><a href="HTML5.html#Typography" title="HTML5 Thematic Classification #Typography">Typography</a></li>
+					<li><a href="HTML5.html#Visual" title="HTML5 Thematic Classification #Visual">Visual</a></li>
+					<li><a href="HTML5.html#Effects" title="HTML5 Thematic Classification #Effects">Effects</a></li>
+				</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div></div>
+                  
+                
+              </article>
+
+              <!-- contributors -->
+              <div class="wiki-block contributors">
+                <h2 class="offscreen">Document Tags and Contributors</h2>
+                
+                
+  <div class="tag-attach-list contributors-sub">
+    <svg class="icon icon-tags" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M7 7c0-1.109-.891-2-2-2s-2 .891-2 2 .891 2 2 2 2-.891 2-2zm16.672 9c0 .531-.219 1.047-.578 1.406l-7.672 7.688c-.375.359-.891.578-1.422.578s-1.047-.219-1.406-.578L1.422 13.906C.625 13.125 0 11.609 0 10.5V4c0-1.094.906-2 2-2h6.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422zm6 0c0 .531-.219 1.047-.578 1.406l-7.672 7.688a2.08 2.08 0 0 1-1.422.578c-.812 0-1.219-.375-1.75-.922l7.344-7.344c.359-.359.578-.875.578-1.406s-.219-1.047-.578-1.422L14.422 3.422C13.625 2.625 12.11 2 11 2h3.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422z"></path>
+</svg>
+    <strong>Tags:</strong>&nbsp;
+    <ul class="tags tags-small">
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Advanced" rel="nofollow">Advanced</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Example" rel="nofollow">Example</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Guide" rel="nofollow">Guide</a></li>
+      
+        <li><a href="../../../tag/HTML.html" rel="nofollow">HTML</a></li>
+      
+        <li><a href="../../../tag/HTML5.html" rel="nofollow">HTML5</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Outlines" rel="nofollow">Outlines</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Overview" rel="nofollow">Overview</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Sections" rel="nofollow">Sections</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Web" rel="nofollow">Web</a></li>
+      
+    </ul>
+  </div>
+
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-group" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M9.266 14a5.532 5.532 0 0 0-4.141 2H3.031C1.468 16 0 15.25 0 13.516 0 12.25-.047 8 1.937 8c.328 0 1.953 1.328 4.062 1.328.719 0 1.406-.125 2.078-.359A7.624 7.624 0 0 0 7.999 10c0 1.422.453 2.828 1.266 4zM26 23.953C26 26.484 24.328 28 21.828 28H8.172C5.672 28 4 26.484 4 23.953 4 20.422 4.828 15 9.406 15c.531 0 2.469 2.172 5.594 2.172S20.063 15 20.594 15C25.172 15 26 20.422 26 23.953zM10 4c0 2.203-1.797 4-4 4S2 6.203 2 4s1.797-4 4-4 4 1.797 4 4zm11 6c0 3.313-2.688 6-6 6s-6-2.688-6-6 2.688-6 6-6 6 2.688 6 6zm9 3.516C30 15.25 28.531 16 26.969 16h-2.094a5.532 5.532 0 0 0-4.141-2A7.066 7.066 0 0 0 22 10a7.6 7.6 0 0 0-.078-1.031A6.258 6.258 0 0 0 24 9.328C26.109 9.328 27.734 8 28.062 8c1.984 0 1.937 4.25 1.937 5.516zM28 4c0 2.203-1.797 4-4 4s-4-1.797-4-4 1.797-4 4-4 4 1.797 4 4z"></path>
+</svg>
+                    <strong>Contributors to this page:</strong>
+                    
+        <a href="https://developer.mozilla.org/en-US/profiles/crissdev">crissdev</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/vorian">vorian</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/kitdotnet">kitdotnet</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/carolinezhao">carolinezhao</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/dibeneditto">dibeneditto</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/alissalikavec">alissalikavec</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/kalpeshsingh">kalpeshsingh</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/ahmadramin">ahmadramin</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/manavm1990">manavm1990</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills">chrisdavidmills</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/mcmimik">mcmimik</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/chriseisenbraun">chriseisenbraun</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/MDNion">MDNion</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/wrannaman">wrannaman</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/emersonveenstra">emersonveenstra</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Aleksej">Aleksej</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/nikolayNenov">nikolayNenov</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/SteveFaulkner">SteveFaulkner</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Jeremie">Jeremie</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/kscarfone">kscarfone</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/jsx">jsx</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/nyc212">nyc212</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/kevnchu">kevnchu</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/ethertank">ethertank</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/lmorchard">lmorchard</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/saneyuki_s">saneyuki_s</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Potappo">Potappo</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/GlitchMr">GlitchMr</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Gieron">Gieron</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/butch566">butch566</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/jswisher">jswisher</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Shehi">Shehi</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/neilerdwien">neilerdwien</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/inma_610">inma_610</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/sebmozilla">sebmozilla</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/asymmetric">asymmetric</a>
+    
+                  </div>
+                
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-clock" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M14 8.5v7c0 .281-.219.5-.5.5h-5a.494.494 0 0 1-.5-.5v-1c0-.281.219-.5.5-.5H12V8.5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zm6.5 5.5c0-4.688-3.813-8.5-8.5-8.5S3.5 9.313 3.5 14s3.813 8.5 8.5 8.5 8.5-3.813 8.5-8.5zm3.5 0c0 6.625-5.375 12-12 12S0 20.625 0 14 5.375 2 12 2s12 5.375 12 12z"></path>
+</svg>
+                    <strong>Last updated by:</strong>
+                    <a href="https://developer.mozilla.org/en-US/profiles/crissdev">crissdev</a>,
+                    <time datetime="2017-12-28T02:57:33.528746-08:00">Dec 28, 2017, 2:57:33 AM</time>
+                  </div>
+                
+              </div>
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+    
+      <div class="newsletter-box">
+        <div class="newsletter">
+    <form id="newsletterForm" class="newsletter-form nodisable" name="newsletter-form" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <div class="newsletter-head">
+            <h2 class="newsletter-teaser">Learn the best of web development</h2>
+            <p class="newsletter-description">Get the latest and greatest from MDN delivered straight to your inbox.</p>
+            
+        </div>
+
+        <div class="newsletter-fields">
+            <input type="hidden" id="fmt" name="fmt" value="H">
+            <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+            <div id="newsletterErrors" class="newsletter-errors"></div>
+
+            <div id="newsletterEmail" class="form-group newsletter-group-email">
+                <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+                <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+            </div>
+
+            <div id="newsletterPrivacy" class="form-group form-group-agree newsletter-group-privacy hidden">
+                <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+                <label for="newsletterPrivacyInput">
+                I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+                </label>
+            </div>
+            <div id="newsletterSubmit" class="newsletter-group-submit">
+                <button id="newsletter-submit" type="submit" class="button neutral newsletter-submit">
+                    Sign up now<svg class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg" width="23" height="28" viewBox="0 0 23 28" aria-hidden="true">
+    <path d="M23 15a2.01 2.01 0 0 1-.578 1.422L12.25 26.594c-.375.359-.891.578-1.422.578s-1.031-.219-1.406-.578L8.25 25.422c-.375-.375-.594-.891-.594-1.422s.219-1.047.594-1.422L12.828 18h-11C.703 18 0 17.062 0 16v-2c0-1.062.703-2 1.828-2h11L8.25 7.406a1.96 1.96 0 0 1 0-2.812l1.172-1.172c.375-.375.875-.594 1.406-.594s1.047.219 1.422.594l10.172 10.172c.375.359.578.875.578 1.406z"></path>
+</svg>
+                </button>
+            </div>
+        </div>
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden">
+        <span>Hide Newsletter Sign-up</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+</div>
+      </div>
+    
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines$edit" label="Edit page"></menuitem>
+    <menuitem data-action="/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines$history" label="View page history"></menuitem>
+  </menu>
+
+      </div>
+  </main>
+  <!-- Footer -->
+    <footer id="nav-footer" class="nav-footer"><div class="center"><a href="http://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines">Using HTML sections and outlines</a> by <a href="http://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines$history">Mozilla Contributors</a> is licensed under <a href="http://creativecommons.org/licenses/by-sa/2.5/" class="external external-icon">CC-BY-SA 2.5</a>.</div></footer> 
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script async="" type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script src="../../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../../static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><!--[endif]---->
+
+    
+    <script src="../../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../../static/build/js/wiki.b26a4c181df3.js" charset="utf-8" id="wikiscript"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../static/build/js/newsletter.a85c5c2892e5.js" charset="utf-8"></script>
+  
+
+
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 22:59:11 GMT -->
+</body></html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/SVG/Attribute/fill-rule$samples/topExample?revision=1389881 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:46:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            html,body,svg { height:100% }
+        </style>
+        
+        <title>fill-rule</title>
+    </head>
+    <body>
+        
+            <svg viewBox="-10 -10 220 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Default value for fill-rule -->
+  <polygon fill-rule="nonzero" stroke="red"
+   points="50,0 21,90 98,35 2,35 79,90"/>
+
+  <!--
+  The points in the center of the shape has 2
+  path segments (materialized by the red stroke)
+  between them and Infinity therefor there are
+  considered outside the shape, that's why the
+  interior of the star is hollow (but not the branch).
+  -->
+  <polygon fill-rule="evenodd" stroke="red"
+   points="150,0 121,90 198,35 102,35 179,90"/>
+</svg>
+        
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/SVG/Attribute/fill-rule$samples/topExample?revision=1389881 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:46:35 GMT -->
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/lineDashOffset$samples/Marching_ants?revision=1396010 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 11:40:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <title>CanvasRenderingContext2D.lineDashOffset</title>
+    </head>
+    <body>
+        
+            <canvas id="canvas" class="playable-canvas"></canvas>
+        
+        
+            <script>
+                var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var offset = 0;
+
+function draw() {
+  ctx.clearRect(0,0, canvas.width, canvas.height);
+  ctx.setLineDash([4, 2]);
+  ctx.lineDashOffset = -offset;
+  ctx.strokeRect(10,10, 100, 100);
+}
+
+function march() {
+  offset++;
+  if (offset > 16) {
+    offset = 0;
+  }
+  draw();
+  setTimeout(march, 20);
+}
+
+march();
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/lineDashOffset$samples/Marching_ants?revision=1396010 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 11:40:02 GMT -->
+</html>

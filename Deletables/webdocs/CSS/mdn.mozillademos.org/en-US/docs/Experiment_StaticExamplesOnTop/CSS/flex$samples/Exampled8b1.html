@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Experiment:StaticExamplesOnTop/CSS/flex$samples/Example?revision=1230503 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:52:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            #flex-container {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+}
+
+#flex-container > .flex-item {
+	-webkit-flex: auto;
+	flex: auto;
+}
+
+#flex-container > .raw-item {
+	width: 5rem;
+}
+ #flex-container {
+	width: 100%;
+	font-family: Consolas, Arial, sans-serif;
+}
+
+#flex-container > div {
+	border: 1px solid #f00;
+	padding: 1rem;
+}
+
+#flex-container > .raw-item {
+	border: 1px solid #000;
+}
+
+        </style>
+        
+        <title>flex</title>
+    </head>
+    <body>
+        
+            <div id="flex-container">
+    <div class="flex-item" id="flex">Flex box (click to toggle raw box)</div>
+    <div class="raw-item" id="raw">Raw box</div>
+</div>
+
+        
+        
+            <script>
+                var flex = document.getElementById("flex");
+var raw = document.getElementById("raw");
+flex.addEventListener("click", function() {
+	raw.style.display = raw.style.display == "none" ? "block" : "none";
+});
+
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Experiment:StaticExamplesOnTop/CSS/flex$samples/Example?revision=1230503 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:52:25 GMT -->
+</html>

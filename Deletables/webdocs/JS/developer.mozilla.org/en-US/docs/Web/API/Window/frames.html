@@ -1,0 +1,865 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Window/frames by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 08:26:08 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  <title>Window.frames</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+
+  
+<link rel="preload" href="../../../../../static/fonts/locales/ZillaSlab-Regular.f9de6143fdfa.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="license" href="#license">
+  
+
+  
+    
+    
+
+    <link href="../../../../../static/build/styles/mdn.83865b0f7c30.css" rel="stylesheet" type="text/css">
+
+    
+  
+
+    <link href="../../../../../static/build/styles/wiki.aaf26c13c39b.css" rel="stylesheet" type="text/css">
+
+
+    
+
+  <link href="../../../../../static/build/styles/locale-en-US.ca0bca387b42.css" rel="stylesheet" type="text/css">
+
+  
+    <script>
+      /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
+    </script>
+    
+
+
+
+  
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta property="og:site_name" content="MDN Web Docs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="MDN Web Docs">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../static/img/favicon144.e7e21ca263ca.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../static/img/favicon114.d526f38b09c5.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../static/img/favicon72.cc65d1d762a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../../../static/img/favicon57.de33179910ae.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="../../../../../static/img/favicon32.7f3da72dcea1.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script async="" type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  <link rel="dns-prefetch" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/frames$json">
+  <link rel="canonical" href="frames.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="frames.html" title="Window.frames">
+  
+    
+      <link rel="alternate" hreflang="fr" href="https://developer.mozilla.org/fr/docs/Web/API/Window/frames" title="Window.frames">
+    
+      <link rel="alternate" hreflang="ja" href="https://developer.mozilla.org/ja/docs/Web/API/Window/frames" title="window.frames">
+    
+      <link rel="alternate" hreflang="pl" href="https://developer.mozilla.org/pl/docs/Web/API/Window/frames" title="window.frames">
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/frames" title="Window.frames">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="Window.frames">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/API/Window/frames">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/API/Window/frames">
+  <meta name="twitter:title" content="Window.frames">
+  
+  <meta property="og:description" content="Returns the window itself, which is an array-like object, listing the direct sub-frames of the current window.">
+  <meta name="description" content="Returns the window itself, which is an array-like object, listing the direct sub-frames of the current window.">
+  <meta name="twitter:description" content="Returns the window itself, which is an array-like object, listing the direct sub-frames of the current window.">
+  
+
+</head>
+<body data-slug="Web/API/Window/frames" contextmenu="edit-history-menu" data-search-url="" class="document">
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <!--[endif]---->
+
+  
+  <link rel="dns-prefetch" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/frames$json">
+  <link rel="canonical" href="frames.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="frames.html" title="Window.frames">
+  
+    
+      <link rel="alternate" hreflang="fr" href="https://developer.mozilla.org/fr/docs/Web/API/Window/frames" title="Window.frames">
+    
+      <link rel="alternate" hreflang="ja" href="https://developer.mozilla.org/ja/docs/Web/API/Window/frames" title="window.frames">
+    
+      <link rel="alternate" hreflang="pl" href="https://developer.mozilla.org/pl/docs/Web/API/Window/frames" title="window.frames">
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/frames" title="Window.frames">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="Window.frames">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/API/Window/frames">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/API/Window/frames">
+  <meta name="twitter:title" content="Window.frames">
+  
+  <meta property="og:description" content="Returns the window itself, which is an array-like object, listing the direct sub-frames of the current window.">
+  <meta name="description" content="Returns the window itself, which is an array-like object, listing the direct sub-frames of the current window.">
+  <meta name="twitter:description" content="Returns the window itself, which is an array-like object, listing the direct sub-frames of the current window.">
+  
+
+
+
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/wiki-compat-tables.9978a5ce31c2.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+
+        // interactive editor config
+        win.mdn.interactiveEditor = {
+            siteUrl: "https://developer.mozilla.org",
+            editorUrl: "https://interactive-examples.mdn.mozilla.net"
+        };
+
+    })(this);
+</script>
+    
+    <ul id="nav-access">
+  <li><a href="#content" id="skip-main">Skip to main content</a></li>
+  <li><a id="skip-language" href="#language">Select language</a></li>
+  <li><a href="#q" id="skip-search">Skip to search</a></li>
+</ul>
+
+    <!-- Header -->
+    <header id="main-header" class="header-main">
+      <a href="https://developer.mozilla.org/en-US/" class="logo">MDN Web Docs</a>
+      <div class="nav-toolbox-wrapper">
+        <nav id="main-nav" class="nav-main" role="navigation">
+    <ul>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web">Technologies
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-tech-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+                    <li><a href="../../API.html">APIs / DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn">References &amp; Guides
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-learn-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-contact-submenu">
+              <div class="submenu-column">
+                <ul>
+                  <li>
+                      <a href="https://support.mozilla.org/">Get Firefox help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://stackoverflow.com/">Get web development help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                      <a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/Window/frames">Report a content problem
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</nav>
+        <div id="toolbox" class="toolbox">
+  <ul>
+    
+    <li class="nav-login"><div class="login">
+    
+        
+        <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWindow%2Fframes" class="login-link js-login-link" data-service="GitHub" rel="nofollow">
+            Sign in<svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+    <title>Github</title>
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path>
+</svg>
+        </a>
+    
+</div></li>
+  </ul>
+</div>
+      </div>
+      <form id="nav-main-search" action="https://developer.mozilla.org/en-US/search" method="get" role="search" class="nav-main-search">
+  <div class="search-wrap">
+    <label for="main-q" class="offscreen">Search</label>
+    <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" aria-hidden="true">
+    <span class="search-trigger">
+        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true">
+    <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path>
+</svg>
+    </span>
+    <button type="submit" class="offscreen">Search</button>
+    <button type="button" id="close-header-search" class="close-header-search transparent">
+        <span class="offscreen">Close search</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+  </div>
+</form>
+    </header> 
+
+  <!-- Content will go here -->
+  <main id="content">
+      
+  <!-- heading -->
+  <div id="wiki-document-head" class="document-head">
+    <div class="center">
+      <!-- action buttons -->
+      <div class="document-actions">
+        
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons">
+      <li>
+          <button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false">
+              <svg class="icon icon-language" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M10.219 16.844c-.031.109-.797-.25-1-.328-.203-.094-1.125-.609-1.359-.766s-1.125-.891-1.234-.938a28.275 28.275 0 0 1-2.094 2.828c-.281.328-1.125 1.391-1.641 1.719-.078.047-.531.094-.594.063.25-.187.969-1.078 1.281-1.437.391-.453 2.25-3.047 2.562-3.641.328-.594 1.312-2.562 1.359-2.75-.156-.016-1.391.406-1.719.516-.313.094-1.172.297-1.234.344-.063.063-.016.25-.047.313s-.313.203-.484.234a1.647 1.647 0 0 1-.734 0c-.203-.047-.391-.25-.438-.328 0 0-.063-.094-.078-.359.187-.063.5-.078.844-.172s1.188-.344 1.641-.5 1.328-.484 1.594-.547c.281-.047.984-.516 1.359-.641s.641-.281.656-.203 0 .422-.016.516c-.016.078-.766 1.547-.875 1.781-.063.125-.5.953-1.203 2.047.25.109.781.328 1 .438.266.125 2.125.906 2.219.938s.266.75.234.875zM7.016 9.25c.047.266-.031.375-.063.438-.156.297-.547.5-.781.594s-.625.187-.938.187c-.141-.016-.422-.063-.766-.406-.187-.203-.328-.75-.266-.688s.516.125.719.078.688-.187.906-.25c.234-.078.703-.203.859-.219.156 0 .281.063.328.266zm10.906 2.016l.984 3.547-2.172-.656zM.609 23.766l10.844-3.625V4.016L.609 7.657v16.109zM20 18.813l1.594.484-2.828-10.266-1.563-.484-3.375 8.375 1.594.484.703-1.719 3.297 1.016zM12.141 3.781l8.953 2.875V.718zM17 24.453l2.469.203-.844 2.5L18 26.125c-1.266.812-2.828 1.437-4.312 1.687-.453.094-.969.187-1.422.187h-1.313c-1.656 0-4.672-.984-5.984-1.937-.094-.078-.125-.141-.125-.25 0-.172.125-.297.281-.297.141 0 .875.453 1.078.547 1.406.703 3.375 1.344 4.953 1.344 1.953 0 3.281-.25 5.063-1.016.516-.234.969-.531 1.453-.797zm7-16.859v16.859c-12.078-3.844-12.094-3.844-12.094-3.844C11.656 20.718.453 24.5.297 24.5a.3.3 0 0 1-.281-.203c0-.016-.016-.031-.016-.047V7.406c.016-.047.031-.125.063-.156.094-.109.219-.141.313-.172.047-.016 1-.328 2.328-.781v-6l8.719 3.094C11.532 3.36 21.251 0 21.392 0c.172 0 .313.125.313.328v6.531z"></path>
+</svg>
+              <span>Languages</span>
+          </button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                
+                
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/fr/docs/Web/API/Window/frames" data-locale="fr" title="French">Français (fr)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ja/docs/Web/API/Window/frames" data-locale="ja" title="Japanese">日本語 (ja)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/pl/docs/Web/API/Window/frames" data-locale="pl" title="Polish">Polski (pl)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/frames" data-locale="zh-CN" title="Chinese (Simplified)">中文 (简体) (zh-CN)</a></bdi></li>
+                
+              
+
+              
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/frames$locales" rel="nofollow" id="translations-add">Add a translation</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+      
+      <li class="page-buttons-edit">
+          <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/frames$edit" class="button neutral" id="edit-button" rel="nofollow">
+              <svg class="icon icon-pencil" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M5.672 24l1.422-1.422-3.672-3.672L2 20.328V22h2v2h1.672zm8.172-14.5a.329.329 0 0 0-.344-.344.368.368 0 0 0-.266.109l-8.469 8.469a.366.366 0 0 0-.109.266c0 .203.141.344.344.344a.368.368 0 0 0 .266-.109l8.469-8.469a.366.366 0 0 0 .109-.266zM13 6.5l6.5 6.5-13 13H0v-6.5zM23.672 8c0 .531-.219 1.047-.578 1.406L20.5 12 14 5.5l2.594-2.578c.359-.375.875-.594 1.406-.594s1.047.219 1.422.594l3.672 3.656c.359.375.578.891.578 1.422z"></path>
+</svg>
+              Edit
+          </a>
+      </li>
+      
+
+        
+
+        <li class="page-buttons-advanced">
+            <button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false">
+                <svg class="icon icon-gear" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M16 14c0-2.203-1.797-4-4-4s-4 1.797-4 4 1.797 4 4 4 4-1.797 4-4zm8-1.703v3.469c0 .234-.187.516-.438.562l-2.891.438a8.86 8.86 0 0 1-.609 1.422c.531.766 1.094 1.453 1.672 2.156.094.109.156.25.156.391s-.047.25-.141.359c-.375.5-2.484 2.797-3.016 2.797a.795.795 0 0 1-.406-.141l-2.156-1.687a9.449 9.449 0 0 1-1.422.594c-.109.953-.203 1.969-.453 2.906a.573.573 0 0 1-.562.438h-3.469c-.281 0-.531-.203-.562-.469l-.438-2.875a9.194 9.194 0 0 1-1.406-.578l-2.203 1.672c-.109.094-.25.141-.391.141s-.281-.063-.391-.172c-.828-.75-1.922-1.719-2.578-2.625a.607.607 0 0 1 .016-.718c.531-.719 1.109-1.406 1.641-2.141a8.324 8.324 0 0 1-.641-1.547l-2.859-.422A.57.57 0 0 1 0 15.705v-3.469c0-.234.187-.516.422-.562l2.906-.438c.156-.5.359-.969.609-1.437a37.64 37.64 0 0 0-1.672-2.156c-.094-.109-.156-.234-.156-.375s.063-.25.141-.359c.375-.516 2.484-2.797 3.016-2.797.141 0 .281.063.406.156L7.828 5.94a9.449 9.449 0 0 1 1.422-.594c.109-.953.203-1.969.453-2.906a.573.573 0 0 1 .562-.438h3.469c.281 0 .531.203.562.469l.438 2.875c.484.156.953.344 1.406.578l2.219-1.672c.094-.094.234-.141.375-.141s.281.063.391.156c.828.766 1.922 1.734 2.578 2.656a.534.534 0 0 1 .109.344c0 .141-.047.25-.125.359-.531.719-1.109 1.406-1.641 2.141.266.5.484 1.016.641 1.531l2.859.438a.57.57 0 0 1 .453.562z"></path>
+</svg>
+                <span>Advanced</span>
+            </button>
+            <div class="submenu js-submenu" id="advanced-menu-submenu">
+                <!-- this page -->
+                <div class="submenu-column">
+                    <div class="title">Advanced</div>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/frames$history" rel="nofollow">History</a></li>
+                        
+                        
+                        
+
+
+                
+
+                <li class="page-print"><a href="#" onclick="return window.print();">Print this article</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+      </div>
+
+      <div class="document-title">
+        <h1>Window.frames</h1>
+      </div>
+    <nav class="crumbs" role="navigation">
+      <ol typeof="BreadcrumbList" vocab="https://schema.org/" aria-label="breadcrumbs">
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="https://developer.mozilla.org/en-US/docs/Web" property="item" typeof="WebPage">
+              <span property="name">Web technology for developers</span>
+            </a>
+            <meta property="position" content="1">
+          </li>
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="../../API.html" property="item" typeof="WebPage">
+              <span property="name">Web APIs</span>
+            </a>
+            <meta property="position" content="2">
+          </li>
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="../Window.html" property="item" typeof="WebPage">
+              <span property="name">window</span>
+            </a>
+            <meta property="position" content="3">
+          </li>
+        
+        <li property="itemListElement" typeof="ListItem" class="crumb">
+          <span property="name">Window.frames</span>
+        </li>
+      </ol>
+    </nav></div>
+  </div>
+  
+  <div id="toc" class="toc">
+    <div class="center">
+      <div class="toc-head">Jump to:</div>
+        <ol class="toc-links">
+          <li><a href="#Summary" rel="internal">Summary</a></li><li><a href="#Syntax" rel="internal">Syntax</a></li><li><a href="#Example" rel="internal">Example</a></li><li><a href="#Specifications" rel="internal">Specifications</a>
+        </li></ol>
+    </div>
+  </div>
+  
+
+      <div class="center clear">
+      
+
+    <div class="wiki-main-content" id="document-main"><div class="center">
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-left-present">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-main wiki-column text-content">
+
+              
+
+              
+              
+
+              
+
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <p>
+
+</p><a class="dashAnchor" name="//apple_ref/Section/Summary"></a><h2 id="Summary">Summary</h2>
+
+<p>Returns the window itself, which is an array-like object, listing the direct sub-frames of the current window.</p>
+
+<a class="dashAnchor" name="//apple_ref/Section/Syntax"></a><h2 id="Syntax" name="Syntax">Syntax</h2>
+
+<pre class="eval"><em>frameList</em> = window.frames;
+</pre>
+
+<ul>
+ <li><code>frameList</code> is a list of frame objects. It is similar to an array in that it has a <code>length</code> property and its items can be accessed using the <code>[i]</code> notation.</li>
+ <li><code>frameList === window</code> evaluates to true.</li>
+ <li>Each item in the window.frames pseudo-array represents the <a href="../Window.html" title="en/DOM/window" class="internal">window</a> object corresponding to the given <a href="https://developer.mozilla.org/en/HTML/Element/frame" title="en/HTML/Element/frame" class="internal">&lt;frame&gt;</a>'s or <a href="https://developer.mozilla.org/en/HTML/Element/iframe" title="en/HTML/Element/iframe" class="internal">&lt;iframe&gt;</a>'s content, not the (i)frame DOM element (i.e., <code>window.frames[ 0 ]</code> is the same thing as <code>document.getElementsByTagName( "iframe" )[ 0 ].contentWindow</code>).</li>
+ <li>For more details about the returned value, refer to this <a href="http://groups.google.com/group/mozilla.dev.platform/browse_thread/thread/5628c6f346859d4f/169aa7004565066?hl=en&amp;ie=UTF-8&amp;oe=utf-8&amp;q=window.frames&amp;pli=1" title="http://groups.google.com/group/mozilla.dev.platform/browse_thread/thread/5628c6f346859d4f/169aa7004565066?hl=en&amp;ie=UTF-8&amp;oe=utf-8&amp;q=window.frames&amp;pli=1" class="external" rel="noopener">thread on mozilla.dev.platform</a> [dead link].</li>
+</ul>
+
+<a class="dashAnchor" name="//apple_ref/Section/Example"></a><h2 id="Example" name="Example">Example</h2>
+
+<pre class="brush: js">var frames = window.frames; // or // var frames = window.parent.frames;
+for (var i = 0; i &lt; frames.length; i++) { 
+  // do something with each subframe as frames[i]
+  frames[i].document.body.style.background = "red";
+}
+</pre>
+
+<a class="dashAnchor" name="//apple_ref/Section/Specifications"></a><h2 id="Specifications">Specifications</h2>
+
+<table class="spectable standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td><a href="https://html.spec.whatwg.org/multipage/browsers.html#dom-frames" hreflang="en" lang="en" class="external" rel="noopener">HTML Living Standard<br><small lang="en-US">The definition of 'Window.frames' in that specification.</small></a></td>
+   <td><span class="spec-Living">Living Standard</span></td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><a href="http://www.w3.org/TR/html5/browsers.html#dom-frames" hreflang="en" lang="en" class="external" rel="noopener">HTML5<br><small lang="en-US">The definition of 'Window.frames' in that specification.</small></a></td>
+   <td><span class="spec-REC">Recommendation</span></td>
+   <td>&nbsp;</td>
+  </tr>
+ </tbody>
+</table>
+                  
+                
+              </article>
+
+              <!-- contributors -->
+              <div class="wiki-block contributors">
+                <h2 class="offscreen">Document Tags and Contributors</h2>
+                
+                
+  <div class="tag-attach-list contributors-sub">
+    <svg class="icon icon-tags" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M7 7c0-1.109-.891-2-2-2s-2 .891-2 2 .891 2 2 2 2-.891 2-2zm16.672 9c0 .531-.219 1.047-.578 1.406l-7.672 7.688c-.375.359-.891.578-1.422.578s-1.047-.219-1.406-.578L1.422 13.906C.625 13.125 0 11.609 0 10.5V4c0-1.094.906-2 2-2h6.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422zm6 0c0 .531-.219 1.047-.578 1.406l-7.672 7.688a2.08 2.08 0 0 1-1.422.578c-.812 0-1.219-.375-1.75-.922l7.344-7.344c.359-.359.578-.875.578-1.406s-.219-1.047-.578-1.422L14.422 3.422C13.625 2.625 12.11 2 11 2h3.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422z"></path>
+</svg>
+    <strong>Tags:</strong>&nbsp;
+    <ul class="tags tags-small">
+      
+        <li><a href="../../../tag/API.html" rel="nofollow">API</a></li>
+      
+        <li><a href="../../../tag/DOM.html" rel="nofollow">DOM</a></li>
+      
+        <li><a href="../../../tag/DOM%20Reference.html" rel="nofollow">DOM Reference</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Gecko" rel="nofollow">Gecko</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/NeedsContent" rel="nofollow">NeedsContent</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/NeedsUpdate" rel="nofollow">NeedsUpdate</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Property" rel="nofollow">Property</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Reference" rel="nofollow">Reference</a></li>
+      
+    </ul>
+  </div>
+
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-group" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M9.266 14a5.532 5.532 0 0 0-4.141 2H3.031C1.468 16 0 15.25 0 13.516 0 12.25-.047 8 1.937 8c.328 0 1.953 1.328 4.062 1.328.719 0 1.406-.125 2.078-.359A7.624 7.624 0 0 0 7.999 10c0 1.422.453 2.828 1.266 4zM26 23.953C26 26.484 24.328 28 21.828 28H8.172C5.672 28 4 26.484 4 23.953 4 20.422 4.828 15 9.406 15c.531 0 2.469 2.172 5.594 2.172S20.063 15 20.594 15C25.172 15 26 20.422 26 23.953zM10 4c0 2.203-1.797 4-4 4S2 6.203 2 4s1.797-4 4-4 4 1.797 4 4zm11 6c0 3.313-2.688 6-6 6s-6-2.688-6-6 2.688-6 6-6 6 2.688 6 6zm9 3.516C30 15.25 28.531 16 26.969 16h-2.094a5.532 5.532 0 0 0-4.141-2A7.066 7.066 0 0 0 22 10a7.6 7.6 0 0 0-.078-1.031A6.258 6.258 0 0 0 24 9.328C26.109 9.328 27.734 8 28.062 8c1.984 0 1.937 4.25 1.937 5.516zM28 4c0 2.203-1.797 4-4 4s-4-1.797-4-4 1.797-4 4-4 4 1.797 4 4z"></path>
+</svg>
+                    <strong>Contributors to this page:</strong>
+                    
+        <a href="https://developer.mozilla.org/en-US/profiles/sarafec">sarafec</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/momdo">momdo</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/mrenty">mrenty</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/pygy">pygy</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Ms2ger">Ms2ger</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/cvrebert">cvrebert</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/fscholz">fscholz</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/sanjaygouri">sanjaygouri</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/YaseenKhan">YaseenKhan</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/jsx">jsx</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/kscarfone">kscarfone</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/dbruant">dbruant</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/jswisher">jswisher</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Nickolay">Nickolay</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/jorh">jorh</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Mgjbot">Mgjbot</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Rvts">Rvts</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Alkiredjian">Alkiredjian</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Rahul sheenu">Rahul sheenu</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/H2g2bob">H2g2bob</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Dria">Dria</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Callek">Callek</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/JesseW">JesseW</a>
+    
+                  </div>
+                
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-clock" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M14 8.5v7c0 .281-.219.5-.5.5h-5a.494.494 0 0 1-.5-.5v-1c0-.281.219-.5.5-.5H12V8.5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zm6.5 5.5c0-4.688-3.813-8.5-8.5-8.5S3.5 9.313 3.5 14s3.813 8.5 8.5 8.5 8.5-3.813 8.5-8.5zm3.5 0c0 6.625-5.375 12-12 12S0 20.625 0 14 5.375 2 12 2s12 5.375 12 12z"></path>
+</svg>
+                    <strong>Last updated by:</strong>
+                    <a href="https://developer.mozilla.org/en-US/profiles/sarafec">sarafec</a>,
+                    <time datetime="2017-03-06T23:41:45.679234-08:00">Mar 6, 2017, 11:41:45 PM</time>
+                  </div>
+                
+              </div>
+            </div>
+
+            
+              <!-- quick links and approvals strip -->
+              <div id="wiki-left" class="column-strip wiki-column">
+
+                <!-- crumbs -->
+                
+  
+    
+  
+
+                
+                  <!-- quick links -->
+                  
+  <div class="quick-links" id="quick-links">
+    <div class="quick-links-head">Related Topics</div>
+    <ol><li><strong><a href="../Window.html"><code>Window</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><a href="applicationCache.html" title="Returns a reference to the application cache object for the window."><code>applicationCache</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="../WindowOrWorkerGlobalScope/caches.html" title="The caches read-only property of the WindowOrWorkerGlobalScope interface returns the CacheStorage object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests."><code>caches</code></a></li><li><a href="closed.html" title="This read-only property indicates whether the referenced window is closed or not."><code>closed</code></a></li><li><a href="console.html" title="The Window.console read-only property returns a reference to the Console object, which provides methods for logging information to the browser's console. These methods are intended for debugging purposes only and should not be relied on for presenting information to end users."><code>console</code></a></li><li><a href="controllers.html" title="Returns the XUL controllers of the chrome window."><code>controllers</code></a></li><li><a href="crypto.html" title="The Window.crypto read-only property returns the Crypto object associated to the global object. This object allows web pages access to certain cryptographic related services."><code>crypto</code></a></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a href="defaultStatus.html" title="Gets/sets the status bar text for the given window."><code>defaultStatus</code></a></s></li><li><a href="devicePixelRatio.html" title="The Window property devicePixelRatio returns the ratio of the resolution in physical pixels to the resolution in CSS pixels for&nbsp;the current display device."><code>devicePixelRatio</code></a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="dialogArguments.html" title="The dialogArguments property returns the parameters that were passed into the window.showModalDialog() method."><code>dialogArguments</code></a></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a href="directories.html" title="Returned the window personalbar toolbar object. Use the window.personalbar instead."><code>directories</code></a></s></li><li><a href="document.html" title="window.document returns a reference to the document contained in the window."><code>document</code></a></li><li><a href="frameElement.html" title="Returns the element (such as <iframe> or <object>) in which the window is embedded, or null if the element is either top-level or is embedded into a document with a different script origin; that is, in cross-origin situations."><code>frameElement</code></a></li><li><em><code>frames</code></em></li><li><a href="fullScreen.html" title="This property indicates whether the window is displayed in full screen mode or not. It is only reliable in Gecko 1.9 (Firefox 3) and later, see the Notes below."><code>fullScreen</code></a></li><li><a href="history.html" title="The Window.history read-only property returns a reference to the History object, which provides an interface for manipulating the browser session history (pages visited in the tab or frame that the current page is loaded in)."><code>history</code></a></li><li><a href="../WindowOrWorkerGlobalScope/indexedDB.html" title="The indexedDB&nbsp;read-only property of the WindowOrWorkerGlobalScope mixin provides a mechanism for applications to asynchronously access the capabilities of indexed databases."><code>indexedDB</code></a></li><li><a href="innerHeight.html" title="Height (in pixels) of the browser window viewport including, if rendered, the horizontal scrollbar."><code>innerHeight</code></a></li><li><a href="innerWidth.html" title="Width (in pixels) of the browser window viewport including, if rendered, the vertical scrollbar."><code>innerWidth</code></a></li><li><a href="isSecureContext.html" title="The window.isSecureContext read-only property indicates whether a context is capable of using features that require secure contexts."><code>isSecureContext</code></a></li><li><a href="../WindowOrWorkerGlobalScope/isSecureContext.html" title="The isSecureContext read-only property of the WindowOrWorkerGlobalScope interface returns a boolean indicating whether the current context is secure (true) or not (false)."><code>isSecureContext</code></a></li><li><a href="length.html" title="Returns the number of frames (either <frame> or <iframe> elements) in the window."><code>length</code></a></li><li><a href="localStorage.html" title="The read-only localStorage property allows you to access a Storage object for the Document's origin; the stored data is saved across browser sessions."><code>localStorage</code></a></li><li><a href="location.html" title="The Window.location read-only property returns a Location object with information about the current location of the document."><code>location</code></a></li><li><a href="locationbar.html" title="Returns the locationbar object, whose visibility can be checked."><code>locationbar</code></a></li><li><a href="menubar.html" title="Returns the menubar object, whose visibility can be checked."><code>menubar</code></a></li><li><a href="messageManager.html" title="Returns the message manager object for this window. See The message manager for details."><code>messageManager</code></a></li><li><a href="mozAnimationStartTime.html" title="Returns the time, in milliseconds since the epoch, at which animations started now should be considered to have started. This value should be used instead of, for example, Date.now(), because this value will be the same for all animations started in this window during this refresh interval, allowing them to remain in sync with one another."><code>mozAnimationStartTime</code></a></li><li><a href="mozInnerScreenX.html" title="Gets the X coordinate of the top-left corner of the window's viewport, in screen coordinates."><code>mozInnerScreenX</code></a></li><li><a href="mozInnerScreenY.html" title="Gets the Y coordinate of the top-left corner of the window's viewport, in screen coordinates."><code>mozInnerScreenY</code></a></li><li><a href="mozPaintCount.html" title="Returns the number of times the current document has been painted to the screen in this window."><code>mozPaintCount</code></a></li><li><a href="name.html" title="Gets/sets the name of the window."><code>name</code></a></li><li><a href="navigator.html" title="The Window.navigator read-only property returns a reference to the Navigator object, which can be queried for information about the application running the script."><code>navigator</code></a></li><li><a href="../GlobalEventHandlers/onabort.html" title="An event handler for abort events sent to the window. (Not available with Firefox 2 or Safari)"><code>onabort</code></a></li><li><a href="../WindowEventHandlers/onafterprint.html" title="The WindowEventHandlers.onafterprint property sets and returns the onafterprint EventHandler for the current window."><code>onafterprint</code></a></li><li><a href="../GlobalEventHandlers/onanimationcancel.html" title="An event handler for the animationcancel event. This event is sent when a CSS Animation unexpectedly aborts (in other words, any time it stops running without sending an animationend event), such as when the animation-name is changed such that the animation is removed, or when the animating node is hidden—either directly or because any of its containing nodes are hidden)—using CSS."><code>onanimationcancel</code></a></li><li><a href="../GlobalEventHandlers/onanimationend.html" title="An event handler for the animationend event. This event is sent when a CSS Animation reaches the end of its active period (which is calculated as (animation-duration * animation-iteration-count) + animation-delay."><code>onanimationend</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="../GlobalEventHandlers/onanimationiteration.html" title="An event handler for the animationiteration event. This event is sent when a CSS Animation reaches the end of an iteration. An iteration ends when a single pass through the sequence of animation instructions is completed by executing the last animation step."><code>onanimationiteration</code></a></li><li><a href="onappinstalled.html" title="The onappinstalled attribute&nbsp;of the Window object&nbsp;serves as an&nbsp;event handler for the appinstalled event, which is dispatched once the web application&nbsp;is successfully installed as a progressive web app. The event that is fired is a &quot;simple event&quot; that implements the Event interface."><code>onappinstalled</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="../GlobalEventHandlers/onauxclick.html" title="The onauxclick property is an EventHandler called when an auxclick event is sent, indicating that a non-primary button has been pressed on an input device (e.g. a middle mouse button)."><code>onauxclick</code></a></li><li><a href="onbeforeinstallprompt.html" title="The Window.onbeforeinstallprompt property is an event handler for processing a beforeinstallprompt, which is&nbsp;dispatched on mobile devices when a web manifest exists, but before a&nbsp;user is prompted to save a web site to a home screen."><code>onbeforeinstallprompt</code></a></li><li><a href="../WindowEventHandlers/onbeforeprint.html" title="The property&nbsp;onbeforeprint sets and returns the onbeforeprint event handler code for the current window."><code>onbeforeprint</code></a></li><li><a href="../WindowEventHandlers/onbeforeunload.html" title="The WindowEventHandlers.onbeforeunload event handler property contains the code executed when the beforeunload is sent. This event fires when a window is about to unload its resources. The document is still visible and the event is still cancelable."><code>onbeforeunload</code></a></li><li><a href="../GlobalEventHandlers/onblur.html" title="The onblur property returns the onBlur event handler code, if any, that exists on the current element."><code>onblur</code></a></li><li><a href="../GlobalEventHandlers/onchange.html" title="The onchange property sets and returns the event handler for the change event."><code>onchange</code></a></li><li><a href="../GlobalEventHandlers/onclick.html" title="The onclick property returns the click event handler code on the current element."><code>onclick</code></a></li><li><a href="../GlobalEventHandlers/onclose.html" title="An event handler for close events sent to the window. (Not available with Firefox 2 or Safari)"><code>onclose</code></a></li><li><a href="../GlobalEventHandlers/oncontextmenu.html" title="An event handler property for right-click events on the window. Unless the default behavior is prevented (see examples below on how to do this), the browser context menu will activate (though IE8 has a bug with this and will not activate the context menu if a contextmenu event handler is defined). Note that this event will occur with any non-disabled right-click event and does not depend on an element possessing the &quot;contextmenu&quot; attribute."><code>oncontextmenu</code></a></li><li><a href="../GlobalEventHandlers/ondblclick.html" title="The ondblclick property returns the onDblClick event handler code on the current element."><code>ondblclick</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="ondevicelight.html" title="Specifies an event listener to receive devicelight events. These events occur when the device's light level sensor detects a change in the intensity of the ambient light level."><code>ondevicelight</code></a></li><li><a href="ondevicemotion.html" title="An event handler for the devicemotion events sent to the window."><code>ondevicemotion</code></a></li><li><a href="ondeviceorientation.html" title="An event handler for the deviceorientation event, which contains information about a relative device orientation change."><code>ondeviceorientation</code></a></li><li><a href="ondeviceorientationabsolute.html" title="Editorial review completed."><code>ondeviceorientationabsolute</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="ondeviceproximity.html" title="Specifies an event listener to receive deviceproximity events. These events occur when the device sensor detects that an object becomes closer to or farther from the device."><code>ondeviceproximity</code></a></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a href="ondragdrop.html" title="An event handler for drag and drop events sent to the window."><code>ondragdrop</code></a></s></li><li><a href="../GlobalEventHandlers/onerror.html" title="An event handler for the error event. Error events are fired at various targets for different kinds of errors:"><code>onerror</code></a></li><li><a href="../GlobalEventHandlers/onfocus.html" title="The onfocus property returns the onFocus event handler code on the current element."><code>onfocus</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="ongamepadconnected.html" title="The ongamepadconnected property of the Window interface represents an event handler that will run when a gamepad is connected (when the gamepadconnected event fires)."><code>ongamepadconnected</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="ongamepaddisconnected.html" title="The ongamepaddisconnected property of the Window interface represents an event handler that will run when a gamepad is disconnected (when the gamepaddisconnected event fires)."><code>ongamepaddisconnected</code></a></li><li><a href="../GlobalEventHandlers/ongotpointercapture.html" title="The&nbsp;ongotpointercapture&nbsp;EventHandler property of the GlobalEventHandlers interface returns the event handler (function) for the gotpointercapture event type."><code>ongotpointercapture</code></a></li><li><a href="../WindowEventHandlers/onhashchange.html" title="The hashchange event fires when a window's hash changes (see location.hash)."><code>onhashchange</code></a></li><li><a href="../GlobalEventHandlers/oninput.html" title="An event handler for the input event on the window.&nbsp;The input event is raised when an <input> element value changes."><code>oninput</code></a></li><li><a href="../GlobalEventHandlers/onkeydown.html" title="The onkeydown property returns the onKeyDown event handler code on the current element."><code>onkeydown</code></a></li><li><a href="../GlobalEventHandlers/onkeypress.html" title="The onkeypress property sets and returns the onKeyPress event handler code for the current element."><code>onkeypress</code></a></li><li><a href="../GlobalEventHandlers/onkeyup.html" title="The onkeyup property returns the onKeyUp event handler code for the current element."><code>onkeyup</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="../WindowEventHandlers/onlanguagechange.html" title="The WindowEventHandlers.onlanguagechange event handler is a property containing the code to execute when the languagechange event, of type Event, is received by the object implementing this interface, usually a Window, an HTMLBodyElement, or an HTMLIFrameElement. Such an event is sent by the browser to inform that the preferred languages list has been updated. The list is accessible via NavigatorLanguage.languages."><code>onlanguagechange</code></a></li><li><a href="../GlobalEventHandlers/onload.html" title="The onload property of the GlobalEventHandlers mixin is an event handler for the load event of a Window, XMLHttpRequest, <img> element, etc., which fires when the resource has loaded."><code>onload</code></a></li><li><a href="../GlobalEventHandlers/onloadend.html" title="The onloadend property of the GlobalEventHandlers mixin is an EventHandler representing the code to be called when the loadend event is raised (when progress has stopped on the loading of a resource.)"><code>onloadend</code></a></li><li><a href="../GlobalEventHandlers/onloadstart.html" title="The onloadstart property of the GlobalEventHandlers mixin is an EventHandler representing the code to be called when the loadstart event is raised (when progress has begun on the loading of a resource.)"><code>onloadstart</code></a></li><li><a href="../GlobalEventHandlers/onlostpointercapture.html" title="The&nbsp;onlostpointercapture&nbsp;EventHandler property of the GlobalEventHandlers interface returns the event handler (function) for the lostpointercapture event type."><code>onlostpointercapture</code></a></li><li><a href="../WindowEventHandlers/onmessage.html" title="The onmessage property of the WindowEventHandlers is the EventHandler&nbsp;called whenever an object receives a message event."><code>onmessage</code></a></li><li><a href="../WindowEventHandlers/onmessageerror.html" title="The onmessageerror event handler of the WindowEventHandlers interface is an EventListener, called whenever an MessageEvent of type messageerror is fired on a window—that is, when it receives a message that cannot be deserialized."><code>onmessageerror</code></a></li><li><a href="../GlobalEventHandlers/onmousedown.html" title="The onmousedown property returns the onmousedown event handler code on the current element."><code>onmousedown</code></a></li><li><a href="../GlobalEventHandlers/onmousemove.html" title="The onmousemove property returns the mousemove event handler code on the current element."><code>onmousemove</code></a></li><li><a href="../GlobalEventHandlers/onmouseout.html" title="The onmouseout property returns the onMouseOut event handler code on the current element."><code>onmouseout</code></a></li><li><a href="../GlobalEventHandlers/onmouseover.html" title="The onmouseover property returns the onMouseOver event handler code on the current element."><code>onmouseover</code></a></li><li><a href="../GlobalEventHandlers/onmouseup.html" title="The onmouseup property returns the onMouseUp event handler code on the current element."><code>onmouseup</code></a></li><li><a href="onmozbeforepaint.html" title="An event handler for the MozBeforePaint event. This is used in concert with the window.mozRequestAnimationFrame() method to perform smooth, synchronized animations from&nbsp;JavaScript code."><code>onmozbeforepaint</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="onpaint.html" title="An event handler for the paint event on the window. Not working in Gecko-based applications currently, see Notes section!"><code>onpaint</code></a></li><li><a href="../GlobalEventHandlers/onpointercancel.html" title="A global event handler for the pointercancel event."><code>onpointercancel</code></a></li><li><a href="../GlobalEventHandlers/onpointerdown.html" title="The GlobalEventHandlers event handler onpointerdown is used to specify the event handler for the pointerdown event, which is fired when the pointing device is initially pressed. This event can be sent to Window, Document, and Element objects."><code>onpointerdown</code></a></li><li><a href="../GlobalEventHandlers/onpointerenter.html" title="A global event handler for the pointerenter event."><code>onpointerenter</code></a></li><li><a href="../GlobalEventHandlers/onpointerleave.html" title="The global event handler for the pointerleave event, which is delivered to a Node when the pointer (mouse cursor, fingertip, etc.) exits its hit test area (for example, if the cursor exits an Element or Window's content area). This event is part of the Pointer Events API."><code>onpointerleave</code></a></li><li><a href="../GlobalEventHandlers/onpointermove.html" title="A global event handler for the pointermove event."><code>onpointermove</code></a></li><li><a href="../GlobalEventHandlers/onpointerout.html" title="A global event handler for the pointerout event."><code>onpointerout</code></a></li><li><a href="../GlobalEventHandlers/onpointerover.html" title="A global event handler for the pointerover event."><code>onpointerover</code></a></li><li><a href="../GlobalEventHandlers/onpointerup.html" title="A global event handler for the pointerup event."><code>onpointerup</code></a></li><li><a href="../WindowEventHandlers/onpopstate.html" title="onpopstate is an event handler for the popstate event on the window."><code>onpopstate</code></a></li><li><a href="../WindowEventHandlers/onrejectionhandled.html" title="The Window.onrejectionhandled property is an event handler for processing rejectionhandled events, which are raised when Promises are rejected."><code>onrejectionhandled</code></a></li><li><a href="../GlobalEventHandlers/onreset.html" title="The GlobalEventHandlers.onreset property contains an EventHandler triggered when a reset event is received."><code>onreset</code></a></li><li><a href="../GlobalEventHandlers/onresize.html" title="The GlobalEventHandlers.onresize property contains an EventHandler triggered when a resize event is received."><code>onresize</code></a></li><li><a href="../GlobalEventHandlers/onscroll.html" title="An event handler for scroll events on&nbsp;element."><code>onscroll</code></a></li><li><a href="../GlobalEventHandlers/onselect.html" title="An event handler for the select event on the window."><code>onselect</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="../GlobalEventHandlers/onselectionchange.html" title="The GlobalEventHandlers.onselectionchange property represents the event handler that is called when a selectstart event is fired, i.e when the text selected on a web page changes."><code>onselectionchange</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="../GlobalEventHandlers/onselectstart.html" title="The GlobalEventHandlers.onselectstart property represents the event handler that is called when a selectstart event reaches this object, i.e. when the user starts to make a new text selection on a web page."><code>onselectstart</code></a></li><li><a href="../WindowEventHandlers/onstorage.html" title="The WindowEventHandlers.onstorage property contains an event handler that runs when&nbsp;the storage event fires. This occurs when a storage area is changed (e.g. a new item is stored.)"><code>onstorage</code></a></li><li><a href="../GlobalEventHandlers/onsubmit.html" title="An event handler for the submit event on the window."><code>onsubmit</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="../GlobalEventHandlers/ontouchcancel.html" title="A global event handler for the touchcancel event."><code>ontouchcancel</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="../GlobalEventHandlers/GlobalEventHanders.html" title="Editorial review completed."><code>ontouchmove</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="../GlobalEventHandlers/ontouchstart.html" title="A global event handler for the touchstart event."><code>ontouchstart</code></a></li><li><a href="../GlobalEventHandlers/ontransitioncancel.html" title="An event handler for the transitioncancel event. This event is sent when a CSS transition is cancelled."><code>ontransitioncancel</code></a></li><li><a href="../GlobalEventHandlers/ontransitionend.html" title="An event handler for the transitionend event. This event is sent to when a CSS transition completes."><code>ontransitionend</code></a></li><li><a href="../WindowEventHandlers/onunhandledrejection.html" title="The Window.onunhandledrejection property is an event handler for processing unhandledrejection events, which are raised for unhandled Promise rejections."><code>onunhandledrejection</code></a></li><li><a href="../WindowEventHandlers/onunload.html" title="The unload event is raised when the window is unloading its content and resources. The resources removal is processed after the unload event occurs."><code>onunload</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="onuserproximity.html" title="The Window.onuserproxymity property represents an EventHandler, that is a function to be called when the userproximity event occurs. These events are of type UserProximityEvent and occur when the the device sensor detects that an object becomes nearby."><code>onuserproximity</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="onvrdisplayactivate.html" title="The onvrdisplayactivate property of the Window interface represents an event handler that will run when a display is able to be presented to (when the vrdisplayactivate event fires), for example if an HMD has been moved to bring it out of standby, or woken up by being put on."><code>onvrdisplayactivate</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="onvrdisplayblur.html" title="The onvrdisplayblur property of the Window interface represents an event handler that will run when presentation to a display has been paused for some reason by the browser, OS, or VR hardware (when the vrdisplayblur event fires) — for example, while the user is interacting with a system menu or browser, to prevent tracking or loss of experience."><code>onvrdisplayblur</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="onvrdisplayconnect.html" title="The onvrdisplayconnect property of the Window interface represents an event handler that will run when a compatible VR display has been connected to the computer (when the vrdisplayconnect event fires)."><code>onvrdisplayconnect</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="onvrdisplaydeactivate.html" title="The onvrdisplaydeactivate property of the Window interface represents an event handler that will run when a display can no longer be presented to (when the vrdisplaydeactivate event fires), for example if an HMD has gone into standby or sleep mode due to a period of inactivity."><code>onvrdisplaydeactivate</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="onvrdisplaydisconnect.html" title="The onvrdisplaydisconnect event handler property of the Window interface is called when a compatible VR display has been disconnected from the computer (when the vrdisplaydisconnect event fires)."><code>onvrdisplaydisconnect</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="onvrdisplayfocus.html" title="The onvrdisplayfocus property of the Window interface represents an event handler that will run when presentation to a display has resumed after being blurred (when the vrdisplayfocus event fires)."><code>onvrdisplayfocus</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="onvrdisplaypresentchange.html" title="The onvrdisplaypresentchange property of the Window interface represents an event handler that will run when the presenting state of a VR display changes — i.e. goes from presenting to not presenting, or vice versa (when the vrdisplaypresentchange event fires)."><code>onvrdisplaypresentchange</code></a></li><li><a href="../GlobalEventHandlers/onwheel.html" title="The onwheel property returns the onwheel event handler code on the current element."><code>onwheel</code></a></li><li><a href="opener.html" title="Returns a reference to the window that opened this current window."><code>opener</code></a></li><li><a href="../WindowOrWorkerGlobalScope/origin.html" title="The origin read-only property of the WindowOrWorkerGlobalScope interface returns the origin of the global scope, serialized as a string."><code>origin</code></a></li><li><a href="outerHeight.html" title="Window.outerHeight gets the height in pixels of the whole browser window. It represents the height of the whole browser window including sidebar (if expanded), window chrome and window resizing borders/handles."><code>outerHeight</code></a></li><li><a href="outerWidth.html" title="Window.outerWidth gets the width of the outside of the browser window. It represents the width of the whole browser window including sidebar (if expanded), window chrome and window resizing borders/handles."><code>outerWidth</code></a></li><li><a href="pageYOffset.html" title="The read-only Window property pageYOffset is an alias for scrollY; as such, it returns the number of pixels the document is currently scrolled along the vertical axis (that is, up or down), with a value of 0.0 indicating that the top edge of the Document is currently aligned with the top edge of the window's content area."><code>pageYOffset</code></a></li><li><a href="parent.html" title="A reference to the parent of the current window or subframe."><code>parent</code></a></li><li><a href="performance.html" title="The Window interface's performance property returns a Performance object, which can be used to gather performance information about the current document. It serves as the point of exposure for the Performance Timeline API, the High Resolution Time API, the Navigation Timing API, the User Timing API, and the Resource Timing API."><code>performance</code></a></li><li><a href="personalbar.html" title="Returns the personalbar object, whose visibility can be toggled in the window."><code>personalbar</code></a></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a href="pkcs11.html" title="Returns the pkcs11 object, which is used to install drivers and other software associated with the pkcs11 protocol. If pkcs11 isn't supported, this property returns null."><code>pkcs11</code></a></s></li><li><a href="screen.html" title="Technical review completed."><code>screen</code></a></li><li><a href="screenX.html" title="The Window.screenX read-only property returns the horizontal distance, in CSS pixels, of the left border of the user's browser from the left side of the screen."><code>screenX</code></a></li><li><a href="screenY.html" title="The Window.screenY read-only property returns the vertical distance, in CSS pixels of the top border of the user's browser from the top edge of the screen."><code>screenY</code></a></li><li><a href="scrollbars.html" title="Returns the scrollbars object, whose visibility can be checked."><code>scrollbars</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="scrollMaxX.html" title="Returns the maximum number of pixels that the document can be scrolled horizontally."><code>scrollMaxX</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="scrollMaxY.html" title="Returns the maximum number of pixels that the document can be scrolled vertically."><code>scrollMaxY</code></a></li><li><a href="scrollX.html" title="The read-only scrollX property of the Window interface returns the number of pixels that the document is currently scrolled horizontally. This value is subpixel precise in modern browsers, meaning that it isn't necessarily a whole number. You can get the number of pixels the document is scrolled vertically from the scrollY property."><code>scrollX</code></a></li><li><a href="scrollY.html" title="The read-only scrollY property of the Window interface returns the number of pixels that the document is currently scrolled vertically. This value is subpixel precise in modern browsers, meaning that it isn't necessarily a whole number. You can get the number of pixels the document is scrolled horizontally from the scrollX property."><code>scrollY</code></a></li><li><a href="self.html" title="The Window.self read-only property returns the window itself, as a WindowProxy. It can be used with dot notation on a window object (that is, window.self) or standalone (self). The advantage of the standalone notation is that a similar notation exists for non-window contexts, such as in Web Workers. By using self, you can refer to the global scope in a way that will work not only in a window context (self will resolve to window.self) but also in a worker context (self will then resolve to WorkerGlobalScope.self)."><code>self</code></a></li><li><a href="sessionStorage.html" title="The sessionStorage property allows you to access a session Storage object for the current origin. sessionStorage is similar to Window.localStorage, the only difference is while data stored in localStorage has no expiration set, data stored in sessionStorage gets cleared when the page session ends. A page session lasts for as long as the browser is open and survives over page reloads and restores. Opening a page in a new tab or window will cause a new session to be initiated, which differs from how session cookies work."><code>sessionStorage</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="sidebar.html" title="Returns a sidebar object, which contains several methods for registering add-ons with the browser."><code>sidebar</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="speechSynthesis.html" title="The speechSynthesis read-only property of the Window object returns a SpeechSynthesis object, which is the entry point into using Web Speech API speech synthesis functionality."><code>speechSynthesis</code></a></li><li><a href="status.html" title="Sets the text in the status bar at the bottom of the browser or returns the previously set text."><code>status</code></a></li><li><a href="statusbar.html" title="Returns the statusbar object, whose visibility can be toggled in the window."><code>statusbar</code></a></li><li><a href="toolbar.html" title="Returns the toolbar object, whose visibility can be toggled in the window."><code>toolbar</code></a></li><li><a href="top.html" title="Returns a reference to the topmost window in the window hierarchy."><code>top</code></a></li><li><a href="URL.html" title="The Window.URL property returns an object that provides static methods used for creating and managing object URLs. It can also be called as a constructor to construct URL objects."><code>URL</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="visualViewport.html" title="The visualViewport read-only property of the Window interface returns a VisualViewport object which represents the visual viewport for a given window."><code>visualViewport</code></a></li><li><a href="window.html" title="The window property of a window object points to the window object itself."><code>window</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><a href="alert.html" title="The Window.alert() method displays an alert dialog with the optional specified content and an OK button."><code>alert()</code></a></li><li><a href="../WindowOrWorkerGlobalScope/atob.html" title="The WindowOrWorkerGlobalScope.atob()&nbsp;function decodes a string of data which has been encoded using base-64 encoding. You can use the btoa() method to encode and transmit data which may otherwise cause communication problems, then transmit it and use the atob() method to decode the data again. For example, you can encode, transmit, and decode control characters such as ASCII values 0 through 31."><code>atob()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="back.html" title="Returns the window to the previous item in the history. This was a Gecko-specific method. Use the standard history.back method instead."><code>back()</code></a></li><li><a href="blur.html" title="Shifts focus away from the window."><code>blur()</code></a></li><li><a href="../WindowOrWorkerGlobalScope/btoa.html" title="The WindowOrWorkerGlobalScope.btoa() method creates a base-64 encoded ASCII string from a String object in which each character in the string is treated as a byte of binary data."><code>btoa()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="cancelAnimationFrame.html" title="Cancels an animation frame request previously scheduled through a call to window.requestAnimationFrame()."><code>cancelAnimationFrame()</code></a></li><li><a href="cancelIdleCallback.html" title="The window.cancelIdleCallback() method cancels a callback previously scheduled with window.requestIdleCallback()."><code>cancelIdleCallback()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="captureEvents.html" title="Registers the window to capture all events of the specified type."><code>captureEvents()</code></a></li><li><a href="clearImmediate.html" title="This method clears the action specified by window.setImmediate."><code>clearImmediate()</code></a></li><li><a href="../WindowOrWorkerGlobalScope/clearInterval.html" title="The clearInterval() method of the WindowOrWorkerGlobalScope mixin cancels a timed, repeating action which was previously established by a call to setInterval()."><code>clearInterval()</code></a></li><li><a href="../WindowOrWorkerGlobalScope/clearTimeout.html" title="The clearTimeout() method of the WindowOrWorkerGlobalScope mixin cancels a timeout previously established by calling setTimeout()."><code>clearTimeout()</code></a></li><li><a href="close.html" title="The Window.close() method closes the current window, or the window on which it was called."><code>close()</code></a></li><li><a href="confirm.html" title="The Window.confirm() method displays a modal dialog with an optional message and two buttons, OK and Cancel."><code>confirm()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="convertPointFromNodeToPage.html" title="Given a Point specified in a particular DOM Node's coordinate system, the Window method convertPointFromNodeToPage() returns a Point which specifies the same position in the page's coordinate system. This method is non-standard and should not be used."><code>convertPointFromNodeToPage()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="convertPointFromPageToNode.html" title="Given a Point specified in the page's coordinate system, the Window method convertPointFromPageToNode() returns a Point object specifying the same location in the coordinate system of the specified DOM Node."><code>convertPointFromPageToNode</code></a></li><li><a href="../WindowOrWorkerGlobalScope/createImageBitmap.html" title="The createImageBitmap method exists on the global in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap. Optionally the source is cropped to the rectangle of pixels originating at (sx, sy) with width sw, and height sh."><code>createImageBitmap()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="dump.html" title="Prints messages to the (native) console."><code>dump()</code></a></li><li><a href="event.html" title="window.event is a proprietary Microsoft Internet Explorer property which is only available while a DOM event handler is being called. Its value is the Event object currently being handled."><code>event</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="../WindowOrWorkerGlobalScope/fetch.html" title="The fetch() method of the WindowOrWorkerGlobalScope mixin starts the process of fetching a resource from the network. This returns a promise that resolves to the Response object representing the response to your request."><code>fetch()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="find.html" title="Finds a string in a window."><code>find()</code></a></li><li><a href="focus.html" title="Makes a request to bring the window to the front. It may fail due to user settings and the window isn't guaranteed to be frontmost before this method returns."><code>focus()</code></a></li><li><a href="forward.html" title="Moves the window one document forward in the history. This was a Gecko-specific method. Use the standard history.forward method instead."><code>forward()</code></a></li><li><a href="getAttention.html" title="Attempts to get the user's attention. How this happens varies based on OS and window manager."><code>getAttention()</code></a></li><li><a href="getComputedStyle.html" title="The Window.getComputedStyle() method gives the values of all the CSS properties of an element after applying the active stylesheets and resolving any basic computation those values may contain."><code>getComputedStyle()</code></a></li><li><a href="getDefaultComputedStyle-2.html" title="getDefaultComputedStyle() gives the default computed values of all the CSS properties of an element, ignoring author styling.&nbsp; That is, only user-agent and user styles are taken into account."><code>getDefaultComputedStyle()</code></a></li><li><a href="getSelection.html" title="Returns a Selection object representing the range of text selected by the user or the current position of the caret."><code>getSelection()</code></a></li><li><a href="home.html" title="Returns the window to the home page."><code>home()</code></a></li><li><a href="matchMedia.html" title="Returns a new MediaQueryList object representing the parsed results of the specified media query string."><code>matchMedia()</code></a></li><li><a href="minimize.html" title="Sets a window to minimized state (a way to undo it programatically is by calling window.moveTo())."><code>minimize()</code></a></li><li><a href="moveBy.html" title="Moves the current window by a specified amount."><code>moveBy()</code></a></li><li><a href="moveTo.html" title="Moves the window to the specified coordinates."><code>moveTo()</code></a></li><li><a href="open.html" title="The&nbsp;Window interface's open() method loads the specified resource into the browsing context (window, <iframe> or tab) with the specified name. If the name doesn't exist, then a new window is opened and the specified resource is loaded into its browsing context."><code>open()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="openDialog.html" title="window.openDialog() is an extension to window.open(). It behaves the same, except that it can optionally take one or more parameters past windowFeatures, and windowFeatures itself is treated a little differently."><code>openDialog()</code></a></li><li><a href="postMessage.html" title="The window.postMessage() method safely enables cross-origin communication. Normally, scripts on different pages are allowed to access each other if and only if the pages that executed them are at locations with the same protocol (usually both https), port number (443 being the default for https), and host (modulo Document.domain being set by both pages to the same value). window.postMessage() provides a controlled mechanism to circumvent this restriction in a way which is secure when properly used."><code>postMessage()</code></a></li><li><a href="print.html" title="Opens the Print Dialog to print the current document."><code>print()</code></a></li><li><a href="prompt.html" title="The Window.prompt() displays a dialog with an optional message prompting the user to input some text."><code>prompt()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="releaseEvents.html" title="Releases the window from trapping events of a specific type."><code>releaseEvents()</code></a></li><li><a href="requestAnimationFrame-2.html" title="You should call this method whenever you're ready to update your animation onscreen. This will request that your animation function be called before the browser performs the next repaint. The number of callbacks is usually 60 times per second, but will generally match the display refresh rate in most web browsers as per W3C recommendation. requestAnimationFrame() calls are paused in most browsers when running in background tabs or hidden <iframe>s in order to improve performance and battery life."><code>requestAnimationFrame()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="requestFileSystem.html" title="The non-standard Window method requestFileSystem() method is a Google Chrome-specific method which lets a web site or app gain access to a sandboxed file system for its own use. The returned FileSystem is then available for use with the other file system APIs."><code>requestFileSystem()</code></a></li><li><a href="requestIdleCallback.html" title="The window.requestIdleCallback() method queues a function to be called during a browser's idle periods. This enables developers to perform background and low priority work on the main event loop, without impacting latency-critical events such as animation and input response. Functions are generally called in first-in-first-out order; however, callbacks which have a timeout specified may be called out-of-order if necessary in order to run them before the timeout elapses."><code>requestIdleCallback()</code></a></li><li><a href="resizeBy.html" title="Resizes the current window by a certain amount."><code>resizeBy()</code></a></li><li><a href="resizeTo.html" title="Dynamically resizes window."><code>resizeTo()</code></a></li><li><a href="restore.html" title="This method is currently not working, but you can use:"><code>restore()</code></a></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a href="routeEvent.html" title=""><code>routeEvent()</code></a></s></li><li><a href="scroll.html" title="Scrolls the window to a particular place in the document."><code>scroll()</code></a></li><li><a href="scrollBy.html" title="Scrolls the document in the window by the given amount."><code>scrollBy()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="scrollByLines.html" title="Scrolls the document by the given number of lines."><code>scrollByLines()</code></a></li><li><a href="scrollByPages.html" title="Scrolls the current document by the specified number of pages."><code>scrollByPages()</code></a></li><li><a href="scrollTo.html" title="Scrolls to a particular set of coordinates in the document."><code>scrollTo()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="setCursor.html" title="Changes the cursor for the current window."><code>setCursor()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="setImmediate.html" title="This method is used to break up long running operations and run a callback function immediately after the browser has completed other operations such as events and display updates."><code>setImmediate()</code></a></li><li><a href="../WindowOrWorkerGlobalScope/setInterval.html" title="The setInterval() method of the WindowOrWorkerGlobalScope mixin repeatedly calls a function or executes a code snippet, with a fixed time delay between each call. It returns an interval&nbsp;ID which uniquely identifies the interval, so you can remove it later by calling clearInterval(). This method is offered on the Window and Worker interfaces."><code>setInterval()</code></a></li><li><a href="../WindowOrWorkerGlobalScope/setTimeout.html" title="The setTimeout() method of the&nbsp;WindowOrWorkerGlobalScope mixin (and successor to&nbsp;window.setTimeout) sets a timer which executes a function or specified piece of code once after the timer expires."><code>setTimeout()</code></a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="showModalDialog.html" title="The Window.showModalDialog() creates and displays a modal dialog box containing a specified HTML document."><code>showModalDialog()</code></a></li><li><a href="sizeToContent.html" title="The Window.sizeToContent() method sizes the window according to its content. In order for it to work, the DOM content should be loaded when this function is called, for example once the DOMContentLoaded event has been thrown."><code>sizeToContent()</code></a></li><li><a href="stop.html" title="This method stops window loading."><code>stop()</code></a></li><li><a href="updateCommands.html" title="Updates the state of commands of the current chrome window (UI)."><code>updateCommands()</code></a></li></ol></li></ol>
+  </div>
+                
+
+                <!-- approvals -->
+                
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+    
+      <div class="newsletter-box">
+        <div class="newsletter">
+    <form id="newsletterForm" class="newsletter-form nodisable" name="newsletter-form" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <div class="newsletter-head">
+            <h2 class="newsletter-teaser">Learn the best of web development</h2>
+            <p class="newsletter-description">Get the latest and greatest from MDN delivered straight to your inbox.</p>
+            
+        </div>
+
+        <div class="newsletter-fields">
+            <input type="hidden" id="fmt" name="fmt" value="H">
+            <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+            <div id="newsletterErrors" class="newsletter-errors"></div>
+
+            <div id="newsletterEmail" class="form-group newsletter-group-email">
+                <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+                <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+            </div>
+
+            <div id="newsletterPrivacy" class="form-group form-group-agree newsletter-group-privacy hidden">
+                <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+                <label for="newsletterPrivacyInput">
+                I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+                </label>
+            </div>
+            <div id="newsletterSubmit" class="newsletter-group-submit">
+                <button id="newsletter-submit" type="submit" class="button neutral newsletter-submit">
+                    Sign up now<svg class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg" width="23" height="28" viewBox="0 0 23 28" aria-hidden="true">
+    <path d="M23 15a2.01 2.01 0 0 1-.578 1.422L12.25 26.594c-.375.359-.891.578-1.422.578s-1.031-.219-1.406-.578L8.25 25.422c-.375-.375-.594-.891-.594-1.422s.219-1.047.594-1.422L12.828 18h-11C.703 18 0 17.062 0 16v-2c0-1.062.703-2 1.828-2h11L8.25 7.406a1.96 1.96 0 0 1 0-2.812l1.172-1.172c.375-.375.875-.594 1.406-.594s1.047.219 1.422.594l10.172 10.172c.375.359.578.875.578 1.406z"></path>
+</svg>
+                </button>
+            </div>
+        </div>
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden">
+        <span>Hide Newsletter Sign-up</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+</div>
+      </div>
+    
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/en-US/docs/Web/API/Window/frames$edit" label="Edit page"></menuitem>
+    <menuitem data-action="/en-US/docs/Web/API/Window/frames$history" label="View page history"></menuitem>
+  </menu>
+
+      </div>
+  </main>
+  <!-- Footer -->
+    <footer id="nav-footer" class="nav-footer"><div class="center"><a href="http://developer.mozilla.org/en-US/docs/Web/API/Window/frames">Window.frames</a> by <a href="http://developer.mozilla.org/en-US/docs/Web/API/Window/frames$history">Mozilla Contributors</a> is licensed under <a href="http://creativecommons.org/licenses/by-sa/2.5/" class="external external-icon">CC-BY-SA 2.5</a>.</div></footer> 
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script async="" type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script src="../../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../../static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><!--[endif]---->
+
+    
+    <script src="../../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../../static/build/js/wiki.b26a4c181df3.js" charset="utf-8" id="wikiscript"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../static/build/js/newsletter.a85c5c2892e5.js" charset="utf-8"></script>
+  
+
+
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Window/frames by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 08:26:09 GMT -->
+</body></html>

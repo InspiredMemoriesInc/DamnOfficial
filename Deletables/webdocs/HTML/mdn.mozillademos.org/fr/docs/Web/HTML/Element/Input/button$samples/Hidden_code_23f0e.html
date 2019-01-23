@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/fr/docs/Web/HTML/Element/Input/button$samples/Hidden_code_2?revision=1396396 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:18:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <title>&lt;input type =&#34;button&#34;&gt;</title>
+    </head>
+    <body>
+        
+            <fieldset>
+  <legend>Groupe de boutons </legend>
+  <input type="button" value="Bouton 1">
+  <input type="button" value="Bouton 2">
+  <input type="button" value="Bouton 3">
+</fieldset>
+        
+        
+            <script>
+                var btn = document.querySelector('input');
+var fieldset = document.querySelector('fieldset');
+
+btn.addEventListener('click', disableBtn);
+
+function disableBtn() {
+  fieldset.disabled = true;
+  window.setTimeout(function() {
+    fieldset.disabled = false;
+  }, 2000);
+}
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/fr/docs/Web/HTML/Element/Input/button$samples/Hidden_code_2?revision=1396396 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:18:39 GMT -->
+</html>

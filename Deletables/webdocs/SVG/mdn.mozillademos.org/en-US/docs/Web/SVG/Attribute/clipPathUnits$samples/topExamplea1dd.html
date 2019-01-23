@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/SVG/Attribute/clipPathUnits$samples/topExample?revision=1396726 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:46:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            html,body,svg { height:100% }
+        </style>
+        
+        <title>clipPathUnits</title>
+    </head>
+    <body>
+        
+            <svg viewBox="0 0 100 100">
+  <clipPath id="myClip1" clipPathUnits="userSpaceOnUse">
+    <circle cx="50" cy="50" r="35" />
+  </clipPath>
+ 
+  <clipPath id="myClip2" clipPathUnits="objectBoundingBox">
+    <circle cx=".5" cy=".5" r=".35" />
+  </clipPath>
+ 
+  <!-- Some reference rect to materilized to clip path -->
+  <rect id="r1" x="0"  y="0"  width="45" height="45" />
+  <rect id="r2" x="0"  y="55" width="45" height="45" />
+  <rect id="r3" x="55" y="55" width="45" height="45" />
+  <rect id="r4" x="55" y="0"  width="45" height="45" />
+ 
+  <!-- The first 3 rect are cliped with useSpaceOnUse units -->
+  <use clip-path="url(#myClip1)" xlink:href="#r1" fill="red" />
+  <use clip-path="url(#myClip1)" xlink:href="#r2" fill="red" />
+  <use clip-path="url(#myClip1)" xlink:href="#r3" fill="red" />
+ 
+  <!-- The last rect is cliped with objectBoundingBox units -->
+  <use clip-path="url(#myClip2)" xlink:href="#r4" fill="red" />
+</svg>
+        
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/SVG/Attribute/clipPathUnits$samples/topExample?revision=1396726 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:46:35 GMT -->
+</html>

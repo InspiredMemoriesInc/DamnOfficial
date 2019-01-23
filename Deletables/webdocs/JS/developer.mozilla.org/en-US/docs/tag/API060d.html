@@ -1,0 +1,1232 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=47 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 10:48:58 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  <title>Articles tagged: API</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+
+  
+<link rel="preload" href="../../../static/fonts/locales/ZillaSlab-Regular.f9de6143fdfa.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="license" href="#license">
+  
+
+  
+    
+
+    <link href="../../../static/build/styles/mdn.83865b0f7c30.css" rel="stylesheet" type="text/css">
+
+    
+  
+
+    <link href="../../../static/build/styles/wiki.aaf26c13c39b.css" rel="stylesheet" type="text/css">
+
+
+  <link href="../../../static/build/styles/locale-en-US.ca0bca387b42.css" rel="stylesheet" type="text/css">
+
+  
+    <script>
+      /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
+    </script>
+    
+
+
+
+  
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta property="og:site_name" content="MDN Web Docs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="MDN Web Docs">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../static/img/favicon144.e7e21ca263ca.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../static/img/favicon114.d526f38b09c5.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../static/img/favicon72.cc65d1d762a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../static/img/favicon57.de33179910ae.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="../../../static/img/favicon32.7f3da72dcea1.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script async="" type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  
+      <link rel="alternate" type="application/atom+xml" title="Articles tagged: API" href="../feeds/atom/tag/API">
+  
+
+</head>
+<body class="">
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <!--[endif]---->
+
+  
+  
+      <link rel="alternate" type="application/atom+xml" title="Articles tagged: API" href="../feeds/atom/tag/API">
+  
+
+
+
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/wiki-compat-tables.9978a5ce31c2.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+
+        // interactive editor config
+        win.mdn.interactiveEditor = {
+            siteUrl: "https://developer.mozilla.org",
+            editorUrl: "https://interactive-examples.mdn.mozilla.net"
+        };
+
+    })(this);
+</script>
+    
+    <ul id="nav-access">
+  <li><a href="#content" id="skip-main">Skip to main content</a></li>
+  <li><a id="skip-language" href="#language">Select language</a></li>
+  <li><a href="#q" id="skip-search">Skip to search</a></li>
+</ul>
+
+    <!-- Header -->
+    <header id="main-header" class="header-main">
+      <a href="https://developer.mozilla.org/en-US/" class="logo">MDN Web Docs</a>
+      <div class="nav-toolbox-wrapper">
+        <nav id="main-nav" class="nav-main" role="navigation">
+    <ul>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web">Technologies
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-tech-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+                    <li><a href="../Web/API.html">APIs / DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn">References &amp; Guides
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-learn-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-contact-submenu">
+              <div class="submenu-column">
+                <ul>
+                  <li>
+                      <a href="https://support.mozilla.org/">Get Firefox help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://stackoverflow.com/">Get web development help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                      <a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/tag/API%3Fpage%3D47">Report a content problem
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</nav>
+        <div id="toolbox" class="toolbox">
+  <ul>
+    
+    <li class="nav-login"><div class="login">
+    
+        
+        <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FAPI%3Fpage%3D47" class="login-link js-login-link" data-service="GitHub" rel="nofollow">
+            Sign in<svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+    <title>Github</title>
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path>
+</svg>
+        </a>
+    
+</div></li>
+  </ul>
+</div>
+      </div>
+      <form id="nav-main-search" action="https://developer.mozilla.org/en-US/search" method="get" role="search" class="nav-main-search">
+  <div class="search-wrap">
+    <label for="main-q" class="offscreen">Search</label>
+    <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" aria-hidden="true">
+    <span class="search-trigger">
+        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true">
+    <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path>
+</svg>
+    </span>
+    <button type="submit" class="offscreen">Search</button>
+    <button type="button" id="close-header-search" class="close-header-search transparent">
+        <span class="offscreen">Close search</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+  </div>
+</form>
+    </header> 
+
+  <!-- Content will go here -->
+  <main id="content">
+      
+      <div class="center clear">
+      
+
+    <div id="document-list" class="boxed">
+      <h1>Articles tagged: API</h1>
+      
+        
+  <ol class="pagination">
+  
+    <li class="prev">
+      <a href="API708f.html?page=46">
+        Previous
+      </a>
+    </li>
+  
+  
+    <li><a href="API2679.html?page=1">1</a></li>
+    
+      <li class="skip">…</li>
+    
+  
+  
+    <li>
+      <a href="API7251.html?page=44">44</a>
+    </li>
+  
+    <li>
+      <a href="APIcadd.html?page=45">45</a>
+    </li>
+  
+    <li>
+      <a href="API708f.html?page=46">46</a>
+    </li>
+  
+    <li class="selected">
+      <a href="API060d.html?page=47">47</a>
+    </li>
+  
+    <li>
+      <a href="API89dd.html?page=48">48</a>
+    </li>
+  
+    <li>
+      <a href="API44a3.html?page=49">49</a>
+    </li>
+  
+    <li>
+      <a href="API02d1.html?page=50">50</a>
+    </li>
+  
+  
+    
+      <li class="skip">…</li>
+    
+    <li><a href="API4618.html?page=53">53</a></li>
+  
+  
+    <li class="next">
+      <a href="API89dd.html?page=48">
+        Next
+      </a>
+    </li>
+  
+  </ol>
+
+
+
+        <p>Found 5269 documents</p>
+        <ul class="document-list">
+          
+            <li>
+              <a href="../Web/API/VRDisplay.html">Web/API/VRDisplay</a>
+                
+                  <small>The VRDisplay interface of the WebVR API represents any VR device supported by this API. It...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRDisplay/cancelAnimationFrame.html">Web/API/VRDisplay/cancelAnimationFrame</a>
+                
+                  <small>The cancelAnimationFrame() method of the VRDisplay interface is a special implementation of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRDisplay/capabilities.html">Web/API/VRDisplay/capabilities</a>
+                
+                  <small>The capabilities read-only property of the VRDisplay interface returns a VRDisplayCapabilities...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRDisplay/depthFar.html">Web/API/VRDisplay/depthFar</a>
+                
+                  <small>The depthFar property of the VRDisplay interface gets and sets the z-depth defining the far...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRDisplay/depthNear.html">Web/API/VRDisplay/depthNear</a>
+                
+                  <small>The depthNear property of the VRDisplay interface gets and sets the z-depth defining the near...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRDisplay/displayId.html">Web/API/VRDisplay/displayId</a>
+                
+                  <small>The displayId read-only property of the VRDisplay interface returns an identifier for this...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRDisplay/displayName.html">Web/API/VRDisplay/displayName</a>
+                
+                  <small>The displayName read-only property of the VRDisplay interface returns a human-readable name to...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRDisplay/exitPresent.html">Web/API/VRDisplay/exitPresent</a>
+                
+                  <small>The exitPresent() method of the VRDisplay interface stops the VRDisplay presenting a scene.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRDisplay/getEyeParameters.html">Web/API/VRDisplay/getEyeParameters</a>
+                
+                  <small>The getEyeParameters() method of the VRDisplay interface returns the VREyeParameters object...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRDisplay/getFrameData.html">Web/API/VRDisplay/getFrameData</a>
+                
+                  <small>The getFrameData() method of the VRDisplay interface accepts a VRFrameData object and populates...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRDisplay/getImmediatePose.html">Web/API/VRDisplay/getImmediatePose</a>
+                
+                  <small>The getImmediatePose() method of the VRDisplay interface returns a VRPose object defining the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRDisplay/getLayers.html">Web/API/VRDisplay/getLayers</a>
+                
+                  <small>The getLayers() method of the VRDisplay interface returns the layers currently being presented...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRDisplay/getPose.html">Web/API/VRDisplay/getPose</a>
+                
+                  <small>The getPose() method of the VRDisplay interface returns a VRPose object defining the future...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRDisplay/hardwareUnitId.html">Web/API/VRDisplay/hardwareUnitId</a>
+                
+                  <small>The hardwareUnitId read-only property of the VRDevice interface returns the distinct hardware ID...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRDisplay/isConnected.html">Web/API/VRDisplay/isConnected</a>
+                
+                  <small>The isConnected read-only property of the VRDisplay interface returns a Boolean indicating...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRDisplay/isPresenting-2.html">Web/API/VRDisplay/isPresenting</a>
+                
+                  <small>The isPresenting read-only property of the VRDisplay interface returns a Boolean indicating...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRDisplay/requestAnimationFrame.html">Web/API/VRDisplay/requestAnimationFrame</a>
+                
+                  <small>The requestAnimationFrame() method of the VRDisplay interface is a special implementation of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRDisplay/requestPresent.html">Web/API/VRDisplay/requestPresent</a>
+                
+                  <small>The requestPresent() method of the VRDisplay interface starts the VRDisplay presenting a scene.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRDisplay/resetPose.html">Web/API/VRDisplay/resetPose</a>
+                
+                  <small>The resetPose() method of the VRDisplay interface resets the pose for the VRDisplay, treating...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRDisplay/stageParameters.html">Web/API/VRDisplay/stageParameters</a>
+                
+                  <small>The stageParameters read-only property of the VRDisplay interface returns a VRStageParameters...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRDisplay/submitFrame.html">Web/API/VRDisplay/submitFrame</a>
+                
+                  <small>The submitFrame() method of the VRDisplay interface captures the current state of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRDisplayCapabilities.html">Web/API/VRDisplayCapabilities</a>
+                
+                  <small>The VRDisplayCapabilities interface of the WebVR API describes the capabilities of a VRDisplay —...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRDisplayCapabilities/canPresent.html">Web/API/VRDisplayCapabilities/canPresent</a>
+                
+                  <small>The canPresent read-only property of the VRDisplayCapabilities interface returns a Boolean...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRDisplayCapabilities/hasExternalDisplay.html">Web/API/VRDisplayCapabilities/hasExternalDisplay</a>
+                
+                  <small>The hasExternalDisplay read-only property of the VRDisplayCapabilities interface returns a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRDisplayCapabilities/hasOrientation.html">Web/API/VRDisplayCapabilities/hasOrientation</a>
+                
+                  <small>The hasOrientation read-only property of the VRDisplayCapabilities interface returns a Boolean...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRDisplayCapabilities/hasPosition.html">Web/API/VRDisplayCapabilities/hasPosition</a>
+                
+                  <small>The hasPosition read-only property of the VRDisplayCapabilities interface returns a Boolean...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRDisplayCapabilities/maxLayers.html">Web/API/VRDisplayCapabilities/maxLayers</a>
+                
+                  <small>The maxLayers read-only property of the VRDisplayCapabilities interface returns a number...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRDisplayEvent.html">Web/API/VRDisplayEvent</a>
+                
+                  <small>The VRDisplayEvent interface of the WebVR API represents represents the event object of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRDisplayEvent/display.html">Web/API/VRDisplayEvent/display</a>
+                
+                  <small>The display read-only property of the VRDisplayEvent interface returns the VRDisplay associated...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRDisplayEvent/reason.html">Web/API/VRDisplayEvent/reason</a>
+                
+                  <small>The reason read-only property of the VRDisplayEvent interface returns a human-readable reason...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRDisplayEvent/VRDisplayEvent.html">Web/API/VRDisplayEvent/VRDisplayEvent</a>
+                
+                  <small>The VRDisplayEvent constructor creates a VRDisplayEvent object instance.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VREyeParameters.html">Web/API/VREyeParameters</a>
+                
+                  <small>The VREyeParameters interface of the WebVR API represents all the information required to...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VREyeParameters/fieldOfView.html">Web/API/VREyeParameters/fieldOfView</a>
+                
+                  <small>The fieldOfView read-only property of the VREyeParameters interface returns a VRFieldOfView...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VREyeParameters/maximumFieldOfView.html">Web/API/VREyeParameters/maximumFieldOfView</a>
+                
+                  <small>The maximumFieldOfView read-only property of the VREyeParameters interface describes the maximum...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VREyeParameters/minimumFieldOfView.html">Web/API/VREyeParameters/minimumFieldOfView</a>
+                
+                  <small>The minimumFieldOfView read-only property of the VREyeParameters interface describes the minimum...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VREyeParameters/offset.html">Web/API/VREyeParameters/offset</a>
+                
+                  <small>The offset read-only property of the VREyeParameters interface represents the offset from the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VREyeParameters/recommendedFieldOfView.html">Web/API/VREyeParameters/recommendedFieldOfView</a>
+                
+                  <small>The recommendedFieldOfView read-only property of the VREyeParameters interface describes the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VREyeParameters/renderHeight.html">Web/API/VREyeParameters/renderHeight</a>
+                
+                  <small>The renderHeight read-only property of the VREyeParameters interface describes the recommended...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VREyeParameters/renderRect.html">Web/API/VREyeParameters/renderRect</a>
+                
+                  <small>The renderRect read-only property of the VREyeParameters interface specifies the viewport of a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VREyeParameters/renderWidth.html">Web/API/VREyeParameters/renderWidth</a>
+                
+                  <small>The renderWidth read-only property of the VREyeParameters interface describes the recommended...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRFieldOfView.html">Web/API/VRFieldOfView</a>
+                
+                  <small>The VRFieldOfView interface of the WebVR API represents a field of view defined by 4 different...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRFieldOfView/downDegrees.html">Web/API/VRFieldOfView/downDegrees</a>
+                
+                  <small>The downDegrees read-only property of the VRFieldOfView interface returns the number of degrees...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRFieldOfView/leftDegrees.html">Web/API/VRFieldOfView/leftDegrees</a>
+                
+                  <small>The leftDegrees read-only property of the VRFieldOfView interface returns the number of degrees...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRFieldOfView/rightDegrees.html">Web/API/VRFieldOfView/rightDegrees</a>
+                
+                  <small>The rightDegrees read-only property of the VRFieldOfView interface returns the number of degrees...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRFieldOfView/upDegrees.html">Web/API/VRFieldOfView/upDegrees</a>
+                
+                  <small>The upDegrees read-only property of the VRFieldOfView interface returns the number of degrees...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRFieldOfView/VRFieldOfView.html">Web/API/VRFieldOfView/VRFieldOfView</a>
+                
+                  <small>The VRFieldOfView() constructor creates a new VRFieldOFView object.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRFrameData.html">Web/API/VRFrameData</a>
+                
+                  <small>The VRFrameData interface of the WebVR API represents all the information needed to render a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRFrameData/leftProjectionMatrix.html">Web/API/VRFrameData/leftProjectionMatrix</a>
+                
+                  <small>The leftProjectionMatrix read-only property of the VRFrameData interface returns a Float32Array...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRFrameData/leftViewMatrix.html">Web/API/VRFrameData/leftViewMatrix</a>
+                
+                  <small>The leftViewMatrix read-only property of the VRFrameData interface returns a Float32Array...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRFrameData/pose.html">Web/API/VRFrameData/pose</a>
+                
+                  <small>The pose read-only property of the VRFrameData interface returns the VRPose of the VRDisplay at...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRFrameData/rightProjectionMatrix.html">Web/API/VRFrameData/rightProjectionMatrix</a>
+                
+                  <small>The rightProjectionMatrix read-only property of the VRFrameData interface returns a Float32Array...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRFrameData/rightViewMatrix.html">Web/API/VRFrameData/rightViewMatrix</a>
+                
+                  <small>The rightViewMatrix read-only property of the VRFrameData interface returns a Float32Array...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRFrameData/timestamp.html">Web/API/VRFrameData/timestamp</a>
+                
+                  <small>The timestamp read-only property of the VRFrameData interface returns a constantly increasing...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRFrameData/VRFrameData.html">Web/API/VRFrameData/VRFrameData</a>
+                
+                  <small>The VRFrameData constructor creates a VRFrameData object instance.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRLayerInit.html">Web/API/VRLayerInit</a>
+                
+                  <small>The VRLayerInit interface (dictionary) of the WebVR API represents a content layer (an...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRLayerInit/leftBounds.html">Web/API/VRLayerInit/leftBounds</a>
+                
+                  <small>The leftBounds property of the VRLayerInit interface (dictionary) defines the left texture...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRLayerInit/rightBounds.html">Web/API/VRLayerInit/rightBounds</a>
+                
+                  <small>The rightBounds property of the VRLayerInit interface (dictionary) defines the right texture...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRLayerInit/source.html">Web/API/VRLayerInit/source</a>
+                
+                  <small>The source property of the VRLayerInit interface (dictionary) defines the canvas whose contents...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRPose.html">Web/API/VRPose</a>
+                
+                  <small>The VRPose interface of the WebVR API represents the state of a VR sensor at a given timestamp...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRPose/angularAcceleration.html">Web/API/VRPose/angularAcceleration</a>
+                
+                  <small>The angularAcceleration read-only property of the VRPose interface returns an array representing...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRPose/angularVelocity.html">Web/API/VRPose/angularVelocity</a>
+                
+                  <small>The angularVelocity read-only property of the VRPose interface returns an array representing the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRPose/hasOrientation.html">Web/API/VRPose/hasOrientation</a>
+                
+                  <small>The hasOrientation read-only property of the VRPositionState interface returns a boolean...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRPose/hasPosition.html">Web/API/VRPose/hasPosition</a>
+                
+                  <small>The hasPosition read-only property of the VRPositionState interface returns a boolean indicating...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRPose/linearAcceleration.html">Web/API/VRPose/linearAcceleration</a>
+                
+                  <small>The linearAcceleration read-only property of the VRPose interface returns an array representing...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRPose/linearVelocity.html">Web/API/VRPose/linearVelocity</a>
+                
+                  <small>The linearVelocity read-only property of the VRPose interface returns an array representing the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRPose/orientation.html">Web/API/VRPose/orientation</a>
+                
+                  <small>The orientation read-only property of the VRPositionState interface returns the orientation of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRPose/position.html">Web/API/VRPose/position</a>
+                
+                  <small>The position read-only property of the VRPose interface returns the position of the VRDisplay at...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRPose/timeStamp-2.html">Web/API/VRPose/timeStamp</a>
+                
+                  <small>The timestamp read-only property of the VRPose interface returns the current time stamp of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRStageParameters.html">Web/API/VRStageParameters</a>
+                
+                  <small>The VRStageParameters interface of the WebVR API represents the values describing the the stage...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRStageParameters/sittingToStandingTransform.html">Web/API/VRStageParameters/sittingToStandingTransform</a>
+                
+                  <small>The sittingToStandingTransform read-only property of the VRStageParameters interface contains a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRStageParameters/sizeX.html">Web/API/VRStageParameters/sizeX</a>
+                
+                  <small>The sizeX read-only property of the VRStageParameters interface returns the width of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/VRStageParameters/sizeY.html">Web/API/VRStageParameters/sizeY</a>
+                
+                  <small>The sizeY read-only property of the VRStageParameters interface returns the depth of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/WaveShaperNode.html">Web/API/WaveShaperNode</a>
+                
+                  <small>A WaveShaperNode always has exactly one input and one output.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/WaveShaperNode/curve.html">Web/API/WaveShaperNode/curve</a>
+                
+                  <small>The curve property of the WaveShaperNode interface is a Float32Array of numbers describing the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/WaveShaperNode/oversample.html">Web/API/WaveShaperNode/oversample</a>
+                
+                  <small>The oversample property of the WaveShaperNode interface is an enumerated value indicating if...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/WaveShaperNode/WaveShaperNode.html">Web/API/WaveShaperNode/WaveShaperNode</a>
+                
+                  <small>The WaveShaperNode() constructor of the Web Audio API creates a new WaveShaperNode object which...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/WebGL2RenderingContext.html">Web/API/WebGL2RenderingContext</a>
+                
+                  <small>The WebGL2RenderingContext interface provides the OpenGL ES 3.0 rendering context for the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/WebGL2RenderingContext/beginQuery.html">Web/API/WebGL2RenderingContext/beginQuery</a>
+                
+                  <small>The WebGL2RenderingContext.beginQuery() method of the WebGL 2 API starts an asynchronous query....</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/WebGL2RenderingContext/beginTransformFeedback.html">Web/API/WebGL2RenderingContext/beginTransformFeedback</a>
+                
+                  <small>The WebGL2RenderingContext.beginTransformFeedback() method of the WebGL 2 API starts a transform...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/WebGL2RenderingContext/bindBufferBase.html">Web/API/WebGL2RenderingContext/bindBufferBase</a>
+                
+                  <small>The WebGL2RenderingContext.bindBufferBase() method of the WebGL 2 API binds a given WebGLBuffer...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/WebGL2RenderingContext/bindBufferRange.html">Web/API/WebGL2RenderingContext/bindBufferRange</a>
+                
+                  <small>The WebGL2RenderingContext.bindBufferRange() method of the WebGL 2 API binds a range of a given...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/WebGL2RenderingContext/bindSampler.html">Web/API/WebGL2RenderingContext/bindSampler</a>
+                
+                  <small>The WebGL2RenderingContext.bindSampler() method of the WebGL 2 API binds a passed&nbsp;WebGLSampler...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/WebGL2RenderingContext/bindTransformFeedback.html">Web/API/WebGL2RenderingContext/bindTransformFeedback</a>
+                
+                  <small>The WebGL2RenderingContext.bindTransformFeedback() method of the WebGL 2 API binds a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/WebGL2RenderingContext/bindVertexArray.html">Web/API/WebGL2RenderingContext/bindVertexArray</a>
+                
+                  <small>The WebGL2RenderingContext.bindVertexArray() method of the WebGL 2 API binds a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/WebGL2RenderingContext/blitFramebuffer.html">Web/API/WebGL2RenderingContext/blitFramebuffer</a>
+                
+                  <small>The WebGL2RenderingContext.blitFramebuffer() method of the WebGL 2 API transfers a block of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/WebGL2RenderingContext/clearBuffer.html">Web/API/WebGL2RenderingContext/clearBuffer</a>
+                
+                  <small>The WebGL2RenderingContext.clearBuffer[fiuv]() methods of the WebGL 2 API clear buffers from the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/WebGL2RenderingContext/clientWaitSync.html">Web/API/WebGL2RenderingContext/clientWaitSync</a>
+                
+                  <small>The WebGL2RenderingContext.clientWaitSync() method of the WebGL 2 API blocks and waits for a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/WebGL2RenderingContext/compressedTexSubImage3D.html">Web/API/WebGL2RenderingContext/compressedTexSubImage3D</a>
+                
+                  <small>The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/WebGL2RenderingContext/copyBufferSubData.html">Web/API/WebGL2RenderingContext/copyBufferSubData</a>
+                
+                  <small>The WebGL2RenderingContext.copyBufferSubData() method of the WebGL 2 API copies part of the data...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/WebGL2RenderingContext/copyTexSubImage3D.html">Web/API/WebGL2RenderingContext/copyTexSubImage3D</a>
+                
+                  <small>The WebGL2RenderingContext.copyTexSubImage3D() method of the WebGL API copies pixels from the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/WebGL2RenderingContext/createQuery.html">Web/API/WebGL2RenderingContext/createQuery</a>
+                
+                  <small>The WebGL2RenderingContext.createQuery() method of the WebGL 2 API creates and initializes...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/WebGL2RenderingContext/createSampler.html">Web/API/WebGL2RenderingContext/createSampler</a>
+                
+                  <small>The WebGL2RenderingContext.createSampler() method of the WebGL 2 API creates and initializes...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/WebGL2RenderingContext/createTransformFeedback.html">Web/API/WebGL2RenderingContext/createTransformFeedback</a>
+                
+                  <small>The WebGL2RenderingContext.createTransformFeedback() method of the WebGL 2 API creates and...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/WebGL2RenderingContext/createVertexArray.html">Web/API/WebGL2RenderingContext/createVertexArray</a>
+                
+                  <small>The WebGL2RenderingContext.createVertexArray() method of the WebGL 2 API creates and initializes...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/WebGL2RenderingContext/deleteQuery.html">Web/API/WebGL2RenderingContext/deleteQuery</a>
+                
+                  <small>The WebGL2RenderingContext.deleteQuery() method of the WebGL 2 API deletes a given WebGLQuery object.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/WebGL2RenderingContext/deleteSampler.html">Web/API/WebGL2RenderingContext/deleteSampler</a>
+                
+                  <small>The WebGL2RenderingContext.deleteSampler() method of the WebGL 2 API deletes a given WebGLSampler object.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/WebGL2RenderingContext/deleteSync.html">Web/API/WebGL2RenderingContext/deleteSync</a>
+                
+                  <small>The WebGL2RenderingContext.deleteSync() method of the WebGL 2 API deletes a given WebGLSync object.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/WebGL2RenderingContext/deleteTransformFeedback.html">Web/API/WebGL2RenderingContext/deleteTransformFeedback</a>
+                
+                  <small>The WebGL2RenderingContext.deleteTransformFeedback() method of the WebGL 2 API deletes a given...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/WebGL2RenderingContext/deleteVertexArray.html">Web/API/WebGL2RenderingContext/deleteVertexArray</a>
+                
+                  <small>The WebGL2RenderingContext.deleteVertexArray() method of the WebGL 2 API deletes a given...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/WebGL2RenderingContext/drawArraysInstanced.html">Web/API/WebGL2RenderingContext/drawArraysInstanced</a>
+                
+                  <small>The WebGL2RenderingContext.drawArraysInstanced() method of the WebGL 2 API renders primitives...</small>
+                
+            </li>
+          
+        </ul>
+        
+  <ol class="pagination">
+  
+    <li class="prev">
+      <a href="API708f.html?page=46">
+        Previous
+      </a>
+    </li>
+  
+  
+    <li><a href="API2679.html?page=1">1</a></li>
+    
+      <li class="skip">…</li>
+    
+  
+  
+    <li>
+      <a href="API7251.html?page=44">44</a>
+    </li>
+  
+    <li>
+      <a href="APIcadd.html?page=45">45</a>
+    </li>
+  
+    <li>
+      <a href="API708f.html?page=46">46</a>
+    </li>
+  
+    <li class="selected">
+      <a href="API060d.html?page=47">47</a>
+    </li>
+  
+    <li>
+      <a href="API89dd.html?page=48">48</a>
+    </li>
+  
+    <li>
+      <a href="API44a3.html?page=49">49</a>
+    </li>
+  
+    <li>
+      <a href="API02d1.html?page=50">50</a>
+    </li>
+  
+  
+    
+      <li class="skip">…</li>
+    
+    <li><a href="API4618.html?page=53">53</a></li>
+  
+  
+    <li class="next">
+      <a href="API89dd.html?page=48">
+        Next
+      </a>
+    </li>
+  
+  </ol>
+
+
+
+      
+    </div>
+
+
+      </div>
+  </main>
+  <!-- Footer -->
+     
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script async="" type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script src="../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><!--[endif]---->
+
+    
+    <script src="../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../static/build/js/wiki.b26a4c181df3.js" charset="utf-8" id="wikiscript"></script>
+
+
+
+  
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=47 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 10:48:58 GMT -->
+</body></html>

@@ -1,0 +1,1232 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=6 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 08:38:21 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  <title>Articles tagged: API</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+
+  
+<link rel="preload" href="../../../static/fonts/locales/ZillaSlab-Regular.f9de6143fdfa.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="license" href="#license">
+  
+
+  
+    
+
+    <link href="../../../static/build/styles/mdn.83865b0f7c30.css" rel="stylesheet" type="text/css">
+
+    
+  
+
+    <link href="../../../static/build/styles/wiki.aaf26c13c39b.css" rel="stylesheet" type="text/css">
+
+
+  <link href="../../../static/build/styles/locale-en-US.ca0bca387b42.css" rel="stylesheet" type="text/css">
+
+  
+    <script>
+      /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
+    </script>
+    
+
+
+
+  
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta property="og:site_name" content="MDN Web Docs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="MDN Web Docs">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../static/img/favicon144.e7e21ca263ca.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../static/img/favicon114.d526f38b09c5.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../static/img/favicon72.cc65d1d762a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../static/img/favicon57.de33179910ae.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="../../../static/img/favicon32.7f3da72dcea1.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script async="" type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  
+      <link rel="alternate" type="application/atom+xml" title="Articles tagged: API" href="../feeds/atom/tag/API">
+  
+
+</head>
+<body class="">
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <!--[endif]---->
+
+  
+  
+      <link rel="alternate" type="application/atom+xml" title="Articles tagged: API" href="../feeds/atom/tag/API">
+  
+
+
+
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/wiki-compat-tables.9978a5ce31c2.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+
+        // interactive editor config
+        win.mdn.interactiveEditor = {
+            siteUrl: "https://developer.mozilla.org",
+            editorUrl: "https://interactive-examples.mdn.mozilla.net"
+        };
+
+    })(this);
+</script>
+    
+    <ul id="nav-access">
+  <li><a href="#content" id="skip-main">Skip to main content</a></li>
+  <li><a id="skip-language" href="#language">Select language</a></li>
+  <li><a href="#q" id="skip-search">Skip to search</a></li>
+</ul>
+
+    <!-- Header -->
+    <header id="main-header" class="header-main">
+      <a href="https://developer.mozilla.org/en-US/" class="logo">MDN Web Docs</a>
+      <div class="nav-toolbox-wrapper">
+        <nav id="main-nav" class="nav-main" role="navigation">
+    <ul>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web">Technologies
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-tech-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+                    <li><a href="../Web/API.html">APIs / DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn">References &amp; Guides
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-learn-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-contact-submenu">
+              <div class="submenu-column">
+                <ul>
+                  <li>
+                      <a href="https://support.mozilla.org/">Get Firefox help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://stackoverflow.com/">Get web development help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                      <a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/tag/API%3Fpage%3D6">Report a content problem
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</nav>
+        <div id="toolbox" class="toolbox">
+  <ul>
+    
+    <li class="nav-login"><div class="login">
+    
+        
+        <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FAPI%3Fpage%3D6" class="login-link js-login-link" data-service="GitHub" rel="nofollow">
+            Sign in<svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+    <title>Github</title>
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path>
+</svg>
+        </a>
+    
+</div></li>
+  </ul>
+</div>
+      </div>
+      <form id="nav-main-search" action="https://developer.mozilla.org/en-US/search" method="get" role="search" class="nav-main-search">
+  <div class="search-wrap">
+    <label for="main-q" class="offscreen">Search</label>
+    <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" aria-hidden="true">
+    <span class="search-trigger">
+        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true">
+    <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path>
+</svg>
+    </span>
+    <button type="submit" class="offscreen">Search</button>
+    <button type="button" id="close-header-search" class="close-header-search transparent">
+        <span class="offscreen">Close search</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+  </div>
+</form>
+    </header> 
+
+  <!-- Content will go here -->
+  <main id="content">
+      
+      <div class="center clear">
+      
+
+    <div id="document-list" class="boxed">
+      <h1>Articles tagged: API</h1>
+      
+        
+  <ol class="pagination">
+  
+    <li class="prev">
+      <a href="APIaf4d.html?page=5">
+        Previous
+      </a>
+    </li>
+  
+  
+    <li><a href="API2679.html?page=1">1</a></li>
+    
+      <li class="skip">…</li>
+    
+  
+  
+    <li>
+      <a href="API9ba9.html?page=3">3</a>
+    </li>
+  
+    <li>
+      <a href="APIfdb0.html?page=4">4</a>
+    </li>
+  
+    <li>
+      <a href="APIaf4d.html?page=5">5</a>
+    </li>
+  
+    <li class="selected">
+      <a href="APIc575.html?page=6">6</a>
+    </li>
+  
+    <li>
+      <a href="API235c.html?page=7">7</a>
+    </li>
+  
+    <li>
+      <a href="APIfdfa.html?page=8">8</a>
+    </li>
+  
+    <li>
+      <a href="API0b08.html?page=9">9</a>
+    </li>
+  
+  
+    
+      <li class="skip">…</li>
+    
+    <li><a href="API4618.html?page=53">53</a></li>
+  
+  
+    <li class="next">
+      <a href="API235c.html?page=7">
+        Next
+      </a>
+    </li>
+  
+  </ol>
+
+
+
+        <p>Found 5269 documents</p>
+        <ul class="document-list">
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozWifiP2pGroupOwner.html">Archive/B2G_OS/API/MozWifiP2pGroupOwner</a>
+                
+                  <small>The MozWifiP2pGroupOwner is an interface that represents the group owner of WiFi Direct connection.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozWifiP2pManager.html">Archive/B2G_OS/API/MozWifiP2pManager</a>
+                
+                  <small>The MozWifiP2pManager is an interface that allows to control Wi-Fi connection with other...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozWifiP2pManager/connect.html">Archive/B2G_OS/API/MozWifiP2pManager/connect</a>
+                
+                  <small>The MozWifiP2pManager.connect() method binds, with a given configuration, to a peer identified...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozWifiStatusChangeEvent.html">Archive/B2G_OS/API/MozWifiStatusChangeEvent</a>
+                
+                  <small>The MozWifiStatusChangeEvent interface provides developers with information regarding the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozWifiStatusChangeEvent/network.html">Archive/B2G_OS/API/MozWifiStatusChangeEvent/network</a>
+                
+                  <small>The network property value provides the current network in use when the connection status changes.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/MozWifiStatusChangeEvent/status.html">Archive/B2G_OS/API/MozWifiStatusChangeEvent/status</a>
+                
+                  <small>The status property value provides the current connection status.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Navigator.html">Archive/B2G_OS/API/Navigator</a>
+                
+                  <small>The Navigator interface represents the state and the identity of the user agent. It allows...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Navigator/getDataStores.html">Archive/B2G_OS/API/Navigator/getDataStores</a>
+                
+                  <small>The navigator.getDataStores() method provides access to a list of the Data Store API data stores...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Navigator/getDeviceStorage().html">Archive/B2G_OS/API/Navigator/getDeviceStorage()</a>
+                
+                  <small>The getDeviceStorage method is used to access some storage area available on the device.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Navigator/getDeviceStorages.html">Archive/B2G_OS/API/Navigator/getDeviceStorages</a>
+                
+                  <small>The getDeviceStorages method is used to access individual storage areas available on the device....</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Navigator/mozAlarms.html">Archive/B2G_OS/API/Navigator/mozAlarms</a>
+                
+                  <small>Returns a MozAlarmsManager object you can use to schedule notifications or applications to be...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Navigator/mozApps.html">Archive/B2G_OS/API/Navigator/mozApps</a>
+                
+                  <small>Returns an Apps object you can use to install, manage, and control Open Web Apps in the browser.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Navigator/mozAudioChannelManager.html">Archive/B2G_OS/API/Navigator/mozAudioChannelManager</a>
+                
+                  <small>The navigator.mozAudioChannelManager object provides access to the mozAudioChannelManager...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Navigator/mozCamera.html">Archive/B2G_OS/API/Navigator/mozCamera</a>
+                
+                  <small>This API has not been implemented as of Firefox OS 2.2. You probably actually want navigator.mozCameras.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Navigator/mozCameras.html">Archive/B2G_OS/API/Navigator/mozCameras</a>
+                
+                  <small>Returns a CameraManager object you can use to access the cameras available on the user's device.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Navigator/mozContacts.html">Archive/B2G_OS/API/Navigator/mozContacts</a>
+                
+                  <small>Return a ContactManager to access and manage all the contacts available on the device.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Navigator/mozFMRadio.html">Archive/B2G_OS/API/Navigator/mozFMRadio</a>
+                
+                  <small>Returns a FMRadio object you can use to access to the device FM radio.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Navigator/mozHasPendingMessage.html">Archive/B2G_OS/API/Navigator/mozHasPendingMessage</a>
+                
+                  <small>This method is used to know if there are pending messages of a given type (true) ot not (false).</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Navigator/mozMobileConnections.html">Archive/B2G_OS/API/Navigator/mozMobileConnections</a>
+                
+                  <small>The navigator.mozMobileConnections property returns an array of MozMobileConnection objects,...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Navigator/mozMobileMessage.html">Archive/B2G_OS/API/Navigator/mozMobileMessage</a>
+                
+                  <small>Returns a MozMobileMessageManager object you can use to receive and send MMS and SMS messages.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Navigator/mozNetworkStats.html">Archive/B2G_OS/API/Navigator/mozNetworkStats</a>
+                
+                  <small>The MozNetworkStatsManager interface provides methods and properties to monitor data usage.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Navigator/mozNfc.html">Archive/B2G_OS/API/Navigator/mozNfc</a>
+                
+                  <small>The mozNfc property returns a MozNFC object that can be used to access Firefox OS's NFC...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Navigator/mozPermissionSettings.html">Archive/B2G_OS/API/Navigator/mozPermissionSettings</a>
+                
+                  <small>Returns a PermissionSettings object you can use to get and set permissions of apps on the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Navigator/mozPower.html">Archive/B2G_OS/API/Navigator/mozPower</a>
+                
+                  <small>Returns a PowerManager object you can use to manage the power usage of the device.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Navigator/mozSetMessageHandler.html">Archive/B2G_OS/API/Navigator/mozSetMessageHandler</a>
+                
+                  <small>This method is used to allow applications to register a function handler that can receive — and...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Navigator/mozSettings.html">Archive/B2G_OS/API/Navigator/mozSettings</a>
+                
+                  <small>Returns a SettingsManager object you can use to access and change the device's settings.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Navigator/mozSms.html">Archive/B2G_OS/API/Navigator/mozSms</a>
+                
+                  <small>Returns an SmsManager object you can use to receive and send SMS messages.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Navigator/mozTCPSocket.html">Archive/B2G_OS/API/Navigator/mozTCPSocket</a>
+                
+                  <small>Returns a TCPSocket object you can use to open other sockets.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Navigator/MozTelephony.html">Archive/B2G_OS/API/Navigator/MozTelephony</a>
+                
+                  <small>Returns a Telephony object you can use to initiate and control telephone calls from the browser.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Navigator/mozVoicemail.html">Archive/B2G_OS/API/Navigator/mozVoicemail</a>
+                
+                  <small>Returns a MozVoicemail object you can use to handle the access to the voicemail functionality...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Navigator/mozWifiManager.html">Archive/B2G_OS/API/Navigator/mozWifiManager</a>
+                
+                  <small>Returns a WifiManager object you can use to manage the device WiFi connection.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Navigator/push.html">Archive/B2G_OS/API/Navigator/push</a>
+                
+                  <small>The Navigator.push read-only property is a PushManager object providing a way to receive...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Navigator/removeIdleObserver.html">Archive/B2G_OS/API/Navigator/removeIdleObserver</a>
+                
+                  <small>This method is used to remove an idle observer previously set with navigator.addIdleObserver.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Network_Stats_API.html">Archive/B2G_OS/API/Network_Stats_API</a>
+                
+                  <small>The Network Stats API allows you to monitor data usage and expose this information to certified...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/NFC_API.html">Archive/B2G_OS/API/NFC_API</a>
+                
+                  <small>You access the entire set of NFC functionality through the Navigator.mozNfc property, returning...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/NFC_API/Using_the_NFC_API.html">Archive/B2G_OS/API/NFC_API/Using_the_NFC_API</a>
+                
+                  <small>The contacts app uses NFC P2P Functionality for sending and receiving vcards. Look at...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/NFC_API/Using_the_NFC_emulator.html">Archive/B2G_OS/API/NFC_API/Using_the_NFC_emulator</a>
+                
+                  <small>For testing of the NFC API, there is an NFC emulator available. This article details how to set...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/PermissionSettings.html">Archive/B2G_OS/API/PermissionSettings</a>
+                
+                  <small>The PermissionSettings interface provides ways to let the user manage all the permissions...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/PermissionSettings/get.html">Archive/B2G_OS/API/PermissionSettings/get</a>
+                
+                  <small>The get method allows to retrieve the current status of a given permission for a given app.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/PermissionSettings/isExplicit.html">Archive/B2G_OS/API/PermissionSettings/isExplicit</a>
+                
+                  <small>The isExplicit method allows to know if the setting is explicit (true) or implicit (false).</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/PermissionSettings/remove.html">Archive/B2G_OS/API/PermissionSettings/remove</a>
+                
+                  <small>The remove method allows to simply reset a permission for an app which is running inside the browser app.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/PermissionSettings/set.html">Archive/B2G_OS/API/PermissionSettings/set</a>
+                
+                  <small>The set method allows to change a given permission for a given app.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Permissions_API.html">Archive/B2G_OS/API/Permissions_API</a>
+                
+                  <small>The Permissions API is used to display and let the user manage all the permissions requested by...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Power_Management_API.html">Archive/B2G_OS/API/Power_Management_API</a>
+                
+                  <small>The Power Management API provides tools to manage a device's power consumption.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/SettingsLock.html">Archive/B2G_OS/API/SettingsLock</a>
+                
+                  <small>The SettingsLock interface represents a lock on settings. it allows a script to modify settings...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/SettingsLock/clear.html">Archive/B2G_OS/API/SettingsLock/clear</a>
+                
+                  <small>This method clears the queue of SettingsLock objects.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/SettingsLock/closed.html">Archive/B2G_OS/API/SettingsLock/closed</a>
+                
+                  <small>The closed property indicates whether or not the settings lock is closed.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/SettingsLock/get.html">Archive/B2G_OS/API/SettingsLock/get</a>
+                
+                  <small>This method fetches the value of a specified setting.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/SettingsLock/set.html">Archive/B2G_OS/API/SettingsLock/set</a>
+                
+                  <small>This method is changes the value of one or more given settings.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/SettingsManager.html">Archive/B2G_OS/API/SettingsManager</a>
+                
+                  <small>Provides access to the device's settings.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/SettingsManager/addObserver.html">Archive/B2G_OS/API/SettingsManager/addObserver</a>
+                
+                  <small>Sets up a callback function to be notified when a specific setting's value changes.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/SettingsManager/createLock.html">Archive/B2G_OS/API/SettingsManager/createLock</a>
+                
+                  <small>This method returns a SettingsLock object. This object is used to access and modify all the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/SettingsManager/onsettingchange.html">Archive/B2G_OS/API/SettingsManager/onsettingchange</a>
+                
+                  <small>The onsettingchange property lets you set an event handler to be called for all setting changes.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/SettingsManager/removeObserver.html">Archive/B2G_OS/API/SettingsManager/removeObserver</a>
+                
+                  <small>This method is used to remove a callback function that has been added with SettingsManager.addObserver().</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Settings_API.html">Archive/B2G_OS/API/Settings_API</a>
+                
+                  <small>The Settings API is a way to access, change, and monitor changes to any device's settings....</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/TCPServerSocket.html">Archive/B2G_OS/API/TCPServerSocket</a>
+                
+                  <small>The TCPServerSocket interface provides an API to handle a persistent server that will listen for...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/TCPServerSocket/close.html">Archive/B2G_OS/API/TCPServerSocket/close</a>
+                
+                  <small>The close method cleanly closes the server socket.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/TCPServerSocket/localPort.html">Archive/B2G_OS/API/TCPServerSocket/localPort</a>
+                
+                  <small>The localP ort property returns the port number listened to by the server socket.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/TCPServerSocket/onconnect.html">Archive/B2G_OS/API/TCPServerSocket/onconnect</a>
+                
+                  <small>The onconnect property is used to specify a callback handler to deal with new incoming...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/TCPServerSocket/onerror.html">Archive/B2G_OS/API/TCPServerSocket/onerror</a>
+                
+                  <small>The onerror property is used to specify a callback handler to deal with errors from the server...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/TCPSocket.html">Archive/B2G_OS/API/TCPSocket</a>
+                
+                  <small>The TCPSocket interface provides access to a raw TCP socket.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/TCPSocket/binaryType.html">Archive/B2G_OS/API/TCPSocket/binaryType</a>
+                
+                  <small>The binaryType indicates the type of data expected by the send() method on this socket.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/TCPSocket/bufferedAmount.html">Archive/B2G_OS/API/TCPSocket/bufferedAmount</a>
+                
+                  <small>The bufferedAmount represents the number of bytes which have previously been buffered by calls...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/TCPSocket/close.html">Archive/B2G_OS/API/TCPSocket/close</a>
+                
+                  <small>The close method cleanly closes the connection.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/TCPSocket/host.html">Archive/B2G_OS/API/TCPSocket/host</a>
+                
+                  <small>The host property returns the host reachable by the socket.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/TCPSocket/listen.html">Archive/B2G_OS/API/TCPSocket/listen</a>
+                
+                  <small>The listen method is used to listen on a given port on the device.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/TCPSocket/onclose.html">Archive/B2G_OS/API/TCPSocket/onclose</a>
+                
+                  <small>The onclose property is used to specify an event handler to receive close events. Those events...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/TCPSocket/ondata.html">Archive/B2G_OS/API/TCPSocket/ondata</a>
+                
+                  <small>The ondata property is used to specify an event handler to receive data events. Those events are...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/TCPSocket/ondrain.html">Archive/B2G_OS/API/TCPSocket/ondrain</a>
+                
+                  <small>The ondrain property is used to specify an event handler to receive drain events. Those events...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/TCPSocket/onerror.html">Archive/B2G_OS/API/TCPSocket/onerror</a>
+                
+                  <small>The onerror property is used to specify an event handler to receive error events. Those events...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/TCPSocket/onopen.html">Archive/B2G_OS/API/TCPSocket/onopen</a>
+                
+                  <small>The onopen property is used to specify an event handler to receive open events. Those events are...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/TCPSocket/open.html">Archive/B2G_OS/API/TCPSocket/open</a>
+                
+                  <small>The open method is used to open a TCP connection to a given server on a given port.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/TCPSocket/port.html">Archive/B2G_OS/API/TCPSocket/port</a>
+                
+                  <small>The port property returns the port number used by the socket.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/TCPSocket/readyState.html">Archive/B2G_OS/API/TCPSocket/readyState</a>
+                
+                  <small>The readyState property indicates the current state of the socket.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/TCPSocket/resume.html">Archive/B2G_OS/API/TCPSocket/resume</a>
+                
+                  <small>The resume method resumes reading incoming data and allows the data event to be triggered again.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/TCPSocket/send.html">Archive/B2G_OS/API/TCPSocket/send</a>
+                
+                  <small>The send method is used to buffer data to be sent to the server.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/TCPSocket/ssl.html">Archive/B2G_OS/API/TCPSocket/ssl</a>
+                
+                  <small>The ssl property allows to know if the socket is an SSL socket (true) or not (false).</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/TCPSocket/suspend.html">Archive/B2G_OS/API/TCPSocket/suspend</a>
+                
+                  <small>The suspend method pauses reading incoming data and prevents the data event from being triggered...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/TCPSocket/upgradeToSecure.html">Archive/B2G_OS/API/TCPSocket/upgradeToSecure</a>
+                
+                  <small>The upgradeToSecure method allows turning a TCP non secured connection into a secured one.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Telephony.html">Archive/B2G_OS/API/Telephony</a>
+                
+                  <small>The Telephony interface of the Web Telephony API provides support for dialing, answering, and...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Telephony/active.html">Archive/B2G_OS/API/Telephony/active</a>
+                
+                  <small>The active read-only property of the Telephony interface returns a TelephonyCall object...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Telephony/calls.html">Archive/B2G_OS/API/Telephony/calls</a>
+                
+                  <small>The calls read-only property of the Telephony interface returns a list of TelephonyCall objects...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Telephony/conferenceGroup.html">Archive/B2G_OS/API/Telephony/conferenceGroup</a>
+                
+                  <small>The conferenceGroup read-only property of the Telephony interface returns a TelephonyCallGroup...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Telephony/dial.html">Archive/B2G_OS/API/Telephony/dial</a>
+                
+                  <small>The dial() method of the Telephony interface dials a phone number and returns a new...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Telephony/dialEmergency.html">Archive/B2G_OS/API/Telephony/dialEmergency</a>
+                
+                  <small>The dialEmergency() method of the Telephony interface dials an emergency phone number and...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Telephony/muted.html">Archive/B2G_OS/API/Telephony/muted</a>
+                
+                  <small>The muted property of the Telephony interface indicates whether or not the microphone is muted...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Telephony/oncallschanged.html">Archive/B2G_OS/API/Telephony/oncallschanged</a>
+                
+                  <small>The oncallschanged property of the Telephony interface specifies an event listener to receive...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Telephony/onincoming.html">Archive/B2G_OS/API/Telephony/onincoming</a>
+                
+                  <small>The onincoming property of the Telephony interface specifies an event listener to receive...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Telephony/onready.html">Archive/B2G_OS/API/Telephony/onready</a>
+                
+                  <small>The onready property of the Telephony interface specifies an event listener to receive ready...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Telephony/onremoteheld.html">Archive/B2G_OS/API/Telephony/onremoteheld</a>
+                
+                  <small>The onremoteheld property of the Telephony interface specifies an event listener to receive...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Telephony/onremoteresumed.html">Archive/B2G_OS/API/Telephony/onremoteresumed</a>
+                
+                  <small>The onremoteresumed property of the Telephony interface specifies an event listener to receive...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Telephony/ownAudioChannel.html">Archive/B2G_OS/API/Telephony/ownAudioChannel</a>
+                
+                  <small>The ownAudioChannel() method of the Telephony interface designates the calling app as the owner...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Telephony/ready.html">Archive/B2G_OS/API/Telephony/ready</a>
+                
+                  <small>The ready read-only property of the Telephony interface provides an asynchronous notification...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Telephony/sendTones.html">Archive/B2G_OS/API/Telephony/sendTones</a>
+                
+                  <small>The sendTones() method of the Telephony Interface generates multiple DTMF tones, with a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Telephony/speakerEnabled.html">Archive/B2G_OS/API/Telephony/speakerEnabled</a>
+                
+                  <small>The speakerEnabled property of the Telephony interface indicates whether or not the speakerphone...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Telephony/startTone.html">Archive/B2G_OS/API/Telephony/startTone</a>
+                
+                  <small>The startTone() method of the Telephony Interface begins generating the tone for the specified...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/Telephony/stopTone.html">Archive/B2G_OS/API/Telephony/stopTone</a>
+                
+                  <small>The startTone() method of the Telephony Interface stops transmitting the currently-playing DTMF...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/TelephonyCall.html">Archive/B2G_OS/API/TelephonyCall</a>
+                
+                  <small>The TelephonyCall interface of the Web Telephony API represents one telephone call, providing...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/TelephonyCall/answer.html">Archive/B2G_OS/API/TelephonyCall/answer</a>
+                
+                  <small>The answer() method of the TelephonyCall interface answers an incoming call.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/B2G_OS/API/TelephonyCall/disconnectedReason.html">Archive/B2G_OS/API/TelephonyCall/disconnectedReason</a>
+                
+                  <small>The disconnectedReason read-only property of the TelephonyCall interface indicates the reason...</small>
+                
+            </li>
+          
+        </ul>
+        
+  <ol class="pagination">
+  
+    <li class="prev">
+      <a href="APIaf4d.html?page=5">
+        Previous
+      </a>
+    </li>
+  
+  
+    <li><a href="API2679.html?page=1">1</a></li>
+    
+      <li class="skip">…</li>
+    
+  
+  
+    <li>
+      <a href="API9ba9.html?page=3">3</a>
+    </li>
+  
+    <li>
+      <a href="APIfdb0.html?page=4">4</a>
+    </li>
+  
+    <li>
+      <a href="APIaf4d.html?page=5">5</a>
+    </li>
+  
+    <li class="selected">
+      <a href="APIc575.html?page=6">6</a>
+    </li>
+  
+    <li>
+      <a href="API235c.html?page=7">7</a>
+    </li>
+  
+    <li>
+      <a href="APIfdfa.html?page=8">8</a>
+    </li>
+  
+    <li>
+      <a href="API0b08.html?page=9">9</a>
+    </li>
+  
+  
+    
+      <li class="skip">…</li>
+    
+    <li><a href="API4618.html?page=53">53</a></li>
+  
+  
+    <li class="next">
+      <a href="API235c.html?page=7">
+        Next
+      </a>
+    </li>
+  
+  </ol>
+
+
+
+      
+    </div>
+
+
+      </div>
+  </main>
+  <!-- Footer -->
+     
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script async="" type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script src="../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><!--[endif]---->
+
+    
+    <script src="../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../static/build/js/wiki.b26a4c181df3.js" charset="utf-8" id="wikiscript"></script>
+
+
+
+  
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=6 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 08:38:21 GMT -->
+</body></html>

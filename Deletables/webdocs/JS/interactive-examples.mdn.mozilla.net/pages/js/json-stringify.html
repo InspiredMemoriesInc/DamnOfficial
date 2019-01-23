@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from interactive-examples.mdn.mozilla.net/pages/js/json-stringify.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 11:38:30 GMT -->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>JavaScript Demo: JSON.stringify()</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../../css/codemirror-5-31-0.css" rel="stylesheet" />
+    <link href="../../css/editor-js.css" rel="stylesheet" />
+    
+    <script>"use strict";function postToKuma(e){window.parent.postMessage(e,"https://developer.mozilla.org/")}postToKuma({markName:"interactive-editor-loading"}),document.addEventListener("readystatechange",function(e){switch(e.target.readyState){case"interactive":postToKuma({markName:"interactive-editor-interactive",measureName:"ie-time-to-interactive",startMark:"interactive-editor-loading",endMark:"interactive-editor-interactive"});break;case"complete":postToKuma({markName:"interactive-editor-complete",measureName:"ie-time-to-complete",startMark:"interactive-editor-loading",endMark:"interactive-editor-complete"})}});</script>
+  </head>
+  <body>
+      <section id="static">
+          <pre>
+<code id="static-js">console.log(JSON.stringify({ x: 5, y: 6 }));
+// expected output: "{"x":5,"y":6}"
+
+console.log(JSON.stringify([new Number(3), new String('false'), new Boolean(false)]));
+// expected output: "[3,"false",false]"
+
+console.log(JSON.stringify({ x: [10, undefined, function(){}, Symbol('')] }));
+// expected output: "{"x":[10,null,null,null]}"
+
+console.log(JSON.stringify(new Date(2006, 0, 2, 15, 4, 5)));
+// expected output: ""2006-01-02T15:04:05.000Z""
+</code>
+</pre>
+
+      </section>
+
+      <section id="live" class="live hidden">
+          <header><h4>JavaScript Demo: JSON.stringify()</h4></header>
+          <div id="editor" class="editor"></div>
+
+          <div class="output-container">
+              <div class="buttons-container">
+                  <button id="execute" class="button run" type="button">Run &rsaquo;</button>
+                  <button id="reset" type="button" class="button">Reset</button>
+              </div>
+              <div id="output" class="output"><code></code></div>
+          </div>
+      </section>
+
+    
+
+    <script src="../../js/codemirror-5-31-0.js"></script>
+    <script src="../../js/editor-js.js"></script>
+  </body>
+
+<!-- Mirrored from interactive-examples.mdn.mozilla.net/pages/js/json-stringify.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 11:38:30 GMT -->
+</html>

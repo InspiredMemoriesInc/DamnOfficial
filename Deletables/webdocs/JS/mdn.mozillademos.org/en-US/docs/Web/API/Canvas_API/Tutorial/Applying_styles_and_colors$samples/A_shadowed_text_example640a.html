@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors$samples/A_shadowed_text_example?revision=1372934 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 11:39:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <title>Applying styles and colors</title>
+    </head>
+    <body>
+        
+            <canvas id="canvas" width="150" height="80"></canvas>
+        
+        
+            <script>
+                function draw() {
+  var ctx = document.getElementById('canvas').getContext('2d');
+
+  ctx.shadowOffsetX = 2;
+  ctx.shadowOffsetY = 2;
+  ctx.shadowBlur = 2;
+  ctx.shadowColor = 'rgba(0, 0, 0, 0.5)';
+ 
+  ctx.font = '20px Times New Roman';
+  ctx.fillStyle = 'Black';
+  ctx.fillText('Sample String', 5, 30);
+}
+ draw();
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors$samples/A_shadowed_text_example?revision=1372934 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 11:39:00 GMT -->
+</html>

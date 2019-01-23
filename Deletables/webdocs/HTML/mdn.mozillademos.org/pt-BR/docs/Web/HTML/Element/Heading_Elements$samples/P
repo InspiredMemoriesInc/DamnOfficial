@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/pt-BR/docs/Web/HTML/Element/Heading_Elements$samples/Página_de_exemplo?revision=1315549 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:18:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <title>Heading elements</title>
+    </head>
+    <body>
+        
+            <h1>Elementos de cabeçalho</h1>
+<h2>Sumário</h2>
+<p>Algum texto aqui...</p>
+
+<h2>Exemplos</h2>
+<h3>Exemplo 1</h3>
+<p>Algum texto aqui...</p>
+
+<h3>Exemplo 2</h3>
+<p>Algum texto aqui...</p>
+
+<h2>Veja também</h2>
+<p>Algum texto aqui...</p>
+
+        
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/pt-BR/docs/Web/HTML/Element/Heading_Elements$samples/Página_de_exemplo?revision=1315549 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:18:11 GMT -->
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/scroll-snap-type$samples/Example?revision=1388406 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:49:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            .container {
+  width: 100%;
+  overflow: auto;
+  white-space: nowrap;
+  scroll-snap-points-x: repeat(100%);
+  scroll-snap-type: mandatory;
+  font-size: 0;
+}
+
+.mandatoryScrollSnapping {
+  margin-bottom: 20px;
+  scroll-snap-type: mandatory;
+}
+
+.proximityScrollSnapping {
+  scroll-snap-type: proximity;
+}
+
+.container > div {
+  width: 100%;
+  height: 100px;
+  display: inline-block;
+  line-height: 100px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.container > div:nth-child(even) {
+  background-color: #87EA87;
+}
+
+.container > div:nth-child(odd) {
+  background-color: #87CCEA;
+}
+
+        </style>
+        
+        <title>scroll-snap-type</title>
+    </head>
+    <body>
+        
+            <div class="container mandatoryScrollSnapping">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+
+<div class="container proximityScrollSnapping">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+
+        
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/scroll-snap-type$samples/Example?revision=1388406 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:49:00 GMT -->
+</html>

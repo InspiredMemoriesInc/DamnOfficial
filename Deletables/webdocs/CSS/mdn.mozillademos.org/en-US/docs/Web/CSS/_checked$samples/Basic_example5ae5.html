@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/:checked$samples/Basic_example?revision=1342870 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:47:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            div,
+select {
+  margin: 8px;
+}
+
+/* Labels for checked inputs */
+input:checked + label {
+  color: red;
+}
+
+/* Radio element, when checked */
+input[type="radio"]:checked {
+  box-shadow: 0 0 0 3px orange;
+}
+
+/* Checkbox element, when checked */
+input[type="checkbox"]:checked {
+  box-shadow: 0 0 0 3px hotpink;
+}
+
+/* Option elements, when selected */
+option:checked {
+  box-shadow: 0 0 0 3px lime;
+  color: red;
+}
+
+        </style>
+        
+        <title>:checked</title>
+    </head>
+    <body>
+        
+            <div>
+  <input type="radio" name="my-input" id="yes">
+  <label for="yes">Yes</label>
+
+  <input type="radio" name="my-input" id="no">
+  <label for="no">No</label>
+</div>
+
+<div>
+  <input type="checkbox" name="my-checkbox" id="opt-in">
+  <label for="opt-in">Check me!</label>
+</div>
+
+<select name="my-select" id="fruit">
+  <option value="opt1">Apples</option>
+  <option value="opt2">Grapes</option>
+  <option value="opt3">Pears</option>
+</select>
+
+        
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/:checked$samples/Basic_example?revision=1342870 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:47:14 GMT -->
+</html>

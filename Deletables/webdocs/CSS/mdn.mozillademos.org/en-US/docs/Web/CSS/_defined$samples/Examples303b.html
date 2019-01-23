@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/:defined$samples/Examples?revision=1401444 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:49:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            /* Give the two elements distinctive backgrounds */
+p {
+  background: yellow;
+}
+
+simple-custom {
+  display: block;
+  background: cyan;
+}
+
+/* Both the custom and the built-in element are given italic text */
+:defined {
+  font-style: italic;
+} simple-custom:not(:defined) {
+  opacity: 0;
+}
+
+simple-custom:defined {
+  opacity: 0.75;
+  text-decoration: underline;
+}
+        </style>
+        
+        <title>:defined</title>
+    </head>
+    <body>
+        
+            <simple-custom text="Custom element example text"></simple-custom>
+
+<p>Standard paragraph example text</p>
+        
+        
+            <script>
+                customElements.define('simple-custom',
+  class extends HTMLElement {
+    constructor() {
+      super();
+
+      let divElem = document.createElement('div');
+      divElem.textContent = this.getAttribute('text');
+
+      let shadowRoot = this.attachShadow({mode: 'open'})
+        .appendChild(divElem);
+  }
+})
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/:defined$samples/Examples?revision=1401444 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:49:11 GMT -->
+</html>

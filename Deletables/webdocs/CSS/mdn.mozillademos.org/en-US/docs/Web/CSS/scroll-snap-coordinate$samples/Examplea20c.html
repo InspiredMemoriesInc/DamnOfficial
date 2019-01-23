@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/scroll-snap-coordinate$samples/Example?revision=1349695 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:48:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            #container {
+  display: flex;
+}
+
+#container > div:nth-child(-n+2) {
+  margin-right: 20px;
+}
+
+.scrollContainer {
+  width: 100px;
+  overflow: auto;
+  white-space: nowrap;
+  scroll-snap-type: mandatory;
+  font-size: 0;
+}
+
+.scrollContainer > div {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  line-height: 100px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.coordinate0 > div {
+  scroll-snap-coordinate: 0 0;
+}
+
+.coordinate25 > div {
+  scroll-snap-coordinate: 25px 0;
+}
+
+.coordinate50 > div {
+  scroll-snap-coordinate: 50px 0;
+}
+
+.scrollContainer > div:nth-child(even) {
+  background-color: #87ea87;
+}
+
+.scrollContainer > div:nth-child(odd) {
+  background-color: #87ccea;
+}
+        </style>
+        
+        <title>scroll-snap-coordinate</title>
+    </head>
+    <body>
+        
+            <div id="container">
+  <div>
+    <p>At coordinate (0, 0)</p>
+    <div class="scrollContainer coordinate0">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </div>
+
+  <div>
+    <p>At coordinate (25, 0)</p>
+    <div class="scrollContainer coordinate25">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </div>
+
+  <div>
+    <p>At coordinate (50, 0)</p>
+    <div class="scrollContainer coordinate50">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </div>
+</div>
+
+        
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/scroll-snap-coordinate$samples/Example?revision=1349695 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:48:54 GMT -->
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/URLSearchParams/set$samples/Example2?revision=1349046 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 11:03:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <title>URLSearchParams.set()</title>
+    </head>
+    <body>
+        
+        
+            <script>
+                'use strict'
+
+function genURL(rExp, aText, bDebug=false){
+    let theURL
+
+    theURL= new URL('https://regexr.com/')
+    theURL.searchParams.set( 'expression', rExp.toString() )
+    theURL.searchParams.set( 'tool', 'replace' )
+    theURL.searchParams.set( 'input', '' )
+    theURL.searchParams.set( 'text', aText.join('\n') )
+    if( bDebug ){
+        // Display the key/value pairs
+        for(var pair of theURL.searchParams.entries()) {
+            console.debug(pair[0] + ' = \'' + pair[1] + '\''); 
+        }
+        console.debug(theURL)
+    } 
+    return theURL
+}
+var url = genURL(
+    /(^\s*\/\/.*|\s*[^:]\/\/.*)/g
+    ,[
+        "// eslint-disable-next-line no-unused-vars",
+        "lockPref(	'keyword.URL',\t\t'https://duckduckgo.com/html/?q=!+'	)\t// test"
+    ]
+//     , true
+)
+console.info( url, url.toString() )
+// window.open( url, 'regex_site' )
+
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/URLSearchParams/set$samples/Example2?revision=1349046 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 11:03:13 GMT -->
+</html>

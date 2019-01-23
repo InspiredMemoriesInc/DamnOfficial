@@ -1,0 +1,3 @@
+[20-Aug-2018 04:14:55 UTC] PHP Warning:  file_get_contents(paymentSuccess.php): failed to open stream: No such file or directory in /home2/spoorthi/public_html/sites/inspiredmemories.in/portal/emails/sendemail.php on line 25
+[20-Aug-2018 06:39:50 UTC] PHP Parse error:  syntax error, unexpected '$mailSuccess' (T_VARIABLE) in /home2/spoorthi/public_html/sites/inspiredmemories.in/portal/emails/sendemail.php on line 26
+[20-Aug-2018 06:40:25 UTC] PHP Parse error:  syntax error, unexpected 'mail' (T_STRING) in /home2/spoorthi/public_html/sites/inspiredmemories.in/portal/emails/sendemail.php on line 26

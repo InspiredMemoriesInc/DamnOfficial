@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/Attribute_selectors$samples/Links?revision=1387447 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:49:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            a {
+  color: blue;
+}
+
+/* Internal links, beginning with "#" */
+a[href^="#"] {
+  background-color: gold;
+}
+
+/* Links with "example" anywhere in the URL */
+a[href*="example"] {
+  background-color: silver;
+}
+
+/* Links with "insensitive" anywhere in the URL,
+   regardless of capitalization */
+a[href*="insensitive" i] {
+  color: cyan;
+}
+
+/* Links that end in ".org" */
+a[href$=".org"] {
+  color: red;
+}
+
+        </style>
+        
+        <title>Attribute selectors</title>
+    </head>
+    <body>
+        
+            <ul>
+  <li><a href="#internal">Internal link</a></li>
+  <li><a href="http://example.com/">Example link</a></li>
+  <li><a href="#InSensitive">Insensitive internal link</a></li>
+  <li><a href="http://example.org/">Example org link</a></li>
+</ul>
+        
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/Attribute_selectors$samples/Links?revision=1387447 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:49:11 GMT -->
+</html>

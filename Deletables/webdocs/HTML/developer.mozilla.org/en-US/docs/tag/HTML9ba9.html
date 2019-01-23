@@ -1,0 +1,1188 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/tag/HTML?page=3 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:07:20 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  <title>Articles tagged: HTML</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+
+  
+<link rel="preload" href="../../../static/fonts/locales/ZillaSlab-Regular.f9de6143fdfa.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="license" href="#license">
+  
+
+  
+    
+
+    <link href="../../../static/build/styles/mdn.83865b0f7c30.css" rel="stylesheet" type="text/css">
+
+    
+  
+
+    <link href="../../../static/build/styles/wiki.aaf26c13c39b.css" rel="stylesheet" type="text/css">
+
+
+  <link href="../../../static/build/styles/locale-en-US.ca0bca387b42.css" rel="stylesheet" type="text/css">
+
+  
+    <script>
+      /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
+    </script>
+    
+
+
+
+  
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta property="og:site_name" content="MDN Web Docs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="MDN Web Docs">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../static/img/favicon144.e7e21ca263ca.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../static/img/favicon114.d526f38b09c5.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../static/img/favicon72.cc65d1d762a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../static/img/favicon57.de33179910ae.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="../../../static/img/favicon32.7f3da72dcea1.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script async="" type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  
+      <link rel="alternate" type="application/atom+xml" title="Articles tagged: HTML" href="../feeds/atom/tag/HTML">
+  
+
+</head>
+<body class="">
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <!--[endif]---->
+
+  
+  
+      <link rel="alternate" type="application/atom+xml" title="Articles tagged: HTML" href="../feeds/atom/tag/HTML">
+  
+
+
+
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/wiki-compat-tables.9978a5ce31c2.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+
+        // interactive editor config
+        win.mdn.interactiveEditor = {
+            siteUrl: "https://developer.mozilla.org",
+            editorUrl: "https://interactive-examples.mdn.mozilla.net"
+        };
+
+    })(this);
+</script>
+    
+    <ul id="nav-access">
+  <li><a href="#content" id="skip-main">Skip to main content</a></li>
+  <li><a id="skip-language" href="#language">Select language</a></li>
+  <li><a href="#q" id="skip-search">Skip to search</a></li>
+</ul>
+
+    <!-- Header -->
+    <header id="main-header" class="header-main">
+      <a href="https://developer.mozilla.org/en-US/" class="logo">MDN Web Docs</a>
+      <div class="nav-toolbox-wrapper">
+        <nav id="main-nav" class="nav-main" role="navigation">
+    <ul>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web">Technologies
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-tech-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="../Web/HTML.html">HTML</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API">APIs / DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn">References &amp; Guides
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-learn-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-contact-submenu">
+              <div class="submenu-column">
+                <ul>
+                  <li>
+                      <a href="https://support.mozilla.org/">Get Firefox help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://stackoverflow.com/">Get web development help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                      <a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/tag/HTML%3Fpage%3D3">Report a content problem
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</nav>
+        <div id="toolbox" class="toolbox">
+  <ul>
+    
+    <li class="nav-login"><div class="login">
+    
+        
+        <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FHTML%3Fpage%3D3" class="login-link js-login-link" data-service="GitHub" rel="nofollow">
+            Sign in<svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+    <title>Github</title>
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path>
+</svg>
+        </a>
+    
+</div></li>
+  </ul>
+</div>
+      </div>
+      <form id="nav-main-search" action="https://developer.mozilla.org/en-US/search" method="get" role="search" class="nav-main-search">
+  <div class="search-wrap">
+    <label for="main-q" class="offscreen">Search</label>
+    <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" aria-hidden="true">
+    <span class="search-trigger">
+        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true">
+    <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path>
+</svg>
+    </span>
+    <button type="submit" class="offscreen">Search</button>
+    <button type="button" id="close-header-search" class="close-header-search transparent">
+        <span class="offscreen">Close search</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+  </div>
+</form>
+    </header> 
+
+  <!-- Content will go here -->
+  <main id="content">
+      
+      <div class="center clear">
+      
+
+    <div id="document-list" class="boxed">
+      <h1>Articles tagged: HTML</h1>
+      
+        
+  <ol class="pagination">
+  
+    <li class="prev">
+      <a href="HTML4658.html?page=2">
+        Previous
+      </a>
+    </li>
+  
+  
+  
+    <li>
+      <a href="HTML2679.html?page=1">1</a>
+    </li>
+  
+    <li>
+      <a href="HTML4658.html?page=2">2</a>
+    </li>
+  
+    <li class="selected">
+      <a href="HTML9ba9.html?page=3">3</a>
+    </li>
+  
+    <li>
+      <a href="HTMLfdb0.html?page=4">4</a>
+    </li>
+  
+  
+  
+    <li class="next">
+      <a href="HTMLfdb0.html?page=4">
+        Next
+      </a>
+    </li>
+  
+  </ol>
+
+
+
+        <p>Found 384 documents</p>
+        <ul class="document-list">
+          
+            <li>
+              <a href="../Web/HTML/Element/button.html">Web/HTML/Element/button</a>
+                
+                  <small>The HTML button element represents a clickable button, which can be used in forms, or anywhere...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/canvas.html">Web/HTML/Element/canvas</a>
+                
+                  <small>Use the HTML canvas element with either the canvas scripting API or the WebGL API to draw...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/caption.html">Web/HTML/Element/caption</a>
+                
+                  <small>The HTML Table Caption element (caption) specifies the caption (or title) of a table, and if...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/center.html">Web/HTML/Element/center</a>
+                
+                  <small>The obsolete HTML Center Element (center) is a block-level element that displays its block-level...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/cite.html">Web/HTML/Element/cite</a>
+                
+                  <small>The HTML Citation element (cite) is used to describe a reference to a cited creative work, and...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/code.html">Web/HTML/Element/code</a>
+                
+                  <small>The HTML code element displays its contents styled in a fashion intended to indicate that the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/col.html">Web/HTML/Element/col</a>
+                
+                  <small>The HTML col element defines a column within a table and is used for defining common semantics...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/colgroup.html">Web/HTML/Element/colgroup</a>
+                
+                  <small>The HTML colgroup element defines a group of columns within a table.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/command.html">Web/HTML/Element/command</a>
+                
+                  <small>The HTML Command element (command) represents a command which the user can invoke. Commands are...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/content.html">Web/HTML/Element/content</a>
+                
+                  <small>The HTML content element—an obsolete part of the Web Components suite of technologies—was used...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/data.html">Web/HTML/Element/data</a>
+                
+                  <small>The HTML data element links a given content with a machine-readable translation. If the content...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/datalist.html">Web/HTML/Element/datalist</a>
+                
+                  <small>The HTML datalist element contains a set of option elements that represent the values available...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/dd.html">Web/HTML/Element/dd</a>
+                
+                  <small>The&nbsp;HTML dd element provides the details about or the definition of the preceding term (dt) in a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/del.html">Web/HTML/Element/del</a>
+                
+                  <small>The HTML del element represents a range of text that has been deleted from a document.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/details.html">Web/HTML/Element/details</a>
+                
+                  <small>The HTML Details Element (details) creates a disclosure widget in which information is visible...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/dfn.html">Web/HTML/Element/dfn</a>
+                
+                  <small>The HTML Definition element (dfn) is used to indicate the term being defined within the context...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/dialog.html">Web/HTML/Element/dialog</a>
+                
+                  <small>The HTML dialog element represents a dialog box or other interactive component, such as an...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/dir.html">Web/HTML/Element/dir</a>
+                
+                  <small>The obsolete HTML Directory element (dir) is used as a container for a directory of files and/or...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/div.html">Web/HTML/Element/div</a>
+                
+                  <small>The HTML Content Division element (div) is the generic container for flow content. It has no...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/dl.html">Web/HTML/Element/dl</a>
+                
+                  <small>The HTML dl&nbsp;element represents a description list.&nbsp;The element encloses a list of groups of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/dt.html">Web/HTML/Element/dt</a>
+                
+                  <small>The HTML dt element specifies a term in a description or definition list, and as such must be...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/element.html">Web/HTML/Element/element</a>
+                
+                  <small>The obsolete HTML element element was part of the Web Components specification; it was intended...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/em.html">Web/HTML/Element/em</a>
+                
+                  <small>The HTML em element marks text that has stress emphasis. The em element can be nested, with each...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/embed.html">Web/HTML/Element/embed</a>
+                
+                  <small>The HTML embed element embeds external content at the specified point in the document. This...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/fieldset.html">Web/HTML/Element/fieldset</a>
+                
+                  <small>The HTML fieldset element is used to group several controls as well as labels (label) within a web form.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/figcaption.html">Web/HTML/Element/figcaption</a>
+                
+                  <small>The HTML figcaption element represents a caption or legend for the rest of the contents its...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/figure.html">Web/HTML/Element/figure</a>
+                
+                  <small>The HTML figure element represents self-contained content, frequently with a caption...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/font.html">Web/HTML/Element/font</a>
+                
+                  <small>The HTML Font Element (font) defines the font size, color and face for its content.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/footer.html">Web/HTML/Element/footer</a>
+                
+                  <small>The HTML footer element represents a footer for its nearest sectioning content or sectioning...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/form.html">Web/HTML/Element/form</a>
+                
+                  <small>The HTML form element represents a document section that contains interactive controls for...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/frame.html">Web/HTML/Element/frame</a>
+                
+                  <small>frame is an HTML element which defines a particular area in which another HTML document can be...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/frameset.html">Web/HTML/Element/frameset</a>
+                
+                  <small>frameset is an HTML element which is used to contain frame elements.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/head.html">Web/HTML/Element/head</a>
+                
+                  <small>The HTML head element provides general information (metadata) about the document, including its...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/header.html">Web/HTML/Element/header</a>
+                
+                  <small>The HTML header element represents introductory content, typically a group of introductory or...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/Heading_Elements.html">Web/HTML/Element/Heading_Elements</a>
+                
+                  <small>The HTML h1–h6 elements represent six levels of section headings. h1 is the highest section...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/hgroup.html">Web/HTML/Element/hgroup</a>
+                
+                  <small>The HTML hgroup element represents a multi-level heading for a section of a document. It groups...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/hr.html">Web/HTML/Element/hr</a>
+                
+                  <small>The HTML hr element represents a thematic break between paragraph-level elements (for example, a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/html.html">Web/HTML/Element/html</a>
+                
+                  <small>The HTML html element represents the root (top-level element) of an HTML document, so it is also...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/i.html">Web/HTML/Element/i</a>
+                
+                  <small>The HTML i element represents a range of text that is set off from the normal text for some...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/iframe.html">Web/HTML/Element/iframe</a>
+                
+                  <small>The HTML Inline Frame element (iframe) represents a nested browsing context, effectively...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/image.html">Web/HTML/Element/image</a>
+                
+                  <small>The obsolete HTML Image element (image) is an obsolete remnant of an ancient version of HTML...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/img.html">Web/HTML/Element/img</a>
+                
+                  <small>The HTML img element embeds an image into the document.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/input.html">Web/HTML/Element/input</a>
+                
+                  <small>The HTML input element is used to create interactive controls for web-based forms in order to...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/input/button.html">Web/HTML/Element/input/button</a>
+                
+                  <small>input elements of type "button" are rendered as simple push buttons, which can be programmed to...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/input/checkbox.html">Web/HTML/Element/input/checkbox</a>
+                
+                  <small>input elements of type checkbox are rendered by default as square boxes that are checked...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/input/color.html">Web/HTML/Element/input/color</a>
+                
+                  <small>input elements of type "color" provide a user interface element that lets a user specify a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/input/date.html">Web/HTML/Element/input/date</a>
+                
+                  <small>input elements of type date create input fields that let the user enter a date, either using a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/input/datetime.html">Web/HTML/Element/input/datetime</a>
+                
+                  <small>The HTML input type="datetime" was a control for entering a date and time (hour, minute, second,...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/input/datetime-local.html">Web/HTML/Element/input/datetime-local</a>
+                
+                  <small>input elements of type datetime-local create input controls that let the user easily enter both...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/input/email.html">Web/HTML/Element/input/email</a>
+                
+                  <small>input elements of type "email" are used to let the user enter and edit an email address, or, if...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/input/file.html">Web/HTML/Element/input/file</a>
+                
+                  <small>input elements with type="file" let the user choose one or more files from their device storage....</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/input/hidden.html">Web/HTML/Element/input/hidden</a>
+                
+                  <small>input elements of type "hidden" let web developers include data that cannot be seen or modified...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/input/image.html">Web/HTML/Element/input/image</a>
+                
+                  <small>input elements of type "image" are used to create graphical submit buttons, i.e. submit buttons...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/input/month.html">Web/HTML/Element/input/month</a>
+                
+                  <small>input elements of type month create input fields that let the user enter a month and year...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/input/number.html">Web/HTML/Element/input/number</a>
+                
+                  <small>input elements of type "number" are used to let the user enter a number. They include built-in...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/input/password.html">Web/HTML/Element/input/password</a>
+                
+                  <small>input elements of type "password" provide a way for the user to securely enter a password.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/input/radio.html">Web/HTML/Element/input/radio</a>
+                
+                  <small>input elements of type radio are generally used in radio groups—collections of radio buttons...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/input/reset.html">Web/HTML/Element/input/reset</a>
+                
+                  <small>input elements of type "reset"&nbsp; are rendered as buttons, with a default click event handler that...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/input/search.html">Web/HTML/Element/input/search</a>
+                
+                  <small>input elements of type "search" are text fields designed for the user to enter search queries...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/input/submit.html">Web/HTML/Element/input/submit</a>
+                
+                  <small>input elements of type "submit" are rendered as buttons. When the click event occurs (typically...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/input/tel.html">Web/HTML/Element/input/tel</a>
+                
+                  <small>input elements of type "tel" are used to let the user enter and edit a telephone number. Unlike...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/input/text.html">Web/HTML/Element/input/text</a>
+                
+                  <small>input elements of type "text" create basic single-line text fields.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/input/time.html">Web/HTML/Element/input/time</a>
+                
+                  <small>input elements of type time create input fields designed to let the user easily enter a time...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/input/url.html">Web/HTML/Element/input/url</a>
+                
+                  <small>input elements of type "url" are used to let the user enter and edit a URL. The input value is...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/input/week.html">Web/HTML/Element/input/week</a>
+                
+                  <small>input elements of type "week" create input fields allowing easy entry of a year plus the ISO...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/ins.html">Web/HTML/Element/ins</a>
+                
+                  <small>The HTML ins element represents a range of text that has been added to a document.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/isindex.html">Web/HTML/Element/isindex</a>
+                
+                  <small>isindex is an obsolete HTML element that puts a text field in a page for querying the document.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/kbd.html">Web/HTML/Element/kbd</a>
+                
+                  <small>The HTML Keyboard Input element (kbd) represents a span of inline text denoting textual user...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/keygen.html">Web/HTML/Element/keygen</a>
+                
+                  <small>The HTML keygen element exists to facilitate generation of key material, and submission of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/label.html">Web/HTML/Element/label</a>
+                
+                  <small>The HTML label element represents a caption for an item in a user interface.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/legend.html">Web/HTML/Element/legend</a>
+                
+                  <small>The HTML legend element represents a caption for the content of its parent fieldset.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/li.html">Web/HTML/Element/li</a>
+                
+                  <small>The HTML li element is used to represent an item in a list. It must be contained in a parent...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/link.html">Web/HTML/Element/link</a>
+                
+                  <small>The HTML link element specifies relationships between the current document and an external...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/listing.html">Web/HTML/Element/listing</a>
+                
+                  <small>The HTML Listing Element (listing) renders text between the start and end tags without...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/main.html">Web/HTML/Element/main</a>
+                
+                  <small>The HTML main element represents the dominant content of&nbsp;the body of a document, portion of a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/map.html">Web/HTML/Element/map</a>
+                
+                  <small>The HTML map element is used with area elements to define an image map (a clickable link area).</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/mark.html">Web/HTML/Element/mark</a>
+                
+                  <small>The HTML Mark Text element (mark) represents text which is marked or highlighted for reference...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/marquee.html">Web/HTML/Element/marquee</a>
+                
+                  <small>The HTML marquee element is used to insert a scrolling area of text. You can control what...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/menu.html">Web/HTML/Element/menu</a>
+                
+                  <small>The HTML menu element represents a group of commands that a user can perform or activate. This...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/menuitem.html">Web/HTML/Element/menuitem</a>
+                
+                  <small>The HTML menuitem element represents a command that a user is able to invoke through a popup...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/meta.html">Web/HTML/Element/meta</a>
+                
+                  <small>The HTML meta element represents metadata that cannot be represented by other HTML meta-related...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/meter.html">Web/HTML/Element/meter</a>
+                
+                  <small>The HTML meter element represents either a scalar value within a known range or a fractional value.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/multicol.html">Web/HTML/Element/multicol</a>
+                
+                  <small>The HTML Multi-Column Layout element (multicol) was an experimental element designed to allow...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/nav.html">Web/HTML/Element/nav</a>
+                
+                  <small>The HTML nav element represents a section of a page whose purpose is to provide navigation...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/nextid.html">Web/HTML/Element/nextid</a>
+                
+                  <small>nextid is an obsolete HTML element that served to enable the NeXT web designing tool to generate...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/nobr.html">Web/HTML/Element/nobr</a>
+                
+                  <small>The non-standard, obsolete HTML nobr element prevents the text it contains from automatically...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/noembed.html">Web/HTML/Element/noembed</a>
+                
+                  <small>The noembed element is an obsolete, non-standard way to provide alternative, or "fallback",...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/noframes.html">Web/HTML/Element/noframes</a>
+                
+                  <small>The obsolete HTML No Frames or frame fallback element, noframes, provides content to be...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/noscript.html">Web/HTML/Element/noscript</a>
+                
+                  <small>The HTML noscript element defines a section of HTML to be inserted if a script type on the page...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/object.html">Web/HTML/Element/object</a>
+                
+                  <small>The HTML object element represents an external resource, which can be treated as an image, a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/ol.html">Web/HTML/Element/ol</a>
+                
+                  <small>The HTML ol element represents an ordered list of items, typically rendered as a numbered list.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/optgroup.html">Web/HTML/Element/optgroup</a>
+                
+                  <small>The HTML optgroup element creates a grouping of options within a select element.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/option.html">Web/HTML/Element/option</a>
+                
+                  <small>The HTML option element is used to define an item contained in a select, an optgroup, or a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/output.html">Web/HTML/Element/output</a>
+                
+                  <small>The HTML Output element (output) is a container element into which a site or app can inject the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/p.html">Web/HTML/Element/p</a>
+                
+                  <small>The HTML p element represents a paragraph of text.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/param.html">Web/HTML/Element/param</a>
+                
+                  <small>The HTML param element defines parameters for an object element.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/picture.html">Web/HTML/Element/picture</a>
+                
+                  <small>The HTML picture element serves as a container for zero or more source elements and one img...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/plaintext.html">Web/HTML/Element/plaintext</a>
+                
+                  <small>The HTML Plaintext Element (plaintext) renders everything following the start tag as raw text,...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/pre.html">Web/HTML/Element/pre</a>
+                
+                  <small>The HTML pre element represents preformatted text which is to be presented exactly as written in...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/HTML/Element/progress.html">Web/HTML/Element/progress</a>
+                
+                  <small>The HTML progress element displays an indicator showing the completion progress of a task,...</small>
+                
+            </li>
+          
+        </ul>
+        
+  <ol class="pagination">
+  
+    <li class="prev">
+      <a href="HTML4658.html?page=2">
+        Previous
+      </a>
+    </li>
+  
+  
+  
+    <li>
+      <a href="HTML2679.html?page=1">1</a>
+    </li>
+  
+    <li>
+      <a href="HTML4658.html?page=2">2</a>
+    </li>
+  
+    <li class="selected">
+      <a href="HTML9ba9.html?page=3">3</a>
+    </li>
+  
+    <li>
+      <a href="HTMLfdb0.html?page=4">4</a>
+    </li>
+  
+  
+  
+    <li class="next">
+      <a href="HTMLfdb0.html?page=4">
+        Next
+      </a>
+    </li>
+  
+  </ol>
+
+
+
+      
+    </div>
+
+
+      </div>
+  </main>
+  <!-- Footer -->
+     
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script async="" type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script src="../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><!--[endif]---->
+
+    
+    <script src="../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../static/build/js/wiki.b26a4c181df3.js" charset="utf-8" id="wikiscript"></script>
+
+
+
+  
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/tag/HTML?page=3 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:07:20 GMT -->
+</body></html>

@@ -1,0 +1,1326 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Background_Tasks_API by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 08:49:16 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  <title>Cooperative Scheduling of Background Tasks API</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+
+  
+<link rel="preload" href="../../../../static/fonts/locales/ZillaSlab-Regular.f9de6143fdfa.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="license" href="#license">
+  
+
+  
+    
+    
+
+    <link href="../../../../static/build/styles/mdn.83865b0f7c30.css" rel="stylesheet" type="text/css">
+
+    
+  
+
+    <link href="../../../../static/build/styles/wiki.aaf26c13c39b.css" rel="stylesheet" type="text/css">
+
+
+    
+
+  <link href="../../../../static/build/styles/locale-en-US.ca0bca387b42.css" rel="stylesheet" type="text/css">
+
+  
+    <script>
+      /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
+    </script>
+    
+
+
+
+  
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta property="og:site_name" content="MDN Web Docs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="MDN Web Docs">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../static/img/favicon144.e7e21ca263ca.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../static/img/favicon114.d526f38b09c5.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../static/img/favicon72.cc65d1d762a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../../static/img/favicon57.de33179910ae.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="../../../../static/img/favicon32.7f3da72dcea1.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script async="" type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  <link rel="dns-prefetch" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/API/Background_Tasks_API$json">
+  <link rel="canonical" href="Background_Tasks_API.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="Background_Tasks_API.html" title="Cooperative Scheduling of Background Tasks API">
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="Cooperative Scheduling of Background Tasks API">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/API/Background_Tasks_API">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/API/Background_Tasks_API">
+  <meta name="twitter:title" content="Cooperative Scheduling of Background Tasks API">
+  
+  <meta property="og:description" content="The Cooperative Scheduling of Background Tasks API (also referred to as the Background Tasks API or simply the requestIdleCallback() API) provides the ability to queue tasks to be executed automatically by the user agent when it determines that there is free time to do so.">
+  <meta name="description" content="The Cooperative Scheduling of Background Tasks API (also referred to as the Background Tasks API or simply the requestIdleCallback() API) provides the ability to queue tasks to be executed automatically by the user agent when it determines that there is free time to do so.">
+  <meta name="twitter:description" content="The Cooperative Scheduling of Background Tasks API (also referred to as the Background Tasks API or simply the requestIdleCallback() API) provides the ability to queue tasks to be executed automatically by the user agent when it determines that there is free time to do so.">
+  
+
+</head>
+<body data-slug="Web/API/Background_Tasks_API" contextmenu="edit-history-menu" data-search-url="" class="document">
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <!--[endif]---->
+
+  
+  <link rel="dns-prefetch" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/API/Background_Tasks_API$json">
+  <link rel="canonical" href="Background_Tasks_API.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="Background_Tasks_API.html" title="Cooperative Scheduling of Background Tasks API">
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="Cooperative Scheduling of Background Tasks API">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/API/Background_Tasks_API">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/API/Background_Tasks_API">
+  <meta name="twitter:title" content="Cooperative Scheduling of Background Tasks API">
+  
+  <meta property="og:description" content="The Cooperative Scheduling of Background Tasks API (also referred to as the Background Tasks API or simply the requestIdleCallback() API) provides the ability to queue tasks to be executed automatically by the user agent when it determines that there is free time to do so.">
+  <meta name="description" content="The Cooperative Scheduling of Background Tasks API (also referred to as the Background Tasks API or simply the requestIdleCallback() API) provides the ability to queue tasks to be executed automatically by the user agent when it determines that there is free time to do so.">
+  <meta name="twitter:description" content="The Cooperative Scheduling of Background Tasks API (also referred to as the Background Tasks API or simply the requestIdleCallback() API) provides the ability to queue tasks to be executed automatically by the user agent when it determines that there is free time to do so.">
+  
+
+
+
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/wiki-compat-tables.9978a5ce31c2.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+
+        // interactive editor config
+        win.mdn.interactiveEditor = {
+            siteUrl: "https://developer.mozilla.org",
+            editorUrl: "https://interactive-examples.mdn.mozilla.net"
+        };
+
+    })(this);
+</script>
+    
+    <ul id="nav-access">
+  <li><a href="#content" id="skip-main">Skip to main content</a></li>
+  <li><a id="skip-language" href="#language">Select language</a></li>
+  <li><a href="#q" id="skip-search">Skip to search</a></li>
+</ul>
+
+    <!-- Header -->
+    <header id="main-header" class="header-main">
+      <a href="https://developer.mozilla.org/en-US/" class="logo">MDN Web Docs</a>
+      <div class="nav-toolbox-wrapper">
+        <nav id="main-nav" class="nav-main" role="navigation">
+    <ul>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web">Technologies
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-tech-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+                    <li><a href="../API.html">APIs / DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn">References &amp; Guides
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-learn-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-contact-submenu">
+              <div class="submenu-column">
+                <ul>
+                  <li>
+                      <a href="https://support.mozilla.org/">Get Firefox help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://stackoverflow.com/">Get web development help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                      <a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/Background_Tasks_API">Report a content problem
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</nav>
+        <div id="toolbox" class="toolbox">
+  <ul>
+    
+    <li class="nav-login"><div class="login">
+    
+        
+        <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FBackground_Tasks_API" class="login-link js-login-link" data-service="GitHub" rel="nofollow">
+            Sign in<svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+    <title>Github</title>
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path>
+</svg>
+        </a>
+    
+</div></li>
+  </ul>
+</div>
+      </div>
+      <form id="nav-main-search" action="https://developer.mozilla.org/en-US/search" method="get" role="search" class="nav-main-search">
+  <div class="search-wrap">
+    <label for="main-q" class="offscreen">Search</label>
+    <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" aria-hidden="true">
+    <span class="search-trigger">
+        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true">
+    <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path>
+</svg>
+    </span>
+    <button type="submit" class="offscreen">Search</button>
+    <button type="button" id="close-header-search" class="close-header-search transparent">
+        <span class="offscreen">Close search</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+  </div>
+</form>
+    </header> 
+
+  <!-- Content will go here -->
+  <main id="content">
+      
+  <!-- heading -->
+  <div id="wiki-document-head" class="document-head">
+    <div class="center">
+      <!-- action buttons -->
+      <div class="document-actions">
+        
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons">
+      <li>
+          <button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false">
+              <svg class="icon icon-language" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M10.219 16.844c-.031.109-.797-.25-1-.328-.203-.094-1.125-.609-1.359-.766s-1.125-.891-1.234-.938a28.275 28.275 0 0 1-2.094 2.828c-.281.328-1.125 1.391-1.641 1.719-.078.047-.531.094-.594.063.25-.187.969-1.078 1.281-1.437.391-.453 2.25-3.047 2.562-3.641.328-.594 1.312-2.562 1.359-2.75-.156-.016-1.391.406-1.719.516-.313.094-1.172.297-1.234.344-.063.063-.016.25-.047.313s-.313.203-.484.234a1.647 1.647 0 0 1-.734 0c-.203-.047-.391-.25-.438-.328 0 0-.063-.094-.078-.359.187-.063.5-.078.844-.172s1.188-.344 1.641-.5 1.328-.484 1.594-.547c.281-.047.984-.516 1.359-.641s.641-.281.656-.203 0 .422-.016.516c-.016.078-.766 1.547-.875 1.781-.063.125-.5.953-1.203 2.047.25.109.781.328 1 .438.266.125 2.125.906 2.219.938s.266.75.234.875zM7.016 9.25c.047.266-.031.375-.063.438-.156.297-.547.5-.781.594s-.625.187-.938.187c-.141-.016-.422-.063-.766-.406-.187-.203-.328-.75-.266-.688s.516.125.719.078.688-.187.906-.25c.234-.078.703-.203.859-.219.156 0 .281.063.328.266zm10.906 2.016l.984 3.547-2.172-.656zM.609 23.766l10.844-3.625V4.016L.609 7.657v16.109zM20 18.813l1.594.484-2.828-10.266-1.563-.484-3.375 8.375 1.594.484.703-1.719 3.297 1.016zM12.141 3.781l8.953 2.875V.718zM17 24.453l2.469.203-.844 2.5L18 26.125c-1.266.812-2.828 1.437-4.312 1.687-.453.094-.969.187-1.422.187h-1.313c-1.656 0-4.672-.984-5.984-1.937-.094-.078-.125-.141-.125-.25 0-.172.125-.297.281-.297.141 0 .875.453 1.078.547 1.406.703 3.375 1.344 4.953 1.344 1.953 0 3.281-.25 5.063-1.016.516-.234.969-.531 1.453-.797zm7-16.859v16.859c-12.078-3.844-12.094-3.844-12.094-3.844C11.656 20.718.453 24.5.297 24.5a.3.3 0 0 1-.281-.203c0-.016-.016-.031-.016-.047V7.406c.016-.047.031-.125.063-.156.094-.109.219-.141.313-.172.047-.016 1-.328 2.328-.781v-6l8.719 3.094C11.532 3.36 21.251 0 21.392 0c.172 0 .313.125.313.328v6.531z"></path>
+</svg>
+              <span>Languages</span>
+          </button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                <li class="smaller">No translations exist for this article.</li>
+              
+
+              
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Background_Tasks_API$locales" rel="nofollow" id="translations-add">Add a translation</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+      
+      <li class="page-buttons-edit">
+          <a href="https://developer.mozilla.org/en-US/docs/Web/API/Background_Tasks_API$edit" class="button neutral" id="edit-button" rel="nofollow">
+              <svg class="icon icon-pencil" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M5.672 24l1.422-1.422-3.672-3.672L2 20.328V22h2v2h1.672zm8.172-14.5a.329.329 0 0 0-.344-.344.368.368 0 0 0-.266.109l-8.469 8.469a.366.366 0 0 0-.109.266c0 .203.141.344.344.344a.368.368 0 0 0 .266-.109l8.469-8.469a.366.366 0 0 0 .109-.266zM13 6.5l6.5 6.5-13 13H0v-6.5zM23.672 8c0 .531-.219 1.047-.578 1.406L20.5 12 14 5.5l2.594-2.578c.359-.375.875-.594 1.406-.594s1.047.219 1.422.594l3.672 3.656c.359.375.578.891.578 1.422z"></path>
+</svg>
+              Edit
+          </a>
+      </li>
+      
+
+        
+
+        <li class="page-buttons-advanced">
+            <button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false">
+                <svg class="icon icon-gear" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M16 14c0-2.203-1.797-4-4-4s-4 1.797-4 4 1.797 4 4 4 4-1.797 4-4zm8-1.703v3.469c0 .234-.187.516-.438.562l-2.891.438a8.86 8.86 0 0 1-.609 1.422c.531.766 1.094 1.453 1.672 2.156.094.109.156.25.156.391s-.047.25-.141.359c-.375.5-2.484 2.797-3.016 2.797a.795.795 0 0 1-.406-.141l-2.156-1.687a9.449 9.449 0 0 1-1.422.594c-.109.953-.203 1.969-.453 2.906a.573.573 0 0 1-.562.438h-3.469c-.281 0-.531-.203-.562-.469l-.438-2.875a9.194 9.194 0 0 1-1.406-.578l-2.203 1.672c-.109.094-.25.141-.391.141s-.281-.063-.391-.172c-.828-.75-1.922-1.719-2.578-2.625a.607.607 0 0 1 .016-.718c.531-.719 1.109-1.406 1.641-2.141a8.324 8.324 0 0 1-.641-1.547l-2.859-.422A.57.57 0 0 1 0 15.705v-3.469c0-.234.187-.516.422-.562l2.906-.438c.156-.5.359-.969.609-1.437a37.64 37.64 0 0 0-1.672-2.156c-.094-.109-.156-.234-.156-.375s.063-.25.141-.359c.375-.516 2.484-2.797 3.016-2.797.141 0 .281.063.406.156L7.828 5.94a9.449 9.449 0 0 1 1.422-.594c.109-.953.203-1.969.453-2.906a.573.573 0 0 1 .562-.438h3.469c.281 0 .531.203.562.469l.438 2.875c.484.156.953.344 1.406.578l2.219-1.672c.094-.094.234-.141.375-.141s.281.063.391.156c.828.766 1.922 1.734 2.578 2.656a.534.534 0 0 1 .109.344c0 .141-.047.25-.125.359-.531.719-1.109 1.406-1.641 2.141.266.5.484 1.016.641 1.531l2.859.438a.57.57 0 0 1 .453.562z"></path>
+</svg>
+                <span>Advanced</span>
+            </button>
+            <div class="submenu js-submenu" id="advanced-menu-submenu">
+                <!-- this page -->
+                <div class="submenu-column">
+                    <div class="title">Advanced</div>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Background_Tasks_API$history" rel="nofollow">History</a></li>
+                        
+                        
+                        
+
+
+                
+
+                <li class="page-print"><a href="#" onclick="return window.print();">Print this article</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+      </div>
+
+      <div class="document-title">
+        <h1>Cooperative Scheduling of Background Tasks API</h1>
+      </div>
+    <nav class="crumbs" role="navigation">
+      <ol typeof="BreadcrumbList" vocab="https://schema.org/" aria-label="breadcrumbs">
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="https://developer.mozilla.org/en-US/docs/Web" property="item" typeof="WebPage">
+              <span property="name">Web technology for developers</span>
+            </a>
+            <meta property="position" content="1">
+          </li>
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="../API.html" property="item" typeof="WebPage">
+              <span property="name">Web APIs</span>
+            </a>
+            <meta property="position" content="2">
+          </li>
+        
+        <li property="itemListElement" typeof="ListItem" class="crumb">
+          <span property="name">Cooperative Scheduling of Background Tasks API</span>
+        </li>
+      </ol>
+    </nav></div>
+  </div>
+  
+  <div id="toc" class="toc">
+    <div class="center">
+      <div class="toc-head">Jump to:</div>
+        <ol class="toc-links">
+          <li><a rel="internal" href="#Concepts_and_usage">Concepts and usage</a></li><li><a rel="internal" href="#Interfaces">Interfaces</a></li><li><a rel="internal" href="#Example">Example</a></li><li><a rel="internal" href="#Specifications">Specifications</a></li><li><a rel="internal" href="#Browser_compatibility">Browser compatibility</a></li><li><a rel="internal" href="#See_also">See also</a>
+        </li></ol>
+    </div>
+  </div>
+  
+
+      <div class="center clear">
+      
+
+    <div class="wiki-main-content" id="document-main"><div class="center">
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-left-present">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-main wiki-column text-content">
+
+              
+
+              
+              
+
+              
+
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <div><div class="overheadIndicator draft">
+    <p><strong>Draft</strong><br>
+    This page is not complete.</p>
+    
+</div></div>
+
+<p>The <strong>Cooperative Scheduling of Background Tasks API</strong> (also referred to as the Background Tasks API or simply the <code>requestIdleCallback()</code> API) provides the ability to queue tasks to be executed automatically by the user agent when it determines that there is free time to do so.</p>
+
+<a class="dashAnchor" name="//apple_ref/Section/Concepts%20and%20usage"></a><h2 id="Concepts_and_usage">Concepts and usage</h2>
+
+<p>The main thread of a Web browser is centered around its event loop. This code draws any pending updates to the <a href="Document.html" title="The Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree.HTMLElement"><code>Document</code></a> currently being displayed, runs any JavaScript code the page needs to run, accepts events from input devices, and dispatches those events to the elements that should receive them. In addition, the event loop handles interactions with the operating system, updates to the browser's own user interface, and so forth. It's an extremely busy chunk of code, and your main JavaScript code may run right inside this thread along with all of this. Certainly most if not all code that is capable of making changes to the DOM is running in the main thread, since it's common for user interface changes to only be available to the main thread.</p>
+
+<p>Because event handling and screen updates are two of the most obvious ways users notice performance issues, it's important for your code to be a good citizen of the Web and help to prevent stalls in the execution of the event loop. In the past, there's been no way to do this reliably other than by writing code that's as efficient as possible and by offloading as much work as possible to <a href="Web_Workers_API.html">workers</a>. <a href="Window/requestIdleCallback.html" title="The window.requestIdleCallback() method queues a function to be called during a browser's idle periods. This enables developers to perform background and low priority work on the main event loop, without impacting latency-critical events such as animation and input response. Functions are generally called in first-in-first-out order; however, callbacks which have a timeout specified may be called out-of-order if necessary in order to run them before the timeout elapses."><code>Window.requestIdleCallback()</code></a> makes it possible to become actively engaged in helping to ensure that the browser's event loop runs smoothly, by allowing the browser to tell your code how much time it can safely use without causing the system to lag. If you stay within the limit given, you can make the user's experience much better.</p>
+
+<h3 id="Getting_the_most_out_of_idle_callbacks">Getting the most out of idle callbacks</h3>
+
+<p>Because idle callbacks are intended to give your code a way to cooperate with the event loop to ensure that the system is utilized to its full potential without over-tasking it, resulting in lag or other performance problems, you should be thoughtful about how you go about using them.</p>
+
+<ul>
+ <li><strong>Use idle callbacks for tasks which don't have high priority.</strong> Because you don't know how many callbacks have been established, and you don't know how busy the user's system is, you don't know how often your callback will be run (unless you specify a <code>timeout</code>. There's no guarantee that every pass through the event loop (or even every screen update cycle) will include any idle callbacks being executed; if the event loop uses all available time, you're out of luck (again, unless you've used a <code>timeout</code>).</li>
+ <li><strong>Idle callbacks should do their best not to overrun the time allotted.</strong> While the browser, your code, and the Web in general will continue to run normally if you go over the specified time limit (even if you go<strong> </strong><em>way</em> over it), the time restriction is intended to ensure that you leave the system enough time to finish the current pass through the event loop and get on to the next one without causing other code to stutter or animation effects to lag. Currently, <a href="IdleDeadline/timeRemaining.html" title="The timeRemaining() method on the IdleDeadline interface returns the estimated number of milliseconds remaining in the current idle period. The callback can call this method at any time to determine how much time it can continue to work before it must return. For example, if the callback finishes a task and has another one to begin, it can call timeRemaining() to see if there's enough time to complete the next task. If there isn't, the callback can just return immediately, or look for other work to do with the remaining time."><code>timeRemaining()</code></a> has an upper limit of 50 milliseconds, but in reality you will often have less time than that, since the event loop may already be eating into that time on complex sites, with browser extensions needing processor time, and so forth.</li>
+ <li><strong>Avoid making changes to the DOM within your idle callback.</strong> By the time your callback is run, the current frame has already finished drawing, and all layout updates and computations have been completed. If you make changes that affect layout, you may force a situation in which the browser has to stop and do recalculations that would otherwise be unnecessary. If your callback needs to change the DOM, it should use <a href="Window/requestAnimationFrame.html" title="The window.requestAnimationFrame() method tells the browser that you wish to perform an animation and requests that the browser call a specified function to update an animation before the next repaint. The method takes a callback as an argument to be invoked before the repaint."><code>Window.requestAnimationFrame()</code></a> to schedule that.</li>
+ <li><strong>Avoid tasks whose run time can't be predicted.</strong> Your idle callback should avoid doing anything that could take an unpredictable amount of time. For example, anything which might affect layout should be avoided. You should also avoid resolving or rejecting <a href="../JavaScript/Reference/Global_Objects/Promise.html" title="The Promise interface represents a proxy for a value not necessarily known at its creation time. It allows you to associate handlers to an asynchronous action's eventual success or failure. This lets asynchronous methods return values like synchronous methods: instead of the final value, the asynchronous method returns a promise of having a value at some point in the future."><code>Promise</code></a>s, since that would invoke the handler for that promise's resolution or rejection as soon as your callback returns.</li>
+ <li><strong>Use timeouts when you need to, but only when you need to.</strong> Using timeouts can ensure that your code runs in a timely manner, but it can also allow you to cause lag or animation stutters by mandating that the browser call you when there's not enough time left for you to run without disrupting performance.</li>
+</ul>
+
+<h3 id="Falling_back_to_setTimeout">Falling back to setTimeout</h3>
+
+<p>Because the Background Tasks API is fairly new, your code may need to be able to work on browsers that don't yet support it. You can do so with a simple shim that uses <a href="WindowOrWorkerGlobalScope/setTimeout.html" title="Sets a timer which executes a function or specified piece of code once after the timer expires."><code>setTimeout()</code></a> as a fallback option. This isn't a <a href="https://developer.mozilla.org/en-US/docs/Glossary/polyfill" class="glossaryLink" title="polyfill: A polyfill is a piece of code (usually JavaScript on the Web) used to provide modern functionality on older browsers that do not natively support it.">polyfill</a>, since it's not functionally identical; <code>setTimeout()</code> doesn't let you make use of idle periods, but instead runs your code when possible, leaving us to do the best we can to avoid causing the user to experience performance lag.</p>
+
+<pre class="brush: js">window.requestIdleCallback = window.requestIdleCallback || function(handler) {
+  let startTime = Date.now();
+&nbsp;
+&nbsp; return setTimeout(function() {
+    handler({
+      didTimeout: false,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; timeRemaining: function() {
+        return Math.max(0, 50.0 - (Date.now() - startTime));
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+&nbsp;&nbsp;&nbsp; });
+&nbsp; }, 1);
+}</pre>
+
+<p>If <a href="Window/requestIdleCallback.html" title="The window.requestIdleCallback() method queues a function to be called during a browser's idle periods. This enables developers to perform background and low priority work on the main event loop, without impacting latency-critical events such as animation and input response. Functions are generally called in first-in-first-out order; however, callbacks which have a timeout specified may be called out-of-order if necessary in order to run them before the timeout elapses."><code>window.requestIdleCallback</code></a> is undefined, we create it here. The function begins by recording the time at which our implementation was called. We'll be using that to compute the value returned by our shim for <a href="IdleDeadline/timeRemaining.html" title="The timeRemaining() method on the IdleDeadline interface returns the estimated number of milliseconds remaining in the current idle period. The callback can call this method at any time to determine how much time it can continue to work before it must return. For example, if the callback finishes a task and has another one to begin, it can call timeRemaining() to see if there's enough time to complete the next task. If there isn't, the callback can just return immediately, or look for other work to do with the remaining time."><code>timeRemaining()</code></a>.</p>
+
+<p>Then we call <a href="WindowOrWorkerGlobalScope/setTimeout.html" title="Sets a timer which executes a function or specified piece of code once after the timer expires."><code>setTimeout()</code></a>, passing into it a function which runs the callback passed into our implementation of <code>requestIdleCallback()</code>. The callback is passed an object which conforms to <a href="IdleDeadline.html" title="See our complete example in the article Cooperative Scheduling of Background Tasks API."><code>IdleDeadline</code></a>, with <a href="IdleDeadline/didTimeout.html" title="The read-only didTimeout property on the IdleDeadline interface is a Boolean value which indicates whether or not the idle callback is being invoked because the timeout interval specified when Window.requestIdleCallback() was called has expired."><code>didTimeout</code></a> set to <code>false</code> and a<code> </code><a href="IdleDeadline/timeRemaining.html" title="The timeRemaining() method on the IdleDeadline interface returns the estimated number of milliseconds remaining in the current idle period. The callback can call this method at any time to determine how much time it can continue to work before it must return. For example, if the callback finishes a task and has another one to begin, it can call timeRemaining() to see if there's enough time to complete the next task. If there isn't, the callback can just return immediately, or look for other work to do with the remaining time."><code>timeRemaining()</code></a> method which is implemented to give the callback 50 milliseconds of time to begin with. Each time <code>timeRemaining()</code> is called, it subtracts the elapsed time from the original 50 milliseconds to determine the amount of time left.</p>
+
+<p>As a result, while our shim doesn't constrain itself to the amount of idle time left in the current event loop pass like the true <code>requestIdleCallback()</code>, it does at least limit the callback to no more than 50 milliseconds of run time per pass.</p>
+
+<p>The implementation of our shim for <a href="Window/cancelIdleCallback.html" title="The window.cancelIdleCallback() method cancels a callback previously scheduled with window.requestIdleCallback()."><code>cancelIdleCallback()</code></a> is much simpler:</p>
+
+<pre class="brush: js">window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
+  clearTimeout(id);
+}</pre>
+
+<p>If <code>cancelIdleCallback()</code> isn't defined, this creates one which&nbsp;simply passes the specified callback ID through to <a href="WindowOrWorkerGlobalScope/clearTimeout.html" title="The documentation about this has not yet been written; please consider contributing!"><code>clearTimeout()</code></a>.</p>
+
+<p>Now your code will work even on browsers that don't support the Background Tasks API, albeit not as efficiently.</p>
+
+<a class="dashAnchor" name="//apple_ref/Section/Interfaces"></a><h2 id="Interfaces">Interfaces</h2>
+
+<p>The Background Tasks API adds only one new interface:</p>
+
+<dl>
+ <dt><a href="IdleDeadline.html" title="See our complete example in the article Cooperative Scheduling of Background Tasks API."><code>IdleDeadline</code></a></dt>
+ <dd>An object of this type is passed to the idle callback to provide an estimate of how long the idle period is expected to last, as well as whether or not the callback is running because its timeout period has expired.</dd>
+</dl>
+
+<p>The <a href="Window.html" title="The window object represents a window containing a DOM document; the document property points to the DOM document loaded in that window."><code>Window</code></a> interface is also augmented by this API to offer the new <a href="Window/requestIdleCallback.html" title="The window.requestIdleCallback() method queues a function to be called during a browser's idle periods. This enables developers to perform background and low priority work on the main event loop, without impacting latency-critical events such as animation and input response. Functions are generally called in first-in-first-out order; however, callbacks which have a timeout specified may be called out-of-order if necessary in order to run them before the timeout elapses."><code>requestIdleCallback()</code></a> and <a href="Window/cancelIdleCallback.html" title="The window.cancelIdleCallback() method cancels a callback previously scheduled with window.requestIdleCallback()."><code>cancelIdleCallback()</code></a> methods.</p>
+
+<a class="dashAnchor" name="//apple_ref/Section/Example"></a><h2 id="Example" name="Example">Example</h2>
+
+<p>In this example, we'll take a look at how you can use <a href="Window/requestIdleCallback.html" title="The window.requestIdleCallback() method queues a function to be called during a browser's idle periods. This enables developers to perform background and low priority work on the main event loop, without impacting latency-critical events such as animation and input response. Functions are generally called in first-in-first-out order; however, callbacks which have a timeout specified may be called out-of-order if necessary in order to run them before the timeout elapses."><code>requestIdleCallback()</code></a> to run time-consuming, low-priority tasks during time the browser would otherwise be idle. In addition, this example demonstrates how to schedule updates to the document content using <a href="Window/requestAnimationFrame.html" title="The window.requestAnimationFrame() method tells the browser that you wish to perform an animation and requests that the browser call a specified function to update an animation before the next repaint. The method takes a callback as an argument to be invoked before the repaint."><code>requestAnimationFrame()</code></a>.</p>
+
+<p>Below you'll find only the HTML and JavaScript for this example. The CSS is not shown, since it's not particularly crucial to understanding this functionality.</p>
+
+<h3 id="HTML_content">HTML content</h3>
+
+<p>In order to be oriented about what we're trying to accomplish, let's have a look at the HTML. This establishes a box (ID <code>"Container"</code>) that's used to present the progress of an operation (because you never know how long decoding "quantum filament tachyon emissions" will take, after all) as well as a second main box (with the ID <code>"logBox"</code>), which is used to display textual output.</p>
+
+<pre class="brush: html">&lt;p&gt;
+  Demonstration of using &lt;a href="https://developer.mozilla.org/en-US/docs/Web/API/Background_Tasks_API"&gt;
+  cooperatively scheduled background tasks&lt;/a&gt; using the &lt;code&gt;requestIdleCallback()&lt;/code&gt;
+  method.
+&lt;/p&gt;
+
+&lt;div class="container"&gt;
+  &lt;div class="label"&gt;Decoding quantum filament tachyon emissions...&lt;/div&gt;
+  &lt;progress id="progress" value="0"&gt;&lt;/progress&gt;
+  &lt;div class="button" id="startButton"&gt;
+    Start
+  &lt;/div&gt;
+  &lt;div class="label counter"&gt;
+    Task &lt;span id="currentTaskNumber"&gt;0&lt;/span&gt; of &lt;span id="totalTaskCount"&gt;0&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="logBox"&gt;
+  &lt;div class="logHeader"&gt;
+    Log
+  &lt;/div&gt;
+  &lt;div id="log"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+<p>The progress box uses a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress" title="The HTML <progress> element displays an indicator showing the completion progress of a task, typically displayed as a progress bar."><code>&lt;progress&gt;</code></a> element to show the progress, along with a label with sections that are changed to present numeric information about the progress. In addition, there's a "Start" button (creatively given the ID "startButton"), which the user will use to start the data processing.</p>
+
+<div class="hidden">
+<h3 id="CSS_content">CSS content</h3>
+
+<pre class="brush: css">body {
+  font-family: "Open Sans", "Lucida Grande", "Arial", sans-serif;
+  font-size: 16px;
+}
+
+.logBox {
+  margin-top: 16px;
+  width: 400px;
+  height:500px;
+  border-radius: 6px;
+  border: 1px solid black;
+  box-shadow: 4px 4px 2px black;
+}
+
+.logHeader {
+  margin: 0;
+  padding: 0 6px 4px;
+  height: 22px;
+  background-color: lightblue;
+  border-bottom: 1px solid black;
+  border-radius: 6px 6px 0 0;
+}
+
+#log {
+  font: 12px "Courier", monospace;
+  padding: 6px;
+  overflow: auto;
+  overflow-y: scroll;
+  width: 388px;
+  height: 460px;
+}
+
+.container {
+  width: 400px;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid black;
+  box-shadow: 4px 4px 2px black;
+  display: block;
+  overflow: auto;
+}
+
+.label {
+  display: inline-block;
+}
+
+.counter {
+  text-align: right;
+  padding-top: 4px;
+  float: right;
+}
+
+.button {
+  padding-top: 2px;
+  padding-bottom: 4px;
+  width: 100px;
+  display: inline-block;
+  float: left;
+  border: 1px solid black;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 0;
+  color: white;
+  background-color: darkgreen;
+}
+
+#progress {
+  width: 100%;
+  padding-top: 6px;
+}</pre>
+</div>
+
+<h3 id="JavaScript_content">JavaScript content</h3>
+
+<p>Now that the document structure is defined, construct the JavaScript code that will do the work. The goal: to be able to add requests to call functions to a queue, with an idle callback that runs those functions whenever the system is idle for long enough a time to make progress.</p>
+
+<h4 id="Variable_declarations">Variable declarations</h4>
+
+<pre class="brush: js">let taskList = [];
+let totalTaskCount = 0;
+let currentTaskNumber = 0;
+let taskHandle = null;
+</pre>
+
+<p>These variables are used to manage the list of tasks that are waiting to be performed, as well as status information about the task queue and its execution:</p>
+
+<ul>
+ <li><code>taskList</code> is an <a href="../JavaScript/Reference/Global_Objects/Array.html" title="The JavaScript Array&nbsp;object is a global object that&nbsp;is used in the&nbsp;construction&nbsp;of&nbsp;arrays; which are high-level, list-like objects."><code>Array</code></a> of objects, each representing one task waiting to be run.</li>
+ <li><code>totalTaskCount</code> is a counter of the number of tasks that have been added to the queue; it will only go up, never down. We use this to do the math to present progress as a precentage of total work to do.</li>
+ <li><code>currentTaskNumber</code> is used to track how many tasks have been processed so far.</li>
+ <li><code>taskHandle</code> is a reference to the task currently being processed.</li>
+</ul>
+
+<pre class="brush: js">let totalTaskCountElem = document.getElementById("totalTaskCount");
+let currentTaskNumberElem = document.getElementById("currentTaskNumber");
+let progressBarElem = document.getElementById("progress");
+let startButtonElem = document.getElementById("startButton");
+let logElem = document.getElementById("log");
+</pre>
+
+<p>Next we have variables which reference the DOM elements we need to interact with. These elements are:</p>
+
+<ul>
+ <li><code>totalTaskCountElem</code> is the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span" title="The HTML <span> element is a generic inline container for phrasing content, which does not inherently represent anything. It can be used to group elements for styling purposes (using the class or id attributes), or because they share attribute values, such as lang."><code>&lt;span&gt;</code></a> we use to insert the total numberof tasks created into the status display in the progress box.</li>
+ <li><code>currentTaskNumberElem</code> is the element used to display the number of tasks processed so far.</li>
+ <li><code>progressBarElem</code> is the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress" title="The HTML <progress> element displays an indicator showing the completion progress of a task, typically displayed as a progress bar."><code>&lt;progress&gt;</code></a> element showing the percentage of the tasks processed so far.</li>
+ <li><code>startButtonElem</code> is the start button.</li>
+ <li><code>logElem</code> is the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div" title="The HTML Content Division element (<div>) is the generic container for flow content. It has no effect on the content or layout until styled using CSS."><code>&lt;div&gt;</code></a> we'll insert logged text messages into.</li>
+</ul>
+
+<pre class="brush: js">let logFragment = null;
+let statusRefreshScheduled = false;
+</pre>
+
+<p>Finally, we set up a couple of variables for other items:</p>
+
+<ul>
+ <li><code>logFragment</code> will be used to store a <a href="DocumentFragment.html" title="The DocumentFragment interface represents a minimal document object that has no parent. It is used as a lightweight version of Document that stores a segment of a document structure comprised of nodes just like a standard document. The key difference is that because the document fragment isn't part of the active document tree structure, changes made to the fragment don't affect the document, cause reflow, or incur any performance impact that can occur when changes are made."><code>DocumentFragment</code></a> that's generated by our logging functions to&nbsp; create content to append to the log when the next animation frame is rendered.</li>
+ <li><code>statusRefreshScheduled</code> is used to track whether or not we've already scheduled an update of the status display box for the upcoming frame, so that we only do it once per frame</li>
+</ul>
+
+<div class="hidden">
+<p>The shim to function even if idle callbacks aren't supported. Already discussed above, so it's hidden here to save space in the article.</p>
+
+<pre class="brush: js">window.requestIdleCallback = window.requestIdleCallback || function(handler) {
+  let startTime = Date.now();
+ 
+  return setTimeout(function() {
+    handler({
+      didTimeout: false,
+      timeRemaining: function() {
+        return Math.max(0, 50.0 - (Date.now() - startTime));
+      }
+    });
+  }, 1);
+};
+
+window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
+  clearTimeout(id);
+};
+</pre>
+</div>
+
+<h4 id="Managing_the_task_queue">Managing the task queue</h4>
+
+<p>Next, let's look at the way we manage the tasks that need to be performed. We're going to do this by creating a FIFO queue of tasks, which we'll run as time allows during the idle callback period.</p>
+
+<h5 id="Enqueueing_tasks">Enqueueing tasks</h5>
+
+<p>First, we need a function that enqueues tasks for future execution. That function, <code>enqueueTask()</code>, looks like this:</p>
+
+<pre class="brush: js">function enqueueTask(taskHandler, taskData) {
+  taskList.push({
+    handler: taskHandler,
+    data: taskData
+  });
+ 
+  totalTaskCount++;
+ 
+  if (!taskHandle) {
+    taskHandle = requestIdleCallback(runTaskQueue, { timeout: 1000 });
+  }
+ 
+  scheduleStatusRefresh();
+}
+</pre>
+
+<p><code>enqueueTask()</code> accepts as input two parameters:</p>
+
+<ul>
+ <li><code>taskHandler</code> is a function which will be called to handle the task.</li>
+ <li><code>taskData</code> is an object which is passed into the task handler as an input parameter, to allow the task to receive custom data.</li>
+</ul>
+
+<p>To enqueue the task, we <a href="../JavaScript/Reference/Global_Objects/Array/push.html">push</a> an object onto the <code>taskList</code> array; the object contains the <code>taskHandler</code> and <code>taskData</code> values under the names <code>handler</code> and <code>data</code>, respectively, then increment <code>totalTaskCount</code>, which reflects the total number of tasks which have ever been enqueued (we don't decrement it when tasks are removed from the queue).</p>
+
+<p>Next, we check to see if we already have an idle callback created; if <code>taskHandle</code> is 0, we know there isn't an idle callback yet, so we call <a href="Window/requestIdleCallback.html" title="The window.requestIdleCallback() method queues a function to be called during a browser's idle periods. This enables developers to perform background and low priority work on the main event loop, without impacting latency-critical events such as animation and input response. Functions are generally called in first-in-first-out order; however, callbacks which have a timeout specified may be called out-of-order if necessary in order to run them before the timeout elapses."><code>requestIdleCallback()</code></a> to create one. It's configured to call a function called <code>runTaskQueue()</code>, which we'll look at shortly, and with a <code>timeout</code> of 1 second, so that it will be run at least once per second even if there isn't any actual idle time available.</p>
+
+<h5 id="Running_tasks">Running tasks</h5>
+
+<p>Our idle callback handler, runTaskQueue(), gets called when the browser determines there's enough idle time available to let us do some work or our timeout of one second expires. This function's job is to run our enqueued tasks.</p>
+
+<pre class="brush: js">function runTaskQueue(deadline) {
+  while ((deadline.timeRemaining() &gt; 0 || deadline.didTimeout) &amp;&amp; taskList.length) {
+    let task = taskList.shift();
+    currentTaskNumber++;
+    
+    task.handler(task.data);
+    scheduleStatusRefresh();
+  }
+ 
+  if (taskList.length) {
+    taskHandle = requestIdleCallback(runTaskQueue, { timeout: 1000} );
+  } else {
+    taskHandle = 0;
+  }
+}
+</pre>
+
+<p><code>runTaskQueue()</code>'s core is a loop which continues as long as there's time left (as determined by checking <a rel="nofollow" href="Deadline/timeRemaining.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>IdleDeadline.timeRemaining</code></a>) to be sure it's more than 0 or if the timeout limit was reached (<a href="IdleDeadline/didTimeout.html" title="The read-only didTimeout property on the IdleDeadline interface is a Boolean value which indicates whether or not the idle callback is being invoked because the timeout interval specified when Window.requestIdleCallback() was called has expired."><code>deadline.didTimeout</code></a> is true), and as long as there are tasks in the task list.</p>
+
+<p>For each task in the queue that we have time to execute, we do the following:</p>
+
+<ol>
+ <li>We <a href="../JavaScript/Reference/Global_Objects/Array/shift.html">remove the task object from the queue</a>.</li>
+ <li>We increment <code>currentTaskNumber</code> to track how many tasks we've executed.</li>
+ <li>We call the task's handler, <code>task.handler</code>, passing into it the task's data object (<code>task.data</code>).</li>
+ <li>We call a function, <code>scheduleStatusRefresh()</code>, to handle scheduling a screen update to reflect changes to our progress.</li>
+</ol>
+
+<p>When time runs out, if there are still tasks left in the list, we call <a href="Window/requestIdleCallback.html" title="The window.requestIdleCallback() method queues a function to be called during a browser's idle periods. This enables developers to perform background and low priority work on the main event loop, without impacting latency-critical events such as animation and input response. Functions are generally called in first-in-first-out order; however, callbacks which have a timeout specified may be called out-of-order if necessary in order to run them before the timeout elapses."><code>requestIdleCallback()</code></a> again so that we can continue to process the tasks the next time there's idle time available. If the queue is empty, we set taskHandle to 0 to indicate that we don't have a callback scheduled. That way, we'll know to request a callback next time <code>enqueueTask()</code> is called.</p>
+
+<h4 id="Updating_the_status_display">Updating the status display</h4>
+
+<p>One thing we want to be able to do is update our document with log output and progress information. However, you can't safely change the DOM from within an idle callback. Instead, we'll use <a href="Window/requestAnimationFrame.html" title="The window.requestAnimationFrame() method tells the browser that you wish to perform an animation and requests that the browser call a specified function to update an animation before the next repaint. The method takes a callback as an argument to be invoked before the repaint."><code>requestAnimationFrame()</code></a> to ask the browser to call us when it's safe to update the display.</p>
+
+<h5 id="Scheduling_display_updates">Scheduling display updates</h5>
+
+<p>DOM changes are scheduled by calling the <code>scheduleStatusRefresh()</code> function.</p>
+
+<pre class="brush: js">function scheduleStatusRefresh() {
+    if (!statusRefreshScheduled) {
+      requestAnimationFrame(updateDisplay);
+      statusRefreshScheduled = true;
+  }
+}
+</pre>
+
+<p>This is a simple function. It checks to see if we've already scheduled a display refresh by checking the value of <code>statusRefreshScheduled</code>. If it's <code>false</code>, we call <a href="Window/requestAnimationFrame.html" title="The window.requestAnimationFrame() method tells the browser that you wish to perform an animation and requests that the browser call a specified function to update an animation before the next repaint. The method takes a callback as an argument to be invoked before the repaint."><code>requestAnimationFrame()</code></a> to schedule a refresh, providing the <code>updateDisplay()</code> function to be called to handle that work.</p>
+
+<h5 id="Updating_the_display">Updating the display</h5>
+
+<p>The <code>updateDisplay()</code> function is responsible for drawing the contents of the progress box and the log. It's called by the browser when the DOM is in a safe condition for us to apply changes during the process of rendering the next frame.</p>
+
+<pre class="brush: js">function updateDisplay() {
+  let scrolledToEnd = logElem.scrollHeight - logElem.clientHeight &lt;= logElem.scrollTop + 1;
+ 
+  if (totalTaskCount) {
+    if (progressBarElem.max != totalTaskCount) {
+      totalTaskCountElem.textContent = totalTaskCount;
+      progressBarElem.max = totalTaskCount;
+    }
+
+    if (progressBarElem.value != currentTaskNumber) {
+      currentTaskNumberElem.textContent = currentTaskNumber;
+      progressBarElem.value = currentTaskNumber;
+    }
+  }
+  
+  if (logFragment) {
+    logElem.appendChild(logFragment);
+    logFragment = null;
+  }
+ 
+  if (scrolledToEnd) {
+      logElem.scrollTop = logElem.scrollHeight - logElem.clientHeight;
+  }
+ 
+  statusRefreshScheduled = false;
+}</pre>
+
+<p>First, <code>scrolledToEnd</code> is set to <code>true</code> if the text in the log is scrolled to the bottom; otherwise it's set to <code>false</code>. We'll use that to determine if we should update the scroll position to ensure that the log stays at the end when we're done adding content to it.</p>
+
+<p>Next, we update the progress and status information if any tasks have been enqueued.</p>
+
+<ol>
+ <li>If the current maximum value of the progress bar is different from the current total number of enqueued tasks (<code>totalTaskCount</code>), then we update the contents of the displayed total number of tasks (<code>totalTaskCountElem</code>) and the maximum value of the progress bar, so that it scales properly.</li>
+ <li>We do the same thing with the number of tasks processed so far; if <code>progressBarElem.value</code> is different from the task number currently being processed (<code>currentTaskNumber</code>), then we update the displayed value of the currently-being-processed task and the current value of the progress bar.</li>
+</ol>
+
+<p>Then, if there's text waiting to be added to the log (that is, if <code>logFragment</code> isn't <code>null</code>), we append it to the log element using <a href="Node/appendChild.html" title="The Node.appendChild() method adds a node to the end of the list of children of a specified parent node. If the given child is a reference to an existing node in the document, appendChild() moves it from its current position to the new position (there is no requirement to remove the node from its parent node before appending it to some other node)."><code>Element.appendChild()</code></a> and set <code>logFragment</code> to <code>null</code> so we don't add it again.</p>
+
+<p>If the log was scrolled to the end when we started, we make sure it still is. Then we set <code>statusRefreshScheduled</code> to <code>false</code> to indicate that we've handled the refresh and that it's safe to request a new one.</p>
+
+<h4 id="Adding_text_to_the_log">Adding text to the log</h4>
+
+<p>The <code>log()</code> function adds the specified text to the log. Since we don't know at the time <code>log()</code> is called whether or not it's safe to immediately touch the DOM, we will cache the log text until it's safe to update. Above, in the code for <code>updateDisplay</code><code>()</code>, you can find the code that actually adds the logged text to the log element when the animation frame is being updated.</p>
+
+<pre class="brush: js">function log(text) {
+  if (!logFragment) {
+      logFragment = document.createDocumentFragment();
+  }
+ 
+  let el = document.createElement("div");
+  el.innerHTML = text;
+  logFragment.appendChild(el);
+}
+</pre>
+
+<p>First, we create a <a href="DocumentFragment.html" title="The DocumentFragment interface represents a minimal document object that has no parent. It is used as a lightweight version of Document that stores a segment of a document structure comprised of nodes just like a standard document. The key difference is that because the document fragment isn't part of the active document tree structure, changes made to the fragment don't affect the document, cause reflow, or incur any performance impact that can occur when changes are made."><code>DocumentFragment</code></a> object named <code>logFragment</code> if one doesn't currently exist. This element is a pseudo-DOM into which we can insert elements without immediately changing the main DOM itself.</p>
+
+<p>We then create a new <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div" title="The HTML Content Division element (<div>) is the generic container for flow content. It has no effect on the content or layout until styled using CSS."><code>&lt;div&gt;</code></a> element and set its contents to match the input <code>text</code>. Then we append the new element to the end of the pseudo-DOM in <code>logFragment</code>. <code>logFragment</code> will accumulate log entries until the next time <code>updateDisplay()</code> is called because the DOM for the changes.</p>
+
+<h3 id="Running_tasks_2">Running tasks</h3>
+
+<p>Now that we've got the task management and display maintenance code done, we can actually start setting up code to run tasks that get work done.</p>
+
+<h4 id="The_task_handler">The task handler</h4>
+
+<p>The function we'll be using as our task handler—that is, the function that will be used as the value of the task object's <code>handler</code> property—is <code>logTaskHandler</code>(). It's a simple function that outputs a bunch of stuff to the log for each task. In your own application, you'd replace this code with whatever task it is you wish to perform during idle time. Just remember that anything you want to do that changes the DOM needs to be handled through <a href="Window/requestAnimationFrame.html" title="The window.requestAnimationFrame() method tells the browser that you wish to perform an animation and requests that the browser call a specified function to update an animation before the next repaint. The method takes a callback as an argument to be invoked before the repaint."><code>requestAnimationFrame()</code></a>.</p>
+
+<pre class="brush: js">function logTaskHandler(data) {
+  log("&lt;strong&gt;Running task #" + currentTaskNumber + "&lt;/strong&gt;");
+ 
+  for (i=0; i&lt;data.count; i+=1) {
+    log((i+1).toString() + ". " + data.text);
+  }
+}
+</pre>
+
+<h4 id="The_main_program">The main program</h4>
+
+<p>Everything is triggered when the user clicks the Start button, which causes the <code>decodeTechnoStuff()</code> function to be called.</p>
+
+<div class="hidden">
+<p>The <code><a rel="nofollow" href="../JavaScript/Reference/Global_Objects/Math/randomb526.html?document_saved=true#Getting_a_random_integer_between_two_values_inclusive" class="new">getRandomIntInclusive()</a></code> method comes from the examples for <a href="../JavaScript/Reference/Global_Objects/Math/random.html" title="The Math.random() function returns a floating-point, pseudo-random number in the range 0–1 (inclusive of 0, but not 1) with approximately uniform distribution over that range — which you can then scale to your desired range. The implementation selects the initial seed to the random number generation algorithm; it cannot be chosen or reset by the user."><code>Math.random()</code></a>; we'll just link to it below but it needs to be included here for the example to work.</p>
+
+<pre class="brush: js">function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+</pre>
+</div>
+
+<pre class="brush: js">function decodeTechnoStuff() {  
+  totalTaskCount = 0;
+  currentTaskNumber = 0;
+  updateDisplay();
+
+  let n = getRandomIntInclusive(100, 200);
+
+  for (i=0; i&lt;n; i++) {
+    let taskData = {
+      count: getRandomIntInclusive(75, 150),
+      text: "This text is from task number " + (i+1).toString() + " of " + n
+    };
+
+    enqueueTask(logTaskHandler, taskData);
+  }
+}
+
+document.getElementById("startButton").addEventListener("click", decodeTechnoStuff, false);</pre>
+
+<p><code>decodeTechnoStuff()</code> starts by zeroing the values of totalTaskCount (the number of tasks added to the queue so far) and currentTaskNumber (the task currently being run), and then calls <code>updateDisplay()</code> to reset the display to its "nothing's happened yet" state.</p>
+
+<p>This example will create a random number of tasks (between 100 and 200 of them). To do so, we use the <a rel="nofollow" href="../JavaScript/Reference/Global_Objects/Math/randomb526.html?document_saved=true#Getting_a_random_integer_between_two_values_inclusive" class="new"><code>getRandomIntInclusive()</code> function</a> that's provided as an example in the documentation for <a href="../JavaScript/Reference/Global_Objects/Math/random.html" title="The Math.random() function returns a floating-point, pseudo-random number in the range 0–1 (inclusive of 0, but not 1) with approximately uniform distribution over that range — which you can then scale to your desired range. The implementation selects the initial seed to the random number generation algorithm; it cannot be chosen or reset by the user."><code>Math.random()</code></a> to get the number of tasks to create.</p>
+
+<p>Then we start a loop to create the actual tasks. For each task, we create an object, <code>taskData</code>, which includes two properties:</p>
+
+<ul>
+ <li><code>count</code> is the number of strings to output into the log from the task.</li>
+ <li><code>text</code> is the text to output to the log the number of times specified by <code>count</code>.</li>
+</ul>
+
+<p>Each task is then enqueued by calling <code>enqueueTask()</code>, passing in <code>logTaskHandler</code><code>()</code> as the handler function and the <code>taskData</code> object as the object to pass into the function when it's called.</p>
+
+<dl>
+</dl>
+
+<h3 id="Result">Result</h3>
+
+<p>Below is the actual functioning result of the code above. Try it out, play with it in your browser's developer tools, and experiment with using it in your own code.</p>
+
+<p><iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/API/Background_Tasks_API%24samples/Example94b7.html?revision=1393744" height="700" width="600" id="frame_Example" class="live-sample-frame sample-code-frame" frameborder="0"></iframe></p>
+
+<a class="dashAnchor" name="//apple_ref/Section/Specifications"></a><h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td><a rel="noopener" lang="en" hreflang="en" href="https://www.w3.org/TR/requestidlecallback/" title="The 'Cooperative Scheduling of Background Tasks' specification" class="external">Cooperative Scheduling of Background Tasks</a></td>
+   <td><span class="spec-PR">Proposed Recommendation</span></td>
+   <td>&nbsp;</td>
+  </tr>
+ </tbody>
+</table>
+
+<a class="dashAnchor" name="//apple_ref/Section/Browser%20compatibility"></a><h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div>
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a rel="noopener" href="https://github.com/mdn/browser-compat-data" class="external">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p></p><div class="bc-old"><div class="htab">
+    <a id="AutoCompatibilityTable" name="AutoCompatibilityTable"></a>
+    <ul>
+    <li class="selected">
+    <a>Desktop</a>
+    </li>
+    <li>
+    <a>Mobile</a>
+    </li>
+    </ul>
+    </div><div id="compat-desktop"><table class="compat-table"><thead><tr><th>Feature</th><th>Chrome</th><th>Edge</th><th>Firefox</th><th>Internet Explorer</th><th>Opera</th><th>Safari</th></tr></thead><tbody><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Window/requestIdleCallback">Basic support</a></td><td class="full-support">47</td><td class="no-support"><span title="No support">
+      No</span></td><td class="full-support"><p>55<sup><a href="#compatNote_1">1</a></sup></p><p>53&nbsp;— 55<sup><a href="#compatNote_2">2</a></sup></p></td><td class="no-support"><span title="No support">
+      No</span></td><td class="full-support">34</td><td class="no-support"><span title="No support">
+      No</span></td></tr></tbody></table></div><div id="compat-mobile"><table class="compat-table"><thead><tr><th>Feature</th><th>Android webview</th><th>Chrome for Android</th><th>Edge mobile</th><th>Firefox for Android</th><th>Opera Android</th><th>iOS Safari</th><th>Samsung Internet</th></tr></thead><tbody><tr><td><a href="https://developer.mozilla.org/docs/Web/API/Window/requestIdleCallback">Basic support</a></td><td class="full-support">47</td><td class="full-support">47</td><td class="no-support"><span title="No support">
+      No</span></td><td class="full-support"><p>55<sup><a href="#compatNote_1">1</a></sup></p><p>53&nbsp;— 55<sup><a href="#compatNote_2">2</a></sup></p></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td><td class="no-support"><span title="No support">
+      No</span></td><td class="unknown-support"><span title="Compatibility unknown; please update this.">
+      ?</span></td></tr></tbody></table></div><p id="compatNote_1">1. Enabled by default.</p><p id="compatNote_2">2. Implemented but disabled by default.</p></div><div class="bc-data hidden"><table class="bc-table bc-table-web"><thead><tr class="bc-platforms"><td></td><th colspan="6" class="bc-platform-desktop"><abbr class="only-icon" title="Desktop"><span>Desktop</span><i class="ic-desktop"></i></abbr></th><th colspan="7" class="bc-platform-mobile"><abbr class="only-icon" title="Mobile"><span>Mobile</span><i class="ic-mobile"></i></abbr></th></tr><tr class="bc-browsers"><td></td><th class="bc-browser-chrome"><abbr class="only-icon" title="Chrome"><span>Chrome</span><i class="ic-chrome"></i></abbr></th><th class="bc-browser-edge"><abbr class="only-icon" title="Edge"><span>Edge</span><i class="ic-edge"></i></abbr></th><th class="bc-browser-firefox"><abbr class="only-icon" title="Firefox"><span>Firefox</span><i class="ic-firefox"></i></abbr></th><th class="bc-browser-ie"><abbr class="only-icon" title="Internet Explorer"><span>Internet Explorer</span><i class="ic-ie"></i></abbr></th><th class="bc-browser-opera"><abbr class="only-icon" title="Opera"><span>Opera</span><i class="ic-opera"></i></abbr></th><th class="bc-browser-safari"><abbr class="only-icon" title="Safari"><span>Safari</span><i class="ic-safari"></i></abbr></th><th class="bc-browser-webview_android"><abbr class="only-icon" title="Android webview"><span>Android webview</span><i class="ic-webview_android"></i></abbr></th><th class="bc-browser-chrome_android"><abbr class="only-icon" title="Chrome for Android"><span>Chrome for Android</span><i class="ic-chrome_android"></i></abbr></th><th class="bc-browser-edge_mobile"><abbr class="only-icon" title="Edge Mobile"><span>Edge Mobile</span><i class="ic-edge_mobile"></i></abbr></th><th class="bc-browser-firefox_android"><abbr class="only-icon" title="Firefox for Android"><span>Firefox for Android</span><i class="ic-firefox_android"></i></abbr></th><th class="bc-browser-opera_android"><abbr class="only-icon" title="Opera for Android"><span>Opera for Android</span><i class="ic-opera_android"></i></abbr></th><th class="bc-browser-safari_ios"><abbr class="only-icon" title="iOS Safari"><span>iOS Safari</span><i class="ic-safari_ios"></i></abbr></th><th class="bc-browser-samsunginternet_android"><abbr class="only-icon" title="Samsung Internet"><span>Samsung Internet</span><i class="ic-samsunginternet_android"></i></abbr></th></tr></thead><tbody><tr><th scope="row"><a href="https://developer.mozilla.org/docs/Web/API/Window/requestIdleCallback">Basic support</a> <div class="bc-icons"><abbr class="only-icon" title="Experimental. Expect behavior to change in the future."><span>Experimental</span><i class="ic-experimental"></i></abbr></div></th><td class="bc-supports-yes bc-browser-chrome"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              47</td><td class="bc-supports-no bc-browser-edge"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td><td class="bc-supports-yes bc-browser-firefox bc-has-history"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              55<div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> </div><section id="sect1" class="bc-history"><dl><dt class="bc-supports-yes bc-supports"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              55<div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> </div></dt><dd><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> Enabled by default.</dd><dt class="bc-supports-no bc-supports"><abbr class="bc-level-no only-icon" title="No support">
+              <span>No support</span>
+            </abbr>53&nbsp;— 55<div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> </div></dt><dd><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> Implemented but disabled by default.</dd></dl></section></td><td class="bc-supports-no bc-browser-ie"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td><td class="bc-supports-yes bc-browser-opera"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              34</td><td class="bc-supports-no bc-browser-safari"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td><td class="bc-supports-yes bc-browser-webview_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              47</td><td class="bc-supports-yes bc-browser-chrome_android"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              47</td><td class="bc-supports-no bc-browser-edge_mobile"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td><td class="bc-supports-yes bc-browser-firefox_android bc-has-history"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              55<div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> </div><section id="sect2" class="bc-history"><dl><dt class="bc-supports-yes bc-supports"><abbr class="bc-level-yes only-icon" title="Full support">
+                <span>Full support</span>
+              </abbr>
+              55<div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> </div></dt><dd><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> Enabled by default.</dd><dt class="bc-supports-no bc-supports"><abbr class="bc-level-no only-icon" title="No support">
+              <span>No support</span>
+            </abbr>53&nbsp;— 55<div class="bc-icons"><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> </div></dt><dd><abbr class="only-icon" title="See implementation notes"><span>Notes</span><i class="ic-footnote"></i></abbr> Implemented but disabled by default.</dd></dl></section></td><td class="bc-supports-unknown bc-browser-opera_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td><td class="bc-supports-no bc-browser-safari_ios"><abbr class="bc-level-no only-icon" title="No support">
+                <span>No support</span>
+              </abbr>
+              No</td><td class="bc-supports-unknown bc-browser-samsunginternet_android"><abbr title="Compatibility unknown; please update this.">
+                ?
+              </abbr></td></tr></tbody></table><section id="sect3" class="bc-legend"><h3 id="Legend" class="offscreen">Legend</h3><dl><dt><span class="bc-supports-yes bc-supports">
+                <abbr class="bc-level bc-level-yes only-icon" title="Full support">
+                 <span>Full support</span>
+                 &nbsp;
+                </abbr></span></dt><dd>Full support</dd><dt><span class="bc-supports-no bc-supports">
+                <abbr class="bc-level bc-level-no only-icon" title="No support">
+                 <span>No support</span>
+                 &nbsp;
+                </abbr></span></dt><dd>No support</dd><dt><span class="bc-supports-unknown bc-supports">
+                <abbr class="bc-level bc-level-unknown only-icon" title="Compatibility unknown">
+                 <span>Compatibility unknown</span>
+                 &nbsp;
+                </abbr></span></dt><dd>Compatibility unknown</dd><dt><abbr class="only-icon" title="Experimental. Expect behavior to change in the future."><span>Experimental. Expect behavior to change in the future.</span><i class="ic-experimental"></i></abbr></dt><dd>Experimental. Expect behavior to change in the future.</dd><dt><abbr class="only-icon" title="See implementation notes."><span>See implementation notes.</span><i class="ic-footnote"></i></abbr></dt><dd>See implementation notes.</dd></dl></section></div><p></p>
+</div>
+
+<a class="dashAnchor" name="//apple_ref/Section/See%20also"></a><h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="Window/requestIdleCallback.html" title="The window.requestIdleCallback() method queues a function to be called during a browser's idle periods. This enables developers to perform background and low priority work on the main event loop, without impacting latency-critical events such as animation and input response. Functions are generally called in first-in-first-out order; however, callbacks which have a timeout specified may be called out-of-order if necessary in order to run them before the timeout elapses."><code>Window.requestIdleCallback()</code></a></li>
+ <li><a href="Window/cancelIdleCallback.html" title="The window.cancelIdleCallback() method cancels a callback previously scheduled with window.requestIdleCallback()."><code>Window.cancelIdleCallback()</code></a></li>
+ <li><a href="IdleDeadline.html" title="See our complete example in the article Cooperative Scheduling of Background Tasks API."><code>IdleDeadline</code></a></li>
+</ul>
+                  
+                
+              </article>
+
+              <!-- contributors -->
+              <div class="wiki-block contributors">
+                <h2 class="offscreen">Document Tags and Contributors</h2>
+                
+                
+  <div class="tag-attach-list contributors-sub">
+    <svg class="icon icon-tags" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M7 7c0-1.109-.891-2-2-2s-2 .891-2 2 .891 2 2 2 2-.891 2-2zm16.672 9c0 .531-.219 1.047-.578 1.406l-7.672 7.688c-.375.359-.891.578-1.422.578s-1.047-.219-1.406-.578L1.422 13.906C.625 13.125 0 11.609 0 10.5V4c0-1.094.906-2 2-2h6.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422zm6 0c0 .531-.219 1.047-.578 1.406l-7.672 7.688a2.08 2.08 0 0 1-1.422.578c-.812 0-1.219-.375-1.75-.922l7.344-7.344c.359-.359.578-.875.578-1.406s-.219-1.047-.578-1.422L14.422 3.422C13.625 2.625 12.11 2 11 2h3.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422z"></path>
+</svg>
+    <strong>Tags:</strong>&nbsp;
+    <ul class="tags tags-small">
+      
+        <li><a href="../../tag/API.html" rel="nofollow">API</a></li>
+      
+        <li><a href="../../tag/Background%20Tasks%20API.html" rel="nofollow">Background Tasks API</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/cancelIdleCallback" rel="nofollow">cancelIdleCallback</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Guide" rel="nofollow">Guide</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/IdleDeadline" rel="nofollow">IdleDeadline</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Overview" rel="nofollow">Overview</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/requestIdleCallback" rel="nofollow">requestIdleCallback</a></li>
+      
+    </ul>
+  </div>
+
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-group" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M9.266 14a5.532 5.532 0 0 0-4.141 2H3.031C1.468 16 0 15.25 0 13.516 0 12.25-.047 8 1.937 8c.328 0 1.953 1.328 4.062 1.328.719 0 1.406-.125 2.078-.359A7.624 7.624 0 0 0 7.999 10c0 1.422.453 2.828 1.266 4zM26 23.953C26 26.484 24.328 28 21.828 28H8.172C5.672 28 4 26.484 4 23.953 4 20.422 4.828 15 9.406 15c.531 0 2.469 2.172 5.594 2.172S20.063 15 20.594 15C25.172 15 26 20.422 26 23.953zM10 4c0 2.203-1.797 4-4 4S2 6.203 2 4s1.797-4 4-4 4 1.797 4 4zm11 6c0 3.313-2.688 6-6 6s-6-2.688-6-6 2.688-6 6-6 6 2.688 6 6zm9 3.516C30 15.25 28.531 16 26.969 16h-2.094a5.532 5.532 0 0 0-4.141-2A7.066 7.066 0 0 0 22 10a7.6 7.6 0 0 0-.078-1.031A6.258 6.258 0 0 0 24 9.328C26.109 9.328 27.734 8 28.062 8c1.984 0 1.937 4.25 1.937 5.516zM28 4c0 2.203-1.797 4-4 4s-4-1.797-4-4 1.797-4 4-4 4 1.797 4 4z"></path>
+</svg>
+                    <strong>Contributors to this page:</strong>
+                    
+        <a href="https://developer.mozilla.org/en-US/profiles/fscholz">fscholz</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/vitya-ne">vitya-ne</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/myakura">myakura</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/stof">stof</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/wiktor-k">wiktor-k</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Wain-PC">Wain-PC</a>
+    
+                  </div>
+                
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-clock" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M14 8.5v7c0 .281-.219.5-.5.5h-5a.494.494 0 0 1-.5-.5v-1c0-.281.219-.5.5-.5H12V8.5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zm6.5 5.5c0-4.688-3.813-8.5-8.5-8.5S3.5 9.313 3.5 14s3.813 8.5 8.5 8.5 8.5-3.813 8.5-8.5zm3.5 0c0 6.625-5.375 12-12 12S0 20.625 0 14 5.375 2 12 2s12 5.375 12 12z"></path>
+</svg>
+                    <strong>Last updated by:</strong>
+                    <a href="https://developer.mozilla.org/en-US/profiles/fscholz">fscholz</a>,
+                    <time datetime="2018-07-05T03:47:20.025337-07:00">Jul 5, 2018, 3:47:20 AM</time>
+                  </div>
+                
+              </div>
+            </div>
+
+            
+              <!-- quick links and approvals strip -->
+              <div id="wiki-left" class="column-strip wiki-column">
+
+                <!-- crumbs -->
+                
+  
+    
+  
+
+                
+                  <!-- quick links -->
+                  
+  <div class="quick-links" id="quick-links">
+    <div class="quick-links-head">Related Topics</div>
+    <ol><li><strong><a rel="nofollow" href="Cooperative_Scheduling_of_Background_Tasks_API.html" class="new">Cooperative Scheduling of Background Tasks API</a></strong></li><li data-default-state="open"><a href="#"><strong>Interfaces</strong></a><ol><li><a href="IdleDeadline.html"><code>IdleDeadline</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><a href="Window/cancelIdleCallback.html"><code>Window.cancelIdleCallback()</code></a></li><li><a href="Window/requestIdleCallback.html"><code>Window.requestIdleCallback()</code></a></li></ol></li></ol>
+  </div>
+                
+
+                <!-- approvals -->
+                
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+    
+      <div class="newsletter-box">
+        <div class="newsletter">
+    <form id="newsletterForm" class="newsletter-form nodisable" name="newsletter-form" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <div class="newsletter-head">
+            <h2 class="newsletter-teaser">Learn the best of web development</h2>
+            <p class="newsletter-description">Get the latest and greatest from MDN delivered straight to your inbox.</p>
+            
+        </div>
+
+        <div class="newsletter-fields">
+            <input type="hidden" id="fmt" name="fmt" value="H">
+            <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+            <div id="newsletterErrors" class="newsletter-errors"></div>
+
+            <div id="newsletterEmail" class="form-group newsletter-group-email">
+                <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+                <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+            </div>
+
+            <div id="newsletterPrivacy" class="form-group form-group-agree newsletter-group-privacy hidden">
+                <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+                <label for="newsletterPrivacyInput">
+                I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+                </label>
+            </div>
+            <div id="newsletterSubmit" class="newsletter-group-submit">
+                <button id="newsletter-submit" type="submit" class="button neutral newsletter-submit">
+                    Sign up now<svg class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg" width="23" height="28" viewBox="0 0 23 28" aria-hidden="true">
+    <path d="M23 15a2.01 2.01 0 0 1-.578 1.422L12.25 26.594c-.375.359-.891.578-1.422.578s-1.031-.219-1.406-.578L8.25 25.422c-.375-.375-.594-.891-.594-1.422s.219-1.047.594-1.422L12.828 18h-11C.703 18 0 17.062 0 16v-2c0-1.062.703-2 1.828-2h11L8.25 7.406a1.96 1.96 0 0 1 0-2.812l1.172-1.172c.375-.375.875-.594 1.406-.594s1.047.219 1.422.594l10.172 10.172c.375.359.578.875.578 1.406z"></path>
+</svg>
+                </button>
+            </div>
+        </div>
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden">
+        <span>Hide Newsletter Sign-up</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+</div>
+      </div>
+    
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/en-US/docs/Web/API/Background_Tasks_API$edit" label="Edit page"></menuitem>
+    <menuitem data-action="/en-US/docs/Web/API/Background_Tasks_API$history" label="View page history"></menuitem>
+  </menu>
+
+      </div>
+  </main>
+  <!-- Footer -->
+    <footer id="nav-footer" class="nav-footer"><div class="center"><a href="http://developer.mozilla.org/en-US/docs/Web/API/Background_Tasks_API">Cooperative Scheduling of Background Tasks API</a> by <a href="http://developer.mozilla.org/en-US/docs/Web/API/Background_Tasks_API$history">Mozilla Contributors</a> is licensed under <a href="http://creativecommons.org/licenses/by-sa/2.5/" class="external external-icon">CC-BY-SA 2.5</a>.</div></footer> 
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script async="" type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script src="../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><!--[endif]---->
+
+    
+    <script src="../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../static/build/js/wiki.b26a4c181df3.js" charset="utf-8" id="wikiscript"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../static/build/js/newsletter.a85c5c2892e5.js" charset="utf-8"></script>
+  
+
+
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Background_Tasks_API by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 08:49:17 GMT -->
+</body></html>

@@ -1,0 +1,995 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/tag/SVG?page=5 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:40:41 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  <title>Articles tagged: SVG</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+
+  
+<link rel="preload" href="../../../static/fonts/locales/ZillaSlab-Regular.f9de6143fdfa.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="license" href="#license">
+  
+
+  
+    
+
+    <link href="../../../static/build/styles/mdn.83865b0f7c30.css" rel="stylesheet" type="text/css">
+
+    
+  
+
+    <link href="../../../static/build/styles/wiki.aaf26c13c39b.css" rel="stylesheet" type="text/css">
+
+
+  <link href="../../../static/build/styles/locale-en-US.ca0bca387b42.css" rel="stylesheet" type="text/css">
+
+  
+    <script>
+      /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
+    </script>
+    
+
+
+
+  
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta property="og:site_name" content="MDN Web Docs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="MDN Web Docs">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../static/img/favicon144.e7e21ca263ca.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../static/img/favicon114.d526f38b09c5.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../static/img/favicon72.cc65d1d762a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../static/img/favicon57.de33179910ae.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="../../../static/img/favicon32.7f3da72dcea1.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script async="" type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  
+      <link rel="alternate" type="application/atom+xml" title="Articles tagged: SVG" href="../feeds/atom/tag/SVG">
+  
+
+</head>
+<body class="">
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <!--[endif]---->
+
+  
+  
+      <link rel="alternate" type="application/atom+xml" title="Articles tagged: SVG" href="../feeds/atom/tag/SVG">
+  
+
+
+
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/wiki-compat-tables.9978a5ce31c2.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+
+        // interactive editor config
+        win.mdn.interactiveEditor = {
+            siteUrl: "https://developer.mozilla.org",
+            editorUrl: "https://interactive-examples.mdn.mozilla.net"
+        };
+
+    })(this);
+</script>
+    
+    <ul id="nav-access">
+  <li><a href="#content" id="skip-main">Skip to main content</a></li>
+  <li><a id="skip-language" href="#language">Select language</a></li>
+  <li><a href="#q" id="skip-search">Skip to search</a></li>
+</ul>
+
+    <!-- Header -->
+    <header id="main-header" class="header-main">
+      <a href="https://developer.mozilla.org/en-US/" class="logo">MDN Web Docs</a>
+      <div class="nav-toolbox-wrapper">
+        <nav id="main-nav" class="nav-main" role="navigation">
+    <ul>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web">Technologies
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-tech-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API">APIs / DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn">References &amp; Guides
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-learn-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-contact-submenu">
+              <div class="submenu-column">
+                <ul>
+                  <li>
+                      <a href="https://support.mozilla.org/">Get Firefox help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://stackoverflow.com/">Get web development help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                      <a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/tag/SVG%3Fpage%3D5">Report a content problem
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</nav>
+        <div id="toolbox" class="toolbox">
+  <ul>
+    
+    <li class="nav-login"><div class="login">
+    
+        
+        <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FSVG%3Fpage%3D5" class="login-link js-login-link" data-service="GitHub" rel="nofollow">
+            Sign in<svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+    <title>Github</title>
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path>
+</svg>
+        </a>
+    
+</div></li>
+  </ul>
+</div>
+      </div>
+      <form id="nav-main-search" action="https://developer.mozilla.org/en-US/search" method="get" role="search" class="nav-main-search">
+  <div class="search-wrap">
+    <label for="main-q" class="offscreen">Search</label>
+    <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" aria-hidden="true">
+    <span class="search-trigger">
+        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true">
+    <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path>
+</svg>
+    </span>
+    <button type="submit" class="offscreen">Search</button>
+    <button type="button" id="close-header-search" class="close-header-search transparent">
+        <span class="offscreen">Close search</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+  </div>
+</form>
+    </header> 
+
+  <!-- Content will go here -->
+  <main id="content">
+      
+      <div class="center clear">
+      
+
+    <div id="document-list" class="boxed">
+      <h1>Articles tagged: SVG</h1>
+      
+        
+  <ol class="pagination">
+  
+    <li class="prev">
+      <a href="SVGfdb0.html?page=4">
+        Previous
+      </a>
+    </li>
+  
+  
+  
+    <li>
+      <a href="SVG2679.html?page=1">1</a>
+    </li>
+  
+    <li>
+      <a href="SVG4658.html?page=2">2</a>
+    </li>
+  
+    <li>
+      <a href="SVG9ba9.html?page=3">3</a>
+    </li>
+  
+    <li>
+      <a href="SVGfdb0.html?page=4">4</a>
+    </li>
+  
+    <li class="selected">
+      <a href="SVGaf4d.html?page=5">5</a>
+    </li>
+  
+  
+  
+  </ol>
+
+
+
+        <p>Found 473 documents</p>
+        <ul class="document-list">
+          
+            <li>
+              <a href="../Web/SVG/Element/g.html">Web/SVG/Element/g</a>
+                
+                  <small>The g SVG element is a container used to group other SVG elements.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Element/glyph.html">Web/SVG/Element/glyph</a>
+                
+                  <small>A glyph defines a single glyph in an SVG font.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Element/glyphRef.html">Web/SVG/Element/glyphRef</a>
+                
+                  <small>The glyphRef element provides a single possible glyph to the referencing altGlyph substitution.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Element/hatch.html">Web/SVG/Element/hatch</a>
+                
+                  <small>The hatch SVG element is used to fill or stroke an object using one or more pre-defined paths...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Element/hatchpath.html">Web/SVG/Element/hatchpath</a>
+                
+                  <small>The hatchpath SVG element defines a hatch path used by the hatch element.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Element/hkern.html">Web/SVG/Element/hkern</a>
+                
+                  <small>The hkern SVG element allows to fine-tweak the horizontal distance between two glyphs. This...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Element/image.html">Web/SVG/Element/image</a>
+                
+                  <small>The image SVG element includes images inside SVG documents. It can display raster image files or...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Element/line.html">Web/SVG/Element/line</a>
+                
+                  <small>The line element is an SVG basic shape used to create a line connecting two points.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Element/linearGradient.html">Web/SVG/Element/linearGradient</a>
+                
+                  <small>The linearGradient SVG element lets authors define linear gradients to fill or stroke graphical elements.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Element/marker.html">Web/SVG/Element/marker</a>
+                
+                  <small>The marker element defines the graphic&nbsp;that is to be used for drawing arrowheads or polymarkers...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Element/mask.html">Web/SVG/Element/mask</a>
+                
+                  <small>The mask element defines an alpha mask for compositing the current object into the background. A...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Element/metadata.html">Web/SVG/Element/metadata</a>
+                
+                  <small>The metadata SVG element allows to add metadata to SVG content. Metadata is structured...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Element/missing-glyph.html">Web/SVG/Element/missing-glyph</a>
+                
+                  <small>The missing-glyph SVG element's content is rendered, if for a given character the font doesn't...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Element/mpath.html">Web/SVG/Element/mpath</a>
+                
+                  <small>The mpath sub-element for the animateMotion element provides the ability to reference an...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Element/path.html">Web/SVG/Element/path</a>
+                
+                  <small>The path SVG element is the generic element to define a shape. All the basic shapes can be...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Element/pattern.html">Web/SVG/Element/pattern</a>
+                
+                  <small>The pattern element defines a graphics object which can be redrawn at repeated x and...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Element/polygon.html">Web/SVG/Element/polygon</a>
+                
+                  <small>The polygon element defines a closed shape consisting of a set of connected straight line...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Element/polyline.html">Web/SVG/Element/polyline</a>
+                
+                  <small>The polyline SVG element is an SVG basic shape that creates straight lines connecting several...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Element/radialGradient.html">Web/SVG/Element/radialGradient</a>
+                
+                  <small>The radialGradient SVG element lets authors define radial gradients to fill or stroke graphical elements.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Element/rect.html">Web/SVG/Element/rect</a>
+                
+                  <small>The rect element is a basic SVG shape that creates rectangles, defined by their corner's...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Element/script.html">Web/SVG/Element/script</a>
+                
+                  <small>A SVG script element is equivalent to the script element in HTML and thus is the place for...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Element/set.html">Web/SVG/Element/set</a>
+                
+                  <small>The set element provides a simple means of just setting the value of an attribute for a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Element/solidColor-2.html">Web/SVG/Element/solidColor</a>
+                
+                  <small>The solidcolor SVG element lets authors define a single color for use in multiple places in an...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Element/stop.html">Web/SVG/Element/stop</a>
+                
+                  <small>The stop SVG element defines the ramp of colors to use on a gradient, which is a child element...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Element/style.html">Web/SVG/Element/style</a>
+                
+                  <small>The style SVG element allows style sheets to be embedded directly within SVG content. SVG's...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Element/svg.html">Web/SVG/Element/svg</a>
+                
+                  <small>The svg element is a container that defines a new coordinate system and viewport. It is used as...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Element/switch.html">Web/SVG/Element/switch</a>
+                
+                  <small>The switch SVG element evaluates the requiredFeatures, requiredExtensions and systemLanguage...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Element/symbol.html">Web/SVG/Element/symbol</a>
+                
+                  <small>The symbol element is used to define graphical template objects which can be instantiated by a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Element/text.html">Web/SVG/Element/text</a>
+                
+                  <small>The SVG text element defines a graphics element consisting of text. It's possible to apply a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Element/textPath.html">Web/SVG/Element/textPath</a>
+                
+                  <small>In addition to text drawn in a straight line, SVG also includes the ability to place text along...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Element/title.html">Web/SVG/Element/title</a>
+                
+                  <small>Each container element or graphics element in an SVG drawing can supply a title element...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Element/tref.html">Web/SVG/Element/tref</a>
+                
+                  <small>The textual content for a text SVG element can be either character data directly embedded within...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Element/tspan.html">Web/SVG/Element/tspan</a>
+                
+                  <small>Within a text element, text and font properties and the current text position can be adjusted...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Element/use.html">Web/SVG/Element/use</a>
+                
+                  <small>The use element takes nodes from within the SVG document, and duplicates them somewhere else.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Element/view.html">Web/SVG/Element/view</a>
+                
+                  <small>A view is a defined way to view the image, like a zoom level or a detail view.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Element/vkern.html">Web/SVG/Element/vkern</a>
+                
+                  <small>The vkern SVG element allows to fine-tweak the vertical distance between two glyphs in...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/FAQ.html">Web/SVG/FAQ</a>
+                
+                  <small>We currently maintain two documents to help answer this question: a status page for SVG in...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Index.html">Web/SVG/Index</a>
+                
+                  <small>Found 312 pages:</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Linking.html">Web/SVG/Linking</a>
+                
+                  <small>The 'target' attribute on the SVG 'a' element doesn't work in Mozilla Firefox 1.5. When SVG...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/mimeTypes.html">Web/SVG/mimeTypes.rdf_corruption</a>
+                
+                  <small>This page explains a problem that can cause SVG to stop working in Mozilla due to the way...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Namespaces_Crash_Course.html">Web/SVG/Namespaces_Crash_Course</a>
+                
+                  <small>As an XML dialect, SVG is namespaced. It is important to understand the concept of namespaces...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Namespaces_Crash_Course/Example.html">Web/SVG/Namespaces_Crash_Course/Example</a>
+                
+                  <small>In this example, we use XHTML, SVG, JavaScript, and the DOM to animate a swarm of "motes". These...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Other_Resources.html">Web/SVG/Other_Resources</a>
+                
+                  <small>Here is a list of additional resources on SVG:</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Project.html">Web/SVG/Project</a>
+                
+                  <small>This page was auto-generated because a user created a sub-page to this page.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Replaced_Element.html">Web/SVG/Replaced_Element</a>
+                
+                  <small>This page was auto-generated because a user created a sub-page to this page.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Scripting.html">Web/SVG/Scripting</a>
+                
+                  <small>One can override default browser behaviors with the evt.preventDefault() method, add...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Server-configuration.html">Web/SVG/Server-configuration</a>
+                
+                  <small>See http://wiki.svg.org/Server_Configuration</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Sizing.html">Web/SVG/Sizing</a>
+                
+                  <small>This page was auto-generated because a user created a sub-page to this page.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Specification_Deviations.html">Web/SVG/Specification_Deviations</a>
+                
+                  <small>There are a few places where we have consciously decided to make Gecko deviate from or extend...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/SVG_1.html">Web/SVG/SVG_1.1_Support_in_Firefox</a>
+                
+                  <small>You can find some basic examples of SVG syntax and usage in the W3C SVG test suite.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/SVG_2_support_in_Mozilla.html">Web/SVG/SVG_2_support_in_Mozilla</a>
+                
+                  <small>SVG 2 is the next major version of the SVG standard, which is a complete rework of the SVG 1.2 draft.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/SVG_animation_with_SMIL.html">Web/SVG/SVG_animation_with_SMIL</a>
+                
+                  <small>Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1) introduced support for animating SVG...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/SVG_as_an_Image.html">Web/SVG/SVG_as_an_Image</a>
+                
+                  <small>SVG images can be used as an image format, in a number of contexts. Many browsers support SVG images in:</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Tutorial.html">Web/SVG/Tutorial</a>
+                
+                  <small>Scalable Vector Graphics, SVG, is a W3C XML dialect to mark up graphics. It is partially...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Tutorial/Basic_Shapes.html">Web/SVG/Tutorial/Basic_Shapes</a>
+                
+                  <small>There are several basic shapes used for most SVG drawing. The purpose of these shapes is fairly...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Tutorial/Basic_Transformations.html">Web/SVG/Tutorial/Basic_Transformations</a>
+                
+                  <small>Now we're ready to start distorting our beautiful images. But first, let's formally introduce...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Tutorial/Clipping_and_masking.html">Web/SVG/Tutorial/Clipping_and_masking</a>
+                
+                  <small>Erasing part of what one has created might at first sight look contradictory. But when you try...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Tutorial/Fills_and_Strokes.html">Web/SVG/Tutorial/Fills_and_Strokes</a>
+                
+                  <small>There are several ways to color shapes (including specifying attributes on the object)&nbsp;using...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Tutorial/Filter_effects.html">Web/SVG/Tutorial/Filter_effects</a>
+                
+                  <small>There are situations, where basic shapes do not provide the flexibility you need to achieve a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Tutorial/Getting_Started.html">Web/SVG/Tutorial/Getting_Started</a>
+                
+                  <small>Let us dive straight in with a simple example. Take a look at the following code.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Tutorial/Gradients.html">Web/SVG/Tutorial/Gradients</a>
+                
+                  <small>Perhaps more exciting than just fills and strokes is the fact that you can also create and apply...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Tutorial/Introduction.html">Web/SVG/Tutorial/Introduction</a>
+                
+                  <small>SVG is an&nbsp;XML language, similar to XHTML, which can be used to draw vector graphics, such as the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Tutorial/Other_content_in_SVG.html">Web/SVG/Tutorial/Other_content_in_SVG</a>
+                
+                  <small>Apart from graphic primitives like rectangles and circles, SVG offers a set of elements to embed...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Tutorial/Paths.html">Web/SVG/Tutorial/Paths</a>
+                
+                  <small>The path element is the most powerful element in the SVG library of basic shapes. You can use it...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Tutorial/Patterns.html">Web/SVG/Tutorial/Patterns</a>
+                
+                  <small>Patterns are arguably one of the more confusing fill types to use in SVG. They're also very...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Tutorial/Positions.html">Web/SVG/Tutorial/Positions</a>
+                
+                  <small>In this article, we examine how Scalable Vector Graphics (SVG) represents the positions and...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Tutorial/SVG_and_CSS.html">Web/SVG/Tutorial/SVG_and_CSS</a>
+                
+                  <small>Below you'll create a simple demonstration that runs in your SVG-enabled browser.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Tutorial/SVG_fonts.html">Web/SVG/Tutorial/SVG_fonts</a>
+                
+                  <small>When SVG was specified, support for web fonts was not widespread in browsers. Since accessing...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Tutorial/SVG_Image_Tag.html">Web/SVG/Tutorial/SVG_Image_Tag</a>
+                
+                  <small>The SVG image element allows for raster images to be rendered within an SVG object.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Tutorial/SVG_In_HTML_Introduction.html">Web/SVG/Tutorial/SVG_In_HTML_Introduction</a>
+                
+                  <small>This article and its associated example shows how to use inline SVG to provide a background...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Tutorial/Texts.html">Web/SVG/Tutorial/Texts</a>
+                
+                  <small>When talking about text in SVG we have to differentiate two almost completely separate topics....</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Tutorial/Tools_for_SVG.html">Web/SVG/Tutorial/Tools_for_SVG</a>
+                
+                  <small>Now that we covered the basics of the SVG internals, we will take a look at some tools to work...</small>
+                
+            </li>
+          
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/XML_introduction/xml:base">XML_introduction/xml:base</a>
+                
+                  <small>xml:base is like the HTML BaseElement but can specify the base URI per element as well as the...</small>
+                
+            </li>
+          
+        </ul>
+        
+  <ol class="pagination">
+  
+    <li class="prev">
+      <a href="SVGfdb0.html?page=4">
+        Previous
+      </a>
+    </li>
+  
+  
+  
+    <li>
+      <a href="SVG2679.html?page=1">1</a>
+    </li>
+  
+    <li>
+      <a href="SVG4658.html?page=2">2</a>
+    </li>
+  
+    <li>
+      <a href="SVG9ba9.html?page=3">3</a>
+    </li>
+  
+    <li>
+      <a href="SVGfdb0.html?page=4">4</a>
+    </li>
+  
+    <li class="selected">
+      <a href="SVGaf4d.html?page=5">5</a>
+    </li>
+  
+  
+  
+  </ol>
+
+
+
+      
+    </div>
+
+
+      </div>
+  </main>
+  <!-- Footer -->
+     
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script async="" type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script src="../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><!--[endif]---->
+
+    
+    <script src="../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../static/build/js/wiki.b26a4c181df3.js" charset="utf-8" id="wikiscript"></script>
+
+
+
+  
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/tag/SVG?page=5 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:40:41 GMT -->
+</body></html>

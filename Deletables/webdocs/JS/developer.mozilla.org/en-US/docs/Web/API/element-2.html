@@ -1,0 +1,1675 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/element by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 08:12:19 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  <title>Element</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+
+  
+<link rel="preload" href="../../../../static/fonts/locales/ZillaSlab-Regular.f9de6143fdfa.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="license" href="#license">
+  
+
+  
+    
+    
+
+    <link href="../../../../static/build/styles/mdn.83865b0f7c30.css" rel="stylesheet" type="text/css">
+
+    
+  
+
+    <link href="../../../../static/build/styles/wiki.aaf26c13c39b.css" rel="stylesheet" type="text/css">
+
+
+    
+
+  <link href="../../../../static/build/styles/locale-en-US.ca0bca387b42.css" rel="stylesheet" type="text/css">
+
+  
+    <script>
+      /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
+    </script>
+    
+
+
+
+  
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta property="og:site_name" content="MDN Web Docs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="MDN Web Docs">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../static/img/favicon144.e7e21ca263ca.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../static/img/favicon114.d526f38b09c5.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../static/img/favicon72.cc65d1d762a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../../static/img/favicon57.de33179910ae.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="../../../../static/img/favicon32.7f3da72dcea1.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script async="" type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  <link rel="dns-prefetch" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/API/Element$json">
+  <link rel="canonical" href="Element.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="Element.html" title="Element">
+  
+    
+      <link rel="alternate" hreflang="ar" href="https://developer.mozilla.org/ar/docs/Web/API/Element" title="Element">
+    
+      <link rel="alternate" hreflang="cs" href="https://developer.mozilla.org/cs/docs/Web/API/Element" title="Element">
+    
+      <link rel="alternate" hreflang="de" href="https://developer.mozilla.org/de/docs/Web/API/Element" title="Element">
+    
+      <link rel="alternate" hreflang="es" href="https://developer.mozilla.org/es/docs/Web/API/Element" title="element">
+    
+      <link rel="alternate" hreflang="fr" href="https://developer.mozilla.org/fr/docs/Web/API/Element" title="element">
+    
+      <link rel="alternate" hreflang="it" href="https://developer.mozilla.org/it/docs/Web/API/Element" title="element">
+    
+      <link rel="alternate" hreflang="ja" href="https://developer.mozilla.org/ja/docs/Web/API/Element" title="Element">
+    
+      <link rel="alternate" hreflang="ko" href="https://developer.mozilla.org/ko/docs/Web/API/Element" title="Element">
+    
+      <link rel="alternate" hreflang="pl" href="https://developer.mozilla.org/pl/docs/Web/API/Element" title="Element">
+    
+      <link rel="alternate" hreflang="pt-BR" href="https://developer.mozilla.org/pt-BR/docs/Web/API/Element" title="Element">
+    
+      <link rel="alternate" hreflang="pt-PT" href="https://developer.mozilla.org/pt-PT/docs/DOM/element" title="element">
+    
+      <link rel="alternate" hreflang="ro" href="https://developer.mozilla.org/ro/docs/Web/API/Element" title="Element">
+    
+      <link rel="alternate" hreflang="ru" href="https://developer.mozilla.org/ru/docs/Web/API/Element" title="Element">
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element" title="Element">
+    
+      <link rel="alternate" hreflang="zh-TW" href="https://developer.mozilla.org/zh-TW/docs/Web/API/Element" title="Element">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="Element">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/API/Element">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/API/Element">
+  <meta name="twitter:title" content="Element">
+  
+  <meta property="og:description" content="Element is the most general base class from which all objects in a Document inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from Element.">
+  <meta name="description" content="Element is the most general base class from which all objects in a Document inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from Element.">
+  <meta name="twitter:description" content="Element is the most general base class from which all objects in a Document inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from Element.">
+  
+
+</head>
+<body data-slug="Web/API/Element" contextmenu="edit-history-menu" data-search-url="" class="document">
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <!--[endif]---->
+
+  
+  <link rel="dns-prefetch" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/API/Element$json">
+  <link rel="canonical" href="Element.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="Element.html" title="Element">
+  
+    
+      <link rel="alternate" hreflang="ar" href="https://developer.mozilla.org/ar/docs/Web/API/Element" title="Element">
+    
+      <link rel="alternate" hreflang="cs" href="https://developer.mozilla.org/cs/docs/Web/API/Element" title="Element">
+    
+      <link rel="alternate" hreflang="de" href="https://developer.mozilla.org/de/docs/Web/API/Element" title="Element">
+    
+      <link rel="alternate" hreflang="es" href="https://developer.mozilla.org/es/docs/Web/API/Element" title="element">
+    
+      <link rel="alternate" hreflang="fr" href="https://developer.mozilla.org/fr/docs/Web/API/Element" title="element">
+    
+      <link rel="alternate" hreflang="it" href="https://developer.mozilla.org/it/docs/Web/API/Element" title="element">
+    
+      <link rel="alternate" hreflang="ja" href="https://developer.mozilla.org/ja/docs/Web/API/Element" title="Element">
+    
+      <link rel="alternate" hreflang="ko" href="https://developer.mozilla.org/ko/docs/Web/API/Element" title="Element">
+    
+      <link rel="alternate" hreflang="pl" href="https://developer.mozilla.org/pl/docs/Web/API/Element" title="Element">
+    
+      <link rel="alternate" hreflang="pt-BR" href="https://developer.mozilla.org/pt-BR/docs/Web/API/Element" title="Element">
+    
+      <link rel="alternate" hreflang="pt-PT" href="https://developer.mozilla.org/pt-PT/docs/DOM/element" title="element">
+    
+      <link rel="alternate" hreflang="ro" href="https://developer.mozilla.org/ro/docs/Web/API/Element" title="Element">
+    
+      <link rel="alternate" hreflang="ru" href="https://developer.mozilla.org/ru/docs/Web/API/Element" title="Element">
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element" title="Element">
+    
+      <link rel="alternate" hreflang="zh-TW" href="https://developer.mozilla.org/zh-TW/docs/Web/API/Element" title="Element">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="Element">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/API/Element">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/API/Element">
+  <meta name="twitter:title" content="Element">
+  
+  <meta property="og:description" content="Element is the most general base class from which all objects in a Document inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from Element.">
+  <meta name="description" content="Element is the most general base class from which all objects in a Document inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from Element.">
+  <meta name="twitter:description" content="Element is the most general base class from which all objects in a Document inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from Element.">
+  
+
+
+
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/wiki-compat-tables.9978a5ce31c2.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+
+        // interactive editor config
+        win.mdn.interactiveEditor = {
+            siteUrl: "https://developer.mozilla.org",
+            editorUrl: "https://interactive-examples.mdn.mozilla.net"
+        };
+
+    })(this);
+</script>
+    
+    <ul id="nav-access">
+  <li><a href="#content" id="skip-main">Skip to main content</a></li>
+  <li><a id="skip-language" href="#language">Select language</a></li>
+  <li><a href="#q" id="skip-search">Skip to search</a></li>
+</ul>
+
+    <!-- Header -->
+    <header id="main-header" class="header-main">
+      <a href="https://developer.mozilla.org/en-US/" class="logo">MDN Web Docs</a>
+      <div class="nav-toolbox-wrapper">
+        <nav id="main-nav" class="nav-main" role="navigation">
+    <ul>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web">Technologies
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-tech-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+                    <li><a href="../API.html">APIs / DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn">References &amp; Guides
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-learn-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-contact-submenu">
+              <div class="submenu-column">
+                <ul>
+                  <li>
+                      <a href="https://support.mozilla.org/">Get Firefox help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://stackoverflow.com/">Get web development help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                      <a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/element">Report a content problem
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</nav>
+        <div id="toolbox" class="toolbox">
+  <ul>
+    
+    <li class="nav-login"><div class="login">
+    
+        
+        <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2Felement" class="login-link js-login-link" data-service="GitHub" rel="nofollow">
+            Sign in<svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+    <title>Github</title>
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path>
+</svg>
+        </a>
+    
+</div></li>
+  </ul>
+</div>
+      </div>
+      <form id="nav-main-search" action="https://developer.mozilla.org/en-US/search" method="get" role="search" class="nav-main-search">
+  <div class="search-wrap">
+    <label for="main-q" class="offscreen">Search</label>
+    <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" aria-hidden="true">
+    <span class="search-trigger">
+        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true">
+    <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path>
+</svg>
+    </span>
+    <button type="submit" class="offscreen">Search</button>
+    <button type="button" id="close-header-search" class="close-header-search transparent">
+        <span class="offscreen">Close search</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+  </div>
+</form>
+    </header> 
+
+  <!-- Content will go here -->
+  <main id="content">
+      
+  <!-- heading -->
+  <div id="wiki-document-head" class="document-head">
+    <div class="center">
+      <!-- action buttons -->
+      <div class="document-actions">
+        
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons">
+      <li>
+          <button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false">
+              <svg class="icon icon-language" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M10.219 16.844c-.031.109-.797-.25-1-.328-.203-.094-1.125-.609-1.359-.766s-1.125-.891-1.234-.938a28.275 28.275 0 0 1-2.094 2.828c-.281.328-1.125 1.391-1.641 1.719-.078.047-.531.094-.594.063.25-.187.969-1.078 1.281-1.437.391-.453 2.25-3.047 2.562-3.641.328-.594 1.312-2.562 1.359-2.75-.156-.016-1.391.406-1.719.516-.313.094-1.172.297-1.234.344-.063.063-.016.25-.047.313s-.313.203-.484.234a1.647 1.647 0 0 1-.734 0c-.203-.047-.391-.25-.438-.328 0 0-.063-.094-.078-.359.187-.063.5-.078.844-.172s1.188-.344 1.641-.5 1.328-.484 1.594-.547c.281-.047.984-.516 1.359-.641s.641-.281.656-.203 0 .422-.016.516c-.016.078-.766 1.547-.875 1.781-.063.125-.5.953-1.203 2.047.25.109.781.328 1 .438.266.125 2.125.906 2.219.938s.266.75.234.875zM7.016 9.25c.047.266-.031.375-.063.438-.156.297-.547.5-.781.594s-.625.187-.938.187c-.141-.016-.422-.063-.766-.406-.187-.203-.328-.75-.266-.688s.516.125.719.078.688-.187.906-.25c.234-.078.703-.203.859-.219.156 0 .281.063.328.266zm10.906 2.016l.984 3.547-2.172-.656zM.609 23.766l10.844-3.625V4.016L.609 7.657v16.109zM20 18.813l1.594.484-2.828-10.266-1.563-.484-3.375 8.375 1.594.484.703-1.719 3.297 1.016zM12.141 3.781l8.953 2.875V.718zM17 24.453l2.469.203-.844 2.5L18 26.125c-1.266.812-2.828 1.437-4.312 1.687-.453.094-.969.187-1.422.187h-1.313c-1.656 0-4.672-.984-5.984-1.937-.094-.078-.125-.141-.125-.25 0-.172.125-.297.281-.297.141 0 .875.453 1.078.547 1.406.703 3.375 1.344 4.953 1.344 1.953 0 3.281-.25 5.063-1.016.516-.234.969-.531 1.453-.797zm7-16.859v16.859c-12.078-3.844-12.094-3.844-12.094-3.844C11.656 20.718.453 24.5.297 24.5a.3.3 0 0 1-.281-.203c0-.016-.016-.031-.016-.047V7.406c.016-.047.031-.125.063-.156.094-.109.219-.141.313-.172.047-.016 1-.328 2.328-.781v-6l8.719 3.094C11.532 3.36 21.251 0 21.392 0c.172 0 .313.125.313.328v6.531z"></path>
+</svg>
+              <span>Languages</span>
+          </button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                
+                
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ar/docs/Web/API/Element" data-locale="ar" title="Arabic">عربي (ar)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/cs/docs/Web/API/Element" data-locale="cs" title="Czech">Čeština (cs)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/de/docs/Web/API/Element" data-locale="de" title="German">Deutsch (de)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/es/docs/Web/API/Element" data-locale="es" title="Spanish">Español (es)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/fr/docs/Web/API/Element" data-locale="fr" title="French">Français (fr)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/it/docs/Web/API/Element" data-locale="it" title="Italian">Italiano (it)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ja/docs/Web/API/Element" data-locale="ja" title="Japanese">日本語 (ja)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ko/docs/Web/API/Element" data-locale="ko" title="Korean">한국어 (ko)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/pl/docs/Web/API/Element" data-locale="pl" title="Polish">Polski (pl)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/pt-BR/docs/Web/API/Element" data-locale="pt-BR" title="Portuguese (Brazilian)">Português (do&nbsp;Brasil) (pt-BR)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/pt-PT/docs/DOM/element" data-locale="pt-PT" title="Portuguese (Portugal)">Português (Europeu) (pt-PT)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ro/docs/Web/API/Element" data-locale="ro" title="Romanian">Română (ro)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ru/docs/Web/API/Element" data-locale="ru" title="Russian">Русский (ru)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element" data-locale="zh-CN" title="Chinese (Simplified)">中文 (简体) (zh-CN)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-TW/docs/Web/API/Element" data-locale="zh-TW" title="Chinese (Traditional)">正體中文 (繁體) (zh-TW)</a></bdi></li>
+                
+              
+
+              
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element$locales" rel="nofollow" id="translations-add">Add a translation</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+      
+      <li class="page-buttons-edit">
+          <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element$edit" class="button neutral" id="edit-button" rel="nofollow">
+              <svg class="icon icon-pencil" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M5.672 24l1.422-1.422-3.672-3.672L2 20.328V22h2v2h1.672zm8.172-14.5a.329.329 0 0 0-.344-.344.368.368 0 0 0-.266.109l-8.469 8.469a.366.366 0 0 0-.109.266c0 .203.141.344.344.344a.368.368 0 0 0 .266-.109l8.469-8.469a.366.366 0 0 0 .109-.266zM13 6.5l6.5 6.5-13 13H0v-6.5zM23.672 8c0 .531-.219 1.047-.578 1.406L20.5 12 14 5.5l2.594-2.578c.359-.375.875-.594 1.406-.594s1.047.219 1.422.594l3.672 3.656c.359.375.578.891.578 1.422z"></path>
+</svg>
+              Edit
+          </a>
+      </li>
+      
+
+        
+
+        <li class="page-buttons-advanced">
+            <button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false">
+                <svg class="icon icon-gear" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M16 14c0-2.203-1.797-4-4-4s-4 1.797-4 4 1.797 4 4 4 4-1.797 4-4zm8-1.703v3.469c0 .234-.187.516-.438.562l-2.891.438a8.86 8.86 0 0 1-.609 1.422c.531.766 1.094 1.453 1.672 2.156.094.109.156.25.156.391s-.047.25-.141.359c-.375.5-2.484 2.797-3.016 2.797a.795.795 0 0 1-.406-.141l-2.156-1.687a9.449 9.449 0 0 1-1.422.594c-.109.953-.203 1.969-.453 2.906a.573.573 0 0 1-.562.438h-3.469c-.281 0-.531-.203-.562-.469l-.438-2.875a9.194 9.194 0 0 1-1.406-.578l-2.203 1.672c-.109.094-.25.141-.391.141s-.281-.063-.391-.172c-.828-.75-1.922-1.719-2.578-2.625a.607.607 0 0 1 .016-.718c.531-.719 1.109-1.406 1.641-2.141a8.324 8.324 0 0 1-.641-1.547l-2.859-.422A.57.57 0 0 1 0 15.705v-3.469c0-.234.187-.516.422-.562l2.906-.438c.156-.5.359-.969.609-1.437a37.64 37.64 0 0 0-1.672-2.156c-.094-.109-.156-.234-.156-.375s.063-.25.141-.359c.375-.516 2.484-2.797 3.016-2.797.141 0 .281.063.406.156L7.828 5.94a9.449 9.449 0 0 1 1.422-.594c.109-.953.203-1.969.453-2.906a.573.573 0 0 1 .562-.438h3.469c.281 0 .531.203.562.469l.438 2.875c.484.156.953.344 1.406.578l2.219-1.672c.094-.094.234-.141.375-.141s.281.063.391.156c.828.766 1.922 1.734 2.578 2.656a.534.534 0 0 1 .109.344c0 .141-.047.25-.125.359-.531.719-1.109 1.406-1.641 2.141.266.5.484 1.016.641 1.531l2.859.438a.57.57 0 0 1 .453.562z"></path>
+</svg>
+                <span>Advanced</span>
+            </button>
+            <div class="submenu js-submenu" id="advanced-menu-submenu">
+                <!-- this page -->
+                <div class="submenu-column">
+                    <div class="title">Advanced</div>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element$history" rel="nofollow">History</a></li>
+                        
+                        
+                        
+
+
+                
+
+                <li class="page-print"><a href="#" onclick="return window.print();">Print this article</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+      </div>
+
+      <div class="document-title">
+        <h1>Element</h1>
+      </div>
+    <nav class="crumbs" role="navigation">
+      <ol typeof="BreadcrumbList" vocab="https://schema.org/" aria-label="breadcrumbs">
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="https://developer.mozilla.org/en-US/docs/Web" property="item" typeof="WebPage">
+              <span property="name">Web technology for developers</span>
+            </a>
+            <meta property="position" content="1">
+          </li>
+        
+          <li property="itemListElement" typeof="ListItem" class="crumb">
+            <a href="../API.html" property="item" typeof="WebPage">
+              <span property="name">Web APIs</span>
+            </a>
+            <meta property="position" content="2">
+          </li>
+        
+        <li property="itemListElement" typeof="ListItem" class="crumb">
+          <span property="name">Element</span>
+        </li>
+      </ol>
+    </nav></div>
+  </div>
+  
+  <div id="toc" class="toc">
+    <div class="center">
+      <div class="toc-head">Jump to:</div>
+        <ol class="toc-links">
+          <li><a rel="internal" href="#Properties">Properties</a></li><li><a rel="internal" href="#Methods">Methods</a></li><li><a rel="internal" href="#Specifications">Specifications</a></li><li><a rel="internal" href="#Browser_compatibility">Browser compatibility</a>
+        </li></ol>
+    </div>
+  </div>
+  
+
+      <div class="center clear">
+      
+
+    <div class="wiki-main-content" id="document-main"><div class="center">
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-left-present">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-main wiki-column text-content">
+
+              
+
+              
+              
+
+              
+
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <p></p><p></p>
+
+<p><span class="seoSummary"><strong><code>Element</code></strong> is the most general base class from which all objects in a <a href="Document.html" title="The Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree.HTMLElement"><code>Document</code></a> inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from <code>Element</code>.</span> For example, the <a href="HTMLElement.html" title="The HTMLElement interface represents any HTML element. Some elements directly implement this interface, others implement it via an interface that inherits it."><code>HTMLElement</code></a> interface is the base interface for HTML elements, while the <a href="SVGElement.html" title="All of the SVG DOM interfaces that correspond directly to elements in the SVG language derive from the SVGElement interface."><code>SVGElement</code></a> interface is the basis for all SVG elements. Most functionality is specified further down the class hierarchy.</p>
+
+<p>Languages outside the realm of the Web platform, like XUL through the <code>XULElement</code> interface, also implement <code>Element</code>.</p>
+
+<p></p><div class="hidden" id="inheritance_diagram">
+
+<pre class="brush: html">  &lt;div id="interfaceDiagram" style="display: inline-block; position: relative; width: 100%; padding-bottom: 11.666666666666666%; vertical-align: middle; overflow: hidden;"&gt;&lt;svg style="display: inline-block; position: absolute; top: 0; left: 0;" viewbox="-50 0 600 70" preserveAspectRatio="xMinYMin meet"&gt;&lt;a xlink:href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget" target="_top"&gt;&lt;rect x="1" y="1" width="110" height="50" fill="#fff" stroke="#D4DDE4" stroke-width="2px" /&gt;&lt;text  x="56" y="30" font-size="12px" font-family="Consolas,Monaco,Andale Mono,monospace" fill="#4D4E53" text-anchor="middle" alignment-baseline="middle"&gt;EventTarget&lt;/text&gt;&lt;/a&gt;&lt;polyline points="111,25  121,20  121,30  111,25" stroke="#D4DDE4" fill="none"/&gt;&lt;line x1="121" y1="25" x2="151" y2="25" stroke="#D4DDE4"/&gt;&lt;a xlink:href="https://developer.mozilla.org/en-US/docs/Web/API/Node" target="_top"&gt;&lt;rect x="151" y="1" width="75" height="50" fill="#fff" stroke="#D4DDE4" stroke-width="2px" /&gt;&lt;text  x="188.5" y="30" font-size="12px" font-family="Consolas,Monaco,Andale Mono,monospace" fill="#4D4E53" text-anchor="middle" alignment-baseline="middle"&gt;Node&lt;/text&gt;&lt;/a&gt;&lt;polyline points="226,25  236,20  236,30  226,25" stroke="#D4DDE4" fill="none"/&gt;&lt;line x1="236" y1="25" x2="266" y2="25" stroke="#D4DDE4"/&gt;&lt;a xlink:href="https://developer.mozilla.org/en-US/docs/Web/API/Element" target="_top"&gt;&lt;rect x="266" y="1" width="75" height="50" fill="#F4F7F8" stroke="#D4DDE4" stroke-width="2px" /&gt;&lt;text  x="303.5" y="30" font-size="12px" font-family="Consolas,Monaco,Andale Mono,monospace" fill="#4D4E53" text-anchor="middle" alignment-baseline="middle"&gt;Element&lt;/text&gt;&lt;/a&gt;&lt;/svg&gt;&lt;/div&gt;
+</pre>
+
+<pre class="brush: css">  a:hover text { fill: #0095DD; pointer-events: all;}
+</pre>
+
+</div>
+
+<iframe src="../../../../../mdn.mozillademos.org/en-US/docs/Web/API/Element%24samples/inheritance_diagram7fd1.html?revision=1394895" class="live-sample-frame inheritance-diagram-frame" height="70" width="600" id="frame_inheritance_diagram" frameborder="0"></iframe><p></p>
+
+<a class="dashAnchor" name="//apple_ref/Section/Properties"></a><h2 id="Properties" name="Properties">Properties</h2>
+
+<p><em>Inherits properties from its parent interface, <a href="Node.html" title="Node is an interface from which a number of DOM API object types inherit. It allows those types to be treated similarly; for example, inheriting the same set of methods, or being tested in the same way."><code>Node</code></a>, and by extension that interface's parent, <a href="EventTarget.html" title="EventTarget is an interface implemented by objects that can receive events and may have listeners for them."><code>EventTarget</code></a>. It implements the properties of <a href="ParentNode.html" title="The ParentNode mixin contains methods and properties that are common to all types of Node objects that can have children."><code>ParentNode</code></a>, <a href="ChildNode.html" title="The ChildNode interface contains methods that are particular to Node objects that can have a parent."><code>ChildNode</code></a>, <a href="NonDocumentTypeChildNode.html" title="The NonDocumentTypeChildNode interface contains methods that are particular to Node objects that can have a parent, but not suitable for DocumentType."><code>NonDocumentTypeChildNode</code></a>, </em>and <a rel="nofollow" href="Animatable.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>Animatable</code></a>.</p>
+
+<dl>
+ <dt><a href="Element/attributes.html" title="The Element.attributes property returns a live collection of all attribute nodes registered to the specified node. It is a NamedNodeMap, not an Array, so it has no Array methods and the Attr nodes' indexes may differ among browsers. To be more specific, attributes is a key/value pair of strings that represents any information regarding that attribute."><code>Element.attributes</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dd>Returns a <a href="NamedNodeMap.html" title="The NamedNodeMap interface represents a collection of Attr objects. Objects inside a NamedNodeMap are not in any particular order, unlike NodeList, although they may be accessed by an index as in an array."><code>NamedNodeMap</code></a> object containing the assigned attributes of the corresponding HTML element.</dd>
+ <dt><a href="Element/classList.html" title="The Element.classList is a read-only property which returns a&nbsp;live DOMTokenList collection of the class attributes of the element."><code>Element.classList</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dd>Returns a <a href="DOMTokenList.html" title="The DOMTokenList interface represents a set of space-separated tokens. Such a set is returned by Element.classList, HTMLLinkElement.relList, HTMLAnchorElement.relList, HTMLAreaElement.relList, HTMLIframeElement.sandbox, or HTMLOutputElement.htmlFor. It is indexed beginning with 0 as with JavaScript Array objects. DOMTokenList is always case-sensitive."><code>DOMTokenList</code></a> containing the list of class attributes.</dd>
+ <dt><a href="Element/className.html" title="className gets and sets the value of the class attribute of the specified element."><code>Element.className</code></a></dt>
+ <dd>Is a <a href="DOMString.html" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a> representing the class of the element.</dd>
+ <dt><a href="Element/clientHeight.html" title="The Element.clientHeight read-only property is&nbsp;zero for elements with no CSS or inline layout boxes, otherwise it's&nbsp;the inner height of an element in pixels, including padding but not the horizontal scrollbar height, border, or margin."><code>Element.clientHeight</code></a>&nbsp;<span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dd>Returns a <a href="../JavaScript/Reference/Global_Objects/Number.html" title="The Number JavaScript object is a wrapper object allowing you to work with numerical values. A Number object is created using the Number() constructor."><code>Number</code></a> representing the inner height of the element.</dd>
+ <dt><a href="Element/clientLeft.html" title="The width of the left border of an element in pixels. It includes the width of the vertical scrollbar if the text direction of the element is right–to–left and if there is an overflow causing a left vertical scrollbar to be rendered. clientLeft does not include the left margin or the left padding. clientLeft is read-only."><code>Element.clientLeft</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dd>Returns a <a href="../JavaScript/Reference/Global_Objects/Number.html" title="The Number JavaScript object is a wrapper object allowing you to work with numerical values. A Number object is created using the Number() constructor."><code>Number</code></a> representing the width of the left border of the element.</dd>
+ <dt><a href="Element/clientTop.html" title="The width of the top border of an element in pixels.&nbsp;It is a read-only, integer property of element."><code>Element.clientTop</code></a>&nbsp; <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dd>Returns a <a href="../JavaScript/Reference/Global_Objects/Number.html" title="The Number JavaScript object is a wrapper object allowing you to work with numerical values. A Number object is created using the Number() constructor."><code>Number</code></a> representing the width of the top border of the element.</dd>
+ <dt><a href="Element/clientWidth.html" title="The Element.clientWidth property is zero for elements with no CSS or inline layout boxes, otherwise it's&nbsp;the inner width of an element in pixels. It includes padding but not the vertical scrollbar (if present, if rendered), border or margin."><code>Element.clientWidth</code></a>&nbsp;<span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dd>Returns a <a href="../JavaScript/Reference/Global_Objects/Number.html" title="The Number JavaScript object is a wrapper object allowing you to work with numerical values. A Number object is created using the Number() constructor."><code>Number</code></a> representing the inner width of the element.</dd>
+ <dt><a rel="nofollow" href="Element/computedName.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>Element.computedName</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dd>Returns a <a href="DOMString.html" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a> containing the label exposed to accessibility.</dd>
+ <dt><a rel="nofollow" href="Element/computedRole.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>Element.computedRole</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dd>Returns a <a href="DOMString.html" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a> containing the ARIA role that has been applied to a particular element.&nbsp;</dd>
+ <dt><a href="Element/id.html" title="The Element.id property represents the element's identifier, reflecting the id global attribute."><code>Element.id</code></a></dt>
+ <dd>Is a <a href="DOMString.html" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a> representing the id of the element.</dd>
+ <dt><a href="Element/innerHTML.html" title="The Element property innerHTML gets or sets the HTML or XML markup contained within the element."><code>Element.innerHTML</code></a></dt>
+ <dd>Is a <a href="DOMString.html" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a> representing the markup of the element's content.</dd>
+ <dt><a href="Element/localName.html" title="The Element.localName read-only property returns the local part of the qualified name of an element."><code>Element.localName</code></a>&nbsp;<span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dd>A <a href="DOMString.html" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a> representing the local part of the qualified name of the element.</dd>
+ <dt><a href="Element/namespaceURI.html" title="The Element.namespaceURI read-only property returns the namespace URI of the element, or null if the element is not in a namespace."><code>Element.namespaceURI</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dd>The namespace URI of the element, or <code>null</code> if it is no namespace.
+ <div class="note">
+ <p><strong>Note:</strong> In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the <code><a rel="noopener" href="http://www.w3.org/1999/xhtml" class="external linkification-ext" title="Linkification: http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a></code> namespace in both HTML and XML trees. </p>
+ </div>
+ </dd>
+ <dt><a href="NonDocumentTypeChildNode/nextElementSibling.html" title="The NonDocumentTypeChildNode.nextElementSibling read-only property returns the element immediately following the specified one in its parent's children list, or null if the specified element is the last one in the list."><code>NonDocumentTypeChildNode.nextElementSibling</code></a>&nbsp;<span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dd>Is an <a href="Element.html" title="Element is the most general base class from which all objects in a Document inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from Element."><code>Element</code></a>, the element immediately following the given one in the tree, or <code>null</code> if there's no sibling node.</dd>
+ <dt><a href="Element/outerHTML.html" title="The outerHTML attribute of the Element DOM interface gets the serialized HTML fragment describing the element including its descendants. It can also be set to replace the element with nodes parsed from the given string."><code>Element.outerHTML</code></a></dt>
+ <dd>Is a <a href="DOMString.html" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a> representing the markup of the element including its content. When used as a setter, replaces the element with nodes parsed from the given string.</dd>
+ <dt><a href="Element/prefix.html" title="The Element.prefix read-only property returns the namespace prefix of the specified element, or null if no prefix is specified."><code>Element.prefix</code></a>&nbsp;<span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dd>A <a href="DOMString.html" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a> representing the namespace prefix of the element, or <code>null</code> if no prefix is specified.</dd>
+ <dt><a href="NonDocumentTypeChildNode/previousElementSibling.html" title="The NonDocumentTypeChildNode.previousElementSibling read-only property returns the Element immediately prior to the specified one in its parent's children list, or null if the specified element is the first one in the list."><code>NonDocumentTypeChildNode.previousElementSibling</code></a>&nbsp;<span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dd>Is a <a href="Element.html" title="Element is the most general base class from which all objects in a Document inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from Element."><code>Element</code></a>, the element immediately preceding the given one in the tree, or <code>null</code> if there is no sibling element.</dd>
+ <dt><a href="Element/scrollHeight.html" title="The Element.scrollHeight read-only property is a measurement of the height of an element's content, including content not visible on the screen due to overflow."><code>Element.scrollHeight</code></a>&nbsp; <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dd>Returns a <a href="../JavaScript/Reference/Global_Objects/Number.html" title="The Number JavaScript object is a wrapper object allowing you to work with numerical values. A Number object is created using the Number() constructor."><code>Number</code></a> representing the scroll view height of an element.</dd>
+ <dt><a href="Element/scrollLeft.html" title="The Element.scrollLeft property gets or sets the number of pixels that an element's content is scrolled to the left."><code>Element.scrollLeft</code></a></dt>
+ <dd>Is a <a href="../JavaScript/Reference/Global_Objects/Number.html" title="The Number JavaScript object is a wrapper object allowing you to work with numerical values. A Number object is created using the Number() constructor."><code>Number</code></a> representing the left scroll offset of the element.</dd>
+ <dt><a href="Element/scrollLeftMax.html" title="The Element.scrollLeftMax read-only property returns a Number representing the maximum left scroll offset possible for the element."><code>Element.scrollLeftMax</code></a> <span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dd>Returns a <a href="../JavaScript/Reference/Global_Objects/Number.html" title="The Number JavaScript object is a wrapper object allowing you to work with numerical values. A Number object is created using the Number() constructor."><code>Number</code></a> representing the maximum left scroll offset possible for the element.</dd>
+ <dt><a href="Element/scrollTop.html" title="The Element.scrollTop property gets or sets the number of pixels that an element's content is scrolled vertically. "><code>Element.scrollTop</code></a></dt>
+ <dd>Is a <a href="../JavaScript/Reference/Global_Objects/Number.html" title="The Number JavaScript object is a wrapper object allowing you to work with numerical values. A Number object is created using the Number() constructor."><code>Number</code></a> representing the top scroll offset the element.</dd>
+ <dt><a href="Element/scrollTopMax.html" title="The Element.scrollTopMax read-only property returns a Number representing the maximum top scroll offset possible for the element."><code>Element.scrollTopMax</code></a> <span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dd>Returns a <a href="../JavaScript/Reference/Global_Objects/Number.html" title="The Number JavaScript object is a wrapper object allowing you to work with numerical values. A Number object is created using the Number() constructor."><code>Number</code></a> representing the maximum top scroll offset possible for the element.</dd>
+ <dt><a href="Element/scrollWidth.html" title="The Element.scrollWidth read-only property is a measurement of the width of an element's content, including content not visible on the screen due to overflow."><code>Element.scrollWidth</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dd>Returns a <a href="../JavaScript/Reference/Global_Objects/Number.html" title="The Number JavaScript object is a wrapper object allowing you to work with numerical values. A Number object is created using the Number() constructor."><code>Number</code></a> representing the scroll view width of the element.</dd>
+ <dt><a href="Element/shadowRoot.html" title="The Element.shadowRoot&nbsp;read-only property represents the shadow root hosted by the element. Use&nbsp;Element.attachShadow() to add a shadow root to an existing element."><code>Element.shadowRoot</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dd>Returns the youngest shadow root that is hosted by the element.</dd>
+ <dt><a href="Element/slot.html" title="The slot property of the Element interface returns the name of the shadow DOM slot the element is inserted in."><code>Element.slot</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></dt>
+ <dd>Returns the name of the shadow DOM slot the element is inserted in.</dd>
+ <dt><a href="Element/tabStop.html" title="The tabStop property of the Element interface returns a Boolean indicating if the element can receive input focus via the tab key. If the specified element is a shadow host tab navigation is delegated to its children."><code>Element.tabStop</code></a> <span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></dt>
+ <dd>Is a <a href="../JavaScript/Reference/Global_Objects/Boolean.html" title="The Boolean object is an object wrapper for a boolean value."><code>Boolean</code></a> indicating if the element can receive input focus via the tab key.</dd>
+ <dt><a href="Element/tagName.html" title="Returns the tag name of the element on which it's called."><code>Element.tagName</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dd>Returns a <a href="../JavaScript/Reference/Global_Objects/String.html" title="The String global object is a constructor for strings or a sequence of characters."><code>String</code></a> with the name of the tag for the given element.</dd>
+ <dt><a rel="nofollow" href="Element/undoManager.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>Element.undoManager</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dd>Returns the <a rel="nofollow" href="UndoManager.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>UndoManager</code></a> associated with the element.</dd>
+ <dt><a rel="nofollow" href="Element/undoScope.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>Element.undoScope</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></dt>
+ <dd>Is a <a href="../JavaScript/Reference/Global_Objects/Boolean.html" title="The Boolean object is an object wrapper for a boolean value."><code>Boolean</code></a> indicating if the element is an undo scope host, or not.</dd>
+</dl>
+
+<div class="note">
+<p><strong>Note:</strong> DOM Level 3 defined <code>namespaceURI</code>, <code>localName</code> and <code>prefix</code> on the <a href="Node.html" title="Node is an interface from which a number of DOM API object types inherit. It allows those types to be treated similarly; for example, inheriting the same set of methods, or being tested in the same way."><code>Node</code></a> interface. In DOM4 they were moved to <code>Element</code>.</p>
+
+<p>This change is implemented in Chrome since version 46.0 and Firefox since version 48.0.</p>
+</div>
+
+<h3 id="Properties_included_from_Slotable">Properties included from Slotable</h3>
+
+<p><em>The <code>Element</code> interface includes the following property, defined on the <a href="Slotable.html" title="The Slotable mixin defines features that allow nodes to become the contents of a <slot> element — the following features are included in both Element and Text."><code>Slotable</code></a> mixin.</em></p>
+
+<dl>
+ <dt><a href="Slotable/assignedSlot.html" title="The assignedSlot read-only property of the Slotable interface returns an HTMLSlotElement representing the <slot> element the node is inserted in."><code>Slotable.assignedSlot</code></a>&nbsp;<span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dd>Returns a <a href="HTMLSlotElement.html" title="The HTMLSlotElement interface of the Shadow DOM API enables access to the name and assigned nodes of an HTML <slot> element."><code>HTMLSlotElement</code></a> representing the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot" title="The HTML <slot> element—part of the Web Components technology suite—is a placeholder inside a web component that you can fill with your own markup, which lets you create separate DOM trees and present them together."><code>&lt;slot&gt;</code></a> the node is inserted in.</dd>
+</dl>
+
+<h3 id="Handlers" name="Handlers">Event handlers</h3>
+
+<dl>
+ <dt><a href="Element/ongotpointercapture.html" title="ongotpointercapture is an EventHandler property of the Element interface that returns the event handler (function) for the gotpointercapture event type."><code>Element.ongotpointercapture</code></a></dt>
+ <dd>Returns the event handler for the <code><a href="../Events/gotpointercapture.html" title="/en-US/docs/Web/Events/gotpointercapture">gotpointercapture</a></code> event type.</dd>
+ <dt><a href="Element/onlostpointercapture.html" title="onlostpointercapture is an EventHandler property of the Element interface that returns the event handler (function) for the lostpointercapture event type."><code>Element.onlostpointercapture</code></a></dt>
+ <dd>Returns the event handler for the <code><a href="../Events/lostpointercapture.html" title="/en-US/docs/Web/Events/lostpointercapture">lostpointercapture</a></code> event type.</dd>
+</dl>
+
+<h4 id="Obsolete_event_handlers">Obsolete event handlers</h4>
+
+<dl>
+ <dt><a href="GlobalEventHandlers/onwheel.html" title="The documentation about this has not yet been written; please consider contributing!"><code>Element.onwheel</code></a></dt>
+ <dd>Returns the event handling code for the <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla_event_reference/wheel">wheel</a></code> event. <strong>This is now implemented on <a href="GlobalEventHandlers/onwheel.html" title="The onwheel property returns the onwheel event handler code on the current element."><code>GlobalEventHandlers</code></a>.</strong></dd>
+</dl>
+
+<a class="dashAnchor" name="//apple_ref/Section/Methods"></a><h2 id="Methods" name="Methods">Methods</h2>
+
+<p><em>Inherits methods from its parents <a href="Node.html" title="Node is an interface from which a number of DOM API object types inherit. It allows those types to be treated similarly; for example, inheriting the same set of methods, or being tested in the same way."><code>Node</code></a>, and its own parent, <a href="EventTarget.html" title="EventTarget is an interface implemented by objects that can receive events and may have listeners for them."><code>EventTarget</code></a><em>, and implements those of <a href="ParentNode.html" title="The ParentNode mixin contains methods and properties that are common to all types of Node objects that can have children."><code>ParentNode</code></a>, <a href="ChildNode.html" title="The ChildNode interface contains methods that are particular to Node objects that can have a parent."><code>ChildNode</code></a><em>, <a href="NonDocumentTypeChildNode.html" title="The NonDocumentTypeChildNode interface contains methods that are particular to Node objects that can have a parent, but not suitable for DocumentType."><code>NonDocumentTypeChildNode</code></a>, </em></em>and <a rel="nofollow" href="Animatable.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>Animatable</code></a>.</em></p>
+
+<dl>
+ <dt><a href="EventTarget/addEventListener.html" title="The EventTarget method addEventListener() sets up a function that will be&nbsp;called whenever the specified event is delivered to the target."><code>EventTarget.addEventListener()</code></a></dt>
+ <dd>Registers an event handler to a specific event type on the element.</dd>
+ <dt><a href="Element/attachShadow.html" title="The Element.attachShadow() method attaches a shadow DOM tree to the specified element and returns a reference to its&nbsp;ShadowRoot."><code>Element.attachShadow()</code></a></dt>
+ <dd>Attatches a shadow DOM tree to the specified element and returns a reference to its <a href="ShadowRoot.html" title="The ShadowRoot interface of the Shadow DOM API is the root node of a DOM subtree that is rendered separately from a document's main DOM tree."><code>ShadowRoot</code></a>.</dd>
+ <dt><a href="Element/animate.html" title="The Element interface's animate() method is a shortcut method which creates a new Animation, applies it to the element, then plays the animation. It returns the created Animation object instance."><code>Element.animate()</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></dt>
+ <dd>A shortcut method to create and run an animation on an element. Returns the created Animation object instance.</dd>
+ <dt><a href="Element/closest.html" title="For browsers that do not support&nbsp;Element.closest(), but carry support for&nbsp;element.matches() (or a prefixed equivalent, meaning IE9+), a polyfill exists:"><code>Element.closest()</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></dt>
+ <dd>Returns the <a href="Element.html" title="Element is the most general base class from which all objects in a Document inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from Element."><code>Element</code></a> which is the closest ancestor of the current element (or the current element itself) which matches the selectors given in parameter.</dd>
+ <dt><a href="Element/createShadowRoot.html" title="Use Element.createShadowRoot&nbsp;to create an instance of&nbsp;shadow DOM. When shadow DOM is created, it is always attached to an existing element. After the shadow DOM is created, the element that it is attached to is called&nbsp;the shadow root."><code>Element.createShadowRoot()</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span>&nbsp;<span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></dt>
+ <dd>Creates a <a href="../Web_Components/Using_shadow_DOM.html">shadow DOM</a> on on the element, turning it into a shadow host. Returns a <a href="ShadowRoot.html" title="The ShadowRoot interface of the Shadow DOM API is the root node of a DOM subtree that is rendered separately from a document's main DOM tree."><code>ShadowRoot</code></a>.</dd>
+ <dt><a href="EventTarget/dispatchEvent.html" title="Dispatches an Event at the specified EventTarget, (synchronously) invoking the affected EventListeners in the appropriate order. The normal event processing rules (including the capturing and optional bubbling phase) also apply to events dispatched manually with dispatchEvent()."><code>EventTarget.dispatchEvent()</code></a></dt>
+ <dd>Dispatches an event to this node in the DOM and returns a <a href="../JavaScript/Reference/Global_Objects/Boolean.html" title="The Boolean object is an object wrapper for a boolean value."><code>Boolean</code></a> that indicates whether no handler canceled the event.</dd>
+ <dt><a rel="nofollow" href="Element/getAnimations.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>Element.getAnimations()</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></dt>
+ <dd>Returns an array of Animation objects currently active on the element.</dd>
+ <dt><a href="Element/getAttribute.html" title="getAttribute() returns the value of a specified attribute on the element."><code>Element.getAttribute()</code></a></dt>
+ <dd>Retrieves the value of the named attribute from the current node and returns it as an <a href="../JavaScript/Reference/Global_Objects/Object.html" title="The Object constructor creates an object wrapper."><code>Object</code></a>.</dd>
+ <dt><a href="Element/getAttributeNames.html" title="Element.getAttributeNames() returns the attribute names of the element as an Array of strings."><code>Element.getAttributeNames()</code></a></dt>
+ <dd>Returns an array of attribute names from the current element.</dd>
+ <dt><a href="Element/getAttributeNS.html" title="getAttributeNS returns the string value of the attribute with the specified namespace and name. If the named attribute does not exist, the value returned will either be null or &quot;&quot; (the empty string); see Notes for details."><code>Element.getAttributeNS()</code></a></dt>
+ <dd>Retrieves the value of the attribute with the specified name and namespace, from the current node and returns it as an <a href="../JavaScript/Reference/Global_Objects/Object.html" title="The Object constructor creates an object wrapper."><code>Object</code></a>.</dd>
+ <dt><a href="Element/getAttributeNode.html" title="Returns the specified attribute of the specified element, as an Attr node."><code>Element.getAttributeNode()</code></a> <span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></dt>
+ <dd>Retrieves the node representation of the named attribute from the current node and returns it as an <a href="Attr.html" title="This type represents a DOM element's attribute as an object. In most DOM methods, you will probably directly retrieve the attribute as a string (e.g., Element.getAttribute(), but certain functions (e.g., Element.getAttributeNode()) or means of iterating give Attr types."><code>Attr</code></a>.</dd>
+ <dt><a href="Element/getAttributeNodeNS.html" title="Returns the Attr node for the attribute with the given namespace and name."><code>Element.getAttributeNodeNS()</code></a> <span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></dt>
+ <dd>Retrieves the node representation of the attribute with the specified name and namespace, from the current node and returns it as an <a href="Attr.html" title="This type represents a DOM element's attribute as an object. In most DOM methods, you will probably directly retrieve the attribute as a string (e.g., Element.getAttribute(), but certain functions (e.g., Element.getAttributeNode()) or means of iterating give Attr types."><code>Attr</code></a>.</dd>
+ <dt><a href="Element/getBoundingClientRect.html" title="The&nbsp;Element.getBoundingClientRect()&nbsp;method returns the size of an element and its position relative to the viewport."><code>Element.getBoundingClientRect()</code></a></dt>
+ <dd>Returns the size of an element and its position relative to the viewport.</dd>
+ <dt><a href="Element/getClientRects.html" title="The Element.getClientRects() method returns a collection of DOMRect objects that indicate the bounding rectangles for each CSS border box in a client."><code>Element.getClientRects()</code></a></dt>
+ <dd>Returns a collection of rectangles that indicate the bounding rectangles for each line of text in a client.</dd>
+ <dt><a href="Element/getElementsByClassName.html" title="The Element method getElementsByClassName() returns a live HTMLCollection which contains every descendant element which has the specified class name or names."><code>Element.getElementsByClassName()</code></a></dt>
+ <dd>Returns a live <a href="HTMLCollection.html" title="The HTMLCollection interface represents a generic collection (array-like object similar to arguments) of elements (in document order) and offers methods and properties for selecting from the list."><code>HTMLCollection</code></a> that contains all descendants of the current element that possess the list of classes given in the parameter.</dd>
+ <dt><a href="Element/getElementsByTagName.html" title="The Element.getElementsByTagName() method returns a live HTMLCollection of elements with the given tag name. The subtree underneath the specified element is searched, excluding the element itself. The returned list is live, meaning that it updates itself with the DOM tree automatically. Consequently, there is no need to call several times Element.getElementsByTagName() with the same element and arguments."><code>Element.getElementsByTagName()</code></a></dt>
+ <dd>Returns a live <a href="HTMLCollection.html" title="The HTMLCollection interface represents a generic collection (array-like object similar to arguments) of elements (in document order) and offers methods and properties for selecting from the list."><code>HTMLCollection</code></a> containing all descendant elements, of a particular tag name, from the current element.</dd>
+ <dt><a href="Element/getElementsByTagNameNS.html" title="The Element.getElementsByTagNameNS() method returns a live HTMLCollection of elements with the given tag name belonging to the given namespace. It is similar to Document.getElementsByTagNameNS, except that its search is restricted to descendants of the specified element."><code>Element.getElementsByTagNameNS()</code></a></dt>
+ <dd>Returns a live <a href="HTMLCollection.html" title="The HTMLCollection interface represents a generic collection (array-like object similar to arguments) of elements (in document order) and offers methods and properties for selecting from the list."><code>HTMLCollection</code></a> containing all descendant elements, of a particular tag name and namespace, from the current element.</dd>
+ <dt><a href="Element/hasAttribute.html" title="The Element.hasAttribute() method returns a Boolean value indicating whether the specified element has the specified attribute or not."><code>Element.hasAttribute()</code></a></dt>
+ <dd>Returns a <a href="../JavaScript/Reference/Global_Objects/Boolean.html" title="The Boolean object is an object wrapper for a boolean value."><code>Boolean</code></a> indicating if the element has the specified attribute or not.</dd>
+ <dt><a href="Element/hasAttributeNS.html" title="hasAttributeNS returns a boolean value indicating whether the current element has the specified attribute."><code>Element.hasAttributeNS()</code></a></dt>
+ <dd>Returns a <a href="../JavaScript/Reference/Global_Objects/Boolean.html" title="The Boolean object is an object wrapper for a boolean value."><code>Boolean</code></a> indicating if the element has the specified attribute, in the specified namespace, or not.</dd>
+ <dt><a href="Element/hasAttributes.html" title="The Element.hasAttributes() method returns Boolean value, indicating if the current element has any attributes or not."><code>Element.hasAttributes()</code></a></dt>
+ <dd>Returns a <a href="../JavaScript/Reference/Global_Objects/Boolean.html" title="The Boolean object is an object wrapper for a boolean value."><code>Boolean</code></a> indicating if the element has one or more HTML attributes present.</dd>
+ <dt><a href="Element/insertAdjacentElement.html" title="The insertAdjacentElement() method inserts a given element node at a given position relative to the element it is invoked upon."><code>Element.insertAdjacentElement()</code></a></dt>
+ <dd>Inserts a given element node at a given position relative to the element it is invoked upon.</dd>
+ <dt><a href="Element/insertAdjacentHTML.html" title="insertAdjacentHTML() parses the specified text as HTML or XML and inserts the resulting nodes into the DOM tree at a specified position. It does not reparse the element it is being used on and thus it does not corrupt the existing elements inside that element. This&nbsp;avoids the extra step of serialization, making&nbsp;it much faster than direct innerHTML manipulation."><code>Element.insertAdjacentHTML()</code></a></dt>
+ <dd>Parses the text as HTML or XML and inserts the resulting nodes into the tree in the position given.</dd>
+ <dt><a href="Element/insertAdjacentText.html" title="The insertAdjacentText() method inserts a given text node at a given position relative to the element it is invoked upon."><code>Element.insertAdjacentText()</code></a></dt>
+ <dd>Inserts a given text node at a given position relative to the element it is invoked upon.</dd>
+ <dt><a href="Element/matches.html" title="The Element.matches() method returns true if the element would be selected by the specified selector string; otherwise, returns false."><code>Element.matches()</code></a><code> </code><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></dt>
+ <dd>Returns a <a href="../JavaScript/Reference/Global_Objects/Boolean.html" title="The Boolean object is an object wrapper for a boolean value."><code>Boolean</code></a> indicating whether or not the element would be selected by the specified selector string.</dd>
+ <dt><a href="Element/querySelector.html" title="Returns the first element that is a descendant of the element on which it is invoked that matches the specified group of selectors."><code>Element.querySelector()</code></a></dt>
+ <dd>Returns the first <a href="Node.html" title="Node is an interface from which a number of DOM API object types inherit. It allows those types to be treated similarly; for example, inheriting the same set of methods, or being tested in the same way."><code>Node</code></a> which matches the specified selector string relative to the element.</dd>
+ <dt><a href="Element/querySelectorAll.html" title="The Element method querySelectorAll() returns a static (not live) NodeList representing a list of elements matching the specified group of selectors which are descendants of the element on which the method was called."><code>Element.querySelectorAll()</code></a></dt>
+ <dd>Returns a <a href="NodeList.html" title="NodeList objects are collections of nodes such as those returned by properties such as Node.childNodes and the document.querySelectorAll() method."><code>NodeList</code></a> of nodes which match the specified selector string relative to the element.</dd>
+ <dt><a href="Element/releasePointerCapture.html" title="Releases (stops) pointer capture that was previously set for a specific (PointerEvent) pointer."><code>Element.releasePointerCapture()</code></a></dt>
+ <dd>Releases (stops) pointer capture that was previously set for a specific <a href="PointerEvent.html" title="The PointerEvent interface represents the state of a DOM event produced by a pointer such as the geometry of the contact point, the device type that generated the event, the amount of pressure that was applied on the contact surface, etc."><code>pointer event</code></a>.</dd>
+ <dt><a href="ChildNode/remove.html" title="The ChildNode.remove() method removes the object from the tree it belongs to."><code>ChildNode.remove()</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></dt>
+ <dd>Removes the element from the children list of its parent.</dd>
+ <dt><a href="Element/removeAttribute.html" title="removeAttribute removes an attribute from the specified element."><code>Element.removeAttribute()</code></a></dt>
+ <dd>Removes the named attribute from the current node.</dd>
+ <dt><a href="Element/removeAttributeNS.html" title="removeAttributeNS removes the specified attribute from an element."><code>Element.removeAttributeNS()</code></a></dt>
+ <dd>Removes the attribute with the specified name and namespace, from the current node.</dd>
+ <dt><a href="Element/removeAttributeNode.html" title="removeAttributeNode removes the specified attribute from the current element."><code>Element.removeAttributeNode()</code></a> <span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></dt>
+ <dd>Removes the node representation of the named attribute from the current node.</dd>
+ <dt><a href="EventTarget/removeEventListener.html" title="The EventTarget.removeEventListener() method removes from the&nbsp;EventTarget an event listener previously registered with EventTarget.addEventListener(). The event listener to be removed is identified using a combination of the event type, the event listener function itself, and various optional options that may affect the matching process; see Matching event listeners for removal"><code>EventTarget.removeEventListener()</code></a></dt>
+ <dd>Removes an event listener from the element.</dd>
+ <dt><a href="Element/requestFullscreen-2.html" title="The Element.requestFullscreen() method issues an asynchronous request to make the element be displayed full-screen."><code>Element.requestFullscreen()</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></dt>
+ <dd>Asynchronously asks the browser to make the element full-screen.</dd>
+ <dt><a href="Element/requestPointerLock.html" title="The Element.requestPointerLock() method allows to asynchronously ask for the pointer to be locked on the given element."><code>Element.requestPointerLock()</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></dt>
+ <dd>Allows to asynchronously ask for the pointer to be locked on the given element.</dd>
+</dl>
+
+<dl>
+ <dt><a href="Element/scrollIntoView.html" title="The Element.scrollIntoView() method scrolls the element on which it's called into the visible area of the browser window."><code>Element.scrollIntoView()</code></a>&nbsp;<span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></dt>
+ <dd>Scrolls the page until the element gets into the view.</dd>
+ <dt><a href="Element/setAttribute.html" title="Sets the value of an attribute on the specified element. If the attribute already exists, the value is updated; otherwise a new attribute is added with the specified name and value."><code>Element.setAttribute()</code></a></dt>
+ <dd>Sets the value of a named attribute of the current node.</dd>
+ <dt><a href="Element/setAttributeNS.html" title="setAttributeNS adds a new attribute or changes the value of an attribute with the given namespace and name."><code>Element.setAttributeNS()</code></a></dt>
+ <dd>Sets the value of the attribute with the specified name and namespace, from the current node.</dd>
+ <dt><a href="Element/setAttributeNode.html" title="setAttributeNode() adds a new Attr node to the specified element."><code>Element.setAttributeNode()</code></a> <span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></dt>
+ <dd>Sets the node representation of the named attribute from the current node.</dd>
+ <dt><a href="Element/setAttributeNodeNS.html" title="setAttributeNodeNS adds a new namespaced attribute node to an element."><code>Element.setAttributeNodeNS()</code></a> <span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></dt>
+ <dd>Sets the node representation of the attribute with the specified name and namespace, from the current node.</dd>
+ <dt><a href="Element/setCapture.html" title="Call this method during the handling of a mousedown event to retarget all mouse events to this element until the mouse button is released or document.releaseCapture()&nbsp;is called."><code>Element.setCapture()</code></a> <span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></dt>
+ <dd>Sets up mouse event capture, redirecting all mouse events to this element.</dd>
+ <dt><a href="Element/setPointerCapture.html" title="Pointer capture allows events for a particular pointer event (PointerEvent) to be re-targeted to a particular element instead of the normal target (or hit test) at a pointer's location. This can be used to ensure that an element continues to receive pointer events even if the pointer device's contact moves off the element (for example by scrolling)."><code>Element.setPointerCapture()</code></a></dt>
+ <dd>Designates a specific element as the capture target of future <a href="Pointer_events.html">pointer events</a>.</dd>
+ <dt><a href="Element/toggleAttribute.html" title="Toggle a boolean attribute (removing it if it is present and adding it if it is not present) on the specified element."><code>Element.toggleAttribute()</code></a></dt>
+ <dd>Toggles a boolean attribute, removing it if it is present and adding it if it is not present, on the specified element.</dd>
+</dl>
+
+<a class="dashAnchor" name="//apple_ref/Section/Specifications"></a><h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><a rel="noopener" lang="en" hreflang="en" href="https://drafts.csswg.org/web-animations/" title="The 'Web Animations' specification" class="external">Web Animations</a></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+   <td>Added the <code>getAnimations()</code> method.</td>
+  </tr>
+  <tr>
+   <td><a rel="noopener" href="https://dvcs.w3.org/hg/undomanager/raw-file/tip/undomanager.html" lang="en" class="external" hreflang="en">UndoManager and DOMTransaction<br><small lang="en-US">The definition of 'Element' in that specification.</small></a></td>
+   <td><span class="spec-ED">Editor's Draft</span></td>
+   <td>Added the <code>undoScope</code> and <code>undoManager</code> properties.</td>
+  </tr>
+  <tr>
+   <td><a rel="noopener" href="https://w3c.github.io/pointerevents/#extensions-to-the-element-interface" lang="en" class="external" hreflang="en">Pointer Events – Level 2<br><small lang="en-US">The definition of 'Element' in that specification.</small></a></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+   <td>Added the following event handlers: <code>ongotpointercapture</code> and <code>onlostpointercapture</code>.<br>
+    Added the following methods: <code>setPointerCapture()</code> and <code>releasePointerCapture()</code>.</td>
+  </tr>
+  <tr>
+   <td><a rel="noopener" href="https://www.w3.org/TR/pointerevents/#extensions-to-the-element-interface" lang="en" class="external" hreflang="en">Pointer Events<br><small lang="en-US">The definition of 'Element' in that specification.</small></a></td>
+   <td><span class="spec-REC">Recommendation</span></td>
+   <td>Added the following event handlers: <code>ongotpointercapture</code> and <code>onlostpointercapture</code>.<br>
+    Added the following methods: <code>setPointerCapture()</code> and <code>releasePointerCapture()</code>.</td>
+  </tr>
+  <tr>
+   <td><a rel="noopener" href="https://www.w3.org/TR/selectors-api/#interface-definitions" lang="en" class="external" hreflang="en">Selectors API Level 1<br><small lang="en-US">The definition of 'Element' in that specification.</small></a></td>
+   <td><span class="spec-Obsolete">Obsolete</span></td>
+   <td>Added the following methods: <code>querySelector()</code> and <code>querySelectorAll()</code>.</td>
+  </tr>
+  <tr>
+   <td><a rel="noopener" href="https://w3c.github.io/pointerlock/index.html#element-interface" lang="en" class="external" hreflang="en">Pointer Lock<br><small lang="en-US">The definition of 'Element' in that specification.</small></a></td>
+   <td><span class="spec-CR">Candidate Recommendation</span></td>
+   <td>Added the <code>requestPointerLock()</code> method.</td>
+  </tr>
+  <tr>
+   <td><a rel="noopener" href="https://fullscreen.spec.whatwg.org/#api" lang="en" class="external" hreflang="en">Fullscreen API<br><small lang="en-US">The definition of 'Element' in that specification.</small></a></td>
+   <td><span class="spec-Living">Living Standard</span></td>
+   <td>Added the <code>requestFullscreen()</code> method.</td>
+  </tr>
+  <tr>
+   <td><a rel="noopener" href="https://w3c.github.io/DOM-Parsing/#extensions-to-the-element-interface" lang="en" class="external" hreflang="en">DOM Parsing and Serialization<br><small lang="en-US">The definition of 'Element' in that specification.</small></a></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+   <td>Added the following properties: <code>innerHTML</code>, and <code>outerHTML</code>.<br>
+    Added the following method: <code>insertAdjacentHTML()</code>.</td>
+  </tr>
+  <tr>
+   <td><a rel="noopener" href="https://drafts.csswg.org/cssom-view/#extensions-to-the-element-interface" lang="en" class="external" hreflang="en">CSS Object Model (CSSOM) View Module<br><small lang="en-US">The definition of 'Element' in that specification.</small></a></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+   <td>Added the following properties: <code>scrollTop</code>, <code>scrollLeft</code>, <code>scrollWidth</code>, <code>scrollHeight</code>, <code>clientTop</code>, <code>clientLeft</code>, <code>clientWidth</code>, and <code>clientHeight</code>.<br>
+    Added the following methods: <code>getClientRects()</code>, <code>getBoundingClientRect()</code>, and <code>scrollIntoView()</code>.</td>
+  </tr>
+  <tr>
+   <td><a rel="noopener" href="https://www.w3.org/TR/ElementTraversal/#ecmascript-bindings" lang="en" class="external" hreflang="en">Element Traversal Specification<br><small lang="en-US">The definition of 'Element' in that specification.</small></a></td>
+   <td><span class="spec-Obsolete">Obsolete</span></td>
+   <td>Added inheritance of the <a href="ElementTraversal.html" title="The ElementTraversal interface was defining methods allowing to access from one Node to another one in the document tree."><code>ElementTraversal</code></a> interface.</td>
+  </tr>
+  <tr>
+   <td><a rel="noopener" href="https://dom.spec.whatwg.org/#interface-element" lang="en" class="external" hreflang="en">DOM<br><small lang="en-US">The definition of 'Element' in that specification.</small></a></td>
+   <td><span class="spec-Living">Living Standard</span></td>
+   <td>Removed the following methods: <code>closest()</code>, <code>setIdAttribute()</code>, <code>setIdAttributeNS()</code>, and <code>setIdAttributeNode()</code>.<br>
+    Removed the <code>schemaTypeInfo</code> property.<br>
+    Modified the return value of <code>getElementsByTag()</code> and <code>getElementsByTagNS()</code>.<br>
+    Moved <code>hasAttributes()</code> from the <code>Node</code> interface to this one.<br>
+    Inserted <code>insertAdjacentElement()</code> and <code>insertAdjacentText()</code>.</td>
+  </tr>
+  <tr>
+   <td><a rel="noopener" href="https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-745549614" lang="en" class="external" hreflang="en">Document Object Model (DOM) Level 3 Core Specification<br><small lang="en-US">The definition of 'Element' in that specification.</small></a></td>
+   <td><span class="spec-Obsolete">Obsolete</span></td>
+   <td>Added the following methods: <code>setIdAttribute()</code>, <code>setIdAttributeNS()</code>, and <code>setIdAttributeNode()</code>. These methods were never implemented and have been removed in later specifications.<br>
+    Added the <code>schemaTypeInfo</code> property. This property was never implemented and has been removed in later specifications.</td>
+  </tr>
+  <tr>
+   <td><a rel="noopener" href="https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-745549614" lang="en" class="external" hreflang="en">Document Object Model (DOM) Level 2 Core Specification<br><small lang="en-US">The definition of 'Element' in that specification.</small></a></td>
+   <td><span class="spec-Obsolete">Obsolete</span></td>
+   <td>The <code>normalize()</code> method has been moved to <a href="Node.html" title="Node is an interface from which a number of DOM API object types inherit. It allows those types to be treated similarly; for example, inheriting the same set of methods, or being tested in the same way."><code>Node</code></a>.</td>
+  </tr>
+  <tr>
+   <td><a rel="noopener" href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-745549614" lang="en" class="external" hreflang="en">Document Object Model (DOM) Level 1 Specification<br><small lang="en-US">The definition of 'Element' in that specification.</small></a></td>
+   <td><span class="spec-Obsolete">Obsolete</span></td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<a class="dashAnchor" name="//apple_ref/Section/Browser%20compatibility"></a><h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div><p class="warning"><strong><a rel="noopener" href="https://github.com/mdn/browser-compat-data" class="external">We're converting our compatibility data into a machine-readable JSON format</a></strong>.
+            This compatibility table still uses the old format,
+            because we haven't yet converted the data it contains.
+            <strong><a href="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Structures/Compatibility_tables">Find out how you can help!</a></strong></p>
+
+<div class="htab">
+    <a id="AutoCompatibilityTable" name="AutoCompatibilityTable"></a>
+    <ul>
+        <li class="selected"><a>Desktop</a></li>
+        <li><a>Mobile</a></li>
+    </ul>
+</div></div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>1.0</td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td>1.0 (1.7 or earlier)</td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td>1.0</td>
+  </tr>
+  <tr>
+   <td><code>children</code></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/3" title="Released on 2008-06-17.">3.0</a> (1.9)</td>
+   <td>7.0 with a significant bug [1]<br>
+    9.0 according to the spec</td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+  </tr>
+  <tr>
+   <td><code>childElementCount</code>, <code>nextElementSibling</code>, <code>previousElementSibling</code></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/3.5" title="Released on 2009-06-30.">3.5</a> (1.9.1)</td>
+   <td>9.0</td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+  </tr>
+  <tr>
+   <td><code>firstElementChild</code>, <code>lastElementChild</code></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/3" title="Released on 2008-06-17.">3.0</a> (1.9)</td>
+   <td>9.0</td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+  </tr>
+  <tr>
+   <td><code>classList</code></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/3.6" title="Released on 2010-01-21.">3.6</a> (1.9.2)</td>
+   <td>&nbsp;</td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+  </tr>
+  <tr>
+   <td><code>outerHTML</code> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/11" title="Released on 2012-03-13.">11</a> (11)</td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+  </tr>
+  <tr>
+   <td><code>clientLeft</code>, <code>clientTop</code></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/3.5" title="Released on 2009-06-30.">3.5</a> (1.9.1)</td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+  </tr>
+  <tr>
+   <td><code>getBoundingClientRect()</code>, <code>getClientRects()</code></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/3" title="Released on 2008-06-17.">3.0</a> (1.9)</td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+  </tr>
+  <tr>
+   <td><code>querySelector()</code>, <code>querySelectorAll()</code></td>
+   <td>1.0</td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/3.5" title="Released on 2009-06-30.">3.5</a> (1.9.1)</td>
+   <td>8.0</td>
+   <td>10.0</td>
+   <td>3.2 (525.3)</td>
+  </tr>
+  <tr>
+   <td><code>insertAdjacentHTML()</code> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></td>
+   <td>1.0</td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/8" title="Released on 2011-11-08.">8</a> (8)</td>
+   <td>4.0</td>
+   <td>7.0</td>
+   <td>4.0 (527)</td>
+  </tr>
+  <tr>
+   <td><code>setCapture() </code><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/4" title="Released on 2011-03-22.">4.0</a> (2)</td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+  </tr>
+  <tr>
+   <td><code>oncopy</code>, <code>oncut</code>, <code>onpaste</code> <span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/3" title="Released on 2008-06-17.">3.0</a> (1.9)</td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td>&nbsp;</td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+  </tr>
+  <tr>
+   <td><code>onwheel</code> <span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/17" title="Released on 2012-11-20.">17</a> (17)</td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+  </tr>
+  <tr>
+   <td><code>ongotpointercapture</code>, <code>onlostpointercapture</code>, <code>setPointerCapture()</code>, and <code>releasePointerCapture()</code></td>
+   <td>52.0 [4]</td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span> <sup>[3]</sup></td>
+   <td>10.0</td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+  </tr>
+  <tr>
+   <td><code>matches()</code> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span> with the non-standard name <code>webkitMatchesSelector</code></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span> <span class="inlineIndicator prefixBox prefixBoxInline" title="prefix"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with 'webkit' as this browser considers it experimental">webkit</a></span> <span class="inlineIndicator prefixBox prefixBoxInline" title="prefix"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with 'ms' as this browser considers it experimental">ms</a></span></td>
+   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/3.6" title="Released on 2010-01-21.">3.6</a> (1.9.2) with the non-standard name <code>mozMatchesSelector</code><br>
+    <a href="https://developer.mozilla.org/en-US/Firefox/Releases/34" title="Released on 2014-12-01.">34</a> (34) with the standard name</td>
+   <td>9.0 with the non-standard name <code>msMatchesSelector</code></td>
+   <td>11.5 with the non-standard name <code>oMatchesSelector</code><br>
+    15.0 with the non-standard name <code>webkitMatchesSelector</code></td>
+   <td>5.0 with the non-standard name <code>webkitMatchesSelector</code></td>
+  </tr>
+  <tr>
+   <td><code>requestPointerLock()</code></td>
+   <td>16.0 <span class="inlineIndicator prefixBox prefixBoxInline" title="prefix"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with 'webkit' as this browser considers it experimental">webkit</a></span>, behind an about:flags<br>
+    22.0 <span class="inlineIndicator prefixBox prefixBoxInline" title="prefix"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with 'webkit' as this browser considers it experimental">webkit</a></span> (with special cases, progressively lifted see [2])</td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/14" title="Released on 2012-07-17.">14</a> (14)<span class="inlineIndicator prefixBox prefixBoxInline" title="prefix"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with 'moz' as this browser considers it experimental">moz</a></span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+  </tr>
+  <tr>
+   <td><code>requestFullscreen()</code></td>
+   <td>14.0 <span class="inlineIndicator prefixBox prefixBoxInline" title="prefix"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with 'webkit' as this browser considers it experimental">webkit</a></span></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/10" title="Released on 2012-01-31.">10</a> (10) <span class="inlineIndicator prefixBox prefixBoxInline" title="prefix"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with 'moz' as this browser considers it experimental">moz</a></span></td>
+   <td>11.0 <span class="inlineIndicator prefixBox prefixBoxInline" title="prefix"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with 'ms' as this browser considers it experimental">ms</a></span></td>
+   <td>12.10<br>
+    15.0 <span class="inlineIndicator prefixBox prefixBoxInline" title="prefix"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with 'webkit' as this browser considers it experimental">webkit</a></span></td>
+   <td>5.1 <span class="inlineIndicator prefixBox prefixBoxInline" title="prefix"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with 'webkit' as this browser considers it experimental">webkit</a></span></td>
+  </tr>
+  <tr>
+   <td><code>undoManager</code> and <code>undoScope</code></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span> (behind the <code>dom.undo_manager.enabled</code> pref)</td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+  </tr>
+  <tr>
+   <td><code>attributes</code></td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/22" title="Released on 2013-06-25.">22</a> (22)<br>
+    Before this it was available via the <a href="Node.html" title="Node is an interface from which a number of DOM API object types inherit. It allows those types to be treated similarly; for example, inheriting the same set of methods, or being tested in the same way."><code>Node</code></a> interface that any <code>element</code> inherits.</td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+  </tr>
+  <tr>
+   <td><code>scrollTopMax()</code> and <code>scrollLeftMax()&nbsp;</code><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/16" title="Released on 2012-10-09.">16</a> (16)</td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+  </tr>
+  <tr>
+   <td><code>closest()</code></td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/35" title="Released on 2015-01-13.">35</a> (35)</td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+  </tr>
+  <tr>
+   <td><code>hasAttributes()</code></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td>1.0 (1.7 or earlier) (on the <a href="Node.html" title="Node is an interface from which a number of DOM API object types inherit. It allows those types to be treated similarly; for example, inheriting the same set of methods, or being tested in the same way."><code>Node</code></a> interface)<br>
+    <a href="https://developer.mozilla.org/en-US/Firefox/Releases/35" title="Released on 2015-01-13.">35</a> (35) (on this interface</td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+  </tr>
+  <tr>
+   <td><code>insertAdjacentElement()</code>, <code>insertAdjacentText()</code></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/48" title="Released on 2016-08-02.">48.0</a> (48.0)</td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+  </tr>
+  <tr>
+   <td><code>assignedSlot</code>,&nbsp;<code>attatchShadow</code>, <code>shadowRoot</code>, and&nbsp;<code>slot</code></td>
+   <td>53</td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+  </tr>
+  <tr>
+   <td><code>computedRole</code> and <code>computedName</code></td>
+   <td>41[4]</td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td>28[4]</td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Android Webview</th>
+   <th>Edge</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome for Android</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>1.0</td>
+   <td>&nbsp;</td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td>1.0 (1)</td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td>1.0</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>scrollTopMax()</code> and <code>scrollLeftMax()&nbsp;</code><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td>&nbsp;</td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td>16.0 (16)</td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>closest()</code></td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td>&nbsp;</td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td>35.0 (35)</td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>hasAttributes()</code></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td>&nbsp;</td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td>1.0 (1.0) (on the <a href="Node.html" title="Node is an interface from which a number of DOM API object types inherit. It allows those types to be treated similarly; for example, inheriting the same set of methods, or being tested in the same way."><code>Node</code></a> interface)<br>
+    35.0 (35) (on this interface</td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>insertAdjacentElement()</code>, <code>insertAdjacentText()</code></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td>&nbsp;</td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td>48.0 (48.0)</td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>assignedSlot</code>,&nbsp;<code>attatchShadow</code>, <code>shadowRoot</code>, and&nbsp;<code>slot</code></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td>53.0</td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td>53</td>
+  </tr>
+  <tr>
+   <td><code>computedRole</code> and <code>computedName</code></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td>28[4]</td>
+   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Internet Explorer 7 and 8 incorrectly return the comments as part of the children of an Element. This is fixed in Internet Explorer 9 and later.</p>
+
+<p>[2] Chrome 16 allowed <code>webkitRequestPointerLock()</code> only in fullscreen; Chrome 21 for trusted web site (permission asked); Chrome 22 allowed it by default for all same-origin document; Chrome 23 allowed it in sandboxed <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe" title="The HTML Inline Frame element (<iframe>) represents a nested browsing context, effectively embedding another HTML page into the current page."><code>&lt;iframe&gt;</code></a> if the non-standard value <code>webkit-allow-pointer-lock</code> is set to the <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-sandbox">sandbox</a></code> attribute.</p>
+
+<p>[3] Implementation withdrawn. See <a rel="noopener" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1166347" class="external" title="Enabling pointer events in Nightly builds">bug&nbsp;1166347</a>.</p>
+
+<p>[4] Behind a flag.</p>
+                  
+                
+              </article>
+
+              <!-- contributors -->
+              <div class="wiki-block contributors">
+                <h2 class="offscreen">Document Tags and Contributors</h2>
+                
+                
+  <div class="tag-attach-list contributors-sub">
+    <svg class="icon icon-tags" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M7 7c0-1.109-.891-2-2-2s-2 .891-2 2 .891 2 2 2 2-.891 2-2zm16.672 9c0 .531-.219 1.047-.578 1.406l-7.672 7.688c-.375.359-.891.578-1.422.578s-1.047-.219-1.406-.578L1.422 13.906C.625 13.125 0 11.609 0 10.5V4c0-1.094.906-2 2-2h6.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422zm6 0c0 .531-.219 1.047-.578 1.406l-7.672 7.688a2.08 2.08 0 0 1-1.422.578c-.812 0-1.219-.375-1.75-.922l7.344-7.344c.359-.359.578-.875.578-1.406s-.219-1.047-.578-1.422L14.422 3.422C13.625 2.625 12.11 2 11 2h3.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422z"></path>
+</svg>
+    <strong>Tags:</strong>&nbsp;
+    <ul class="tags tags-small">
+      
+        <li><a href="../../tag/API.html" rel="nofollow">API</a></li>
+      
+        <li><a href="../../tag/DOM.html" rel="nofollow">DOM</a></li>
+      
+        <li><a href="../../tag/DOM%20Reference.html" rel="nofollow">DOM Reference</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Element" rel="nofollow">Element</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Interface" rel="nofollow">Interface</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Reference" rel="nofollow">Reference</a></li>
+      
+        <li><a href="../../tag/Web%20API.html" rel="nofollow">Web API</a></li>
+      
+    </ul>
+  </div>
+
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-group" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M9.266 14a5.532 5.532 0 0 0-4.141 2H3.031C1.468 16 0 15.25 0 13.516 0 12.25-.047 8 1.937 8c.328 0 1.953 1.328 4.062 1.328.719 0 1.406-.125 2.078-.359A7.624 7.624 0 0 0 7.999 10c0 1.422.453 2.828 1.266 4zM26 23.953C26 26.484 24.328 28 21.828 28H8.172C5.672 28 4 26.484 4 23.953 4 20.422 4.828 15 9.406 15c.531 0 2.469 2.172 5.594 2.172S20.063 15 20.594 15C25.172 15 26 20.422 26 23.953zM10 4c0 2.203-1.797 4-4 4S2 6.203 2 4s1.797-4 4-4 4 1.797 4 4zm11 6c0 3.313-2.688 6-6 6s-6-2.688-6-6 2.688-6 6-6 6 2.688 6 6zm9 3.516C30 15.25 28.531 16 26.969 16h-2.094a5.532 5.532 0 0 0-4.141-2A7.066 7.066 0 0 0 22 10a7.6 7.6 0 0 0-.078-1.031A6.258 6.258 0 0 0 24 9.328C26.109 9.328 27.734 8 28.062 8c1.984 0 1.937 4.25 1.937 5.516zM28 4c0 2.203-1.797 4-4 4s-4-1.797-4-4 1.797-4 4-4 4 1.797 4 4z"></path>
+</svg>
+                    <strong>Contributors to this page:</strong>
+                    
+        <a href="https://developer.mozilla.org/en-US/profiles/estelle">estelle</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills">chrisdavidmills</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/aervin">aervin</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/angel-luis">angel-luis</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/tshinnic">tshinnic</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/sarah-maris">sarah-maris</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/destin.moulton">destin.moulton</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/axelf4">axelf4</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/fvsch">fvsch</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/CameronRoberts">CameronRoberts</a>, 
+    
+        <a href="../../../profiles/DomenicDenicola.html">DomenicDenicola</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/inquirer5">inquirer5</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/adria">adria</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/isomorphismes">isomorphismes</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/21042jim">21042jim</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/trusktr">trusktr</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/jpmedley">jpmedley</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/arronei">arronei</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/kashilling">kashilling</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/erikadoyle">erikadoyle</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/montrealist">montrealist</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/shtarbanov">shtarbanov</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/whinc">whinc</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Sebastianz">Sebastianz</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/RavuAlHemio">RavuAlHemio</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/cvrebert">cvrebert</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/rachelnabors">rachelnabors</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/LouisLazaris">LouisLazaris</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/AFBarstow">AFBarstow</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/m-a-r-c-e-l-i-n-o">m-a-r-c-e-l-i-n-o</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/arhoads">arhoads</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/stuart">stuart</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Mylainos">Mylainos</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/birtles">birtles</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/matt.titchener">matt.titchener</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/markg">markg</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Ampersandy">Ampersandy</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/fscholz">fscholz</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Pluto">Pluto</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/ziyunfei">ziyunfei</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Tomasz_Kolodziejski">Tomasz_Kolodziejski</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/dotnetCarpenter">dotnetCarpenter</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Delapouite">Delapouite</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/starrow">starrow</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/nairakhil13">nairakhil13</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Techsin">Techsin</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Nickolay">Nickolay</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Masayuki">Masayuki</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Marcoos">Marcoos</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Markus Prokott">Markus Prokott</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/trevorh">trevorh</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Hipokrit">Hipokrit</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Hsivonen">Hsivonen</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Crash">Crash</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Taken">Taken</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Niczar">Niczar</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Brettz9">Brettz9</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Jürgen Jeka">Jürgen Jeka</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Djc8080">Djc8080</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/RodMcGuire">RodMcGuire</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Jay I.">Jay I.</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Potappo">Potappo</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/BijuGC">BijuGC</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/George3">George3</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/CN">CN</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/pusanbear">pusanbear</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/MarkFinkle">MarkFinkle</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/BenoitL">BenoitL</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Mckoss">Mckoss</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Codigo13">Codigo13</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/TomC">TomC</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/GT">GT</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Mgjbot">Mgjbot</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Jresig">Jresig</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Andreas Wuest">Andreas Wuest</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Tmetro">Tmetro</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Dewang">Dewang</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Jabez">Jabez</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Takenbot">Takenbot</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/RobG">RobG</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Ptak82">Ptak82</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/DBaron">DBaron</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Fguisset">Fguisset</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Maian">Maian</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Callek">Callek</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Dria">Dria</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Hao2lian">Hao2lian</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/JesseW">JesseW</a>
+    
+                  </div>
+                
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-clock" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M14 8.5v7c0 .281-.219.5-.5.5h-5a.494.494 0 0 1-.5-.5v-1c0-.281.219-.5.5-.5H12V8.5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zm6.5 5.5c0-4.688-3.813-8.5-8.5-8.5S3.5 9.313 3.5 14s3.813 8.5 8.5 8.5 8.5-3.813 8.5-8.5zm3.5 0c0 6.625-5.375 12-12 12S0 20.625 0 14 5.375 2 12 2s12 5.375 12 12z"></path>
+</svg>
+                    <strong>Last updated by:</strong>
+                    <a href="https://developer.mozilla.org/en-US/profiles/estelle">estelle</a>,
+                    <time datetime="2018-07-10T13:28:17.838527-07:00">Jul 10, 2018, 1:28:17 PM</time>
+                  </div>
+                
+              </div>
+            </div>
+
+            
+              <!-- quick links and approvals strip -->
+              <div id="wiki-left" class="column-strip wiki-column">
+
+                <!-- crumbs -->
+                
+  
+    
+  
+
+                
+                  <!-- quick links -->
+                  
+  <div class="quick-links" id="quick-links">
+    <div class="quick-links-head">Related Topics</div>
+    <ol><li><strong><a href="Document_Object_Model.html">Document Object Model</a></strong></li><li><strong><a href="Element.html"><code>Element</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><a href="Element/accessKey.html" title="The Element.accessKey&nbsp;property sets the keystroke by which a user can press to jump to this element."><code>accessKey</code></a></li><li><a href="Element/attributes.html" title="The Element.attributes property returns a live collection of all attribute nodes registered to the specified node. It is a NamedNodeMap, not an Array, so it has no Array methods and the Attr nodes' indexes may differ among browsers. To be more specific, attributes is a key/value pair of strings that represents any information regarding that attribute."><code>attributes</code></a></li><li><a href="ParentNode/childElementCount.html" title="The ParentNode.childElementCount read-only property returns an unsigned long representing the number of child elements of the given element."><code>childElementCount</code></a></li><li><a href="ParentNode/children.html" title="The ParentNode property children is a read-only property that returns a live HTMLCollection which contains all of the&nbsp;child elements of the node upon which it was called."><code>children</code></a></li><li><a href="Element/classList.html" title="The Element.classList is a read-only property which returns a&nbsp;live DOMTokenList collection of the class attributes of the element."><code>classList</code></a></li><li><a href="Element/className.html" title="className gets and sets the value of the class attribute of the specified element."><code>className</code></a></li><li><a href="Element/clientHeight.html" title="The Element.clientHeight read-only property is&nbsp;zero for elements with no CSS or inline layout boxes, otherwise it's&nbsp;the inner height of an element in pixels, including padding but not the horizontal scrollbar height, border, or margin."><code>clientHeight</code></a></li><li><a href="Element/clientLeft.html" title="The width of the left border of an element in pixels. It includes the width of the vertical scrollbar if the text direction of the element is right–to–left and if there is an overflow causing a left vertical scrollbar to be rendered. clientLeft does not include the left margin or the left padding. clientLeft is read-only."><code>clientLeft</code></a></li><li><a href="Element/clientTop.html" title="The width of the top border of an element in pixels.&nbsp;It is a read-only, integer property of element."><code>clientTop</code></a></li><li><a href="Element/clientWidth.html" title="The Element.clientWidth property is zero for elements with no CSS or inline layout boxes, otherwise it's&nbsp;the inner width of an element in pixels. It includes padding but not the vertical scrollbar (if present, if rendered), border or margin."><code>clientWidth</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="Element/currentStyle.html" title="Element.currentStyle is a property which is a proprietary similar to the standardized window.getComputedStyle method. It is available in old versions of Microsoft Internet Explorer. However, it returns the units set in CSS while window.getComputedStyle returns the values in pixels."><code>currentStyle</code></a></li><li><a href="ParentNode/firstElementChild.html" title="The ParentNode.firstElementChild read-only property returns the object's first child Element, or null if there are no child elements."><code>firstElementChild</code></a></li><li><a href="Element/id.html" title="The Element.id property represents the element's identifier, reflecting the id global attribute."><code>id</code></a></li><li><a href="Element/innerHTML.html" title="The Element property innerHTML gets or sets the HTML or XML markup contained within the element."><code>innerHTML</code></a></li><li><a href="ParentNode/lastElementChild.html" title="The ParentNode.lastElementChild read-only property returns the object's last child Element or null if there are no child elements."><code>lastElementChild</code></a></li><li><a href="Element/localName.html" title="The Element.localName read-only property returns the local part of the qualified name of an element."><code>localName</code></a></li><li><a href="Element/name.html" title="name gets or sets the name property of an element in the DOM. It only applies to the following elements: <a>, <applet>, <button>, <form>, <frame>, <iframe>, <img>, <input>, <map>, <meta>, <object>, <param>, <select>, and <textarea>."><code>name</code></a></li><li><a href="Element/namespaceURI.html" title="The Element.namespaceURI read-only property returns the namespace URI of the element, or null if the element is not in a namespace."><code>namespaceURI</code></a></li><li><a href="NonDocumentTypeChildNode/nextElementSibling.html" title="The NonDocumentTypeChildNode.nextElementSibling read-only property returns the element immediately following the specified one in its parent's children list, or null if the specified element is the last one in the list."><code>nextElementSibling</code></a></li><li><a href="Element/ongotpointercapture.html" title="ongotpointercapture is an EventHandler property of the Element interface that returns the event handler (function) for the gotpointercapture event type."><code>ongotpointercapture</code></a></li><li><a href="Element/onlostpointercapture.html" title="onlostpointercapture is an EventHandler property of the Element interface that returns the event handler (function) for the lostpointercapture event type."><code>onlostpointercapture</code></a></li><li><a href="Element/outerHTML.html" title="The outerHTML attribute of the Element DOM interface gets the serialized HTML fragment describing the element including its descendants. It can also be set to replace the element with nodes parsed from the given string."><code>outerHTML</code></a></li><li><a href="Element/prefix.html" title="The Element.prefix read-only property returns the namespace prefix of the specified element, or null if no prefix is specified."><code>prefix</code></a></li><li><a href="NonDocumentTypeChildNode/previousElementSibling.html" title="The NonDocumentTypeChildNode.previousElementSibling read-only property returns the Element immediately prior to the specified one in its parent's children list, or null if the specified element is the first one in the list."><code>previousElementSibling</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="Element/runtimeStyle.html" title="Element.runtimeStyle is a proprietary property similar to HTMLElement.style, except its styles, that have higher precedence and modification."><code>runtimeStyle</code></a></li><li><a href="Element/scrollHeight.html" title="The Element.scrollHeight read-only property is a measurement of the height of an element's content, including content not visible on the screen due to overflow."><code>scrollHeight</code></a></li><li><a href="Element/scrollLeft.html" title="The Element.scrollLeft property gets or sets the number of pixels that an element's content is scrolled to the left."><code>scrollLeft</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="Element/scrollLeftMax.html" title="The Element.scrollLeftMax read-only property returns a Number representing the maximum left scroll offset possible for the element."><code>scrollLeftMax</code></a></li><li><a href="Element/scrollTop.html" title="The Element.scrollTop property gets or sets the number of pixels that an element's content is scrolled vertically. "><code>scrollTop</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="Element/scrollTopMax.html" title="The Element.scrollTopMax read-only property returns a Number representing the maximum top scroll offset possible for the element."><code>scrollTopMax</code></a></li><li><a href="Element/scrollWidth.html" title="The Element.scrollWidth read-only property is a measurement of the width of an element's content, including content not visible on the screen due to overflow."><code>scrollWidth</code></a></li><li><a href="Element/shadowRoot.html" title="The Element.shadowRoot&nbsp;read-only property represents the shadow root hosted by the element. Use&nbsp;Element.attachShadow() to add a shadow root to an existing element."><code>shadowRoot</code></a></li><li><a href="Element/slot.html" title="The slot property of the Element interface returns the name of the shadow DOM slot the element is inserted in."><code>slot</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a href="Element/tabStop.html" title="The tabStop property of the Element interface returns a Boolean indicating if the element can receive input focus via the tab key. If the specified element is a shadow host tab navigation is delegated to its children."><code>tabStop</code></a></s></li><li><a href="Element/tagName.html" title="Returns the tag name of the element on which it's called."><code>tagName</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="ChildNode/after.html" title="The ChildNode.after() method inserts a set of Node or DOMString objects in the children list of this ChildNode's parent, just after this ChildNode. DOMString objects are inserted as equivalent Text nodes."><code>after()</code></a></li><li><a href="Element/animate.html" title="The Element interface's animate() method is a shortcut method which creates a new Animation, applies it to the element, then plays the animation. It returns the created Animation object instance."><code>animate()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="ParentNode/append.html" title="The ParentNode.append method inserts a set of Node objects or DOMString objects after the last child of the ParentNode. DOMString objects are inserted as equivalent Text nodes."><code>append()</code></a></li><li><a href="Element/attachShadow.html" title="The Element.attachShadow() method attaches a shadow DOM tree to the specified element and returns a reference to its&nbsp;ShadowRoot."><code>attachShadow()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="ChildNode/before.html" title="The ChildNode.before method inserts a set of Node or DOMString objects in the children list of this ChildNode's parent, just before this ChildNode. DOMString objects are inserted as equivalent Text nodes."><code>before()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="Element/closest.html" title="For browsers that do not support&nbsp;Element.closest(), but carry support for&nbsp;element.matches() (or a prefixed equivalent, meaning IE9+), a polyfill exists:"><code>closest()</code></a></li><li><a href="Element/getAttribute.html" title="getAttribute() returns the value of a specified attribute on the element."><code>getAttribute()</code></a></li><li><a href="Element/getAttributeNames.html" title="Element.getAttributeNames() returns the attribute names of the element as an Array of strings."><code>getAttributeNames()</code></a></li><li><a href="Element/getAttributeNode.html" title="Returns the specified attribute of the specified element, as an Attr node."><code>getAttributeNode()</code></a></li><li><a href="Element/getAttributeNodeNS.html" title="Returns the Attr node for the attribute with the given namespace and name."><code>getAttributeNodeNS()</code></a></li><li><a href="Element/getAttributeNS.html" title="getAttributeNS returns the string value of the attribute with the specified namespace and name. If the named attribute does not exist, the value returned will either be null or &quot;&quot; (the empty string); see Notes for details."><code>getAttributeNS()</code></a></li><li><a href="Element/getBoundingClientRect.html" title="The&nbsp;Element.getBoundingClientRect()&nbsp;method returns the size of an element and its position relative to the viewport."><code>getBoundingClientRect()</code></a></li><li><a href="Element/getClientRects.html" title="The Element.getClientRects() method returns a collection of DOMRect objects that indicate the bounding rectangles for each CSS border box in a client."><code>getClientRects()</code></a></li><li><a href="Element/getElementsByClassName.html" title="The Element method getElementsByClassName() returns a live HTMLCollection which contains every descendant element which has the specified class name or names."><code>getElementsByClassName()</code></a></li><li><a href="Element/getElementsByTagName.html" title="The Element.getElementsByTagName() method returns a live HTMLCollection of elements with the given tag name. The subtree underneath the specified element is searched, excluding the element itself. The returned list is live, meaning that it updates itself with the DOM tree automatically. Consequently, there is no need to call several times Element.getElementsByTagName() with the same element and arguments."><code>getElementsByTagName()</code></a></li><li><a href="Element/getElementsByTagNameNS.html" title="The Element.getElementsByTagNameNS() method returns a live HTMLCollection of elements with the given tag name belonging to the given namespace. It is similar to Document.getElementsByTagNameNS, except that its search is restricted to descendants of the specified element."><code>getElementsByTagNameNS()</code></a></li><li><a href="Element/hasAttribute.html" title="The Element.hasAttribute() method returns a Boolean value indicating whether the specified element has the specified attribute or not."><code>hasAttribute()</code></a></li><li><a href="Element/hasAttributeNS.html" title="hasAttributeNS returns a boolean value indicating whether the current element has the specified attribute."><code>hasAttributeNS()</code></a></li><li><a href="Element/hasAttributes.html" title="The Element.hasAttributes() method returns Boolean value, indicating if the current element has any attributes or not."><code>hasAttributes()</code></a></li><li><a href="Element/insertAdjacentElement.html" title="The insertAdjacentElement() method inserts a given element node at a given position relative to the element it is invoked upon."><code>insertAdjacentElement()</code></a></li><li><a href="Element/insertAdjacentHTML.html" title="insertAdjacentHTML() parses the specified text as HTML or XML and inserts the resulting nodes into the DOM tree at a specified position. It does not reparse the element it is being used on and thus it does not corrupt the existing elements inside that element. This&nbsp;avoids the extra step of serialization, making&nbsp;it much faster than direct innerHTML manipulation."><code>insertAdjacentHTML()</code></a></li><li><a href="Element/insertAdjacentText.html" title="The insertAdjacentText() method inserts a given text node at a given position relative to the element it is invoked upon."><code>insertAdjacentText()</code></a></li><li><a href="Element/matches.html" title="The Element.matches() method returns true if the element would be selected by the specified selector string; otherwise, returns false."><code>matches()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="ParentNode/prepend.html" title="The ParentNode.prepend method inserts a set of Node objects or DOMString objects before the first child of the ParentNode. DOMString objects are inserted as equivalent Text nodes."><code>prepend()</code></a></li><li><a href="Element/querySelector.html" title="Returns the first element that is a descendant of the element on which it is invoked that matches the specified group of selectors."><code>querySelector()</code></a></li><li><a href="ParentNode/querySelectorAll.html" title="The ParentNode mixin defines the querySelectorAll() method as returning a NodeList representing a list of elements matching the specified group of selectors which are descendants of the object on which the method was called."><code>querySelectorAll()</code></a></li><li><a href="Element/querySelectorAll.html" title="The Element method querySelectorAll() returns a static (not live) NodeList representing a list of elements matching the specified group of selectors which are descendants of the element on which the method was called."><code>querySelectorAll()</code></a></li><li><a href="Element/releasePointerCapture.html" title="Releases (stops) pointer capture that was previously set for a specific (PointerEvent) pointer."><code>releasePointerCapture()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="ChildNode/remove.html" title="The ChildNode.remove() method removes the object from the tree it belongs to."><code>remove()</code></a></li><li><a href="Element/removeAttribute.html" title="removeAttribute removes an attribute from the specified element."><code>removeAttribute()</code></a></li><li><a href="Element/removeAttributeNode.html" title="removeAttributeNode removes the specified attribute from the current element."><code>removeAttributeNode()</code></a></li><li><a href="Element/removeAttributeNS.html" title="removeAttributeNS removes the specified attribute from an element."><code>removeAttributeNS()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="ChildNode/replaceWith.html" title="The ChildNode.replaceWith() method replaces this ChildNode in the children list of its parent with a set of Node or DOMString objects. DOMString objects are inserted as equivalent Text nodes."><code>replaceWith()</code></a></li><li><a href="Element/requestFullScreen.html" title="The Element.requestFullscreen() method issues an asynchronous request to make the element be displayed full-screen."><code>requestFullscreen()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="Element/requestPointerLock.html" title="The Element.requestPointerLock() method allows to asynchronously ask for the pointer to be locked on the given element."><code>requestPointerLock()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="Element/scrollIntoView.html" title="The Element.scrollIntoView() method scrolls the element on which it's called into the visible area of the browser window."><code>scrollIntoView()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="Element/scrollIntoViewIfNeeded.html" title="The Element.scrollIntoViewIfNeeded() method scrolls the current element into the visible area of the browser window if it's not already within the visible area of the browser window. If the element is already within the visible area of the browser window, then no scrolling takes place. This method is a proprietary variation of the standard Element.scrollIntoView() method."><code>scrollIntoViewIfNeeded()</code></a></li><li><a href="Element/setAttribute.html" title="Sets the value of an attribute on the specified element. If the attribute already exists, the value is updated; otherwise a new attribute is added with the specified name and value."><code>setAttribute()</code></a></li><li><a href="Element/setAttributeNode.html" title="setAttributeNode() adds a new Attr node to the specified element."><code>setAttributeNode()</code></a></li><li><a href="Element/setAttributeNodeNS.html" title="setAttributeNodeNS adds a new namespaced attribute node to an element."><code>setAttributeNodeNS()</code></a></li><li><a href="Element/setAttributeNS.html" title="setAttributeNS adds a new attribute or changes the value of an attribute with the given namespace and name."><code>setAttributeNS()</code></a></li><li><a href="Element/setCapture.html" title="Call this method during the handling of a mousedown event to retarget all mouse events to this element until the mouse button is released or document.releaseCapture()&nbsp;is called."><code>setCapture()</code></a></li><li><a href="Element/setPointerCapture.html" title="Pointer capture allows events for a particular pointer event (PointerEvent) to be re-targeted to a particular element instead of the normal target (or hit test) at a pointer's location. This can be used to ensure that an element continues to receive pointer events even if the pointer device's contact moves off the element (for example by scrolling)."><code>setPointerCapture()</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Inheritance:</strong></a><ol><li><a href="Node.html"><code>Node</code></a></li><li><a href="EventTarget.html"><code>EventTarget</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Related pages for DOM</strong></a><ol><li><a href="AbortController.html"><code>AbortController</code></a></li><li><a href="AbortSignal.html"><code>AbortSignal</code></a></li><li><a href="Attr.html"><code>Attr</code></a></li><li><a href="ByteString.html"><code>ByteString</code></a></li><li><a href="CDATASection.html"><code>CDATASection</code></a></li><li><a href="CSSPrimitiveValue.html"><code>CSSPrimitiveValue</code></a></li><li><a href="CSSValue.html"><code>CSSValue</code></a></li><li><a href="CSSValueList.html"><code>CSSValueList</code></a></li><li><a href="CharacterData.html"><code>CharacterData</code></a></li><li><a href="ChildNode.html"><code>ChildNode</code></a></li><li><a href="Comment.html"><code>Comment</code></a></li><li><a href="CustomEvent.html"><code>CustomEvent</code></a></li><li><a href="DOMConfiguration.html"><code>DOMConfiguration</code></a></li><li><a href="DOMError.html"><code>DOMError</code></a></li><li><a rel="nofollow" href="DOMErrorHandler.html" class="new"><code>DOMErrorHandler</code></a></li><li><a href="DOMException.html"><code>DOMException</code></a></li><li><a href="DOMImplementation.html"><code>DOMImplementation</code></a></li><li><a href="DOMImplementationList.html"><code>DOMImplementationList</code></a></li><li><a href="DOMImplementationRegistry.html"><code>DOMImplementationRegistry</code></a></li><li><a href="DOMImplementationSource.html"><code>DOMImplementationSource</code></a></li><li><a href="DOMLocator.html"><code>DOMLocator</code></a></li><li><a href="DOMObject.html"><code>DOMObject</code></a></li><li><a href="DOMParser.html"><code>DOMParser</code></a></li><li><a href="DOMPoint.html"><code>DOMPoint</code></a></li><li><a href="DOMRect.html"><code>DOMRect</code></a></li><li><a href="DOMString.html"><code>DOMString</code></a></li><li><a href="DOMTimeStamp.html"><code>DOMTimeStamp</code></a></li><li><a href="DOMTokenList.html"><code>DOMTokenList</code></a></li><li><a href="DOMUserData.html"><code>DOMUserData</code></a></li><li><a href="Document.html"><code>Document</code></a></li><li><a href="DocumentFragment.html"><code>DocumentFragment</code></a></li><li><a href="DocumentType.html"><code>DocumentType</code></a></li><li><a href="ElementTraversal.html"><code>ElementTraversal</code></a></li><li><a href="Entity.html"><code>Entity</code></a></li><li><a href="EntityReference.html"><code>EntityReference</code></a></li><li><a href="Event.html"><code>Event</code></a></li><li><a href="EventTarget.html"><code>EventTarget</code></a></li><li><a href="HTMLCollection.html"><code>HTMLCollection</code></a></li><li><a href="MutationObserver.html"><code>MutationObserver</code></a></li><li><a href="Node.html"><code>Node</code></a></li><li><a href="NodeFilter.html"><code>NodeFilter</code></a></li><li><a href="NodeIterator.html"><code>NodeIterator</code></a></li><li><a href="NodeList.html"><code>NodeList</code></a></li><li><a href="NonDocumentTypeChildNode.html"><code>NonDocumentTypeChildNode</code></a></li><li><a href="ProcessingInstruction.html"><code>ProcessingInstruction</code></a></li><li><a href="PromiseResolver.html"><code>PromiseResolver</code></a></li><li><a href="Range.html"><code>Range</code></a></li><li><a href="Text.html"><code>Text</code></a></li><li><a href="TextDecoder.html"><code>TextDecoder</code></a></li><li><a href="TextEncoder.html"><code>TextEncoder</code></a></li><li><a href="TimeRanges.html"><code>TimeRanges</code></a></li><li><a href="TreeWalker.html"><code>TreeWalker</code></a></li><li><a href="TypeInfo.html"><code>TypeInfo</code></a></li><li><a href="USVString.html"><code>USVString</code></a></li><li><a href="UserDataHandler.html"><code>UserDataHandler</code></a></li><li><a href="XMLDocument.html"><code>XMLDocument</code></a></li></ol></li></ol>
+  </div>
+                
+
+                <!-- approvals -->
+                
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+    
+      <div class="newsletter-box">
+        <div class="newsletter">
+    <form id="newsletterForm" class="newsletter-form nodisable" name="newsletter-form" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <div class="newsletter-head">
+            <h2 class="newsletter-teaser">Learn the best of web development</h2>
+            <p class="newsletter-description">Get the latest and greatest from MDN delivered straight to your inbox.</p>
+            
+        </div>
+
+        <div class="newsletter-fields">
+            <input type="hidden" id="fmt" name="fmt" value="H">
+            <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+            <div id="newsletterErrors" class="newsletter-errors"></div>
+
+            <div id="newsletterEmail" class="form-group newsletter-group-email">
+                <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+                <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+            </div>
+
+            <div id="newsletterPrivacy" class="form-group form-group-agree newsletter-group-privacy hidden">
+                <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+                <label for="newsletterPrivacyInput">
+                I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+                </label>
+            </div>
+            <div id="newsletterSubmit" class="newsletter-group-submit">
+                <button id="newsletter-submit" type="submit" class="button neutral newsletter-submit">
+                    Sign up now<svg class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg" width="23" height="28" viewBox="0 0 23 28" aria-hidden="true">
+    <path d="M23 15a2.01 2.01 0 0 1-.578 1.422L12.25 26.594c-.375.359-.891.578-1.422.578s-1.031-.219-1.406-.578L8.25 25.422c-.375-.375-.594-.891-.594-1.422s.219-1.047.594-1.422L12.828 18h-11C.703 18 0 17.062 0 16v-2c0-1.062.703-2 1.828-2h11L8.25 7.406a1.96 1.96 0 0 1 0-2.812l1.172-1.172c.375-.375.875-.594 1.406-.594s1.047.219 1.422.594l10.172 10.172c.375.359.578.875.578 1.406z"></path>
+</svg>
+                </button>
+            </div>
+        </div>
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden">
+        <span>Hide Newsletter Sign-up</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+</div>
+      </div>
+    
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/en-US/docs/Web/API/Element$edit" label="Edit page"></menuitem>
+    <menuitem data-action="/en-US/docs/Web/API/Element$history" label="View page history"></menuitem>
+  </menu>
+
+      </div>
+  </main>
+  <!-- Footer -->
+    <footer id="nav-footer" class="nav-footer"><div class="center"><a href="http://developer.mozilla.org/en-US/docs/Web/API/element">Element</a> by <a href="http://developer.mozilla.org/en-US/docs/Web/API/element$history">Mozilla Contributors</a> is licensed under <a href="http://creativecommons.org/licenses/by-sa/2.5/" class="external external-icon">CC-BY-SA 2.5</a>.</div></footer> 
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script async="" type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script src="../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><!--[endif]---->
+
+    
+    <script src="../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../static/build/js/wiki.b26a4c181df3.js" charset="utf-8" id="wikiscript"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../static/build/js/newsletter.a85c5c2892e5.js" charset="utf-8"></script>
+  
+
+
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/element by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 08:12:19 GMT -->
+</body></html>

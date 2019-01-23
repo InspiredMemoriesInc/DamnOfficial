@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/:scope$samples/Example?revision=1369198 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:48:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <title>:scope</title>
+    </head>
+    <body>
+        
+            <p id="para">
+  This is a paragraph. It is not an interesting paragraph. Sorry about that.
+</p>
+<p id="output"></p>
+        
+        
+            <script>
+                let paragraph = document.getElementById("para");
+let output = document.getElementById("output");
+
+if (paragraph.matches(":scope")) {
+  output.innerText = "Yep, the element is its own scope as expected!";
+}
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/:scope$samples/Example?revision=1369198 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:48:53 GMT -->
+</html>

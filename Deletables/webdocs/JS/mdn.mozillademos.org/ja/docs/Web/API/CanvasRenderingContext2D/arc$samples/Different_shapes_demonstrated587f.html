@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/ja/docs/Web/API/CanvasRenderingContext2D/arc$samples/Different_shapes_demonstrated?revision=1367401 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 11:40:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <title>CanvasRenderingContext2D.arc()</title>
+    </head>
+    <body>
+        
+            <canvas id="canvas" width="150" height="200"></canvas>
+
+        
+        
+            <script>
+                var canvas = document.getElementById('canvas');
+var ctx = canvas.getContext('2d');
+
+// 形状を描く
+// (訳注:横に 180, 270, 360 度の円を3つずつ、縦に時計回りか反時計回りにパスを引いたときの stroke() と fill() を示しています)
+for (var i = 0; i < 4; i++) {
+  for(var j = 0; j < 3; j++) {
+		ctx.beginPath();
+		var x          = 25 + j * 50;                  // x座標
+		var y          = 25 + i * 50;                  // y座標
+		var radius     = 20;                           // 円弧の半径
+		var startAngle = 0;                            // 円弧の開始角
+		var endAngle   = Math.PI + (Math.PI * j) /2;   // 円弧の終了角
+		var anticlockwise  = i % 2 == 1;               // 時計回りか反時計回りか
+		
+    ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
+		
+    if (i > 1) {
+			ctx.fill();
+		} else {
+			ctx.stroke();
+		}
+	}
+}
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/ja/docs/Web/API/CanvasRenderingContext2D/arc$samples/Different_shapes_demonstrated?revision=1367401 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 11:40:03 GMT -->
+</html>

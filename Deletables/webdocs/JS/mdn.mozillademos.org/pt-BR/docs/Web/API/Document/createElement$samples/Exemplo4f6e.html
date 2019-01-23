@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/pt-BR/docs/Web/API/Document/createElement$samples/Exemplo?revision=1402516 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 11:32:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <title>Document.createElement()</title>
+    </head>
+    <body>
+        
+            <!DOCTYPE html>
+<html>
+<head>
+  <title>||Trabalhando com elementos||</title>
+</head>
+<body>
+  <div id="div1">O texto abaixo foi criado dinamicamente.</div>
+</body>
+
+<!-- Mirrored from mdn.mozillademos.org/pt-BR/docs/Web/API/Document/createElement$samples/Exemplo?revision=1402516 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 11:32:09 GMT -->
+</html>
+
+        
+        
+            <script>
+                document.body.onload = adcElemento;
+
+function adcElemento () { 
+  // cria um novo elemento div 
+  // e dá à ele conteúdo
+  var divNova = document.createElement("div"); 
+  var conteudoNovo = document.createTextNode("Olá, cumprimentos!"); 
+  divNova.appendChild(conteudoNovo); //adiciona o nó de texto à nova div criada 
+
+  // adiciona o novo elemento criado e seu conteúdo ao DOM 
+  var divAtual = document.getElementById("div1"); 
+  document.body.insertBefore(divNova, divAtual); 
+}
+            </script>
+        
+    </body>
+</html>

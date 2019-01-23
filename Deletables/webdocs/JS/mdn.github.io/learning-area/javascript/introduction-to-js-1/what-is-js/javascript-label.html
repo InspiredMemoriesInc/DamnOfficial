@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  
+<!-- Mirrored from mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 11:44:56 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript label example</title>
+    <style>
+      p {
+        font-family: 'helvetica neue', helvetica, sans-serif;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-align: center;
+        border: 2px solid rgba(0,0,200,0.6);
+        background: rgba(0,0,200,0.3);
+        color: rgba(0,0,200,0.6);
+        box-shadow: 1px 1px 2px rgba(0,0,200,0.4);
+        border-radius: 10px;
+        padding: 3px 10px;
+        display: inline-block;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Player 1: Chris</p>
+
+    <script>
+      var para = document.querySelector('p');
+
+      para.addEventListener('click', updateName);
+
+      function updateName() {
+        var name = prompt('Enter a new name');
+        para.textContent = 'Player 1: ' + name;
+      }
+    </script>
+  </body>
+
+<!-- Mirrored from mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 11:44:56 GMT -->
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/fit-content$samples/Example?revision=1350755 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:47:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            #container {
+  display: grid;
+  grid-template-columns: fit-content(300px) fit-content(300px) 1fr;
+  grid-gap: 5px;
+  box-sizing: border-box;
+  height: 200px;
+  width: 100%;
+  background-color: #8cffa0;
+  padding: 10px;
+}
+
+#container > div {
+  background-color: #8ca0ff;
+  padding: 5px;
+}
+
+        </style>
+        
+        <title>fit-content()</title>
+    </head>
+    <body>
+        
+            <div id="container">
+  <div>Item as wide as the content.</div>
+  <div>
+    Item with more text in it. Because the contents of it are
+    wider than the maximum width, it is clamped at 300 pixels.
+  </div>
+  <div>Flexible item</div>
+</div>
+        
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/CSS/fit-content$samples/Example?revision=1350755 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:47:54 GMT -->
+</html>

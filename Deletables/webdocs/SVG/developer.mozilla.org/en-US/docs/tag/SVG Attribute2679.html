@@ -1,0 +1,1160 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/tag/SVG Attribute?page=1 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:46:35 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  <title>Articles tagged: SVG Attribute</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+
+  
+<link rel="preload" href="../../../static/fonts/locales/ZillaSlab-Regular.f9de6143fdfa.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="license" href="#license">
+  
+
+  
+    
+
+    <link href="../../../static/build/styles/mdn.83865b0f7c30.css" rel="stylesheet" type="text/css">
+
+    
+  
+
+    <link href="../../../static/build/styles/wiki.aaf26c13c39b.css" rel="stylesheet" type="text/css">
+
+
+  <link href="../../../static/build/styles/locale-en-US.ca0bca387b42.css" rel="stylesheet" type="text/css">
+
+  
+    <script>
+      /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
+    </script>
+    
+
+
+
+  
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta property="og:site_name" content="MDN Web Docs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="MDN Web Docs">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../static/img/favicon144.e7e21ca263ca.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../static/img/favicon114.d526f38b09c5.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../static/img/favicon72.cc65d1d762a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../static/img/favicon57.de33179910ae.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="../../../static/img/favicon32.7f3da72dcea1.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script async="" type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  
+      <link rel="alternate" type="application/atom+xml" title="Articles tagged: SVG Attribute" href="../feeds/atom/tag/SVG%20Attribute">
+  
+
+</head>
+<body class="">
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <!--[endif]---->
+
+  
+  
+      <link rel="alternate" type="application/atom+xml" title="Articles tagged: SVG Attribute" href="../feeds/atom/tag/SVG%20Attribute">
+  
+
+
+
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/wiki-compat-tables.9978a5ce31c2.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+
+        // interactive editor config
+        win.mdn.interactiveEditor = {
+            siteUrl: "https://developer.mozilla.org",
+            editorUrl: "https://interactive-examples.mdn.mozilla.net"
+        };
+
+    })(this);
+</script>
+    
+    <ul id="nav-access">
+  <li><a href="#content" id="skip-main">Skip to main content</a></li>
+  <li><a id="skip-language" href="#language">Select language</a></li>
+  <li><a href="#q" id="skip-search">Skip to search</a></li>
+</ul>
+
+    <!-- Header -->
+    <header id="main-header" class="header-main">
+      <a href="https://developer.mozilla.org/en-US/" class="logo">MDN Web Docs</a>
+      <div class="nav-toolbox-wrapper">
+        <nav id="main-nav" class="nav-main" role="navigation">
+    <ul>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web">Technologies
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-tech-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API">APIs / DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn">References &amp; Guides
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-learn-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-contact-submenu">
+              <div class="submenu-column">
+                <ul>
+                  <li>
+                      <a href="https://support.mozilla.org/">Get Firefox help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://stackoverflow.com/">Get web development help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                      <a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/tag/SVG%2520Attribute%3Fpage%3D1">Report a content problem
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</nav>
+        <div id="toolbox" class="toolbox">
+  <ul>
+    
+    <li class="nav-login"><div class="login">
+    
+        
+        <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FSVG%2520Attribute%3Fpage%3D1" class="login-link js-login-link" data-service="GitHub" rel="nofollow">
+            Sign in<svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+    <title>Github</title>
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path>
+</svg>
+        </a>
+    
+</div></li>
+  </ul>
+</div>
+      </div>
+      <form id="nav-main-search" action="https://developer.mozilla.org/en-US/search" method="get" role="search" class="nav-main-search">
+  <div class="search-wrap">
+    <label for="main-q" class="offscreen">Search</label>
+    <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" aria-hidden="true">
+    <span class="search-trigger">
+        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true">
+    <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path>
+</svg>
+    </span>
+    <button type="submit" class="offscreen">Search</button>
+    <button type="button" id="close-header-search" class="close-header-search transparent">
+        <span class="offscreen">Close search</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+  </div>
+</form>
+    </header> 
+
+  <!-- Content will go here -->
+  <main id="content">
+      
+      <div class="center clear">
+      
+
+    <div id="document-list" class="boxed">
+      <h1>Articles tagged: SVG Attribute</h1>
+      
+        
+  <ol class="pagination">
+  
+  
+  
+    <li class="selected">
+      <a href="SVG%20Attribute2679.html?page=1">1</a>
+    </li>
+  
+    <li>
+      <a href="SVG%20Attribute4658.html?page=2">2</a>
+    </li>
+  
+  
+  
+    <li class="next">
+      <a href="SVG%20Attribute4658.html?page=2">
+        Next
+      </a>
+    </li>
+  
+  </ol>
+
+
+
+        <p>Found 165 documents</p>
+        <ul class="document-list">
+          
+            <li>
+              <a href="../Web/SVG/Attribute.html">Web/SVG/Attribute</a>
+                
+                  <small>SVG elements can be modified using attributes that specify details about exactly how the element...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/accent-height.html">Web/SVG/Attribute/accent-height</a>
+                
+                  <small>This attribute defines the distance from the origin to the top of accent characters, measured by...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/accumulate.html">Web/SVG/Attribute/accumulate</a>
+                
+                  <small>This attribute controls whether or not the animation is cumulative.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/additive.html">Web/SVG/Attribute/additive</a>
+                
+                  <small>This attribute controls whether or not the animation is additive.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/alignment-baseline.html">Web/SVG/Attribute/alignment-baseline</a>
+                
+                  <small>The alignment-baseline attribute specifies how an object is aligned with respect to its parent....</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/ascent.html">Web/SVG/Attribute/ascent</a>
+                
+                  <small>This attribute defines the maximum unaccented depth of the font within the font coordinate system.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/attributeName.html">Web/SVG/Attribute/attributeName</a>
+                
+                  <small>This attribute indicates the name of the attribute in the parent element that is going to be...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/attributeType.html">Web/SVG/Attribute/attributeType</a>
+                
+                  <small>This attribute specifies the namespace in which the target attribute and its associated values...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/azimuth.html">Web/SVG/Attribute/azimuth</a>
+                
+                  <small>The azimuth attribute represent the direction angle for the light source on the XY plane...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/baseFrequency.html">Web/SVG/Attribute/baseFrequency</a>
+                
+                  <small>The baseFrequency attribute represent The base frequencies parameter for the noise function of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/baseline-shift.html">Web/SVG/Attribute/baseline-shift</a>
+                
+                  <small>The baseline-shift attribute allows repositioning of the dominant-baseline relative to the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/baseProfile.html">Web/SVG/Attribute/baseProfile</a>
+                
+                  <small>The baseProfile attribute describes the minimum SVG language profile that the author believes is...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/begin.html">Web/SVG/Attribute/begin</a>
+                
+                  <small>This attribute defines when an animation should begin.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/bias.html">Web/SVG/Attribute/bias</a>
+                
+                  <small>The bias attribute shifts the range of the filter. After applying the kernelMatrix of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/calcMode.html">Web/SVG/Attribute/calcMode</a>
+                
+                  <small>This attribute specifies the interpolation mode for the animation. The default mode is linear,...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/class.html">Web/SVG/Attribute/class</a>
+                
+                  <small>Assigns a class name or set of class names to an element. You may assign the same class name or...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/clip.html">Web/SVG/Attribute/clip</a>
+                
+                  <small>The clip attribute is a presentation attribute defining the visible region of an element.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/clip-path.html">Web/SVG/Attribute/clip-path</a>
+                
+                  <small>The clip-path presentation attribute defines or associates a clipping path with the element it...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/clip-rule.html">Web/SVG/Attribute/clip-rule</a>
+                
+                  <small>The clip-rule attribute only applies to graphics elements that are contained within a clipPath...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/clipPathUnits.html">Web/SVG/Attribute/clipPathUnits</a>
+                
+                  <small>The clipPathUnits attribute indicates which coordinate system to use for the contents of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/color.html">Web/SVG/Attribute/color</a>
+                
+                  <small>The color attribute is used to provide a potential indirect value (currentColor) for the fill,...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/color-interpolation.html">Web/SVG/Attribute/color-interpolation</a>
+                
+                  <small>The color-interpolation attribute specifies the color space for gradient interpolations, color...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/color-interpolation-filters.html">Web/SVG/Attribute/color-interpolation-filters</a>
+                
+                  <small>The color-interpolation-filters attribute specifies the color space for imaging operations...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/color-profile.html">Web/SVG/Attribute/color-profile</a>
+                
+                  <small>The color-profile attribute is used to define which color profile a raster image included...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/color-rendering.html">Web/SVG/Attribute/color-rendering</a>
+                
+                  <small>The color-rendering attribute provides a hint to the SVG user agent about how to optimize its...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/contentScriptType.html">Web/SVG/Attribute/contentScriptType</a>
+                
+                  <small>The contentScriptType attribute on the svg element specifies the default scripting language for...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/contentStyleType.html">Web/SVG/Attribute/contentStyleType</a>
+                
+                  <small>This attribute specifies the style sheet language for the given document fragment. The...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/cx.html">Web/SVG/Attribute/cx</a>
+                
+                  <small>The cx attribute define the x-axis coordinate of a center point.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/cy.html">Web/SVG/Attribute/cy</a>
+                
+                  <small>The cy attribute define the y-axis coordinate of a center point.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/d.html">Web/SVG/Attribute/d</a>
+                
+                  <small>The d attribute provides a path definition to be drawn.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/diffuseConstant.html">Web/SVG/Attribute/diffuseConstant</a>
+                
+                  <small>The diffuseConstant attribute represant the kd value in the Phong lighting model. In SVG, this...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/direction.html">Web/SVG/Attribute/direction</a>
+                
+                  <small>The direction attribute specifies the base writing direction of text and the direction of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/display.html">Web/SVG/Attribute/display</a>
+                
+                  <small>The display attribute lets you control the rendering of graphical or container elements.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/divisor.html">Web/SVG/Attribute/divisor</a>
+                
+                  <small>After applying the kernelMatrix of the feConvolveMatrix element to the input image to yield a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/dominant-baseline.html">Web/SVG/Attribute/dominant-baseline</a>
+                
+                  <small>The dominant-baseline attribute is used to determine or re-determine a scaled-baseline-table. A...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/dur.html">Web/SVG/Attribute/dur</a>
+                
+                  <small>This attribute indicates the simple duration of the animation.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/dx.html">Web/SVG/Attribute/dx</a>
+                
+                  <small>The dx attribute indicates a shift along the x-axis on the position of an element or its content.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/dy.html">Web/SVG/Attribute/dy</a>
+                
+                  <small>The dy attribute indicates a shift along the y-axis on the position of an element or its content.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/edgeMode.html">Web/SVG/Attribute/edgeMode</a>
+                
+                  <small>The edgeMode attribute determines how to extend the input image as necessary with color values...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/elevation.html">Web/SVG/Attribute/elevation</a>
+                
+                  <small>The elevation attribute represent the direction angle for the light source from the XY plane...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/end.html">Web/SVG/Attribute/end</a>
+                
+                  <small>This attribute defines an end value for the animation that can constrain the active duration.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/externalResourcesRequired.html">Web/SVG/Attribute/externalResourcesRequired</a>
+                
+                  <small>Documents often reference and use the contents of other files (and other Web resources) as part...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/fill.html">Web/SVG/Attribute/fill</a>
+                
+                  <small>The fill attribute has two different meaning: For shapes and text it's a presentation attribute...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/fill-opacity.html">Web/SVG/Attribute/fill-opacity</a>
+                
+                  <small>The fill-opacity attribute is a presentation attribute defining the opacity of the paint server...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/fill-rule.html">Web/SVG/Attribute/fill-rule</a>
+                
+                  <small>The fill-rule attribute is a presentation attribute defining the algorithm to use to determine...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/filter.html">Web/SVG/Attribute/filter</a>
+                
+                  <small>The&nbsp;filter&nbsp;attribute&nbsp;defines the filter effects defined by the&nbsp;filter element&nbsp;that shall be...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/filterRes.html">Web/SVG/Attribute/filterRes</a>
+                
+                  <small>A filter element can define a region to which a given filter effect applies and can provide a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/filterUnits.html">Web/SVG/Attribute/filterUnits</a>
+                
+                  <small>The filterUnits attribute defines the coordinate system for attributes x, y, width and height.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/flood-color.html">Web/SVG/Attribute/flood-color</a>
+                
+                  <small>The flood-color attribute indicates what color to use to flood the current filter primitive...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/flood-opacity.html">Web/SVG/Attribute/flood-opacity</a>
+                
+                  <small>The flood-opacity attribute indicates the opacity value to use across the current filter...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/font-family.html">Web/SVG/Attribute/font-family</a>
+                
+                  <small>The font-family attribute indicates which font family will be used to render the text, specified...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/font-size.html">Web/SVG/Attribute/font-size</a>
+                
+                  <small>The font-size attribute refers to the size of the font from baseline to baseline when multiple...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/font-size-adjust.html">Web/SVG/Attribute/font-size-adjust</a>
+                
+                  <small>The font-size-adjust attribute allows authors to specify an aspect value for an element that...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/font-stretch.html">Web/SVG/Attribute/font-stretch</a>
+                
+                  <small>The font-stretch attribute indicates the desired amount of condensing or expansion in the glyphs...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/font-style.html">Web/SVG/Attribute/font-style</a>
+                
+                  <small>The font-style attribute specifies whether the text is to be rendered using a normal, italic or...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/font-variant.html">Web/SVG/Attribute/font-variant</a>
+                
+                  <small>The font-variant attribute indicates whether the text is to be rendered using the normal glyphs...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/font-weight.html">Web/SVG/Attribute/font-weight</a>
+                
+                  <small>The font-weight attribute refers to the boldness or lightness of the glyphs used to render the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/fr.html">Web/SVG/Attribute/fr</a>
+                
+                  <small>For the radialGradient element, this attribute define the radius of the focal point for the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/From-2.html">Web/SVG/Attribute/From</a>
+                
+                  <small>This attribute indicates the&nbsp;initial value of the attribute that will be modified during the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/fx.html">Web/SVG/Attribute/fx</a>
+                
+                  <small>For the radialGradient element, this attribute define the x-axis coordinate of the focal point...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/fy.html">Web/SVG/Attribute/fy</a>
+                
+                  <small>For the radialGradient element, this attribute defines the y-axis coordinate of the focal point...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/gradientTransform.html">Web/SVG/Attribute/gradientTransform</a>
+                
+                  <small>The gradientTransform attribute contains the definition of an optional additional transformation...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/gradientUnits.html">Web/SVG/Attribute/gradientUnits</a>
+                
+                  <small>The gradientUnits attribute defines the coordinate system for attributes x1, y1, x2 and y2 on...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/height.html">Web/SVG/Attribute/height</a>
+                
+                  <small>The height attribute defines the vertical length of an element in the user coordinate system.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/href.html">Web/SVG/Attribute/href</a>
+                
+                  <small>The href attribute defines a link to a resource as a reference URL. The exact meaning of that...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/image-rendering.html">Web/SVG/Attribute/image-rendering</a>
+                
+                  <small>The image-rendering attribute provides a hint to the browser about how to make speed vs. quality...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/in.html">Web/SVG/Attribute/in</a>
+                
+                  <small>The in attribute identifies input for the given filter primitive.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/in2.html">Web/SVG/Attribute/in2</a>
+                
+                  <small>The in2 attribute identifies the second input for the given filter primitive. It works exactly...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/k1.html">Web/SVG/Attribute/k1</a>
+                
+                  <small>The k1 attribute defines one of the value to be used within the the arithmetic operation of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/k2.html">Web/SVG/Attribute/k2</a>
+                
+                  <small>The k2 attribute defines one of the value to be used within the the arithmetic operation of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/k3.html">Web/SVG/Attribute/k3</a>
+                
+                  <small>The k3 attribute defines one of the value to be used within the the arithmetic operation of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/k4.html">Web/SVG/Attribute/k4</a>
+                
+                  <small>The k4 attribute defines one of the value to be used within the the arithmetic operation of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/kernelMatrix.html">Web/SVG/Attribute/kernelMatrix</a>
+                
+                  <small>the kernelMatrix attribute defines the list of number s that make up the kernel matrix for the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/kernelUnitLength.html">Web/SVG/Attribute/kernelUnitLength</a>
+                
+                  <small>The kernelUnitLength attribute has two meaning based on the context it's used.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/kerning.html">Web/SVG/Attribute/kerning</a>
+                
+                  <small>The kerning attribute indicates whether the browser should adjust inter-glyph spacing based on...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/keySplines.html">Web/SVG/Attribute/keySplines</a>
+                
+                  <small>The keySplines attribute defines a set of Bézier control points associated with the keyTimes...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/keyTimes.html">Web/SVG/Attribute/keyTimes</a>
+                
+                  <small>The keyTimes attribute is a semicolon-separated list of time values used to control the pacing...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/letter-spacing.html">Web/SVG/Attribute/letter-spacing</a>
+                
+                  <small>The letter-spacing attribute controls spacing between text characters, in addition to any...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/lighting-color.html">Web/SVG/Attribute/lighting-color</a>
+                
+                  <small>The lighting-color attribute defines the color of the light source for filter primitives...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/limitingConeAngle.html">Web/SVG/Attribute/limitingConeAngle</a>
+                
+                  <small>The limitingConeAngle attribute represents the angle in degrees between the spot light axis...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/marker-end.html">Web/SVG/Attribute/marker-end</a>
+                
+                  <small>The marker-end defines the arrowhead or polymarker that will be drawn at the final vertex of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/marker-mid.html">Web/SVG/Attribute/marker-mid</a>
+                
+                  <small>The marker-mid defines the arrowhead or polymarker that shall be drawn at every vertex other...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/marker-start.html">Web/SVG/Attribute/marker-start</a>
+                
+                  <small>The marker-start attribute defines the arrowhead or polymarker that will be drawn at the first...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/markerHeight.html">Web/SVG/Attribute/markerHeight</a>
+                
+                  <small>The markerHeight represents the height of the viewport into which the marker is to be fitted...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/markerUnits.html">Web/SVG/Attribute/markerUnits</a>
+                
+                  <small>The markerUnits attribute defines the coordinate system for the attributes markerWidth,...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/markerWidth.html">Web/SVG/Attribute/markerWidth</a>
+                
+                  <small>The markerWidth represents the width of the viewport into which the marker is to be fitted when...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/mask.html">Web/SVG/Attribute/mask</a>
+                
+                  <small>The mask attribute is a presentation attribute mainly used to bind a given mask element with the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/maskContentUnits.html">Web/SVG/Attribute/maskContentUnits</a>
+                
+                  <small>The maskContentUnits attribute indicates which coordinate system to use for the contents of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/maskUnits.html">Web/SVG/Attribute/maskUnits</a>
+                
+                  <small>The maskUnits attribute indicates which coordinate system to use for the geometry properties of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/max.html">Web/SVG/Attribute/max</a>
+                
+                  <small>This attribute specifies the maximum value of the active duration.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/min.html">Web/SVG/Attribute/min</a>
+                
+                  <small>This attribute specifies the minimum value of the active duration.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/mode.html">Web/SVG/Attribute/mode</a>
+                
+                  <small>The mode attribute defines the blending mode on the feBlend filter primitive.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/numOctaves.html">Web/SVG/Attribute/numOctaves</a>
+                
+                  <small>The numOctaves parameter for the noise function of the feTurbulence primitive.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/opacity.html">Web/SVG/Attribute/opacity</a>
+                
+                  <small>The opacity attribute specifies the transparency of an object or of a group of objects, that is,...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/operator.html">Web/SVG/Attribute/operator</a>
+                
+                  <small>The operator attribute as two meaning based on the context it's used.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/order.html">Web/SVG/Attribute/order</a>
+                
+                  <small>the order attribute indicates the size of the matrix to be used by a feConvolveMatrix element.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/overflow.html">Web/SVG/Attribute/overflow</a>
+                
+                  <small>The overflow attribute has the same parameter values as defined for the css overflow property....</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/pathLength.html">Web/SVG/Attribute/pathLength</a>
+                
+                  <small>The pathLength attribute lets authors specify a total length for the path,&nbsp;in user units. This...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/patternContentUnits.html">Web/SVG/Attribute/patternContentUnits</a>
+                
+                  <small>The patternContentUnits attribute indicates which coordinate system to use for the contents of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/SVG/Attribute/patternTransform.html">Web/SVG/Attribute/patternTransform</a>
+                
+                  <small>The patternTransform attribute defines a list of transform definitions that are applied to a...</small>
+                
+            </li>
+          
+        </ul>
+        
+  <ol class="pagination">
+  
+  
+  
+    <li class="selected">
+      <a href="SVG%20Attribute2679.html?page=1">1</a>
+    </li>
+  
+    <li>
+      <a href="SVG%20Attribute4658.html?page=2">2</a>
+    </li>
+  
+  
+  
+    <li class="next">
+      <a href="SVG%20Attribute4658.html?page=2">
+        Next
+      </a>
+    </li>
+  
+  </ol>
+
+
+
+      
+    </div>
+
+
+      </div>
+  </main>
+  <!-- Footer -->
+     
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script async="" type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script src="../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><!--[endif]---->
+
+    
+    <script src="../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../static/build/js/wiki.b26a4c181df3.js" charset="utf-8" id="wikiscript"></script>
+
+
+
+  
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/tag/SVG Attribute?page=1 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:46:35 GMT -->
+</body></html>

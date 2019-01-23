@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/Events/transitionrun$samples/Examples?revision=1221691 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 11:34:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            div {
+  width: 200px;
+  height: 200px;
+  background: rgba(255,0,0,1);
+  transition-property: transform background;
+  transition-duration: 2s;
+  transition-delay: 2s;
+}
+
+div:hover {
+  transform: rotate(90deg);
+  background: rgba(255,0,0,0);
+}
+        </style>
+        
+        <title>transitionrun</title>
+    </head>
+    <body>
+        
+            <div></div>
+        
+        
+            <script>
+                var divElem = document.querySelector('div');
+
+divElem.addEventListener('transitionrun', function() {
+  console.log('transitionrun fired');
+});
+
+divElem.addEventListener('transitionstart', function() {
+  console.log('transitionstart fired');
+});
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/Events/transitionrun$samples/Examples?revision=1221691 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 11:34:25 GMT -->
+</html>

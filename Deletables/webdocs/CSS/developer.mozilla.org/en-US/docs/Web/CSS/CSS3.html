@@ -1,0 +1,1787 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/CSS/CSS3 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:44:04 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  <title>CSS3</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+
+  
+<link rel="preload" href="../../../../static/fonts/locales/ZillaSlab-Regular.f9de6143fdfa.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="license" href="#license">
+  
+
+  
+    
+    
+
+    <link href="../../../../static/build/styles/mdn.83865b0f7c30.css" rel="stylesheet" type="text/css">
+
+    
+  
+
+    <link href="../../../../static/build/styles/wiki.aaf26c13c39b.css" rel="stylesheet" type="text/css">
+
+
+    
+
+  <link href="../../../../static/build/styles/locale-en-US.ca0bca387b42.css" rel="stylesheet" type="text/css">
+
+  
+    <script>
+      /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
+    </script>
+    
+
+
+
+  
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta property="og:site_name" content="MDN Web Docs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="MDN Web Docs">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../static/img/favicon144.e7e21ca263ca.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../static/img/favicon114.d526f38b09c5.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../static/img/favicon72.cc65d1d762a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../../static/img/favicon57.de33179910ae.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="../../../../static/img/favicon32.7f3da72dcea1.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script async="" type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  <link rel="dns-prefetch" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3$json">
+  <link rel="canonical" href="CSS3.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="CSS3.html" title="CSS3">
+  
+    
+      <link rel="alternate" hreflang="ar" href="https://developer.mozilla.org/ar/docs/Web/CSS/CSS3" title="CSS3">
+    
+      <link rel="alternate" hreflang="bn-BD" href="https://developer.mozilla.org/bn-BD/docs/Web/CSS/CSS3" title="CSS3">
+    
+      <link rel="alternate" hreflang="de" href="https://developer.mozilla.org/de/docs/Web/CSS/CSS3" title="CSS3">
+    
+      <link rel="alternate" hreflang="es" href="https://developer.mozilla.org/es/docs/Web/CSS/CSS3" title="CSS3">
+    
+      <link rel="alternate" hreflang="fr" href="https://developer.mozilla.org/fr/docs/Web/CSS/CSS3" title="CSS3">
+    
+      <link rel="alternate" hreflang="id" href="https://developer.mozilla.org/id/docs/Web/CSS/CSS3" title="CSS3">
+    
+      <link rel="alternate" hreflang="ja" href="https://developer.mozilla.org/ja/docs/Web/CSS/CSS3" title="CSS3">
+    
+      <link rel="alternate" hreflang="ko" href="https://developer.mozilla.org/ko/docs/Web/CSS/CSS3" title="CSS3">
+    
+      <link rel="alternate" hreflang="nl" href="https://developer.mozilla.org/nl/docs/Web/CSS/CSS3" title="CSS3">
+    
+      <link rel="alternate" hreflang="pt-BR" href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS3" title="CSS3">
+    
+      <link rel="alternate" hreflang="pt-PT" href="https://developer.mozilla.org/pt-PT/docs/Web/CSS/CSS3" title="CSS3">
+    
+      <link rel="alternate" hreflang="ru" href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS3" title="CSS3">
+    
+      <link rel="alternate" hreflang="tr" href="https://developer.mozilla.org/tr/docs/Web/CSS/CSS3" title="CSS3">
+    
+      <link rel="alternate" hreflang="vi" href="https://developer.mozilla.org/vi/docs/Web/CSS/CSS3" title="CSS3">
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS3" title="CSS3">
+    
+      <link rel="alternate" hreflang="zh-TW" href="https://developer.mozilla.org/zh-TW/docs/Web/CSS/CSS3" title="CSS3">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="CSS3">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3">
+  <meta name="twitter:title" content="CSS3">
+  
+  <meta property="og:description" content="CSS3 is the latest evolution of the Cascading Style Sheets language and aims at extending CSS2.1. It brings a lot of long-awaited novelties, like rounded corners, shadows, gradients, transitions or animations, as well as new layouts like multi-columns, flexible box or grid layouts.">
+  <meta name="description" content="CSS3 is the latest evolution of the Cascading Style Sheets language and aims at extending CSS2.1. It brings a lot of long-awaited novelties, like rounded corners, shadows, gradients, transitions or animations, as well as new layouts like multi-columns, flexible box or grid layouts.">
+  <meta name="twitter:description" content="CSS3 is the latest evolution of the Cascading Style Sheets language and aims at extending CSS2.1. It brings a lot of long-awaited novelties, like rounded corners, shadows, gradients, transitions or animations, as well as new layouts like multi-columns, flexible box or grid layouts.">
+  
+
+</head>
+<body data-slug="Web/CSS/CSS3" contextmenu="edit-history-menu" data-search-url="" class="document">
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <!--[endif]---->
+
+  
+  <link rel="dns-prefetch" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+  <link rel="preconnect" href="../../../../../interactive-examples.mdn.mozilla.net/index.html" pr="0.75">
+
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3$json">
+  <link rel="canonical" href="CSS3.html">
+
+  
+  <link rel="alternate" hreflang="en-US" href="CSS3.html" title="CSS3">
+  
+    
+      <link rel="alternate" hreflang="ar" href="https://developer.mozilla.org/ar/docs/Web/CSS/CSS3" title="CSS3">
+    
+      <link rel="alternate" hreflang="bn-BD" href="https://developer.mozilla.org/bn-BD/docs/Web/CSS/CSS3" title="CSS3">
+    
+      <link rel="alternate" hreflang="de" href="https://developer.mozilla.org/de/docs/Web/CSS/CSS3" title="CSS3">
+    
+      <link rel="alternate" hreflang="es" href="https://developer.mozilla.org/es/docs/Web/CSS/CSS3" title="CSS3">
+    
+      <link rel="alternate" hreflang="fr" href="https://developer.mozilla.org/fr/docs/Web/CSS/CSS3" title="CSS3">
+    
+      <link rel="alternate" hreflang="id" href="https://developer.mozilla.org/id/docs/Web/CSS/CSS3" title="CSS3">
+    
+      <link rel="alternate" hreflang="ja" href="https://developer.mozilla.org/ja/docs/Web/CSS/CSS3" title="CSS3">
+    
+      <link rel="alternate" hreflang="ko" href="https://developer.mozilla.org/ko/docs/Web/CSS/CSS3" title="CSS3">
+    
+      <link rel="alternate" hreflang="nl" href="https://developer.mozilla.org/nl/docs/Web/CSS/CSS3" title="CSS3">
+    
+      <link rel="alternate" hreflang="pt-BR" href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS3" title="CSS3">
+    
+      <link rel="alternate" hreflang="pt-PT" href="https://developer.mozilla.org/pt-PT/docs/Web/CSS/CSS3" title="CSS3">
+    
+      <link rel="alternate" hreflang="ru" href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS3" title="CSS3">
+    
+      <link rel="alternate" hreflang="tr" href="https://developer.mozilla.org/tr/docs/Web/CSS/CSS3" title="CSS3">
+    
+      <link rel="alternate" hreflang="vi" href="https://developer.mozilla.org/vi/docs/Web/CSS/CSS3" title="CSS3">
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS3" title="CSS3">
+    
+      <link rel="alternate" hreflang="zh-TW" href="https://developer.mozilla.org/zh-TW/docs/Web/CSS/CSS3" title="CSS3">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="CSS3">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3">
+  <meta name="twitter:title" content="CSS3">
+  
+  <meta property="og:description" content="CSS3 is the latest evolution of the Cascading Style Sheets language and aims at extending CSS2.1. It brings a lot of long-awaited novelties, like rounded corners, shadows, gradients, transitions or animations, as well as new layouts like multi-columns, flexible box or grid layouts.">
+  <meta name="description" content="CSS3 is the latest evolution of the Cascading Style Sheets language and aims at extending CSS2.1. It brings a lot of long-awaited novelties, like rounded corners, shadows, gradients, transitions or animations, as well as new layouts like multi-columns, flexible box or grid layouts.">
+  <meta name="twitter:description" content="CSS3 is the latest evolution of the Cascading Style Sheets language and aims at extending CSS2.1. It brings a lot of long-awaited novelties, like rounded corners, shadows, gradients, transitions or animations, as well as new layouts like multi-columns, flexible box or grid layouts.">
+  
+
+
+
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/wiki-compat-tables.9978a5ce31c2.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+
+        // interactive editor config
+        win.mdn.interactiveEditor = {
+            siteUrl: "https://developer.mozilla.org",
+            editorUrl: "https://interactive-examples.mdn.mozilla.net"
+        };
+
+    })(this);
+</script>
+    
+    <ul id="nav-access">
+  <li><a href="#content" id="skip-main">Skip to main content</a></li>
+  <li><a id="skip-language" href="#language">Select language</a></li>
+  <li><a href="#q" id="skip-search">Skip to search</a></li>
+</ul>
+
+    <!-- Header -->
+    <header id="main-header" class="header-main">
+      <a href="https://developer.mozilla.org/en-US/" class="logo">MDN Web Docs</a>
+      <div class="nav-toolbox-wrapper">
+        <nav id="main-nav" class="nav-main" role="navigation">
+    <ul>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web">Technologies
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-tech-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+                    <li><a href="../CSS.html">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API">APIs / DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn">References &amp; Guides
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-learn-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-contact-submenu">
+              <div class="submenu-column">
+                <ul>
+                  <li>
+                      <a href="https://support.mozilla.org/">Get Firefox help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://stackoverflow.com/">Get web development help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                      <a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/CSS/CSS3">Report a content problem
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</nav>
+        <div id="toolbox" class="toolbox">
+  <ul>
+    
+    <li class="nav-login"><div class="login">
+    
+        
+        <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FCSS%2FCSS3" class="login-link js-login-link" data-service="GitHub" rel="nofollow">
+            Sign in<svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+    <title>Github</title>
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path>
+</svg>
+        </a>
+    
+</div></li>
+  </ul>
+</div>
+      </div>
+      <form id="nav-main-search" action="https://developer.mozilla.org/en-US/search" method="get" role="search" class="nav-main-search">
+  <div class="search-wrap">
+    <label for="main-q" class="offscreen">Search</label>
+    <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" aria-hidden="true">
+    <span class="search-trigger">
+        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true">
+    <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path>
+</svg>
+    </span>
+    <button type="submit" class="offscreen">Search</button>
+    <button type="button" id="close-header-search" class="close-header-search transparent">
+        <span class="offscreen">Close search</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+  </div>
+</form>
+    </header> 
+
+  <!-- Content will go here -->
+  <main id="content">
+      
+  <!-- heading -->
+  <div id="wiki-document-head" class="document-head">
+    <div class="center">
+      <!-- action buttons -->
+      <div class="document-actions">
+        
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons">
+      <li>
+          <button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false">
+              <svg class="icon icon-language" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M10.219 16.844c-.031.109-.797-.25-1-.328-.203-.094-1.125-.609-1.359-.766s-1.125-.891-1.234-.938a28.275 28.275 0 0 1-2.094 2.828c-.281.328-1.125 1.391-1.641 1.719-.078.047-.531.094-.594.063.25-.187.969-1.078 1.281-1.437.391-.453 2.25-3.047 2.562-3.641.328-.594 1.312-2.562 1.359-2.75-.156-.016-1.391.406-1.719.516-.313.094-1.172.297-1.234.344-.063.063-.016.25-.047.313s-.313.203-.484.234a1.647 1.647 0 0 1-.734 0c-.203-.047-.391-.25-.438-.328 0 0-.063-.094-.078-.359.187-.063.5-.078.844-.172s1.188-.344 1.641-.5 1.328-.484 1.594-.547c.281-.047.984-.516 1.359-.641s.641-.281.656-.203 0 .422-.016.516c-.016.078-.766 1.547-.875 1.781-.063.125-.5.953-1.203 2.047.25.109.781.328 1 .438.266.125 2.125.906 2.219.938s.266.75.234.875zM7.016 9.25c.047.266-.031.375-.063.438-.156.297-.547.5-.781.594s-.625.187-.938.187c-.141-.016-.422-.063-.766-.406-.187-.203-.328-.75-.266-.688s.516.125.719.078.688-.187.906-.25c.234-.078.703-.203.859-.219.156 0 .281.063.328.266zm10.906 2.016l.984 3.547-2.172-.656zM.609 23.766l10.844-3.625V4.016L.609 7.657v16.109zM20 18.813l1.594.484-2.828-10.266-1.563-.484-3.375 8.375 1.594.484.703-1.719 3.297 1.016zM12.141 3.781l8.953 2.875V.718zM17 24.453l2.469.203-.844 2.5L18 26.125c-1.266.812-2.828 1.437-4.312 1.687-.453.094-.969.187-1.422.187h-1.313c-1.656 0-4.672-.984-5.984-1.937-.094-.078-.125-.141-.125-.25 0-.172.125-.297.281-.297.141 0 .875.453 1.078.547 1.406.703 3.375 1.344 4.953 1.344 1.953 0 3.281-.25 5.063-1.016.516-.234.969-.531 1.453-.797zm7-16.859v16.859c-12.078-3.844-12.094-3.844-12.094-3.844C11.656 20.718.453 24.5.297 24.5a.3.3 0 0 1-.281-.203c0-.016-.016-.031-.016-.047V7.406c.016-.047.031-.125.063-.156.094-.109.219-.141.313-.172.047-.016 1-.328 2.328-.781v-6l8.719 3.094C11.532 3.36 21.251 0 21.392 0c.172 0 .313.125.313.328v6.531z"></path>
+</svg>
+              <span>Languages</span>
+          </button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                
+                
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ar/docs/Web/CSS/CSS3" data-locale="ar" title="Arabic">عربي (ar)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/bn-BD/docs/Web/CSS/CSS3" data-locale="bn-BD" title="Bengali (Bangladesh)">বাংলা (বাংলাদেশ) (bn-BD)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/de/docs/Web/CSS/CSS3" data-locale="de" title="German">Deutsch (de)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/es/docs/Web/CSS/CSS3" data-locale="es" title="Spanish">Español (es)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/fr/docs/Web/CSS/CSS3" data-locale="fr" title="French">Français (fr)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/id/docs/Web/CSS/CSS3" data-locale="id" title="Indonesian">Bahasa Indonesia (id)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ja/docs/Web/CSS/CSS3" data-locale="ja" title="Japanese">日本語 (ja)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ko/docs/Web/CSS/CSS3" data-locale="ko" title="Korean">한국어 (ko)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/nl/docs/Web/CSS/CSS3" data-locale="nl" title="Dutch">Nederlands (nl)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS3" data-locale="pt-BR" title="Portuguese (Brazilian)">Português (do&nbsp;Brasil) (pt-BR)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/pt-PT/docs/Web/CSS/CSS3" data-locale="pt-PT" title="Portuguese (Portugal)">Português (Europeu) (pt-PT)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS3" data-locale="ru" title="Russian">Русский (ru)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/tr/docs/Web/CSS/CSS3" data-locale="tr" title="Turkish">Türkçe (tr)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/vi/docs/Web/CSS/CSS3" data-locale="vi" title="Vietnamese">Tiếng Việt (vi)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS3" data-locale="zh-CN" title="Chinese (Simplified)">中文 (简体) (zh-CN)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-TW/docs/Web/CSS/CSS3" data-locale="zh-TW" title="Chinese (Traditional)">正體中文 (繁體) (zh-TW)</a></bdi></li>
+                
+              
+
+              
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3$locales" rel="nofollow" id="translations-add">Add a translation</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+      
+      <li class="page-buttons-edit">
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3$edit" class="button neutral" id="edit-button" rel="nofollow">
+              <svg class="icon icon-pencil" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M5.672 24l1.422-1.422-3.672-3.672L2 20.328V22h2v2h1.672zm8.172-14.5a.329.329 0 0 0-.344-.344.368.368 0 0 0-.266.109l-8.469 8.469a.366.366 0 0 0-.109.266c0 .203.141.344.344.344a.368.368 0 0 0 .266-.109l8.469-8.469a.366.366 0 0 0 .109-.266zM13 6.5l6.5 6.5-13 13H0v-6.5zM23.672 8c0 .531-.219 1.047-.578 1.406L20.5 12 14 5.5l2.594-2.578c.359-.375.875-.594 1.406-.594s1.047.219 1.422.594l3.672 3.656c.359.375.578.891.578 1.422z"></path>
+</svg>
+              Edit
+          </a>
+      </li>
+      
+
+        
+
+        <li class="page-buttons-advanced">
+            <button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false">
+                <svg class="icon icon-gear" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M16 14c0-2.203-1.797-4-4-4s-4 1.797-4 4 1.797 4 4 4 4-1.797 4-4zm8-1.703v3.469c0 .234-.187.516-.438.562l-2.891.438a8.86 8.86 0 0 1-.609 1.422c.531.766 1.094 1.453 1.672 2.156.094.109.156.25.156.391s-.047.25-.141.359c-.375.5-2.484 2.797-3.016 2.797a.795.795 0 0 1-.406-.141l-2.156-1.687a9.449 9.449 0 0 1-1.422.594c-.109.953-.203 1.969-.453 2.906a.573.573 0 0 1-.562.438h-3.469c-.281 0-.531-.203-.562-.469l-.438-2.875a9.194 9.194 0 0 1-1.406-.578l-2.203 1.672c-.109.094-.25.141-.391.141s-.281-.063-.391-.172c-.828-.75-1.922-1.719-2.578-2.625a.607.607 0 0 1 .016-.718c.531-.719 1.109-1.406 1.641-2.141a8.324 8.324 0 0 1-.641-1.547l-2.859-.422A.57.57 0 0 1 0 15.705v-3.469c0-.234.187-.516.422-.562l2.906-.438c.156-.5.359-.969.609-1.437a37.64 37.64 0 0 0-1.672-2.156c-.094-.109-.156-.234-.156-.375s.063-.25.141-.359c.375-.516 2.484-2.797 3.016-2.797.141 0 .281.063.406.156L7.828 5.94a9.449 9.449 0 0 1 1.422-.594c.109-.953.203-1.969.453-2.906a.573.573 0 0 1 .562-.438h3.469c.281 0 .531.203.562.469l.438 2.875c.484.156.953.344 1.406.578l2.219-1.672c.094-.094.234-.141.375-.141s.281.063.391.156c.828.766 1.922 1.734 2.578 2.656a.534.534 0 0 1 .109.344c0 .141-.047.25-.125.359-.531.719-1.109 1.406-1.641 2.141.266.5.484 1.016.641 1.531l2.859.438a.57.57 0 0 1 .453.562z"></path>
+</svg>
+                <span>Advanced</span>
+            </button>
+            <div class="submenu js-submenu" id="advanced-menu-submenu">
+                <!-- this page -->
+                <div class="submenu-column">
+                    <div class="title">Advanced</div>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3$history" rel="nofollow">History</a></li>
+                        
+                        
+                        
+
+
+                
+
+                <li class="page-print"><a href="#" onclick="return window.print();">Print this article</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+      </div>
+
+      <div class="document-title">
+        <h1>CSS3</h1>
+      </div>
+    </div>
+  </div>
+  
+  <div id="toc" class="toc">
+    <div class="center">
+      <div class="toc-head">Jump to:</div>
+        <ol class="toc-links">
+          <li><a href="#Modules_and_the_standardization_process" rel="internal">Modules and the standardization process</a></li><li><a href="#CSS_modules_status" rel="internal">CSS modules status</a>
+        </li></ol>
+    </div>
+  </div>
+  
+
+      <div class="center clear">
+      
+
+    <div class="wiki-main-content" id="document-main"><div class="center">
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-left-closed wiki-left-none">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-all wiki-column text-content">
+
+              
+
+              
+              
+
+              
+
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <p><span class="seoSummary"><strong>CSS3</strong> is the latest evolution of the <em>Cascading Style Sheets</em> language and aims at extending CSS2.1. It brings a lot of long-awaited novelties, like rounded corners, shadows, <a href="CSS_Images/Using_CSS_gradients.html" title="Using CSS gradients">gradients</a>, <a href="CSS_Transitions/Using_CSS_transitions.html" title="CSS transitions">transitions</a> or <a href="CSS_Animations/Using_CSS_animations.html" title="CSS animations">animations</a>, as well as new layouts like <a href="CSS_Columns/Using_multi-column_layouts.html" title="Using CSS multi-column layouts">multi-columns</a>, <a href="CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox.html">flexible box</a> or grid layouts.</span> Experimental parts are vendor-prefixed and should either be avoided in production environments, or used with extreme caution as both their syntax and semantics can change in the future.</p>
+
+<a class="dashAnchor" name="//apple_ref/Section/Modules%20and%20the%20standardization%20process"></a><h2 id="Modules_and_the_standardization_process">Modules and the standardization process</h2>
+
+<p>CSS Level 2 needed 9 years, from August 2002 to June 2011 to reach the Recommendation status. This was due to the fact that a few secondary features held back the whole specification. In order to accelerate the standardization of non-problematic features, the <a href="http://www.w3.org/blog/CSS/" title="http://www.w3.org/blog/CSS/" class="external" rel="noopener">CSS Working Group</a> of the W3C, in a decision referred as the <a href="http://fantasai.inkedblade.net/weblog/2011/inside-csswg/modules" title="http://fantasai.inkedblade.net/weblog/2011/inside-csswg/modules" class="external" rel="noopener">Beijing doctrine</a>, divided CSS in smaller components called <em>modules</em> . Each of these modules is now an independent part of the language and moves towards standardization at its own pace. While some modules are already W3C Recommendations, other still are early Working Drafts. New modules are also added when new needs are identified.</p>
+
+<p><a href="../../../../../mdn.mozillademos.org/files/3623/CSS_Modules_and_Snapshots.png" title="CSS_Modules_and_Snapshots.png"><img src="../../../../../mdn.mozillademos.org/files/3623/CSS_Modules_and_Snapshots.png" alt="CSS Modules and Snapshots as defined since CSS3" style="float: left; width: 550px;" class="internal lwrap"> </a> Formally, there is no CSS3 standard <em>per se</em> . Each module being standardized independently, the standard CSS consists of CSS2.1 amended and extended by the completed modules, not necessary all with the same level number. At each point of time, a snapshot of the CSS standard can be defined, listing CSS2.1 and the mature modules.</p>
+
+<p>The W3 consortium periodically publishes such snapshots, like in <a href="http://www.w3.org/TR/css-beijing/" title="http://www.w3.org/TR/css-beijing/" class="external" rel="noopener">2007</a>,&nbsp;<a href="http://www.w3.org/TR/css-2010/" title="http://www.w3.org/TR/css-2010/" class="external" rel="noopener">2010</a>,&nbsp;<a href="https://www.w3.org/TR/css-2015/" class="external" rel="noopener">2015</a>&nbsp;and <a href="https://www.w3.org/TR/css-2017/" class="external" rel="noopener">2017</a>.</p>
+
+<p>Though today no module with a level greater than 3 is standardized, this will change in the future. Some modules, like Selectors 4 or CSS Borders and Backgrounds Level 4 already have an Editor's Draft, though they haven't yet reached the First Published Working Draft status.</p>
+
+<a class="dashAnchor" name="//apple_ref/Section/CSS%20modules%20status"></a><h2 id="CSS_modules_status">CSS modules status</h2>
+
+<h3 id="Stable_modules">Stable modules</h3>
+
+<p>A few CSS modules are already fairly stable and have reached one of the three recommendation level of the CSSWG: Candidate Recommendation, Proposed Recommendation or Recommendation. These can be used without prefix&nbsp;and are pretty stable, though a few features can still be dropped at the Candidate Recommendation stage.</p>
+
+<p>These modules extend and amend the CSS2.1 specification which build the core of the specification. Together with it, they are the current snapshot of the CSS specification.</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(128,255,128);"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-color-3/" title="The 'CSS Color Module Level&nbsp;3' specification" class="external" lang="en">CSS Color Module Level&nbsp;3</a></strong></td>
+   <td><span class="spec-REC">Recommendation</span> since June 7th, 2011</td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <p>Adds the <a href="opacity.html" title="The opacity CSS property specifies the level of transparency of an element, that is, the degree to which the content behind the element is visible."><code>opacity</code></a> property, and the <code>hsl</code><code>()</code>, <code>hsla()</code>, <code>rgba()</code> and <code>rgb()</code> functions to create <a href="color_value.html" title="The <color> CSS data type represents a color in the sRGB color space. A <color> may also include an alpha-channel transparency value, indicating how the color should composite with its background."><code>&lt;color&gt;</code></a> values. It also defines the <code>currentColor</code> keyword as a valid color.</p>
+
+    <p>The <code>transparent</code> color is now a real color (thanks to the support for the alpha channel) and is a now an alias for <code>rgba(0,0,0,0.0)</code> .</p>
+
+    <p>It deprecates the <a href="http://www.w3.org/TR/CSS2/ui.html#system-colors" class="external" rel="noopener">system-color keywords that shouldn't be used in a production environment anymore</a>.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(128,255,128);"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/selectors-3/" title="The 'Selectors Level&nbsp;3' specification" class="external" lang="en">Selectors Level&nbsp;3</a></strong></td>
+   <td><span class="spec-REC">Recommendation</span> since September 29th, 2011</td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <p>Adds:</p>
+
+    <ul>
+     <li>Substring matching attribute selectors, <code>E[attribute^="value"]</code>, <code>E[attribute$="value"]</code>, <code>E[attribute*="value"]</code> .</li>
+     <li>New pseudo-classes: <a href="_target.html" title="The :target CSS pseudo-class represents a unique element (the target element) with an id matching the URL's fragment."><code>:target</code></a>, <a href="_enabled.html" title="The :enabled CSS pseudo-class represents any enabled element. An element is enabled if it can be activated (selected, clicked on, typed into, etc.) or accept focus. The element also has a disabled state, in which it can't be activated or accept focus."><code>:enabled</code></a> and <a href="_disabled.html" title="The :disabled CSS pseudo-class represents any disabled element. An element is disabled if it can't be activated (selected, clicked on, typed into, etc.) or accept focus. The element also has an enabled state, in which it can be activated or accept focus."><code>:disabled</code></a>, <a href="_checked.html" title="The :checked CSS pseudo-class selector represents any radio (<input type=&quot;radio&quot;>), checkbox (<input type=&quot;checkbox&quot;>), or option (<option> in a <select>) element that is checked or toggled to an on state."><code>:checked</code></a>, <a href="_indeterminate.html" title="The :indeterminate CSS pseudo-class represents any form element whose state is indeterminate."><code>:indeterminate</code></a>, <a href="_root.html" title="The :root CSS  pseudo-class matches the root element of a tree representing the document. In HTML, :root represents the <html> element and is identical to the selector html, except that its specificity is higher."><code>:root</code></a>, <a href="_nth-child.html" title="The :nth-child() CSS pseudo-class matches one or more elements based on their position among a group of siblings."><code>:nth-child</code></a> and <a href="_nth-last-child.html" title="The :nth-last-child() CSS pseudo-class matches one or more elements based on their position among a group of siblings, counting from the end."><code>:nth-last-child</code></a>, <a href="_nth-of-type.html" title="The :nth-of-type() CSS pseudo-class matches one or more elements of a given type, based on their position among a group of siblings."><code>:nth-of-type</code></a> and <a href="_nth-last-of-type.html" title="The :nth-last-of-type() CSS pseudo-class matches one or more elements of a given type, based on their position among a group of siblings, counting from the end."><code>:nth-last-of-type</code></a>, <a href="_last-child.html" title="The :last-child CSS pseudo-class represents the last element among a group of sibling elements."><code>:last-child</code></a>, <a href="_first-of-type.html" title="The :first-of-type CSS pseudo-class represents the first element of its type among a group of sibling elements."><code>:first-of-type</code></a> and <a href="_last-of-type.html" title="The :last-of-type CSS pseudo-class represents the last element of its type among a group of sibling elements."><code>:last-of-type</code></a>, <a href="_only-child.html" title="The :only-child CSS pseudo-class represents an element without any siblings. This is the same as :first-child:last-child or :nth-child(1):nth-last-child(1), but with a lower specificity."><code>:only-child</code></a> and <a href="_only-of-type.html" title="The :only-of-type CSS pseudo-class represents an element that has no siblings of the same type."><code>:only-of-type</code></a>,<a href="_empty.html" title="The :empty CSS pseudo-class represents any element that has no children. Children can be either element nodes or text (including whitespace). Comments or processing instructions do not affect whether an element is considered empty or not."><code>:empty</code></a>, and <a href="_not.html" title="The :not() CSS pseudo-class represents elements that do not match a list of selectors. Since it prevents specific items from being selected, it is known as the negation pseudo-class."><code>:not</code></a>.</li>
+     <li>Pseudo-elements are now characterized by two colons rather than one: <code>:after</code> becomes <a href="__after.html" title="In CSS, ::after creates a pseudo-element that is the last child of the selected element. It is often used to add cosmetic content to an element with the content property."><code>::after</code></a>, <code>:before</code> becomes <a href="__before.html" title="In CSS, ::before creates a pseudo-element that is the first child of the selected element. It is often used to add cosmetic content to an element with the content property."><code>::before</code></a>, <code>:first-letter</code> becomes <a href="__first-letter.html" title="The ::first-letter CSS pseudo-element applies styles to the first letter of the first line of a block-level element, but only when not preceded by other content (such as images or inline tables)."><code>::first-letter</code></a>, and <code>:first-line</code> becomes <a href="__first-line.html" title="The ::first-line CSS pseudo-element applies styles to the first line of a block-level element."><code>::first-line</code></a>.</li>
+     <li>The new <em>general sibling combinator</em> ( <code>h1~pre</code> ).</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The <a href="http://dev.w3.org/csswg/selectors4/" title="http://dev.w3.org/csswg/selectors4/" class="external" rel="noopener">next iteration of the Selectors specification</a> is already in progress, though it still hasn't reached the First Public Working Draft stage.</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(128,255,128);"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-namespaces-3/" title="The 'CSS Namespaces Module' specification" class="external" lang="en">CSS Namespaces Module</a></strong></td>
+   <td><span class="spec-REC">Recommendation</span> since September 29th, 2011</td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <p>Adds the support for the XML Namespaces by defining the notion of <em>CSS qualified name</em>, using the ' <code>|</code> ' syntax and adding the <a href="%40namespace.html" title="@namespace is an at-rule that defines XML namespaces to be used in a CSS style sheet. The defined namespaces can be used to restrict the universal, type, and attribute selectors to only select elements within that namespace. The @namespace rule is generally only useful when dealing with documents containing multiple namespaces—such as HTML5 with inline SVG or MathML, or XML that mixes multiple vocabularies."><code>@namespace</code></a> CSS at-rule.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(128,255,128);"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/mediaqueries-3/" title="The 'Media Queries' specification" class="external" lang="en">Media Queries</a></strong></td>
+   <td><span class="spec-REC">Recommendation</span> since June 19th, 2012</td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <p>Extends the former media type ( <code>print</code>, <code>screen</code>, <code>…</code> ) to a full language allowing <a href="Media_Queries/Using_media_queries.html" title="en/CSS/Media_queries">queries on the device media capabilities</a> like <code>only screen and (color)</code> .</p>
+
+    <p>Media queries are not only used in CSS document but also in some attributes of HTML Elements, like the <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#attr-media">media</a></code> attribute of the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link" title="The HTML <link> element specifies relationships between the current document and an external resource. Possible uses for this element include defining a relational framework for navigation. This element is most used to link to style sheets."><code>&lt;link&gt;</code></a> element.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The <a href="http://dev.w3.org/csswg/mediaqueries4" title="http://dev.w3.org/csswg/mediaqueries4" class="external" rel="noopener">next iteration of this specification</a> is in the work, allowing to tailor a Web site regarding the input methods available on the user agent, with new media features like <code>hover</code> or <code>pointer</code>. Detection of EcmaScript support, using the <code>script</code> media features is also proposed.</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(128,255,128);"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-style-attr/" title="The 'CSS Style Attributes' specification" class="external" lang="en">CSS Style Attributes</a></strong></td>
+   <td><span class="spec-REC">Recommendation</span> since November 7th, 2013</td>
+  </tr>
+  <tr>
+   <td colspan="2">Formally defines the syntax of the content of the HTML <a href="https://developer.mozilla.org/en/HTML/Global_attributes#attr-style" title="en/HTML/Global_attributes#attr-style"> <code>style</code> </a> global attribute.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(220,255,220);"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-backgrounds-3/" title="The 'CSS Backgrounds and Borders Module Level&nbsp;3' specification" class="external" lang="en">CSS Backgrounds and Borders Module Level&nbsp;3</a></strong></td>
+   <td><span class="spec-CR">Candidate Recommendation</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <p>Adds:</p>
+
+    <ul>
+     <li>Support, on backgrounds, for any type of <a href="image.html" title="The <image> CSS data type represents a two-dimensional image. There are two kinds of images: plain images, referenced with a <url>, and dynamically-generated images, generated with <gradient> or element(). Images can be used with numerous CSS properties, such as background-image, border-image, content, cursor, and list-style-image."><code>&lt;image&gt;</code></a>, and not only for <code>uri()</code> defined ones.</li>
+     <li>Support for multiple background images.</li>
+     <li>The <a href="background-repeat.html" title="The background-repeat CSS property defines how background images are repeated. A background image can be repeated along the horizontal axis, the vertical axis, both axes, or not repeated at all."><code>background-repeat</code></a> <code>space</code> and <code>round</code> values, and for the 2-value syntax of this CSS property.</li>
+     <li>The <a href="background-attachment.html" title="If a background-image is specified, the background-attachment CSS property determines whether that image's position is fixed within the viewport, or scrolls along with its containing block."><code>background-attachment</code></a> <code>local</code> value.</li>
+     <li>The CSS <a href="background-origin.html" title="The background-origin CSS property sets the background positioning area, i.e., the origin position of an image specified using the background-image property."><code>background-origin</code></a>, <a href="background-size.html" title="The background-size CSS property specifies the size of an element's background image. The image can be left to its natural size, stretched to a new size, or constrained to fit the available space while preserving its intrinsic proportions."><code>background-size</code></a>, and <a href="background-clip.html" title="The background-clip CSS property specifies if an element's background, whether a <color> or an <image>, extends underneath its border."><code>background-clip</code></a> properties.</li>
+     <li>Support for curved border corners, with the CSS <a href="border-radius.html" title="The border-radius CSS property allows Web authors to define how rounded border corners are. You can specify a single radius to make circular corners, or two radii, to make elliptical corners."><code>border-radius</code></a>, <a href="border-top-left-radius.html" title="The border-top-left-radius CSS property sets the rounding of the top-left corner of the element."><code>border-top-left-radius</code></a>, <a href="border-top-right-radius.html" title="The border-top-right-radius CSS property sets the rounding of the top-right corner of the element."><code>border-top-right-radius</code></a>, <a href="border-bottom-left-radius.html" title="The border-bottom-left-radius CSS property sets the rounding of the bottom-left corner of the element."><code>border-bottom-left-radius</code></a>, and <a href="border-bottom-right-radius.html" title="The border-bottom-right-radius CSS property sets the rounding of the bottom-right corner of the element."><code>border-bottom-right-radius</code></a> properties.</li>
+     <li>Support for the use of an <a href="image.html" title="The <image> CSS data type represents a two-dimensional image. There are two kinds of images: plain images, referenced with a <url>, and dynamically-generated images, generated with <gradient> or element(). Images can be used with numerous CSS properties, such as background-image, border-image, content, cursor, and list-style-image."><code>&lt;image&gt;</code></a> as the border with the CSS <a href="border-image.html" title="The border-image CSS property allows drawing an image on the borders of elements. This makes drawing complex looking widgets much simpler than it has been and removes the need for nine boxes in some cases. The border-image is used instead of the border styles given by the border-style properties."><code>border-image</code></a>, <a href="border-image-source.html" title="The border-image-source CSS property defines the <image> to use instead of the style of the border. If this property is set to none, the style defined by border-style is used instead."><code>border-image-source</code></a>, <a href="border-image-slice.html" title="The border-image-slice CSS property divides the image specified by border-image-source in nine regions: the four corners, the four edges and the middle."><code>border-image-slice</code></a>, <a href="border-image-width.html" title="The border-image-width CSS property defines the width of the border image by defining inward offsets from the border edges. If the border-image-width is greater than the border-width, then the border image extends beyond&nbsp;the padding (and/or content) edge."><code>border-image-width</code></a>, <a href="border-image-outset.html" title="The border-image-outset property describes by what amount the border image area extends beyond the border box."><code>border-image-outset</code></a>, and <a href="border-image-repeat.html" title="The border-image-repeat CSS property defines how the middle part of a border image is handled so that it can match the size of the border. It has a one-value syntax that describes the behavior of all the sides, and a two-value syntax that sets a different value for the horizontal and vertical behavior."><code>border-image-repeat</code></a> properties.</li>
+     <li>Support for shadows of the element with the CSS <a href="box-shadow.html" title="The box-shadow CSS property is used to add shadow effects around an element's frame. You can specify multiple effects separated by commas if you wish to do so."><code>box-shadow</code></a> property.</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The <a href="http://dev.w3.org/csswg/css4-background/" title="http://dev.w3.org/csswg/css4-background/" class="external" rel="noopener">CSS4 iteration of the Backgrounds and Borders specification</a> is already in progress, though it still hasn't reached the First Public Working Draft stage, it plans to add the ability to clip a border (with the CSS <a href="border-clip.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>border-clip</code></a>, <a href="border-clip-top.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>border-clip-top</code></a>, <a href="border-clip-right.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>border-clip-right</code></a>, <a href="border-clip-bottom.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>border-clip-bottom</code></a>, and <a href="border-clip-left.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>border-clip-left</code></a> properties) or to control the shape of the border in a corner (using the CSS <a href="border-corner-shape.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>border-corner-shape</code></a> property).</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(220,255,220);"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-multicol-1/" title="The 'CSS Multi-column Layout Module' specification" class="external" lang="en">CSS Multi-column Layout Module</a></strong></td>
+   <td><span class="spec-CR">Candidate Recommendation</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">Adds support for easy multi-column layouts using the CSS <a href="columns.html" title="The columns CSS property is a shorthand property allowing to set both the column-width and the column-count properties at the same time."><code>columns</code></a>, <a href="column-count.html" title="The column-count CSS property describes the number of columns of the element."><code>column-count</code></a>, <a href="column-fill.html" title="The column-fill CSS property controls how contents are partitioned into columns."><code>column-fill</code></a>, <a href="column-gap.html" title="The column-gap CSS property sets the size of the gap between columns for elements which are specified to be displayed as multi-column elements."><code>column-gap</code></a>, <a href="column-rule.html" title="In multi-column layouts, the column-rule CSS property specifies a straight line, or &quot;rule&quot;, to be drawn between each column."><code>column-rule</code></a>, <a href="column-rule-color.html" title="The column-rule-color CSS property lets you set the color of the rule or line drawn between columns in multi-column layouts."><code>column-rule-color</code></a>, <a href="column-rule-style.html" title="The column-rule-style CSS property lets you set the style of the rule drawn between columns in multi-column layouts."><code>column-rule-style</code></a>, <a href="column-rule-width.html" title="The column-rule-width CSS property lets you set the width of the rule drawn between columns in multi-column layouts."><code>column-rule-width</code></a>, <a href="column-span.html" title="The column-span CSS property makes it possible for an element to span across all columns when its value is set to all. An element that spans more than one column is called a spanning element."><code>column-span</code></a>, <a href="column-width.html" title="The column-width CSS property specifies the minimum column width. The number of columns will be the maximum number of columns that can fit&nbsp;without any column having a width&nbsp;less than the column-width&nbsp;value. The actual column width may be smaller than the value of column-width if the width of the container is smaller."><code>column-width</code></a>, <a href="break-after.html" title="The break-after CSS property defines how page, column, or region breaks should behave after a generated box. If there is no generated box, the property is ignored."><code>break-after</code></a>, <a href="break-before.html" title="The break-before CSS property defines how page, column, or region breaks should behave before a generated box. If there is no generated box, the property is ignored."><code>break-before</code></a>, and <a href="break-inside.html" title="The break-inside CSS property defines how page, column, or region breaks should behave inside a generated box. If there is no generated box, the property is ignored."><code>break-inside</code></a>.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table style="width: 100%;" class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(220,255,220);"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-speech-1/" title="The 'CSS Speech Module' specification" class="external" lang="en">CSS Speech Module</a></strong></td>
+   <td><span class="spec-CR">Candidate Recommendation</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">Defines the <code>speech</code> media type, an aural formatting model and numerous properties specific for speech-rendering user agents.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(220,255,220);"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-images-3/" title="The 'CSS Images Module Level&nbsp;3' specification" class="external" lang="en">CSS Images Module Level&nbsp;3</a></strong></td>
+   <td><span class="spec-CR">Candidate Recommendation</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <p>Defines the <a href="image.html" title="The <image> CSS data type represents a two-dimensional image. There are two kinds of images: plain images, referenced with a <url>, and dynamically-generated images, generated with <gradient> or element(). Images can be used with numerous CSS properties, such as background-image, border-image, content, cursor, and list-style-image."><code>&lt;image&gt;</code></a> data type.</p>
+
+    <p>Extends the <code>url()</code> syntax to support image slices using media fragments.</p>
+
+    <p>Adds:</p>
+
+    <ul>
+     <li>The <code>dppx</code> unit to the <a href="resolution.html" title="The <resolution> CSS data type, used for describing resolutions in media queries, denotes the pixel density of an output device, i.e., its resolution."><code>&lt;resolution&gt;</code></a> data type.</li>
+     <li>The <code>image()</code> function as a more flexible alternative to <code>url()</code> to define an image from an url.<br>
+      <em><strong>At risk</strong> </em> <strong> <em>:</em> </strong> <em> due to insufficient browser support, standardization of the <code>image()</code> function may be postponed to </em> <em>the next iteration of this module</em> <em>.</em></li>
+     <li>Support for <code>linear-gradient()</code>, <code>repeating-linear-gradient()</code>, <code>radial-gradient()</code> and <code>repeating-radial-gradient()</code>.</li>
+     <li>The ability to define how a replaced element should fit in its element, using the CSS <a href="object-fit.html" title="The object-fit CSS property specifies how a replaced element, such as an <img> or <video>, should be resized to fit its container."><code>object-fit</code></a> property.<br>
+      <em><strong>At risk</strong> </em> <strong> <em>:</em> </strong> <em> due to insufficient browser support, standardization of the <a href="object-fit.html" title="The object-fit CSS property specifies how a replaced element, such as an <img> or <video>, should be resized to fit its container."><code>object-fit</code></a> and property may be postponed to </em> <em>the next iteration of this module</em> <em>.</em></li>
+     <li>The ability to override the resolution and orientation of an external image using the CSS <a href="image-resolution.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>image-resolution</code></a> and <a href="image-orientation.html" title="The image-orientation CSS property describes how to correct the default orientation of an image."><code>image-orientation</code></a> properties.<br>
+      <em><strong>At risk</strong> </em> <strong> <em>:</em> </strong> <em> due to insufficient browser support, standardization of the <a href="image-resolution.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>image-resolution</code></a> and <a href="image-orientation.html" title="The image-orientation CSS property describes how to correct the default orientation of an image."><code>image-orientation</code></a> properties may be postponed to </em> <em>the next iteration of this module</em> <em>.</em></li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The <a href="#Images_(Level_4)">CSS Image Values and Replaced Content Level 4</a> which will supersede CSS Image Level 3 is in development and is a <span class="spec-WD">Working Draft</span>.</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(220, 255, 220);"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-values-3/" title="The 'CSS Values and Units Module Level&nbsp;3' specification" class="external" lang="en">CSS Values and Units Module Level&nbsp;3</a></strong></td>
+   <td><span class="spec-CR">Candidate Recommendation</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <p>Makes <code>initial</code> and <code>inherit</code> keywords usable on any CSS property.</p>
+
+    <p>Formally defines the CSS data types of CSS 2.1, that were implicitely defined by their grammar token and some textual precisions.</p>
+
+    <p>Adds:</p>
+
+    <ul>
+     <li>Definition for new font-relative length units: <code>rem</code> and <code>ch</code> .</li>
+     <li>Definition for viewport-relative length units: <code>vw</code>, <code>vh</code>, <code>vmax</code>, and <code>vmin</code> .</li>
+     <li>Precision about the real size of the absolute length units, which are not really absolute, but defined in relation with the <em>reference pixel</em> .</li>
+     <li>Definition for <a href="angle.html" title="The <angle> CSS data type represents an angle value expressed in degrees, gradians, radians, or turns. It is used, for example, in <gradient>s and in some transform functions."><code>&lt;angle&gt;</code></a>, <a href="time.html" title="The <time> CSS data type represents a time value expressed in seconds or milliseconds. It is used in animation, transition, and related properties."><code>&lt;time&gt;</code></a>, <a href="frequency.html" title="The <frequency> CSS data type represents a frequency dimension, such as the pitch of a speaking voice. It is not currently used in any CSS properties."><code>&lt;frequency&gt;</code></a>, <a href="resolution.html" title="The <resolution> CSS data type, used for describing resolutions in media queries, denotes the pixel density of an output device, i.e., its resolution."><code>&lt;resolution&gt;</code></a>.</li>
+     <li>Normative value to the definition of <a href="color_value.html" title="The <color> CSS data type represents a color in the sRGB color space. A <color> may also include an alpha-channel transparency value, indicating how the color should composite with its background."><code>&lt;color&gt;</code></a>, <a href="image.html" title="The <image> CSS data type represents a two-dimensional image. There are two kinds of images: plain images, referenced with a <url>, and dynamically-generated images, generated with <gradient> or element(). Images can be used with numerous CSS properties, such as background-image, border-image, content, cursor, and list-style-image."><code>&lt;image&gt;</code></a>, and <a href="position_value.html" title="The <position> CSS data type denotes a two-dimensional coordinate used to set a location relative to an element box. It is used in the background-position property."><code>&lt;position&gt;</code></a>.</li>
+     <li>Definition for the <a href="calc.html" title="The documentation about this has not yet been written; please consider contributing!"><code>calc()</code></a>, <a href="attr.html" title="The documentation about this has not yet been written; please consider contributing!"><code>attr()</code></a>, and <code>toggle()</code> functional notations.<br>
+      <em><strong>At risk:</strong> due to insufficient browser support, standardization of the <code>calc()</code>, <code>attr()</code>, and <code>toggle()</code> functional notations may be postponed to </em> <em>the next iteration of this module</em><em>.</em></li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Several types definition, like <code>&lt;ident&gt;</code> and <code>&lt;custom-ident&gt;</code>, have been deferred to CSS Values and Units Module Level 4.</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(220,255,220);"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-flexbox-1/" title="The 'CSS Flexible Box Layout Module' specification" class="external" lang="en">CSS Flexible Box Layout Module</a></strong></td>
+   <td><span class="spec-CR">Candidate Recommendation</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">Add a flexbox layout to the CSS <a href="display.html" title="The display CSS property specifies the type of rendering box used for an element. In HTML, default display property values are taken from behaviors described in the HTML specifications or from the browser/user default stylesheet. The default value in XML is inline, including SVG elements."><code>display</code></a> property and several new CSS properties to control it: <a href="flex.html" title="The flex CSS property specifies how a flex item will grow or shrink so as to fit the space available in its flex container. This is a shorthand property that sets&nbsp;flex-grow, flex-shrink, and flex-basis."><code>flex</code></a>, <a href="align-items.html" title="The CSS align-items property aligns flex items of the current flex line the same way as justify-content but in the perpendicular direction."><code>flex-align</code></a>, <a href="flex-direction.html" title="The flex-direction CSS property specifies how flex items are placed in the flex container defining the main axis and the direction (normal or reversed)."><code>flex-direction</code></a>, <a href="flex-flow.html" title="The flex-flow CSS property is a shorthand property for flex-direction and flex-wrap individual properties."><code>flex-flow</code></a>, <a href="align-self.html" title="The align-self CSS property aligns flex items of the current flex line overriding the align-items value. If any of the flex item's cross-axis margin is set to auto, then align-self is ignored."><code>flex-item-align</code></a>, <a href="align-content.html" title="The CSS align-content property aligns a flex container's lines within the flex container when there is extra space on the cross-axis. This property has no effect on single line flexible boxes."><code>flex-line-pack</code></a>, <a href="order.html" title="The CSS order property specifies the order used to lay out flex items in their flex container. Elements are laid out by ascending order of the order value. Elements with the same order value are laid out in the order they appear in the source code."><code>flex-order</code></a>, <a href="justify-content.html" title="The CSS justify-content property defines how a browser distributes available space between and around elements when aligning flex items in the main-axis of the current line. The alignment is done after the lengths and auto margins are applied, meaning that, if there is at least one flexible element, with flex-grow different than 0, it will have no effect as there won't be any available space."><code>flex-pack</code></a>, and <a href="flex-wrap.html" title="The CSS flex-wrap property specifies whether flex items are forced into a single line or can be wrapped onto multiple lines. If wrapping is allowed, this property also enables you to control the direction in which lines are stacked."><code>flex-wrap</code></a>.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(220, 255, 220);"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-conditional-3/" title="The 'CSS Conditional Rules Module Level&nbsp;3' specification" class="external" lang="en">CSS Conditional Rules Module Level&nbsp;3</a></strong></td>
+   <td><span class="spec-CR">Candidate Recommendation</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">Adds features for conditional processing of parts of style sheets, conditioned on capabilities of the browser or the document the style sheet is being applied to. It consists mainly in allowing nested at-rules inside <a href="%40media.html" title="The @media CSS at-rule&nbsp;can be used to apply styles based on the result of one or more&nbsp;media queries, which test a device's type, specific characteristics, and environment."><code>@media</code></a> and the adding of a new CSS at-rule, <a href="%40supports.html" title="The @supports CSS at-rule lets you specify declarations that depend on a browser's support for one or more specific CSS features. This is called a feature query. The rule may be placed at the top level of your code or nested inside any other conditional group at-rule."><code>@supports</code></a>, and a new DOM method <a href="../API/CSS/supports.html" title="The CSS.supports() static methods returns a Boolean value indicating if the browser supports a given CSS feature, or not."><code>CSS.supports()</code></a>.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(220, 255, 220);"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-text-decor-3/" title="The 'CSS Text Decoration Module Level&nbsp;3' specification" class="external" lang="en">CSS Text Decoration Module Level&nbsp;3</a></strong></td>
+   <td><span class="spec-CR">Candidate Recommendation</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <p>Extends:</p>
+
+    <ul>
+     <li>the CSS <a href="text-decoration.html" title="The text-decoration CSS property specifies the appearance of decorative lines used on text. It is a shorthand for setting one or more individual text-decoration values in a single declaration, which include text-decoration-line, text-decoration-color, and text-decoration-style."><code>text-decoration</code></a> property by making it a shorthand for the CSS <a href="text-decoration-line.html" title="The text-decoration-line CSS property sets the kind of decoration that is used on text in an element. When setting multiple line-decoration properties at once, it may be more convenient to use the text-decoration shorthand property instead."><code>text-decoration-line</code></a>, <a href="text-decoration-color.html" title="The text-decoration-color CSS property sets the color of the decorative additions to text that are specified by text-decoration-line; these include underlines and overlines, strikethroughs, and wavy lines like those typically used to indicate content is misspelled (for example). The specified color applies to all such decorative lines in the scope of the property's value."><code>text-decoration-color</code></a>, and <a href="text-decoration-style.html" title="The text-decoration-style CSS property sets the style of the lines specified by text-decoration-line. The style applies to all lines that are specified; there is no way to define different styles for each of the lines defined by text-decoration-line. When setting multiple line-decoration properties at once, it may be more convenient to use the text-decoration shorthand property instead."><code>text-decoration-style</code></a> properties. And adds the <a href="text-decoration-skip.html" title="The text-decoration-skip CSS property specifies what parts of the element’s content any text decoration affecting the element must skip over."><code>text-decoration-skip</code></a>, and <a href="text-underline-position.html" title="The text-underline-position CSS property specifies the position of the underline which is set using the text-decoration property's underline value."><code>text-underline-position</code></a> properties.</li>
+    </ul>
+
+    <p>Adds:</p>
+
+    <ul>
+     <li>Support for East-Asian-script emphasis marks with the CSS <a href="text-emphasis.html" title="The text-emphasis CSS property is a shorthand&nbsp;property for setting text-emphasis-style and text-emphasis-color in one declaration. This property will apply the specified emphasis mark to each character of the element's text, except separator characters, like spaces,&nbsp; and control characters."><code>text-emphasis</code></a>, <a href="text-emphasis-style.html" title="The text-emphasis-style CSS property defines the type of emphasis used. It can also be set, and reset, using the text-emphasis shorthand."><code>text-emphasis-style</code></a>, <a href="text-emphasis-color.html" title="The text-emphasis-color CSS property defines the color used to draw emphasis marks on text being rendered in the HTML document. This value can also be set and reset using the text-emphasis shorthand."><code>text-emphasis-color</code></a>, and <a href="text-emphasis-position.html" title="The text-emphasis-position CSS property describes where emphasis marks are drawn at. The effect of emphasis marks on the line height is the same as for ruby text: if there isn't enough place, the line height is increased."><code>text-emphasis-position</code></a> properties.</li>
+     <li>Support for script shadows with the CSS <a href="text-shadow.html" title="The text-shadow CSS property adds shadows to text. It accepts a comma-separated list of shadows to be applied to the text and any of its decorations."><code>text-shadow</code></a> property.</li>
+    </ul>
+
+    <p>Clarifies:</p>
+
+    <ul>
+     <li>The paint order of the decorations.</li>
+    </ul>
+
+    <p><em><strong>At risk:</strong> due to insufficient browser support, standardization of the <code>text-decoration-skip</code>, line positioning rules and the ability to place both emphasis marks and ruby above the same base text may be postponed to </em> <em>the next iteration of this module</em><em>.</em></p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(220,255,220);"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-fonts-3/" title="The 'CSS Fonts Module Level&nbsp;3' specification" class="external" lang="en">CSS Fonts Module Level&nbsp;3</a></strong></td>
+   <td><span class="spec-CR">Candidate Recommendation</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <p>Amends the CSS2.1 Font matching algorithm to be closer to what is really implemented.</p>
+
+    <p>Adds:</p>
+
+    <ul>
+     <li>Support for downloadable fonts via the CSS <a href="%40font-face.html" title="The @font-face CSS at-rule allows authors to specify online fonts to display text on their web pages. By allowing authors to provide their own fonts, @font-face eliminates the need to depend on the limited number of fonts users have installed on their computers. The @font-face at-rule may be used not only at the top level of a CSS, but also inside any CSS conditional-group at-rule."><code>@font-face</code></a> at-rule.</li>
+     <li>The control of the contextual inter-glyph spacing via the CSS <a href="font-kerning.html" title="The font-kerning CSS property controls the usage of the kerning information stored in a font."><code>font-kerning</code></a> property.</li>
+     <li>The choice of language-specific glyphs via the CSS <a href="font-language-override.html" title="The font-language-override CSS property controls the usage of language-specific glyphs in a typeface."><code>font-language-override</code></a> property.</li>
+     <li>The choice of glyphs with specific OpenType features via the CSS <a href="font-feature-settings.html" title="The font-feature-settings CSS property gives you control over advanced typographic features in OpenType fonts."><code>font-feature-settings</code></a> property.</li>
+     <li>The control of the aspect ratio to use when fallback fonts are selected via the CSS <a href="font-size-adjust.html" title="The font-size-adjust CSS property specifies that font size should be chosen based on the height of lowercase letters rather than the height of capital letters. This is useful since the legibility of fonts, especially at small sizes, is determined more by the size of lowercase letters than by the size of capital letters."><code>font-size-adjust</code></a> property.</li>
+     <li>The choice of alternative font faces using the CSS <a href="font-stretch.html" title="The font-stretch CSS property selects a normal, condensed, or expanded face from a font."><code>font-stretch</code></a>, <a href="font-variant-alternates.html" title="The font-variant-alternates CSS property controls the usage of alternate glyphs. These alternate glyphs may be referenced by alternative names defined in @font-feature-values."><code>font-variant-alternates</code></a>, <a href="font-variant-caps.html" title="The font-variant-caps CSS property controls the usage of alternate glyphs for capital letters."><code>font-variant-caps</code></a>, <a href="font-variant-east-asian.html" title="The font-variant-east-asian CSS property controls the usage of alternate glyphs for East Asian scripts, like Japanese and Chinese."><code>font-variant-east-asian</code></a>, <a href="font-variant-ligatures.html" title="The font-variant-ligatures CSS property controls which ligatures and contextual forms are used in textual content of the elements it applies to. This leads to more harmonized forms in the resulting text."><code>font-variant-ligatures</code></a>, <a href="font-variant-numeric.html" title="The font-variant-numeric CSS property controls the usage of alternate glyphs for numbers, fractions, and ordinal markers."><code>font-variant-numeric</code></a>, and <a href="font-variant-position.html" title="The font-variant-position CSS property controls the usage of alternate, smaller glyphs that are positioned as superscript or subscript relative to the baseline of the font (which remains unchanged). These glyphs are likely to be used in <sub> and <sup> elements."><code>font-variant-position</code></a> properties. It also extends the related CSS <a href="font-variant.html" title="The font-variant CSS property is a shorthand for the longhand properties font-variant-caps, font-variant-numeric, font-variant-alternates, font-variant-ligatures, and font-variant-east-asian. You can also set the CSS Level 2 (Revision 1) values of font-variant, (that is, normal or small-caps), by using the font shorthand."><code>font-variant</code></a> shorthand property and introduces the <a href="%40font-feature-values.html" title="The @font-feature-values CSS at-rule lets you use a common name in the font-variant-alternates property for features activated differently in OpenType. This can help simplify your CSS when using multiple fonts."><code>@font-feature-values</code></a> at-rule.</li>
+     <li>The control of the automatic generation of an oblique or bold face when none are found via the CSS <a href="font-synthesis.html" title="The font-synthesis CSS property controls which missing typefaces, bold or italic, may be synthesized by the browser."><code>font-synthesis</code></a> property.</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(220,255,220);"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-cascade-3/" title="The 'CSS Cascading and Inheritance Level&nbsp;3' specification" class="external" lang="en">CSS Cascading and Inheritance Level&nbsp;3</a></strong></td>
+   <td><span class="spec-CR">Candidate Recommendation</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <p>Adds:</p>
+
+    <ul>
+     <li>The <a href="initial.html" title="The initial CSS keyword applies the initial value of a property to an element. It can be applied to any CSS property, including the CSS shorthand all."><code>initial</code></a>, <a href="unset.html" title="The unset CSS keyword resets a property to its inherited value if it inherits from its parent, and to its initial value if not. In other words, it behaves like the inherit keyword in the first case, and like the initial keyword in the second case. It can be applied to any CSS property, including the CSS shorthand all."><code>unset</code></a> values for properties.</li>
+     <li>The CSS <a href="all.html" title="The CSS all shorthand property resets all properties, apart from&nbsp;unicode-bidi and direction, to their initial or inherited value."><code>all</code></a> property.</li>
+     <li>The scoping mechanism.</li>
+    </ul>
+
+    <p>Clarifies:</p>
+
+    <ul>
+     <li>Interaction of media-dependent @import statements and style sheet loading requirements.</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(220,255,220);"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-writing-modes-3/" title="The 'CSS Writing Modes Module Level&nbsp;3' specification" class="external" lang="en">CSS Writing Modes Module Level&nbsp;3</a></strong></td>
+   <td><span class="spec-CR">Candidate Recommendation</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">Defines the writing modes of both horizontal and vertical scripts and clarifies how the CSS <a href="direction.html" title="The direction CSS property sets the direction of text, table columns, and horizontal overflow."><code>direction</code></a> and <a href="unicode-bidi.html" title="The unicode-bidi CSS property, together with the direction property, determines how bidirectional text in a document is handled. For example, if a block of content contains both left-to-right and right-to-left text, the user-agent uses a complex Unicode algorithm to decide how to display the text. The unicode-bidi property overrides this algorithm and allows the developer to control the text embedding."><code>unicode-bidi</code></a> properties interact with the new CSS <a href="text-orientation.html" title="The text-orientation CSS property defines the orientation of the text characters in a line. This property only has an effect in vertical mode, that is, when writing-mode is not horizontal-tb. It is useful for controlling the display of languages that use vertical script, and also for making vertical table headers."><code>text-orientation</code></a> property, and extends them where needed.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(220,255,220);"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-shapes/" title="The 'CSS Shapes Module Level&nbsp;1' specification" class="external" lang="en">CSS Shapes Module Level&nbsp;1</a></strong></td>
+   <td><span class="spec-CR">Candidate Recommendation</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">Defines geometric shapes, which can be applied to floats. These shapes describe areas, around which inline content wraps instead of wrapping around the bounding box.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(220,255,220);"><strong><a rel="noopener" hreflang="en" href="https://drafts.fxtf.org/css-masking-1/" title="The 'CSS Masking Module Level&nbsp;1' specification" class="external" lang="en">CSS Masking Module Level&nbsp;1</a></strong></td>
+   <td><span class="spec-CR">Candidate Recommendation</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">Defines a way for partially or fully hiding portions of visual elements. It describes how to use another graphical element or image as a luminance or alpha mask.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Modules_in_the_refining_phase">Modules in the refining phase</h3>
+
+<p>Specifications that are deemed to be in the <em>refining phase</em> are already fairly stable. Though changes are still expected, they shouldn't create incompatibilities with current implementations; they should mainly define behavior in edge cases.</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,255,220);"><strong><a rel="noopener" hreflang="en" href="https://w3c.github.io/web-animations/" title="The 'Web Animations' specification" class="external" lang="en">Web Animations</a></strong></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">&nbsp;</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,255,220);"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-counter-styles-3/" title="The 'CSS Counter Styles Level&nbsp;3' specification" class="external" lang="en">CSS Counter Styles Level&nbsp;3</a></strong></td>
+   <td><span class="spec-CR">Candidate Recommendation</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">&nbsp;</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,255,220);"><strong><a rel="noopener" hreflang="en" href="https://drafts.fxtf.org/compositing-1/" title="The 'Compositing and Blending Level 1' specification" class="external" lang="en">Compositing and Blending Level 1</a></strong></td>
+   <td><span class="spec-CR">Candidate Recommendation</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">&nbsp;</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,255,220);"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-syntax/" title="The 'CSS Syntax Level&nbsp;3' specification" class="external" lang="en">CSS Syntax Level&nbsp;3</a></strong></td>
+   <td><span class="spec-CR">Candidate Recommendation</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">Clarifies how charsets are determined; minor changes in parsing and tokenization algorithms.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,255,220);"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-will-change/" title="The 'CSS Will Change Module Level&nbsp;1' specification" class="external" lang="en">CSS Will Change Module Level&nbsp;1</a></strong></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">&nbsp;</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,255,220);"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-transitions/" title="The 'CSS Transitions' specification" class="external" lang="en">CSS Transitions</a></strong></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">Allows the definition of transitions effects between two properties values by adding the CSS <a href="transition.html" title="The transition CSS property is a shorthand property for transition-property, transition-duration, transition-timing-function, and transition-delay."><code>transition</code></a>, <a href="transition-delay.html" title="The transition-delay CSS property specifies the amount of time to wait between a change being requested to a property that is to be transitioned and the start of the transition effect."><code>transition-delay</code></a>, <a href="transition-duration.html" title="The transition-duration CSS property specifies the number of seconds or milliseconds a transition animation should take to complete. By default, the value is 0s, meaning that no animation will occur."><code>transition-duration</code></a>, <a href="transition-property.html" title="The transition-property CSS property is used to specify the names of CSS properties to which a transition effect should be applied."><code>transition-property</code></a>, and <a href="transition-timing-function.html" title="The transition-timing-function CSS property is used to describe how the intermediate values of the CSS&nbsp;properties being affected by a transition effect are calculated. This, in essence, lets you establish an acceleration curve so that the speed of the transition can vary over its duration."><code>transition-timing-function</code></a> properties.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,255,220);"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-animations/" title="The 'CSS Animations' specification" class="external" lang="en">CSS Animations</a></strong></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">Allows the definition of animations effects by adding the CSS <a href="animation.html" title="The animation CSS property is a shorthand property for the various animation properties: animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count, animation-direction, animation-fill-mode, and animation-play-state."><code>animation</code></a>, <a href="animation-delay.html" title="The animation-delay CSS property specifies when an animation should start. You can begin the animation at a future point in time, immediately and from its begining, or immediately and partway through the animation cycle."><code>animation-delay</code></a>,<a href="animation-direction.html" title="The animation-direction CSS property specifies whether an animation should play forwards, backwards, or alternating back and forth."><code>animation-direction</code></a>, <a href="animation-duration.html" title="The animation-duration CSS property specifies the length of time that an animation should take to complete one cycle."><code>animation-duration</code></a>, <a href="animation-fill-mode.html" title="The animation-fill-mode CSS property specifies how a CSS animation should apply styles to its target before and after its execution."><code>animation-fill-mode</code></a>, <a href="animation-iteration-count.html" title="The animation-iteration-count CSS property specifies the number of times an animation cycle should be played before stopping. If multiple values are specified, each time the animation is played the next value in the list is used, cycling back to the first value after the last one is used."><code>animation-iteration-count</code></a>, <a href="animation-name.html" title="The animation-name CSS property specifies one or more animations that should be applied to an element. Each name indicates an @keyframes at-rule that defines the property values for the animation sequence."><code>animation-name</code></a>, <a href="animation-play-state.html" title="The animation-play-state CSS property specifies whether an animation is running or paused. In JavaScript, this can be queried to determine whether or not the animation is currently running. In addition, you can use JavaScript to set its value to pause or resume playback of an animation."><code>animation-play-state</code></a>, and <a href="animation-timing-function.html" title="The animation-timing-function CSS property specifies how a CSS animation should progress over the duration of each cycle."><code>animation-timing-function</code></a> properties, as well as the <a href="%40keyframes.html" title="The @keyframes CSS at-rule controls the intermediate steps in a CSS animation sequence by defining styles for keyframes (or waypoints) along the animation sequence."><code>@keyframes</code></a> at-rule.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,255,220);"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-transforms/" title="The 'CSS Transforms Level&nbsp;1' specification" class="external" lang="en">CSS Transforms Level&nbsp;1</a></strong></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <p>Adds:</p>
+
+    <ul>
+     <li>the support of bi-dimensional transforms to be applied to any element using the CSS <a href="transform.html" title="The transform CSS property lets you modify the coordinate space of the CSS visual formatting model. Using it, elements can be translated, rotated, scaled, and skewed."><code>transform</code></a> and <a href="transform-origin.html" title="The transform-origin property lets you modify the origin for transformations of an element. For example, the transformation origin of the rotate() function is the center of rotation. (This property is applied by first translating the element by the negated value of the property, then applying the element's transform, then translating by the property value.)"><code>transform-origin</code></a> properties. The supported transforms are: <code>matrix</code><code>()</code>, <code>translate()</code>, <code>translateX()</code>, <code>translateY()</code>, <code>scale()</code>, <code>scaleX()</code>, <code>scaleY()</code>, <code>rotate()</code>, <code>skewX()</code>, and <code>skewY()</code>.</li>
+     <li>the support of tri-dimensional transforms to be applied to any element by adding the CSS <a href="transform-style.html" title="The transform-style CSS property determines if the children of the element are positioned in the 3D-space or are flattened in the plane of the element."><code>transform-style</code></a>, <a href="perspective.html" title="The perspective CSS property determines the distance between the z=0 plane and the user in order to give a&nbsp;3D-positioned element some perspective. Each 3D element with z>0 becomes larger; each 3D-element with z<0 becomes smaller. The strength of the effect is determined by the value of this property."><code>perspective</code></a>, <a href="perspective-origin.html" title="The perspective-origin CSS property determines the position at which the viewer is looking. It is used as the vanishing point by the perspective property."><code>perspective-origin</code></a>, and <a href="backface-visibility.html" title="The backface-visibility CSS property determines whether or not the back face of the element is visible when facing the user. The back face of an element is always a transparent background, letting, when visible, a mirror image of the front face be displayed."><code>backface-visibility</code></a> properties and extended the <a href="transform.html" title="The transform CSS property lets you modify the coordinate space of the CSS visual formatting model. Using it, elements can be translated, rotated, scaled, and skewed."><code>transform</code></a> property with the following transforms are: <code>matrix</code> <code>3d()</code>, <code>translate3d()</code>, <code>translateZ()</code>,&nbsp; <code>scale3d()</code>, <code>scaleZ()</code>, <code>rotate3d()</code>, <code>rotateX</code><code>()</code>,&nbsp;<code>rotateY</code><code>()</code>, <code>rotateZ()</code>, and <code>perspective()</code>.</li>
+    </ul>
+
+    <p><em><strong>Note:</strong> this specification is a merge of CSS 2D-Transforms, CSS 3D-Transforms and SVG transforms. </em></p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255, 255, 220);"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-break-3/" title="The 'CSS Fragmentation Module Level&nbsp;3' specification" class="external" lang="en">CSS Fragmentation Module Level&nbsp;3</a></strong></td>
+   <td><span class="spec-CR">Candidate Recommendation</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">Defines how partitions of a Web page should happen, that is page, column breaks, and widows and orphans handling.
+    <p>Adds:</p>
+
+    <ul>
+     <li>Support for defining the behavior of decorations, that is borders and background colors or images, when a box is breaked (at a page, column or line-break) with the CSS <a href="box-decoration-break.html" title="The box-decoration-break CSS property specifies how the background, padding, border, border-image, box-shadow, margin, and clip-path of an element are applied when the box for the element is fragmented."><code>box-decoration-break</code></a> property.</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,255,220);"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-text-3/" title="The 'CSS Text Module Level&nbsp;3' specification" class="external" lang="en">CSS Text Module Level&nbsp;3</a></strong></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <p>Extends:</p>
+
+    <ul>
+     <li>the CSS <a href="text-transform.html" title="The text-transform CSS property specifies how to capitalize an element's text. It can be used to make text appear in all-uppercase or all-lowercase, or with each word capitalized."><code>text-transform</code></a> property with the value <code>full-width</code>.</li>
+     <li>the CSS <a href="text-align.html" title="The text-align CSS property describes how inline content like text is aligned in its parent block element. text-align does not control the alignment of block elements, only their inline content."><code>text-align</code></a> property with the value <code>start</code>, <code>end</code>, <code>start end</code>, and <code>match-parent</code> for a better support of documents with multiple directionalities of text.</li>
+     <li>the CSS <a href="text-align.html" title="The text-align CSS property describes how inline content like text is aligned in its parent block element. text-align does not control the alignment of block elements, only their inline content."><code>text-align</code></a> property with a <a href="string.html" title="The <string> CSS data type represents a sequence of characters. Strings are used in numerous CSS properties, such as content, font-family, and quotes."><code>&lt;string&gt;</code></a> value to align on that character. This is useful to align number on the decimal point.</li>
+     <li>the CSS <a href="word-spacing.html" title="The word-spacing CSS property specifies the spacing behavior between tags and words."><code>word-spacing</code></a> and <a href="letter-spacing.html" title="The letter-spacing CSS property specifies the spacing behavior between text characters."><code>letter-spacing</code></a> properties with range constraints to control flexibility in justification.</li>
+    </ul>
+
+    <p>Adds:</p>
+
+    <ul>
+     <li>Control on how whitespaces are displayed using the CSS <a href="text-space-collapse.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>text-space-collapse</code></a> and <a href="tab-size.html" title="The tab-size CSS property is used to customize the width of a tab (U+0009) character."><code>tab-size</code></a> properties.</li>
+     <li>Control on line breaks and word boundaries using the CSS <a href="line-break.html" title="The line-break CSS property is used to specify how (or if) to break lines when working with punctuation and symbols. This only affects text in Chinese, Japanese, or Korean (CJK)."><code>line-break</code></a>, <a href="word-break.html" title="The word-break CSS property specifies whether or not the browser should insert line breaks wherever the text would otherwise overflow its content box."><code>word-break</code></a>, <a href="hyphens.html" title="The hyphens CSS property specifies how words should be hyphenated when text wraps across multiple lines. You can prevent hyphenation entirely, use hyphenation in manually-specified points within the text, or let the browser automatically insert hyphens where appropriate."><code>hyphens</code></a>, <a href="text-wrap.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>text-wrap</code></a>, <a href="overflow-wrap.html" title="The overflow-wrap CSS property specifies whether or not the browser should insert line breaks within words to prevent text from overflowing its content box."><code>overflow-wrap</code></a>, and <a href="text-align-last.html" title="The text-align-last CSS property describes how the last line of a block or a line, right before a forced line break, is aligned."><code>text-align-last</code></a> properties.</li>
+     <li>Control on how justification is happening, in order to support more type of scripts, using the CSS <a href="text-justify.html" title="The text-justify CSS property defines what type of justification should be applied to text when it is justified (i.e., when text-align: justify; is set on it)."><code>text-justify</code></a> property.</li>
+     <li>Control on edge effect using the CSS <a href="text-indent.html" title="The text-indent CSS property specifies the amount of indentation (empty space) that is put before lines of text in a block. By default, this controls the indentation of only the first formatted line of the block, but the hanging and each-line keywords can be used to change this behavior."><code>text-indent</code></a> and <a href="hanging-punctuation.html" title="The hanging-punctuation CSS property specifies whether a punctuation mark should hang at the start or end of a line of text. Hanging punctuation may be placed outside the line box."><code>hanging-punctuation</code></a> properties.</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>A few features present in early CSS Text Level 3 draft have being <a href="http://dev.w3.org/csswg/css3-text/#recent-changes" title="http://dev.w3.org/csswg/css3-text/#recent-changes" class="external" rel="noopener">postponed to the next iteration of this module</a> .</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,255,220);"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-variables/" title="The 'CSS Custom Properties for Cascading Variables Module Level&nbsp;1' specification" class="external" lang="en">CSS Custom Properties for Cascading Variables Module Level&nbsp;1</a></strong></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">Defines a mechanism allowing to define variables in CSS.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,255,220);"><strong><a rel="noopener" hreflang="en" href="https://drafts.fxtf.org/compositing-1/" title="The 'Compositing and Blending Level 1' specification" class="external" lang="en">Compositing and Blending Level 1</a></strong></td>
+   <td><span class="spec-CR">Candidate Recommendation</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">&nbsp;</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Modules_in_the_revising_phase">Modules in the revising phase</h3>
+
+<p>Modules that are in the revising phase are much less stable than those in the refining phase. Often the syntax is still under scrutiny and may evolve a lot, in a non-compatible way. Alternative syntaxes are tested and often implemented.</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,160,100);"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-ui-3/" title="The 'CSS Basic User Interface Module Level&nbsp;3' specification" class="external" lang="en">CSS Basic User Interface Module Level&nbsp;3</a></strong></td>
+   <td><span class="spec-PR">Proposed Recommendation</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <p>Adds:</p>
+
+    <ul>
+     <li>The ability to tweak the box model using the CSS <a href="box-sizing.html" title="The CSS box-sizing property is used to alter the default CSS box model used to calculate width and height of the elements."><code>box-sizing</code></a> property.<br>
+      <strong><em>At risk:</em> </strong> <em> due to insufficient browser support, standardization of the <code>padding</code><code>-box</code> value may be postponed to </em> <em>the next iteration of this module</em> <em>.</em></li>
+     <li>Allow the styling of forms according their content using the CSS <a href="_indeterminate.html" title="The :indeterminate CSS pseudo-class represents any form element whose state is indeterminate."><code>:indeterminate</code></a>, <a href="_default.html" title="The :default CSS pseudo-class represents any form element that is the default among a group of related elements."><code>:default</code></a>, <a href="_valid.html" title="The :valid CSS pseudo-class represents any <input> or other <form> element whose contents validate successfully. This allows to easily make valid fields adopt an appearance that helps the user confirm that their data is formatted properly."><code>:valid</code></a>, <a href="_invalid.html" title="The :invalid CSS pseudo-class represents any <input> or other <form> element whose contents fail to validate."><code>:invalid</code></a>, <a href="_in-range.html" title="The :in-range CSS pseudo-class represents an <input> element whose current value is within the range limits specified by the min and max attributes."><code>:in-range</code></a>, <a href="_out-of-range.html" title="The :out-of-range CSS pseudo-class represents an <input> element whose current value is outside the range limits specified by the min and max attributes."><code>:out-of-range</code></a>, <a href="_required.html" title="The :required CSS pseudo-class represents any <input>, <select>, or <textarea>&nbsp;element that has the required attribute set on it."><code>:required</code></a>, <a href="_optional.html" title="The :optional CSS pseudo-class represents any <input>, <select>, or <textarea> element that does not have the required attribute set on it."><code>:optional</code></a>, <a href="_read-only.html" title="The :read-only CSS pseudo-class represents an element (such as a locked text input) that is not editable by the user."><code>:read-only</code></a>, and <a href="_read-write.html" title="The :read-write CSS pseudo-class represents an element (such as a text input) that is editable by the user."><code>:read-write</code></a> pseudo-classes and the <a href="__value.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>::value</code></a>, <a href="__choices.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>::choices</code></a>, <a href="__repeat-item.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>::repeat-item</code></a>, and <a href="__repeat-index.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>::repeat-index</code></a> pseudo-elements.<br>
+      <em><strong>At risk:</strong> due to insufficient browser support, standardization of the pseudo-elements <a href="__value.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>::value</code></a>, <a href="__choices.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>::choices</code></a>, <a href="__repeat-item.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>::repeat-item</code></a>, and <a href="__repeat-index.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>::repeat-index</code></a> may be postponed to </em> <em>the next iteration of this module</em> <em>.</em></li>
+     <li>Support for icons, defined by the CSS <a href="icon.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>icon</code></a> property simultaneously with the new <code>icon</code> value of the CSS <a href="content.html" title="The content CSS property is used with the ::before and ::after pseudo-elements to generate content in an element. Objects inserted using the content property are anonymous replaced elements."><code>content</code></a> property.<br>
+      <em><strong>At risk:</strong> due to insufficient browser support, standardization of the <a href="icon.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>icon</code></a> property and the <code>icon</code> value may be postponed to CSS4. </em></li>
+     <li>Support for the CSS <a href="outline-offset.html" title="The outline-offset CSS property sets the amount of space between an outline and the edge or border of an element. An outline is a line that is drawn around an element, outside the border edge. The space between an element and its outline is transparent; in other words, it is the same as the parent element's background."><code>outline-offset</code></a> property giving more control on the position of the outline.</li>
+     <li>Support for the CSS <a href="resize.html" title="The resize CSS sets whether an element is resizable, and if so, in which direction(s)."><code>resize</code></a> property allowing Web authors to control if and how elements should be resized.</li>
+     <li>Support for the CSS <a href="text-overflow.html" title="The text-overflow CSS property determines how overflowed content that is not displayed is signaled to users. It can be clipped, display an ellipsis ('…', U+2026 Horizontal Ellipsis), or display a custom string."><code>text-overflow</code></a> property defining how text overflows, if needed.<br>
+      <em><strong>At risk:</strong> due to insufficient browser support, the 2-value syntax of this property as well as the support for <a href="string.html" title="The <string> CSS data type represents a sequence of characters. Strings are used in numerous CSS properties, such as content, font-family, and quotes."><code>&lt;string&gt;</code></a> values may be postponed to </em> <em>the next iteration of this module</em> <em>.</em></li>
+     <li>The ability to define the hotspot of a cursor as well as the new <code>none</code>, <code>context-menu</code>, <code>cell</code>, <code>vertical-text</code>, <code>alias</code>, <code>copy</code>, <code>no-drop</code>, <code>not-allowed</code>, <code>nesw-</code><code>resize</code>, <code>nwse-</code><code>resize</code>, <code>col-resize</code>, <code>row-resize</code>, <code>all-scroll</code>, <code>zoom-in</code>, <code>zoom-out</code>, extending the <a href="cursor.html" title="The cursor CSS property specifies which mouse cursor to display when the mouse pointer is over an element."><code>cursor</code></a> property.</li>
+     <li>The ability to specify the sequential navigation order (that is the <em>tabbing order</em> ) using the CSS <a href="nav-index.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>nav-index</code></a>, <a href="nav-up.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>nav-up</code></a>, <a href="nav-right.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>nav-right</code></a>, <a href="nav-left.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>nav-left</code></a>, <a href="nav-down.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>nav-down</code></a> properties.<br>
+      <em><strong>At risk:</strong> due to insufficient browser support, standardization of the navigation properties may be postponed to </em> <em>the next iteration of this module</em> <em>.</em></li>
+     <li>The ability to control the usage of an IME editor, using the CSS <a href="ime-mode.html" title="The ime-mode CSS property controls the state of the input method editor (IME) for text fields. This property is obsolete."><code>ime-mode</code></a> property.<br>
+      <em><strong>At risk:</strong> due to insufficient browser support, standardization of the <a href="ime-mode.html" title="The ime-mode CSS property controls the state of the input method editor (IME) for text fields. This property is obsolete."><code>ime-mode</code></a> property may be postponed to </em> <em>the next iteration of this module</em> <em>.</em></li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>An early list of what could be in the next iteration of the CSS Basic User Interface Module is <a href="http://wiki.csswg.org/spec/css4-ui" title="http://wiki.csswg.org/spec/css4-ui" class="external" rel="noopener">available</a>.</p>
+
+<table style="width: 100%;" class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,160,100);"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-grid/" title="The 'CSS Grid Layout' specification" class="external" lang="en">CSS Grid Layout</a></strong></td>
+   <td><span class="spec-CR">Candidate Recommendation</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">Add a grid layout to the CSS <a href="display.html" title=""><code>display</code></a> property and several new CSS properties to control it: <a href="grid.html" title="The grid CSS property is a shorthand property that sets all of the explicit grid properties (grid-template-rows, grid-template-columns, and grid-template-areas), and all the implicit grid properties (grid-auto-rows, grid-auto-columns, and grid-auto-flow),&nbsp;in a single declaration."><code>grid</code></a>, <a href="grid-area.html" title="The grid-area CSS property is a shorthand property for grid-row-start, grid-column-start, grid-row-end and grid-column-end, specifying a grid item’s size and location within the grid row by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the edges of its grid area."><code>grid-area</code></a>, <a href="grid-auto-columns.html" title="The grid-auto-columns CSS property specifies the size of an implicitly-created grid column track."><code>grid-auto-columns</code></a>, <a href="grid-auto-flow.html" title="The grid-auto-flow CSS property controls how the auto-placement algorithm works, specifying exactly how auto-placed items get flowed into the grid."><code>grid-auto-flow</code></a>, <a href="grid-auto-position.html" title="The documentation about this has not yet been written; please consider contributing!" class="new" rel="nofollow"><code>grid-auto-position</code></a>, <a href="grid-auto-rows.html" title="The grid-auto-rows CSS property specifies the size of an implicitly-created grid row track."><code>grid-auto-rows</code></a>, <a href="grid-column.html" title="The grid-column CSS property is a shorthand property for grid-column-start and grid-column-end specifying a grid item's size and location within the grid row by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start and inline-end edge of its grid area."><code>grid-column</code></a>, <a href="grid-column-start.html" title="The grid-column-start CSS property specifies a grid item’s start position within the grid column by contributing a line, a span, or nothing (automatic) to its grid placement. This start position defines the block-start edge of the grid area."><code>grid-column-start</code></a>, <a href="grid-column-end.html" title="The grid-column-end CSS property specifies a grid item’s end position within the grid column by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the block-end edge of its grid area."><code>grid-column-end</code></a>, <a href="grid-row.html" title="The grid-row CSS property is a shorthand property for grid-row-start and grid-row-end specifying a grid item’s size and location within the grid row by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start and inline-end edge of its grid area."><code>grid-row</code></a>, <a href="grid-row-start.html" title="The grid-row-start CSS property specifies a grid item’s start position within the grid row by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start edge of its grid area."><code>grid-row-start</code></a>, <a href="grid-row-end.html" title="The grid-row-end CSS property specifies a grid item’s end position within the grid row by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-end edge of its grid area."><code>grid-row-end</code></a>, <a href="grid-template.html" title="The grid-template CSS property is a shorthand property for defining grid columns, rows, and areas."><code>grid-template</code></a>, <a href="grid-template-areas.html" title="The grid-template-areas CSS property specifies named grid areas."><code>grid-template-areas</code></a>, <a href="grid-template-rows.html" title="The grid-template-rows CSS property defines the line names and track sizing functions of the grid rows."><code>grid-template-rows</code></a>, and <a href="grid-template-columns.html" title="The grid-template-columns CSS property defines the line names and track sizing functions of the grid columns."><code>grid-template-columns</code></a>.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table style="width: 100%;" class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,160,100);"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-align-3/" title="The 'CSS Box Alignment Module Level 3' specification" class="external" lang="en">CSS Box Alignment Module Level 3</a></strong></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">&nbsp;</td>
+  </tr>
+ </tbody>
+</table>
+
+<table style="width: 100%;" class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,160,100);"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-page-3/" title="The 'CSS Paged Media Module Level&nbsp;3' specification" class="external" lang="en">CSS Paged Media Module Level&nbsp;3</a></strong></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">&nbsp;</td>
+  </tr>
+ </tbody>
+</table>
+
+<table style="width: 100%;" class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,160,100);"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/cssom-view/" title="The 'CSS Object Model (CSSOM) View Module' specification" class="external" lang="en">CSS Object Model (CSSOM) View Module</a></strong></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">&nbsp;</td>
+  </tr>
+ </tbody>
+</table>
+
+<table style="width: 100%;" class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,160,100);"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/selectors-4/" title="The 'Selectors Level&nbsp;4' specification" class="external" lang="en">Selectors Level&nbsp;4</a></strong></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">&nbsp;</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Modules_in_the_exploring_phase">Modules in the exploring phase</h3>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-images-4/" title="The 'CSS Images Module Level&nbsp;4' specification" class="external" lang="en">CSS Images Module Level&nbsp;4</a></strong></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <p>Extends:</p>
+
+    <ul>
+     <li>the <code>image()</code> functional notation to describe the directionality of the image (<code>rtl</code> or <code>ltr</code>), allowing for bidi-sensitive images.</li>
+     <li>the <a href="image-orientation.html" title="The image-orientation CSS property describes how to correct the default orientation of an image."><code>image-orientation</code></a> property by adding the keyword <code>from-image</code>, allowing to follow EXIF data stored into images to be considered.</li>
+    </ul>
+
+    <p>Adds:</p>
+
+    <ul>
+     <li>the <code>image-set()</code> functional notation to allow the definition to equivalent images at different resolution allowing for resolution-negotiated selection of images.</li>
+     <li>the <code>element()</code> functional notation allowing the use of part of the page as image.</li>
+     <li>the <code>cross-fade()</code> functional notation allowing to refer to intermediate images when transitioning between two images and defines the interpolation between two images.</li>
+     <li>the <code>conic-gradient()</code> and <code>repeating-conic-gradient()</code> functional notation describing a new type of gradient.</li>
+     <li>the <a href="image-rendering.html" title="The image-rendering CSS property provides a hint to the browser about the algorithm it should use to scale images."><code>image-rendering</code></a> property that allow to define how resize of the object should be handled.</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<table style="width: 100%;" class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-device-adapt/" title="The 'CSS Device Adaptation' specification" class="external" lang="en">CSS Device Adaptation</a></strong></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">Adds a new at-rule, <a href="%40viewport.html" title="The @viewport CSS at-rule lets you configure the viewport through which the document is viewed. It's primarily used for mobile devices but is also used by desktop browsers that support features like &quot;snap to edge&quot; (such as Microsoft Edge). The at-rule contains a set of nested descriptors in a CSS block that is delimited by curly braces."><code>@viewport</code></a>, allowing to specify the size, zoom factor, and orientation of the viewport that is used as the base for the initial containing block.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-gcpm-3/" title="The 'CSS Generated Content for Paged Media Module' specification" class="external" lang="en">CSS Generated Content for Paged Media Module</a></strong></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">Adds the ability to tailor printed version of a document by allowing to control header, footer but also references tables like indexes or tables of content.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-exclusions/" title="The 'CSS Exclusions Module Level&nbsp;1' specification" class="external" lang="en">CSS Exclusions Module Level&nbsp;1</a></strong></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">Extends the floats mechanism to define exclusion regions in any positioning scheme. Adds the notion of shapes, in which content must flows.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-lists-3/" title="The 'CSS Lists Module Level&nbsp;3' specification" class="external" lang="en">CSS Lists Module Level&nbsp;3</a></strong></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">Extends the list counter mechanism so that list markers can be styled and Web developers can define new list counter schemes.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-regions-1/" title="The 'CSS Regions Module Level&nbsp;1' specification" class="external" lang="en">CSS Regions Module Level&nbsp;1</a></strong></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">Defines a new mechanism allowing content to flow across, eventually non-contiguous, multiple areas called regions.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table style="width: 100%;" class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong><a rel="noopener" hreflang="en" href="https://drafts.fxtf.org/filter-effects/" title="The 'Filter Effects Module Level 1' specification" class="external" lang="en">Filter Effects Module Level 1</a></strong></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">&nbsp;</td>
+  </tr>
+ </tbody>
+</table>
+
+<table style="width: 100%;" class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-grid/" title="The 'CSS Grid Layout' specification" class="external" lang="en">CSS Grid Layout</a></strong></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">&nbsp;</td>
+  </tr>
+ </tbody>
+</table>
+
+<table style="width: 100%;" class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-sizing-3/" title="The 'CSS Intrinsic &amp; Extrinsic Sizing Module Level&nbsp;3' specification" class="external" lang="en">CSS Intrinsic &amp; Extrinsic Sizing Module Level&nbsp;3</a></strong></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">&nbsp;</td>
+  </tr>
+ </tbody>
+</table>
+
+<table style="width: 100%;" class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-line-grid/" title="The 'CSS Line Grid Module Level&nbsp;1' specification" class="external" lang="en">CSS Line Grid Module Level&nbsp;1</a></strong></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">&nbsp;</td>
+  </tr>
+ </tbody>
+</table>
+
+<table style="width: 100%;" class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-position-3/" title="The 'CSS Positioned Layout Module Level&nbsp;3' specification" class="external" lang="en">CSS Positioned Layout Module Level&nbsp;3</a></strong></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">&nbsp;</td>
+  </tr>
+ </tbody>
+</table>
+
+<table style="width: 100%;" class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-ruby/" title="The 'CSS Ruby Layout Module Level&nbsp;1' specification" class="external" lang="en">CSS Ruby Layout Module Level&nbsp;1</a></strong></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">&nbsp;</td>
+  </tr>
+ </tbody>
+</table>
+
+<table style="width: 100%;" class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/cssom/" title="The 'CSS Object Model (CSSOM)' specification" class="external" lang="en">CSS Object Model (CSSOM)</a></strong></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">&nbsp;</td>
+  </tr>
+ </tbody>
+</table>
+
+<table style="width: 100%;" class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-overflow-3/" title="The 'CSS Overflow Module Level 3' specification" class="external" lang="en">CSS Overflow Module Level 3</a></strong></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">&nbsp;</td>
+  </tr>
+ </tbody>
+</table>
+
+<table style="width: 100%;" class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-font-loading/" title="The 'CSS Font Loading Module Level&nbsp;3' specification" class="external" lang="en">CSS Font Loading Module Level&nbsp;3</a></strong></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">&nbsp;</td>
+  </tr>
+ </tbody>
+</table>
+
+<table style="width: 100%;" class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-display/" title="The 'CSS Display Module Level&nbsp;3' specification" class="external" lang="en">CSS Display Module Level&nbsp;3</a></strong></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">&nbsp;</td>
+  </tr>
+ </tbody>
+</table>
+
+<table style="width: 100%;" class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong><a rel="noopener" hreflang="en" href="http://drafts.csswg.org/css-scoping/" title="The 'CSS Scoping Module Level&nbsp;1' specification" class="external" lang="en">CSS Scoping Module Level&nbsp;1</a></strong></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">&nbsp;</td>
+  </tr>
+ </tbody>
+</table>
+
+<table style="width: 100%;" class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/mediaqueries-4/" title="The 'Media Queries Level&nbsp;4' specification" class="external" lang="en">Media Queries Level&nbsp;4</a></strong></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">&nbsp;</td>
+  </tr>
+ </tbody>
+</table>
+
+<table style="width: 100%;" class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/selectors-nonelement/" title="The 'Non-element Selectors Module Level&nbsp;1' specification" class="external" lang="en">Non-element Selectors Module Level&nbsp;1</a></strong></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">&nbsp;</td>
+  </tr>
+ </tbody>
+</table>
+
+<table style="width: 100%;" class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong><a rel="noopener" hreflang="en" href="https://drafts.fxtf.org/geometry/" title="The 'Geometry Interfaces Module Level 1' specification" class="external" lang="en">Geometry Interfaces Module Level 1</a></strong></td>
+   <td><span class="spec-CR">Candidate Recommendation</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">&nbsp;</td>
+  </tr>
+ </tbody>
+</table>
+
+<table style="width: 100%;" class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-inline/" title="The 'CSS Inline Layout' specification" class="external" lang="en">CSS Inline Layout</a></strong></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">&nbsp;</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Modules_in_the_rewriting_phase">Modules in the rewriting phase</h3>
+
+<p>Modules that are in the rewriting phase are outdated and require to be rewritten. The syntax is still under scrutiny and may evolve a lot, in a non-compatible way. Alternative syntaxes are tested and often implemented.</p>
+
+<table style="width: 100%;" class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F33;"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-box-3/" title="The 'CSS Basic Box Model' specification" class="external" lang="en">CSS Basic Box Model</a></strong></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">&nbsp;</td>
+  </tr>
+ </tbody>
+</table>
+
+<table style="width: 100%;" class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F33;"><strong><a rel="noopener" hreflang="en" href="https://drafts.csswg.org/css-content-3/" title="The 'CSS Generated Content Module Level&nbsp;3' specification" class="external" lang="en">CSS Generated Content Module Level&nbsp;3</a></strong></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">&nbsp;</td>
+  </tr>
+ </tbody>
+</table>
+
+<table style="width: 100%;" class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F33;"><strong><a hreflang="en" title="The 'Unknown' specification" lang="en" class="external">Unknown</a></strong></td>
+   <td><span class="spec-">Unknown</span></td>
+  </tr>
+  <tr>
+   <td colspan="2">&nbsp;</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>&nbsp;</p>
+                  
+                
+              </article>
+
+              <!-- contributors -->
+              <div class="wiki-block contributors">
+                <h2 class="offscreen">Document Tags and Contributors</h2>
+                
+                
+  <div class="tag-attach-list contributors-sub">
+    <svg class="icon icon-tags" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M7 7c0-1.109-.891-2-2-2s-2 .891-2 2 .891 2 2 2 2-.891 2-2zm16.672 9c0 .531-.219 1.047-.578 1.406l-7.672 7.688c-.375.359-.891.578-1.422.578s-1.047-.219-1.406-.578L1.422 13.906C.625 13.125 0 11.609 0 10.5V4c0-1.094.906-2 2-2h6.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422zm6 0c0 .531-.219 1.047-.578 1.406l-7.672 7.688a2.08 2.08 0 0 1-1.422.578c-.812 0-1.219-.375-1.75-.922l7.344-7.344c.359-.359.578-.875.578-1.406s-.219-1.047-.578-1.422L14.422 3.422C13.625 2.625 12.11 2 11 2h3.5c1.109 0 2.625.625 3.422 1.422l11.172 11.156c.359.375.578.891.578 1.422z"></path>
+</svg>
+    <strong>Tags:</strong>&nbsp;
+    <ul class="tags tags-small">
+      
+        <li><a href="../../tag/CSS.html" rel="nofollow">CSS</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/NeedsUpdate" rel="nofollow">NeedsUpdate</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Reference" rel="nofollow">Reference</a></li>
+      
+    </ul>
+  </div>
+
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-group" xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" aria-hidden="true">
+    <path d="M9.266 14a5.532 5.532 0 0 0-4.141 2H3.031C1.468 16 0 15.25 0 13.516 0 12.25-.047 8 1.937 8c.328 0 1.953 1.328 4.062 1.328.719 0 1.406-.125 2.078-.359A7.624 7.624 0 0 0 7.999 10c0 1.422.453 2.828 1.266 4zM26 23.953C26 26.484 24.328 28 21.828 28H8.172C5.672 28 4 26.484 4 23.953 4 20.422 4.828 15 9.406 15c.531 0 2.469 2.172 5.594 2.172S20.063 15 20.594 15C25.172 15 26 20.422 26 23.953zM10 4c0 2.203-1.797 4-4 4S2 6.203 2 4s1.797-4 4-4 4 1.797 4 4zm11 6c0 3.313-2.688 6-6 6s-6-2.688-6-6 2.688-6 6-6 6 2.688 6 6zm9 3.516C30 15.25 28.531 16 26.969 16h-2.094a5.532 5.532 0 0 0-4.141-2A7.066 7.066 0 0 0 22 10a7.6 7.6 0 0 0-.078-1.031A6.258 6.258 0 0 0 24 9.328C26.109 9.328 27.734 8 28.062 8c1.984 0 1.937 4.25 1.937 5.516zM28 4c0 2.203-1.797 4-4 4s-4-1.797-4-4 1.797-4 4-4 4 1.797 4 4z"></path>
+</svg>
+                    <strong>Contributors to this page:</strong>
+                    
+        <a href="https://developer.mozilla.org/en-US/profiles/Tantek">Tantek</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Webcomplex">Webcomplex</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/mfluehr">mfluehr</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/stephaniehobson">stephaniehobson</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Konrud">Konrud</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/czyin">czyin</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Ende93">Ende93</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/CarlMungazi">CarlMungazi</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/David_Gilbertson">David_Gilbertson</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/mrstork">mrstork</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/prayash">prayash</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/BradleyDon">BradleyDon</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Naesten">Naesten</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/cutofmyjib">cutofmyjib</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/FrankHassanabad">FrankHassanabad</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/pasalog">pasalog</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/bradleyflood">bradleyflood</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Mr21">Mr21</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Sebastianz">Sebastianz</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/EmilyG">EmilyG</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/stevenpetryk">stevenpetryk</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Luke314">Luke314</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Jeremie">Jeremie</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Cone">Cone</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/AliMD">AliMD</a>
+    
+                  </div>
+                
+
+                
+                  <div class="contributors-sub">
+                    <svg class="icon icon-clock" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true">
+    <path d="M14 8.5v7c0 .281-.219.5-.5.5h-5a.494.494 0 0 1-.5-.5v-1c0-.281.219-.5.5-.5H12V8.5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zm6.5 5.5c0-4.688-3.813-8.5-8.5-8.5S3.5 9.313 3.5 14s3.813 8.5 8.5 8.5 8.5-3.813 8.5-8.5zm3.5 0c0 6.625-5.375 12-12 12S0 20.625 0 14 5.375 2 12 2s12 5.375 12 12z"></path>
+</svg>
+                    <strong>Last updated by:</strong>
+                    <a href="https://developer.mozilla.org/en-US/profiles/Tantek">Tantek</a>,
+                    <time datetime="2018-01-08T16:13:31.456682-08:00">Jan 8, 2018, 4:13:31 PM</time>
+                  </div>
+                
+              </div>
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+    
+      <div class="newsletter-box">
+        <div class="newsletter">
+    <form id="newsletterForm" class="newsletter-form nodisable" name="newsletter-form" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <div class="newsletter-head">
+            <h2 class="newsletter-teaser">Learn the best of web development</h2>
+            <p class="newsletter-description">Get the latest and greatest from MDN delivered straight to your inbox.</p>
+            
+        </div>
+
+        <div class="newsletter-fields">
+            <input type="hidden" id="fmt" name="fmt" value="H">
+            <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+            <div id="newsletterErrors" class="newsletter-errors"></div>
+
+            <div id="newsletterEmail" class="form-group newsletter-group-email">
+                <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+                <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+            </div>
+
+            <div id="newsletterPrivacy" class="form-group form-group-agree newsletter-group-privacy hidden">
+                <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+                <label for="newsletterPrivacyInput">
+                I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+                </label>
+            </div>
+            <div id="newsletterSubmit" class="newsletter-group-submit">
+                <button id="newsletter-submit" type="submit" class="button neutral newsletter-submit">
+                    Sign up now<svg class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg" width="23" height="28" viewBox="0 0 23 28" aria-hidden="true">
+    <path d="M23 15a2.01 2.01 0 0 1-.578 1.422L12.25 26.594c-.375.359-.891.578-1.422.578s-1.031-.219-1.406-.578L8.25 25.422c-.375-.375-.594-.891-.594-1.422s.219-1.047.594-1.422L12.828 18h-11C.703 18 0 17.062 0 16v-2c0-1.062.703-2 1.828-2h11L8.25 7.406a1.96 1.96 0 0 1 0-2.812l1.172-1.172c.375-.375.875-.594 1.406-.594s1.047.219 1.422.594l10.172 10.172c.375.359.578.875.578 1.406z"></path>
+</svg>
+                </button>
+            </div>
+        </div>
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden">
+        <span>Hide Newsletter Sign-up</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+</div>
+      </div>
+    
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/en-US/docs/Web/CSS/CSS3$edit" label="Edit page"></menuitem>
+    <menuitem data-action="/en-US/docs/Web/CSS/CSS3$history" label="View page history"></menuitem>
+  </menu>
+
+      </div>
+  </main>
+  <!-- Footer -->
+    <footer id="nav-footer" class="nav-footer"><div class="center"><a href="http://developer.mozilla.org/en-US/docs/Web/CSS/CSS3">CSS3</a> by <a href="http://developer.mozilla.org/en-US/docs/Web/CSS/CSS3$history">Mozilla Contributors</a> is licensed under <a href="http://creativecommons.org/licenses/by-sa/2.5/" class="external external-icon">CC-BY-SA 2.5</a>.</div></footer> 
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script async="" type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script src="../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><!--[endif]---->
+
+    
+    <script src="../../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../../static/build/js/wiki.b26a4c181df3.js" charset="utf-8" id="wikiscript"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../static/build/js/newsletter.a85c5c2892e5.js" charset="utf-8"></script>
+  
+
+
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/CSS/CSS3 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 21:44:30 GMT -->
+</body></html>

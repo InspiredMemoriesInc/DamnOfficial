@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage$samples/Understanding_source_element_size?revision=1351268 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 10:16:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <title>CanvasRenderingContext2D.drawImage()</title>
+    </head>
+    <body>
+        
+            <canvas id="canvas"></canvas>
+        
+        
+            <script>
+                var canvas = document.getElementById('canvas');
+var ctx = canvas.getContext('2d');
+
+var image = new Image(60, 45);   // using optional size for image
+image.onload = drawImageActualSize; // draw when image has loaded
+
+// load an image of intrinsic size 300x227 in CSS pixels
+image.src = '../../../../../../files/5397/rhino.jpg';
+
+function drawImageActualSize() {
+  // use the intrinsic size of image in CSS pixels for the canvas element
+  canvas.width = this.naturalWidth;
+  canvas.height = this.naturalHeight;
+
+  // will draw the image as 300x227 ignoring the custom size of 60x45
+  // given in the constructor
+  ctx.drawImage(this, 0, 0);
+
+  // To use the custom size we'll have to specify the scale parameters 
+  // using the element's width and height properties - lets draw one 
+  // on top in the corner:
+  ctx.drawImage(this, 0, 0, this.width, this.height);
+}
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage$samples/Understanding_source_element_size?revision=1351268 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 10:16:34 GMT -->
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/pt-BR/docs/Web/SVG/Element/script$samples/Exemplo?revision=941683 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:47:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <title>script</title>
+    </head>
+    <body>
+        
+            <svg width="100%" height="100%" viewBox="0 0 100 100"
+     xmlns="http://www.w3.org/2000/svg">
+  <script type="text/javascript">
+    // <![CDATA[
+    function change(evt) {
+      var target = evt.target;
+      var radius = target.getAttribute("r");
+
+      if (radius == 15) {
+        radius = 45;
+      } else {
+        radius = 15;
+      }
+
+      target.setAttribute("r",radius);
+   }
+   // ]]>
+  </script>
+
+  <circle cx="50" cy="50" r="45" fill="green"
+          onclick="change(evt)" />
+</svg>
+
+        
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/pt-BR/docs/Web/SVG/Element/script$samples/Exemplo?revision=941683 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:47:55 GMT -->
+</html>

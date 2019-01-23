@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started$samples/Playable_code2?revision=1400983 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:17:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <style type="text/css">
+            body {
+  font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
+}
+
+.input, .output {
+  width: 90%;
+  height: 2em;
+  padding: 10px;
+  border: 1px solid #0095dd;
+}
+
+button {
+  padding: 10px 10px 10px 0;
+}
+
+        </style>
+        
+        <title>Iniciando com HTML</title>
+    </head>
+    <body>
+        
+            <h2>Entrada</h2>
+<textarea id="code" class="input">&lt;p&gt;Um link para o meu site favorito.&lt;/p&gt;</textarea>
+<h2>Saída</h2>
+<div class="output"></div>
+<div class="controls">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Mostrar solução" />
+</div>
+
+        
+        
+            <script>
+                var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var code = textarea.value;
+var output = document.querySelector(".output");
+var solution = document.getElementById("solution");
+
+function drawOutput() {
+  output.innerHTML = textarea.value;
+}
+
+reset.addEventListener("click", function() {
+  textarea.value = code;
+  drawOutput();
+});
+
+solution.addEventListener("click", function() {
+  textarea.value = '<p>Um link para o meu <a href="https://www.mozilla.org/" title="A Homepage da Mozilla">site favorito</a>.</p>';
+  drawOutput();
+});
+
+textarea.addEventListener("input", drawOutput);
+window.addEventListener("load", drawOutput);
+
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started$samples/Playable_code2?revision=1400983 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:17:57 GMT -->
+</html>

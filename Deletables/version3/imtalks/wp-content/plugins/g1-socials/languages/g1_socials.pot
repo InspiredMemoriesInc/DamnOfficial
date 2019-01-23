@@ -1,0 +1,373 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the g1-socials package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: g1-socials 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../g1-socials/g1-socials-admin.php:51
+msgid "label"
+msgstr ""
+
+#: ../g1-socials/g1-socials-admin.php:52
+msgid "caption"
+msgstr ""
+
+#: ../g1-socials/includes/customizer.php:18
+msgid "Like my blog?"
+msgstr ""
+
+#: ../g1-socials/includes/customizer.php:19
+msgid "Donate via Patreon to&nbsp;support me.<br />Thank You!"
+msgstr ""
+
+#: ../g1-socials/includes/instagram/class-g1_socials-widget-instagram.php:34
+msgid "G1 Socials Instagram"
+msgstr ""
+
+#: ../g1-socials/includes/instagram/class-g1_socials-widget-instagram.php:36
+msgid "Promote your Instagram."
+msgstr ""
+
+#: ../g1-socials/includes/instagram/class-g1_socials-widget-instagram.php:48
+msgid "Instagram"
+msgstr ""
+
+#: ../g1-socials/includes/instagram/class-g1_socials-widget-instagram.php:67
+#: ../g1-socials/includes/snapchat/class-g1_socials-snapcode-widget.php:56
+#: ../g1-socials/includes/youtube/class-g1_socials-youtube-widget.php:63
+msgid "Title:"
+msgstr ""
+
+#: ../g1-socials/includes/instagram/class-g1_socials-widget-instagram.php:71
+msgid "@username or #tag"
+msgstr ""
+
+#: ../g1-socials/includes/instagram/class-g1_socials-widget-instagram.php:75
+msgid "Number of photos"
+msgstr ""
+
+#: ../g1-socials/includes/instagram/class-g1_socials-widget-instagram.php:79
+msgid "Photo size"
+msgstr ""
+
+#: ../g1-socials/includes/instagram/class-g1_socials-widget-instagram.php:81
+msgid "Thumbnail"
+msgstr ""
+
+#: ../g1-socials/includes/instagram/class-g1_socials-widget-instagram.php:82
+msgid "Small"
+msgstr ""
+
+#: ../g1-socials/includes/instagram/class-g1_socials-widget-instagram.php:83
+msgid "Large"
+msgstr ""
+
+#: ../g1-socials/includes/instagram/class-g1_socials-widget-instagram.php:84
+msgid "Original"
+msgstr ""
+
+#: ../g1-socials/includes/instagram/class-g1_socials-widget-instagram.php:88
+msgid "Open links in"
+msgstr ""
+
+#: ../g1-socials/includes/instagram/class-g1_socials-widget-instagram.php:90
+msgid "Current window (_self)"
+msgstr ""
+
+#: ../g1-socials/includes/instagram/class-g1_socials-widget-instagram.php:91
+msgid "New window (_blank)"
+msgstr ""
+
+#: ../g1-socials/includes/instagram/class-g1_socials-widget-instagram.php:95
+msgid "Link text"
+msgstr ""
+
+#: ../g1-socials/includes/instagram/instagram-helpers.php:31
+msgid "Instagram did not return any images."
+msgstr ""
+
+#: ../g1-socials/includes/instagram/instagram-helpers.php:55
+msgid "Unable to communicate with Instagram."
+msgstr ""
+
+#: ../g1-socials/includes/instagram/instagram-helpers.php:59
+msgid "Instagram did not return a 200."
+msgstr ""
+
+#: ../g1-socials/includes/instagram/instagram-helpers.php:67
+#: ../g1-socials/includes/instagram/instagram-helpers.php:75
+#: ../g1-socials/includes/instagram/instagram-helpers.php:79
+msgid "Instagram has returned invalid data."
+msgstr ""
+
+#: ../g1-socials/includes/instagram/instagram-helpers.php:107
+msgid "Instagram Image"
+msgstr ""
+
+#: ../g1-socials/includes/plugins/buddypress.php:60
+#: ../g1-socials/includes/user.php:28 ../g1-socials/options-page.php:30
+#: ../g1-socials/options-page.php:31
+msgid "G1 Socials"
+msgstr ""
+
+#: ../g1-socials/includes/shortcodes/shortcodes.php:171
+#: ../g1-socials/includes/shortcodes/user.php:133
+msgid "list-vertical"
+msgstr ""
+
+#: ../g1-socials/includes/shortcodes/shortcodes.php:172
+#: ../g1-socials/includes/shortcodes/user.php:134
+msgid "list-horizontal"
+msgstr ""
+
+#: ../g1-socials/includes/snapchat/class-g1_socials-snapcode-widget.php:34
+msgid "G1 Socials Snapchat"
+msgstr ""
+
+#: ../g1-socials/includes/snapchat/class-g1_socials-snapcode-widget.php:36
+msgid "Display Snapcode, an easy way to gain followers on Snapchat"
+msgstr ""
+
+#: ../g1-socials/includes/snapchat/class-g1_socials-snapcode-widget.php:48
+msgid "Find me on Snapchat"
+msgstr ""
+
+#: ../g1-socials/includes/snapchat/class-g1_socials-snapcode-widget.php:60
+msgid "Username:"
+msgstr ""
+
+#: ../g1-socials/includes/snapchat/class-g1_socials-snapcode-widget.php:64
+msgid "ID:"
+msgstr ""
+
+#: ../g1-socials/includes/snapchat/class-g1_socials-snapcode-widget.php:68
+msgid "Avatar:"
+msgstr ""
+
+#: ../g1-socials/includes/snapchat/snapcode-helpers.php:45
+msgid "User snapcode."
+msgstr ""
+
+#: ../g1-socials/includes/widgets/widgets.php:18
+msgid "A Socials Widget"
+msgstr ""
+
+#: ../g1-socials/includes/widgets/widgets.php:101
+msgid "Widget Title"
+msgstr ""
+
+#: ../g1-socials/includes/widgets/widgets.php:107
+msgid "Include (optional)"
+msgstr ""
+
+#: ../g1-socials/includes/widgets/widgets.php:109
+msgid ""
+"Include only specified icons (eg. facebook,twitter). Leave empty to include "
+"all."
+msgstr ""
+
+#: ../g1-socials/includes/widgets/widgets.php:113
+msgid "Exclude (optional)"
+msgstr ""
+
+#: ../g1-socials/includes/widgets/widgets.php:115
+msgid "Exclude specified icons (eg. facebook,twitter)."
+msgstr ""
+
+#: ../g1-socials/includes/widgets/widgets.php:119
+msgid "Template"
+msgstr ""
+
+#: ../g1-socials/includes/widgets/widgets.php:121
+msgid "grid"
+msgstr ""
+
+#: ../g1-socials/includes/widgets/widgets.php:126
+msgid "Icon size"
+msgstr ""
+
+#: ../g1-socials/includes/widgets/widgets.php:128
+msgid "32px"
+msgstr ""
+
+#: ../g1-socials/includes/widgets/widgets.php:129
+msgid "48px"
+msgstr ""
+
+#: ../g1-socials/includes/widgets/widgets.php:130
+msgid "64px"
+msgstr ""
+
+#: ../g1-socials/includes/widgets/widgets.php:135
+msgid "Icon color"
+msgstr ""
+
+#: ../g1-socials/includes/widgets/widgets.php:137
+msgid "original"
+msgstr ""
+
+#: ../g1-socials/includes/widgets/widgets.php:138
+msgid "text"
+msgstr ""
+
+#: ../g1-socials/includes/widgets/widgets.php:190
+msgid "G1 Facebook Page"
+msgstr ""
+
+#: ../g1-socials/includes/widgets/widgets.php:192
+msgid "Easily embed and promote any Facebook Page on your website."
+msgstr ""
+
+#: ../g1-socials/includes/widgets/widgets.php:206
+msgid "Find us on Facebook"
+msgstr ""
+
+#: ../g1-socials/includes/widgets/widgets.php:276
+msgid "Loading..."
+msgstr ""
+
+#: ../g1-socials/includes/widgets/widgets.php:310
+msgid "Widget title"
+msgstr ""
+
+#: ../g1-socials/includes/widgets/widgets.php:319
+msgid "Facebook page url"
+msgstr ""
+
+#: ../g1-socials/includes/widgets/widgets.php:329
+msgid "Small header"
+msgstr ""
+
+#: ../g1-socials/includes/widgets/widgets.php:334
+#: ../g1-socials/includes/widgets/widgets.php:347
+#: ../g1-socials/includes/widgets/widgets.php:360
+#: ../g1-socials/includes/widgets/widgets.php:373
+#: ../g1-socials/includes/widgets/widgets.php:386
+msgid "no"
+msgstr ""
+
+#: ../g1-socials/includes/widgets/widgets.php:336
+#: ../g1-socials/includes/widgets/widgets.php:349
+#: ../g1-socials/includes/widgets/widgets.php:362
+#: ../g1-socials/includes/widgets/widgets.php:375
+#: ../g1-socials/includes/widgets/widgets.php:388
+msgid "yes"
+msgstr ""
+
+#: ../g1-socials/includes/widgets/widgets.php:342
+msgid "Hide cover"
+msgstr ""
+
+#: ../g1-socials/includes/widgets/widgets.php:355
+msgid "Show facepile"
+msgstr ""
+
+#: ../g1-socials/includes/widgets/widgets.php:368
+msgid "Show posts"
+msgstr ""
+
+#: ../g1-socials/includes/widgets/widgets.php:381
+msgid "Delay load"
+msgstr ""
+
+#: ../g1-socials/includes/widgets/widgets.php:394
+msgid "HTML id attribute (optional)"
+msgstr ""
+
+#: ../g1-socials/includes/widgets/widgets.php:403
+msgid "HTML class attribute (optional)"
+msgstr ""
+
+#: ../g1-socials/includes/youtube/class-g1_socials-youtube-widget.php:34
+msgid "G1 Socials YouTube"
+msgstr ""
+
+#: ../g1-socials/includes/youtube/class-g1_socials-youtube-widget.php:36
+msgid "Displays YouTube profile overview."
+msgstr ""
+
+#: ../g1-socials/includes/youtube/class-g1_socials-youtube-widget.php:48
+msgid "Find me on YouTube"
+msgstr ""
+
+#: ../g1-socials/includes/youtube/class-g1_socials-youtube-widget.php:67
+msgid "Channel Name:"
+msgstr ""
+
+#: ../g1-socials/includes/youtube/class-g1_socials-youtube-widget.php:71
+msgid "Channel Id:"
+msgstr ""
+
+#: ../g1-socials/includes/youtube/class-g1_socials-youtube-widget.php:117
+msgid "Subscribe"
+msgstr ""
+
+#: ../g1-socials/includes/youtube/youtube-helpers.php:71
+msgid "Something went wrong. Check YouTube API key and channel ID."
+msgstr ""
+
+#: ../g1-socials/options-page-socials.php:18
+msgid "Name"
+msgstr ""
+
+#: ../g1-socials/options-page-socials.php:19
+msgid "Label"
+msgstr ""
+
+#: ../g1-socials/options-page-socials.php:20
+msgid "Caption"
+msgstr ""
+
+#: ../g1-socials/options-page-socials.php:21
+msgid "Link"
+msgstr ""
+
+#: ../g1-socials/options-page-socials.php:38
+msgid "label&hellip;"
+msgstr ""
+
+#: ../g1-socials/options-page-socials.php:41
+msgid "caption&hellip;"
+msgstr ""
+
+#: ../g1-socials/options-page-socials.php:44
+msgid "link&hellip;"
+msgstr ""
+
+#: ../g1-socials/options-page-youtube.php:24
+msgid "YouTube"
+msgstr ""
+
+#: ../g1-socials/options-page.php:43
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: ../g1-socials/options-page.php:52
+msgid "Socials"
+msgstr ""
+
+#: ../g1-socials/options-page.php:66
+msgid "G1 Options"
+msgstr ""
+
+#: ../g1-socials/options-page.php:67
+msgid ""
+"Here is place for some type of description. Something for user that can "
+"modify socials."
+msgstr ""
+
+#: ../g1-socials/templates/bp-profile.php:19
+msgid "Social media"
+msgstr ""

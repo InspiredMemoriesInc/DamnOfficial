@@ -1,0 +1,1238 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=41 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:00:36 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  <title>Articles tagged: API</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+
+  
+<link rel="preload" href="../../../static/fonts/locales/ZillaSlab-Regular.f9de6143fdfa.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="license" href="#license">
+  
+
+  
+    
+
+    <link href="../../../static/build/styles/mdn.83865b0f7c30.css" rel="stylesheet" type="text/css">
+
+    
+  
+
+    <link href="../../../static/build/styles/wiki.aaf26c13c39b.css" rel="stylesheet" type="text/css">
+
+
+  <link href="../../../static/build/styles/locale-en-US.ca0bca387b42.css" rel="stylesheet" type="text/css">
+
+  
+    <script>
+      /* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/. */ if(typeof Mozilla==='undefined'){var Mozilla={}}Mozilla.dntEnabled=function(dnt,ua){'use strict';var dntStatus=dnt||navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack;var userAgent=ua||navigator.userAgent;var anomalousWinVersions=['Windows NT 6.1','Windows NT 6.2','Windows NT 6.3'];var fxMatch=userAgent.match(/Firefox\/(\d+)/);var ieRegEx=/MSIE|Trident/i;var isIE=ieRegEx.test(userAgent);var platform=userAgent.match(/Windows.+?(?=;)/g);if(isIE&&typeof Array.prototype.indexOf!=='function'){return false}else if(fxMatch&&parseInt(fxMatch[1],10)<32){dntStatus='Unspecified'}else if(isIE&&platform&&anomalousWinVersions.indexOf(platform.toString())!==-1){dntStatus='Unspecified'}else{dntStatus={'0':'Disabled','1':'Enabled'}[dntStatus]||'Unspecified'}return dntStatus==='Enabled'?true:false};
+    </script>
+    
+
+
+
+  
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta property="og:site_name" content="MDN Web Docs">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.mozilla.org/static/img/opengraph-logo.72382e605ce3.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="MDN Web Docs">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../static/img/favicon144.e7e21ca263ca.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../static/img/favicon114.d526f38b09c5.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../static/img/favicon72.cc65d1d762a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../static/img/favicon57.de33179910ae.png">
+  <!-- basic favicon -->
+  <link rel="shortcut icon" href="../../../static/img/favicon32.7f3da72dcea1.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script async="" type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  
+      <link rel="alternate" type="application/atom+xml" title="Articles tagged: API" href="../feeds/atom/tag/API">
+  
+
+</head>
+<body class="">
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".html5shiv.ae1ac46eaf58.js" charset="utf-8"></script>
+  <!--[endif]---->
+
+  
+  
+      <link rel="alternate" type="application/atom+xml" title="Articles tagged: API" href="../feeds/atom/tag/API">
+  
+
+
+
+
+  <script>
+    // make sure global mdn object exists
+    var mdn = window.mdn || {};
+
+    (function(win) {
+        'use strict';
+
+        (function(){
+  var FLAGS = {
+    'kumaediting': false,'page_move': false,'section_edit': false,'spam_checks_enabled': true,'spam_submissions_enabled': false,'spam_admin_override': false,'spam_spammer_override': false,'spam_testing_mode': false,'sg_task_completion': false
+    },
+    SWITCHES = {
+    'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'foundation_callout': false,'helpful-survey-2': true,'wiki_spam_training': true,'registration_disabled': false
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // Site configuration
+        win.mdn.ckeditor = {};
+        win.mdn.features = {};
+        win.mdn.staticPath = 'https://developer.mozilla.org/static/';
+        win.mdn.wiki = {
+            autosuggestTitleUrl: '/en-US/docs/get-documents'
+        };
+        win.mdn.assets_disabled = {
+            css: {
+                'editor-content': ['https://developer.mozilla.org/static/build/styles/editor-content.6c6350553b62.css','../../../static/build/styles/editor-locale-en-US.ca0bca387b42.css',
+                ],
+
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/styles/wiki-compat-tables.481447ac27b5.css',]
+            },
+            js: {
+                'syntax-prism': ['https://developer.mozilla.org/static/build/js/syntax-prism.ec09deda1b0f.js',],
+                'wiki-compat-tables': ['https://developer.mozilla.org/static/build/js/wiki-compat-tables.9978a5ce31c2.js',]
+            }
+        };
+
+        win.mdn.notifications = [];
+
+        
+
+        // interactive editor config
+        win.mdn.interactiveEditor = {
+            siteUrl: "https://developer.mozilla.org",
+            editorUrl: "https://interactive-examples.mdn.mozilla.net"
+        };
+
+    })(this);
+</script>
+    
+    <ul id="nav-access">
+  <li><a href="#content" id="skip-main">Skip to main content</a></li>
+  <li><a id="skip-language" href="#language">Select language</a></li>
+  <li><a href="#q" id="skip-search">Skip to search</a></li>
+</ul>
+
+    <!-- Header -->
+    <header id="main-header" class="header-main">
+      <a href="https://developer.mozilla.org/en-US/" class="logo">MDN Web Docs</a>
+      <div class="nav-toolbox-wrapper">
+        <nav id="main-nav" class="nav-main" role="navigation">
+    <ul>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Web">Technologies
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-tech-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+                    <li><a href="../Web/API.html">APIs / DOM</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">Browser Extensions</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn">References &amp; Guides
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-learn-submenu">
+                <div class="submenu-column">
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+                  </ul>
+                </div>
+            </div>
+        </li>
+        <li class="nav-main-item">
+            <a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback
+                <svg class="icon icon-caret-down" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <path d="M16 11a.99.99 0 0 1-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7A.996.996 0 0 1 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"></path>
+</svg>
+            </a>
+            <div class="submenu js-submenu" id="nav-contact-submenu">
+              <div class="submenu-column">
+                <ul>
+                  <li>
+                      <a href="https://support.mozilla.org/">Get Firefox help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://stackoverflow.com/">Get web development help
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                      <a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/tag/API%3Fpage%3D41">Report a content problem
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                  <li>
+                      <a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug
+                          <svg class="icon icon-external-link" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+    <path d="M22 14.5v5c0 2.484-2.016 4.5-4.5 4.5h-13A4.502 4.502 0 0 1 0 19.5v-13C0 4.016 2.016 2 4.5 2h11c.281 0 .5.219.5.5v1c0 .281-.219.5-.5.5h-11A2.507 2.507 0 0 0 2 6.5v13C2 20.875 3.125 22 4.5 22h13c1.375 0 2.5-1.125 2.5-2.5v-5c0-.281.219-.5.5-.5h1c.281 0 .5.219.5.5zM28 1v8c0 .547-.453 1-1 1a.99.99 0 0 1-.703-.297l-2.75-2.75L13.36 17.14c-.094.094-.234.156-.359.156s-.266-.063-.359-.156l-1.781-1.781c-.094-.094-.156-.234-.156-.359s.063-.266.156-.359L21.048 4.454l-2.75-2.75a.996.996 0 0 1-.297-.703c0-.547.453-1 1-1h8c.547 0 1 .453 1 1z"></path>
+</svg>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </li>
+  </ul>
+</nav>
+        <div id="toolbox" class="toolbox">
+  <ul>
+    
+    <li class="nav-login"><div class="login">
+    
+        
+        <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FAPI%3Fpage%3D41" class="login-link js-login-link" data-service="GitHub" rel="nofollow">
+            Sign in<svg class="icon icon-github" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28">
+    <title>Github</title>
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-.609.109-.828-.266-.828-.578 0-.391.016-1.687.016-3.297 0-1.125-.375-1.844-.812-2.219 2.672-.297 5.484-1.313 5.484-5.922 0-1.313-.469-2.375-1.234-3.219.125-.313.531-1.531-.125-3.187-1-.313-3.297 1.234-3.297 1.234a11.28 11.28 0 0 0-6 0S6.704 6.656 5.704 6.969c-.656 1.656-.25 2.875-.125 3.187-.766.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-.344.313-.656.844-.766 1.609-.688.313-2.438.844-3.484-1-.656-1.141-1.844-1.234-1.844-1.234-1.172-.016-.078.734-.078.734.781.359 1.328 1.75 1.328 1.75.703 2.141 4.047 1.422 4.047 1.422 0 1 .016 1.937.016 2.234 0 .313-.219.688-.828.578C3.439 23.796.002 19.296.002 13.999c0-6.625 5.375-12 12-12zM4.547 19.234c.031-.063-.016-.141-.109-.187-.094-.031-.172-.016-.203.031-.031.063.016.141.109.187.078.047.172.031.203-.031zm.484.532c.063-.047.047-.156-.031-.25-.078-.078-.187-.109-.25-.047-.063.047-.047.156.031.25.078.078.187.109.25.047zm.469.703c.078-.063.078-.187 0-.297-.063-.109-.187-.156-.266-.094-.078.047-.078.172 0 .281s.203.156.266.109zm.656.656c.063-.063.031-.203-.063-.297-.109-.109-.25-.125-.313-.047-.078.063-.047.203.063.297.109.109.25.125.313.047zm.891.391c.031-.094-.063-.203-.203-.25-.125-.031-.266.016-.297.109s.063.203.203.234c.125.047.266 0 .297-.094zm.984.078c0-.109-.125-.187-.266-.172-.141 0-.25.078-.25.172 0 .109.109.187.266.172.141 0 .25-.078.25-.172zm.906-.156c-.016-.094-.141-.156-.281-.141-.141.031-.234.125-.219.234.016.094.141.156.281.125s.234-.125.219-.219z"></path>
+</svg>
+        </a>
+    
+</div></li>
+  </ul>
+</div>
+      </div>
+      <form id="nav-main-search" action="https://developer.mozilla.org/en-US/search" method="get" role="search" class="nav-main-search">
+  <div class="search-wrap">
+    <label for="main-q" class="offscreen">Search</label>
+    <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" aria-hidden="true">
+    <span class="search-trigger">
+        <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true">
+    <path d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zm8 13c0 1.094-.906 2-2 2a1.96 1.96 0 0 1-1.406-.594l-5.359-5.344a10.971 10.971 0 0 1-6.234 1.937c-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-.672 4.406-1.937 6.234l5.359 5.359c.359.359.578.875.578 1.406z"></path>
+</svg>
+    </span>
+    <button type="submit" class="offscreen">Search</button>
+    <button type="button" id="close-header-search" class="close-header-search transparent">
+        <span class="offscreen">Close search</span>
+        <svg class="icon icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true">
+    <path d="M20.281 20.656c0 .391-.156.781-.438 1.062l-2.125 2.125c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438L11 19.249l-4.594 4.594c-.281.281-.672.438-1.062.438s-.781-.156-1.062-.438l-2.125-2.125c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062L6.751 15l-4.594-4.594c-.281-.281-.438-.672-.438-1.062s.156-.781.438-1.062l2.125-2.125c.281-.281.672-.438 1.062-.438s.781.156 1.062.438L11 10.751l4.594-4.594c.281-.281.672-.438 1.062-.438s.781.156 1.062.438l2.125 2.125c.281.281.438.672.438 1.062s-.156.781-.438 1.062L15.249 15l4.594 4.594c.281.281.438.672.438 1.062z"></path>
+</svg>
+    </button>
+  </div>
+</form>
+    </header> 
+
+  <!-- Content will go here -->
+  <main id="content">
+      
+      <div class="center clear">
+      
+
+    <div id="document-list" class="boxed">
+      <h1>Articles tagged: API</h1>
+      
+        
+  <ol class="pagination">
+  
+    <li class="prev">
+      <a href="APIce8a.html?page=40">
+        Previous
+      </a>
+    </li>
+  
+  
+    <li><a href="API2679.html?page=1">1</a></li>
+    
+      <li class="skip">…</li>
+    
+  
+  
+    <li>
+      <a href="API763c.html?page=38">38</a>
+    </li>
+  
+    <li>
+      <a href="API8b08.html?page=39">39</a>
+    </li>
+  
+    <li>
+      <a href="APIce8a.html?page=40">40</a>
+    </li>
+  
+    <li class="selected">
+      <a href="API6c2f.html?page=41">41</a>
+    </li>
+  
+    <li>
+      <a href="API3963.html?page=42">42</a>
+    </li>
+  
+    <li>
+      <a href="API324e.html?page=43">43</a>
+    </li>
+  
+    <li>
+      <a href="API7251.html?page=44">44</a>
+    </li>
+  
+  
+    
+      <li class="skip">…</li>
+    
+    <li><a href="API4618.html?page=53">53</a></li>
+  
+  
+    <li class="next">
+      <a href="API3963.html?page=42">
+        Next
+      </a>
+    </li>
+  
+  </ol>
+
+
+
+        <p>Found 5269 documents</p>
+        <ul class="document-list">
+          
+            <li>
+              <a href="../Web/API/ScreenOrientation/unlock.html">Web/API/ScreenOrientation/unlock</a>
+                
+                  <small>The unlock() property of the ScreenOrientation interface unlocks the orientation of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ScriptProcessorNode.html">Web/API/ScriptProcessorNode</a>
+                
+                  <small>The size of the input and output buffer are defined at the creation time, when the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ScriptProcessorNode/bufferSize.html">Web/API/ScriptProcessorNode/bufferSize</a>
+                
+                  <small>The following example shows basic usage of a ScriptProcessorNode to take a track loaded via...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ScriptProcessorNode/onaudioprocess.html">Web/API/ScriptProcessorNode/onaudioprocess</a>
+                
+                  <small>The following example shows basic usage of a ScriptProcessorNode to take a track loaded via...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/SecurityPolicyViolationEvent.html">Web/API/SecurityPolicyViolationEvent</a>
+                
+                  <small>The SecurityPolicyViolationEvent interface inherits from Event, and represents the event object...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/SecurityPolicyViolationEvent/blockedURI.html">Web/API/SecurityPolicyViolationEvent/blockedURI</a>
+                
+                  <small>The blockedURI read-only property of the SecurityPolicyViolationEvent interface is a USVString...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/SecurityPolicyViolationEvent/columnNumber.html">Web/API/SecurityPolicyViolationEvent/columnNumber</a>
+                
+                  <small>The columnNumber read-only property of the SecurityPolicyViolationEvent interface is the column...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/SecurityPolicyViolationEvent/disposition.html">Web/API/SecurityPolicyViolationEvent/disposition</a>
+                
+                  <small>The disposition read-only property of the SecurityPolicyViolationEvent interface indicates how...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/SecurityPolicyViolationEvent/documentURI.html">Web/API/SecurityPolicyViolationEvent/documentURI</a>
+                
+                  <small>The documentURI read-only property of the SecurityPolicyViolationEvent interface is a USVString...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/SecurityPolicyViolationEvent/effectiveDirective.html">Web/API/SecurityPolicyViolationEvent/effectiveDirective</a>
+                
+                  <small>The effectiveDirective read-only property of the SecurityPolicyViolationEvent interface is a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/SecurityPolicyViolationEvent/lineNumber.html">Web/API/SecurityPolicyViolationEvent/lineNumber</a>
+                
+                  <small>The lineNumber read-only property of the SecurityPolicyViolationEvent interface is the line...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/SecurityPolicyViolationEvent/originalPolicy.html">Web/API/SecurityPolicyViolationEvent/originalPolicy</a>
+                
+                  <small>The originalPolicy read-only property of the SecurityPolicyViolationEvent interface is a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/SecurityPolicyViolationEvent/referrer.html">Web/API/SecurityPolicyViolationEvent/referrer</a>
+                
+                  <small>The referrer read-only property of the SecurityPolicyViolationEvent interface is a USVString...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/SecurityPolicyViolationEvent/sample.html">Web/API/SecurityPolicyViolationEvent/sample</a>
+                
+                  <small>The sample read-only property of the SecurityPolicyViolationEvent interface is a DOMString...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/SecurityPolicyViolationEvent/SecurityPolicyViolationEvent.html">Web/API/SecurityPolicyViolationEvent/SecurityPolicyViolationEvent</a>
+                
+                  <small>The SecurityPolicyViolationEvent constructor creates a new SecurityPolicyViolationEvent object instance.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/SecurityPolicyViolationEvent/sourceFile.html">Web/API/SecurityPolicyViolationEvent/sourceFile</a>
+                
+                  <small>The sourceFile read-only property of the SecurityPolicyViolationEvent interface is a USVString...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/SecurityPolicyViolationEvent/statusCode.html">Web/API/SecurityPolicyViolationEvent/statusCode</a>
+                
+                  <small>The statusCode read-only property of the SecurityPolicyViolationEvent interface is a number...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/SecurityPolicyViolationEvent/violatedDirective.html">Web/API/SecurityPolicyViolationEvent/violatedDirective</a>
+                
+                  <small>The violatedDirective read-only property of the SecurityPolicyViolationEvent interface is a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Selection.html">Web/API/Selection</a>
+                
+                  <small>A Selection object&nbsp;represents the range of text selected by the user or the current position of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Selection/addRange.html">Web/API/Selection/addRange</a>
+                
+                  <small>The Selection.addRange() method adds a Range to a Selection.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Selection/anchorNode.html">Web/API/Selection/anchorNode</a>
+                
+                  <small>The Selection.anchorNode read-only property returns the Node in which the selection begins.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Selection/anchorOffset.html">Web/API/Selection/anchorOffset</a>
+                
+                  <small>The Selection.anchorOffset read-only property returns the number of characters that the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Selection/collapse.html">Web/API/Selection/collapse</a>
+                
+                  <small>The Selection.collapse() method collapses the current selection to a single point. The document...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Selection/collapseToEnd.html">Web/API/Selection/collapseToEnd</a>
+                
+                  <small>The Selection.collapseToEnd() method collapses the selection to the end of the last range in the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Selection/collapseToStart.html">Web/API/Selection/collapseToStart</a>
+                
+                  <small>The Selection.collapseToStart() method collapses the selection to the start of the first range...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Selection/containsNode.html">Web/API/Selection/containsNode</a>
+                
+                  <small>The Selection.containsNode() method indicates if the node is part of the selection.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Selection/deleteFromDocument.html">Web/API/Selection/deleteFromDocument</a>
+                
+                  <small>The Selection.deleteFromDocument() method deletes the actual text being represented by a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Selection/extend.html">Web/API/Selection/extend</a>
+                
+                  <small>The Selection.extend() method moves the focus of the selection to a specified point. The anchor...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Selection/focusNode.html">Web/API/Selection/focusNode</a>
+                
+                  <small>Selection.focusNode read-only property returns the Node, in which selection ends.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Selection/focusOffset.html">Web/API/Selection/focusOffset</a>
+                
+                  <small>The Selection.focusOffset read-only property returns the number of characters that the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Selection/getRangeAt.html">Web/API/Selection/getRangeAt</a>
+                
+                  <small>The Selection.getRangeAt() method returns a range object representing one of the ranges...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Selection/isCollapsed.html">Web/API/Selection/isCollapsed</a>
+                
+                  <small>The Selection.isCollapsed read-only property returns a Boolean which indicates whether or not...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Selection/modify.html">Web/API/Selection/modify</a>
+                
+                  <small>The Selection.modify() method applies a change to the current selection or cursor position,...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Selection/rangeCount.html">Web/API/Selection/rangeCount</a>
+                
+                  <small>The Selection.rangeCount read-only property returns the number of ranges in the selection.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Selection/removeAllRanges.html">Web/API/Selection/removeAllRanges</a>
+                
+                  <small>The Selection.removeAllRanges() method removes all ranges from the selection, leaving the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Selection/removeRange.html">Web/API/Selection/removeRange</a>
+                
+                  <small>The Selection.removeRange() method removes a range from a selection.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Selection/selectAllChildren.html">Web/API/Selection/selectAllChildren</a>
+                
+                  <small>The Selection.selectAllChildren() method adds all the children of the specified node to the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Selection/setBaseAndExtent.html">Web/API/Selection/setBaseAndExtent</a>
+                
+                  <small>The setBaseAndExtent() method of the Selection interface sets the selection to be a range...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Selection/toString.html">Web/API/Selection/toString</a>
+                
+                  <small>The Selection.toString() method returns a string currently being represented by the selection...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Selection/type.html">Web/API/Selection/type</a>
+                
+                  <small>The type read-only property of the Selection interface returns a DOMString describing the type...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Selection_API.html">Web/API/Selection_API</a>
+                
+                  <small>To retrieve the current text range the user has selected, you can use the Window.getSelection()...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Server-sent_events.html">Web/API/Server-sent_events</a>
+                
+                  <small>Traditionally, a web page has to send a request to the server to receive new data; that is, the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorker.html">Web/API/ServiceWorker</a>
+                
+                  <small>The ServiceWorker interface of the ServiceWorker API provides a reference to a service worker....</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorker/onstatechange.html">Web/API/ServiceWorker/onstatechange</a>
+                
+                  <small>An EventListener property called whenever an event of type statechange is fired; it is basically...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorker/scriptURL.html">Web/API/ServiceWorker/scriptURL</a>
+                
+                  <small>Returns the ServiceWorker serialized script URL defined as part of ServiceWorkerRegistration....</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorker/state.html">Web/API/ServiceWorker/state</a>
+                
+                  <small>The state read-only property of the ServiceWorker interface returns a string representing the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerContainer.html">Web/API/ServiceWorkerContainer</a>
+                
+                  <small>The&nbsp;ServiceWorkerContainer&nbsp;interface of the&nbsp;ServiceWorker API&nbsp;provides an object representing...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerContainer/controller.html">Web/API/ServiceWorkerContainer/controller</a>
+                
+                  <small>The controller read-only property of the ServiceWorkerContainer interface returns a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerContainer/getRegistration.html">Web/API/ServiceWorkerContainer/getRegistration</a>
+                
+                  <small>The getRegistration() method of the ServiceWorkerContainer interface gets a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerContainer/getRegistrations.html">Web/API/ServiceWorkerContainer/getRegistrations</a>
+                
+                  <small>The getRegistrations() method of the ServiceWorkerContainer interface returns all...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerContainer/oncontrollerchange.html">Web/API/ServiceWorkerContainer/oncontrollerchange</a>
+                
+                  <small>The oncontrollerchange property of the ServiceWorkerContainer interface is an event handler...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerContainer/onerror.html">Web/API/ServiceWorkerContainer/onerror</a>
+                
+                  <small>The onerror property of the ServiceWorkerContainer interface is an event handler fired whenever...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerContainer/onmessage.html">Web/API/ServiceWorkerContainer/onmessage</a>
+                
+                  <small>The onmessage property of the ServiceWorkerContainer interface is an event handler fired...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerContainer/ready.html">Web/API/ServiceWorkerContainer/ready</a>
+                
+                  <small>The ready read-only property of the ServiceWorkerContainer interface provides a way of delaying...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerContainer/register.html">Web/API/ServiceWorkerContainer/register</a>
+                
+                  <small>The register() method of the ServiceWorkerContainer interface creates or updates a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerGlobalScope.html">Web/API/ServiceWorkerGlobalScope</a>
+                
+                  <small>The ServiceWorkerGlobalScope interface of the ServiceWorker API represents the global execution...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerGlobalScope/caches.html">Web/API/ServiceWorkerGlobalScope/caches</a>
+                
+                  <small>The ServiceWorkerGlobalScope.caches read-only property returns the CacheStorage object...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerGlobalScope/clients.html">Web/API/ServiceWorkerGlobalScope/clients</a>
+                
+                  <small>The clients read-only property of the ServiceWorkerGlobalScope interface returns the Clients...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerGlobalScope/onactivate.html">Web/API/ServiceWorkerGlobalScope/onactivate</a>
+                
+                  <small>The onactivate property of the ServiceWorkerGlobalScope interface is an event handler fired...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerGlobalScope/onfetch.html">Web/API/ServiceWorkerGlobalScope/onfetch</a>
+                
+                  <small>The onfetch property of the ServiceWorkerGlobalScope interface is an event handler fired...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerGlobalScope/oninstall.html">Web/API/ServiceWorkerGlobalScope/oninstall</a>
+                
+                  <small>The oninstall property of the ServiceWorkerGlobalScope interface is an event handler fired...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerGlobalScope/onmessage.html">Web/API/ServiceWorkerGlobalScope/onmessage</a>
+                
+                  <small>The ServiceWorkerGlobalScope.onmessage event of the ServiceWorkerGlobalScope interface is called...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerGlobalScope/onnotificationclick.html">Web/API/ServiceWorkerGlobalScope/onnotificationclick</a>
+                
+                  <small>The ServiceWorkerGlobalScope.onnotificationclick property is an event handler called whenever...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerGlobalScope/onnotificationclose.html">Web/API/ServiceWorkerGlobalScope/onnotificationclose</a>
+                
+                  <small>The ServiceWorkerGlobalScope.onnotificationclose property is an event handler called whenever...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerGlobalScope/onpush.html">Web/API/ServiceWorkerGlobalScope/onpush</a>
+                
+                  <small>The ServiceWorkerGlobalScope.onpush event of the ServiceWorkerGlobalScope interface is fired...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerGlobalScope/onpushsubscriptionchange.html">Web/API/ServiceWorkerGlobalScope/onpushsubscriptionchange</a>
+                
+                  <small>The ServiceWorkerGlobalScope.onpushsubscriptionchange event of the ServiceWorkerGlobalScope...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerGlobalScope/registration.html">Web/API/ServiceWorkerGlobalScope/registration</a>
+                
+                  <small>The registration read-only property of the ServiceWorkerGlobalScope interface returns a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerGlobalScope/skipWaiting.html">Web/API/ServiceWorkerGlobalScope/skipWaiting</a>
+                
+                  <small>The ServiceWorkerGlobalScope.skipWaiting() method of the ServiceWorkerGlobalScope forces the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerMessageEvent.html">Web/API/ServiceWorkerMessageEvent</a>
+                
+                  <small>The ServiceWorkerMessageEvent interface of the ServiceWorker API contains information about an...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerMessageEvent/data.html">Web/API/ServiceWorkerMessageEvent/data</a>
+                
+                  <small>The data read-only property of the ServiceWorkerMessageEvent interface returns the event's data....</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerMessageEvent/lastEventId.html">Web/API/ServiceWorkerMessageEvent/lastEventId</a>
+                
+                  <small>The lastEventID&nbsp;read-only property of the ServiceWorkerMessageEvent interface represents,...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerMessageEvent/origin.html">Web/API/ServiceWorkerMessageEvent/origin</a>
+                
+                  <small>The
+origin
+read-only property of the ServiceWorkerMessageEvent interface returns the origin of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerMessageEvent/ports.html">Web/API/ServiceWorkerMessageEvent/ports</a>
+                
+                  <small>The
+ports
+read-only property of the ServiceWorkerMessageEvent interface returns an array of...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerMessageEvent/ServiceWorkerMessageEvent.html">Web/API/ServiceWorkerMessageEvent/ServiceWorkerMessageEvent</a>
+                
+                  <small>The ServiceWorkerMessageEvent() constructor creates a new ServiceWorkerMessageEvent object instance.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerMessageEvent/source.html">Web/API/ServiceWorkerMessageEvent/source</a>
+                
+                  <small>The
+source
+read-only property of the ServiceWorkerMessageEvent returns a reference to the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerRegistration.html">Web/API/ServiceWorkerRegistration</a>
+                
+                  <small>The ServiceWorkerRegistration interface of the ServiceWorker API represents the service worker...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerRegistration/active.html">Web/API/ServiceWorkerRegistration/active</a>
+                
+                  <small>The active property of the ServiceWorkerRegistration interface returns a service worker whose...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerRegistration/getNotifications.html">Web/API/ServiceWorkerRegistration/getNotifications</a>
+                
+                  <small>The getNotifications() method of the ServiceWorkerRegistration interface returns a list of the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerRegistration/installing.html">Web/API/ServiceWorkerRegistration/installing</a>
+                
+                  <small>The installing property of the ServiceWorkerRegistration interface returns a service worker...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerRegistration/navigationPreload.html">Web/API/ServiceWorkerRegistration/navigationPreload</a>
+                
+                  <small>The navigationPreload read-only property of the ServiceWorkerRegistration interface returns the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerRegistration/onupdatefound.html">Web/API/ServiceWorkerRegistration/onupdatefound</a>
+                
+                  <small>The onupdatefound property of the ServiceWorkerRegistration interface is an EventListener...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerRegistration/periodicSync.html">Web/API/ServiceWorkerRegistration/periodicSync</a>
+                
+                  <small>The periodicSync read-only property of the ServiceWorkerRegistration interface returns a...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerRegistration/pushManager.html">Web/API/ServiceWorkerRegistration/pushManager</a>
+                
+                  <small>The pushManager property of the ServiceWorkerRegistration interface returns a reference to the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerRegistration/scope.html">Web/API/ServiceWorkerRegistration/scope</a>
+                
+                  <small>The scope read-only property of the ServiceWorkerRegistration interface returns a unique...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerRegistration/showNotification.html">Web/API/ServiceWorkerRegistration/showNotification</a>
+                
+                  <small>The showNotification() method of the ServiceWorkerRegistration interface creates a notification...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerRegistration/sync.html">Web/API/ServiceWorkerRegistration/sync</a>
+                
+                  <small>The sync property of the ServiceWorkerRegistration interface returns a reference to the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerRegistration/unregister.html">Web/API/ServiceWorkerRegistration/unregister</a>
+                
+                  <small>The unregister method of the ServiceWorkerRegistration interface unregisters the service worker...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerRegistration/update.html">Web/API/ServiceWorkerRegistration/update</a>
+                
+                  <small>The update method of the ServiceWorkerRegistration interface attempts to update the&nbsp;service...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ServiceWorkerRegistration/waiting.html">Web/API/ServiceWorkerRegistration/waiting</a>
+                
+                  <small>The waiting property of the ServiceWorkerRegistration interface returns a service worker whose...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Service_Worker_API.html">Web/API/Service_Worker_API</a>
+                
+                  <small>Service workers essentially act as proxy servers that sit between web applications, the browser,...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ShadowRoot.html">Web/API/ShadowRoot</a>
+                
+                  <small>The ShadowRoot interface of the Shadow DOM API is the root node of a DOM subtree that is...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ShadowRoot/host.html">Web/API/ShadowRoot/host</a>
+                
+                  <small>The host&nbsp;read-only property of the ShadowRoot returns a reference to the DOM element the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ShadowRoot/innerHTML.html">Web/API/ShadowRoot/innerHTML</a>
+                
+                  <small>The innerHTML property of the ShadowRoot interface sets or returns a reference to the DOM tree...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ShadowRoot/mode.html">Web/API/ShadowRoot/mode</a>
+                
+                  <small>The mode property of the ShadowRoot specifies its mode — either open or closed. This defines...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/SharedWorker.html">Web/API/SharedWorker</a>
+                
+                  <small>The SharedWorker interface represents a specific kind of worker that can be accessed from...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/SharedWorker/port.html">Web/API/SharedWorker/port</a>
+                
+                  <small>The port property of the SharedWorker interface returns a MessagePort object used to communicate...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/SharedWorker/SharedWorker.html">Web/API/SharedWorker/SharedWorker</a>
+                
+                  <small>The SharedWorker() constructor creates a SharedWorker object that executes the script at the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/SharedWorkerGlobalScope.html">Web/API/SharedWorkerGlobalScope</a>
+                
+                  <small>The SharedWorkerGlobalScope object (the SharedWorker global scope) is accessible through the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/SharedWorkerGlobalScope/applicationCache.html">Web/API/SharedWorkerGlobalScope/applicationCache</a>
+                
+                  <small>The applicationCache read-only property of the SharedWorkerGlobalScope interface returns the...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/SharedWorkerGlobalScope/close.html">Web/API/SharedWorkerGlobalScope/close</a>
+                
+                  <small>The close() method of the SharedWorkerGlobalScope interface discards any tasks queued in the...</small>
+                
+            </li>
+          
+        </ul>
+        
+  <ol class="pagination">
+  
+    <li class="prev">
+      <a href="APIce8a.html?page=40">
+        Previous
+      </a>
+    </li>
+  
+  
+    <li><a href="API2679.html?page=1">1</a></li>
+    
+      <li class="skip">…</li>
+    
+  
+  
+    <li>
+      <a href="API763c.html?page=38">38</a>
+    </li>
+  
+    <li>
+      <a href="API8b08.html?page=39">39</a>
+    </li>
+  
+    <li>
+      <a href="APIce8a.html?page=40">40</a>
+    </li>
+  
+    <li class="selected">
+      <a href="API6c2f.html?page=41">41</a>
+    </li>
+  
+    <li>
+      <a href="API3963.html?page=42">42</a>
+    </li>
+  
+    <li>
+      <a href="API324e.html?page=43">43</a>
+    </li>
+  
+    <li>
+      <a href="API7251.html?page=44">44</a>
+    </li>
+  
+  
+    
+      <li class="skip">…</li>
+    
+    <li><a href="API4618.html?page=53">53</a></li>
+  
+  
+    <li class="next">
+      <a href="API3963.html?page=42">
+        Next
+      </a>
+    </li>
+  
+  </ol>
+
+
+
+      
+    </div>
+
+
+      </div>
+  </main>
+  <!-- Footer -->
+     
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script async="" type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script src="../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../static/build/js/syntax-prism.js" charset="utf-8"></script><script type="text/javascript" src=".selectivizr.8bb9e662e963.js" charset="utf-8"></script><!--[endif]---->
+
+    
+    <script src="../../../static/jsi18n/en-US/javascript.414b87adc480.js"></script>
+    <script type="text/javascript" src="../../../static/build/js/main.c03c04f62f79.js" charset="utf-8"></script>
+    <script>
+    if (window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+</script>
+    
+
+  
+
+    <script async="" type="text/javascript" src="../../../static/build/js/wiki.b26a4c181df3.js" charset="utf-8" id="wikiscript"></script>
+
+
+
+  
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=41 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Aug 2018 12:00:36 GMT -->
+</body></html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/fr/docs/Web/HTML/Element/details$samples/Créer_un_contrôle_déja_ouvert?revision=1391916 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:17:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="utf-8">
+        <link href="../../../../../../../developer.mozilla.org/static/build/styles/samples.37902ba3b7fe.css" rel="stylesheet" type="text/css" />
+        
+        <title>&lt;details&gt;</title>
+    </head>
+    <body>
+        
+            <details open>
+  <summary>System Requirements</summary>
+  <p>Requires a computer running an operating system. The computer
+  must have some memory and ideally some kind of long-term storage.
+  An input device as well as some form of output device is
+  recommended.</p>
+</details>
+        
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/fr/docs/Web/HTML/Element/details$samples/Créer_un_contrôle_déja_ouvert?revision=1391916 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jul 2018 23:17:20 GMT -->
+</html>
